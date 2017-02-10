@@ -1,5 +1,6 @@
 package com.fk.controller;
 
+import com.fk.bean.User;
 import com.fk.dao.UserDao;
 import com.fk.service.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,7 +20,9 @@ public class LoginC {
 
     @RequestMapping(method = RequestMethod.GET)
     public String index(@RequestParam(value="username") String username, @RequestParam(value = "password") String password) {
-        System.out.println(userService.selectUserByID(1));
+        User user = userService.selectUserByID(1);
+        System.out.println(user.toString());
+
         return "index";
     }
 }
