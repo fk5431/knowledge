@@ -22,5 +22,6 @@ public class MD5 {
     public static void main(String[] args) {
         System.out.println(encodeMD5("123456"));
         System.out.println(decodeMD5(encodeMD5("123456")));
+        System.out.println(decodeMD5("M2VnNWk1MGs="));
     }
 }

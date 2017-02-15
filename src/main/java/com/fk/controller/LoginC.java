@@ -29,7 +29,7 @@ public class LoginC {
     @RequestMapping("/")
     public String index( Map<String, Object> map){
         map.put("login", 1);
-        return "index";
+        return "login";
     }
 
     @RequestMapping(value = "/login", method = RequestMethod.POST)
@@ -38,11 +38,14 @@ public class LoginC {
         String password = request.getParameter("password");
         logger.debug("LoginC.login  in email[{}], password[{}].", email, password);
         User exists = userService.selectUserByEmail(email);
-        if(exists != null){
+        logger.debug("inputpassword[{}], mysqlpassword[{}]", MD5.encodeMD5(password), exists.getPassword());
+        logger.debug("inputpassword[{}], mysqlpassword[{}]", password, MD5.decodeMD5(exists.getPassword()));
+
+        if(exists == null){
             map.put("errorcode", 2);
             return "error";
         }
-        if(!MD5.encodeMD5(password).equals(exists.getPassword())){
+        if(!MD5.decodeMD5(exists.getPassword()).equals(password)){
             map.put("errorcode", 3);
             return "error";
         }
@@ -71,7 +74,7 @@ public class LoginC {
         logger.debug("LoginC.register  in firstname[{}], lastname[{}], email[{}], password[{}], id[{}]", firstname, lastname, email, password, id);
 
         map.put("login", 1);
-        return "index";
+        return "login";
     }
 
     @RequestMapping(value = "forgot", method = RequestMethod.GET)
