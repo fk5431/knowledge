@@ -35,6 +35,7 @@ public class LoginC {
         String email = request.getParameter("email");
         String password = request.getParameter("password");
         logger.debug("LoginC.login  in email[{}], password[{}].", email, password);
+        User user = userService.selectUserByEmail(email);
 
 
         return "index";

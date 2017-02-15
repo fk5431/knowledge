@@ -2,55 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="11669da5-9530-45d4-b1a5-63fcb18bf569" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_0_0_M3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_0_0_M3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_opentest4j_opentest4j_1_0_0_M1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ERROR_CODE.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/util/MD5.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/css/normalize.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/css/style.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/error.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/js/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/js/jquery_2.1.3.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/fk/test/Mybaties_test.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/fk/test/Mybaties_test.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/knowledge/WEB-INF/classes/com/fk/test/Mybaties_test.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/knowledge/WEB-INF/lib/commons-codec-1.9.jar" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_codec_commons_codec_1_9.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_codec_commons_codec_1_6.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/fk/bean/User.class" afterPath="$PROJECT_DIR$/target/classes/com/fk/bean/User.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/fk/controller/LoginC.class" afterPath="$PROJECT_DIR$/target/classes/com/fk/controller/LoginC.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/fk/service/IUserService.class" afterPath="$PROJECT_DIR$/target/classes/com/fk/service/IUserService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/fk/serviceImpl/UserServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/fk/serviceImpl/UserServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/knowledge/WEB-INF/classes/com/fk/bean/User.class" afterPath="$PROJECT_DIR$/target/knowledge/WEB-INF/classes/com/fk/bean/User.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/knowledge/WEB-INF/classes/com/fk/controller/LoginC.class" afterPath="$PROJECT_DIR$/target/knowledge/WEB-INF/classes/com/fk/controller/LoginC.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/knowledge/WEB-INF/classes/com/fk/service/IUserService.class" afterPath="$PROJECT_DIR$/target/knowledge/WEB-INF/classes/com/fk/service/IUserService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/knowledge/WEB-INF/classes/com/fk/serviceImpl/UserServiceImpl.class" afterPath="$PROJECT_DIR$/target/knowledge/WEB-INF/classes/com/fk/serviceImpl/UserServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/knowledge_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/knowledge_war_exploded.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/knowledge.iml" afterPath="$PROJECT_DIR$/knowledge.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/fk/bean/User.java" afterPath="$PROJECT_DIR$/src/main/java/com/fk/bean/User.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/fk/controller/LoginC.java" afterPath="$PROJECT_DIR$/src/main/java/com/fk/controller/LoginC.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/fk/dao/UserDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/fk/dao/UserDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/fk/service/IUserService.java" afterPath="$PROJECT_DIR$/src/main/java/com/fk/service/IUserService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/fk/serviceImpl/UserServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/fk/serviceImpl/UserServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/fk/sql/user.sql" afterPath="$PROJECT_DIR$/src/main/java/com/fk/sql/user.sql" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/dispatcher-servlet.xml" afterPath="$PROJECT_DIR$/src/main/resources/dispatcher-servlet.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/log4j.properties" afterPath="$PROJECT_DIR$/src/main/resources/log4j.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mapping/UserMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapping/UserMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/spring-mybatis.xml" afterPath="$PROJECT_DIR$/src/main/resources/spring-mybatis.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/index.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/index.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/dispatcher-servlet.xml" afterPath="$PROJECT_DIR$/target/classes/dispatcher-servlet.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/log4j.properties" afterPath="$PROJECT_DIR$/target/classes/log4j.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/mapping/UserMapper.xml" afterPath="$PROJECT_DIR$/target/classes/mapping/UserMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/spring-mybatis.xml" afterPath="$PROJECT_DIR$/target/classes/spring-mybatis.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/knowledge/WEB-INF/classes/dispatcher-servlet.xml" afterPath="$PROJECT_DIR$/target/knowledge/WEB-INF/classes/dispatcher-servlet.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/knowledge/WEB-INF/classes/log4j.properties" afterPath="$PROJECT_DIR$/target/knowledge/WEB-INF/classes/log4j.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/knowledge/WEB-INF/classes/mapping/UserMapper.xml" afterPath="$PROJECT_DIR$/target/knowledge/WEB-INF/classes/mapping/UserMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/knowledge/WEB-INF/classes/spring-mybatis.xml" afterPath="$PROJECT_DIR$/target/knowledge/WEB-INF/classes/spring-mybatis.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/knowledge/WEB-INF/pages/index.jsp" afterPath="$PROJECT_DIR$/target/knowledge/WEB-INF/pages/index.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/knowledge/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/target/knowledge/WEB-INF/web.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -81,10 +34,23 @@
       <file leaf-file-name="LoginC.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/fk/controller/LoginC.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="177">
-              <caret line="27" column="48" lean-forward="false" selection-start-line="27" selection-start-column="48" selection-end-line="27" selection-end-column="48" />
+            <state relative-caret-position="278">
+              <caret line="38" column="8" lean-forward="false" selection-start-line="38" selection-start-column="8" selection-end-line="38" selection-end-column="8" />
               <folding>
                 <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MD5.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/fk/util/MD5.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="216">
+              <caret line="14" column="48" lean-forward="true" selection-start-line="14" selection-start-column="38" selection-end-line="14" selection-end-column="44" />
+              <folding>
+                <element signature="e#278#279#0" expanded="true" />
+                <element signature="e#333#334#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -94,7 +60,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/error.jsp">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="288">
-              <caret line="16" column="33" lean-forward="true" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
+              <caret line="16" column="33" lean-forward="false" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -113,8 +79,8 @@
       <file leaf-file-name="UserServiceImpl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/fk/serviceImpl/UserServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="26" column="13" lean-forward="true" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
+            <state relative-caret-position="324">
+              <caret line="26" column="13" lean-forward="false" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#540#541#0" expanded="true" />
@@ -195,8 +161,8 @@
         <option value="$PROJECT_DIR$/src/main/java/com/fk/serviceImpl/UserServiceImpl.java" />
         <option value="$PROJECT_DIR$/ERROR_CODE.txt" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/error.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/fk/controller/LoginC.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/index.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/fk/controller/LoginC.java" />
       </list>
     </option>
   </component>
@@ -288,8 +254,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -619,6 +583,8 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1163,6 +1129,8 @@
       <workItem from="1486712636128" duration="5246000" />
       <workItem from="1486951119022" duration="7647000" />
       <workItem from="1486962644767" duration="3400000" />
+      <workItem from="1486980102785" duration="7000" />
+      <workItem from="1487120251451" duration="1263000" />
     </task>
     <task id="LOCAL-00001" summary="ssm  success">
       <created>1486712078887</created>
@@ -1189,11 +1157,11 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="38463000" />
+    <option name="totallyTimeSpent" value="39733000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1855" height="1056" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1220,7 +1188,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28440368" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32923076" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1412399" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1412399" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -1546,39 +1514,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fk/util/MD5.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="14" column="48" lean-forward="true" selection-start-line="14" selection-start-column="38" selection-end-line="14" selection-end-column="44" />
-          <folding>
-            <element signature="e#278#279#0" expanded="false" />
-            <element signature="e#333#334#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/fk/bean/User.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="609">
           <caret line="45" column="1" lean-forward="false" selection-start-line="45" selection-start-column="1" selection-end-line="45" selection-end-column="1" />
-          <folding>
-            <element signature="e#219#220#0" expanded="false" />
-            <element signature="e#244#245#0" expanded="false" />
-            <element signature="e#281#282#0" expanded="false" />
-            <element signature="e#309#310#0" expanded="false" />
-            <element signature="e#344#345#0" expanded="false" />
-            <element signature="e#375#376#0" expanded="false" />
-            <element signature="e#423#424#0" expanded="false" />
-            <element signature="e#496#497#0" expanded="false" />
-            <element signature="e#528#529#0" expanded="false" />
-            <element signature="e#556#557#0" expanded="false" />
-            <element signature="e#598#599#0" expanded="false" />
-            <element signature="e#662#663#0" expanded="false" />
-            <element signature="e#697#698#0" expanded="false" />
-            <element signature="e#728#729#0" expanded="false" />
-            <element signature="e#776#777#0" expanded="false" />
-            <element signature="e#849#850#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1602,14 +1541,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="432">
           <caret line="24" column="30" lean-forward="false" selection-start-line="24" selection-start-column="30" selection-end-line="24" selection-end-column="30" />
-          <folding>
-            <marker date="1486963352821" expanded="true" signature="737:848" ph="select from user" />
-            <marker date="1486963352821" expanded="true" signature="963:1080" ph="select from user" />
-            <marker date="1486963352821" expanded="true" signature="1175:1233" ph="delete from " />
-            <marker date="1486963352821" expanded="true" signature="1314:1505" ph="insert into user... " />
-            <marker date="1486963352821" expanded="true" signature="2602:3027" ph="update user " />
-            <marker date="1486963352821" expanded="true" signature="3117:3302" ph="update user " />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1625,14 +1557,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
           <caret line="7" column="68" lean-forward="false" selection-start-line="7" selection-start-column="68" selection-end-line="7" selection-end-column="68" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/fk/serviceImpl/UserServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="26" column="13" lean-forward="true" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
+        <state relative-caret-position="324">
+          <caret line="26" column="13" lean-forward="false" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#540#541#0" expanded="true" />
@@ -1647,15 +1578,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="7" lean-forward="false" selection-start-line="0" selection-start-column="7" selection-end-line="0" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/error.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="16" column="33" lean-forward="true" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1675,10 +1597,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/error.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="16" column="33" lean-forward="false" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fk/util/MD5.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="14" column="48" lean-forward="true" selection-start-line="14" selection-start-column="38" selection-end-line="14" selection-end-column="44" />
+          <folding>
+            <element signature="e#278#279#0" expanded="true" />
+            <element signature="e#333#334#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/fk/controller/LoginC.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="27" column="48" lean-forward="false" selection-start-line="27" selection-start-column="48" selection-end-line="27" selection-end-column="48" />
+        <state relative-caret-position="278">
+          <caret line="38" column="8" lean-forward="false" selection-start-line="38" selection-start-column="8" selection-end-line="38" selection-end-column="8" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
