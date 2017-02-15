@@ -28,4 +28,9 @@ public class UserServiceImpl implements IUserService {
     public User selectUserByEmail(String email) {
         return userDao.selectByEmail(email);
     }
+
+    @Override
+    public int updateByEmail(User user) {
+        return userDao.updateByEmail(user);
+    }
 }

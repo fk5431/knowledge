@@ -9,4 +9,5 @@ public interface IUserService {
     public User selectUserByID(int id);
     public int saveUser(User user);
     public User selectUserByEmail(String email);
+    public int updateByEmail(User user);
 }

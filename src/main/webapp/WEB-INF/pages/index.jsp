@@ -3,13 +3,9 @@
 <html >
 <head>
   <meta charset="UTF-8">
-  <title>Sign-Up/Login Form</title>
+  <title>我的知识库</title>
   <link rel="stylesheet" href="${pageContext.request.contextPath}/css/normalize.min.css">
-
-
-      <link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css">
-
-
+  <link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css">
 </head>
 
 <body>
@@ -81,7 +77,11 @@
             <input type="password" required autocomplete="off" name="password"/>
           </div>
 
+<<<<<<< HEAD
           <p class="forgot"><a href="#">Forgot Password?</a></p>
+=======
+          <p class="forgot"><a href="/forgot">Forgot Password?</a></p>
+>>>>>>> fengkai
 
           <button class="button button-block"/>LogIn</button>
 

@@ -85,4 +85,11 @@
       password = #{password,jdbcType=VARCHAR}
     where id = #{id,jdbcType=INTEGER}
   </update>
+    <update id="updateByEmail" parameterType="com.fk.bean.User" >
+        update user
+        set username = #{username,jdbcType=VARCHAR},
+        email = #{email,jdbcType=VARCHAR},
+        password = #{password,jdbcType=VARCHAR}
+        where email = #{email,jdbcType=VARCHAR}
+    </update>
 </mapper>

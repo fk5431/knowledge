@@ -20,4 +20,6 @@ public interface UserDao {
         int updateByPrimaryKey(User record);
 
         User selectByEmail(String email);
+
+        int updateByEmail(User user);
 }
