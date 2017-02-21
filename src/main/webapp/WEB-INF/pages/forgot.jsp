@@ -26,7 +26,7 @@
         <div id="signup">
             <h1>输入要找回的邮箱地址：</h1>
 
-            <form action="/sendmail" method="post">
+            <form action="${pageContext.request.contextPath}/sendmail" method="post">
 
                 <div class="field-wrap">
                     <label>

@@ -20,7 +20,7 @@
         <div id="signup">
           <h1>Sign Up</h1>
 
-          <form action="/regis" method="post">
+          <form action="${pageContext.request.contextPath}/regis" method="post">
 
           <div class="top-row">
             <div class="field-wrap">
@@ -61,7 +61,7 @@
         <div id="login">
           <h1>Welcome My KnowLedge!</h1>
 
-          <form action="/login" method="post">
+          <form action="${pageContext.request.contextPath}/login" method="post">
 
             <div class="field-wrap">
             <label>
@@ -76,7 +76,7 @@
             </label>
             <input type="password" required autocomplete="off" name="password"/>
           </div>
-          <p class="forgot"><a href="/forgot">Forgot Password?</a></p>
+          <p class="forgot"><a href="${pageContext.request.contextPath}/forgot">Forgot Password?</a></p>
 
           <button class="button button-block"/>LogIn</button>
 
