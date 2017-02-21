@@ -127,7 +127,7 @@ public class SendMail {
             });
 
             //设置打开调试状态
-            session.setDebug(true);
+            session.setDebug(false);
 
             //可以发送几封邮件:可以在这里 for循环多次
             //声明一个Message对象(代表一封邮件),从session中创建
