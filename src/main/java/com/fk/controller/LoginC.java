@@ -28,18 +28,27 @@ public class LoginC {
 
     @RequestMapping("/")
     public String index( Map<String, Object> map){
-        map.put("login", 1);
+        map.put("index", 1);
+        return "index";
+    }
+    @RequestMapping("/index")
+    public String index_( Map<String, Object> map){
+        map.put("index", 1);
+        return "index";
+    }
+    @RequestMapping(value = "/login")
+    public String login(HttpServletRequest request, Map<String, Object> map){
+        logger.debug("Login.C login in ^");
+
         return "login";
     }
 
-    @RequestMapping(value = "/login", method = RequestMethod.POST)
-    public String login(HttpServletRequest request, Map<String, Object> map){
+    @RequestMapping(value = "/loginUser", method = RequestMethod.POST)
+    public String loginUser(HttpServletRequest request, Map<String, Object> map){
         String email = request.getParameter("email");
         String password = request.getParameter("password");
-        logger.debug("LoginC.login  in email[{}], password[{}].", email, password);
+        logger.debug("LoginC.loginUser  in email[{}], password[{}].", email, password);
         User exists = userService.selectUserByEmail(email);
-        logger.debug("inputpassword[{}], mysqlpassword[{}]", MD5.encodeMD5(password), exists.getPassword());
-        logger.debug("inputpassword[{}], mysqlpassword[{}]", password, MD5.decodeMD5(exists.getPassword()));
 
         if(exists == null){
             map.put("errorcode", 2);
@@ -53,10 +62,9 @@ public class LoginC {
         return "index";
     }
 
-    @RequestMapping(value = "regis", method = RequestMethod.POST)
+    @RequestMapping(value = "/regis", method = RequestMethod.POST)
     public String register(HttpServletRequest request, Map<String, Object> map){
-        String firstname = request.getParameter("firstname");
-        String lastname = request.getParameter("lastname");
+        String name = request.getParameter("name");
         String email = request.getParameter("email");
         String password = request.getParameter("password");
 
@@ -67,17 +75,17 @@ public class LoginC {
         }
 
         User user = new User();
-        user.setUsername(firstname+lastname);
+        user.setUsername(name);
         user.setEmail(email);
         user.setPassword(MD5.encodeMD5(password));
         int id = userService.saveUser(user);
-        logger.debug("LoginC.register  in firstname[{}], lastname[{}], email[{}], password[{}], id[{}]", firstname, lastname, email, password, id);
+        logger.debug("LoginC.register  in name[{}], email[{}], password[{}], id[{}]", name, email, password, id);
 
         map.put("login", 1);
         return "login";
     }
 
-    @RequestMapping(value = "forgot", method = RequestMethod.GET)
+    @RequestMapping(value = "/forget")
     public String forgotPassword(){
         return "forgot";
     }
@@ -85,6 +93,11 @@ public class LoginC {
     @RequestMapping(value = "sendmail", method = RequestMethod.POST)
     public String sendEmail(HttpServletRequest request, Map<String, Object> map){
         String email = request.getParameter("email");
+        User exists = userService.selectUserByEmail(email);
+        if(exists == null){
+            map.put("errorcode", 2);
+            return "error";
+        }
         Date now = new Date();
         String currentTime = "" + now.getTime();
         String urlString = "http://localhost:8080/forgetPassword?key=";

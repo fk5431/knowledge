@@ -6,42 +6,39 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<!DOCTYPE html>
-<html >
-<head>
-    <meta charset="UTF-8">
-    <title>Sign-Up/Login Form</title>
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/normalize.min.css">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css">
+<html><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>找回密码 - 大学生穷游网</title>
+    <link href="${pageContext.request.contextPath}/css/login_1.css" rel="stylesheet" type="text/css">
+    <script language="javascript" src="${pageContext.request.contextPath}/js/login_1.js" type="text/javascript"></script>
+
+
 </head>
+<body class="login">
 
-<body>
-<div class="form" style="max-width:800px;">
-
-    <ul class="tab-group" class="margin:0;">
-        <li class="tab active"><a href="#signup" style="width:100%;">找回密码</a></li>
-    </ul>
-
-    <div class="tab-content">
-        <div id="signup">
-            <h1>输入要找回的邮箱地址：</h1>
-
-            <form action="/sendmail" method="post">
-
-                <div class="field-wrap">
-                    <label>
-                        Email Address<span class="req">*</span>
-                    </label>
-                    <input type="email"required autocomplete="off" name="email"/>
+<div class="wrapper">
+    <div class="container">
+        <a href="${pageContext.request.contextPath}/index" title="返回首页" class="logo">大学生穷游网</a>
+        <div class="signup-forms">
+            <div class="signup-box" id="_j_forget_box">
+                <div class="add-info">
+                    <div class="hd">找回密码</div>
+                    <form action="${pageContext.request.contextPath}/sendmail" method="post" id="_j_forget_form">
+                        <input name="token" value="a87a7dc2c7e6fa79b27268aeb1653ce8" type="hidden">
+                        <div class="form-field">
+                            <input name="email" placeholder="您的邮箱" autocomplete="off" data-type="email" data-verification-name="邮箱" class="verification[required,maxSize[50],custom[email]]" value="" type="text">
+                            <div class="err-tip"></div>
+                        </div>
+                        <div class="submit-btn">
+                            <button type="submit">立即找回</button>
+                        </div>
+                    </form>
                 </div>
-                <button type="submit" class="button button-block" onclick="validateCode()"/>Get</button>
-            </form>
+            </div>
+        </div>
+    </div>
+</div>
+<script language="javascript" src="${pageContext.request.contextPath}/js/login_2.js" type="text/javascript"></script>
+<script language="javascript" src="${pageContext.request.contextPath}/js/login_3.js" type="text/javascript"></script>
 
-        </div><!--signup -->
-    </div><!-- tab-content -->
-
-</div> <!-- /form -->
-<script src='${pageContext.request.contextPath}/js/jquery_2.1.3.js'></script>
-<script src="${pageContext.request.contextPath}/js/index.js"></script>
-</body>
-</html>
+ </body></html>
