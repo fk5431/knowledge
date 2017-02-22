@@ -38,8 +38,6 @@ public class LoginC {
         String password = request.getParameter("password");
         logger.debug("LoginC.login  in email[{}], password[{}].", email, password);
         User exists = userService.selectUserByEmail(email);
-        logger.debug("inputpassword[{}], mysqlpassword[{}]", MD5.encodeMD5(password), exists.getPassword());
-        logger.debug("inputpassword[{}], mysqlpassword[{}]", password, MD5.decodeMD5(exists.getPassword()));
 
         if(exists == null){
             map.put("errorcode", 2);
@@ -87,7 +85,7 @@ public class LoginC {
         String email = request.getParameter("email");
         Date now = new Date();
         String currentTime = "" + now.getTime();
-        String urlString = "http://localhost:8080/forgetPassword?key=";
+        String urlString = "http://localhost:8080"+request.getContextPath()+"/forgetPassword?key=";
         String encryptedCode = MD5.encodeMD5(currentTime + "@" + email);
         String link = "<a href=\""+urlString + encryptedCode+"\"></a>";
         logger.debug("LoginC.sendMail in email[{}], link[{}]", email, link);
