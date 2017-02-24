@@ -19,9 +19,11 @@ input {outline: none;}
 .clear{clear:both;display:block;height:0;font-size:0;line-height:0;overflow:hidden;}
 .clearfix:after,.wrapper:after,.article:after{content:'\20';clear:both;display:block;}
 .clearfix,.wrapper,.article{*zoom:1;}
-.login{background:url(../../../images/login.jpg)  0 0 rgba(0, 0, 0, 0.2); background-size:100%;  }
+.login_login{background:url(../../../images/login.jpg) no-repeat 0 0 rgba(0, 0, 0, 0.2); filter:"progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale')";
+    -moz-background-size:100% 100%;
+    background-size:100% 100%;}
 .fullscreen-bg{ background-position:50% 50%; background-size:cover; bottom:0; right:0; position:fixed; position:absolute\9; width:100%\9; height:100%\9; overflow:hidden; left:0; top:0;}
-.fullscreen-bg:before{background:url(../../../images/login.jpg) 0 0 rgba(0, 0, 0, 0.2); background-size:100%;  bottom:0; content:""; left:0; opacity:0.5; position:fixed;right: 0; top: 0;}
+.fullscreen-bg:before{background:url(../../../images/login.jpg) 0 0 no-repeat rgba(0, 0, 0, 0.2); bottom:0; content:""; left:0; opacity:0.5; position:fixed;right: 0; top: 0;}
 .fullscreen-bg:after{bottom:0; content:""; left:0; position:fixed; right:0; top:0;}
 .fullscreen-bg img{ display:none; display:block\9; -ms-interpolation-mode:bicubic; filter:progid:DXImageTransform.Microsoft.Fade(duration=0.3);height: auto;margin: 0;visibility: visible;opacity: 1;}
 
@@ -43,7 +45,7 @@ input {outline: none;}
 .signup-forms .err-input{ border:1px solid #ff3c00;}
 #_j_forget_form{ padding-top:25px; position:relative;}
 #_j_signup_mobile_form,#_j_complete_form{ padding-top:15px; position:relative;}
-.signup-forms .err-tip{ clear:both; background:url(../../../images/login.jpg) 0 -60px no-repeat #fff; padding:0 0 3px 22px; width:300px; font-size:12px; color:#ff3c00; margin-top:10px; top:0; position:absolute; text-align:left; display:none;}
+.signup-forms .err-tip{ clear:both; background:url(../../../images/login.jpg)  0 -60px no-repeat #fff; padding:0 0 3px 22px; width:300px; font-size:12px; color:#ff3c00; margin-top:10px; top:0; position:absolute; text-align:left; display:none;}
 .signup-forms .err-tip a{color: #ff8a00;text-decoration: none;}
 .signup-forms .err-tip a:hover{text-decoration: underline;}
 .signup-forms .info-tip{background-color: #fffee1;color: #daac50;border: 1px solid #f5c056;font-size: 12px;line-height: 18px;margin-top: 12px;position: relative;padding: 8px 12px;border-radius: 4px;}
@@ -145,7 +147,7 @@ input {outline: none;}
 .reveal-modal.medium { width: 400px; margin-left: -240px;}
 .reveal-modal.large { width: 600px; margin-left: -340px;}
 .reveal-modal.xlarge { width: 800px; margin-left: -440px;}
-.reveal-modal .close-reveal-modal {font-size: 22px;line-height: .5;position: absolute;top: 8px;right: 11px;color: #aaa;text-shadow: 0 -1px 1px rbga(0, 0, 0, .6);font-weight: bold;cursor: pointer;text-decoration: none;}
+.reveal-modal .close-reveal-modal {font-size: 22px;line-height: .5;position: absolute;top: 8px;right: 11px;color: #aaa;text-shadow: 0 -1px 1px rgb(0, 0, 0, .6);font-weight: bold;cursor: pointer;text-decoration: none;}
 
 .close-serive-modal {color: #666;}
 .close-serive-modal h3 {height: 32px;line-height: 32px;font-size: 20px;text-align: center;color: #c91523;font-weight: 700;margin-bottom: 15px;}

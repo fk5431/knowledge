@@ -7,7 +7,7 @@
 
 
 </head>
-<body class="login">
+<body class="login_login">
 
 <div class="wrapper">
   <div class="container">
@@ -34,7 +34,7 @@
               <button type="submit">立即注册</button>
             </div>
           </form>
-       </div>
+        </div>
         <div class="bottom-link">
           已经注册?<a href="#">马上登录</a>
         </div>
