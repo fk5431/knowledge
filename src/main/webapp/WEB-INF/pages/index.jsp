@@ -38,72 +38,17 @@
                 <li class="head-nav-gonglve" id="head_3"><a href="http://www.mafengwo.cn/gonglve/"
                                                                                 title="旅游攻略">旅游攻略</a>
                 </li>
-                <li class="head-nav-sales head-nav-dropdown _j_sales_nav_show" id="_j_nav_sales" >
-                    <a class="drop-toggle" href="http://www.mafengwo.cn/sales/"
-                       style="cursor: pointer;display: block;border-bottom:0 none;" data-sales-nav="自由行商城">
-                        <span>自由行商城<i class="icon-caret-down"></i></span>
+                <li class="head-nav-place" id="_j_nav_sales" >
+                    <a href="http://www.mafengwo.cn/sales/"
+                        data-sales-nav="自由行商城">
+                        <span>自由行商城<%--<i class="icon-caret-down"></i>--%></span>
                     </a>
-                    <div class="dropdown-menu dropdown-sales hide _j_sales_top" id="_j_sales_panel"
-                         data-cs-t="sales_nav">
-                        <ul>
-                            <li><a target="_blank" href="https://www.mafengwo.cn/sales/" data-sales-nav="机票＋酒店">机票＋酒店<i
-                                    class="i-hot">hot</i></a></li>
-                            <li><a target="_blank" href="https://www.mafengwo.cn/sales/0-0-0-6-0-0-0-0.html"
-                                   data-sales-nav="半自由行">半自由行</a></li>
-                            <li><a target="_blank" href="https://www.mafengwo.cn/localdeals/"
-                                   data-sales-nav="当地游">当地游</a></li>
-                            <li><a target="_blank" href="https://www.mafengwo.cn/flight/" data-sales-nav="国内机票">国内机票<i
-                                    class="i-new">new</i></a></li>
-                            <li><a target="_blank" href="https://www.mafengwo.cn/sales/visa/" data-sales-nav="签证">签证</a>
-                            </li>
-                            <li><a target="_blank" href="http://zuche.mafengwo.cn" data-sales-nav="国际租车">国际租车</a></li>
-                            <li><a target="_blank" href="https://www.mafengwo.cn/insure/" data-sales-nav="保险">保险</a>
-                            </li>
-                        </ul>
-                    </div>
                 </li>
-                <li class="head-nav-hotel" id="head_4"><a href="http://www.mafengwo.cn/hotel/"
-                                                                            title="酒店">酒店</a>
+                <li class="head-nav-place" id="head_4"><a href="http://www.mafengwo.cn/hotel/"
+                                                                            title="论坛">论坛</a>
                 </li>
-                <li class="head-nav-community head-nav-dropdown _j_shequ_nav_show" id="_j_nav_community"
-                    data-cs-p="community">
-                    <div class="drop-toggle"><span>社区<i class="icon-caret-down"></i></span></div>
-                    <!-- 社区下拉面板 begin -->
-                    <div class="dropdown-panel dropdown-community hide _j_shequ_top no-image" id="_j_community_panel"
-                         data-cs-t="community_nav">
-                        <div class="panel-wrapper">
-                            <ul class="nav-list clearfix">
-                                <li class="h"><a href="http://www.mafengwo.cn/wenda/" target="_blank" title="问答"
-                                                 data-cs-p="wenda">问答<i class="i-hot">hot</i></a></li>
-                                <li><a href="http://www.mafengwo.cn/mall/things.php" target="_blank" title="蚂蜂窝周边"
-                                       data-cs-p="things">蚂蜂窝周边<i class="i-new">new</i></a></li>
-                                <li><a href="http://www.mafengwo.cn/mall/" target="_blank" title="蚂蜂窝商店"
-                                       data-cs-p="mall">蜂蜜兑换</a></li>
-                                <li><a href="http://www.mafengwo.cn/together/" target="_blank" title="结伴"
-                                       data-cs-p="together">结伴</a></li>
-                            </ul>
-                            <ul class="nav-list-sub clearfix">
-
-                                <li><a href="http://www.mafengwo.cn/group/" target="_blank" title="蚂蜂窝旅行家"
-                                       data-cs-p="group">小组论坛</a></li>
-                                <li><a href="http://www.mafengwo.cn/rudder/" target="_blank" title="分舵同城"
-                                       data-cs-p="rudder">分舵同城</a></li>
-                                <li><a href="http://www.mafengwo.cn/auction/" target="_blank" title="蚂蜂窝拍卖行"
-                                       data-cs-p="paimai">蚂蜂窝拍卖行</a></li>
-                                <li><a href="http://www.mafengwo.cn/club/" target="_blank" title="蜂首聚乐部"
-                                       data-cs-p="club">蜂首聚乐部</a></li>
-                                <!--<li><a href="http://www.mafengwo.cn/postal/" target="_blank" title="游记纪念工厂" data-cs-p="postal">游记纪念工厂</a></li>-->
-                                <li><a href="http://www.mafengwo.cn/photo_pk/pk.php" target="_blank" title="照片PK"
-                                       data-cs-p="photo_pk">照片PK</a></li>
-                                <li><a href="http://www.mafengwo.cn/focus/" target="_blank" title="真人兽"
-                                       data-cs-p="focus">真人兽</a></li>
-                                <li><a href="http://www.mafengwo.cn/mall/virtual_goods.php" target="_blank" title="道具商店"
-                                       data-cs-p="virtual">道具商店</a></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <!-- 社区下拉面板 end -->
+                <li class="head-nav-place" id="_j_nav_community">
+                    <a href="" title="留言薄">留言薄</a>
                 </li>
 
             </ul>
@@ -122,108 +67,6 @@
         </div>
         <div class="shadow"></div>
     </div>
-
-    <!-- 新自由行菜单 begin -->
-    <div class="dropdown-bar" style="display: none">
-        <div class="content">
-            <ul class="clearfix ul-dropdown-bar" id="Js_middleNav">
-                <li data-type="sales"><a href="http://www.mafengwo.cn/sales/">机票＋酒店</a></li>
-                <li data-type="freewalker"><a href="http://www.mafengwo.cn/sales/0-0-0-6-0-0-0-0.html">半自由行</a></li>
-                <li data-type="localdeals"><a href="http://www.mafengwo.cn/localdeals/">当地游</a></li>
-                <li data-type="flight"><a href="http://www.mafengwo.cn/flight/">国内机票</a></li>
-                <li data-type="visa"><a href="http://www.mafengwo.cn/sales/visa/">签证</a></li>
-                <li data-type="wifi"><a href="http://www.mafengwo.cn/localdeals/0-0-0-21-0-0-0-0.html">全球WiFi</a></li>
-                <li data-type="cruise"><a href="http://www.mafengwo.cn/sales/0-0-0-5-0-0-0-0.html">邮轮</a></li>
-
-                <li data-type="insurance"><a href="http://www.mafengwo.cn/insurance/">旅游保险</a></li>
-            </ul>
-        </div>
-
-    </div>
-    <!-- 新自由行菜单 end -->
-
-    <script>
-        //判断是否显示 下拉bar
-        ;
-        (function () {
-            window.showBarFlag = true;
-            var realPathName = location.pathname, $nav = $('#Js_middleNav');
-            var regExp = /localdeals|sales|flight|insurance|activity/gi;
-            var pathArr = realPathName.match(regExp);
-            if (window.Env.middleNavHide) {
-                $('.dropdown-bar').hide();
-                return;
-            }
-            if (realPathName == '/sales/0-0-0-5-0-0-0-0.html' || window.Env.salesType == 5) {
-                $nav.children('[data-type="cruise"]').addClass('on');
-                window.showBarFlag = false;
-                $('.dropdown-bar').show();
-            } else if (realPathName == '/localdeals/0-0-0-21-0-0-0-0.html' || window.Env.salesType == 21) {
-                $nav.children('[data-type="wifi"]').addClass('on');
-                window.showBarFlag = false;
-                $('.dropdown-bar').show();
-            } else if (window.Env.sales_title_tag == 'visa' || window.Env.salesType == 4) {
-                $nav.children('[data-type="visa"]').addClass('on');
-                window.showBarFlag = false;
-                $('.dropdown-bar').show();
-            } else if (realPathName == '/sales/0-0-0-6-0-0-0-0.html' || window.Env.salesType == 6) {
-                $nav.children('[data-type="freewalker"]').addClass('on');
-                window.showBarFlag = false;
-                $('.dropdown-bar').show();
-            }
-            else if (window.Env.salesType) {
-                switch (window.Env.salesType | 0) {
-                    case 1:
-                    case 3:
-                        $nav.children('[data-type="sales"]').addClass('on');
-                        break;
-                    case 2:
-                        $nav.children('[data-type="localdeals"]').addClass('on');
-                    case 6:
-                        $nav.children('[data-type="freewalker"]').addClass('on');
-                    default:
-                        $nav.children('[data-type="localdeals"]').addClass('on');
-                }
-                window.showBarFlag = false;
-                $('.dropdown-bar').show();
-            }
-            else {
-                if (pathArr) {
-                    if (pathArr.length == 1 && pathArr[0] != 'activity') {
-                        switch (pathArr[0]) {
-                            case 'localdeals':
-                                $nav.children('[data-type="localdeals"]').addClass('on');
-                                break;
-                            case 'insurance':
-                                $nav.children('[data-type="insurance"]').addClass('on');
-                                break;
-                            case 'sales':
-                                $nav.children('[data-type="sales"]').addClass('on');
-                                break;
-                            case 'flight':
-                                $nav.children('[data-type="flight"]').addClass('on');
-                                break;
-                            default:
-                                break;
-                        }
-                        window.showBarFlag = false;
-                        $('.dropdown-bar').show();
-                    } else {
-                        if ('activity'.indexOf(pathArr) != -1) {
-                            window.showBarFlag = true;
-                            $('.dropdown-bar').hide();
-                        }
-                    }
-                }
-            }
-            // 点击时触发
-            $('.ul-dropdown-bar > li').on('click', function () {
-                $(this).addClass('on').siblings().removeClass('on');
-            });
-        })();
-
-    </script>
-
 </div>
 
 
@@ -316,6 +159,7 @@
                 </p>
             </li>
         </ul>
+        <%--缩略图--%>
         <ul class="show-nav">
             <li class=""><a href="javascript:"><img
                     src="https://b4-q.mafengwo.net/s10/M00/74/AA/wKgBZ1irpQOAbfaPAAPO_FEKeiQ98.jpeg?imageMogr2%2Fthumbnail%2F%21108x67r%2Fgravity%2FCenter%2Fcrop%2F%21108x67%2Fquality%2F90"
@@ -345,6 +189,7 @@
                     <li data-index="3"><i></i>自由行商城</li>
                 </ul>
             </div>
+            <%--检索--%>
             <!-- 全部 begin -->
             <div class="searchbar" id="_j_index_search_bar_all">
                 <div class="search-wrapper">
@@ -423,6 +268,8 @@
         </div>
     </div>
 </div>
+
+
 <div class="mfw-container clearfix" id="_j_mfw_container">
     <div class="mfw-wrapper">
         <div class="da-banner"></div>
@@ -1809,49 +1656,49 @@
         document.getElementById('head_1').className = 'head-nav-index head-nav-active';
         document.getElementById('head_2').className = 'head-nav-place';
         document.getElementById('head_3').className = 'head-nav-gonglve';
-        document.getElementById('_j_nav_sales').className = 'head-nav-sales head-nav-dropdown _j_sales_nav_show';
+        document.getElementById('_j_nav_sales').className = 'head-nav-place ';
         document.getElementById('head_4').className = 'head-nav-hotel';
-        document.getElementById('_j_nav_community').className = 'head-nav-community head-nav-dropdown _j_shequ_nav_show';
+        document.getElementById('_j_nav_community').className = 'head-nav-place';
     }
     if (state == 2) {
         document.getElementById('head_1').className = 'head-nav-index';
         document.getElementById('head_2').className = 'head-nav-place head-nav-active';
         document.getElementById('head_3').className = 'head-nav-gonglve';
-        document.getElementById('_j_nav_sales').className = 'head-nav-sales head-nav-dropdown _j_sales_nav_show';
+        document.getElementById('_j_nav_sales').className = 'head-nav-place ';
         document.getElementById('head_4').className = 'head-nav-hotel';
-        document.getElementById('_j_nav_community').className = 'head-nav-community head-nav-dropdown _j_shequ_nav_show';
+        document.getElementById('_j_nav_community').className = 'head-nav-place';
     }
     if (state == 3) {
         document.getElementById('head_1').className = 'head-nav-index';
         document.getElementById('head_2').className = 'head-nav-place';
         document.getElementById('head_3').className = 'head-nav-gonglve head-nav-active';
-        document.getElementById('_j_nav_sales').className = 'head-nav-sales head-nav-dropdown _j_sales_nav_show';
+        document.getElementById('_j_nav_sales').className = 'head-nav-place';
         document.getElementById('head_4').className = 'head-nav-hotel';
-        document.getElementById('_j_nav_community').className = 'head-nav-community head-nav-dropdown _j_shequ_nav_show';
+        document.getElementById('_j_nav_community').className = 'head-nav-place';
     }
     if (state == 4) {
         document.getElementById('head_1').className = 'head-nav-index';
         document.getElementById('head_2').className = 'head-nav-place';
         document.getElementById('head_3').className = 'head-nav-gonglve';
-        document.getElementById('_j_nav_sales').className = 'head-nav-sales head-nav-dropdown _j_sales_nav_show head-nav-active';
+        document.getElementById('_j_nav_sales').className = 'head-nav-place head-nav-active';
         document.getElementById('head_4').className = 'head-nav-hotel';
-        document.getElementById('_j_nav_community').className = 'head-nav-community head-nav-dropdown _j_shequ_nav_show';
+        document.getElementById('_j_nav_community').className = 'head-nav-place';
     }
     if (state == 5) {
         document.getElementById('head_1').className = 'head-nav-index';
         document.getElementById('head_2').className = 'head-nav-place';
         document.getElementById('head_3').className = 'head-nav-gonglve';
-        document.getElementById('_j_nav_sales').className = 'head-nav-sales head-nav-dropdown _j_sales_nav_show';
+        document.getElementById('_j_nav_sales').className = 'head-nav-place ';
         document.getElementById('head_4').className = 'head-nav-hotel head-nav-active';
-        document.getElementById('_j_nav_community').className = 'head-nav-community head-nav-dropdown _j_shequ_nav_show';
+        document.getElementById('_j_nav_community').className = 'head-nav-place';
     }
     if (state == 6) {
         document.getElementById('head_1').className = 'head-nav-index';
         document.getElementById('head_2').className = 'head-nav-place';
         document.getElementById('head_3').className = 'head-nav-gonglve';
-        document.getElementById('_j_nav_sales').className = 'head-nav-sales head-nav-dropdown _j_sales_nav_show';
+        document.getElementById('_j_nav_sales').className = 'head-nav-place ';
         document.getElementById('head_4').className = 'head-nav-hotel';
-        document.getElementById('_j_nav_community').className = 'head-nav-community head-nav-dropdown _j_shequ_nav_show head-nav-active';
+        document.getElementById('_j_nav_community').className = 'head-nav-place head-nav-active';
     }
 </script>
 </body>
