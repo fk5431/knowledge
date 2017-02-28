@@ -6,8 +6,8 @@ import com.fk.bean.User;
  * Created by FK on 2017/2/9.
  */
 public interface IUserService {
-    public User selectUserByID(int id);
-    public int saveUser(User user);
-    public User selectUserByEmail(String email);
-    public int updateByEmail(User user);
+    User selectUserByID(int id);
+    int saveUser(User user);
+    User selectUserByEmail(String email);
+    int updateByEmail(User user);
 }

@@ -1,7 +1,9 @@
 package com.fk.controller;
 
+import com.fk.bean.TravelBean;
 import com.fk.bean.User;
 import com.fk.service.IUserService;
+import com.fk.service.ITravelService;
 import com.fk.util.MD5;
 import com.fk.util.SendMail;
 import org.slf4j.Logger;
@@ -12,9 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import javax.servlet.http.HttpServletRequest;
-import java.util.Date;
-import java.util.Map;
-import java.util.Random;
+import java.util.*;
 
 /**
  * Created by FK on 2017/2/3.
@@ -26,15 +26,28 @@ public class LoginC {
     @Autowired
     IUserService userService ;
 
+    @Autowired
+    ITravelService indexShowService;
+
     @RequestMapping("/")
     public String index( Map<String, Object> map){
+        //首页最上面样式
         map.put("index", 1);
+        //轮播图位置
+        List<TravelBean> list = new ArrayList<>();
+        for(int i=0;i<5;i++){
+            TravelBean travelBean = indexShowService.selectByPrimaryKey(i);
+            list.add(travelBean);
+        }
+        map.put("indexshow", list);
+        //下一步
+
         return "index";
     }
+
     @RequestMapping("/index")
     public String index_( Map<String, Object> map){
-        map.put("index", 1);
-        return "index";
+        return index(map);
     }
     @RequestMapping(value = "/login")
     public String login(HttpServletRequest request, Map<String, Object> map){
