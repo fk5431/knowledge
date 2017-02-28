@@ -4,3 +4,8 @@
   mid int(11),
   FOREIGN KEY(mid) REFERENCES traveltips(id)
 )DEFAULT CHARSET=utf8;
+INSERT INTO indexshow(id, mid) VALUES (1,1);
+INSERT INTO indexshow(id, mid) VALUES (2,2);
+INSERT INTO indexshow(id, mid) VALUES (3,3);
+INSERT INTO indexshow(id, mid) VALUES (4,4);
+INSERT INTO indexshow(id, mid) VALUES (5,5);

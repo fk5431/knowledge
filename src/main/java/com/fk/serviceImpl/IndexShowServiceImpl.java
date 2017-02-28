@@ -1,5 +1,6 @@
 package com.fk.serviceImpl;
 
+import com.fk.bean.IndexShowBean;
 import com.fk.dao.AreaDao;
 import com.fk.dao.IndexShowDao;
 import com.fk.service.IAreaService;
@@ -16,4 +17,8 @@ public class IndexShowServiceImpl implements IIndexShowService {
     @Autowired
     IndexShowDao indexShowDao;
 
+    @Override
+    public IndexShowBean selectByPrimaryKey(Integer id) {
+        return indexShowDao.selectByPrimaryKey(id);
+    }
 }

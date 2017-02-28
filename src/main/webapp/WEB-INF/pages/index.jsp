@@ -1,3 +1,5 @@
+<%@ page import="java.util.List" %>
+<%@ page import="com.fk.bean.TravelBean" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -73,24 +75,29 @@
 <div class="mfw-focus" id="_j_mfw_focus">
     <div class="show-slider" id="_j_top_pic_container" style="height: 586px;">
         <ul class="show-image">
-            <li class="first" style="display: none;">
-                <a href="/i/6625412.html" target="_blank" class="show-pic"><img
-                        src="https://n2-s.mafengwo.net/fl_progressive,q_mini/s10/M00/74/B6/wKgBZ1irpQ-Afw_uAAepw3nE8w884.jpeg"></a>
-                <a href="/i/6625412.html" target="_blank" class="show-title dark">
-                    <div class="date">
-                        <span class="day">22</span>/Feb.2017
-                    </div>
-                    <h3>宝贝，妈妈带你去撒哈拉</h3>
-                </a>
-                <p class="show-info">图片来自于<font color="#FF9900"><a href="/travel-scenic-spot/mafengwo/12033.html"
-                                                                   target="_blank">摩洛哥</a></font>，此目的地共收藏了<font
-                        color="#FF9900"><a href="http://www.mafengwo.cn/photo/mdd/12033.html" target="_blank"
-                                           rel="nofollow">22473</a></font>张<a
-                        href="/travel-scenic-spot/mafengwo/12033.html" target="_blank">摩洛哥</a>图片。本片由<font
-                        color="#FF9900"><a href="http://www.mafengwo.cn/u/10569551.html" target="_blank">贩暖</a></font>荣誉出品！
-                </p>
-            </li>
-            <li style="display: none;">
+            <%
+                List<TravelBean> list = (List) request.getAttribute("list");
+                for (int i = 0; i <list.size(); i++) {
+            %>
+                <li class="first" style="<% if(i != 0) out.print("display: none;"); %>">
+                    <a href="/i/6625412.html" target="_blank" class="show-pic"><img
+                            src="<%=list.get(i).getImage() %>"></a>
+                    <a href="/i/6625412.html" target="_blank" class="show-title dark">
+                        <div class="date">
+                            <span class="day"><%=list.get(i).getTime()%>
+                        </div>
+                        <h3><%=list.get(i).getTitle()%></h3>
+                    </a>
+                    <p class="show-info">图片来自于<font color="#FF9900"><a href="/travel-scenic-spot/mafengwo/12033.html"
+                                                                       target="_blank"><%=list.get(i).getPlace()%></a></font>，此目的地共收藏了<font
+                            color="#FF9900"><a href="http://www.mafengwo.cn/photo/mdd/12033.html" target="_blank"
+                                               rel="nofollow">22473</a></font>张<a
+                            href="/travel-scenic-spot/mafengwo/12033.html" target="_blank"><%=list.get(i).getPlace()%></a>图片。本片由<font
+                            color="#FF9900"><a href="http://www.mafengwo.cn/u/10569551.html" target="_blank"><%=list.get(i).getAuthor()%></a></font>荣誉出品！
+                    </p>
+                </li>
+            <% } %>
+           <%-- <li style="display: none;">
                 <a href="/i/6556544.html" target="_blank" class="show-pic"><img
                         src="https://a1-q.mafengwo.net/s10/M00/82/A1/wKgBZ1iruKaAFYkSAAeIMJYMQMY88.jpeg?imageMogr2%2Finterlace%2F1"></a>
                 <a href="/i/6556544.html" target="_blank" class="show-title dark">
@@ -157,14 +164,18 @@
                         href="/travel-scenic-spot/mafengwo/17920.html" target="_blank">乌兰布统</a>图片。本片由<font
                         color="#FF9900"><a href="http://www.mafengwo.cn/u/19882788.html" target="_blank">昕小阳</a></font>荣誉出品！
                 </p>
-            </li>
+            </li>--%>
         </ul>
         <%--缩略图--%>
         <ul class="show-nav">
+            <%
+                for (int i = 0; i <list.size(); i++) {
+            %>
             <li class=""><a href="javascript:"><img
-                    src="https://b4-q.mafengwo.net/s10/M00/74/AA/wKgBZ1irpQOAbfaPAAPO_FEKeiQ98.jpeg?imageMogr2%2Fthumbnail%2F%21108x67r%2Fgravity%2FCenter%2Fcrop%2F%21108x67%2Fquality%2F90"
+                    src="<%=list.get(i).getImage() %>"
                     width="110" height="62"><span></span></a></li>
-            <li class=""><a href="javascript:"><img
+            <% } %>
+            <%--<li class=""><a href="javascript:"><img
                     src="https://c3-q.mafengwo.net/s10/M00/21/6F/wKgBZ1imryWAGR1vAAWBgxNZoso14.jpeg?imageMogr2%2Fthumbnail%2F%21108x67r%2Fgravity%2FCenter%2Fcrop%2F%21108x67%2Fquality%2F90"
                     width="110" height="62"><span></span></a></li>
             <li class="active"><a href="javascript:"><img
@@ -175,7 +186,7 @@
                     width="110" height="62"><span></span></a></li>
             <li class=""><a href="javascript:"><img
                     src="https://c2-q.mafengwo.net/s10/M00/1F/7A/wKgBZ1imrOuAYBZzAAK7on2NvPA30.jpeg?imageMogr2%2Fthumbnail%2F%21108x67r%2Fgravity%2FCenter%2Fcrop%2F%21108x67%2Fquality%2F90"
-                    width="110" height="62"><span></span></a></li>
+                    width="110" height="62"><span></span></a></li>--%>
         </ul>
         <a class="show-more" target="_blank" href="/app/calendar.php">历历在目</a>
     </div>

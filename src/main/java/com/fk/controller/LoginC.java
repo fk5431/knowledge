@@ -1,7 +1,9 @@
 package com.fk.controller;
 
+import com.fk.bean.IndexShowBean;
 import com.fk.bean.TravelBean;
 import com.fk.bean.User;
+import com.fk.service.IIndexShowService;
 import com.fk.service.IUserService;
 import com.fk.service.ITravelService;
 import com.fk.util.MD5;
@@ -27,7 +29,10 @@ public class LoginC {
     IUserService userService ;
 
     @Autowired
-    ITravelService indexShowService;
+    IIndexShowService indexShowService;
+
+    @Autowired
+    ITravelService travelService;
 
     @RequestMapping("/")
     public String index( Map<String, Object> map){
@@ -35,11 +40,14 @@ public class LoginC {
         map.put("index", 1);
         //轮播图位置
         List<TravelBean> list = new ArrayList<>();
-        for(int i=0;i<5;i++){
-            TravelBean travelBean = indexShowService.selectByPrimaryKey(i);
+        for(int i=1;i<=5;i++){
+            IndexShowBean indexShowBean = indexShowService.selectByPrimaryKey(i);
+            if(indexShowBean == null)
+                continue;
+            TravelBean travelBean = travelService.selectByPrimaryKey(indexShowBean.getMid());
             list.add(travelBean);
         }
-        map.put("indexshow", list);
+        map.put("list", list);
         //下一步
 
         return "index";
