@@ -188,7 +188,6 @@
                     src="https://c2-q.mafengwo.net/s10/M00/1F/7A/wKgBZ1imrOuAYBZzAAK7on2NvPA30.jpeg?imageMogr2%2Fthumbnail%2F%21108x67r%2Fgravity%2FCenter%2Fcrop%2F%21108x67%2Fquality%2F90"
                     width="110" height="62"><span></span></a></li>--%>
         </ul>
-        <a class="show-more" target="_blank" href="/app/calendar.php">历历在目</a>
     </div>
     <div class="search-container" id="_j_index_search">
         <div class="search-group">
@@ -980,116 +979,9 @@
         </div>
 
     </div>
+
     <div class="mfw-aside">
 
-
-        <div class="da-banner">
-            <div style="position:relative"><a target="_blank" href="http://www.mafengwo.cn/ad/r.php?key=b15UQA"
-                                              rel="nofollow"><img
-                    src="https://c4-q.mafengwo.net/s10/M00/BE/91/wKgBZ1iEdqeAMdF-AAFYTQuXumM57.jpeg" border="0"></a><img
-                    src="http://images.mafengwo.net/images/ad/icon.png?v=20160829"
-                    style="position:absolute;bottom: 4px;left:4px;width:22px;height:12px;"></div>
-        </div>
-
-        <div class="asidebox box-traveller">
-            <div class="asidebox-hd">
-                <h2 class="hd-title"><a href="/traveller/">旅行家专栏</a></h2>
-                <a class="hd-right" href="/traveller/">专栏首页</a>
-            </div>
-            <div class="asidebox-bd" id="_j_traveller_slide">
-                <ul class="slide-ul" style="left: -780px;">
-                    <li>
-                        <div class="image">
-                            <a data-japp="oplog" data-type="thc"
-                               data-key="http://www.mafengwo.cn/traveller/article.php?id=1400"
-                               href="http://www.mafengwo.cn/traveller/article.php?id=1400" target="_blank">
-                                <img src="https://a2-q.mafengwo.net/s10/M00/D8/A5/wKgBZ1iqZ56AeS6sAAF14TRAbIo17.jpeg"
-                                     width="260" height="140">
-                            </a>
-                        </div>
-                        <h3>
-                            <a data-japp="oplog" data-type="thc"
-                               data-key="http://www.mafengwo.cn/traveller/article.php?id=1400"
-                               href="http://www.mafengwo.cn/traveller/article.php?id=1400" target="_blank">什么是少年心？</a>
-                        </h3>
-                        <p>什么是少年心，大概就是永远对这个世界好奇吧。</p>
-                    </li>
-                    <li>
-                        <div class="image">
-                            <a data-japp="oplog" data-type="thc"
-                               data-key="http://www.mafengwo.cn/traveller/article.php?id=1397"
-                               href="http://www.mafengwo.cn/traveller/article.php?id=1397" target="_blank">
-                                <img src="https://b1-q.mafengwo.net/s10/M00/55/17/wKgBZ1ilR7uAUNfuAADEgfUVey802.jpeg"
-                                     width="260" height="140">
-                            </a>
-                        </div>
-                        <h3>
-                            <a data-japp="oplog" data-type="thc"
-                               data-key="http://www.mafengwo.cn/traveller/article.php?id=1397"
-                               href="http://www.mafengwo.cn/traveller/article.php?id=1397" target="_blank">猪尾巴酒馆</a>
-                        </h3>
-                        <p>我走出小酒馆时，日本人和他的猪尾巴，都已消失在神圣的街头。</p>
-                    </li>
-                    <li>
-                        <div class="image">
-                            <a data-japp="oplog" data-type="thc"
-                               data-key="http://www.mafengwo.cn/traveller/article.php?id=1394"
-                               href="http://www.mafengwo.cn/traveller/article.php?id=1394" target="_blank">
-                                <img src="https://b2-q.mafengwo.net/s10/M00/84/E6/wKgBZ1ijzFiACFhYAAEzKGRrSWQ65.jpeg"
-                                     width="260" height="140">
-                            </a>
-                        </div>
-                        <h3>
-                            <a data-japp="oplog" data-type="thc"
-                               data-key="http://www.mafengwo.cn/traveller/article.php?id=1394"
-                               href="http://www.mafengwo.cn/traveller/article.php?id=1394"
-                               target="_blank">30年前金陵饭店的一个夜晚</a>
-                        </h3>
-                        <p>就是在这样一座当年南京最牛逼的饭店顶层旋转餐厅，一位姐姐陪身无分文的我吃了顿大餐，那位姐姐还相当漂亮。</p>
-                    </li>
-                    <li>
-                        <div class="image">
-                            <a data-japp="oplog" data-type="thc"
-                               data-key="http://www.mafengwo.cn/traveller/article.php?id=1391"
-                               href="http://www.mafengwo.cn/traveller/article.php?id=1391" target="_blank">
-                                <img src="https://n3-q.mafengwo.net/s10/M00/D3/1A/wKgBZ1iipCSAdChqAAGg5s9KD_w91.jpeg"
-                                     width="260" height="140">
-                            </a>
-                        </div>
-                        <h3>
-                            <a data-japp="oplog" data-type="thc"
-                               data-key="http://www.mafengwo.cn/traveller/article.php?id=1391"
-                               href="http://www.mafengwo.cn/traveller/article.php?id=1391" target="_blank">澳洲农场打工记</a>
-                        </h3>
-                        <p>那个安静短暂的下午就在静静的时光中滑过。</p>
-                    </li>
-                    <li>
-                        <div class="image">
-                            <a data-japp="oplog" data-type="thc"
-                               data-key="http://www.mafengwo.cn/traveller/article.php?id=1388"
-                               href="http://www.mafengwo.cn/traveller/article.php?id=1388" target="_blank">
-                                <img src="https://c3-q.mafengwo.net/s10/M00/C2/0C/wKgBZ1ihKR2AH-myAAC_Cfcu9so88.jpeg"
-                                     width="260" height="140">
-                            </a>
-                        </div>
-                        <h3>
-                            <a data-japp="oplog" data-type="thc"
-                               data-key="http://www.mafengwo.cn/traveller/article.php?id=1388"
-                               href="http://www.mafengwo.cn/traveller/article.php?id=1388"
-                               target="_blank">谁没有环游世界的梦想？</a>
-                        </h3>
-                        <p>你知道的，生活不是实验室中可以创造出的那种理想状态。</p>
-                    </li>
-                </ul>
-                <ol class="slide-ol">
-                    <li class="" data-id="0"></li>
-                    <li class="" data-id="1"></li>
-                    <li class="" data-id="2"></li>
-                    <li class="active" data-id="3"></li>
-                    <li class="" data-id="4"></li>
-                </ol>
-            </div>
-        </div>
 
         <div class="asidebox box-gonglve">
             <div class="asidebox-hd">
@@ -1142,115 +1034,7 @@
 
         </div>
 
-        <div class="asidebox box-activity">
-            <div class="asidebox-hd">
-                <h2 class="hd-title">我的活动</h2>
-                <span class="hd-right">
-                    <a class="active _j_activity" href="javascript:" data-type="1">正在进行</a>
-                                    </span>
-            </div>
-            <div style="position: relative; height: 220px;">
-                <div class="asidebox-bd _j_activitynav" id="_j_activitynav" data-cs-t="index_activity"
-                     style="max-height: 390px; overflow-y: hidden; position: relative;">
-                    <a class="act-item " href="http://activity.mafengwo.cn/t/peugeot/v1" target="_blank"
-                       data-url="http://www.mafengwo.cn/qrcode.php?text=http%3A%2F%2Factivity.mafengwo.cn%2Ft%2Fpeugeot%2Fv1&amp;size=150&amp;eclevel=H&amp;logo=&amp;__stk__=1544ae8e63d01c5db536aef2e567dac6_d3eb069f33e25f8e224da92965032c8c"
-                       data-cs-p="index_activity_230">
-                        <img src="https://a2-q.mafengwo.net/s10/M00/04/B5/wKgBZ1h_gsmAEyuQAAAJhtMA53g163.png?imageView2%2F2%2Fw%2F40%2Fh%2F40%2Fq%2F100"
-                             alt="先旅奇缘"><strong>先旅奇缘</strong>
-                        <br>东风标致4008 先享新境界
-                    </a>
-                    <a class="act-item _j_wx_open"
-                       data-url="http://www.mafengwo.cn/qrcode.php?text=http%3A%2F%2Factivity.mafengwo.cn%2Ft%2Fsingapore%2Fappv3&amp;size=150&amp;eclevel=H&amp;logo=&amp;__stk__=1544ae8e63d01c5db536aef2e567dac6_d3eb069f33e25f8e224da92965032c8c"
-                       data-cs-p="index_activity_226">
-                        <img src="https://a2-q.mafengwo.net/s10/M00/65/8D/wKgBZ1h4jyKAPCF_AAAHoEJo93A924.png?imageView2%2F2%2Fw%2F40%2Fh%2F40%2Fq%2F100"
-                             alt="伴我童行 玩转新加坡"><strong>伴我童行 玩转新加坡</strong>
-                        <br>20个带娃必TRY体验！
-                    </a>
-                    <a class="act-item " href="http://activity.mafengwo.cn/t/chevrolet/v3" target="_blank"
-                       data-url="http://www.mafengwo.cn/qrcode.php?text=http%3A%2F%2Factivity.mafengwo.cn%2Ft%2Fchevrolet%2Fv3&amp;size=150&amp;eclevel=H&amp;logo=&amp;__stk__=1544ae8e63d01c5db536aef2e567dac6_d3eb069f33e25f8e224da92965032c8c"
-                       data-cs-p="index_activity_181">
-                        <img src="https://b4-q.mafengwo.net/s9/M00/83/8F/wKgBs1djY-aAT5A5AAAHWixyMDI306.png?imageView2%2F2%2Fw%2F40%2Fh%2F40%2Fq%2F100"
-                             alt="自驾招募·最美中国行邀你同行"><strong>自驾招募·最美中国行邀你同行</strong>
-                        <br>加入我们一起勇闯新境吧！
-                    </a>
-                    <a class="act-item " href="http://www.mafengwo.cn/auction/" target="_blank"
-                       data-url="http://www.mafengwo.cn/qrcode.php?text=https%3A%2F%2Fm.mafengwo.cn%2Fauction%2Findex%2Fauced&amp;size=150&amp;eclevel=H&amp;logo=&amp;__stk__=1544ae8e63d01c5db536aef2e567dac6_d3eb069f33e25f8e224da92965032c8c"
-                       data-cs-p="index_activity_15">
-                        <img src="https://n2-q.mafengwo.net/s8/M00/9E/18/wKgBpVWc9HeAWnw3AAAK9pjVex8968.png?imageView2%2F2%2Fw%2F40%2Fh%2F40%2Fq%2F100"
-                             alt="蚂蜂窝拍卖行"><strong>蚂蜂窝拍卖行</strong>
-                        <br>每周二：拍精美实物奖品！
-                    </a>
 
-                </div>
-                <div class="scrollbar"
-                     style="position: absolute; right: -10px; top: 0px; width: 4px; height: 100px; background-color: rgb(214, 214, 214); border-radius: 10px; cursor: pointer; z-index: -1; opacity: 0; display: none;"></div>
-            </div>
-
-            <style>
-                /* 微信弹层 */
-                .wx-mfw-pop {
-                    width: 420px;
-                    height: 285px;
-                    padding-top: 45px;
-                    text-align: center;
-                    font-size: 16px;
-                    color: #666;
-                    line-height: 1.8em;
-                }
-
-                .wx-mfw-pop img {
-                    margin-top: 10px;
-                }
-            </style>
-
-        </div>
-        <div class="da-banner">
-            <div style="position:relative">
-                <embed name="hiex" src="https://images.mafengwo.net/images/da/sg/1606/260x260_2.swf" quality="high"
-                       wmode="transparent" allowfullscreen="false" type="application/x-shockwave-flash"
-                       pluginspage="http://www.macromedia.com/go/getflashplayer" width="260" height="260"
-                       align="middle"><img src="http://images.mafengwo.net/images/ad/icon.png?v=20160829"
-                                           style="position:absolute;bottom: 4px;left:4px;width:22px;height:12px;">
-            </div>
-        </div>
-
-        <div class="asidebox box-hr" data-cs-t="index_job">
-            <div class="asidebox-hd">
-                <h2 class="hd-title">加入蚂蜂窝</h2>
-                <span class="hd-right"><a href="http://www.mafengwo.cn/s/hr.html" target="_blank"
-                                          data-cs-p="index_job_more">更多职位&gt;</a></span>
-            </div>
-            <div class="asidebox-bd">
-                <a href="http://www.mafengwo.cn/s/hr.html" target="_blank" data-cs-p="index_job_more"><img
-                        src="http://images.mafengwo.net/images/new-index/hr.jpg" alt=""></a>
-                <ul>
-                    <li><a href="http://www.mafengwo.cn/s/hr-12.html" target="_blank"
-                           data-cs-p="index_job_广告销售经理"><span>申请职位&gt;</span>广告销售经理<i>HOT</i></a></li>
-                    <li><a href="http://www.mafengwo.cn/s/hr-19.html" target="_blank"
-                           data-cs-p="index_job_资深PHP开发工程师"><span>申请职位&gt;</span>资深PHP开发工程师<i>HOT</i></a></li>
-                    <li><a href="http://www.mafengwo.cn/s/hr-192.html" target="_blank" data-cs-p="index_job_投诉专员"><span>申请职位&gt;</span>投诉专员</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div class="asidebox box-news">
-            <div class="asidebox-hd">
-                <div class="hd-title">蚂蜂窝<h2><a href="javascript:">旅行网站</a></h2>最新进展</div>
-            </div>
-            <ul class="asidebox-bd">
-                <li>10月29日<a href="http://www.mafengwo.cn/i/6282338.html" target="_blank" rel="nofollow">蚂蜂窝秋酷大趴完美收官&amp;全纪录</a>
-                </li>
-                <li>09月29日<a href="http://imfw.cn/l/1333160" target="_blank" rel="nofollow">蚂蜂窝秋酷大趴进入倒计时</a></li>
-                <li>09月20日<a href="http://www.mafengwo.cn/i/5605916.html" target="_blank" rel="nofollow">手机写游记功能上线</a>
-                </li>
-                <li>08月24日<a href="http://www.mafengwo.cn/activity/plan_c9/index" target="_blank" rel="nofollow">蚂蜂窝C9计划·秋酷大趴开始报名</a>
-                </li>
-                <li>08月15日<a href="http://www.mafengwo.cn/i/5597015.html" target="_blank"
-                             rel="nofollow">2016蚂蜂窝指路人全球招募</a></li>
-                <li>08月06日<a href="http://www.mafengwo.cn/i/5569157.html" target="_blank" rel="nofollow">奥运金牌争夺战活动开始</a>
-                </li>
-            </ul>
-        </div>
     </div>
     <div class="da-banner da-banner-row"></div>
 </div>
@@ -1279,135 +1063,26 @@
 </script>
 
 
-<link href="http://css.mafengwo.net/css/mfw-footer.css?1478231953" rel="stylesheet" type="text/css">
+<link href="${pageContext.request.contextPath}/css/index_4.css" rel="stylesheet" type="text/css">
 
 <div id="footer">
     <div class="ft-content">
-        <div class="ft-info clearfix">
-            <dl class="ft-info-col ft-info-intro">
-                <dt>中国领先的自由行服务平台</dt>
-                <dd>覆盖全球200多个国家和地区</dd>
-                <dd><strong>100,000,000</strong> 位旅行者</dd>
-                <dd><strong>920,000</strong> 家国际酒店</dd>
-                <dd><strong>21,000,000</strong> 条真实点评</dd>
-                <dd><strong>382,000,000</strong> 次攻略下载</dd>
-                <dd><a class="highlight" href="http://www.mafengwo.cn/activity/sales_report2015/index" target="_blank">中国旅游行业第一部“玩法”</a>
-                </dd>
-            </dl>
-            <dl class="ft-info-col ft-info-about">
-                <dt>关于我们</dt>
-                <dd><a href="http://www.mafengwo.cn/s/about.html" rel="nofollow">关于蚂蜂窝</a></dd>
-                <dd><a href="http://www.mafengwo.cn/s/property.html" rel="nofollow">网络信息侵权通知指引</a></dd>
-                <dd><a href="http://www.mafengwo.cn/s/private.html" rel="nofollow">隐私政策</a></dd>
-                <dd><a href="http://www.mafengwo.cn/s/agreement.html" rel="nofollow">服务协议</a></dd>
-                <dd><a href="http://www.mafengwo.cn/s/contact.html" rel="nofollow">联系我们</a></dd>
-                <dd><a class="joinus highlight" title="蚂蜂窝团队招聘" target="_blank" href="http://www.mafengwo.cn/s/hr.html"
-                       rel="nofollow">加入蚂蜂窝</a></dd>
-            </dl>
-            <dl class="ft-info-col ft-info-service">
-                <dt>旅行服务</dt>
-                <dd>
-                    <ul class="clearfix">
-                        <li><a target="_blank" href="http://www.mafengwo.cn/gonglve/">旅游攻略</a></li>
-                        <li><a target="_blank" href="http://www.mafengwo.cn/hotel/">酒店预订</a></li>
-                        <li><a target="_blank" href="http://www.mafengwo.cn/sales/">旅游特价</a></li>
-                        <li><a target="_blank" href="http://zuche.mafengwo.cn/">国际租车</a></li>
-                        <li><a target="_blank" href="http://www.mafengwo.cn/wenda/">旅游问答</a></li>
-                        <li><a target="_blank" href="http://www.mafengwo.cn/insure/">旅游保险</a></li>
-                        <li><a target="_blank" href="http://z.mafengwo.cn">旅游指南</a></li>
-                        <li><a target="_blank" href="http://huoche.mafengwo.cn">订火车票</a></li>
-                        <li><a target="_blank" href="http://www.mafengwo.cn/travel-news/">旅游资讯</a></li>
-                        <li><a target="_blank" href="http://www.mafengwo.cn/app/intro/gonglve.php">APP下载</a></li>
-                        <li><a target="_blank" href="http://www.mafengwo.cn/sales/alliance.php" class="highlight">全球供应商入驻</a>
-                        </li>
-                    </ul>
-                </dd>
-            </dl>
-            <dl class="ft-info-col ft-info-qrcode">
-                <dd>
-                    <span class="ft-qrcode-tejia"></span>
-                    <p>蚂蜂窝良品<br>官方服务号</p>
-                </dd>
-                <dd>
-                    <span class="ft-qrcode-weixin"></span>
-                    <p>蚂蜂窝自由行<br>官方订阅号</p>
-                </dd>
-            </dl>
-            <dl class="ft-info-social">
-                <dt>关注我们</dt>
-                <dd>
-                    <a class="ft-social-weibo" target="_blank" href="http://weibo.com/mafengwovip" rel="nofollow"><i
-                            class="ft-social-icon"></i></a>
-                    <a class="ft-social-qqt" target="_blank" href="http://t.qq.com/mafengwovip" rel="nofollow"><i
-                            class="ft-social-icon"></i></a>
-                    <a class="ft-social-qzone" target="_blank" href="http://1213600479.qzone.qq.com/" rel="nofollow"><i
-                            class="ft-social-icon"></i></a>
-                </dd>
-            </dl>
-        </div>
-
-        <div class="ft-links">
-            <a target="_blank" href="http://china.makepolo.com/">马可波罗</a><a target="_blank"
-                                                                            href="http://www.onlylady.com/">Onlylady女人志</a><a
-                target="_blank" href="http://trip.elong.com/">艺龙旅游指南</a><a target="_blank" href="http://www.cncn.com">欣欣旅游网</a><a
-                target="_blank" href="http://www.8264.com/">户外运动</a><a target="_blank" href="http://www.yue365.com/">365音乐网</a><a
-                target="_blank" href="http://www.becod.com/">百酷特色住宿</a><a target="_blank" href="http://www.uzai.com/">悠哉旅游网</a><a
-                target="_blank" href="http://www.zongheng.com/">小说网</a><a target="_blank"
-                                                                          href="http://www.laidingba.com/">来订吧酒店网</a><a
-                target="_blank" href="http://www.yododo.com">游多多自助游</a><a target="_blank"
-                                                                          href="http://www.gebilaoshi.com">教育</a><a
-                target="_blank" href="http://huoche.mafengwo.cn/">火车时刻表</a><a target="_blank"
-                                                                              href="http://www.lvmama.com">驴妈妈旅游网</a><a
-                target="_blank" href="http://www.haodou.com/">好豆美食网</a><a target="_blank" href="http://www.taoche.com/">二手车</a><a
-                target="_blank" href="http://www.lvye.cn">绿野户外</a><a target="_blank"
-                                                                     href="http://www.tuniu.com/">途牛旅游网</a><a
-                target="_blank" href="http://www.mapbar.com/">图吧</a><a target="_blank" href="http://www.chnsuv.com">SUV联合越野</a><a
-                target="_blank" href="http://www.uc.cn/">手机浏览器</a><a target="_blank"
-                                                                     href="http://sh.city8.com/">上海地图</a><a
-                target="_blank" href="http://www.tianqi.com/">天气预报查询</a><a target="_blank" href="http://www.ly.com/">同程旅游</a><a
-                target="_blank" href="http://www.tieyou.com/">火车票</a><a target="_blank" href="http://you.ctrip.com/">携程旅游</a><a
-                target="_blank" href="http://www.jinjiang.com">锦江旅游</a><a target="_blank" href="http://www.huoche.net/">火车时刻表</a><a
-                target="_blank" href="http://www.tripadvisor.cn/">TripAdvisor</a><a target="_blank"
-                                                                                    href="http://www.tianxun.com/">天巡网</a><a
-                target="_blank" href="http://www.zizaike.com">自在客</a><a target="_blank" href="http://www.zuzuche.com">租租车</a><a
-                target="_blank" href="http://www.5fen.com/">五分旅游网</a><a target="_blank"
-                                                                        href="http://www.zhuna.cn/">酒店预订</a><a
-                target="_blank" href="http://www.ailvxing.com">爱旅行网</a><a target="_blank"
-                                                                          href="http://360.mafengwo.cn/all.php">旅游</a><a
-                target="_blank" href="http://vacations.ctrip.com/">旅游网</a><a target="_blank"
-                                                                             href="http://www.wed114.cn">wed114结婚网</a><a
-                target="_blank" href="http://www.chexun.com/">车讯网</a><a target="_blank" href="http://www.aoyou.com/">遨游旅游网</a><a
-                target="_blank" href="http://www.91.com/">手机</a><a target="_blank"
-                                                                   href="http://www.keyunzhan.com/">客运站</a>
-            <a href="http://www.mafengwo.cn/s/link.html" target="_blank">更多友情链接&gt;&gt;</a>
-        </div>
 
         <div class="ft-copyright">
-            <div class="ft-safety">
-                <a class="s-a" target="_blank" href="https://search.szfw.org/cert/l/CX20140627008255008321"
-                   id="___szfw_logo___"></a>
-                <a class="s-b"
-                   href="https://ss.knet.cn/verifyseal.dll?sn=e130816110100420286o93000000&amp;ct=df&amp;a=1&amp;pa=787189"
-                   target="_blank" rel="nofollow"></a>
-                <a class="s-c" href="http://www.itrust.org.cn/Home/Index/itrust_certifi/wm/1669928206.html"
-                   target="_blank" rel="nofollow"></a>
-            </div>
-            <a href="http://www.mafengwo.cn"><i class="ft-mfw-logo"></i></a>
+            <a href="${pageContext.request.contextPath}"><i class="ft-mfw-logo"></i></a>
             <p>© 2017 Mafengwo.cn <a href="http://www.miibeian.gov.cn/" target="_blank"
-                                     rel="nofollow">京ICP备11015476号</a> 京公网安备110105013401号 <a
+                                     rel="nofollow">京ICP备******号</a> 京公网安备*******号 <a
                     href="http://images.mafengwo.net/images/about/icp.jpg" target="_blank"
-                    rel="nofollow">京ICP证110318号</a></p>
+                    rel="nofollow">京ICP证*****号</a></p>
             <p><a href="http://images.mafengwo.net/images/about/licence.jpg" target="_blank" rel="nofollow">营业执照</a>
-                新出网证(京)字242号 全国统一客服电话：<span class="highlight">4006-345-678</span><a target="_blank"
-                                                                                    href="http://www.mafengwo.cn/s/sitemap.html"
-                                                                                    class="highlight m_l_10">网站地图</a>
+                *********  客服电话：<span class="highlight">*******</span>
             </p>
         </div>
     </div>
 </div>
 
 
-<link href="http://css.mafengwo.net/css/mfw-toolbar.css?1459131121" rel="stylesheet" type="text/css">
+<link href="${pageContext.request.contextPath}/css/index_3.css" rel="stylesheet" type="text/css">
 
 <div class="mfw-toolbar" id="_j_mfwtoolbar" style="display: block;">
     <div class="toolbar-item-top" style="display: none;">
@@ -1422,244 +1097,14 @@
             <em>意见反馈</em>
         </a>
     </div>
-    <div class="toolbar-item-code">
-        <a role="button" class="btn">
-            <i class="icon_code"></i>
-        </a>
-        <a role="button" class="mfw-code _j_code">
-
-
-            <img src="https://n3-q.mafengwo.net/s9/M00/01/7B/wKgBs1gjDcmAKFXuAAERZRJ4yus61.jpeg " width="300"
-                 height="192">
-        </a>
-        <!--<div class="wx-official-pop"><img src="http://images.mafengwo.net/images/qrcode-weixin.gif"><i class="_j_closeqrcode"></i></div>-->
-    </div>
-
 </div>
 
 
 <script language="javascript" type="text/javascript">
     if (typeof M !== "undefined" && typeof M.loadResource === "function") {
-        M.loadResource("http://js.mafengwo.net/js/cv/js+Dropdown:js+pageletcommon+pageHeadUserInfoWWWNormal:js+jquery.tmpl:js+M+module+InputListener:js+M+module+SuggestionXHR:js+M+module+DropList:js+M+module+Suggestion:js+M+module+MesSearchEvent:js+SiteSearch:js+AHeader:js+jquery.lazyload:js+M+module+Pagination:js+index+ControllerRecommend:js+M+module+Slider:js+jquery.mousewheel.min:js+M+module+ScrollBar:js+xdate:js+hotel+module+FestivalDateConfig:js+jquery-ui-core:js+jquery-ui-datepicker:js+hotel+module+DateRangePicker:js+M+module+Storage:js+hotel+module+BookingDate:js+hotel+module+Log:js+hotel+module+Search_v2:js+M+module+dialog+Layer:js+M+module+dialog+DialogBase:js+M+module+dialog+Dialog:js+AIndex:js+module+app+Page:js+M+module+Toggle:js+index+AGinfoSearch:im+js+client+ImEventEntity:im+js+client+ImService:js+jquery.jgrowl.min:js+AMessage:js+M+module+FrequencyVerifyControl:js+M+module+FrequencySystemVerify:js+ALogin:js+M+module+ScrollObserver:js+M+module+QRCode:js+AToolbar:js+ACnzzGaLog:js+ARecruit:js+ALazyLoad^alJV^1487647053.js");
+        M.loadResource("${pageContext.request.contextPath}/js/index_6.js");
     }
 </script>
-
-
-<div id="ui-datepicker-div"
-     class="ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all ui-datepicker-multi ui-datepicker-multi-2"
-     style="width: 34em;">
-    <div class="ui-datepicker-group ui-datepicker-group-first">
-        <div class="ui-datepicker-header ui-widget-header ui-helper-clearfix ui-corner-left"><a
-                class="ui-datepicker-prev ui-corner-all" data-handler="prev" data-event="click" title="Prev"><span
-                class="ui-icon ui-icon-circle-triangle-w">Prev</span></a>
-            <div class="ui-datepicker-title"><span class="ui-datepicker-month">四月</span>&nbsp;<span
-                    class="ui-datepicker-year">2017</span></div>
-        </div>
-        <table class="ui-datepicker-calendar">
-            <thead>
-            <tr>
-                <th scope="col"><span title="星期一">一</span></th>
-                <th scope="col"><span title="星期二">二</span></th>
-                <th scope="col"><span title="星期三">三</span></th>
-                <th scope="col"><span title="星期四">四</span></th>
-                <th scope="col"><span title="星期五">五</span></th>
-                <th scope="col" class="ui-datepicker-week-end"><span title="星期六">六</span></th>
-                <th scope="col" class="ui-datepicker-week-end"><span title="星期日">日</span></th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-                <td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled" data-date="27">
-                    &nbsp;</td>
-                <td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled" data-date="28">
-                    &nbsp;</td>
-                <td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled" data-date="29">
-                    &nbsp;</td>
-                <td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled" data-date="30">
-                    &nbsp;</td>
-                <td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled" data-date="31">
-                    &nbsp;</td>
-                <td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-date="1"
-                    data-month="3" data-year="2017"><a class="ui-state-default" href="#">1</a></td>
-                <td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-date="2"
-                    data-month="3" data-year="2017"><a class="ui-state-default" href="#">2</a></td>
-            </tr>
-            <tr>
-                <td class=" start_day" data-handler="selectDay" data-event="click" data-date="3" data-month="3"
-                    data-year="2017"><a class="ui-state-default" href="#">3</a></td>
-                <td class=" end_day ui-datepicker-current-day" data-handler="selectDay" data-event="click" data-date="4"
-                    data-month="3" data-year="2017"><a class="ui-state-default ui-state-active" href="#"><p class="fes">
-                    清明</p></a></td>
-                <td class=" " data-handler="selectDay" data-event="click" data-date="5" data-month="3" data-year="2017">
-                    <a class="ui-state-default" href="#">5</a></td>
-                <td class=" " data-handler="selectDay" data-event="click" data-date="6" data-month="3" data-year="2017">
-                    <a class="ui-state-default" href="#">6</a></td>
-                <td class=" " data-handler="selectDay" data-event="click" data-date="7" data-month="3" data-year="2017">
-                    <a class="ui-state-default" href="#">7</a></td>
-                <td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-date="8"
-                    data-month="3" data-year="2017"><a class="ui-state-default" href="#">8</a></td>
-                <td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-date="9"
-                    data-month="3" data-year="2017"><a class="ui-state-default" href="#">9</a></td>
-            </tr>
-            <tr>
-                <td class=" " data-handler="selectDay" data-event="click" data-date="10" data-month="3"
-                    data-year="2017"><a class="ui-state-default" href="#">10</a></td>
-                <td class=" " data-handler="selectDay" data-event="click" data-date="11" data-month="3"
-                    data-year="2017"><a class="ui-state-default" href="#">11</a></td>
-                <td class=" " data-handler="selectDay" data-event="click" data-date="12" data-month="3"
-                    data-year="2017"><a class="ui-state-default" href="#">12</a></td>
-                <td class=" " data-handler="selectDay" data-event="click" data-date="13" data-month="3"
-                    data-year="2017"><a class="ui-state-default" href="#">13</a></td>
-                <td class=" " data-handler="selectDay" data-event="click" data-date="14" data-month="3"
-                    data-year="2017"><a class="ui-state-default" href="#">14</a></td>
-                <td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-date="15"
-                    data-month="3" data-year="2017"><a class="ui-state-default" href="#">15</a></td>
-                <td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-date="16"
-                    data-month="3" data-year="2017"><a class="ui-state-default" href="#">16</a></td>
-            </tr>
-            <tr>
-                <td class=" " data-handler="selectDay" data-event="click" data-date="17" data-month="3"
-                    data-year="2017"><a class="ui-state-default" href="#">17</a></td>
-                <td class=" " data-handler="selectDay" data-event="click" data-date="18" data-month="3"
-                    data-year="2017"><a class="ui-state-default" href="#">18</a></td>
-                <td class=" " data-handler="selectDay" data-event="click" data-date="19" data-month="3"
-                    data-year="2017"><a class="ui-state-default" href="#">19</a></td>
-                <td class=" " data-handler="selectDay" data-event="click" data-date="20" data-month="3"
-                    data-year="2017"><a class="ui-state-default" href="#">20</a></td>
-                <td class=" " data-handler="selectDay" data-event="click" data-date="21" data-month="3"
-                    data-year="2017"><a class="ui-state-default" href="#">21</a></td>
-                <td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-date="22"
-                    data-month="3" data-year="2017"><a class="ui-state-default" href="#">22</a></td>
-                <td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-date="23"
-                    data-month="3" data-year="2017"><a class="ui-state-default" href="#">23</a></td>
-            </tr>
-            <tr>
-                <td class=" " data-handler="selectDay" data-event="click" data-date="24" data-month="3"
-                    data-year="2017"><a class="ui-state-default" href="#">24</a></td>
-                <td class=" " data-handler="selectDay" data-event="click" data-date="25" data-month="3"
-                    data-year="2017"><a class="ui-state-default" href="#">25</a></td>
-                <td class=" " data-handler="selectDay" data-event="click" data-date="26" data-month="3"
-                    data-year="2017"><a class="ui-state-default" href="#">26</a></td>
-                <td class=" " data-handler="selectDay" data-event="click" data-date="27" data-month="3"
-                    data-year="2017"><a class="ui-state-default" href="#">27</a></td>
-                <td class=" " data-handler="selectDay" data-event="click" data-date="28" data-month="3"
-                    data-year="2017"><a class="ui-state-default" href="#">28</a></td>
-                <td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-date="29"
-                    data-month="3" data-year="2017"><a class="ui-state-default" href="#">29</a></td>
-                <td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-date="30"
-                    data-month="3" data-year="2017"><a class="ui-state-default" href="#">30</a></td>
-            </tr>
-            </tbody>
-        </table>
-    </div>
-    <div class="ui-datepicker-group ui-datepicker-group-last">
-        <div class="ui-datepicker-header ui-widget-header ui-helper-clearfix ui-corner-right"><a
-                class="ui-datepicker-next ui-corner-all ui-state-disabled" title="Next"><span
-                class="ui-icon ui-icon-circle-triangle-e">Next</span></a>
-            <div class="ui-datepicker-title"><span class="ui-datepicker-month">五月</span>&nbsp;<span
-                    class="ui-datepicker-year">2017</span></div>
-        </div>
-        <table class="ui-datepicker-calendar">
-            <thead>
-            <tr>
-                <th scope="col"><span title="星期一">一</span></th>
-                <th scope="col"><span title="星期二">二</span></th>
-                <th scope="col"><span title="星期三">三</span></th>
-                <th scope="col"><span title="星期四">四</span></th>
-                <th scope="col"><span title="星期五">五</span></th>
-                <th scope="col" class="ui-datepicker-week-end"><span title="星期六">六</span></th>
-                <th scope="col" class="ui-datepicker-week-end"><span title="星期日">日</span></th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-                <td class=" " data-handler="selectDay" data-event="click" data-date="1" data-month="4" data-year="2017">
-                    <a class="ui-state-default" href="#"><p class="fes">五一</p></a></td>
-                <td class=" " data-handler="selectDay" data-event="click" data-date="2" data-month="4" data-year="2017">
-                    <a class="ui-state-default" href="#">2</a></td>
-                <td class=" " data-handler="selectDay" data-event="click" data-date="3" data-month="4" data-year="2017">
-                    <a class="ui-state-default" href="#">3</a></td>
-                <td class=" ui-datepicker-unselectable ui-state-disabled " data-date="4"><span class="ui-state-default">4</span>
-                </td>
-                <td class=" ui-datepicker-unselectable ui-state-disabled " data-date="5"><span class="ui-state-default">5</span>
-                </td>
-                <td class=" ui-datepicker-week-end ui-datepicker-unselectable ui-state-disabled " data-date="6"><span
-                        class="ui-state-default">6</span></td>
-                <td class=" ui-datepicker-week-end ui-datepicker-unselectable ui-state-disabled " data-date="7"><span
-                        class="ui-state-default">7</span></td>
-            </tr>
-            <tr>
-                <td class=" ui-datepicker-unselectable ui-state-disabled " data-date="8"><span class="ui-state-default">8</span>
-                </td>
-                <td class=" ui-datepicker-unselectable ui-state-disabled " data-date="9"><span class="ui-state-default">9</span>
-                </td>
-                <td class=" ui-datepicker-unselectable ui-state-disabled " data-date="10"><span
-                        class="ui-state-default">10</span></td>
-                <td class=" ui-datepicker-unselectable ui-state-disabled " data-date="11"><span
-                        class="ui-state-default">11</span></td>
-                <td class=" ui-datepicker-unselectable ui-state-disabled " data-date="12"><span
-                        class="ui-state-default">12</span></td>
-                <td class=" ui-datepicker-week-end ui-datepicker-unselectable ui-state-disabled " data-date="13"><span
-                        class="ui-state-default">13</span></td>
-                <td class=" ui-datepicker-week-end ui-datepicker-unselectable ui-state-disabled " data-date="14"><span
-                        class="ui-state-default">14</span></td>
-            </tr>
-            <tr>
-                <td class=" ui-datepicker-unselectable ui-state-disabled " data-date="15"><span
-                        class="ui-state-default">15</span></td>
-                <td class=" ui-datepicker-unselectable ui-state-disabled " data-date="16"><span
-                        class="ui-state-default">16</span></td>
-                <td class=" ui-datepicker-unselectable ui-state-disabled " data-date="17"><span
-                        class="ui-state-default">17</span></td>
-                <td class=" ui-datepicker-unselectable ui-state-disabled " data-date="18"><span
-                        class="ui-state-default">18</span></td>
-                <td class=" ui-datepicker-unselectable ui-state-disabled " data-date="19"><span
-                        class="ui-state-default">19</span></td>
-                <td class=" ui-datepicker-week-end ui-datepicker-unselectable ui-state-disabled " data-date="20"><span
-                        class="ui-state-default">20</span></td>
-                <td class=" ui-datepicker-week-end ui-datepicker-unselectable ui-state-disabled " data-date="21"><span
-                        class="ui-state-default">21</span></td>
-            </tr>
-            <tr>
-                <td class=" ui-datepicker-unselectable ui-state-disabled " data-date="22"><span
-                        class="ui-state-default">22</span></td>
-                <td class=" ui-datepicker-unselectable ui-state-disabled " data-date="23"><span
-                        class="ui-state-default">23</span></td>
-                <td class=" ui-datepicker-unselectable ui-state-disabled " data-date="24"><span
-                        class="ui-state-default">24</span></td>
-                <td class=" ui-datepicker-unselectable ui-state-disabled " data-date="25"><span
-                        class="ui-state-default">25</span></td>
-                <td class=" ui-datepicker-unselectable ui-state-disabled " data-date="26"><span
-                        class="ui-state-default">26</span></td>
-                <td class=" ui-datepicker-week-end ui-datepicker-unselectable ui-state-disabled " data-date="27"><span
-                        class="ui-state-default">27</span></td>
-                <td class=" ui-datepicker-week-end ui-datepicker-unselectable ui-state-disabled " data-date="28"><span
-                        class="ui-state-default">28</span></td>
-            </tr>
-            <tr>
-                <td class=" ui-datepicker-unselectable ui-state-disabled " data-date="29"><span
-                        class="ui-state-default">29</span></td>
-                <td class=" ui-datepicker-unselectable ui-state-disabled " data-date="30"><span
-                        class="ui-state-default">30</span></td>
-                <td class=" ui-datepicker-unselectable ui-state-disabled " data-date="31"><span
-                        class="ui-state-default">31</span></td>
-                <td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled" data-date="1">
-                    &nbsp;</td>
-                <td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled" data-date="2">
-                    &nbsp;</td>
-                <td class=" ui-datepicker-week-end ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled"
-                    data-date="3">&nbsp;</td>
-                <td class=" ui-datepicker-week-end ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled"
-                    data-date="4">&nbsp;</td>
-            </tr>
-            </tbody>
-        </table>
-    </div>
-    <div class="ui-datepicker-row-break"></div>
-</div>
-<div id="jGrowl" class="top-right jGrowl">
-    <div class="jGrowl-notification"></div>
-</div>
 
 <script>
     var state = ${index};
