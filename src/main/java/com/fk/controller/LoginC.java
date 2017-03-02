@@ -6,6 +6,7 @@ import com.fk.bean.User;
 import com.fk.service.IIndexShowService;
 import com.fk.service.IUserService;
 import com.fk.service.ITravelService;
+import com.fk.util.CommonConst;
 import com.fk.util.MD5;
 import com.fk.util.SendMail;
 import org.slf4j.Logger;
@@ -25,6 +26,8 @@ import java.util.*;
 public class LoginC {
     private Logger logger = LoggerFactory.getLogger(LoginC.class);
 
+    private static final int SIZE = CommonConst.SIX_INT;
+
     @Autowired
     IUserService userService ;
 
@@ -40,7 +43,7 @@ public class LoginC {
         map.put("index", 1);
         //轮播图位置
         List<TravelBean> list = new ArrayList<>();
-        for(int i=1;i<=5;i++){
+        for(int i=CommonConst.ONE_INT;i<=CommonConst.FIVE_INT;i++){
             IndexShowBean indexShowBean = indexShowService.selectByPrimaryKey(i);
             if(indexShowBean == null)
                 continue;
@@ -48,7 +51,16 @@ public class LoginC {
             list.add(travelBean);
         }
         map.put("list", list);
-        //下一步
+        //热门游记
+        List<TravelBean> travelList = new ArrayList<>();
+        int count = travelService.count();
+        int page = count / SIZE + CommonConst.ONE_INT;
+
+        map.put("count", count);
+        map.put("size", SIZE);
+        map.put("page", page);
+        map.put("pageNow", CommonConst.ONE_INT);
+
 
         return "index";
     }

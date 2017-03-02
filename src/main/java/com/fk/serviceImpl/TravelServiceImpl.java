@@ -19,4 +19,9 @@ public class TravelServiceImpl implements ITravelService {
     public TravelBean selectByPrimaryKey(Integer id) {
         return travelDao.selectByPrimaryKey(id);
     }
+
+    @Override
+    public int count() {
+        return travelDao.count();
+    }
 }

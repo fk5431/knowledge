@@ -97,74 +97,6 @@
                     </p>
                 </li>
             <% } %>
-           <%-- <li style="display: none;">
-                <a href="/i/6556544.html" target="_blank" class="show-pic"><img
-                        src="https://a1-q.mafengwo.net/s10/M00/82/A1/wKgBZ1iruKaAFYkSAAeIMJYMQMY88.jpeg?imageMogr2%2Finterlace%2F1"></a>
-                <a href="/i/6556544.html" target="_blank" class="show-title dark">
-                    <div class="date">
-                        <span class="day">21</span>/Feb.2017
-                    </div>
-                    <h3>【围城随笔】之2017跨年武功山全线重装穿越</h3>
-                </a>
-                <p class="show-info">图片来自于<font color="#FF9900"><a href="/travel-scenic-spot/mafengwo/12702.html"
-                                                                   target="_blank">武功山</a></font>，此目的地共收藏了<font
-                        color="#FF9900"><a href="http://www.mafengwo.cn/photo/mdd/12702.html" target="_blank"
-                                           rel="nofollow">161765</a></font>张<a
-                        href="/travel-scenic-spot/mafengwo/12702.html" target="_blank">武功山</a>图片。本片由<font
-                        color="#FF9900"><a href="http://www.mafengwo.cn/u/19922585.html"
-                                           target="_blank">在远方的阿伦</a></font>荣誉出品！</p>
-            </li>
-            <li style="display: list-item;">
-                <a href="/i/6651281.html" target="_blank" class="show-pic"><img
-                        src="https://c4-q.mafengwo.net/s10/M00/21/50/wKgBZ1imrvqAafuJAAeRHcfhBBg66.jpeg?imageMogr2%2Finterlace%2F1"></a>
-                <a href="/i/6651281.html" target="_blank" class="show-title dark">
-                    <div class="date">
-                        <span class="day">20</span>/Feb.2017
-                    </div>
-                    <h3>放弃了万千烟火，只为那一眼明眸——贝加尔湖蓝冰之旅</h3>
-                </a>
-                <p class="show-info">图片来自于<font color="#FF9900"><a href="/travel-scenic-spot/mafengwo/14635.html"
-                                                                   target="_blank">贝加尔湖</a></font>，此目的地共收藏了<font
-                        color="#FF9900"><a href="http://www.mafengwo.cn/photo/mdd/14635.html" target="_blank"
-                                           rel="nofollow">45001</a></font>张<a
-                        href="/travel-scenic-spot/mafengwo/14635.html" target="_blank">贝加尔湖</a>图片。本片由<font
-                        color="#FF9900"><a href="http://www.mafengwo.cn/u/10321105.html" target="_blank">逐风</a></font>荣誉出品！
-                </p>
-            </li>
-            <li style="display: none;">
-                <a href="/i/6651179.html" target="_blank" class="show-pic"><img
-                        src="https://a4-q.mafengwo.net/s10/M00/21/29/wKgBZ1imrryACQbJAAeTXlDjNuM84.jpeg?imageMogr2%2Finterlace%2F1"></a>
-                <a href="/i/6651179.html" target="_blank" class="show-title dark">
-                    <div class="date">
-                        <span class="day">19</span>/Feb.2017
-                    </div>
-                    <h3>走到世界的尽头，依然和你手牵手</h3>
-                </a>
-                <p class="show-info">图片来自于<font color="#FF9900"><a href="/travel-scenic-spot/mafengwo/11058.html"
-                                                                   target="_blank">斯里兰卡</a></font>，此目的地共收藏了<font
-                        color="#FF9900"><a href="http://www.mafengwo.cn/photo/mdd/11058.html" target="_blank"
-                                           rel="nofollow">685718</a></font>张<a
-                        href="/travel-scenic-spot/mafengwo/11058.html" target="_blank">斯里兰卡</a>图片。本片由<font
-                        color="#FF9900"><a href="http://www.mafengwo.cn/u/59268948.html" target="_blank">小雪儿</a></font>荣誉出品！
-                </p>
-            </li>
-            <li style="display: none;">
-                <a href="/i/6602789.html" target="_blank" class="show-pic"><img
-                        src="https://b4-q.mafengwo.net/s10/M00/1F/89/wKgBZ1imrPiAEIUHAAdLLQABusE69.jpeg?imageMogr2%2Finterlace%2F1"></a>
-                <a href="/i/6602789.html" target="_blank" class="show-title dark">
-                    <div class="date">
-                        <span class="day">18</span>/Feb.2017
-                    </div>
-                    <h3>冬季牧歌——雪原深处，见之不忘，思之如狂</h3>
-                </a>
-                <p class="show-info">图片来自于<font color="#FF9900"><a href="/travel-scenic-spot/mafengwo/17920.html"
-                                                                   target="_blank">乌兰布统</a></font>，此目的地共收藏了<font
-                        color="#FF9900"><a href="http://www.mafengwo.cn/photo/mdd/17920.html" target="_blank"
-                                           rel="nofollow">93410</a></font>张<a
-                        href="/travel-scenic-spot/mafengwo/17920.html" target="_blank">乌兰布统</a>图片。本片由<font
-                        color="#FF9900"><a href="http://www.mafengwo.cn/u/19882788.html" target="_blank">昕小阳</a></font>荣誉出品！
-                </p>
-            </li>--%>
         </ul>
         <%--缩略图--%>
         <ul class="show-nav">
@@ -175,18 +107,7 @@
                     src="<%=list.get(i).getImage() %>"
                     width="110" height="62"><span></span></a></li>
             <% } %>
-            <%--<li class=""><a href="javascript:"><img
-                    src="https://c3-q.mafengwo.net/s10/M00/21/6F/wKgBZ1imryWAGR1vAAWBgxNZoso14.jpeg?imageMogr2%2Fthumbnail%2F%21108x67r%2Fgravity%2FCenter%2Fcrop%2F%21108x67%2Fquality%2F90"
-                    width="110" height="62"><span></span></a></li>
-            <li class="active"><a href="javascript:"><img
-                    src="https://c1-q.mafengwo.net/s10/M00/21/48/wKgBZ1imru-APmN2AAfIqHDNewM21.jpeg?imageMogr2%2Fthumbnail%2F%21108x67r%2Fgravity%2FCenter%2Fcrop%2F%21108x67%2Fquality%2F90"
-                    width="110" height="62"><span></span></a></li>
-            <li class=""><a href="javascript:"><img
-                    src="https://n2-q.mafengwo.net/s10/M00/21/1A/wKgBZ1imrq-ATZV8AAczIizFvDQ84.jpeg?imageMogr2%2Fthumbnail%2F%21108x67r%2Fgravity%2FCenter%2Fcrop%2F%21108x67%2Fquality%2F90"
-                    width="110" height="62"><span></span></a></li>
-            <li class=""><a href="javascript:"><img
-                    src="https://c2-q.mafengwo.net/s10/M00/1F/7A/wKgBZ1imrOuAYBZzAAK7on2NvPA30.jpeg?imageMogr2%2Fthumbnail%2F%21108x67r%2Fgravity%2FCenter%2Fcrop%2F%21108x67%2Fquality%2F90"
-                    width="110" height="62"><span></span></a></li>--%>
+
         </ul>
     </div>
     <div class="search-container" id="_j_index_search">
@@ -461,16 +382,14 @@
                  data-controller="/js/index/ControllerRecommend">
                 <div id="_j_tn_content">
                     <div class="tn-list">
+                            <% List<TravelBean> travelList = (List) request.getAttribute("travelList");
+                            for (int i = 0; i <list.size(); i++) { %>
                         <div class="tn-item clearfix">
                             <div class="tn-image">
                                 <a href="/i/6525065.html" target="_blank">
                                     <img class=""
-                                         data-src="http://n3-q.mafengwo.net/s9/M00/50/82/wKgBs1hj2pSAGWgWAAnclL-q2h842.jpeg?imageMogr2%2Fthumbnail%2F%21220x150r%2Fgravity%2FCenter%2Fcrop%2F%21220x150%2Fquality%2F90"
-                                         data-rt-src="http://n3-q.mafengwo.net/s9/M00/50/82/wKgBs1hj2pSAGWgWAAnclL-q2h842.jpeg?imageMogr2%2Fthumbnail%2F%21440x300r%2Fgravity%2FCenter%2Fcrop%2F%21440x300%2Fquality%2F90"
-                                         src="http://n3-q.mafengwo.net/s9/M00/50/82/wKgBs1hj2pSAGWgWAAnclL-q2h842.jpeg?imageMogr2%2Fthumbnail%2F%21220x150r%2Fgravity%2FCenter%2Fcrop%2F%21220x150%2Fquality%2F90"
+                                         src="${pageContext.request.contextPath}/images/index_test_1.jpeg"
                                          style="display: inline;">
-
-
                                 </a>
                             </div>
                             <div class="tn-wrapper">
@@ -494,7 +413,7 @@
                                                                      data-type="2">乌兰布统</a>，by</span>
                                     <span class="tn-user">
                         <a href="/u/93014273.html" target="_blank" rel="nofollow">
-                            <img src="http://n3-q.mafengwo.net/s9/M00/4D/21/wKgBs1hj1C-AW8uaAAudHin37Wg38.jpeg?imageMogr2%2Fthumbnail%2F%2116x16r%2Fgravity%2FCenter%2Fcrop%2F%2116x16%2Fquality%2F90">
+                            <img src="${pageContext.request.contextPath}/images/index_context_1.jpeg">
                             车轮上的诗和远
                         </a>
                     </span>
@@ -502,7 +421,9 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="tn-item clearfix">
+
+                        <% } %>
+                       <%-- <div class="tn-item clearfix">
                             <div class="tn-image">
                                 <a href="/i/6556907.html" target="_blank">
                                     <img class=""
@@ -957,22 +878,28 @@
                                     <span class="tn-nums"><i></i>242746/1779</span>
                                 </div>
                             </div>
-                        </div>
+                        </div>--%>
 
                     </div>
                     <div class="m-pagination" id="_j_tn_pagination" data-type="0" data-objid="0" align="right">
-                        <span class="count">共250页 / 3000条</span>
+                        <span class="count">共${page}页 / ${count}条</span>
+                        <%
+                            Integer pageAll = (Integer)request.getAttribute("page");
+                            Integer pageNow = (Integer)request.getAttribute("pageNow");
 
-                        <span class="pg-current">1</span>
-                        <a class="pi _j_pageitem" href="javascript:;" data-page="2" rel="nofollow">2</a>
-                        <a class="pi _j_pageitem" href="javascript:;" data-page="3" rel="nofollow">3</a>
-                        <a class="pi _j_pageitem" href="javascript:;" data-page="4" rel="nofollow">4</a>
-                        <a class="pi _j_pageitem" href="javascript:;" data-page="5" rel="nofollow">5</a>
-                        <a class="pi _j_pageitem" href="javascript:;" data-page="6" rel="nofollow">6</a>
-                        <a class="pi _j_pageitem" href="javascript:;" data-page="7" rel="nofollow">7</a>
-                        <a class="pi _j_pageitem" href="javascript:;" data-page="8" rel="nofollow">8</a>
-                        <a class="pi _j_pageitem" href="javascript:;" data-page="9" rel="nofollow">9</a>
-                        <a class="pg-next _j_pageitem" href="javascript:;" data-page="2" rel="nofollow">下一页 &gt;&gt;</a>
+                            for(int i=1;i<= pageAll.intValue() - pageNow.intValue() + 1;i++){
+                                if(i == pageNow.intValue()){
+                        %>
+                        <span class="pg-current"><%=i %></span>
+                        <%
+                            }else{
+                        %>
+                        <a class="pi _j_pageitem" href="javascript:;"><%=i %></a>
+                        <%
+                            }
+                            }
+                        %>
+                        <a class="pg-next _j_pageitem" href="javascript:;">下一页 &gt;&gt;</a>
                     </div>
                 </div>
             </div>
@@ -1003,38 +930,10 @@
                         <p>详细的吃、住、行、景点、线路、实用信息</p>
                     </dd>
                 </dl>
-                <ul>
-                    <li>
-                        <a href="/u/36856371.html" target="_blank" rel="nofollow">笈缇step</a> 点评了&nbsp;
-                        新加坡的 <a href="/poi/11019.html" target="_blank">赞美广场</a>
-                    </li>
-                    <li>
-                        <a href="/u/44706815.html" target="_blank" rel="nofollow">德瑞弗</a> 点评了&nbsp;
-                        东港区的 <a href="/poi/5443015.html" target="_blank">日照百汇渔家</a>
-                    </li>
-                    <li>
-                        <a href="/u/83562235.html" target="_blank" rel="nofollow">一只菇 </a> 点评了&nbsp;
-                        吉隆坡的 <a href="/poi/14693.html" target="_blank">太平洋丽晶套</a>
-                    </li>
-                    <li>
-                        <a href="/u/68624308.html" target="_blank" rel="nofollow">她没有烟</a> 点评了&nbsp;
-                        武陵源区的 <a href="/poi/8039.html" target="_blank">百龙天梯</a>
-                    </li>
-                    <li>
-                        <a href="/u/86686149.html" target="_blank" rel="nofollow">爱说真话</a> 点评了&nbsp;
-                        天涯区的 <a href="/poi/1667.html" target="_blank">第一市场</a>
-                    </li>
-                </ul>
             </div>
         </div>
-
-
         <div class="asidebox box-gowild">
-
-
         </div>
-
-
     </div>
     <div class="da-banner da-banner-row"></div>
 </div>
@@ -1070,11 +969,11 @@
 
         <div class="ft-copyright">
             <a href="${pageContext.request.contextPath}"><i class="ft-mfw-logo"></i></a>
-            <p>© 2017 Mafengwo.cn <a href="http://www.miibeian.gov.cn/" target="_blank"
+            <p>© 2017 Mafengwo.cn <a href="${pageContext.request.contextPath}" target="_blank"
                                      rel="nofollow">京ICP备******号</a> 京公网安备*******号 <a
-                    href="http://images.mafengwo.net/images/about/icp.jpg" target="_blank"
+                    href="${pageContext.request.contextPath}" target="_blank"
                     rel="nofollow">京ICP证*****号</a></p>
-            <p><a href="http://images.mafengwo.net/images/about/licence.jpg" target="_blank" rel="nofollow">营业执照</a>
+            <p><a href="${pageContext.request.contextPath}" target="_blank" rel="nofollow">营业执照</a>
                 *********  客服电话：<span class="highlight">*******</span>
             </p>
         </div>

@@ -14,4 +14,6 @@ public interface TravelDao {
     int updateByPrimaryKeySelective(TravelBean record);
 
     int updateByPrimaryKey(TravelBean record);
+
+    int count();
 }

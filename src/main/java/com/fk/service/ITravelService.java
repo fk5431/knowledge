@@ -9,4 +9,5 @@ public interface ITravelService {
 
     TravelBean selectByPrimaryKey(Integer id);
 
+    int count();
 }
