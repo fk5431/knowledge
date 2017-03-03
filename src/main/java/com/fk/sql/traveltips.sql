@@ -15,7 +15,12 @@
 )DEFAULT CHARSET=utf8;
 INSERT INTO traveltips(id, time, place, image, title, context, type, author, line) VALUES(1, '2017-02-21 10:11:00','摩洛哥','/images/index_1.jpeg','宝贝，妈妈带你去撒哈拉','context','type','贩暖','line');
 
-UPDATE traveltips SET image='/images/index_1.jpeg';
+UPDATE traveltips SET image='/travel/images/index_1.jpeg' WHERE id = 1;
+UPDATE traveltips SET image='/travel/images/index_2.jpeg' WHERE id = 2;
+UPDATE traveltips SET image='/travel/images/index_3.jpeg' WHERE id = 3;
+UPDATE traveltips SET image='/travel/images/index_4.jpeg' WHERE id = 4;
+UPDATE traveltips SET image='/travel/images/index_5.jpeg' WHERE id = 5;
+UPDATE traveltips SET image='/travel/images/index_test_2.jpeg' WHERE id = 6;
 
 INSERT INTO traveltips(id, time, place, image, title, context, type, author, line) VALUES(2, '2017-02-22 10:11:00','武功山','/images/index_2.jpeg','【围城随笔】之2017跨年武功山全线重装穿越','context','type','在远方的阿伦','line');
 INSERT INTO traveltips(id, time, place, image, title, context, type, author, line) VALUES(3, '2017-02-23 10:11:00','贝加尔湖','/images/index_3.jpeg','放弃了万千烟火，只为那一眼明眸——贝加尔湖蓝冰之旅','context','type','逐风','line');

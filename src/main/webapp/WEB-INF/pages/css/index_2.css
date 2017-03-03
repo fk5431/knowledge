@@ -14,7 +14,7 @@
     top:25px;
     width:17px;
     height:18px;
-    background-image:url(/images/header-sprites3.png);
+    background-image:url(/travel/images/header-sprites3.png);
     background-position:-59px -50px!important;
     overflow:hidden
 }
@@ -84,7 +84,7 @@
     z-index:-1;
     left:50%;
     top:50%;
-    background:url(/images/common/loading-big.png) no-repeat
+    background:url(/travel/images/common/loading-big.png) no-repeat
 }
 .show-slider .show-image li:after {
     width:180px;
@@ -203,7 +203,7 @@
     width:110px;
     height:110px;
     height:35px;
-    background-image:url(/images/index-sprites9.png);
+    background-image:url(/travel/images/index-sprites9.png);
     background-position:-60px -50px!important;
     line-height:200px;
     overflow:hidden
@@ -239,7 +239,7 @@
     margin:5px 5px 0 0;
     width:16px;
     height:16px;
-    background-image:url(/images/header-sprites3.png);
+    background-image:url(/travel/images/header-sprites3.png);
     background-position:-60px -110px!important
 }
 .searchtab .tab-selected i {
@@ -289,7 +289,7 @@
     margin-top:11px;
     width:24px;
     height:24px;
-    background-image:url(/images/header-sprites3.png);
+    background-image:url(/travel/images/header-sprites3.png);
     background-position:0 -110px!important;
     overflow:hidden;
     vertical-align:top
@@ -338,7 +338,7 @@
     right:10px;
     width:16px;
     height:16px;
-    background-image:url(/images/header-sprites3.png);
+    background-image:url(/travel/images/header-sprites3.png);
     background-position:0 -140px!important;
     overflow:hidden
 }
@@ -378,7 +378,7 @@
     width:1000px
 }
 .tn-write .btn-add i,.tn-extra .btn-ding,.tn-extra .tn-place i,.tn-extra .tn-nums i {
-    background:url(/images/index-sprites9.png) no-repeat
+    background:url(/travel/images/index-sprites9.png) no-repeat
 }
 .mfw-travelnotes .navbar {
     margin-bottom:20px;
@@ -411,7 +411,7 @@
     float:left;
     margin:-1px 5px 0 0;
     height:38px;
-    background:url(/images/index-sprites9.png) no-repeat 0 -90px;
+    background:url(/travel/images/index-sprites9.png) no-repeat 0 -90px;
     overflow:hidden
 }
 .tn-nav-girl .tn-nav-icon {
@@ -458,7 +458,7 @@
     margin:6px 5px 0 0;
     width:11px;
     height:8px;
-    background:url(/images/index-sprites9.png) no-repeat 0 -130px
+    background:url(/travel/images/index-sprites9.png) no-repeat 0 -130px
 }
 .tn-menu:hover {
     border-color:#ff9d00;
@@ -517,7 +517,7 @@
     top:13px;
     width:16px;
     height:16px;
-    background:url(/images/index-sprites9.png) no-repeat -60px -130px;
+    background:url(/travel/images/index-sprites9.png) no-repeat -60px -130px;
     overflow:hidden
 }
 .mui-search-inp:focus {
@@ -553,7 +553,7 @@
     margin-left:3px;
     width:10px;
     height:7px;
-    background:url(/images/index-sprites9.png) no-repeat -120px -30px;
+    background:url(/travel/images/index-sprites9.png) no-repeat -120px -30px;
     vertical-align:2px;
     *vertical-align:middle
 }
@@ -703,7 +703,7 @@
     border:7px solid #f6f6f6;
     width:5px;
     height:5px;
-    background:url(/images/index-sprites9.png) no-repeat -135px -30px;
+    background:url(/travel/images/index-sprites9.png) no-repeat -135px -30px;
     vertical-align:-4px;
     *vertical-align:middle;
     border-radius:20%
@@ -722,7 +722,7 @@
     margin:9px 4px 0 0;
     width:16px;
     height:16px;
-    background:url(/images/index-sprites9.png) no-repeat;
+    background:url(/travel/images/index-sprites9.png) no-repeat;
     background-position:-100px -30px!important;
     overflow:hidden
 }
@@ -779,7 +779,7 @@
     right:13px;
     width:12px;
     height:6px;
-    background-image:url(/images/index-sprites9.png);
+    background-image:url(/travel/images/index-sprites9.png);
     background-position:0 -30px!important;
     overflow:hidden
 }
@@ -847,7 +847,7 @@
     margin:5px 4px 0 0;
     width:16px;
     height:14px;
-    background:url(/images/index-sprites9.png) no-repeat -30px 0;
+    background:url(/travel/images/index-sprites9.png) no-repeat -30px 0;
     overflow:hidden
 }
 .tn-item {
@@ -875,7 +875,7 @@
     left:-1px;
     width:50px;
     height:57px;
-    background:url(/images/mdd_new/icon_baozang.png) no-repeat;
+    background:url(/travel/images/mdd_new/icon_baozang.png) no-repeat;
     overflow:hidden;
     line-height:200px
 }
@@ -885,7 +885,7 @@
     left:-1px;
     width:46px;
     height:55px;
-    background:url(/images/mdd_new/digest_icon.png) no-repeat;
+    background:url(/travel/images/mdd_new/digest_icon.png) no-repeat;
     overflow:hidden
 }
 .tn-wrapper .icon-newnotes {
@@ -893,7 +893,7 @@
     margin-right:5px;
     width:26px;
     height:27px;
-    background:url(/images/index-sprites9.png) no-repeat -140px 0;
+    background:url(/travel/images/index-sprites9.png) no-repeat -140px 0;
     overflow:hidden
 }
 .tn-item .icon-salesTag {
@@ -902,7 +902,7 @@
     top:10px;
     width:79px;
     height:45px;
-    background:url(/images/mdd/place/tn-discount.png) no-repeat 0 0;
+    background:url(/travel/images/mdd/place/tn-discount.png) no-repeat 0 0;
     overflow:hidden;
     line-height:30px;
     font-size:16px;
@@ -973,11 +973,11 @@
     margin:2px;
     width:16px;
     height:16px;
-    background:url(/images/index-sprites9.png) no-repeat -170px 0
+    background:url(/travel/images/index-sprites9.png) no-repeat -170px 0
 }
 @media(min-resolution:1.25dppx),(-webkit-min-device-pixel-ratio:1.25),(min-device-pixel-ratio:1.25) {
     .tn-item dt a.tn-from-app i {
-        background-image:url(/images/index-sprites8@2x.png);
+        background-image:url(/travel/images/index-sprites8@2x.png);
         background-size:200px auto
     }
 }.tn-item dd {
@@ -1306,7 +1306,7 @@
     font-size:10px;
     font-style:normal;
     color:#d0122b;
-    background:url("/images/new_hr2015/sprite.png") 0 -27px no-repeat;
+    background:url("/travel/images/new_hr2015/sprite.png") 0 -27px no-repeat;
     padding-left:8px
 }
 .box-hr li a {
@@ -1344,7 +1344,7 @@
     margin-top:15px;
     border:1px solid #e5e5e5;
     border-radius:49px;
-    background:url(/images/index/police.png) 18px 15px no-repeat;
+    background:url(/travel/images/index/police.png) 18px 15px no-repeat;
     font-size:18px;
     color:#2f2f32
 }
@@ -1375,7 +1375,7 @@
     margin-right:5px;
     width:23px;
     height:22px;
-    background:url(/images/index-sprites9.png) no-repeat -100px 0;
+    background:url(/travel/images/index-sprites9.png) no-repeat -100px 0;
     overflow:hidden;
     vertical-align:-6px;
     *vertical-align:middle
@@ -1473,11 +1473,11 @@
     }
 }@media(min-resolution:1.25dppx),(-webkit-min-device-pixel-ratio:1.25),(min-device-pixel-ratio:1.25) {
     .tn-write .btn-add i,.tn-extra .btn-ding,.tn-extra .tn-place i,.tn-extra .tn-nums i,.show-slider .show-more,.tn-dropdown .icon-dropdown,.notes-refresh .btn-refresh i,.tn-nav-icon,.tn-tips i,.tn-menu-icon,.mui-search-icon,.tn-dropdown-pop .hot-place .on:after,.tn-selected .tn-tag i {
-        background-image:url(/images/index-sprites9.png);
+        background-image:url(/travel/images/index-sprites9.png);
         background-size:200px
     }
     .searchtab i,.search-group .icon-search,.search-group .icon-cal,.head-msg .icon-msg {
-        background:url(/images/header-sprites9@2x.png) no-repeat;
+        background:url(/travel/images/header-sprites9@2x.png) no-repeat;
         background-size:200px
     }
 }.phoneNoticeWrap {
@@ -1500,12 +1500,12 @@
     margin-top:8px
 }
 .phoneNotice span.icon {
-    background:url(/images/index/notice_icon.png) no-repeat;
+    background:url(/travel/images/index/notice_icon.png) no-repeat;
     float:left;
     margin-right:10px
 }
 .phoneNotice span.close {
-    background:url(/images/index/notice_close.png) no-repeat;
+    background:url(/travel/images/index/notice_close.png) no-repeat;
     float:right;
     cursor:pointer
 }
@@ -1643,7 +1643,7 @@
     top:-4px;
     width:143px;
     height:50px;
-    background:url(/images/recall2015.gif) no-repeat 0 -5px
+    background:url(/travel/images/recall2015.gif) no-repeat 0 -5px
 }
 .recall-img a {
     display:inline-block;
@@ -1883,7 +1883,7 @@
     left:0;
     right:0;
     bottom:0;
-    background:rgba(0,0,0,.2) url(/images/index/onebuy2.png) no-repeat;
+    background:rgba(0,0,0,.2) url(/travel/images/index/onebuy2.png) no-repeat;
     text-align:center;
     color:#fff
 }
@@ -2036,7 +2036,7 @@
     width:18px;
     height:18px;
     display:inline-block;
-    background:url(/images/index/onebuy2.png) 0 -180px no-repeat;
+    background:url(/travel/images/index/onebuy2.png) 0 -180px no-repeat;
     margin:0 3px 2px 0;
     vertical-align:middle
 }
@@ -2118,11 +2118,11 @@
 }
 @media(min-resolution:1.25dppx),(-webkit-min-device-pixel-ratio:1.25),(min-device-pixel-ratio:1.25) {
     .oneBuy .pro_pic .nums {
-        background:rgba(0,0,0,.2) url(/images/index/onebuy2@2x.png) no-repeat;
+        background:rgba(0,0,0,.2) url(/travel/images/index/onebuy2@2x.png) no-repeat;
         background-size:280px
     }
     .oneBuy .con_btn i {
-        background:url(/images/index/onebuy2@2x.png) 0 -180px no-repeat;
+        background:url(/travel/images/index/onebuy2@2x.png) 0 -180px no-repeat;
         background-size:280px
     }
 }.numNotSafeWrap {
@@ -2148,7 +2148,7 @@
     width:24px;
     height:24px;
     margin-top:8px;
-    background:url(/images/index/numnotsafe.png) no-repeat
+    background:url(/travel/images/index/numnotsafe.png) no-repeat
 }
 .numNotSafe span.icon {
     float:left;
@@ -2164,7 +2164,7 @@
     margin:2px 0 0 -60px;
     width:62px;
     height:18px;
-    background:url(/images/sales/2016719/head-act-719.png) no-repeat
+    background:url(/travel/images/sales/2016719/head-act-719.png) no-repeat
 }
 .head-act {
     display:block
@@ -2175,7 +2175,7 @@
     bottom:-12px;
     width:50px;
     height:67px;
-    background:url(/images/header/act-c9.png) no-repeat 0 0;
+    background:url(/travel/images/header/act-c9.png) no-repeat 0 0;
     -webkit-animation:float 3s ease-in-out 0s infinite;
     animation:float 3s ease-in-out 0s infinite
 }
@@ -2195,7 +2195,7 @@
      }
  }@media(min-resolution:1.25dppx),(-webkit-min-device-pixel-ratio:1.25),(min-device-pixel-ratio:1.25) {
     .head-act-zq {
-        background-image:url(/images/header/act-zq@2x.png);
+        background-image:url(/travel/images/header/act-zq@2x.png);
         background-size:60px auto
     }
 }.od-search-unknowntrip {
@@ -2204,7 +2204,7 @@
      top:-24px;
      width:331px;
      height:66px;
-     background:url(/images/header/unknowntrip2.png) no-repeat 0 0;
+     background:url(/travel/images/header/unknowntrip2.png) no-repeat 0 0;
      background-size:331px
  }
 .od-search-unknowntrip.ban1 {
@@ -2228,7 +2228,7 @@
     bottom:1px;
     width:83px;
     height:43px;
-    background:url(/images/new-index/calendar.gif) no-repeat
+    background:url(/travel/images/new-index/calendar.gif) no-repeat
 }
 @media(max-width:1440px) {
     .head-act-tl {
@@ -2240,7 +2240,7 @@
      top:-95px;
      width:403px;
      height:95px;
-     background:url(/images/sales/singapore/act-singapore-search.png) no-repeat 0 0
+     background:url(/travel/images/sales/singapore/act-singapore-search.png) no-repeat 0 0
  }
 .search-act-singapore span {
     position:absolute;
@@ -2248,11 +2248,11 @@
     bottom:-49px;
     width:175px;
     height:49px;
-    background:url(/images/sales/singapore/act-singapore-search.png) no-repeat right bottom
+    background:url(/travel/images/sales/singapore/act-singapore-search.png) no-repeat right bottom
 }
 @media(min-resolution:1.25dppx),(-webkit-min-device-pixel-ratio:1.25),(min-device-pixel-ratio:1.25) {
     .search-act-singapore,.search-act-singapore span {
-        background-image:url(/images/sales/singapore/act-singapore-search@2x.png);
+        background-image:url(/travel/images/sales/singapore/act-singapore-search@2x.png);
         background-size:403px auto
     }
 }.spring-festival {
@@ -3016,7 +3016,7 @@ body .ui-tooltip {
 }
 .ui-widget-header {
     border:1px solid #e78f08;
-    background:#f6a828 url(/images/jquery_ui_1_9/ui-bg_gloss-wave_35_f6a828_500x100.png) 50% 50% repeat-x;
+    background:#f6a828 url(/travel/images/jquery_ui_1_9/ui-bg_gloss-wave_35_f6a828_500x100.png) 50% 50% repeat-x;
     color:#fff;
     font-weight:bold
 }
@@ -3025,7 +3025,7 @@ body .ui-tooltip {
 }
 .ui-state-default,.ui-widget-content .ui-state-default,.ui-widget-header .ui-state-default {
     border:1px solid #ccc;
-    background:#f6f6f6 url(/images/jquery_ui_1_9/ui-bg_glass_100_f6f6f6_1x400.png) 50% 50% repeat-x;
+    background:#f6f6f6 url(/travel/images/jquery_ui_1_9/ui-bg_glass_100_f6f6f6_1x400.png) 50% 50% repeat-x;
     font-weight:bold;
     color:#ff8a00
 }
@@ -3035,7 +3035,7 @@ body .ui-tooltip {
 }
 .ui-state-hover,.ui-widget-content .ui-state-hover,.ui-widget-header .ui-state-hover,.ui-state-focus,.ui-widget-content .ui-state-focus,.ui-widget-header .ui-state-focus {
     border:1px solid #fbcb09;
-    background:#fdf5ce url(/images/jquery_ui_1_9/ui-bg_glass_100_fdf5ce_1x400.png) 50% 50% repeat-x;
+    background:#fdf5ce url(/travel/images/jquery_ui_1_9/ui-bg_glass_100_fdf5ce_1x400.png) 50% 50% repeat-x;
     font-weight:bold;
     color:#c77405
 }
@@ -3045,7 +3045,7 @@ body .ui-tooltip {
 }
 .ui-state-active,.ui-widget-content .ui-state-active,.ui-widget-header .ui-state-active {
     border:1px solid #fbd850;
-    background:#fff url(/images/jquery_ui_1_9/ui-bg_glass_65_ffffff_1x400.png) 50% 50% repeat-x;
+    background:#fff url(/travel/images/jquery_ui_1_9/ui-bg_glass_65_ffffff_1x400.png) 50% 50% repeat-x;
     font-weight:bold;
     color:#eb8f00
 }
@@ -3055,7 +3055,7 @@ body .ui-tooltip {
 }
 .ui-state-highlight,.ui-widget-content .ui-state-highlight,.ui-widget-header .ui-state-highlight {
     border:1px solid #fed22f;
-    background:#ffe45c url(/images/jquery_ui_1_9/ui-bg_highlight-soft_75_ffe45c_1x100.png) 50% top repeat-x;
+    background:#ffe45c url(/travel/images/jquery_ui_1_9/ui-bg_highlight-soft_75_ffe45c_1x100.png) 50% top repeat-x;
     color:#363636
 }
 .ui-state-highlight a,.ui-widget-content .ui-state-highlight a,.ui-widget-header .ui-state-highlight a {
@@ -3063,7 +3063,7 @@ body .ui-tooltip {
 }
 .ui-state-error,.ui-widget-content .ui-state-error,.ui-widget-header .ui-state-error {
     border:1px solid #cd0a0a;
-    background:#b81900 url(/images/jquery_ui_1_9/ui-bg_diagonals-thick_18_b81900_40x40.png) 50% 50% repeat;
+    background:#b81900 url(/travel/images/jquery_ui_1_9/ui-bg_diagonals-thick_18_b81900_40x40.png) 50% 50% repeat;
     color:#fff
 }
 .ui-state-error a,.ui-widget-content .ui-state-error a,.ui-widget-header .ui-state-error a {
@@ -3091,28 +3091,28 @@ body .ui-tooltip {
 .ui-icon {
     width:16px;
     height:16px;
-    background-image:url(/images/jquery_ui_1_9/ui-icons_222222_256x240.png)
+    background-image:url(/travel/images/jquery_ui_1_9/ui-icons_222222_256x240.png)
 }
 .ui-widget-content .ui-icon {
-    background-image:url(/images/jquery_ui_1_9/ui-icons_222222_256x240.png)
+    background-image:url(/travel/images/jquery_ui_1_9/ui-icons_222222_256x240.png)
 }
 .ui-widget-header .ui-icon {
-    background-image:url(/images/jquery_ui_1_9/ui-icons_ffffff_256x240.png)
+    background-image:url(/travel/images/jquery_ui_1_9/ui-icons_ffffff_256x240.png)
 }
 .ui-state-default .ui-icon {
-    background-image:url(/images/jquery_ui_1_9/ui-icons_ef8c08_256x240.png)
+    background-image:url(/travel/images/jquery_ui_1_9/ui-icons_ef8c08_256x240.png)
 }
 .ui-state-hover .ui-icon,.ui-state-focus .ui-icon {
-    background-image:url(/images/jquery_ui_1_9/ui-icons_ef8c08_256x240.png)
+    background-image:url(/travel/images/jquery_ui_1_9/ui-icons_ef8c08_256x240.png)
 }
 .ui-state-active .ui-icon {
-    background-image:url(/images/jquery_ui_1_9/ui-icons_ef8c08_256x240.png)
+    background-image:url(/travel/images/jquery_ui_1_9/ui-icons_ef8c08_256x240.png)
 }
 .ui-state-highlight .ui-icon {
-    background-image:url(/images/jquery_ui_1_9/ui-icons_228ef1_256x240.png)
+    background-image:url(/travel/images/jquery_ui_1_9/ui-icons_228ef1_256x240.png)
 }
 .ui-state-error .ui-icon,.ui-state-error-text .ui-icon {
-    background-image:url(/images/jquery_ui_1_9/ui-icons_ffd27a_256x240.png)
+    background-image:url(/travel/images/jquery_ui_1_9/ui-icons_ffd27a_256x240.png)
 }
 .ui-icon-carat-1-n {
     background-position:0 0
@@ -3637,14 +3637,14 @@ body .ui-tooltip {
     background-position:-80px -224px
 }
 .ui-widget-overlay {
-    background:#666 url(/images/jquery_ui_1_9/ui-bg_diagonals-thick_20_666666_40x40.png) 50% 50% repeat;
+    background:#666 url(/travel/images/jquery_ui_1_9/ui-bg_diagonals-thick_20_666666_40x40.png) 50% 50% repeat;
     opacity:.5;
     filter:Alpha(Opacity=50)
 }
 .ui-widget-shadow {
     margin:-5px 0 0 -5px;
     padding:5px;
-    background:#000 url(/images/jquery_ui_1_9/ui-bg_flat_10_000000_40x100.png) 50% 50% repeat-x;
+    background:#000 url(/travel/images/jquery_ui_1_9/ui-bg_flat_10_000000_40x100.png) 50% 50% repeat-x;
     opacity:.2;
     filter:Alpha(Opacity=20);
     -moz-border-radius:5px;
@@ -3696,7 +3696,7 @@ body .ui-tooltip {
     right:2px
 }
 .hotel_datepicker.ui-datepicker .ui-widget-header .ui-icon-circle-triangle-e,.hotel_datepicker.ui-datepicker .ui-widget-header .ui-icon-circle-triangle-w {
-    background-image:url(/images/hotel/datepicker-arrow.png)
+    background-image:url(/travel/images/hotel/datepicker-arrow.png)
 }
 .hotel_datepicker.ui-datepicker .ui-icon-circle-triangle-e {
     background-position:-10px 0
