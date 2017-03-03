@@ -209,9 +209,9 @@
             <div class="bd">
                 <ul class="clearfix">
                     <li class="item ">
-                        <a href="http://www.mafengwo.cn/sales/2053467.html" target="_blank">
+                        <a href="#" target="_blank">
                             <div class="image">
-                                <img src="https://n4-q.mafengwo.net/s8/M00/BC/1E/wKgBpVXTDRCAK1q4AAI4POZE--432.jpeg?imageMogr2%2Fthumbnail%2F%21440x270r%2Fgravity%2FCenter%2Fcrop%2F%21440x270%2Fquality%2F90"
+                                <img src="${pageContext.request.contextPath}/images/shop_1.jpeg"
                                      width="220" height="135">
                             </div>
                             <h3>北京直飞东京4-14天往返含税机票（含行李托运/机票）</h3>
@@ -219,19 +219,19 @@
                         </a>
                     </li>
                     <li class="item ">
-                        <a href="http://www.mafengwo.cn/sales/2110638.html" target="_blank">
+                        <a href="#" target="_blank">
                             <div class="image">
-                                <img src="https://n4-s.mafengwo.net/c_lfill,w_440,h_270,q_90/s9/M00/3A/07/wKgBs1g2hS-ANH5CAGbeuCsu3yI22.jpeg"
+                                <img src="${pageContext.request.contextPath}/images/shop_2.jpeg"
                                      width="220" height="135">
                             </div>
-                            <h3>【蚂蜂窝推荐 北京送签】韩国单次旅游签证（北京户籍可简化材料办理/可加急/拒签退全款/包回邮）</h3>
+                            <h3>【大学生穷游网推荐 北京送签】韩国单次旅游签证（北京户籍可简化材料办理/可加急/拒签退全款/包回邮）</h3>
                             <div class="price">￥<strong>245</strong><em>起/本</em></div>
                         </a>
                     </li>
                     <li class="item ">
-                        <a href="http://www.mafengwo.cn/sales/2071558.html" target="_blank">
+                        <a href="#" target="_blank">
                             <div class="image">
-                                <img src="https://b4-q.mafengwo.net/s9/M00/72/D0/wKgBs1fQ_daARJt8AAB6r0lZPYM89.jpeg?imageMogr2%2Fthumbnail%2F%21440x270r%2Fgravity%2FCenter%2Fcrop%2F%21440x270%2Fquality%2F90"
+                                <img src="${pageContext.request.contextPath}/images/shop_3.jpeg"
                                      width="220" height="135">
                             </div>
                             <h3>【清明/五一假期】广州往返泰国曼谷5/6日含税机票（可搭配首晚酒店）赠目的地管家服务+电子地图</h3>
@@ -248,130 +248,12 @@
                 <ul class="tn-nav" id="_j_tn_nav">
 
                     <li class="active _j_gs_tab"><a href="javascript:void(0);" rel="nofollow" data-type="0"
-                                                    data-objid="0">热门游记</a><span class="tn-menu _j_open_search"><i
-                            class="tn-menu-icon"></i>筛选</span></li>
+                                                    data-objid="0">热门攻略</a></li>
                     <li class="_j_gs_tab"><a href="javascript:void(0);" rel="nofollow" data-type="3">最新发表</a></li>
                 </ul>
                 <div class="tn-write"><a class="btn-add" href="/note/create_index.php" target="_blank"
-                                         rel="nofollow"><i></i>写游记</a></div>
+                                         rel="nofollow"><i></i>写攻略</a></div>
                 <a class="tn-tips" href="/i/5500499.html" target="_blank"><i></i>我要上首页</a>
-            </div>
-            <div class="tn-dropdown-pop _j_gs_container" style="display:none;">
-                <span class="underline"></span>
-                <a class="close _j_close" href="javascript:void(0);">×</a>
-                <div class="section clearfix">
-                    <div class="label">目的地</div>
-                    <div class="section-cont">
-                        <div class="mui-search">
-                            <input class="mui-search-inp _j_gs_input" placeholder="输入你想查看的目的地" type="text">
-
-                            <div class="m-search-suggest tn-search-suggest hide _j_sr_container">
-
-                            </div>
-                        </div>
-                        <div class="hot-place">
-                            <a class="_j_gs_item _j_gs_sn_10183_2" href="javascript:void(0);" data-objid="10183"
-                               data-type="2" data-name="日本">日本</a>
-                            <a class="_j_gs_item _j_gs_sn_11058_2" href="javascript:void(0);" data-objid="11058"
-                               data-type="2" data-name="斯里兰卡">斯里兰卡</a>
-                            <a class="_j_gs_item _j_gs_sn_11030_2" href="javascript:void(0);" data-objid="11030"
-                               data-type="2" data-name="济州岛">济州岛</a>
-                            <a class="_j_gs_item _j_gs_sn_10189_2" href="javascript:void(0);" data-objid="10189"
-                               data-type="2" data-name="香港">香港</a>
-                            <a class="_j_gs_item _j_gs_sn_10065_2" href="javascript:void(0);" data-objid="10065"
-                               data-type="2" data-name="北京">北京</a>
-                            <a class="_j_gs_item _j_gs_sn_12711_2" href="javascript:void(0);" data-objid="12711"
-                               data-type="2" data-name="云南">云南</a>
-                            <a class="_j_gs_item _j_gs_sn_10083_2" href="javascript:void(0);" data-objid="10083"
-                               data-type="2" data-name="泰国">泰国</a>
-                            <a class="_j_gs_item _j_gs_sn_10799_2" href="javascript:void(0);" data-objid="10799"
-                               data-type="2" data-name="青海湖">青海湖</a>
-
-
-                        </div>
-                    </div>
-                </div>
-                <div class="section clearfix">
-                    <div class="label">兴趣</div>
-                    <div class="section-cont">
-                        <ul class="interest-list clearfix">
-                            <li class="_j_gs_item _j_gs_sn_417_1" data-objid="417" data-type="1" data-name="吃遍天下">
-                                <a href="javascript:void(0);">
-                                    <span class="img"><img
-                                            src="https://a3-q.mafengwo.net/s9/M00/4C/88/wKgBs1d8dTCAcpbjAACantFj9Lc31.jpeg?imageMogr2%2Fthumbnail%2F%21220x150r%2Fgravity%2FCenter%2Fcrop%2F%21220x150%2Fquality%2F90"
-                                            width="110"></span>
-                                    <h3>吃遍天下</h3>
-                                    <p>无敌手</p>
-                                </a>
-                            </li>
-                            <li class="_j_gs_item _j_gs_sn_452_1" data-objid="452" data-type="1" data-name="带着对象">
-                                <a href="javascript:void(0);">
-                                    <span class="img"><img
-                                            src="https://c2-q.mafengwo.net/s9/M00/72/E2/wKgBs1d8s0eAIzOxAADHUDzpwyk33.jpeg?imageMogr2%2Fthumbnail%2F%21220x150r%2Fgravity%2FCenter%2Fcrop%2F%21220x150%2Fquality%2F90"
-                                            width="110"></span>
-                                    <h3>带着对象</h3>
-                                    <p>去虐狗</p>
-                                </a>
-                            </li>
-                            <li class="_j_gs_item _j_gs_sn_427_1" data-objid="427" data-type="1" data-name="姑娘漂亮">
-                                <a href="javascript:void(0);">
-                                    <span class="img"><img
-                                            src="https://n2-q.mafengwo.net/s9/M00/4D/44/wKgBs1d8diWAeEuVAACQdwKycrM19.jpeg?imageMogr2%2Fthumbnail%2F%21220x150r%2Fgravity%2FCenter%2Fcrop%2F%21220x150%2Fquality%2F90"
-                                            width="110"></span>
-                                    <h3>姑娘漂亮</h3>
-                                    <p>就是美</p>
-                                </a>
-                            </li>
-                            <li class="_j_gs_item _j_gs_sn_436_1" data-objid="436" data-type="1" data-name="带着孩子">
-                                <a href="javascript:void(0);">
-                                    <span class="img"><img
-                                            src="https://n2-s.mafengwo.net/c_lfill,w_220,h_150,q_90/s9/M00/52/74/wKgBs1d8fXSASKT6AAA5t6CGBs050.jpeg"
-                                            width="110"></span>
-                                    <h3>带着孩子</h3>
-                                    <p>看世界</p>
-                                </a>
-                            </li>
-                            <li class="_j_gs_item _j_gs_sn_423_1" data-objid="423" data-type="1" data-name="登山徒步">
-                                <a href="javascript:void(0);">
-                                    <span class="img"><img
-                                            src="https://n3-q.mafengwo.net/s9/M00/4F/92/wKgBs1d8eTWAdEVhAACSUDmMgdg66.jpeg?imageMogr2%2Fthumbnail%2F%21220x150r%2Fgravity%2FCenter%2Fcrop%2F%21220x150%2Fquality%2F90"
-                                            width="110"></span>
-                                    <h3>登山徒步</h3>
-                                    <p>用脚走</p>
-                                </a>
-                            </li>
-                            <li class="_j_gs_item _j_gs_sn_435_1" data-objid="435" data-type="1" data-name="带着父母">
-                                <a href="javascript:void(0);">
-                                    <span class="img"><img
-                                            src="https://a2-q.mafengwo.net/s9/M00/50/9E/wKgBs1d8eqqAU6M-AACLbzgALD438.jpeg?imageMogr2%2Fthumbnail%2F%21220x150r%2Fgravity%2FCenter%2Fcrop%2F%21220x150%2Fquality%2F90"
-                                            width="110"></span>
-                                    <h3>带着父母</h3>
-                                    <p>去远方</p>
-                                </a>
-                            </li>
-                            <li class="_j_gs_item _j_gs_sn_451_1" data-objid="451" data-type="1" data-name="独自一人">
-                                <a href="javascript:void(0);">
-                                    <span class="img"><img
-                                            src="https://a2-q.mafengwo.net/s9/M00/75/2E/wKgBs1d8tf6Abj2cAACmlG9smLk15.jpeg?imageMogr2%2Fthumbnail%2F%21220x150r%2Fgravity%2FCenter%2Fcrop%2F%21220x150%2Fquality%2F90"
-                                            width="110"></span>
-                                    <h3>独自一人</h3>
-                                    <p>最自由</p>
-                                </a>
-                            </li>
-                            <li class="_j_gs_item _j_gs_sn_453_1" data-objid="453" data-type="1" data-name="短途周末">
-                                <a href="javascript:void(0);">
-                                    <span class="img"><img
-                                            src="https://c2-q.mafengwo.net/s9/M00/74/0C/wKgBs1d8tJqAOm22AAAlduuXCi410.jpeg?imageMogr2%2Fthumbnail%2F%21220x150r%2Fgravity%2FCenter%2Fcrop%2F%21220x150%2Fquality%2F90"
-                                            width="110"></span>
-                                    <h3>短途周末</h3>
-                                    <p>散散心</p>
-                                </a>
-                            </li>
-
-
-                        </ul>
-                    </div>
-                </div>
             </div>
             <div class="tn-selected _j_tag_choose_container">
 
@@ -382,42 +264,39 @@
                  data-controller="/js/index/ControllerRecommend">
                 <div id="_j_tn_content">
                     <div class="tn-list">
-                            <% List<TravelBean> travelList = (List) request.getAttribute("travelList");
-                            for (int i = 0; i <list.size(); i++) { %>
+                        <% List<TravelBean> travelList = (List) request.getAttribute("travelList");
+                        for (int i = 0; i <travelList.size(); i++) { %>
                         <div class="tn-item clearfix">
                             <div class="tn-image">
                                 <a href="/i/6525065.html" target="_blank">
                                     <img class=""
-                                         src="${pageContext.request.contextPath}/images/index_test_1.jpeg"
+                                         src="<%=travelList.get(i).getImage()%>"
                                          style="display: inline;">
                                 </a>
                             </div>
                             <div class="tn-wrapper">
                                 <dl>
                                     <dt>
-                                        <a href="/i/6525065.html" target="_blank">没吃没喝只剩风景 穿越冬天的乌兰布统</a>
+                                        <a href="/i/6525065.html" target="_blank"><%=travelList.get(i).getTitle()%></a>
                                     </dt>
                                     <dd>
-                                        <a href="/i/6525065.html" target="_blank"> 自然界是有规律的，但 北京 的冬天却从不玩套路 比如
-                                            ，立冬都过了还没等来一场像样的雪 但却又迎来了单双号限行 于是，我们干脆离开 北京 前往 乌兰布统 抵达 乌兰布统 的前站，我们选择了...</a>
+                                        <a href="/i/6525065.html" target="_blank"> <%=travelList.get(i).getContext()%></a>
                                     </dd>
                                 </dl>
                                 <div class="tn-extra">
                     <span class="tn-ding">
-                        <a class="btn-ding" href="javascript:;" data-japp="articleding" data-iid="6525065"
+                        <a class="btn-ding" href="${pageContext.request.contextPath}/count?id=<%=travelList.get(i).getId()%>" data-japp="articleding" data-iid="6525065"
                            data-vote="97" rel="nofollow"></a>
-                        <em id="topvote6525065">97</em>
+                        <em id="topvote6525065"><%=travelList.get(i).getCount()%></em>
                     </span>
-                                    <span class="tn-place"><i></i><a href="javascript:void(0);" class="_j_gs_item"
-                                                                     rel="nofollow" data-name="乌兰布统" data-objid="17920"
-                                                                     data-type="2">乌兰布统</a>，by</span>
+                                    <span class="tn-place"><i></i><a href="javascript:void(0);" class="_j_gs_item" ><%=travelList.get(i).getPlace()%></a>，by</span>
                                     <span class="tn-user">
-                        <a href="/u/93014273.html" target="_blank" rel="nofollow">
+                        <a  rel="nofollow">
                             <img src="${pageContext.request.contextPath}/images/index_context_1.jpeg">
-                            车轮上的诗和远
+                            <%=travelList.get(i).getAuthor()%>
                         </a>
                     </span>
-                                    <span class="tn-nums"><i></i>1834/19</span>
+                                    <span class="tn-nums"><i></i><%=travelList.get(i).getLookcount()%></span>
                                 </div>
                             </div>
                         </div>
@@ -894,12 +773,12 @@
                         <%
                             }else{
                         %>
-                        <a class="pi _j_pageitem" href="javascript:;"><%=i %></a>
+                        <a class="pi _j_pageitem" href="${pageContext.request.contextPath}/index?page=<%=i%>"><%=i %></a>
                         <%
                             }
                             }
                         %>
-                        <a class="pg-next _j_pageitem" href="javascript:;">下一页 &gt;&gt;</a>
+                        <a class="pg-next _j_pageitem" href="${pageContext.request.contextPath}/index?page=${pageNow+1}">下一页 &gt;&gt;</a>
                     </div>
                 </div>
             </div>
@@ -918,14 +797,14 @@
             <div class="asidebox-bd">
                 <dl class="clearfix">
                     <dt>
-                        <a href="/gonglve/mdd-10765.html" target="_blank">
-                            <img src="https://b4-q.mafengwo.net/s9/M00/B7/67/wKgBs1eIpuKAWMIqAAX50SJdFGY72.jpeg?imageMogr2%2Fthumbnail%2F%21130x184r%2Fgravity%2FCenter%2Fcrop%2F%21130x184%2Fquality%2F90"
+                        <a href="#" target="_blank">
+                            <img src="${pageContext.request.contextPath}/images/shop_4.jpeg"
                                  alt="大阪旅游攻略" width="110" height="155">
                         </a>
                     </dt>
                     <dd>
                         <h3>
-                            <a href="/gonglve/mdd-10765.html" target="_blank" title="大阪">大阪</a>
+                            <a href="#" target="_blank" title="大阪">大阪</a>
                         </h3>
                         <p>详细的吃、住、行、景点、线路、实用信息</p>
                     </dd>

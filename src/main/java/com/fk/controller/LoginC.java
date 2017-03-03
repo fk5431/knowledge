@@ -38,7 +38,7 @@ public class LoginC {
     ITravelService travelService;
 
     @RequestMapping("/")
-    public String index( Map<String, Object> map){
+    public String index(HttpServletRequest request, Map<String, Object> map){
         //首页最上面样式
         map.put("index", 1);
         //轮播图位置
@@ -54,20 +54,41 @@ public class LoginC {
         //热门游记
         List<TravelBean> travelList = new ArrayList<>();
         int count = travelService.count();
-        int page = count / SIZE + CommonConst.ONE_INT;
-
+        int page = 1;
+        if(count % SIZE == 0)
+            page = count / SIZE;
+        else
+            page = count / SIZE + CommonConst.ONE_INT;
         map.put("count", count);
         map.put("size", SIZE);
         map.put("page", page);
-        map.put("pageNow", CommonConst.ONE_INT);
+        String page_ = request.getParameter("page");
+        int toPage;
+        if(page_ == null || "".equals(page_)){
+            toPage = 1;
+        }else {
+            toPage = Integer.parseInt(page_);
+        }
+        if(toPage > page){
+            toPage = page;
+        }
+        map.put("pageNow", toPage);
+        for(int i=1;i<=SIZE ;i++){
+            TravelBean travelBean = travelService.selectByPrimaryKey((toPage - 1) * SIZE + i);
+            if(travelBean == null){
 
+            }else {
+                travelList.add(travelBean);
+            }
+        }
+        map.put("travelList", travelList);
 
         return "index";
     }
 
     @RequestMapping("/index")
-    public String index_( Map<String, Object> map){
-        return index(map);
+    public String index_(HttpServletRequest request,  Map<String, Object> map){
+        return index(request, map);
     }
     @RequestMapping(value = "/login")
     public String login(HttpServletRequest request, Map<String, Object> map){
@@ -181,6 +202,17 @@ public class LoginC {
             map.put("errorcode", 6);
             return "error";
         }
+    }
+
+    @RequestMapping("/count")
+    public String addCount(HttpServletRequest request, Map<String, Object> map){
+        String id = request.getParameter("id");
+        if(id!=null) {
+            TravelBean travelBean = travelService.selectByPrimaryKey(Integer.parseInt(id));
+            travelBean.setCount(travelBean.getCount() + CommonConst.ONE_INT);
+            travelService.updateByPrimaryKey(travelBean);
+        }
+        return index(request, map);
     }
 
 }

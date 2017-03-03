@@ -27,6 +27,26 @@ public class TravelBean {
 
     private String line;
 
+    private Integer count;
+
+    public Integer getLookcount() {
+        return lookcount;
+    }
+
+    public void setLookcount(Integer lookcount) {
+        this.lookcount = lookcount;
+    }
+
+    private Integer lookcount;
+
+    public Integer getCount() {
+        return count;
+    }
+
+    public void setCount(Integer count) {
+        this.count = count;
+    }
+
     public Integer getId() {
         return id;
     }

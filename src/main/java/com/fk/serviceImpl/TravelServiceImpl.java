@@ -3,6 +3,7 @@ package com.fk.serviceImpl;
 import com.fk.bean.TravelBean;
 import com.fk.dao.TravelDao;
 import com.fk.service.ITravelService;
+import com.fk.util.CommonConst;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -23,5 +24,16 @@ public class TravelServiceImpl implements ITravelService {
     @Override
     public int count() {
         return travelDao.count();
+    }
+
+    @Override
+    public void updateCountById(Integer id) {
+        travelDao.updateCountById(id, CommonConst.ONE_INT);
+        return;
+    }
+
+    @Override
+    public int updateByPrimaryKey(TravelBean record) {
+        return travelDao.updateByPrimaryKey(record);
     }
 }

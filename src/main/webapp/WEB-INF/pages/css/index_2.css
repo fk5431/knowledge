@@ -1473,11 +1473,11 @@
     }
 }@media(min-resolution:1.25dppx),(-webkit-min-device-pixel-ratio:1.25),(min-device-pixel-ratio:1.25) {
     .tn-write .btn-add i,.tn-extra .btn-ding,.tn-extra .tn-place i,.tn-extra .tn-nums i,.show-slider .show-more,.tn-dropdown .icon-dropdown,.notes-refresh .btn-refresh i,.tn-nav-icon,.tn-tips i,.tn-menu-icon,.mui-search-icon,.tn-dropdown-pop .hot-place .on:after,.tn-selected .tn-tag i {
-        background-image:url(/images/index-sprites8@2x.png);
+        background-image:url(/images/index-sprites9.png);
         background-size:200px
     }
     .searchtab i,.search-group .icon-search,.search-group .icon-cal,.head-msg .icon-msg {
-        background:url(/images/header-sprites4@2x.png) no-repeat;
+        background:url(/images/header-sprites9@2x.png) no-repeat;
         background-size:200px
     }
 }.phoneNoticeWrap {

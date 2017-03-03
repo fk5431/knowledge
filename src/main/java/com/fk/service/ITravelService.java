@@ -10,4 +10,8 @@ public interface ITravelService {
     TravelBean selectByPrimaryKey(Integer id);
 
     int count();
+
+    void updateCountById(Integer id);
+
+    int updateByPrimaryKey(TravelBean record);
 }

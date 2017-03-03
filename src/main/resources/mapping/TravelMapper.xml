@@ -11,9 +11,11 @@
     <result column="type" property="type" jdbcType="VARCHAR" />
     <result column="author" property="author" jdbcType="VARCHAR" />
     <result column="line" property="line" jdbcType="VARCHAR" />
+    <result column="count" property="count" jdbcType="INTEGER" />
+    <result column="lookcount" property="lookcount" jdbcType="INTEGER" />
   </resultMap>
   <sql id="Base_Column_List" >
-    id, time, place, image, title, context, type, author, line
+    id, time, place, image, title, context, type, author, line, count, lookcount
   </sql>
   <select id="count" resultType="int">
     select count(*) from traveltips
@@ -34,7 +36,8 @@
       type, author, line)
     values (#{id,jdbcType=INTEGER}, #{time,jdbcType=DATE}, #{place,jdbcType=VARCHAR}, 
       #{image,jdbcType=VARCHAR}, #{title,jdbcType=VARCHAR}, #{context,jdbcType=VARCHAR}, 
-      #{type,jdbcType=VARCHAR}, #{author,jdbcType=VARCHAR}, #{line,jdbcType=VARCHAR})
+      #{type,jdbcType=VARCHAR}, #{author,jdbcType=VARCHAR}, #{line,jdbcType=VARCHAR}),
+      #{count,jdbcType=INTEGER},#{lookcount,jdbcType=INTEGER}
   </insert>
   <insert id="insertSelective" parameterType="com.fk.bean.TravelBean" >
     insert into traveltips
@@ -66,6 +69,12 @@
       <if test="line != null" >
         line,
       </if>
+      <if test="count != null">
+        count,
+      </if>
+      <if test="lookcount != null">
+        lookcount,
+      </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides="," >
       <if test="id != null" >
@@ -94,6 +103,12 @@
       </if>
       <if test="line != null" >
         #{line,jdbcType=VARCHAR},
+      </if>
+      <if test="count != null" >
+        #{count,jdbcType=INTEGER},
+      </if>
+      <if test="lookcount != null" >
+        #{lookcount,jdbcType=INTEGER},
       </if>
     </trim>
   </insert>
@@ -124,6 +139,12 @@
       <if test="line != null" >
         line = #{line,jdbcType=VARCHAR},
       </if>
+      <if test="count != null" >
+        count = #{count,jdbcType=INTEGER},
+      </if>
+      <if test="lookcount != null" >
+        count = #{lookcount,jdbcType=INTEGER},
+      </if>
     </set>
     where id = #{id,jdbcType=INTEGER}
   </update>
@@ -136,9 +157,16 @@
       context = #{context,jdbcType=VARCHAR},
       type = #{type,jdbcType=VARCHAR},
       author = #{author,jdbcType=VARCHAR},
-      line = #{line,jdbcType=VARCHAR}
+      line = #{line,jdbcType=VARCHAR},
+      count = #{count,jdbcType=INTEGER},
+      lookcount = #{count,jdbcType=INTEGER}
     where id = #{id,jdbcType=INTEGER}
   </update>
 
+  <update id="updateCountById" parameterType="java.lang.Integer">
+    update traveltips
+    set count = #{count,jdbcType=INTEGER}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
 
 </mapper>
