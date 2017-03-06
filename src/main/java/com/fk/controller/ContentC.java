@@ -1,8 +1,12 @@
 package com.fk.controller;
 
+import com.fk.bean.TravelBean;
+import com.fk.dao.TravelDao;
+import com.fk.serviceImpl.TravelServiceImpl;
 import com.fk.util.CommonConst;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -17,6 +21,8 @@ public class ContentC {
 
     private Logger logger = LoggerFactory.getLogger(ContentC.class);
 
+    @Autowired
+    public TravelServiceImpl travelService;
 
     @RequestMapping("/context")
     public String context_index(HttpServletRequest request, Map<String, Object> map){
@@ -32,6 +38,15 @@ public class ContentC {
 
 
         return "content";
+    }
+
+    @RequestMapping("/article")
+    public String article(HttpServletRequest request, Map<String, Object> map){
+        map.put("index", CommonConst.THREE_INT);
+        String id = request.getParameter("id");
+        TravelBean travelBean = travelService.selectByPrimaryKey(Integer.parseInt(id));
+        map.put("travel", travelBean);
+        return "context";
     }
 
 }

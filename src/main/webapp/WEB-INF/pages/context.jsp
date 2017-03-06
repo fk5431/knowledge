@@ -81,81 +81,14 @@
 <%--begin--%>
 <div class="container clearfix">
     <div class="col-main">
-        <div class="crumb"><a href="/gonglve/">旅游攻略首页</a> > 只看一部纪录片，就知道去日本吃什么和果子啦！</div>
-        <h1 class="art-title">只看一部纪录片，就知道去日本吃什么和果子啦！</h1>
+        <div class="crumb"><a href="/gonglve/">旅游攻略首页</a> > ${travel.title}</div>
+        <h1 class="art-title">${travel.title}</h1>
         <div class="art-meta">
-            <span>2016-08-21</span>
+            <span>${travel.time}</span>
         </div>
         <div class="art-content">
+            ${travel.context}
 
-            <section class="mfw-pic"><img src="https://a2-q.mafengwo.net/s9/M00/F8/8F/wKgBs1eXFuiAcnU1AAGCyc0DbRI62.jpeg?imageView2%2F2%2Fw%2F900%2Fq%2F90%2Fformat%2Fjpeg" width="100%"><div class="description"><p>图：中村藤吉的抹茶蕨饼。 by kartzk</p></div>
-            </section><p>如果让蚂小蜂列出日本旅行的必体验，“品尝和果子”一定是蚂小蜂会大力向你推荐的一条。</p>
-
-            <p>“果子”即点心，“和果子”就是日本传统点心。虽然这些果子最初可能并非源自本土，不过人们通常把明治时期之前出现的果子称为“和果子”，之后传入的近代西式甜点称作“洋果子”。</p>
-
-            <p>和果子最初是为了配合日式茶道而诞生，以豆类、抹茶和各种应季水果为原料制作，非常讲究造型的美观。因为口味上是为了与日本茶的苦涩感中和，所以单吃起来通常比较甜，推荐配合无糖的茶饮一起品尝。</p>
-            <section class="mfw-pic"><img src="https://b2-q.mafengwo.net/s9/M00/82/3C/wKgBs1e5gyyAFpfNAA3Tyc4fJXE748.png?imageView2%2F2%2Fw%2F900%2Fq%2F90%2Fformat%2Fjpeg" width="100%"><div class="description"><p>图：各式各样的和果子</p></div>
-            </section><p>和果子的种类非常丰富，根据含水量和保存时间长短，分为生果子、半生果子和干果子三大类，而每个大类又包括多种小类和数不清的品种。如果让蚂小蜂一一列举，那真是几天几夜说不完。那么，和果子如此纷繁多样，要如何去选择呢？别怕，贴心的蚂小蜂这就向你推荐一系列纪录片——《甜言蜜语》。</p>
-
-            <div id="1" style=""></div>
-            <h3 class="h2">初见《甜言蜜语》</h3>
-            <section class="mfw-pic"><img src="https://b2-q.mafengwo.net/s9/M00/68/BA/wKgBs1e5XbOANZFPABKzCYqiVCc563.png?imageView2%2F2%2Fw%2F900%2Fq%2F90%2Fformat%2Fjpeg" width="100%"></section><p>《甜言蜜语》系列是专门讲述和果子的纪录短片，一集只有2-3分钟，每次只介绍一种和果子与一家店，配上精良的画面和应景的音乐，看得根本停不下来！</p>
-
-            <h4 class="h3">你熟悉或陌生の和果子</h4>
-
-            <p>各式各样的和果子当然是当仁不让的主角。比如这样的↓</p>
-            <section class="mfw-pic"><img src="https://a4-q.mafengwo.net/s9/M00/6A/EB/wKgBs1e5YVaAVaiRABJIQKj7Lpw846.png?imageView2%2F2%2Fw%2F900%2Fq%2F90%2Fformat%2Fjpeg" width="100%"><div class="description"><p>图：草莓大福</p></div>
-            </section><p>这样的↓</p>
-            <section class="mfw-pic"><img src="https://n4-q.mafengwo.net/s9/M00/7E/4A/wKgBs1e5fEyAN1hNAB0bTIErotQ318.png?imageView2%2F2%2Fw%2F900%2Fq%2F90%2Fformat%2Fjpeg" width="100%"><div class="description"><p>图：铜锣烧</p></div>
-            </section><p>还有这样的↓</p>
-            <section class="mfw-pic"><img src="https://n4-q.mafengwo.net/s9/M00/68/D6/wKgBs1e5XeCAX6TQABLM_zMj_fc772.png?imageView2%2F2%2Fw%2F900%2Fq%2F90%2Fformat%2Fjpeg" width="100%"><div class="description"><p>图：揉果子</p></div>
-            </section><p>当然也有这样的↓</p>
-            <section class="mfw-pic"><img src="https://n4-s.mafengwo.net/c_zoom,w_900,o_convert,f_jpeg,q_90/s9/M00/69/00/wKgBs1e5XiWARJsvABlIzbbMslI790.png" width="100%"><div class="description"><p>图：糖腌菜</p></div>
-            </section><p>和这样的↓</p>
-            <section class="mfw-pic"><img src="https://a4-q.mafengwo.net/s9/M00/69/E7/wKgBs1e5X3WANRD0AB4_D-_Qdi8594.png?imageView2%2F2%2Fw%2F900%2Fq%2F90%2Fformat%2Fjpeg" width="100%"><div class="description"><p>图：仙贝</p></div>
-            </section><h4 class="h3">季节中の和果子</h4>
-            <section class="mfw-pic"><img src="https://b3-q.mafengwo.net/s9/M00/7B/D7/wKgBs1e5eIiAT3sRAA8yasxT16o452.png?imageView2%2F2%2Fw%2F900%2Fq%2F90%2Fformat%2Fjpeg" width="100%"><div class="description"><p>图：春季气息浓郁的樱花揉果子</p></div>
-            </section><section class="mfw-pic"><img src="https://c3-q.mafengwo.net/s9/M00/7B/8B/wKgBs1e5eCCAV5cLABq60v3-fGM446.png?imageView2%2F2%2Fw%2F900%2Fq%2F90%2Fformat%2Fjpeg" width="100%"><div class="description"><p>图：映照着夏天的寒天果子</p></div>
-        </section><section class="mfw-pic"><img src="https://a4-q.mafengwo.net/s9/M00/7C/E8/wKgBs1e5ekaADggwABsgJrXuv-E746.png?imageView2%2F2%2Fw%2F900%2Fq%2F90%2Fformat%2Fjpeg" width="100%"><div class="description"><p>图：秋季登场的是带有栗子的鹿之子</p></div>
-        </section><section class="mfw-pic"><img src="https://c2-q.mafengwo.net/s9/M00/6B/19/wKgBs1e5YZmASJUrABk3D_YYqbU367.png?imageView2%2F2%2Fw%2F900%2Fq%2F90%2Fformat%2Fjpeg" width="100%"><div class="description"><p>图：适合寒冷冬季的温暖鲷鱼烧</p></div>
-        </section><p>是不是单单看见和果子那可爱或精致的造型，就已经按捺不住内心的激动了呢？那么我们继续来看一看纪录片到底说些啥。</p>
-
-            <div id="2" style=""></div>
-            <h3 class="h2">细看《甜言蜜语》</h3>
-
-            <h4 class="h3">和果子の由来</h4>
-
-            <p>片子首先会简短介绍每种和果子的历史背景和由来，比如草莓大福的诞生：</p>
-            <section class="mfw-pic"><img src="https://b1-q.mafengwo.net/s9/M00/6C/FF/wKgBs1e5ZE6ACBmkAA0bvwWhCc0399.png?imageView2%2F2%2Fw%2F900%2Fq%2F90%2Fformat%2Fjpeg" width="100%"><div class="description"><p>图：和果子中的经典——红豆大福</p></div>
-            </section><section class="mfw-pic"><img src="https://n4-q.mafengwo.net/s9/M00/6D/09/wKgBs1e5ZFmABP4EABIyIaE-hFE674.png?imageView2%2F2%2Fw%2F900%2Fq%2F90%2Fformat%2Fjpeg" width="100%"><div class="description"><p>图：水果界的偶像——草莓</p></div>
-        </section><section class="mfw-pic"><img src="https://c4-q.mafengwo.net/s9/M00/6D/13/wKgBs1e5ZGiAc6EyABVatt7ztjw315.png?imageView2%2F2%2Fw%2F900%2Fq%2F90%2Fformat%2Fjpeg" width="100%"><div class="description"><p>图：两者在昭和80年（1985年）相遇啦！</p></div>
-        </section><h4 class="h3">和果子の制作</h4>
-
-            <p>然后是最激动人心的和果子制作过程！你会发现，很多看似造型简单的和果子，背后却隐藏着非常不易制作的一面呢，比如蕨饼：</p>
-            <section class="mfw-pic"><img src="https://b2-q.mafengwo.net/s9/M00/70/24/wKgBs1e5aFuAQYdSABNc_UQXQac226.png?imageView2%2F2%2Fw%2F900%2Fq%2F90%2Fformat%2Fjpeg" width="100%"><div class="description"><p>图：将100%的蕨粉入水融化，然后以大火煮制粘稠状，期间要不停地搅拌</p></div>
-            </section><section class="mfw-pic"><img src="https://b4-q.mafengwo.net/s9/M00/70/A0/wKgBs1e5aRaAEfWIABg7tv6gw3Q241.png?imageView2%2F2%2Fw%2F900%2Fq%2F90%2Fformat%2Fjpeg" width="100%"><div class="description"><p>图：然后不断地将之搅起并用力摔打，这个过程相当考验制作者臂力和腰力</p></div>
-        </section><section class="mfw-pic"><img src="https://n2-q.mafengwo.net/s9/M00/71/55/wKgBs1e5aeSAdkM3ABXA-yq-H04108.png?imageView2%2F2%2Fw%2F900%2Fq%2F90%2Fformat%2Fjpeg" width="100%"><div class="description"><p>图：摔打完成后在里面加入馅并制成团子</p></div>
-        </section><section class="mfw-pic"><img src="https://a1-q.mafengwo.net/s9/M00/71/C9/wKgBs1e5amCAWyXnABakxkyxYzY256.png?imageView2%2F2%2Fw%2F900%2Fq%2F90%2Fformat%2Fjpeg" width="100%"><div class="description"><p>图：最后撒上黄豆粉才算完成</p></div>
-        </section><h4 class="h3">职人与和果子の羁绊</h4>
-
-            <p>说完了和果子，当然也要说说和果子职人的故事。如今我们能吃到这么丰富美味的和果子，并非偶然，这全靠背后那些和果子职人的传承与创新。他们大部分是继承家业，但也有因为喜爱和果子而投身其中的。但无论接触和果子的契机是什么，他们都怀有各自的愿望与梦想。</p>
-
-            <p>有因为想做出地区特产的：</p>
-            <section class="mfw-pic"><img src="https://b2-q.mafengwo.net/s9/M00/79/D1/wKgBs1e5dcOAaGBFABn8AVtULn0979.png?imageView2%2F2%2Fw%2F900%2Fq%2F90%2Fformat%2Fjpeg" width="100%"><div class="description"><p>图：初代店主提出“要做出结合人形町的特产”</p></div>
-            </section><p>有因为自己觉得好吃而像制作出来与大家分享的：</p>
-            <section class="mfw-pic"><img src="https://c4-q.mafengwo.net/s9/M00/76/CF/wKgBs1e5cU-ABClnABTx3iBswKo509.png?imageView2%2F2%2Fw%2F900%2Fq%2F90%2Fformat%2Fjpeg" width="100%"><div class="description"><p>图：“正因为自己吃了觉得好吃才这样制作出来”</p></div>
-            </section><p>有希望将少见的技法传承下去的：</p>
-            <section class="mfw-pic"><img src="https://b1-q.mafengwo.net/s9/M00/76/F7/wKgBs1e5cWyAcvqKABVcDAOCoPc708.png?imageView2%2F2%2Fw%2F900%2Fq%2F90%2Fformat%2Fjpeg" width="100%"><div class="description"><p>图：“如果有每天都可以做糖人的地方的话，捏糖人这个技术也能保留下来了吧”</p></div>
-            </section><p>也有不希望金花糖失传而致力于复兴计划的：</p>
-            <section class="mfw-pic"><img src="https://b4-q.mafengwo.net/s9/M00/79/64/wKgBs1e5dSqAO2W1AA5WPJDmQxs553.png?imageView2%2F2%2Fw%2F900%2Fq%2F90%2Fformat%2Fjpeg" width="100%"><div class="description"><p>图：“我不想让它在我眼前失传”</p></div>
-            </section><h4 class="h3">和果子の重逢</h4>
-
-            <p>即便是小小的和果子，也有这么多讲究，不可小视。了解完和果子的故事，再次面对它们时，心情似乎也有了不同。</p>
-
-            <div id="3" style=""></div>
-            <h3 class="h2">和果子店铺大推荐</h3>
-
-            <p>虽然《甜言蜜语》中有许多优质的选择，但是蚂小蜂还是忍不住先要推荐一些和果子店铺给你们。</p>
             <a href="http://m.mafengwo.cn/nb/public/sharejump.php?type=3&amp;id=14865528&amp;poi_type_id=1" class="poi" target="_blank">
                 <dl>
                     <dt><img src="http://n4-s.mafengwo.net/c_lfill,w_220,h_150,q_100/s9/M00/81/86/wKgBs1e5geeAIwoHAAEgMK80Lls57.jpeg" width="220" height="150"></dt>

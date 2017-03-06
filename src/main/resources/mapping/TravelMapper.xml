@@ -6,23 +6,33 @@
     <result column="time" property="time" jdbcType="DATE" />
     <result column="place" property="place" jdbcType="VARCHAR" />
     <result column="image" property="image" jdbcType="VARCHAR" />
+    <result column="smallimage" property="smallimage" jdbcType="VARCHAR" />
     <result column="title" property="title" jdbcType="VARCHAR" />
-    <result column="context" property="context" jdbcType="VARCHAR" />
     <result column="type" property="type" jdbcType="VARCHAR" />
     <result column="author" property="author" jdbcType="VARCHAR" />
     <result column="line" property="line" jdbcType="VARCHAR" />
     <result column="count" property="count" jdbcType="INTEGER" />
     <result column="lookcount" property="lookcount" jdbcType="INTEGER" />
+    <result column="summary" property="summary" jdbcType="VARCHAR" />
+  </resultMap>
+  <resultMap id="ResultMapWithBLOBs" type="com.fk.bean.TravelBean" extends="BaseResultMap" >
+    <result column="context" property="context" jdbcType="LONGVARCHAR" />
   </resultMap>
   <sql id="Base_Column_List" >
-    id, time, place, image, title, context, type, author, line, count, lookcount
+    id, time, place, image, smallimage, title, type, author, line, count, lookcount,
+    summary
+  </sql>
+  <sql id="Blob_Column_List" >
+    context
   </sql>
   <select id="count" resultType="int">
     select count(*) from traveltips
   </select>
-  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
-    select 
+  <select id="selectByPrimaryKey" resultMap="ResultMapWithBLOBs" parameterType="java.lang.Integer" >
+    select
     <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
     from traveltips
     where id = #{id,jdbcType=INTEGER}
   </select>
@@ -31,13 +41,16 @@
     where id = #{id,jdbcType=INTEGER}
   </delete>
   <insert id="insert" parameterType="com.fk.bean.TravelBean" >
-    insert into traveltips (id, time, place, 
-      image, title, context, 
-      type, author, line)
-    values (#{id,jdbcType=INTEGER}, #{time,jdbcType=DATE}, #{place,jdbcType=VARCHAR}, 
-      #{image,jdbcType=VARCHAR}, #{title,jdbcType=VARCHAR}, #{context,jdbcType=VARCHAR}, 
-      #{type,jdbcType=VARCHAR}, #{author,jdbcType=VARCHAR}, #{line,jdbcType=VARCHAR}),
-      #{count,jdbcType=INTEGER},#{lookcount,jdbcType=INTEGER}
+    insert into traveltips (id, time, place,
+    image, smallimage, title,
+    type, author, line,
+    count, lookcount, summary,
+    context)
+    values (#{id,jdbcType=INTEGER}, #{time,jdbcType=DATE}, #{place,jdbcType=VARCHAR},
+    #{image,jdbcType=VARCHAR}, #{smallimage,jdbcType=VARCHAR}, #{title,jdbcType=VARCHAR},
+    #{type,jdbcType=VARCHAR}, #{author,jdbcType=VARCHAR}, #{line,jdbcType=VARCHAR},
+    #{count,jdbcType=INTEGER}, #{lookcount,jdbcType=INTEGER}, #{summary,jdbcType=VARCHAR},
+    #{context,jdbcType=LONGVARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="com.fk.bean.TravelBean" >
     insert into traveltips
@@ -54,11 +67,11 @@
       <if test="image != null" >
         image,
       </if>
+      <if test="smallimage != null" >
+        smallimage,
+      </if>
       <if test="title != null" >
         title,
-      </if>
-      <if test="context != null" >
-        context,
       </if>
       <if test="type != null" >
         type,
@@ -69,11 +82,17 @@
       <if test="line != null" >
         line,
       </if>
-      <if test="count != null">
+      <if test="count != null" >
         count,
       </if>
-      <if test="lookcount != null">
+      <if test="lookcount != null" >
         lookcount,
+      </if>
+      <if test="summary != null" >
+        summary,
+      </if>
+      <if test="context != null" >
+        context,
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides="," >
@@ -89,11 +108,11 @@
       <if test="image != null" >
         #{image,jdbcType=VARCHAR},
       </if>
+      <if test="smallimage != null" >
+        #{smallimage,jdbcType=VARCHAR},
+      </if>
       <if test="title != null" >
         #{title,jdbcType=VARCHAR},
-      </if>
-      <if test="context != null" >
-        #{context,jdbcType=VARCHAR},
       </if>
       <if test="type != null" >
         #{type,jdbcType=VARCHAR},
@@ -110,6 +129,12 @@
       <if test="lookcount != null" >
         #{lookcount,jdbcType=INTEGER},
       </if>
+      <if test="summary != null" >
+        #{summary,jdbcType=VARCHAR},
+      </if>
+      <if test="context != null" >
+        #{context,jdbcType=LONGVARCHAR},
+      </if>
     </trim>
   </insert>
   <update id="updateByPrimaryKeySelective" parameterType="com.fk.bean.TravelBean" >
@@ -124,11 +149,11 @@
       <if test="image != null" >
         image = #{image,jdbcType=VARCHAR},
       </if>
+      <if test="smallimage != null" >
+        smallimage = #{smallimage,jdbcType=VARCHAR},
+      </if>
       <if test="title != null" >
         title = #{title,jdbcType=VARCHAR},
-      </if>
-      <if test="context != null" >
-        context = #{context,jdbcType=VARCHAR},
       </if>
       <if test="type != null" >
         type = #{type,jdbcType=VARCHAR},
@@ -143,30 +168,51 @@
         count = #{count,jdbcType=INTEGER},
       </if>
       <if test="lookcount != null" >
-        count = #{lookcount,jdbcType=INTEGER},
+        lookcount = #{lookcount,jdbcType=INTEGER},
+      </if>
+      <if test="summary != null" >
+        summary = #{summary,jdbcType=VARCHAR},
+      </if>
+      <if test="context != null" >
+        context = #{context,jdbcType=LONGVARCHAR},
       </if>
     </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.fk.bean.TravelBean" >
+    update traveltips
+    set time = #{time,jdbcType=DATE},
+    place = #{place,jdbcType=VARCHAR},
+    image = #{image,jdbcType=VARCHAR},
+    smallimage = #{smallimage,jdbcType=VARCHAR},
+    title = #{title,jdbcType=VARCHAR},
+    type = #{type,jdbcType=VARCHAR},
+    author = #{author,jdbcType=VARCHAR},
+    line = #{line,jdbcType=VARCHAR},
+    count = #{count,jdbcType=INTEGER},
+    lookcount = #{lookcount,jdbcType=INTEGER},
+    summary = #{summary,jdbcType=VARCHAR},
+    context = #{context,jdbcType=LONGVARCHAR}
     where id = #{id,jdbcType=INTEGER}
   </update>
   <update id="updateByPrimaryKey" parameterType="com.fk.bean.TravelBean" >
     update traveltips
     set time = #{time,jdbcType=DATE},
-      place = #{place,jdbcType=VARCHAR},
-      image = #{image,jdbcType=VARCHAR},
-      title = #{title,jdbcType=VARCHAR},
-      context = #{context,jdbcType=VARCHAR},
-      type = #{type,jdbcType=VARCHAR},
-      author = #{author,jdbcType=VARCHAR},
-      line = #{line,jdbcType=VARCHAR},
-      count = #{count,jdbcType=INTEGER},
-      lookcount = #{lookcount,jdbcType=INTEGER}
+    place = #{place,jdbcType=VARCHAR},
+    image = #{image,jdbcType=VARCHAR},
+    smallimage = #{smallimage,jdbcType=VARCHAR},
+    title = #{title,jdbcType=VARCHAR},
+    type = #{type,jdbcType=VARCHAR},
+    author = #{author,jdbcType=VARCHAR},
+    line = #{line,jdbcType=VARCHAR},
+    count = #{count,jdbcType=INTEGER},
+    lookcount = #{lookcount,jdbcType=INTEGER},
+    summary = #{summary,jdbcType=VARCHAR}
     where id = #{id,jdbcType=INTEGER}
   </update>
-
   <update id="updateCountById" parameterType="java.lang.Integer">
     update traveltips
     set count = #{count,jdbcType=INTEGER}
     where id = #{id,jdbcType=INTEGER}
   </update>
-
 </mapper>

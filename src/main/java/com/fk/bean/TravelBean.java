@@ -1,11 +1,11 @@
 package com.fk.bean;
 
-import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
  * Created by fengkai on 28/02/17.
  */
+
 public class TravelBean {
     private Integer id;
 
@@ -19,8 +19,6 @@ public class TravelBean {
 
     private String title;
 
-    private String context;
-
     private String type;
 
     private String author;
@@ -29,23 +27,11 @@ public class TravelBean {
 
     private Integer count;
 
-    public Integer getLookcount() {
-        return lookcount;
-    }
-
-    public void setLookcount(Integer lookcount) {
-        this.lookcount = lookcount;
-    }
-
     private Integer lookcount;
 
-    public Integer getCount() {
-        return count;
-    }
+    private String summary;
 
-    public void setCount(Integer count) {
-        this.count = count;
-    }
+    private String context;
 
     public Integer getId() {
         return id;
@@ -55,17 +41,8 @@ public class TravelBean {
         this.id = id;
     }
 
-    public String getTime() {
-        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
-        String date = simpleDateFormat.format(time);
-        return date;
-    }
-
-    public static void main(String[] args) {
-        Date time = new Date(System.currentTimeMillis());
-        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
-        String date = simpleDateFormat.format(time);
-        System.out.println(date);
+    public Date getTime() {
+        return time;
     }
 
     public void setTime(Date time) {
@@ -104,14 +81,6 @@ public class TravelBean {
         this.title = title == null ? null : title.trim();
     }
 
-    public String getContext() {
-        return context;
-    }
-
-    public void setContext(String context) {
-        this.context = context == null ? null : context.trim();
-    }
-
     public String getType() {
         return type;
     }
@@ -136,4 +105,35 @@ public class TravelBean {
         this.line = line == null ? null : line.trim();
     }
 
+    public Integer getCount() {
+        return count;
+    }
+
+    public void setCount(Integer count) {
+        this.count = count;
+    }
+
+    public Integer getLookcount() {
+        return lookcount;
+    }
+
+    public void setLookcount(Integer lookcount) {
+        this.lookcount = lookcount;
+    }
+
+    public String getSummary() {
+        return summary;
+    }
+
+    public void setSummary(String summary) {
+        this.summary = summary == null ? null : summary.trim();
+    }
+
+    public String getContext() {
+        return context;
+    }
+
+    public void setContext(String context) {
+        this.context = context == null ? null : context.trim();
+    }
 }

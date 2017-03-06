@@ -86,10 +86,10 @@
             <div class="gl-post">
                 <div data-cs-t="gonglve_feed" class="_j_feed_data" data-feed=[{"fid":"11533","type":"3"},{"fid":"8594","type":"2"},{"fid":"14497","type":"3"},{"fid":"8072","type":"5"},{"fid":"7079","type":"9"},{"fid":"3113","type":"6"},{"fid":"3071","type":"2"},{"fid":"3398","type":"6"},{"fid":"11527","type":"3"},{"fid":"7502","type":"2"}]>
 
-                    <div class="feed-item _j_feed_item" data-fid="11533" data-type="3" data-cs-p="位置_1">
+                    <div class="feed-item _j_feed_item">
                         <a href="https://www.mafengwo.cn/localdeals/mdd_topic_1019/?cid=1010616" target="_blank">
                             <div class="bar clearfix">
-                                <span class="stat"><span class="num">1064</span> 穷游客体验过<i class="icon-cart"></i></span>
+                                <span class="stat"><span class="num">1064</span> 穷游客赞<i class="icon-cart"></i></span>
                             </div>
                             <div class="title">
                                 去厦门前必看，教你吃喝玩乐如何不走弯路（附上岛信息、店铺...
@@ -110,10 +110,10 @@
                     </div>
                     <div class="hr"></div>
 
-                    <div class="feed-item _j_feed_item" data-fid="8594" data-type="2" data-cs-p="位置_2">
+                    <div class="feed-item _j_feed_item">
                         <a href="http://www.mafengwo.cn/wenda/detail-6917494.html" target="_blank">
                             <div class="bar clearfix">
-                                <span class="stat"><span class="num">1933</span> 蜂蜂赞<i class="icon-hand"></i></span>
+                                <span class="stat"><span class="num">1933</span> 穷游客赞<i class="icon-hand"></i></span>
                                 <span class="type"><i class="icon-wenda"></i>来自 <strong>问答</strong></span>
                             </div>
                             <div class="title">
@@ -131,268 +131,13 @@
                                     <span class="art-tag">电影</span>
                                     <span class="art-tag">美食</span>
                                     <span class="art-tag">日本</span>
-                                    <div class="ext-r"><span class="nums">101677浏览，79回答</span></div>
+                                    <div class="ext-r"><span class="nums">101677浏览</span></div>
                                 </dd>
                             </dl>
                         </a>
                     </div>
                     <div class="hr"></div>
 
-
-                    <div class="feed-item _j_feed_item" data-fid="14497" data-type="3" data-cs-p="位置_3">
-                        <a href="https://www.mafengwo.cn/localdeals/mdd_topic_1400/?cid=1010616" target="_blank">
-                            <div class="bar clearfix">
-                                <span class="stat"><span class="num">64</span> 蜂蜂体验过<i class="icon-cart"></i></span>
-                                <span class="type"><i class="icon-sales"></i>来自 <strong>自由行攻略</strong></span>
-                            </div>
-                            <div class="title">
-                                去日本买买买的另一种打开方式——日本中古店购物攻略
-                            </div>
-                            <div class="txt">
-                                <div class="info">去日本买买买的时候你是不是只知道品牌专卖店和药妆店，还有一个地方是时尚达人和真正了解日本购物文化的人一定会去淘宝的，那就是&quot;中古店&quot;。在日本有个神奇的文化就是中古，在日语里是“二手”的意思，各大购物中心都坐落着大大小小无数个性鲜明的古着店家。名牌商品的限定版、独立设计师的得意之作、奢饰品牌的经典款...</div>
-
-
-
-
-
-                            </div>
-                            <div class="imgs">
-                                <ul class="clearfix">
-                                    <li><img src="http://c1-q.mafengwo.net/s9/M00/79/11/wKgBs1hXuaeAGBRrAAE6k3Bb0z892.jpeg?imageMogr2%2Fthumbnail%2F%21220x130r%2Fgravity%2FCenter%2Fcrop%2F%21220x130%2Fquality%2F100"></li>
-                                    <li><img src="http://c2-q.mafengwo.net/s9/M00/4B/54/wKgBs1hSdlSAC-pIAAi_8pYHuFY020.png?imageMogr2%2Fthumbnail%2F%21220x130r%2Fgravity%2FCenter%2Fcrop%2F%21220x130%2Fquality%2F100"></li>
-                                    <li><img src="http://n1-q.mafengwo.net/s9/M00/4D/0E/wKgBs1hSdyaACMwAAAkF0IuhEsQ332.png?imageMogr2%2Fthumbnail%2F%21220x130r%2Fgravity%2FCenter%2Fcrop%2F%21220x130%2Fquality%2F100"></li>
-                                    <li class="ext-r">35374浏览</li>
-                                </ul>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="hr"></div>
-                    <div class="feed-item _j_feed_item" data-fid="8072" data-type="5" data-cs-p="位置_4">
-                        <a href="http://www.mafengwo.cn/weixin/article-285.html" target="_blank">
-                            <div class="bar clearfix">
-                                <span class="stat"><span class="num">378</span> 蜂蜂喜欢<i class="icon-hand"></i></span>
-                                <span class="type"><i class="icon-notes"></i>来自 <strong>官方账号</strong></span>
-                            </div>
-                            <div class="title">
-                                再不去就来不及了！那些即将消失的全球7大美景&gt;&gt;&gt;
-                            </div>
-                            <div class="txt">
-                                <div class="info">因为军变、天灾人祸、历史等原因，很多令人震惊的景点已经消失或者正在逐渐消失，让爱旅游的人痛心疾首，趁现在还来得及，赶紧去“朝圣”吧！</div>
-
-
-
-
-
-                            </div>
-                            <div class="imgs">
-                                <ul class="clearfix">
-                                    <li><img src="http://n4-q.mafengwo.net/s8/M00/89/4B/wKgBpVVtbxiAeUGYAAlTHfp1vxk997.png?imageMogr2%2Fthumbnail%2F%21220x130r%2Fgravity%2FCenter%2Fcrop%2F%21220x130%2Fquality%2F100"></li>
-                                    <li><img src="http://a4-q.mafengwo.net/s5/M00/C2/C5/wKgB20_833PLOoqcAAHyHGMGXac41.jpeg?imageMogr2%2Fthumbnail%2F%21220x130r%2Fgravity%2FCenter%2Fcrop%2F%21220x130%2Fquality%2F100"></li>
-                                    <li><img src="http://a1-q.mafengwo.net/s8/M00/A5/7E/wKgBpVXVap-ATepyABf-7OWgFcY53.jpeg?imageMogr2%2Fthumbnail%2F%21220x130r%2Fgravity%2FCenter%2Fcrop%2F%21220x130%2Fquality%2F100"></li>
-                                    <li class="ext-r">50046浏览</li>
-                                </ul>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="hr"></div>
-                    <div class="feed-item _j_feed_item" data-fid="7079" data-type="9" data-cs-p="位置_5">
-                        <a href="http://www.mafengwo.cn/traveller/article.php?id=966" target="_blank">
-                            <div class="bar clearfix">
-                                <span class="stat"><span class="num">15360</span> 蜂蜂阅读<i class="icon-hand"></i></span>
-                                <span class="type"><i class="icon-line"></i>来自 <strong>官方账号</strong></span>
-                            </div>
-                            <div class="title">
-                                台北：买不完的书店
-                            </div>
-                            <dl class="art clearfix">
-                                <dt>
-                                    <img src="http://c2-q.mafengwo.net/s9/M00/41/AF/wKgBs1dGbRCAeBRuAASJ9u523pk81.jpeg?imageMogr2%2Fthumbnail%2F%21220x150r%2Fgravity%2FCenter%2Fcrop%2F%21220x150%2Fquality%2F100" style="width: 220px;">
-                                </dt>
-                                <dd>
-                                    <div class="info">那些天里，我们逛各类书店，预期的书差不多都没买到。因为我们和朋友们想找的书，大多都是很早以前出版的了，但计划外的书倒是买了不少。和在其他城市一样，我们最后一天的行程是去邮局寄书。一大箱书寄下来，比我们预料的邮费更便宜，心里暗暗后悔，早知道就买更多的书了，也因此给了自己一个理由，下次为了买书，还要...</div>
-                                    <span class="art-tag">旅行家专栏</span>
-                                    <div class="ext-r">
-                                        <span class="author"><img src="https://b3-q.mafengwo.net/s7/M00/F5/53/wKgB6lPGJf6AYr1xAAB1vwJNrZo32.jpeg?imageMogr2%2Fthumbnail%2F%2120x20r%2Fgravity%2FCenter%2Fcrop%2F%2120x20%2Fquality%2F100">西门媚</span>
-                                        <span class="nums">2评论</span>
-                                    </div>
-                                </dd>
-                            </dl>
-                        </a>
-                    </div>
-                    <div class="hr"></div>
-                    <div class="feed-item _j_feed_item" data-fid="3113" data-type="6" data-cs-p="位置_6">
-                        <a href="http://www.mafengwo.cn/mdd/route/10083_261.html" target="_blank">
-                            <div class="bar clearfix">
-                                <span class="stat"><em>29%</em> 蜂蜂会选择这条线路</span>
-                                <span class="type"><i class="icon-line"></i>来自 <strong>目的地专家</strong></span>
-                            </div>
-                            <div class="title">
-                                曼谷芭提雅7日玩法
-                            </div>
-
-                            <dl class="art clearfix">
-                                <dt>
-                                    <img src="http://n2-q.mafengwo.net/s9/M00/99/32/wKgBs1dNMyGAG7obAABxtYmW4Yw155.png?imageMogr2%2Fthumbnail%2F%21220x150r%2Fgravity%2FCenter%2Fcrop%2F%21220x150%2Fquality%2F100" style="width: 220px;">
-                                </dt>
-                                <dd>
-                                    <div class="info txt-line">
-                                        集中时间和精力游玩曼谷、芭提雅最热门的景点及商圈，让本次旅行在美景、美食、购物、娱乐上得到全方位满足。
-                                        <br>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                                        曼谷
-                                        <span class="arrow"></span>
-                                        芭提雅
-
-                                    </div>
-                                    <span class="art-tag">最佳季节：11月-次年3月</span>
-                                    <div class="ext-r"><span class="nums">173502浏览，56评论</span></div>
-                                </dd>
-                            </dl>
-                        </a>
-                    </div>
-                    <div class="hr"></div>
-                    <div class="feed-item _j_feed_item" data-fid="3071" data-type="2" data-cs-p="位置_7">
-                        <a href="http://www.mafengwo.cn/wenda/detail-6750460.html" target="_blank">
-                            <div class="bar clearfix">
-                                <span class="stat"><span class="num">1529</span> 蜂蜂赞<i class="icon-hand"></i></span>
-                                <span class="type"><i class="icon-wenda"></i>来自 <strong>问答</strong></span>
-                            </div>
-                            <div class="title">
-                                【纯干货】上海迪士尼乐园怎么玩儿？
-                            </div>
-                            <dl class="art clearfix">
-                                <dt>
-                                    <img src="http://a2-q.mafengwo.net/s9/M00/13/A3/wKgBs1d0wEWAalj6AAuUsDHbOOE541.png?imageMogr2%2Fthumbnail%2F%21220x150r%2Fgravity%2FCenter%2Fcrop%2F%21220x150%2Fquality%2F100">
-                                </dt>
-                                <dd>
-                                    <div class="info">
-                                        1--关于试运营期间是否所有场馆/项目/秀/花车开放？
-                                        试运营期间是11：30am-20:00pm。门票是可以一天之内多次出入的，需刷购买者的身份证。
-
-                                        六大主题区明日世界、奇想花园、米奇大街、梦幻世界、宝藏湾、探险岛都已开放（不用担心到时找不到路，我也是个路盲，入园后在入口处先领一张地图，各个主题区之间并没有明显...
-                                    </div>
-                                    <span class="art-tag">迪士尼</span>
-                                    <span class="art-tag">当地体验</span>
-                                    <span class="art-tag">上海</span>
-                                    <span class="art-tag">上海必问TOP10</span>
-                                    <div class="ext-r"><span class="nums">128175浏览，61回答</span></div>
-                                </dd>
-                            </dl>
-                        </a>
-                    </div>
-                    <div class="hr"></div>
-                    <div class="feed-item _j_feed_item" data-fid="3398" data-type="6" data-cs-p="位置_8">
-                        <a href="http://www.mafengwo.cn/mdd/cityroute/154447_48.html" target="_blank">
-                            <div class="bar clearfix">
-                                <span class="stat"><em>56%</em> 蜂蜂会选择这条线路</span>
-                                <span class="type"><i class="icon-line"></i>来自 <strong>目的地专家</strong></span>
-                            </div>
-                            <div class="title">
-                                大峡谷南缘经典1日玩法
-                            </div>
-
-                            <dl class="art clearfix">
-                                <dt>
-                                    <img src="http://b4-q.mafengwo.net/s9/M00/90/4C/wKgBs1bnx36AdpamAACXbis5tNk083.png?imageMogr2%2Fthumbnail%2F%21220x150r%2Fgravity%2FCenter%2Fcrop%2F%21220x150%2Fquality%2F100" style="width: 220px;">
-                                </dt>
-                                <dd>
-                                    <div class="info txt-line">
-                                        大峡谷南缘是来到大峡谷最经典的旅行地，走隐士之路和沙漠景观路两个线路便可用1天游览图萨扬遗址、利帕观景台、沙漠瞭望塔等知名景点。
-                                        <br>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                                        隐士之路沿线
-                                        <span class="arrow"></span>
-                                        沙漠观景路
-
-                                    </div>
-                                    <span class="art-tag">最佳季节：夏季和秋季</span>
-                                    <div class="ext-r"><span class="nums">16053浏览</span></div>
-                                </dd>
-                            </dl>
-                        </a>
-                    </div>
-                    <div class="hr"></div>
-                    <div class="feed-item _j_feed_item" data-fid="11527" data-type="3" data-cs-p="位置_9">
-                        <a href="https://www.mafengwo.cn/localdeals/mdd_topic_1016/?cid=1010616" target="_blank">
-                            <div class="bar clearfix">
-                                <span class="stat"><span class="num">209</span> 蜂蜂体验过<i class="icon-cart"></i></span>
-                                <span class="type"><i class="icon-sales"></i>来自 <strong>自由行攻略</strong></span>
-                            </div>
-                            <div class="title">
-                                穿街走巷，寻找厦门地道美食，寻找心中的老味道（附好评餐厅...
-                            </div>
-                            <div class="txt">
-                                <div class="info">除了游客好奇厦门到底有什么好吃的，本地人也想知道祖辈口中的老味道到底是什么。网上最不缺的「厦门攻略」就是关于美食的，而上千个版本的“必吃推荐”大多只是作者个人偏好的叠加，极少站在旅行者的角度去给出合理的引导。这篇攻略专为这样的你准备，告诉你什么必吃，什么要慎重选吃，让吃货不虚此行，甚至带朋友去也...</div>
-
-
-
-
-
-                            </div>
-                            <div class="imgs">
-                                <ul class="clearfix">
-                                    <li><img src="http://a1-q.mafengwo.net/s9/M00/D2/A5/wKgBs1f-9EeASnP8ACc9D5Y5-_o804.gif?imageMogr2%2Fthumbnail%2F%21220x130r%2Fgravity%2FCenter%2Fcrop%2F%21220x130%2Fquality%2F100"></li>
-                                    <li><img src="http://b2-q.mafengwo.net/s9/M00/70/7B/wKgBs1hE9juAHfC6ABbqBn-Q5rQ636.png?imageMogr2%2Fthumbnail%2F%21220x130r%2Fgravity%2FCenter%2Fcrop%2F%21220x130%2Fquality%2F100"></li>
-                                    <li><img src="http://b2-q.mafengwo.net/s9/M00/70/9C/wKgBs1hE9kyABujeABXfsxwoy7M239.png?imageMogr2%2Fthumbnail%2F%21220x130r%2Fgravity%2FCenter%2Fcrop%2F%21220x130%2Fquality%2F100"></li>
-                                    <li class="ext-r">35517浏览</li>
-                                </ul>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="hr"></div>
-                    <div class="feed-item _j_feed_item" data-fid="7502" data-type="2" data-cs-p="位置_10">
-                        <a href="http://www.mafengwo.cn/wenda/detail-6662389.html" target="_blank">
-                            <div class="bar clearfix">
-                                <span class="stat"><span class="num">2574</span> 蜂蜂赞<i class="icon-hand"></i></span>
-                                <span class="type"><i class="icon-wenda"></i>来自 <strong>问答</strong></span>
-                            </div>
-                            <div class="title">
-                                旅途中有没有那么一首歌，陪你翻山又过河？
-                            </div>
-                            <dl class="art clearfix">
-                                <dt>
-                                    <img src="http://c2-q.mafengwo.net/s9/M00/07/BE/wKgBs1d0r16AWBxSAADv7WVBPKs80.jpeg?imageMogr2%2Fthumbnail%2F%21220x150r%2Fgravity%2FCenter%2Fcrop%2F%21220x150%2Fquality%2F100">
-                                </dt>
-                                <dd>
-                                    <div class="info">
-                                        在我的旅行中，有一个人的，也有三两好友一起出行的，当然更多的是两个人的旅程，其实旅途中，大约还是一个人的时候出现单曲循环听音乐的情况居多。我也是一个会在一段时间内单曲循环N次同一首歌的人，有时候是因为歌确实好听，可有时候却是因为这首歌完全符合了自己当时的心情。所以说，在旅行这样一个最容易激发自己各...
-                                    </div>
-                                    <span class="art-tag">实用指南</span>
-                                    <div class="ext-r"><span class="nums">165600浏览，692回答</span></div>
-                                </dd>
-                            </dl>
-                        </a>
-                    </div>
-                    <div class="hr"></div>
-                    <a rel="nofollow" data-page="1" class="_j_page_loader" data-cs-p="加载更多_1"><span>加载更多</span><i></i></a>
                 </div>
             </div>
         </div>

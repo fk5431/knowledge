@@ -17,4 +17,7 @@ public class CommonConst {
     public static final int NINE_INT = 8;
     public static final int TEN_INT = 10;
 
+    public static final String SPLITOR = "!=end=!";
+
+
 }
