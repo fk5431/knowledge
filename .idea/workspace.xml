@@ -11,20 +11,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="11669da5-9530-45d4-b1a5-63fcb18bf569" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/images/sprite_v33.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/controller/ContentC.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/context.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/css/content_1.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/css/content_2.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/css/content_3.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/css/content_4.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/js/content_1.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/js/content_2.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/images/mfw-footer-sprite5.png" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/fk/controller/LoginC.class" afterPath="$PROJECT_DIR$/target/classes/com/fk/controller/LoginC.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/content.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/css/content_list_1.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/css/content_list_2.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/css/content_list_3.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/js/content_list_1.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/fk/controller/LoginC.java" afterPath="$PROJECT_DIR$/src/main/java/com/fk/controller/LoginC.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mapping/TravelMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapping/TravelMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/fk/controller/ContentC.java" afterPath="$PROJECT_DIR$/src/main/java/com/fk/controller/ContentC.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/index.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/index.jsp" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -52,7 +45,69 @@
     <favorites_list name="knowledge" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="index.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/index.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="324">
+              <caret line="39" column="113" lean-forward="false" selection-start-line="39" selection-start-column="113" selection-end-line="39" selection-end-column="113" />
+              <folding>
+                <element signature="e#15355#51120#0#JSP" expanded="false" />
+                <marker date="1488780479058" expanded="false" signature="16264:16280" ph="..." />
+                <marker date="1488780479058" expanded="false" signature="19447:19463" ph="..." />
+                <marker date="1488780479058" expanded="false" signature="22491:22507" ph="..." />
+                <marker date="1488780479058" expanded="false" signature="25523:26025" ph="data:" />
+                <marker date="1488780479058" expanded="false" signature="28956:29458" ph="data:" />
+                <marker date="1488780479058" expanded="false" signature="32247:32749" ph="data:" />
+                <marker date="1488780479058" expanded="false" signature="35500:36002" ph="data:" />
+                <marker date="1488780479058" expanded="false" signature="38805:39307" ph="data:" />
+                <marker date="1488780479058" expanded="false" signature="42129:42631" ph="data:" />
+                <marker date="1488780479058" expanded="false" signature="45367:45869" ph="data:" />
+                <marker date="1488780479058" expanded="false" signature="48594:49096" ph="data:" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LoginC.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/fk/controller/LoginC.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="18">
+              <caret line="42" column="44" lean-forward="false" selection-start-line="42" selection-start-column="44" selection-end-line="42" selection-end-column="44" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ContentC.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/fk/controller/ContentC.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="380">
+              <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="content.jsp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/content.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="468">
+              <caret line="109" column="26" lean-forward="true" selection-start-line="109" selection-start-column="26" selection-end-line="109" selection-end-column="26" />
+              <folding>
+                <element signature="n#style#0;n#img#0;n#dt#0;n#dl#0;n#a#0;n#div#8;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#dt#0;n#dl#0;n#a#0;n#div#10;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#dt#0;n#dl#0;n#a#0;n#div#14;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <marker date="1488782363271" expanded="true" signature="43309:43320" ph="..." />
+                <marker date="1488782363271" expanded="true" signature="48051:48101" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -65,7 +120,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>nextInt</find>
       <find>index</find>
       <find>è¯¥é¡¹æ ¼å¼ä¸æ­£ç¡®</find>
       <find>custom</find>
@@ -93,8 +147,9 @@
       <find>ajax</find>
       <find>../../..</find>
       <find>lookcount</find>
-      <find>/images</find>
       <find>分享</find>
+      <find>foot</find>
+      <find>/images</find>
     </findStrings>
     <replaceStrings>
       <replace>area</replace>
@@ -120,11 +175,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/error.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/sendSuccess.jsp" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/login.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/fk/sql/provice.sql" />
         <option value="$PROJECT_DIR$/src/main/java/com/fk/sql/province.sql" />
         <option value="$PROJECT_DIR$/src/main/java/com/fk/sql/order.sql" />
@@ -162,8 +212,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/fk/sql/traveltips.sql" />
         <option value="$PROJECT_DIR$/src/main/resources/mapping/TravelMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/fk/controller/LoginC.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/fk/controller/ContentC.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/index.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/js/content_1.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/js/content_2.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/css/content_1.css" />
@@ -171,6 +219,13 @@
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/css/content_4.css" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/css/content_2.css" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/context.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/fk/controller/ContentC.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/index.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/js/content_list_1.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/css/content_list_1.css" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/css/content_list_2.css" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/css/content_list_3.css" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/content.jsp" />
       </list>
     </option>
   </component>
@@ -371,6 +426,74 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="WEB-INF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="travel" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="travel" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WEB-INF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="travel" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="travel" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="images" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -473,23 +596,23 @@
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/java/com/fk/sql" />
-      <recent name="$PROJECT_DIR$/src/main/webapp/images" />
-      <recent name="$PROJECT_DIR$/src/main/resources/mapping" />
-      <recent name="$PROJECT_DIR$/src/main/java/com/fk/dao" />
-      <recent name="$PROJECT_DIR$/src/main/java/com/fk/bean" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.fk.serviceImpl" />
-      <recent name="com.fk.service" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/webapp" />
       <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/images" />
       <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages" />
       <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/js" />
       <recent name="E:\毕设\knowledge\src\main\resources" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.fk.serviceImpl" />
+      <recent name="com.fk.service" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages" />
+      <recent name="$PROJECT_DIR$/src/main/java/com/fk/sql" />
+      <recent name="$PROJECT_DIR$/src/main/webapp/images" />
+      <recent name="$PROJECT_DIR$/src/main/resources/mapping" />
+      <recent name="$PROJECT_DIR$/src/main/java/com/fk/dao" />
     </key>
   </component>
   <component name="RunManager" selected="Tomcat Server.Unnamed">
@@ -1152,7 +1275,7 @@
       <workItem from="1488528014530" duration="160000" />
       <workItem from="1488528194370" duration="2104000" />
       <workItem from="1488764361914" duration="103000" />
-      <workItem from="1488764484121" duration="6779000" />
+      <workItem from="1488764484121" duration="9199000" />
     </task>
     <task id="LOCAL-00001" summary="ssm  success">
       <created>1486712078887</created>
@@ -1280,15 +1403,22 @@
       <option name="project" value="LOCAL" />
       <updated>1488535692916</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="首页修复">
+      <created>1488780144803</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1488780144803</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="190858000" />
+    <option name="totallyTimeSpent" value="193278000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1855" height="1056" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1315,7 +1445,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32923076" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32925585" sideWeight="0.49811321" order="14" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17412399" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17412399" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -1346,7 +1476,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="14" />
+      <option name="time" value="15" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1355,37 +1485,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fk/dao/AreaDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="11" column="31" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fk/service/IAreaService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" column="44" lean-forward="true" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fk/serviceImpl/AreaServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="21" column="22" lean-forward="false" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/images/index_2.jpeg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/images/index_4.jpeg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/images/index_5.jpeg">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -1665,51 +1764,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="454">
-          <caret line="882" column="72" lean-forward="true" selection-start-line="882" selection-start-column="24" selection-end-line="882" selection-end-column="72" />
-          <folding>
-            <element signature="e#15350#51115#0#JSP" expanded="false" />
-            <marker date="1488777916116" expanded="false" signature="16259:16275" ph="..." />
-            <marker date="1488777916116" expanded="false" signature="19442:19458" ph="..." />
-            <marker date="1488777916116" expanded="false" signature="22486:22502" ph="..." />
-            <marker date="1488777916116" expanded="false" signature="25518:26020" ph="data:" />
-            <marker date="1488777916116" expanded="false" signature="28951:29453" ph="data:" />
-            <marker date="1488777916116" expanded="false" signature="32242:32744" ph="data:" />
-            <marker date="1488777916116" expanded="false" signature="35495:35997" ph="data:" />
-            <marker date="1488777916116" expanded="false" signature="38800:39302" ph="data:" />
-            <marker date="1488777916116" expanded="false" signature="42124:42626" ph="data:" />
-            <marker date="1488777916116" expanded="false" signature="45362:45864" ph="data:" />
-            <marker date="1488777916116" expanded="false" signature="48589:49091" ph="data:" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fk/controller/LoginC.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-414">
-          <caret line="42" column="44" lean-forward="false" selection-start-line="42" selection-start-column="44" selection-end-line="42" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fk/controller/ContentC.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="20" column="31" lean-forward="false" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/images/mfw-footer-sprite5.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/images/mfw-footer-sprite@2x.png">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
@@ -1737,6 +1792,100 @@
         <state relative-caret-position="123">
           <caret line="40" column="115" lean-forward="false" selection-start-line="40" selection-start-column="115" selection-end-line="40" selection-end-column="115" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fk/controller/LoginC.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="42" column="44" lean-forward="false" selection-start-line="42" selection-start-column="44" selection-end-line="42" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="39" column="113" lean-forward="false" selection-start-line="39" selection-start-column="113" selection-end-line="39" selection-end-column="113" />
+          <folding>
+            <element signature="e#15355#51120#0#JSP" expanded="false" />
+            <marker date="1488780479058" expanded="false" signature="16264:16280" ph="..." />
+            <marker date="1488780479058" expanded="false" signature="19447:19463" ph="..." />
+            <marker date="1488780479058" expanded="false" signature="22491:22507" ph="..." />
+            <marker date="1488780479058" expanded="false" signature="25523:26025" ph="data:" />
+            <marker date="1488780479058" expanded="false" signature="28956:29458" ph="data:" />
+            <marker date="1488780479058" expanded="false" signature="32247:32749" ph="data:" />
+            <marker date="1488780479058" expanded="false" signature="35500:36002" ph="data:" />
+            <marker date="1488780479058" expanded="false" signature="38805:39307" ph="data:" />
+            <marker date="1488780479058" expanded="false" signature="42129:42631" ph="data:" />
+            <marker date="1488780479058" expanded="false" signature="45367:45869" ph="data:" />
+            <marker date="1488780479058" expanded="false" signature="48594:49096" ph="data:" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/js/content_list_1.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="1" column="132275" lean-forward="false" selection-start-line="1" selection-start-column="132275" selection-end-line="1" selection-end-column="132275" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fk/controller/ContentC.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/images/mfw-footer-sprite@2x.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/css/content_list_3.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="36" column="126" lean-forward="false" selection-start-line="36" selection-start-column="126" selection-end-line="36" selection-end-column="126" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/css/content_list_2.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="185">
+          <caret line="47" column="62" lean-forward="false" selection-start-line="47" selection-start-column="62" selection-end-line="47" selection-end-column="62" />
+          <folding>
+            <marker date="1488780801286" expanded="true" signature="20837:21001" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/css/content_list_1.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="14277">
+          <caret line="0" column="132544" lean-forward="false" selection-start-line="0" selection-start-column="132544" selection-end-line="0" selection-end-column="132544" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/content.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="468">
+          <caret line="109" column="26" lean-forward="true" selection-start-line="109" selection-start-column="26" selection-end-line="109" selection-end-column="26" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#dt#0;n#dl#0;n#a#0;n#div#8;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#dt#0;n#dl#0;n#a#0;n#div#10;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#dt#0;n#dl#0;n#a#0;n#div#14;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1488782363271" expanded="true" signature="43309:43320" ph="..." />
+            <marker date="1488782363271" expanded="true" signature="48051:48101" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>

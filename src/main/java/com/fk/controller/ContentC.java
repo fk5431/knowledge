@@ -26,4 +26,12 @@ public class ContentC {
         return "context";
     }
 
+    @RequestMapping("/content_list")
+    public String context_list(Map<String, Object> map){
+        map.put("index", CommonConst.THREE_INT);
+
+
+        return "content";
+    }
+
 }
