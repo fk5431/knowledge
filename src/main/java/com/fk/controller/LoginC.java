@@ -40,7 +40,7 @@ public class LoginC {
     @RequestMapping("/")
     public String index(HttpServletRequest request, Map<String, Object> map){
         //首页最上面样式
-        map.put("index", 1);
+        map.put("index", CommonConst.ONE_INT);
         //轮播图位置
         List<TravelBean> list = new ArrayList<>();
         for(int i=CommonConst.ONE_INT;i<=CommonConst.FIVE_INT;i++){
@@ -82,6 +82,8 @@ public class LoginC {
             }
         }
         map.put("travelList", travelList);
+
+
 
         return "index";
     }

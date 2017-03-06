@@ -1,0 +1,81 @@
+@charset "UTF-8";
+/**
+ *
+ * @authors zhou(shengxue@mafengwo.com)
+ * @date    2016-05-26 10:38:49
+ * @version $Id$
+ */
+.container{width:1000px;margin:20px auto;padding-bottom:30px;font-size:14px;}
+.col-main{float:left;width:680px;}
+.crumb{margin-bottom:25px;color:#999;}
+.art-title{padding-bottom:15px;font-size:24px;font-weight:bold;color:#333;border-bottom:1px solid #e5e5e5;}
+.art-meta{margin:15px 0;}
+.art-meta span{margin-right:10px;}
+.art-meta img{margin-right:4px;width:16px;height:16px;border-radius:50%;vertical-align:middle;}
+.art-content{line-height:26px;color:#666;}
+.art-content img{max-width:100%;}
+.art-content p{margin:15px 0;}
+.art-content .h2{margin:25px 0 10px;font-size:20px;font-weight:bold;color:#333;}
+.art-content .h3{margin:20px 0 10px;font-size:16px;font-weight:bold;color:#333;}
+.art-content .h3 + p{margin-top:0;}
+.art-content p strong{font-weight:bold;color:#333;}
+.art-content .description{margin-top:-5px;font-size:12px;color:#999;line-height:20px;}
+.col-side{float:right;width:240px;}
+.by{color:#ff9d00;font-size:12px!important;}
+.mfw-pic{margin:10px 0;}
+.art-content table{margin:20px 0;width:100%;border:1px solid #e5e5e5;text-align:left;line-height:24px;}
+.art-content td,.art-content th{font-size:14px;color:#666;padding:8px 20px;border:1px solid #e5e5e5;}
+.art-content th{padding:15px 20px;background-color:#efefef;color:#333;}
+.art-content tr:nth-child(even) td{background-color:#f8f8f8;}
+/* æ”¶è—åˆ†äº« */
+.bar_share,.art-code{margin-bottom:10px;border:1px solid #e5e5e5;box-shadow:0 2px 3px rgba(0,0,0,.1);}
+.bs_collect,.bs_share {float: right;width: 118px;height: 65px;padding-top: 15px;text-align: center;}
+.bs_collect{border-right: 1px solid #e8e8e6;}
+.bar_share a.bs_btn {display: block;line-height: 24px;font-size: 14px;color: #666;position: relative;z-index: 1;}
+.bar_share a.bs_btn:hover {text-decoration: none;}
+.bar_share a.bs_btn i {width: 25px;height: 24px;display: block;margin: 0 auto 7px;background: url(/travel/images/sprite_v33.png) -240px -576px no-repeat;}
+.bs_share {position: relative;z-index: 10;}
+.bs_share a.bs_btn i {background-position: -269px -576px;}
+.collected a.bs_btn i {background-position: -211px -576px;}
+.bs_pop {width: 132px;padding: 8px 10px;background-color: #fff;border-radius: 6px;box-shadow: 0 1px 4px rgba(0,0,0,.3);position: absolute;right: 0;top: 100%;display: none;z-index: 10;}
+.bs_pop a {width: 36px;height: 36px;display: inline-block;margin: 0 12px 0 0;background: #d84c4c url(/travel/images/sprite_v33.png) -295px -569px no-repeat;line-height: 200px;overflow: hidden;float: left;border-radius: 5px;}
+.bs_pop a.zone {background-color: #3f8bc0;background-position: -331px -569px;}
+.bs_pop a.weixin {margin-right: 0;background-color: #73a64f;background-position: -367px -569px;}
+
+@media \0screen\,screen\9 {	/* IE6,7,8 only */
+    .bs_pop {border: 1px solid #E8E8E6;}
+}
+
+.art-code{padding:30px 0;text-align:center;}
+.col-side.fixed{position:fixed;right:50%;top:0;margin-right:-500px;z-index:100;}
+
+.poi{display:block;margin:20px 0;padding:16px 0;font-size:14px;color:#666;line-height:24px;}
+.poi:hover{text-decoration:none;background-color:#f8f8f8;color:#666;margin-left:-16px;margin-right:-16px;padding:16px;}
+.poi dl{position:relative;*zoom:1;}
+.poi dl:after{content:'';display:block;clear:both;height:0;overflow:hidden;}
+.poi dt{float:left;width:220px;height:150px;margin-right:20px;display:inline;}
+.poi dd{overflow:hidden;}
+.poi .t1{margin-right:60px;font-size:20px;margin:0;color:#ff9d00;}
+.poi .t2{margin:0 60px 12px 0;color:#999;}
+.poi .t3{float:left;color:#999;}
+.poi .t3 strong{font-size:18px;color:#ff9d00;vertical-align:middle;}
+.poi .t4{float:right;font-size:12px;color:#999;}
+.poi .desc{clear:both;height:72px;overflow:hidden;}
+.poi .i-location{display:inline-block;margin:0 3px 0 10px;width:13px;height:15px;background:url(/travel/images/mdd/new_img/hotel-sprite52.png) no-repeat -115px 0;vertical-align:middle;}
+.poi .price{position:absolute;right:0;top:8px;font-size:22px;color:#ff9d00;font-weight:bold;}
+.poi .price em{font-style:normal;}
+.tips{margin:30px 0;padding:15px 20px;border:1px solid #ffe3b7;background-color:#fff5e5;border-radius:4px;}
+.tips strong{font-size:16px;color:#333;}
+.tips p{margin:10px 0 0;}
+.travelnote{margin:30px 0;background-color:#f8f8f8;padding:20px 20px 15px 82px;border-radius:4px;}
+.travelnote .description{color:#ff9d00;font-size:14px;margin:0;}
+.travelnote img{float:left;margin:0 0 0 -62px;width:48px;height:48px;border-radius:50%;overflow:hidden;}
+.travelnote p{margin:0;}
+.travelnote .lv{margin-left:5px;font-size:12px;color:#eb5443;font-weight:bold;}
+
+
+@media (min-resolution:1.25dppx),(-webkit-min-device-pixel-ratio:1.25),(min-device-pixel-ratio:1.25){
+    .bar_share a.bs_btn i{background:url(/travel/images/post/new_notes/notes-share-collect@2x.png) no-repeat;background-size:100px auto;}
+    .bs_share a.bs_btn i{background-position:-60px 0;}
+    .collected a.bs_btn i{background-position:-30px 0;}
+}

@@ -37,7 +37,7 @@
                 <li class="head-nav-place" id="head_2"><a href="http://www.mafengwo.cn/mdd/"
                                                                           title="目的地">目的地</a>
                 </li>
-                <li class="head-nav-gonglve" id="head_3"><a href="http://www.mafengwo.cn/gonglve/"
+                <li class="head-nav-gonglve" id="head_3"><a href="${pageContext.request.contextPath}/context"
                                                                                 title="旅游攻略">旅游攻略</a>
                 </li>
                 <li class="head-nav-place" id="_j_nav_sales" >
@@ -247,9 +247,9 @@
             <div class="navbar clearfix">
                 <ul class="tn-nav" id="_j_tn_nav">
 
-                    <li class="active _j_gs_tab"><a href="javascript:void(0);" rel="nofollow" data-type="0"
+                    <li class="active _j_gs_tab"><a href="javascript:void(0);"
                                                     data-objid="0">热门攻略</a></li>
-                    <li class="_j_gs_tab"><a href="javascript:void(0);" rel="nofollow" data-type="3">最新发表</a></li>
+                    <li class="_j_gs_tab"><a href="javascript:void(0);" >最新发表</a></li>
                 </ul>
                 <div class="tn-write"><a class="btn-add" href="/note/create_index.php" target="_blank"
                                          rel="nofollow"><i></i>写攻略</a></div>

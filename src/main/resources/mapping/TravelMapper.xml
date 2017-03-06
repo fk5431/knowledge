@@ -159,7 +159,7 @@
       author = #{author,jdbcType=VARCHAR},
       line = #{line,jdbcType=VARCHAR},
       count = #{count,jdbcType=INTEGER},
-      lookcount = #{count,jdbcType=INTEGER}
+      lookcount = #{lookcount,jdbcType=INTEGER}
     where id = #{id,jdbcType=INTEGER}
   </update>
 
