@@ -80,9 +80,9 @@
                 for (int i = 0; i <list.size(); i++) {
             %>
                 <li class="first" style="<% if(i != 0) out.print("display: none;"); %>">
-                    <a href="${pageContext.request.contextPath}/article?id=${travelList.get(i).id}" target="_blank" class="show-pic"><img
+                    <a href="${pageContext.request.contextPath}/article?id=${list.get(i).id}" target="_blank" class="show-pic"><img
                             src="<%=list.get(i).getImage() %>"></a>
-                    <a href="${pageContext.request.contextPath}/article?id=${travelList.get(i).id}" target="_blank" class="show-title dark">
+                    <a href="${pageContext.request.contextPath}/article?id=${list.get(i).id}" target="_blank" class="show-title dark">
                         <div class="date">
                             <span class="day"><%=list.get(i).getTime()%>
                         </div>

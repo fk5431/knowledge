@@ -16,9 +16,11 @@
 )DEFAULT CHARSET=utf8;
 INSERT INTO traveltips(id, time, place, image, title, context, type, author, line) VALUES(1, '2017-02-21 10:11:00','摩洛哥','/images/index_1.jpeg','宝贝，妈妈带你去撒哈拉','context','type','贩暖','line');
 
-UPDATE traveltips SET context= ' <div class="va_con _j_master_content" data-cs-t="ginfo_kw_hotel">
+UPDATE traveltips SET context= '<div class="va_con _j_master_content" data-cs-t="ginfo_kw_hotel">
             <p class="_j_note_content _j_seqitem" data-seq="179551643">无尽的海滩、永恒的遗迹、好客的人民、成群的大象、翻滚的海浪、低廉的价格、有趣的火车之旅、著名的红茶、诱人的食物......这里是说不尽的<a href="/travel-scenic-spot/mafengwo/11058.html" class="link _j_keyword_mdd" data-kw="斯里兰卡" target="_blank">斯里兰卡</a>，从北纬0℃~40℃之境漂洋过海，形如<a href="/travel-scenic-spot/mafengwo/10182.html" class="link _j_keyword_mdd" data-kw="印度" target="_blank">印度</a>洋上的一滴眼泪，被马可·波罗认为是最美丽的岛屿！<br />
+
 斯里兰卡的上空满是浓郁的香料味道，这片上帝的乐土凭借香气的弥漫，罩于古城神殿，寺庙森林之上。而美丽的蝴蝶和鸟类以及充满生气的动物更使得这块土地充满异域风情，让我们决定开启这段美丽的旅程。</p>
+
                 <div id="_j_photo_181312321" data-seq="181312336" data-pid="181312321" class="add_pic _j_anchorcnt _j_seqitem"  style="width:680px">
             <img class="_j_lazyload" style="height:161px;width:680px;background:#FCF2DC" src="/travel/images/3/3_1.jpeg" />
                     </div>

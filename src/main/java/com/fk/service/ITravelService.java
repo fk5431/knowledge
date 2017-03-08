@@ -11,7 +11,7 @@ public interface ITravelService {
 
     int count();
 
-    void updateCountById(Integer id);
-
     int updateByPrimaryKey(TravelBean record);
+
+
 }

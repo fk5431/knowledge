@@ -26,14 +26,12 @@ public class TravelServiceImpl implements ITravelService {
         return travelDao.count();
     }
 
-    @Override
-    public void updateCountById(Integer id) {
-        travelDao.updateCountById(id, CommonConst.ONE_INT);
-        return;
-    }
+
 
     @Override
     public int updateByPrimaryKey(TravelBean record) {
         return travelDao.updateByPrimaryKey(record);
     }
+
+
 }

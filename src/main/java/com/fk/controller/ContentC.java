@@ -45,6 +45,8 @@ public class ContentC {
         map.put("index", CommonConst.THREE_INT);
         String id = request.getParameter("id");
         TravelBean travelBean = travelService.selectByPrimaryKey(Integer.parseInt(id));
+        travelBean.setLookcount(travelBean.getLookcount() + CommonConst.ONE_INT);
+        travelService.updateByPrimaryKey(travelBean);
         map.put("travel", travelBean);
         return "context";
     }

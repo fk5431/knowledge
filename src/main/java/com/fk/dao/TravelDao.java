@@ -18,5 +18,4 @@ public interface TravelDao {
 
     int count();
 
-    int updateCountById(Integer id, Integer num);
 }

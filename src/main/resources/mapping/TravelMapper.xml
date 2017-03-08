@@ -210,9 +210,4 @@
     summary = #{summary,jdbcType=VARCHAR}
     where id = #{id,jdbcType=INTEGER}
   </update>
-  <update id="updateCountById" parameterType="java.lang.Integer">
-    update traveltips
-    set count = #{count,jdbcType=INTEGER}
-    where id = #{id,jdbcType=INTEGER}
-  </update>
 </mapper>
