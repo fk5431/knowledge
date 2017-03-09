@@ -237,9 +237,9 @@
                     <a title="分享到微信" rel="nofollow" role="button" class="weixin" data-japp="weixin_dialog_share" data-jappfedata="" data-wx_qr="http://www.mafengwo.cn/qrcode.php?text=http%3A%2F%2Fwww.mafengwo.cn%2Fweixin%2Farticle-567.html&size=150&eclevel=H&logo=&__stk__=070c07fd7cc4da080626f179b860bfa5_37363e8ffa4895701f34b9e0a4a54590"></a>
                 </div>
             </div>
-            <div class="bs_collect" style="position: fixed;">
+            <div class="bs_collect">
                 <a class="bs_btn" href="${pageContext.request.contextPath}/count_context?id=${travel.id}">
-                    <i></i><span>${travel.count}</span><strong>喜欢</strong>
+                    <a href="${pageContext.request.contextPath}/count_context?id=${travel.id}"><i></i></a><span>${travel.count}</span><strong>喜欢</strong>
                 </a>
             </div>
         </div>
