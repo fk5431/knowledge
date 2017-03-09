@@ -19,53 +19,49 @@ INSERT INTO traveltips(id, time, place, image, title, context, type, author, lin
 
 
 
-UPDATE traveltips SET context= '<div class="va_con _j_master_content" data-cs-t="ginfo_kw_hotel">
-            <p class="_j_note_content _j_seqitem" data-seq="179551643">无尽的海滩、永恒的遗迹、好客的人民、成群的大象、翻滚的海浪、低廉的价格、有趣的火车之旅、著名的红茶、诱人的食物......这里是说不尽的<a href="/travel-scenic-spot/mafengwo/11058.html" class="link _j_keyword_mdd" data-kw="斯里兰卡" target="_blank">斯里兰卡</a>，从北纬0℃~40℃之境漂洋过海，形如<a href="/travel-scenic-spot/mafengwo/10182.html" class="link _j_keyword_mdd" data-kw="印度" target="_blank">印度</a>洋上的一滴眼泪，被马可·波罗认为是最美丽的岛屿！<br />
+UPDATE traveltips SET context= '<div id="_j_paragraph_1" data-seq="182326831" data-index="1" class="article_title _j_anchorcnt _j_seqitem">
+                <h2 class="t5"><span class="_j_anchor">预告片</span></h2>
 
-斯里兰卡的上空满是浓郁的香料味道，这片上帝的乐土凭借香气的弥漫，罩于古城神殿，寺庙森林之上。而美丽的蝴蝶和鸟类以及充满生气的动物更使得这块土地充满异域风情，让我们决定开启这段美丽的旅程。</p>
 
-                <div id="_j_photo_181312321" data-seq="181312336" data-pid="181312321" class="add_pic _j_anchorcnt _j_seqitem"  style="width:680px">
-            <img class="_j_lazyload" style="height:161px;width:680px;background:#FCF2DC" src="/travel/images/3/3_1.jpeg" />
+
+                <div id="_j_photo_183924242" data-seq="183924254" data-pid="183924242" class="add_pic _j_anchorcnt _j_seqitem"  style="width:680px">
+            <img class="_j_lazyload" style="height:538px;width:680px;background:#FCF2DC" src="/travel/images/4/4_1.jpeg" />
+                                        <span class="pic_tag">
+                    <i class="house"></i>乌兰布统
+
+            </span>
+                        </div>
+                <div id="_j_photo_183924239" data-seq="183924251" data-pid="183924239" class="add_pic _j_anchorcnt _j_seqitem"  style="width:680px" data-poiid="355249">
+            <img class="_j_lazyload" style="height:538px;width:680px;background:#FCF2DC" src="/travel/images/4/4_2.jpeg" />
+                                        <span class="pic_tag">
+                    <i class="house"></i>小河头
+
+            </span>
+                        </div>
+                <div id="_j_photo_183924240" data-seq="183924252" data-pid="183924240" class="add_pic _j_anchorcnt _j_seqitem"  style="width:680px">
+            <img class="_j_lazyload" style="height:467px;width:680px;background:#FCF2DC" src="/travel/images/4/4_3.jpeg" />
                     </div>
-                <div id="_j_photo_186746307" data-seq="186746341" data-pid="186746307" class="add_pic _j_anchorcnt _j_seqitem"  style="width:680px">
-            <img class="_j_lazyload" style="height:485px;width:680px;background:#FCF2DC" src="/travel/images/3/3_2.jpeg" />
+                <div id="_j_photo_183924241" data-seq="183924253" data-pid="183924241" class="add_pic _j_anchorcnt _j_seqitem"  style="width:680px">
+            <img class="_j_lazyload" style="height:538px;width:680px;background:#FCF2DC" src="/travel/images/4/4_4.jpeg" />
                     </div>
-                <div id="_j_photo_186746303" data-seq="186746337" data-pid="186746303" class="add_pic _j_anchorcnt _j_seqitem"  style="width:680px">
-            <img class="_j_lazyload" style="height:485px;width:680px;background:#FCF2DC" src="/travel/images/3/3_3.jpeg" />
-                    </div>
-                <div id="_j_photo_186746284" data-seq="186746319" data-pid="186746284" class="add_pic _j_anchorcnt _j_seqitem"  style="width:680px">
-            <img class="_j_lazyload" style="height:485px;width:680px;background:#FCF2DC" src="/travel/images/3/3_4.jpeg" />
-                    </div>
-                <div id="_j_photo_186746316" data-seq="186746350" data-pid="186746316" class="add_pic _j_anchorcnt _j_seqitem"  style="width:680px">
-            <img class="_j_lazyload" style="height:485px;width:680px;background:#FCF2DC" src="/travel/images/3/3_5.jpeg" />
-                    </div>
-                <div id="_j_photo_186746305" data-seq="186746339" data-pid="186746305" class="add_pic _j_anchorcnt _j_seqitem"  style="width:680px">
-            <img class="_j_lazyload" style="height:485px;width:680px;background:#FCF2DC" src="/travel/images/3/3_6.jpeg" />
-                    </div>
-                <div id="_j_photo_186746296" data-seq="186746330" data-pid="186746296" class="add_pic _j_anchorcnt _j_seqitem"  style="width:680px">
-            <img class="_j_lazyload" style="height:485px;width:680px;background:#FCF2DC" src="/travel/images/3/3_7.jpeg" />
-                    </div>
-                <div id="_j_photo_186746306" data-seq="186746340" data-pid="186746306" class="add_pic _j_anchorcnt _j_seqitem"  style="width:680px">
-            <img class="_j_lazyload" style="height:485px;width:680px;background:#FCF2DC" src="/travel/images/3/3_8.jpeg" />
-                    </div>
-                <div id="_j_photo_186746286" data-seq="186746320" data-pid="186746286" class="add_pic _j_anchorcnt _j_seqitem"  style="width:680px">
-            <img class="_j_lazyload" style="height:485px;width:680px;background:#FCF2DC" src="/travel/images/3/3_9.jpeg" />
-                    </div>
-                <div id="_j_photo_186746287" data-seq="186746321" data-pid="186746287" class="add_pic _j_anchorcnt _j_seqitem"  style="width:680px">
-            <img class="_j_lazyload" style="height:485px;width:680px;background:#FCF2DC" src="/travel/images/3/3_10.jpeg" />
-                    </div>
-                <div id="_j_photo_186746308" data-seq="186746342" data-pid="186746308" class="add_pic _j_anchorcnt _j_seqitem"  style="width:680px">
-            <img class="_j_lazyload" style="height:485px;width:680px;background:#FCF2DC" src="/travel/images/3/3_11.jpeg" />
-                    </div>
-                <div id="_j_photo_186746288" data-seq="186746322" data-pid="186746288" class="add_pic _j_anchorcnt _j_seqitem"  style="width:680px">
-            <img class="_j_lazyload" style="height:485px;width:680px;background:#FCF2DC" src="/travel/images/3/3_12.jpeg" />
-                    </div>
-                <div id="_j_photo_186746309" data-seq="186746343" data-pid="186746309" class="add_pic _j_anchorcnt _j_seqitem"  style="width:680px">
-            <img class="_j_lazyload" style="height:485px;width:680px;background:#FCF2DC" src="/travel/images/3/3_13.jpeg" />
-                    </div>
-                <div id="_j_photo_186746289" data-seq="186746323" data-pid="186746289" class="add_pic _j_anchorcnt _j_seqitem"  style="width:680px">
-            <img class="_j_lazyload" style="height:485px;width:680px;background:#FCF2DC" src="/travel/images/3/3_14.jpeg" />
-' WHERE id = 4;
+                <div id="_j_photo_183924249" data-seq="183924261" data-pid="183924249" class="add_pic _j_anchorcnt _j_seqitem"  style="width:680px" data-poiid="9595">
+            <img class="_j_lazyload" style="height:538px;width:680px;background:#FCF2DC" src="/travel/images/4/4_5.jpeg" />
+                                        <span class="pic_tag">
+                    <i class="house"></i>蛤蟆坝
+
+            </span>
+                        </div>
+                <div id="_j_photo_183924245" data-seq="183924257" data-pid="183924245" class="add_pic _j_anchorcnt _j_seqitem"  style="width:680px" data-poiid="17920786">
+            <img class="_j_lazyload" style="height:538px;width:680px;background:#FCF2DC" src="/travel/images/4/4_6.jpeg" />
+                                        <span class="pic_tag">
+                    <i class="house"></i>二八地
+
+            </span>
+                        </div>
+                <div id="_j_photo_183924246" data-seq="183924258" data-pid="183924246" class="add_pic _j_anchorcnt _j_seqitem"  style="width:680px" data-poiid="17920786">
+            <img class="_j_lazyload" style="height:538px;width:680px;background:#FCF2DC" src="/travel/images/4/4_7.jpeg" /></div></div>
+
+' WHERE id = 5;
 UPDATE traveltips SET summary='/travel/images/index_2.jpeg' WHERE id = 2;
 UPDATE traveltips SET summary='/travel/images/index_3.jpeg' WHERE id = 3;
 UPDATE traveltips SET summary='/travel/images/index_4.jpeg' WHERE id = 4;

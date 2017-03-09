@@ -32,7 +32,7 @@
     <script src="${pageContext.request.contextPath}/js/content_list_1.js"></script>
 </head>
 <body style="position: relative;">
-
+<a name="top_top"id="top_top"></a>
 <div id="header">
     <div class="mfw-header">
         <div class="header-wrap clearfix">
@@ -526,9 +526,9 @@
 
 <link href="${pageContext.request.contextPath}/css/content_3.css" rel="stylesheet" type="text/css"/>
 
-<div class="mfw-toolbar" id="_j_mfwtoolbar" style="display: block;">
-    <div class="toolbar-item-top" style="display: none;">
-        <a role="button" class="btn _j_gotop">
+<div class="mfw-toolbar" style="display: block;position: fixed;">
+    <div class="toolbar-item-top" style="display: block;">
+        <a href="#top_top" class="btn _j_gotop">
             <i class="icon_top"></i>
             <em>返回顶部</em>
         </a>

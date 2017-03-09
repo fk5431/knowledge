@@ -41,7 +41,6 @@
 .mfw-focus {
     position:relative;
     z-index:20;
-    margin-bottom:20px;
     *zoom:1;
     clear:both
 }

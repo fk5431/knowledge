@@ -24,7 +24,7 @@
     <script src="${pageContext.request.contextPath}/js/index_4.js"></script>
 </head>
 <body style="position: relative;">
-
+<a name="top_top"id="top_top"></a>
 <div id="header">
     <div class="mfw-header">
         <div class="header-wrap clearfix">
@@ -34,23 +34,23 @@
                 <li class="head-nav-index head-nav-active" id="head_1"><a
                         href="${pageContext.request.contextPath}/index">首页</a>
                 </li>
-                <li class="head-nav-place" id="head_2"><a href="http://www.mafengwo.cn/mdd/"
+                <li class="head-nav-place" id="head_2"><a href="${pageContext.request.contextPath}/index"
                                                                           title="目的地">目的地</a>
                 </li>
                 <li class="head-nav-gonglve" id="head_3"><a href="${pageContext.request.contextPath}/content_list"
                                                                                 title="旅游攻略">旅游攻略</a>
                 </li>
                 <li class="head-nav-place" id="_j_nav_sales" >
-                    <a href="http://www.mafengwo.cn/sales/"
-                        data-sales-nav="自由行商城">
-                        <span>自由行商城<%--<i class="icon-caret-down"></i>--%></span>
+                    <a href="${pageContext.request.contextPath}/index"
+                        data-sales-nav="穷游商城">
+                        <span>穷游商城<%--<i class="icon-caret-down"></i>--%></span>
                     </a>
                 </li>
-                <li class="head-nav-place" id="head_4"><a href="http://www.mafengwo.cn/hotel/"
+                <li class="head-nav-place" id="head_4"><a href="${pageContext.request.contextPath}/index"
                                                                             title="论坛">论坛</a>
                 </li>
                 <li class="head-nav-place" id="_j_nav_community">
-                    <a href="" title="留言薄">留言薄</a>
+                    <a href="${pageContext.request.contextPath}/index" title="留言薄">留言薄</a>
                 </li>
 
             </ul>
@@ -407,9 +407,9 @@
 
 <link href="${pageContext.request.contextPath}/css/index_3.css" rel="stylesheet" type="text/css">
 
-<div class="mfw-toolbar " id="_j_mfwtoolbar" style="display: block;">
-    <div class="toolbar-item-top" style="display: none;">
-        <a role="button" class="btn _j_gotop">
+<div class="mfw-toolbar" id="top"  style="display: block;position: fixed;">
+    <div class="toolbar-item-top" style="display: block;">
+        <a href="#top_top" class="btn _j_gotop">
             <i class="icon_top"></i>
             <em>返回顶部</em>
         </a>
