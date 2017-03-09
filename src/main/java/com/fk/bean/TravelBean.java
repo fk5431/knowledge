@@ -1,5 +1,6 @@
 package com.fk.bean;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
@@ -41,8 +42,9 @@ public class TravelBean {
         this.id = id;
     }
 
-    public Date getTime() {
-        return time;
+    public String getTime() {
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy/MM/dd");
+        return simpleDateFormat.format(time);
     }
 
     public void setTime(Date time) {

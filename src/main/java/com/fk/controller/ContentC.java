@@ -51,4 +51,15 @@ public class ContentC {
         return "context";
     }
 
+    @RequestMapping("count_context")
+    public String addCount(HttpServletRequest request, Map<String, Object> map){
+        String id = request.getParameter("id");
+        if(id!=null) {
+            TravelBean travelBean = travelService.selectByPrimaryKey(Integer.parseInt(id));
+            travelBean.setCount(travelBean.getCount() + CommonConst.ONE_INT);
+            travelService.updateByPrimaryKey(travelBean);
+        }
+        return article(request, map);
+    }
+
 }
