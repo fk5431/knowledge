@@ -221,6 +221,7 @@
         </div>
     </div>
     <div class="col-side">
+    <div style="position: fixed;">
         <div class="bar_share clearfix">
             <div class="bs_share">
                 <a class="bs_btn" href="#">
@@ -236,13 +237,14 @@
                     <a title="分享到微信" rel="nofollow" role="button" class="weixin" data-japp="weixin_dialog_share" data-jappfedata="" data-wx_qr="http://www.mafengwo.cn/qrcode.php?text=http%3A%2F%2Fwww.mafengwo.cn%2Fweixin%2Farticle-567.html&size=150&eclevel=H&logo=&__stk__=070c07fd7cc4da080626f179b860bfa5_37363e8ffa4895701f34b9e0a4a54590"></a>
                 </div>
             </div>
-            <div class="bs_collect" data-id="567">
-                <a class="bs_btn" href="#">
-                    <i></i><span>136</span><strong>喜欢</strong>
+            <div class="bs_collect" style="position: fixed;">
+                <a class="bs_btn" href="${pageContext.request.contextPath}/count_context?id=${travel.id}">
+                    <i></i><span>${travel.count}</span><strong>喜欢</strong>
                 </a>
             </div>
         </div>
         <div class="art-code"><img src="http://images.mafengwo.net/images/qrcode-weixin.gif"></div>
+    </div>
     </div>
 </div>
 

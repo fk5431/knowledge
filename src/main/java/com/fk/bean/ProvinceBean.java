@@ -7,6 +7,8 @@ public class ProvinceBean {
 
     private String province;
 
+    private Integer count;
+
     public Integer getId() {
         return id;
     }
@@ -29,5 +31,13 @@ public class ProvinceBean {
 
     public void setProvince(String province) {
         this.province = province == null ? null : province.trim();
+    }
+
+    public Integer getCount() {
+        return count;
+    }
+
+    public void setCount(Integer count) {
+        this.count = count;
     }
 }

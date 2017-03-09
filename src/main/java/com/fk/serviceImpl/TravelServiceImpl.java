@@ -7,6 +7,8 @@ import com.fk.util.CommonConst;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 /**
  * Created by fengkai on 28/02/17.
  */
@@ -33,5 +35,13 @@ public class TravelServiceImpl implements ITravelService {
         return travelDao.updateByPrimaryKey(record);
     }
 
+    @Override
+    public int countOverFive() {
+        return travelDao.countOverFive();
+    }
 
+    @Override
+    public List<TravelBean> selectByCountOverFive() {
+        return travelDao.selectByCountOverFive();
+    }
 }

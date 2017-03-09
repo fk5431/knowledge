@@ -28,6 +28,12 @@
   <select id="count" resultType="int">
     select count(*) from traveltips
   </select>
+  <select id="countOverFive" resultType="int">
+    select count(*) from traveltips where count > 5
+  </select>
+  <select id="selectByCountOverFive" resultMap="ResultMapWithBLOBs">
+    select <include refid="Base_Column_List" /> from traveltips where count > 5
+  </select>
   <select id="selectByPrimaryKey" resultMap="ResultMapWithBLOBs" parameterType="java.lang.Integer" >
     select
     <include refid="Base_Column_List" />

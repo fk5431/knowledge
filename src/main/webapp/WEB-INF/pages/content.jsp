@@ -1,5 +1,8 @@
 <%@ page import="java.util.List" %>
 <%@ page import="com.fk.bean.TravelBean" %>
+<%@ page import="com.fk.bean.ProvinceBean" %>
+<%@ page import="com.fk.bean.ContinentBean" %>
+<%@ page import="com.fk.bean.TypeBean" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -86,7 +89,12 @@
             <div class="gl-post">
                 <div data-cs-t="gonglve_feed" class="_j_feed_data" data-feed=[{"fid":"11533","type":"3"},{"fid":"8594","type":"2"},{"fid":"14497","type":"3"},{"fid":"8072","type":"5"},{"fid":"7079","type":"9"},{"fid":"3113","type":"6"},{"fid":"3071","type":"2"},{"fid":"3398","type":"6"},{"fid":"11527","type":"3"},{"fid":"7502","type":"2"}]>
 
-                    <div class="feed-item _j_feed_item">
+                    <%
+                        List<TravelBean> travel = (List) request.getAttribute("travel");
+                        for(int i=0;i<travel.size();i++){
+                    %>
+
+                    <%--<div class="feed-item _j_feed_item">
                         <a href="https://www.mafengwo.cn/localdeals/mdd_topic_1019/?cid=1010616" target="_blank">
                             <div class="bar clearfix">
                                 <span class="stat"><span class="num">1064</span> 穷游客赞<i class="icon-cart"></i></span>
@@ -108,81 +116,77 @@
                             </div>
                         </a>
                     </div>
-                    <div class="hr"></div>
+                    <div class="hr"></div>--%>
 
                     <div class="feed-item _j_feed_item">
-                        <a href="http://www.mafengwo.cn/wenda/detail-6917494.html" target="_blank">
+                        <a href="${pageContext.request.contextPath}/article?id=<%=travel.get(i).getId()%>">
                             <div class="bar clearfix">
-                                <span class="stat"><span class="num">1933</span> 穷游客赞<i class="icon-hand"></i></span>
-                                <span class="type"><i class="icon-wenda"></i>来自 <strong>问答</strong></span>
+                                <span class="stat"><span class="num"><%=travel.get(i).getCount()%></span> 穷游客赞<i class="icon-hand"></i></span>
                             </div>
                             <div class="title">
-                                有哪些美食相关的日本电影或电视剧推荐？
+                                <%=travel.get(i).getTitle()%>
                             </div>
                             <dl class="art clearfix">
                                 <dt>
-                                    <img src="http://n1-s.mafengwo.net/c_lfill,w_220,h_150,q_100/s9/M00/94/ED/wKgBs1eXLLOATbHiAAeiTcmlNf8000.png">
+                                    <img src="<%=travel.get(i).getImage()%>" width="220" height="150">
                                 </dt>
                                 <dd>
                                     <div class="info">
-                                        故事发生在一个新宿红灯区附近的一家只在深夜营业的小餐馆中，这里的菜单只有猪肉味增汤套餐一种，但是老板可以根据客人的要求利用现有食材做出各种料理，午夜12点，报时钟响起，城市的一隅，伴随着剧中好听的背景音乐与旁白，属于一家食堂的时间开始了。
+                                        <%=travel.get(i).getSummary()%>
                                     </div>
-                                    <span class="art-tag">电视剧</span>
-                                    <span class="art-tag">电影</span>
-                                    <span class="art-tag">美食</span>
-                                    <span class="art-tag">日本</span>
-                                    <div class="ext-r"><span class="nums">101677浏览</span></div>
+                                    <%
+                                        String[] ty = travel.get(i).getType().split("\\|");
+                                        for(int j=0;j<ty.length;j++){
+                                    %>
+                                    <span class="art-tag"><%=ty[j]%></span>
+                                    <% } %>
+                                    <div class="ext-r"><span class="nums"><%=travel.get(i).getLookcount()%>浏览</span></div>
                                 </dd>
                             </dl>
                         </a>
                     </div>
                     <div class="hr"></div>
+                    <% } %>
+                    <div class="m-pagination" id="_j_tn_pagination" data-type="0" data-objid="0" align="right">
+                        <span class="count">共${page}页 / ${count}条</span>
+                        <%
+                            Integer pageAll = (Integer)request.getAttribute("page");
+                            Integer pageNow = (Integer)request.getAttribute("pageNow");
+
+                            for(int i=1;i<= pageAll.intValue() - pageNow.intValue() + 1;i++){
+                                if(i == pageNow.intValue()){
+                        %>
+                        <span class="pg-current"><%=i %></span>
+                        <%
+                        }else{
+                        %>
+                        <a class="pi _j_pageitem" href="${pageContext.request.contextPath}/content_list?page=<%=i%>"><%=i %></a>
+                        <%
+                                }
+                            }
+                        %>
+                        <a class="pg-next _j_pageitem" href="${pageContext.request.contextPath}/content_list?page=${pageNow+1}">下一页 &gt;&gt;</a>
+                    </div>
 
                 </div>
             </div>
         </div>
         <div class="sidebar">
-            <div class="side-hd">旅游攻略导航</div>
+            <div class="side-hd">穷游游攻略导航</div>
             <div class="nav-drop">
                 <div class="drop-item">
                     <div class="trigger"><i></i>国内</div>
                     <div class="drop-pop">
                         <div class="inner">
                             <ul>
-                                <li><a href="/gonglve/mdd-sc-0-0-1.html#list" target="_blank">四川(26)</a></li>
-                                <li><a href="/gonglve/mdd-yn-0-0-1.html#list" target="_blank">云南(26)</a></li>
-                                <li><a href="/gonglve/mdd-js-0-0-1.html#list" target="_blank">江苏(23)</a></li>
-                                <li><a href="/gonglve/mdd-zj-0-0-1.html#list" target="_blank">浙江(20)</a></li>
-                                <li><a href="/gonglve/mdd-bj-0-0-1.html#list" target="_blank">北京(19)</a></li>
-                                <li><a href="/gonglve/mdd-gd-0-0-1.html#list" target="_blank">广东(18)</a></li>
-                                <li><a href="/gonglve/mdd-heb-0-0-1.html#list" target="_blank">河北(16)</a></li>
-                                <li><a href="/gonglve/mdd-tw-0-0-1.html#list" target="_blank">台湾(16)</a></li>
-                                <li><a href="/gonglve/mdd-gz-0-0-1.html#list" target="_blank">贵州(13)</a></li>
-                                <li><a href="/gonglve/mdd-nm-0-0-1.html#list" target="_blank">内蒙古(13)</a></li>
-                                <li><a href="/gonglve/mdd-sd-0-0-1.html#list" target="_blank">山东(12)</a></li>
-                                <li><a href="/gonglve/mdd-xz-0-0-1.html#list" target="_blank">西藏(12)</a></li>
-                                <li><a href="/gonglve/mdd-gx-0-0-1.html#list" target="_blank">广西(11)</a></li>
-                                <li><a href="/gonglve/mdd-jx-0-0-1.html#list" target="_blank">江西(11)</a></li>
-                                <li><a href="/gonglve/mdd-qh-0-0-1.html#list" target="_blank">青海(11)</a></li>
-                                <li><a href="/gonglve/mdd-hn-0-0-1.html#list" target="_blank">河南(10)</a></li>
-                                <li><a href="/gonglve/mdd-ah-0-0-1.html#list" target="_blank">安徽(9)</a></li>
-                                <li><a href="/gonglve/mdd-fj-0-0-1.html#list" target="_blank">福建(9)</a></li>
-                                <li><a href="/gonglve/mdd-hainan-0-0-1.html#list" target="_blank">海南(9)</a></li>
-                                <li><a href="/gonglve/mdd-jl-0-0-1.html#list" target="_blank">吉林(9)</a></li>
-                                <li><a href="/gonglve/mdd-xj-0-0-1.html#list" target="_blank">新疆(9)</a></li>
-                                <li><a href="/gonglve/mdd-hlj-0-0-1.html#list" target="_blank">黑龙江(8)</a></li>
-                                <li><a href="/gonglve/mdd-s1x-0-0-1.html#list" target="_blank">山西(8)</a></li>
-                                <li><a href="/gonglve/mdd-s3x-0-0-1.html#list" target="_blank">陕西(8)</a></li>
-                                <li><a href="/gonglve/mdd-hub-0-0-1.html#list" target="_blank">湖北(7)</a></li>
-                                <li><a href="/gonglve/mdd-hunan-0-0-1.html#list" target="_blank">湖南(7)</a></li>
-                                <li><a href="/gonglve/mdd-gs-0-0-1.html#list" target="_blank">甘肃(6)</a></li>
-                                <li><a href="/gonglve/mdd-ln-0-0-1.html#list" target="_blank">辽宁(6)</a></li>
-                                <li><a href="/gonglve/mdd-mc-0-0-1.html#list" target="_blank">澳门(3)</a></li>
-                                <li><a href="/gonglve/mdd-sh-0-0-1.html#list" target="_blank">上海(3)</a></li>
-                                <li><a href="/gonglve/mdd-hk-0-0-1.html#list" target="_blank">香港(3)</a></li>
-                                <li><a href="/gonglve/mdd-cq-0-0-1.html#list" target="_blank">重庆(3)</a></li>
-                                <li><a href="/gonglve/mdd-nx-0-0-1.html#list" target="_blank">宁夏(2)</a></li>
-                                <li><a href="/gonglve/mdd-tj-0-0-1.html#list" target="_blank">天津(2)</a></li>
+                                <%
+                                    List<ProvinceBean> list = (List) request.getAttribute("province");
+                                    List<ContinentBean> list1 = (List) request.getAttribute("continent");
+                                    List<TypeBean> type = (List) request.getAttribute("type");
+                                    for (int i = 0; i <list.size(); i++) {
+                                %>
+                                <li><a href="/search"><%=list.get(i).getProvince()%>(<%=list.get(i).getCount()%>)</a></li>
+                                <% }%>
                             </ul>
                         </div>
                     </div>
@@ -192,16 +196,12 @@
                     <div class="drop-pop">
                         <div class="inner">
                             <ul>
-                                <li><a href="/gonglve/mdd-oz-0-0-1.html#list" target="_blank">欧洲(101)</a></li>
-                                <li><a href="/gonglve/mdd-dny-0-0-1.html#list" target="_blank">东南亚(68)</a></li>
-                                <li><a href="/gonglve/mdd-bmz-0-0-1.html#list" target="_blank">北美(37)</a></li>
-                                <li><a href="/gonglve/mdd-dy-0-0-1.html#list" target="_blank">东亚(25)</a></li>
-                                <li><a href="/gonglve/mdd-dyz-0-0-1.html#list" target="_blank">大洋洲(23)</a></li>
-                                <li><a href="/gonglve/mdd-ny-0-0-1.html#list" target="_blank">南亚(22)</a></li>
-                                <li><a href="/gonglve/mdd-fz-0-0-1.html#list" target="_blank">非洲(17)</a></li>
-                                <li><a href="/gonglve/mdd-xy-0-0-1.html#list" target="_blank">西亚(7)</a></li>
-                                <li><a href="/gonglve/mdd-nmz-0-0-1.html#list" target="_blank">南美(3)</a></li>
-                                <li><a href="/gonglve/mdd-njz-0-0-1.html#list" target="_blank">南极洲(1)</a></li>
+                                <%
+                                    for (int i = 0; i <list1.size(); i++) {
+                                %>
+                                <li><a href="/search"><%=list1.get(i).getContinent()%>(<%=list1.get(i).getCount()%>)</a></li>
+
+                                <% } %>
                             </ul>
                         </div>
                     </div>
@@ -211,25 +211,11 @@
                     <div class="drop-pop">
                         <div class="inner">
                             <ul>
-                                <li><a href="/gonglve/zt-1049-0-0-0.html#list"  target="_blank">休闲(22)</a></li>
-                                <li><a href="/gonglve/zt-1037-0-0-0.html#list"  target="_blank">户外(18)</a></li>
-                                <li><a href="/gonglve/zt-1022-0-0-0.html#list"  target="_blank">文化(17)</a></li>
-                                <li><a href="/gonglve/zt-1051-1-0-0.html#list"  target="_blank">数据报告(16)</a></li>
-                                <li><a href="/gonglve/zt-1006-0-0-0.html#list"  target="_blank">美食(13)</a></li>
-                                <li><a href="/gonglve/zt-1027-0-0-0.html#list"  target="_blank">购物(12)</a></li>
-                                <li><a href="/gonglve/zt-1046-0-0-0.html#list"  target="_blank">特别策划(11)</a></li>
-                                <li><a href="/gonglve/zt-1044-0-0-0.html#list"  target="_blank">节庆(10)</a></li>
-                                <li><a href="/gonglve/zt-1017-0-0-0.html#list"  target="_blank">自驾(9)</a></li>
-                                <li><a href="/gonglve/zt-1023-0-0-0.html#list"  target="_blank">必备(9)</a></li>
-                                <li><a href="/gonglve/zt-1026-0-0-0.html#list"  target="_blank">观赏(9)</a></li>
-                                <li><a href="/gonglve/zt-1014-0-0-0.html#list"  target="_blank">周边(8)</a></li>
-                                <li><a href="/gonglve/zt-1016-0-0-0.html#list"  target="_blank">摄影(7)</a></li>
-                                <li><a href="/gonglve/zt-1050-0-0-0.html#list"  target="_blank">旅行主义(7)</a></li>
-                                <li><a href="/gonglve/zt-1047-0-0-0.html#list"  target="_blank">建筑(5)</a></li>
-                                <li><a href="/gonglve/zt-1033-0-0-0.html#list"  target="_blank">家庭(4)</a></li>
-                                <li><a href="/gonglve/zt-1045-0-0-0.html#list"  target="_blank">星旅行(3)</a></li>
-                                <li><a href="/gonglve/zt-1003-0-0-0.html#list"  target="_blank">滑雪(1)</a></li>
-                                <li><a href="/gonglve/zt-1028-0-0-0.html#list"  target="_blank">登山(1)</a></li>
+                                <%
+                                    for (int i = 0; i <type.size(); i++) {
+                                %>
+                                <li><a href="/search"><%=type.get(i).getType()%>(<%=type.get(i).getCount()%>)</a></li>
+                               <%}%>
                             </ul>
                         </div>
                     </div>

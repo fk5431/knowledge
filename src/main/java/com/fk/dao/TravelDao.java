@@ -2,6 +2,8 @@ package com.fk.dao;
 
 import com.fk.bean.TravelBean;
 
+import java.util.List;
+
 public interface TravelDao {
     int deleteByPrimaryKey(Integer id);
 
@@ -17,5 +19,9 @@ public interface TravelDao {
 
 
     int count();
+    int countOverFive();
+
+
+    List<TravelBean> selectByCountOverFive();
 
 }

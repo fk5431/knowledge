@@ -73,6 +73,7 @@
 
 
 <div class="mfw-focus" id="_j_mfw_focus">
+<div class="mfw-focus" id="_j_mfw_focus">
     <div class="show-slider" id="_j_top_pic_container" style="height: 586px;">
         <ul class="show-image">
             <%
@@ -406,7 +407,7 @@
 
 <link href="${pageContext.request.contextPath}/css/index_3.css" rel="stylesheet" type="text/css">
 
-<div class="mfw-toolbar" id="_j_mfwtoolbar" style="display: block;">
+<div class="mfw-toolbar " id="_j_mfwtoolbar" style="display: block;">
     <div class="toolbar-item-top" style="display: none;">
         <a role="button" class="btn _j_gotop">
             <i class="icon_top"></i>

@@ -1,7 +1,9 @@
 package com.fk.bean;
 
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 /**
  * Created by fengkai on 28/02/17.
@@ -82,6 +84,7 @@ public class TravelBean {
     public void setTitle(String title) {
         this.title = title == null ? null : title.trim();
     }
+
 
     public String getType() {
         return type;

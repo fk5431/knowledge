@@ -53,7 +53,7 @@ public class LoginC {
         map.put("list", list);
         //热门游记
         List<TravelBean> travelList = new ArrayList<>();
-        int count = travelService.count();
+        int count = travelService.countOverFive();
         int page = 1;
         if(count % SIZE == 0)
             page = count / SIZE;
@@ -73,17 +73,21 @@ public class LoginC {
             toPage = page;
         }
         map.put("pageNow", toPage);
-        for(int i=1;i<=SIZE ;i++){
-            TravelBean travelBean = travelService.selectByPrimaryKey((toPage - 1) * SIZE + i);
-            if(travelBean == null){
-
-            }else {
-                travelList.add(travelBean);
-            }
+//        for(int i=1;i<=SIZE ;i++){
+//            TravelBean travelBean = travelService.selectByPrimaryKey((toPage - 1) * SIZE + i);
+//            if(travelBean == null){
+//
+//            }else {
+//                if(travelBean.getCount() >= 5)
+//                travelList.add(travelBean);
+//            }
+//        }
+        travelList = travelService.selectByCountOverFive();
+        if(travelList.size() > SIZE - CommonConst.ONE_INT) {
+            travelList = travelList.subList(0, SIZE - 1);
+        }else{
         }
         map.put("travelList", travelList);
-
-
 
         return "index";
     }
