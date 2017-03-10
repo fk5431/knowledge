@@ -11,21 +11,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="11669da5-9530-45d4-b1a5-63fcb18bf569" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/sql/travel.sql" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/css/shop/shop_3.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/css/shop/shop_4.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/js/shop/shop_2.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/js/shop/shop_3.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/js/shop/shop_4.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/images/orders/1/1_1.jpeg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/fk/bean/OrdersBean.java" afterPath="$PROJECT_DIR$/src/main/java/com/fk/bean/OrdersBean.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/fk/controller/ShopC.java" afterPath="$PROJECT_DIR$/src/main/java/com/fk/controller/ShopC.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/fk/service/IOrdersService.java" afterPath="$PROJECT_DIR$/src/main/java/com/fk/service/IOrdersService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/fk/serviceImpl/OrdersServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/fk/serviceImpl/OrdersServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/fk/sql/orders.sql" afterPath="$PROJECT_DIR$/src/main/java/com/fk/sql/orders.sql" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mapping/OrdersMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapping/OrdersMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/index.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/index.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/shop.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/shop.jsp" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -56,7 +43,7 @@
       <file leaf-file-name="shop.jsp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/shop.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
+            <state relative-caret-position="504">
               <caret line="28" column="6" lean-forward="true" selection-start-line="28" selection-start-column="6" selection-end-line="28" selection-end-column="6" />
               <folding>
                 <element signature="n#style#0;n#span#1;n#div#0;n#div#5;n#div#1;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -1229,7 +1216,7 @@
       <workItem from="1489031152168" duration="19316000" />
       <workItem from="1489053831899" duration="162000" />
       <workItem from="1489108049314" duration="382000" />
-      <workItem from="1489108453456" duration="22958000" />
+      <workItem from="1489108453456" duration="23789000" />
     </task>
     <task id="LOCAL-00001" summary="ssm  success">
       <created>1486712078887</created>
@@ -1420,11 +1407,18 @@
       <option name="project" value="LOCAL" />
       <updated>1489131953837</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="完善">
+      <created>1489137985974</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1489137985974</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="259875000" />
+    <option name="totallyTimeSpent" value="260706000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1855" height="1056" extended-state="6" />
@@ -2034,7 +2028,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/shop.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
+        <state relative-caret-position="504">
           <caret line="28" column="6" lean-forward="true" selection-start-line="28" selection-start-column="6" selection-end-line="28" selection-end-column="6" />
           <folding>
             <element signature="n#style#0;n#span#1;n#div#0;n#div#5;n#div#1;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
