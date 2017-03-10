@@ -15,6 +15,12 @@ public class OrdersBean {
 
     private String title;
 
+    private Integer sellcount;
+
+    private Integer price;
+
+    private String image;
+
     private String cost;
 
     public Integer getId() {
@@ -71,6 +77,30 @@ public class OrdersBean {
 
     public void setTitle(String title) {
         this.title = title == null ? null : title.trim();
+    }
+
+    public Integer getSellcount() {
+        return sellcount;
+    }
+
+    public void setSellcount(Integer sellcount) {
+        this.sellcount = sellcount;
+    }
+
+    public Integer getPrice() {
+        return price;
+    }
+
+    public void setPrice(Integer price) {
+        this.price = price;
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image == null ? null : image.trim();
     }
 
     public String getCost() {

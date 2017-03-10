@@ -41,7 +41,7 @@
                                                                                 title="旅游攻略">旅游攻略</a>
                 </li>
                 <li class="head-nav-place" id="_j_nav_sales" >
-                    <a href="${pageContext.request.contextPath}/index"
+                    <a href="${pageContext.request.contextPath}/shop"
                         data-sales-nav="穷游商城">
                         <span>穷游商城<%--<i class="icon-caret-down"></i>--%></span>
                     </a>

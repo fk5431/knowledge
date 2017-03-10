@@ -8,4 +8,5 @@ import com.fk.bean.RecordBean;
  */
 public interface IOrdersService {
     OrdersBean selectByPrimaryKey(Integer id);
+    int updateByPrimaryKey(OrdersBean ordersBean);
 }

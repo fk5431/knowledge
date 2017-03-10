@@ -3,6 +3,7 @@ package com.fk.serviceImpl;
 import com.fk.bean.OrdersBean;
 import com.fk.dao.OrdersDao;
 import com.fk.service.IOrdersService;
+import com.sun.org.apache.xpath.internal.operations.Or;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -18,5 +19,10 @@ public class OrdersServiceImpl implements IOrdersService {
     @Override
     public OrdersBean selectByPrimaryKey(Integer id) {
         return ordersDao.selectByPrimaryKey(id);
+    }
+
+    @Override
+    public int updateByPrimaryKey(OrdersBean ordersBean) {
+        return ordersDao.updateByPrimaryKey(ordersBean);
     }
 }

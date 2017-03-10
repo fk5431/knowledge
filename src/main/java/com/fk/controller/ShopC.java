@@ -69,6 +69,17 @@ public class ShopC {
         return "shop";
     }
 
+    @RequestMapping("count_shop")
+    public String addCount(HttpServletRequest request, Map<String, Object> map){
+        String id = request.getParameter("id");
+        if(id!=null) {
+            OrdersBean ordersBean = ordersService.selectByPrimaryKey(Integer.parseInt(id));
+            ordersBean.setCount(ordersBean.getCount() + CommonConst.ONE_INT);
+            ordersService.updateByPrimaryKey(ordersBean);
+        }
+        return context_list(request, map);
+    }
+
     private List<HotelBean> getHotels(String hotel) {
         List<HotelBean> list = new ArrayList<>();
         String[] strs = hotel.split(CommonConst.SPLITOR);

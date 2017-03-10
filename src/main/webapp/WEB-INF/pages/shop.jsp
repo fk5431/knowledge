@@ -1,7 +1,8 @@
 <%@ page import="java.util.List" %>
 <%@ page import="com.fk.bean.RecordBean" %>
 <%@ page import="com.fk.bean.HotelBean" %>
-<%@ page import="com.fk.bean.LineBean" %><%--
+<%@ page import="com.fk.bean.LineBean" %>
+<%@ page import="com.fk.bean.OrdersBean" %><%--
   Created by IntelliJ IDEA.
   User: fengkai
   Date: 10/03/17
@@ -12,39 +13,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <title>${order.title}</title>
 
-    <meta name="keywords" content="自由行,自助游">
-    <meta name="description" content="">
-    <link rel="canonical" href="http://www.mafengwo.cn/sales/2128888.html"/>
+    <link href="${pageContext.request.contextPath}/css/shop/shop_3.css" rel="stylesheet" type="text/css"/>
 
-    <script type="text/javascript">
-        window.Env = {"salesType":6,"salesId":2128888,"bIsShowConnectWindow":false,"WWW_HOST":"www.mafengwo.cn","IMG_HOST":"images.mafengwo.net","P_HOST":"passport.mafengwo.cn","P_HTTP":"https:\/\/passport.mafengwo.cn","UID":0,"CSTK":"009b7e9451b0a94ffecfe0f4e4ffefd6_c0f69c3d0bb7e4175fc57cf6ed292645","GOOGLE_MAP_KEY":"AIzaSyD-Su0x_rPy1xehlMBcMyTqWkU49Bk53nQ"};
-    </script>
-
-    <link href="http://css.mafengwo.net/css/cv/css+base:css+jquery.suggest:css+plugins:css+plugins+jquery.jgrowl:css+other+popup:css+mfw-header.2015^YlVS^1488858288.css" rel="stylesheet" type="text/css"/>
-
-
-
-    <script language="javascript" src="http://js.mafengwo.net/js/cv/js+jquery-1.8.1.min:js+global+json2:js+M+Module:js+M+M:js+M+Log:js+m.statistics^ZFw^1488884604.js" type="text/javascript"></script>
+    <script language="javascript" src="${pageContext.request.contextPath}/js/shop/shop_2.js" type="text/javascript"></script>
     <script type="text/javascript">
         var __mfw_uid = parseInt('0');
     </script>
-    <script language="javascript" src="http://js.mafengwo.net/js/cv/js+common+jquery.plugins:js+common+widgets:js+mfw.storage^ZlI^1461130129.js" type="text/javascript"></script>
-    <link href="http://css.mafengwo.net/css/cv/css+sales+sales-detail-v4:css+mfweditor+mfweditor^Z1w^1481888689.css" rel="stylesheet" type="text/css"/>
-    <script language="javascript" src="http://js.mafengwo.net/js/cv/js+sales+lib+decimal.min:js+sales+lib+underscore-1.8.3.min:js+sales+lib+moment-2.10.6.min:js+mfweditor+jquery.autoload:js+mfweditor+jquery.mfweditor:js+mfweditor+plugins+mfweditor.autoload:js+hb+hb:js+hb+common:js+hb+Request:js+jquery.mousewheel.min:js+customize+verification:js+sales+stock-v2:js+google2amap:js+connect_share:js+yiwofeng+common:js+sales+page_event_statistics^YFJW^1487832867.js" type="text/javascript"></script>
+    <script language="javascript" src="${pageContext.request.contextPath}/js/shop/shop_3.js" type="text/javascript"></script>
+    <link href="${pageContext.request.contextPath}/css/shop/shop_4.css" rel="stylesheet" type="text/css"/>
+    <script language="javascript" src="${pageContext.request.contextPath}/js/shop/shop_4.js" type="text/javascript"></script>
 
 </head>
 <body>
 
 
-
-
 <div id="header">
     <div class="mfw-header">
         <div class="header-wrap clearfix">
-            <div class="head-logo"><a class="mfw-logo" title="蚂蜂窝自由行" href="${pageContext.request.contextPath}"></a>
+            <div class="head-logo"><a class="mfw-logo" title="大学生穷游网" href="${pageContext.request.contextPath}"></a>
             </div>
             <ul class="head-nav" data-cs-t="headnav" id="_j_head_nav">
                 <li class="head-nav-index head-nav-active" id="head_1"><a href="${pageContext.request.contextPath}/index">首页</a>
@@ -91,91 +79,15 @@
 
 
 <div class="container">
+    <br>
+    <br>
     <div class="wrapper">
-
-
-        <div class="crumb">
-            <!-- 面包屑开始 -->
-            <div class="item">
-
-                <a href="/sales/" target="_blank" class="crumb-index">自由行首页</a>
-                <em>&gt;</em>
-            </div>
-            <div class="item">
-                <div class="drop" data-crumb="type">
-                        <span class="hd">
-                            <a data-sk="type" data-sv="6"
-                               data-navk="type" data-navv="6"
-                               href="javascript:;">半自由行<i></i>
-                            </a>
-                        </span>
-                    <div class="bd">
-                        <i class="arrow"><b></b></i>
-                        <ul class="clearfix">
-                            <li><a data-navk="type" data-navv="1" target="_blank" href="/sales/0-0-0-1.html">机票</a></li>
-                            <li><a data-navk="type" data-navv="3" target="_blank" href="/sales/0-0-0-3.html">机+酒</a></li>
-                            <li><a data-navk="type" data-navv="5" target="_blank" href="/sales/0-0-0-5.html">邮轮</a></li>
-                            <li><a data-navk="type" data-navv="6" target="_blank" href="/sales/0-0-0-6.html">半自由行</a></li>
-                            <li><a data-navk="type" data-navv="28" target="_blank" href="/sales/0-0-0-28.html">定制</a></li>
-                            <li><a data-navk="type" data-navv="19" target="_blank" href="/sales/0-0-0-19.html">保险</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <em>&gt;</em>
-            </div>
-            <div class="item">
-                <div class="drop" data-crumb="go_time">
-                        <span class="hd">
-                            <a data-sk="date" data-sv="all"
-                               data-navk="date" data-navv="all"
-                               href="javascript:;">全部出发时间<i></i></a>
-                        </span>
-                    <div class="bd">
-                        <i class="arrow"><b></b></i>
-                        <ul class="clearfix">
-                            <li><a data-navk="date" data-navv="all" href="/sales/0-0-0-0.html" target="_blank">全部</a></li>
-                            <li><a data-navk="date" data-navv="201703" href="/sales/201703-0-0-0.html" target="_blank">三月</a></li>
-                            <li><a data-navk="date" data-navv="201704" href="/sales/201704-0-0-0.html" target="_blank">四月</a></li>
-                            <li><a data-navk="date" data-navv="201705" href="/sales/201705-0-0-0.html" target="_blank">五月</a></li>
-                            <li><a data-navk="date" data-navv="201706" href="/sales/201706-0-0-0.html" target="_blank">六月</a></li>
-                            <li><a data-navk="date" data-navv="201707" href="/sales/201707-0-0-0.html" target="_blank">七月</a></li>
-                            <li><a data-navk="date" data-navv="201708" href="/sales/201708-0-0-0.html" target="_blank">八月</a></li>
-                            <li><a data-navk="date" data-navv="201709" href="/sales/201709-0-0-0.html" target="_blank">九月</a></li>
-                            <li><a data-navk="date" data-navv="201710" href="/sales/201710-0-0-0.html" target="_blank">十月</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <em>&gt;</em>
-            </div>
-            <a href="/sales/0-0-M10189-0-0-0-0-0.html">香港</a>
-            <!-- 面包屑结束 -->
-
-        </div>
         <div class="sales-intro clearfix">
             <div class="intro-l">
                 <div class="sales-photo">
                     <ul data-type="salesPhoto">
-                        <li><img src="http://b4-q.mafengwo.net/s9/M00/27/92/wKgBs1hjjoaAR80lAArofNk5LTs33.jpeg?imageMogr2%2Fthumbnail%2F%21440x260r%2Fgravity%2FCenter%2Fcrop%2F%21440x260%2Fquality%2F100"></li>
-                        <li><img src="http://c2-q.mafengwo.net/s9/M00/F8/DE/wKgBs1hTi2GAfedfAAqHY7jdN_g14.jpeg?imageMogr2%2Fthumbnail%2F%21440x260r%2Fgravity%2FCenter%2Fcrop%2F%21440x260%2Fquality%2F100"></li>
-                        <li><img src="http://a3-q.mafengwo.net/s9/M00/F8/E4/wKgBs1hTi22AaOqvAArxpshBv7k02.jpeg?imageMogr2%2Fthumbnail%2F%21440x260r%2Fgravity%2FCenter%2Fcrop%2F%21440x260%2Fquality%2F100"></li>
-                        <li><img src="http://a2-q.mafengwo.net/s9/M00/F8/E8/wKgBs1hTi3KAKoT5AAqqtZz5WNc54.jpeg?imageMogr2%2Fthumbnail%2F%21440x260r%2Fgravity%2FCenter%2Fcrop%2F%21440x260%2Fquality%2F100"></li>
-                        <li><img src="http://b4-q.mafengwo.net/s9/M00/27/81/wKgBs1hjjlqADtquAAs4YHKPjKI93.jpeg?imageMogr2%2Fthumbnail%2F%21440x260r%2Fgravity%2FCenter%2Fcrop%2F%21440x260%2Fquality%2F100"></li>
-                        <li><img src="http://a3-q.mafengwo.net/s9/M00/27/83/wKgBs1hjjmGAVvV6AAqQngD9LHI66.jpeg?imageMogr2%2Fthumbnail%2F%21440x260r%2Fgravity%2FCenter%2Fcrop%2F%21440x260%2Fquality%2F100"></li>
-                        <li><img src="http://n3-s.mafengwo.net/c_lfill,w_440,h_260,q_100/s9/M00/27/85/wKgBs1hjjmeADr2oAAtyUtvmQ0k65.jpeg"></li>
+                        <li><img src="${order.image}"></li>
                     </ul>
-                    <span class="btn-prev"><i></i></span>
-                    <span class="btn-next"><i></i></span>
-                    <div class="dot">
-                        <span class="on"></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-                    <span class="sales-id">ID:2128888</span>
-                    <!--APP 下单减图片 -->
                 </div>
 
                 <div id="calendar_wrap">
@@ -184,72 +96,51 @@
                 <div class="l-ft clearfix">
 
                     <span class="tuan">· 如需预订更多人数请咨询客服</span>
-                    <a class="btn-collect " href="javascript:void(0);">
+                    <a class="btn-collect " href="${pageContext.request.contextPath}/count_shop?id=${order.id}">
                         <i></i>收藏
-                        <span class="num">156</span>
+                        <span class="num">${order.count}</span>
                     </a>
                     <div class="share">
                         <a class="btn-share" href="javascript:void(0)"><i></i>分享</a>
-                        <div class="s_popup share-icon hide" style="display: none;">
-                            <i class="i-arrow i-arrCenter"></i>
-                            <a class="s-weibo" href="javascript:void(0);" title="分享到新浪微博" rel="nofollow"></a>
-                            <a class="s-qzone" href="javascript:void(0);" title="分享到QQ空间" rel="nofollow"></a>
-                            <a class="s-weixin" href="javascript:void(0);" title="分享到微信"></a>
-                        </div>
                     </div>
                 </div>
             </div>
             <div class="intro-r">
                 <div class="sales-title">
                     <h1>
-                        深圳 香港澳门6天5晚半自由行（四星酒店+海洋公园门票+迪士尼门票+夜游维港）
+                        ${order.title}
                     </h1>
                     <div class="s-label clearfix">
-                        <span>购物天堂</span>
-                        <span>维港夜景</span>
-                        <span>主题乐园</span>
-                        <span>四星酒店</span>
+                        <%
+                            List<RecordBean> record = (List)request.getAttribute("record");
+                            String[] img = (String[]) request.getAttribute("images");
+                            List<HotelBean> hotels = (List)request.getAttribute("hotels");
+                            List<LineBean> lines = (List)request.getAttribute("lines");
+                            OrdersBean ordersBean = (OrdersBean)request.getAttribute("order");
+                            for(int i=0;i<ordersBean.getSubject().split("!=end=!").length;i++){
+                        %>
+                        <span><%=ordersBean.getSubject().split("!=end=!")[i]%></span>
+                        <%}%>
                     </div>
                 </div>
 
-                <a href="https://imfw.cn/l/1677638" target="_blank">
-                    <img src="http://b2-q.mafengwo.net/s10/M00/09/A9/wKgBZ1i-uzeAbI02AABqr8euloA90.jpeg" width="100%" alt>
-                </a>
                 <div class="price-panel clearfix">
                     <ul>
-                        <li class="item-price"><em>￥</em><strong>999</strong> 起/人
+                        <li class="item-price"><em>￥</em><strong>${order.price}</strong> 起/人
                             <span id="priceDesc">
                                 <a href="javascript:void(0);">价格说明</a>
-                                <span id="priceDescMsg">【蜂抢】6天5晚半自由行 2017-03-14</span>
+                                <span id="priceDescMsg">${order.type}</span>
                             </span>
                         </li>
                         <li class="item-discount">
                         <li class="item-sold">
-                            近三月售出 17 份
+                            近三月售出 ${order.sellcount} 份
                         </li>
                         <!---- <li class="item-reviews"><a href="javascript:void(0)">92 条评论</a></li>---->
                     </ul>
                 </div>
                 <div class="info-panel">
 
-                    <div class="info-promo clearfix">
-
-                        <span class="label">优惠信息</span>
-                        <div class="promo-bd">
-                            <span class="t-text">3.13-3.18期间 ，APP下单减20元！</span>
-
-
-
-
-                            <!--扫描二维码  这个要放到 优惠信息的 最后-->
-
-                            <span class="t-text">3.13-3.18期间下单 ，砍价更优惠！</span><br>
-                        </div>
-
-
-
-
-                    </div>
                     <div class="info-tips">
                         <span class="label">预订须知</span>
                         <div class="info-tips-box">
@@ -271,8 +162,7 @@
                                 </dt>
                                 <dd>
                                     <ul class="ui-selProp clearfix">
-                                        <li  class="disabled"data-stock-id="73179623"data-child-type="2"data-level="0"data-name="【蜂抢】6天5晚半自由行"data-role="0"data-mode="1"data-selling-time="1489057200000"data-offline-time="1489067999000"><a href="javascript:void(0);"><span>【蜂抢】6天5晚半自由行</span><i></i></a></li>
-                                        <li data-stock-id="59794071"data-child-type="2"data-level="0"data-name="6天5晚半自由行"data-role="0"><a href="javascript:void(0);"><span>6天5晚半自由行</span><i></i></a></li>
+                                        <li data-stock-id="59794071"data-child-type="2"data-level="0"data-name="6天5晚半自由行"data-role="0"><a href="javascript:void(0);"><span>${order.type}</span><i></i></a></li>
                                     </ul>
                                 </dd>
                             </dl>
@@ -297,112 +187,24 @@
                         </dd>
                     </dl>
                     <!-- 出行日期 end-->
-                    <dl class="clearfix">
-                        <dt class="label" >数量选择</dt>
-                        <dd>
-                            <ul class="ui-numProp clearfix">
-                                <li class="amount-adult">
-                                    <div class="amount">
-                                        <span class="input"><span data-adult>成人</span> <span class="num">1</span></span>
-                                        <span class="btns">
-                                            <a class="btn-plus" data-action="plus" data-value="adult" href="javascript:void(0);"><i>+</i></a>
-                                            <a class="btn-minus" data-action="minus" data-value="adult" href="javascript:void(0);"><i>-</i></a>
-                                        </span>
-                                    </div>
-                                    <div class="s_popup num-tips hide">
-                                        <i class="i-arrow i-arrCenter"></i>
-                                        <p><span data-adult>成人</span>：<span class="price">0</span>元</p>
-                                    </div>
-                                </li>
-                                <li class="amount-kid" style="display: none">
-                                    <div class="amount">
-                                        <span class="input">儿童 <span class="num">0</span></span>
-                                        <span class="btns">
-                                            <a class="btn-plus" data-action="plus" data-value="kid" href="javascript:void(0);"><i>+</i></a>
-                                            <a class="btn-minus" data-action="minus" data-value="kid" href="javascript:void(0);"><i>-</i></a>
-                                        </span>
-                                    </div>
-                                    <div class="s_popup num-tips hide">
-                                        <i class="i-arrow i-arrCenter"></i>
-                                        <p>儿童：<span class="price">0</span>元</p>
-                                    </div>
-                                </li>
-                                <li class="amount-infant" style="display: none">
-                                    <div class="amount">
-                                        <span class="input">婴儿 <span class="num">0</span></span>
-                                        <span class="btns">
-                                            <a class="btn-plus" data-action="plus" data-value="infant" href="javascript:void(0);"><i>+</i></a>
-                                            <a class="btn-minus" data-action="minus" data-value="infant" href="javascript:void(0);"><i>-</i></a>
-                                        </span>
-                                    </div>
-                                </li>
-                                <li class="amount-room" style="display: none">
-                                    <div class="amount">
-                                        <span class="input">房间 <span class="num">0</span></span>
-                                        <span class="btns">
-                                            <a class="btn-plus" data-action="plus" data-value="room" href="javascript:void(0);"><i>+</i></a>
-                                            <a class="btn-minus" data-action="minus" data-value="room" href="javascript:void(0);"><i>-</i></a>
-                                        </span>
-                                    </div>
-                                    <div class="s_popup num-tips hide">
-                                        <i class="i-arrow i-arrCenter"></i>
-                                        <p>单房差：<span class="price">0</span>元</p>
-                                    </div>
-                                </li>
-                                <li class="stock-remain">
-                                    （剩余 <span>0</span> 件）
-                                </li>
-                            </ul>
-                        </dd>
-                    </dl>
-
                 </div>
                 <div class="action-panel clearfix">
                     <div class="total">
-                        <em id="flag_total_price" class="rmb-flag hide">￥</em><strong id="text_total_price">--</strong>
+                        <em id="flag_total_price" class="rmb-flag hide">￥</em><strong id="text_total_price">${order.price}</strong>
                         <span class="total-price-ext"></span>
                         <span class="price-sg-room" style="display: none">(包含<span class="total-price">0</span>元单房差)</span></div>
                     <div class="on-countdown-hide">
                         <div class="bargain">
-                            <a class="btn btn-disabled" href="javascript:void(0);">即将砍价</a>
-                            <a href="javascript:void(0);" class="i-tips"></a>
-                            <div class="tipspop" style="display: none">
-                                <i class="i-arrow"></i>
-                                <a href="javascript:void(0);" class="close-btn"><i></i></a>
-                                <p class="title">如何砍价：</p>
-                                <div class="con">
-                                    <p>1. 砍价正式开启后 ，点击 ［ 去砍价］ 即可发起砍价</p>
-                                    <p>2. 选择出发时间及人数后，系统生成砍价订单。</p>
-                                    <p>3. 好友砍价的总金额作为优惠项在您支付时直接减去。</p>
-                                    <p>4. 砍价发起后的60分钟内，分享给微信好友请他帮你砍价。</p>
-                                    <p>5. 砍价结束后的60分钟之内请在“我的订单”中完成支付，若砍价订单中的产品在支付前售罄，则相关砍价优惠作废。</p>
-                                    <p>6. 用户因任何原因取消砍价订单，即不再享受砍价优惠。</p>
-                                    <p>7. 砍价优惠可与优惠券同时使用。M码不适用于砍价活动。</p>
-                                </div>
-                            </div>
+                            <a class="btn btn-disabled" href="javascript:void(0);">优惠购买</a>
                         </div>
                         <span class="buy">
-                                                                            <a class="btn" data-booking-btn="1" href="javascript:void(0);">立即购买</a>
-                                                                        </span>
+                            <a class="btn" data-booking-btn="1" href="javascript:void(0);">立即购买</a>
+                        </span>
                     </div>
-                    <span class="not-start on-countdown-show" style="display: none;">距开售:<span class="dd">0</span>天<span class="hh">00</span>时<span class="mm">00</span>分<span class="ss">00</span>秒</span>
                 </div>
                 <div class="s_popup cart-pop" style="display:none;">
                     <i class="i-arrow"></i>
-                    <ul class="cart-list">
 
-
-
-
-
-
-
-
-                        <li class="cart-action clearfix">
-                            <span class="cart-total">总价：<strong>￥0</strong></span>
-                            <a class="btn" href="javascript:void(0);">组合购买</a>
-                        </li>
-                    </ul>
                 </div>
                 <!-- //Stock End -->
                 <div class="safeguard">
@@ -448,10 +250,6 @@
 
                                         <div class="timeline day-timeline">
                                             <%
-                                                List<RecordBean> record = (List)request.getAttribute("record");
-                                                String[] img = (String[]) request.getAttribute("images");
-                                                List<HotelBean> hotels = (List)request.getAttribute("hotels");
-                                                List<LineBean> lines = (List)request.getAttribute("lines");
                                                 for(int i=0;i<lines.size();i++){
                                             %>
                                             <dl class="clearfix">
