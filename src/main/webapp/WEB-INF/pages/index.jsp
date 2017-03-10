@@ -73,7 +73,6 @@
 
 
 <div class="mfw-focus" id="_j_mfw_focus">
-<div class="mfw-focus" id="_j_mfw_focus">
     <div class="show-slider" id="_j_top_pic_container" style="height: 586px;">
         <ul class="show-image">
             <%

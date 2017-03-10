@@ -4914,6 +4914,7 @@ td,th {
 .head-logo .mfw-logo {
     display:block;
     height:39px;
+    background:url(/travel/images/header-sprites3.png) no-repeat;
 }
 .head-nav {
     float:left;
@@ -6024,7 +6025,7 @@ td,th {
 }
 @media(min-resolution:1.25dppx),(-webkit-min-device-pixel-ratio:1.25),(min-device-pixel-ratio:1.25) {
     .head-logo .mfw-logo,.mfw-header .dropdown-user [class|="icon"],.searchtab i,.search-group .icon-search,.search-group .icon-cal,.login-out .weibo-login,.login-out .qq-login,.login-out .weixin-login,.head-search .icon-search {
-        background:url(/travel/images/header-sprites10@2x.png) no-repeat;
+        background:url(/travel/images/header-sprites3.png) no-repeat;
         background-size:200px
     }
     .mss-icon {
