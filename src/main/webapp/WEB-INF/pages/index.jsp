@@ -21,7 +21,7 @@
             type="text/javascript"></script>
 
     <script src="${pageContext.request.contextPath}/js/index_4.js"></script>
-    <script src="${pageContext.request.contextPath}/js/index_4.js"></script>
+    <script src="${pageContext.request.contextPath}/js/index_5.js"></script>
 </head>
 <body style="position: relative;">
 <a name="top_top"id="top_top"></a>

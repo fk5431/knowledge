@@ -7,22 +7,17 @@
     <title>大学生穷游网</title>
     <script type="text/javascript" charset="utf-8"
             src="${pageContext.request.contextPath}/js/index_1.js"></script>
-    <script type="text/javascript" async="" charset="utf-8"
-            src="${pageContext.request.contextPath}/js/index_2.js"></script>
 
     <link href="${pageContext.request.contextPath}/css/index_1.css"
-          rel="stylesheet" type="text/css">
-
-    <link href="${pageContext.request.contextPath}/css/index_2.css"
           rel="stylesheet" type="text/css">
 
     <script language="javascript"
             src="${pageContext.request.contextPath}/js/index_3.js"
             type="text/javascript"></script>
 
-    <script src="${pageContext.request.contextPath}/js/index_4.js"></script>
-    <script src="${pageContext.request.contextPath}/js/index_4.js"></script>
     <link href="${pageContext.request.contextPath}/css/content_1.css"
+          rel="stylesheet" type="text/css">
+    <link href="${pageContext.request.contextPath}/css/context.css"
           rel="stylesheet" type="text/css">
     <link href="${pageContext.request.contextPath}/css/content_2.css"
           rel="stylesheet" type="text/css">
@@ -89,113 +84,7 @@
         <div class="art-content">
             ${travel.context}
 
-            <a href="http://m.mafengwo.cn/nb/public/sharejump.php?type=3&amp;id=14865528&amp;poi_type_id=1" class="poi" target="_blank">
-                <dl>
-                    <dt><img src="http://n4-s.mafengwo.net/c_lfill,w_220,h_150,q_100/s9/M00/81/86/wKgBs1e5geeAIwoHAAEgMK80Lls57.jpeg" width="220" height="150"></dt>
-                    <dd>
-                        <p class="t1">一幸庵</p>
-                        <p class="t2"></p>
-                        <div class="t3"></div>
-                        <div class="t4">
-                            <span>面包甜品</span>
-                            东京
-                        </div>
-                    </dd>
-                </dl>
-                <div class="desc">
-                    <strong>美食介绍</strong>他家的羊羹等在和果子界占有一席之地</div>
-            </a>
-            <a href="http://m.mafengwo.cn/nb/public/sharejump.php?type=3&amp;id=14878603&amp;poi_type_id=1" class="poi" target="_blank">
-                <dl>
-                    <dt><img src="http://a2-q.mafengwo.net/s9/M00/6F/EA/wKgBs1cxk-qADjm2AAUTgSgpUPo59.jpeg?imageMogr2%2Fthumbnail%2F%21220x150r%2Fgravity%2FCenter%2Fcrop%2F%21220x150%2Fquality%2F100" width="220" height="150"></dt>
-                    <dd>
-                        <p class="t1">大角玉屋</p>
-                        <p class="t2"></p>
-                        <div class="t3"></div>
-                        <div class="t4">
-                            <span>面包甜品</span>
-                            东京
-                        </div>
-                    </dd>
-                </dl>
-                <div class="desc">
-                    <strong>美食介绍</strong>人气和果子草莓大福的创始店</div>
-            </a>
-            <a href="http://m.mafengwo.cn/nb/public/sharejump.php?type=3&amp;id=5880250&amp;poi_type_id=1" class="poi" target="_blank">
-                <dl>
-                    <dt><img src="http://b4-q.mafengwo.net/s5/M00/6B/42/wKgB3FGv9q6Adnw7AALpR7n7cJs83.jpeg?imageMogr2%2Fthumbnail%2F%21220x150r%2Fgravity%2FCenter%2Fcrop%2F%21220x150%2Fquality%2F100" width="220" height="150"></dt>
-                    <dd>
-                        <p class="t1">老松(岚山店)</p>
-                        <p class="t2"></p>
-                        <div class="t3">
-                            <strong>31</strong>蜂评/<strong>18</strong>游记提及</div>
-                        <div class="t4">
-                            <span>日本料理</span>
-                            <span>小吃</span>
-                            <span>连锁/加盟</span>
-                            嵯峨野/岚山
-                        </div>
-                        <div class="price">￥48</div>
-                    </dd>
-                </dl>
-                <div class="desc">
-                    <strong>美食介绍</strong>特色京都老牌甜品店</div>
-            </a>
-            <a href="http://m.mafengwo.cn/nb/public/sharejump.php?type=3&amp;id=7346202&amp;poi_type_id=1" class="poi" target="_blank">
-                <dl>
-                    <dt><img src="http://n1-q.mafengwo.net/s6/M00/59/65/wKgB4lMW0KaAFF2TAABUnz6e56o20.jpeg?imageMogr2%2Fthumbnail%2F%21220x150r%2Fgravity%2FCenter%2Fcrop%2F%21220x150%2Fquality%2F100" width="220" height="150"></dt>
-                    <dd>
-                        <p class="t1">甘春堂(东店)</p>
-                        <p class="t2">Kanshundo</p>
-                        <div class="t3">
-                            <strong>1</strong>蜂评/<strong>1</strong>游记提及</div>
-                        <div class="t4">
-                            <span>面包甜品</span>
-                            东山
-                        </div>
-                    </dd>
-                </dl>
-                <div class="desc">
-                    <strong>美食介绍</strong>历史悠久的和果子老店，可以学习亲手制作和果子</div>
-            </a>
-            <a href="http://m.mafengwo.cn/nb/public/sharejump.php?type=3&amp;id=6407130&amp;poi_type_id=1" class="poi" target="_blank">
-                <dl>
-                    <dt><img src="http://c3-q.mafengwo.net/s5/M00/20/B3/wKgB3FF18haAX3HoAA8723L4Fng37.jpeg?imageMogr2%2Fthumbnail%2F%21220x150r%2Fgravity%2FCenter%2Fcrop%2F%21220x150%2Fquality%2F100" width="220" height="150"></dt>
-                    <dd>
-                        <p class="t1">中村藤吉(本店)</p>
-                        <p class="t2"></p>
-                        <div class="t3">
-                            <strong>62</strong>蜂评/<strong>23</strong>游记提及</div>
-                        <div class="t4">
-                            <span>特色饮品</span>
-                            <span>日本料理</span>
-                            <span>连锁/加盟</span>
-                            <span>冰淇淋</span>
-                            宇治
-                        </div>
-                        <div class="price">￥112</div>
-                    </dd>
-                </dl>
-                <div class="desc">
-                    <strong>美食介绍</strong>超人气的抹茶甜品店</div>
-            </a>
-            <a href="http://m.mafengwo.cn/nb/public/sharejump.php?type=3&amp;id=7346041&amp;poi_type_id=1" class="poi" target="_blank">
-                <dl>
-                    <dt><img src="http://a2-q.mafengwo.net/s6/M00/58/7A/wKgB4lMW0CGAHY3NAADWd_SbrMQ32.jpeg?imageMogr2%2Fthumbnail%2F%21220x150r%2Fgravity%2FCenter%2Fcrop%2F%21220x150%2Fquality%2F100" width="220" height="150"></dt>
-                    <dd>
-                        <p class="t1">键善良房本店</p>
-                        <p class="t2">KAGIZEN</p>
-                        <div class="t3">
-                            <strong>1</strong>蜂评</div>
-                        <div class="t4">
-                            <span>面包甜品</span>
 
-                        </div>
-                    </dd>
-                </dl>
-                <div class="desc">
-                    <strong>美食介绍</strong>味蕾与感官的双重体验 ，京都必吃和果子</div>
-            </a>
             <a href="http://m.mafengwo.cn/nb/public/sharejump.php?type=3&amp;id=7896684&amp;poi_type_id=1" class="poi" target="_blank">
                 <dl>
                     <dt><img src="http://b1-q.mafengwo.net/s6/M00/63/6A/wKgB4lMJqHiATh0nAAlRqnWGd5A25.jpeg?imageMogr2%2Fthumbnail%2F%21220x150r%2Fgravity%2FCenter%2Fcrop%2F%21220x150%2Fquality%2F100" width="220" height="150"></dt>
@@ -212,8 +101,7 @@
                     </dd>
                 </dl></a>
 
-            <h5>更多日本美食请戳《日本》攻略&gt;&gt;&gt;</h5>
-            <div id="4" style=""></div>
+
             <h3 class="h2">说出你最爱的和果子</h3>
 
             <p>和果子这么多，那一款最戳中你的心呢？不妨留言说出来，看看有没有与你喜好相同的有缘人吧~</p>
@@ -238,12 +126,12 @@
                 </div>
             </div>
             <div class="bs_collect">
-                <a class="bs_btn" href="${pageContext.request.contextPath}/count_context?id=${travel.id}">
-                    <a href="${pageContext.request.contextPath}/count_context?id=${travel.id}"><i></i></a><span>${travel.count}</span><strong>喜欢</strong>
+                <a class="bs_btn _j_do_fav" href="${pageContext.request.contextPath}/count_context?id=${travel.id}">
+                    <i></i><span>${travel.count}</span><strong>喜欢</strong>
                 </a>
             </div>
         </div>
-        <div class="art-code"><img src="http://images.mafengwo.net/images/qrcode-weixin.gif"></div>
+        <div class="art-code" style="margin-top: 100px;"> <img src="http://images.mafengwo.net/images/qrcode-weixin.gif"></div>
     </div>
     </div>
 </div>
