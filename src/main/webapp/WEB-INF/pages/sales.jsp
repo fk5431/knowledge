@@ -1,4 +1,6 @@
-<%--
+<%@ page import="java.util.List" %>
+<%@ page import="com.fk.bean.PromoReturnBean" %>
+<%@ page import="com.fk.bean.OrdersBean" %><%--
   Created by IntelliJ IDEA.
   User: fengkai
   Date: 13/03/17
@@ -1001,247 +1003,48 @@
     </div>
 
     <div data-mes-g="1" data-mes-t="BJ" id="layout_area">
-        <div class="mod-promo" data-change="mod"
-             data-mes-g="1" data-mes-t="模块每日特价">
-            <div class="mod-hd" data-mes-g="1-0" data-mes-t="顶部区">
-                <a href="/sales/list_more.php?label=%E6%AF%8F%E6%97%A5%E7%89%B9%E4%BB%B7" target="_blank"
-                   data-mes-g="1-0-0" data-mes-t="标题">
-                    <h2 >每日特价</h2>
-                </a>
-                <h2><span>特价好货抢不停！</span></h2>
+        <%
+            List<PromoReturnBean> list = (List) request.getAttribute("promo");
+
+
+            for(int i=0;i<list.size();i++){
+        %>
+            <div class="mod-promo" data-change="mod"
+                 data-mes-g="1" data-mes-t="模块每日特价">
+                <div class="mod-hd" data-mes-g="1-0" data-mes-t="顶部区">
+                    <a>
+                        <h2 ><%=list.get(i).getTitle1()%></h2>
+                    </a>
+                    <h2><span><%=list.get(i).getTitle2()%></span></h2>
+                </div>
+                <div class="mod-bd" data-mes-g="1-1" data-mes-t="产品区">
+                    <ul class="sales-cards clearfix" data-change-step="not-set" id="Js_hotSalesImg">
+                        <%
+                            List<OrdersBean> listorder = list.get(i).getOrders();
+                            for(int j=0;j<listorder.size();j++){
+                        %>
+                        <li class="item" data-change="list">
+                            <a href="${pageContext.request.contextPath}/shop?id=<%=listorder.get(j).getId()%>" target="_blank"
+                               data-mes-g="1-1-0" data-mes-t="位置0"
+                               data-mes-salesid="2032398">
+                                <div class="image">
+                                    <img src="<%=listorder.get(j).getImage()%>" height="134" width="238">
+                                </div>
+                                <div class="caption">
+                                    <h3 title="<%=listorder.get(j).getTitle()%>"><%=listorder.get(j).getTitle()%></h3>
+                                    <span class="price"><b>￥<%=listorder.get(j).getPrice()%></b>起</span>
+                                </div>
+                            </a>
+                        </li>
+                        <%}%>
+                    </ul>
+                </div>
             </div>
-            <div class="mod-bd" data-mes-g="1-1" data-mes-t="产品区">
-                <ul class="sales-cards clearfix" data-change-step="not-set" id="Js_hotSalesImg">
-
-                    <li class="item" data-change="list">
-                        <a href="/sales/2032398.html" target="_blank"
-                           data-mes-g="1-1-0" data-mes-t="位置0"
-                           data-mes-salesid="2032398">
-                            <div class="image">
-                                <img data-original="https://a4-q.mafengwo.net/s9/M00/81/53/wKgBs1hGbK6AXyZiAACRNqNU6_U64.jpeg?imageMogr2%2Fthumbnail%2F%21476x268r%2Fgravity%2FCenter%2Fcrop%2F%21476x268%2Fquality%2F100" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAdwAAAEMBAMAAACcsxrpAAAAElBMVEX88tz8+uz89uz8/vz88uT8+vT1Qw6wAAABb0lEQVR4nO3aUU7CQBRA0crACtwIOroCN0DC/veiUGhLKc380DqPcz5MnPfT61NT0jYNAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8G/knO/OUs77FS5lATnf96bTWcjeY55Iy1OHIbRlt+tNYXMvZbdpeepnEMK5NN2mtd+GXG8b+vf1szvatKFvMXNPTWm4yp/LruPmNoO/1C49cO5gvV154Nw+sg+PnLvJd7/WkXPPd1dNu9zDaBRI39SuNw8PIuem8b1U7NzrreN+YhTGoCmNbpSD5zajzwrRc0efCsLnFo+qJbdgVC25BaNqyS0YVUtuwahacgtG1ZJbMKqW3IJRteQWjKo18xA3BczdzSR9L3cZAHO2M/+Zvxa8joU8fp8o6ps3U8HboO+RXZ9y5o/+7D2PHwaG0T3VnbL2xT3B7qVqm4cLPqx9Xc/zKpvtpZfYKwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAr+wXgrGREXunUOAAAAABJRU5ErkJggg==" height="134" width="238">
-                                <div class="app-minus">
-                                    <span class="mid-line"><i></i>APP下单</span>
-                                    <div>立减<b>200</b>元</div>
-                                </div>
-                            </div>
-                            <div class="caption">
-                                <h3 title="天津直飞芽庄5-6天自由行（赠送北京天津往返大巴车+直飞航班+可选四星/五星酒店+赠送当地接送机）">天津直飞芽庄5-6天自由行（赠送北京天津往返大巴车+直飞航班+可选四星/五星酒店+赠送当地接送机）</h3>
-                                <span class="price"><b>￥2699</b>起</span>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="item" data-change="list">
-                        <a href="/sales/340891.html" target="_blank"
-                           data-mes-g="1-1-1" data-mes-t="位置1"
-                           data-mes-salesid="340891">
-                            <div class="image">
-                                <img data-original="https://b1-q.mafengwo.net/s9/M00/10/11/wKgBs1gzt_6AZp7hAHVTHu3Mqlk08.jpeg?imageMogr2%2Fthumbnail%2F%21476x268r%2Fgravity%2FCenter%2Fcrop%2F%21476x268%2Fquality%2F100" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAdwAAAEMBAMAAACcsxrpAAAAElBMVEX88tz8+uz89uz8/vz88uT8+vT1Qw6wAAABb0lEQVR4nO3aUU7CQBRA0crACtwIOroCN0DC/veiUGhLKc380DqPcz5MnPfT61NT0jYNAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8G/knO/OUs77FS5lATnf96bTWcjeY55Iy1OHIbRlt+tNYXMvZbdpeepnEMK5NN2mtd+GXG8b+vf1szvatKFvMXNPTWm4yp/LruPmNoO/1C49cO5gvV154Nw+sg+PnLvJd7/WkXPPd1dNu9zDaBRI39SuNw8PIuem8b1U7NzrreN+YhTGoCmNbpSD5zajzwrRc0efCsLnFo+qJbdgVC25BaNqyS0YVUtuwahacgtG1ZJbMKqW3IJRteQWjKo18xA3BczdzSR9L3cZAHO2M/+Zvxa8joU8fp8o6ps3U8HboO+RXZ9y5o/+7D2PHwaG0T3VnbL2xT3B7qVqm4cLPqx9Xc/zKpvtpZfYKwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAr+wXgrGREXunUOAAAAABJRU5ErkJggg==" height="134" width="238">
-                            </div>
-                            <div class="caption">
-                                <h3 title="北京直飞柬埔寨暹粒5-6天吴哥窟自由行(全程五星酒店/精选市中心区域/出行便利/多种选择自由定制)">北京直飞柬埔寨暹粒5-6天吴哥窟自由行(全程五星酒店/精选市中心区域/出行便利/多种选择自由定制)</h3>
-                                <span class="price"><b>￥3799</b>起</span>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="item" data-change="list">
-                        <a href="/sales/2069464.html" target="_blank"
-                           data-mes-g="1-1-2" data-mes-t="位置2"
-                           data-mes-salesid="2069464">
-                            <div class="image">
-                                <img data-original="https://a3-q.mafengwo.net/s9/M00/0D/C6/wKgBs1hl-_uAaAoZAAJA8it4upo26.jpeg?imageMogr2%2Fthumbnail%2F%21476x268r%2Fgravity%2FCenter%2Fcrop%2F%21476x268%2Fquality%2F100" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAdwAAAEMBAMAAACcsxrpAAAAElBMVEX88tz8+uz89uz8/vz88uT8+vT1Qw6wAAABb0lEQVR4nO3aUU7CQBRA0crACtwIOroCN0DC/veiUGhLKc380DqPcz5MnPfT61NT0jYNAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8G/knO/OUs77FS5lATnf96bTWcjeY55Iy1OHIbRlt+tNYXMvZbdpeepnEMK5NN2mtd+GXG8b+vf1szvatKFvMXNPTWm4yp/LruPmNoO/1C49cO5gvV154Nw+sg+PnLvJd7/WkXPPd1dNu9zDaBRI39SuNw8PIuem8b1U7NzrreN+YhTGoCmNbpSD5zajzwrRc0efCsLnFo+qJbdgVC25BaNqyS0YVUtuwahacgtG1ZJbMKqW3IJRteQWjKo18xA3BczdzSR9L3cZAHO2M/+Zvxa8joU8fp8o6ps3U8HboO+RXZ9y5o/+7D2PHwaG0T3VnbL2xT3B7qVqm4cLPqx9Xc/zKpvtpZfYKwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAr+wXgrGREXunUOAAAAABJRU5ErkJggg==" height="134" width="238">
-                            </div>
-                            <div class="caption">
-                                <h3 title="【五一】北京直飞马代K岛/库拉玛提岛6-7天自由行（一价全包+马代最大岛屿/最长拖尾沙滩+赠居民岛游/日落巡航+免费浮潜装备）">【五一】北京直飞马代K岛/库拉玛提岛6-7天自由行（一价全包+马代最大岛屿/最长拖尾沙滩+赠居民岛游/日落巡航+免费浮潜装备）</h3>
-                                <span class="price"><b>￥9399</b>起</span>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="item" data-change="list">
-                        <a href="/sales/2149643.html" target="_blank"
-                           data-mes-g="1-1-3" data-mes-t="位置3"
-                           data-mes-salesid="2149643">
-                            <div class="image">
-                                <img data-original="https://b3-q.mafengwo.net/s10/M00/AD/DD/wKgBZ1iv-QWAEc66AABaOAYeMc488.jpeg?imageMogr2%2Fthumbnail%2F%21476x268r%2Fgravity%2FCenter%2Fcrop%2F%21476x268%2Fquality%2F100" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAdwAAAEMBAMAAACcsxrpAAAAElBMVEX88tz8+uz89uz8/vz88uT8+vT1Qw6wAAABb0lEQVR4nO3aUU7CQBRA0crACtwIOroCN0DC/veiUGhLKc380DqPcz5MnPfT61NT0jYNAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8G/knO/OUs77FS5lATnf96bTWcjeY55Iy1OHIbRlt+tNYXMvZbdpeepnEMK5NN2mtd+GXG8b+vf1szvatKFvMXNPTWm4yp/LruPmNoO/1C49cO5gvV154Nw+sg+PnLvJd7/WkXPPd1dNu9zDaBRI39SuNw8PIuem8b1U7NzrreN+YhTGoCmNbpSD5zajzwrRc0efCsLnFo+qJbdgVC25BaNqyS0YVUtuwahacgtG1ZJbMKqW3IJRteQWjKo18xA3BczdzSR9L3cZAHO2M/+Zvxa8joU8fp8o6ps3U8HboO+RXZ9y5o/+7D2PHwaG0T3VnbL2xT3B7qVqm4cLPqx9Xc/zKpvtpZfYKwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAr+wXgrGREXunUOAAAAABJRU5ErkJggg==" height="134" width="238">
-                                <div class="app-minus">
-                                    <span class="mid-line"><i></i>APP下单</span>
-                                    <div>立减<b>300</b>元</div>
-                                </div>
-                            </div>
-                            <div class="caption">
-                                <h3 title="【清明/五一/暑假】天津直飞大阪/东京4-6天自由行（正班直飞+樱花季+超长预售）">【清明/五一/暑假】天津直飞大阪/东京4-6天自由行（正班直飞+樱花季+超长预售）</h3>
-                                <span class="price"><b>￥2999</b>起</span>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="item" style="display: none;" data-change="list">
-                        <a href="/sales/2066219.html" target="_blank"
-                           data-mes-g="1-1-4" data-mes-t="位置4"
-                           data-mes-salesid="2066219">
-                            <div class="image">
-                                <img data-original="https://a1-q.mafengwo.net/s9/M00/2F/DC/wKgBs1gphMWAWt9QAAz4xujVZhs72.jpeg?imageMogr2%2Fthumbnail%2F%21476x268r%2Fgravity%2FCenter%2Fcrop%2F%21476x268%2Fquality%2F100" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAdwAAAEMBAMAAACcsxrpAAAAElBMVEX88tz8+uz89uz8/vz88uT8+vT1Qw6wAAABb0lEQVR4nO3aUU7CQBRA0crACtwIOroCN0DC/veiUGhLKc380DqPcz5MnPfT61NT0jYNAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8G/knO/OUs77FS5lATnf96bTWcjeY55Iy1OHIbRlt+tNYXMvZbdpeepnEMK5NN2mtd+GXG8b+vf1szvatKFvMXNPTWm4yp/LruPmNoO/1C49cO5gvV154Nw+sg+PnLvJd7/WkXPPd1dNu9zDaBRI39SuNw8PIuem8b1U7NzrreN+YhTGoCmNbpSD5zajzwrRc0efCsLnFo+qJbdgVC25BaNqyS0YVUtuwahacgtG1ZJbMKqW3IJRteQWjKo18xA3BczdzSR9L3cZAHO2M/+Zvxa8joU8fp8o6ps3U8HboO+RXZ9y5o/+7D2PHwaG0T3VnbL2xT3B7qVqm4cLPqx9Xc/zKpvtpZfYKwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAr+wXgrGREXunUOAAAAABJRU5ErkJggg==" height="134" width="238">
-                            </div>
-                            <div class="caption">
-                                <h3 title="【清明五一】北京往返巴厘岛6天4晚自由行（赠接巴厘岛接送机+赠送电话卡+私人定制+可定制浪漫婚拍）">【清明五一】北京往返巴厘岛6天4晚自由行（赠接巴厘岛接送机+赠送电话卡+私人定制+可定制浪漫婚拍）</h3>
-                                <span class="price"><b>￥3699</b>起</span>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="item" style="display: none;" data-change="list">
-                        <a href="/sales/2067894.html" target="_blank"
-                           data-mes-g="1-1-5" data-mes-t="位置5"
-                           data-mes-salesid="2067894">
-                            <div class="image">
-                                <img data-original="https://b3-q.mafengwo.net/s7/M00/3B/14/wKgB6lT0HCWAdAkUAAK_xoTwpQc67.jpeg?imageMogr2%2Fthumbnail%2F%21476x268r%2Fgravity%2FCenter%2Fcrop%2F%21476x268%2Fquality%2F100" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAdwAAAEMBAMAAACcsxrpAAAAElBMVEX88tz8+uz89uz8/vz88uT8+vT1Qw6wAAABb0lEQVR4nO3aUU7CQBRA0crACtwIOroCN0DC/veiUGhLKc380DqPcz5MnPfT61NT0jYNAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8G/knO/OUs77FS5lATnf96bTWcjeY55Iy1OHIbRlt+tNYXMvZbdpeepnEMK5NN2mtd+GXG8b+vf1szvatKFvMXNPTWm4yp/LruPmNoO/1C49cO5gvV154Nw+sg+PnLvJd7/WkXPPd1dNu9zDaBRI39SuNw8PIuem8b1U7NzrreN+YhTGoCmNbpSD5zajzwrRc0efCsLnFo+qJbdgVC25BaNqyS0YVUtuwahacgtG1ZJbMKqW3IJRteQWjKo18xA3BczdzSR9L3cZAHO2M/+Zvxa8joU8fp8o6ps3U8HboO+RXZ9y5o/+7D2PHwaG0T3VnbL2xT3B7qVqm4cLPqx9Xc/zKpvtpZfYKwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAr+wXgrGREXunUOAAAAABJRU5ErkJggg==" height="134" width="238">
-                                <div class="app-minus">
-                                    <span class="mid-line"><i></i>APP下单</span>
-                                    <div>立减<b>300</b>元</div>
-                                </div>
-                            </div>
-                            <div class="caption">
-                                <h3 title="北京直飞毛里求斯7天5晚自由行（东部酒店+赠送北部/南部经典一日游+赠接送机并附送毛里求斯电话卡+赠送高端旅游险+个性化特价当地游套餐令你N种选择）">北京直飞毛里求斯7天5晚自由行（东部酒店+赠送北部/南部经典一日游+赠接送机并附送毛里求斯电话卡+赠送高端旅游险+个性化特价当地游套餐令你N种选择）</h3>
-                                <span class="price"><b>￥8999</b>起</span>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="item" style="display: none;" data-change="list">
-                        <a href="/sales/2054611.html" target="_blank"
-                           data-mes-g="1-1-6" data-mes-t="位置6"
-                           data-mes-salesid="2054611">
-                            <div class="image">
-                                <img data-original="https://c3-q.mafengwo.net/s10/M00/42/7C/wKgBZ1i2VCKACPK9AAgvgIjMoek42.jpeg?imageMogr2%2Fthumbnail%2F%21476x268r%2Fgravity%2FCenter%2Fcrop%2F%21476x268%2Fquality%2F100" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAdwAAAEMBAMAAACcsxrpAAAAElBMVEX88tz8+uz89uz8/vz88uT8+vT1Qw6wAAABb0lEQVR4nO3aUU7CQBRA0crACtwIOroCN0DC/veiUGhLKc380DqPcz5MnPfT61NT0jYNAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8G/knO/OUs77FS5lATnf96bTWcjeY55Iy1OHIbRlt+tNYXMvZbdpeepnEMK5NN2mtd+GXG8b+vf1szvatKFvMXNPTWm4yp/LruPmNoO/1C49cO5gvV154Nw+sg+PnLvJd7/WkXPPd1dNu9zDaBRI39SuNw8PIuem8b1U7NzrreN+YhTGoCmNbpSD5zajzwrRc0efCsLnFo+qJbdgVC25BaNqyS0YVUtuwahacgtG1ZJbMKqW3IJRteQWjKo18xA3BczdzSR9L3cZAHO2M/+Zvxa8joU8fp8o6ps3U8HboO+RXZ9y5o/+7D2PHwaG0T3VnbL2xT3B7qVqm4cLPqx9Xc/zKpvtpZfYKwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAr+wXgrGREXunUOAAAAABJRU5ErkJggg==" height="134" width="238">
-                            </div>
-                            <div class="caption">
-                                <h3 title="北京直飞巴厘岛5-7天自由行（单/双酒店混合搭配+高级私人定制+赠电话卡+精致早餐+接送机）">北京直飞巴厘岛5-7天自由行（单/双酒店混合搭配+高级私人定制+赠电话卡+精致早餐+接送机）</h3>
-                                <span class="price"><b>￥3600</b>起</span>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="item" style="display: none;" data-change="list">
-                        <a href="/sales/359296.html" target="_blank"
-                           data-mes-g="1-1-7" data-mes-t="位置7"
-                           data-mes-salesid="359296">
-                            <div class="image">
-                                <img data-original="https://b4-q.mafengwo.net/s9/M00/E1/23/wKgBs1fOhgOAYNY0AAnseqq043g12.jpeg?imageMogr2%2Fthumbnail%2F%21476x268r%2Fgravity%2FCenter%2Fcrop%2F%21476x268%2Fquality%2F100" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAdwAAAEMBAMAAACcsxrpAAAAElBMVEX88tz8+uz89uz8/vz88uT8+vT1Qw6wAAABb0lEQVR4nO3aUU7CQBRA0crACtwIOroCN0DC/veiUGhLKc380DqPcz5MnPfT61NT0jYNAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8G/knO/OUs77FS5lATnf96bTWcjeY55Iy1OHIbRlt+tNYXMvZbdpeepnEMK5NN2mtd+GXG8b+vf1szvatKFvMXNPTWm4yp/LruPmNoO/1C49cO5gvV154Nw+sg+PnLvJd7/WkXPPd1dNu9zDaBRI39SuNw8PIuem8b1U7NzrreN+YhTGoCmNbpSD5zajzwrRc0efCsLnFo+qJbdgVC25BaNqyS0YVUtuwahacgtG1ZJbMKqW3IJRteQWjKo18xA3BczdzSR9L3cZAHO2M/+Zvxa8joU8fp8o6ps3U8HboO+RXZ9y5o/+7D2PHwaG0T3VnbL2xT3B7qVqm4cLPqx9Xc/zKpvtpZfYKwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAr+wXgrGREXunUOAAAAABJRU5ErkJggg==" height="134" width="238">
-                            </div>
-                            <div class="caption">
-                                <h3 title="北京直飞马尔代夫AV薇拉瓦鲁岛/海龟岛6-7天自由行（悦榕庄六星+送出海环礁浮潜+双层水上阁楼+无边大泳池+浮潜A级+拖尾沙滩）">北京直飞马尔代夫AV薇拉瓦鲁岛/海龟岛6-7天自由行（悦榕庄六星+送出海环礁浮潜+双层水上阁楼+无边大泳池+浮潜A级+拖尾沙滩）</h3>
-                                <span class="price"><b>￥13599</b>起</span>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="item" style="display: none;" data-change="list">
-                        <a href="/sales/339517.html" target="_blank"
-                           data-mes-g="1-1-8" data-mes-t="位置8"
-                           data-mes-salesid="339517">
-                            <div class="image">
-                                <img data-original="https://a2-q.mafengwo.net/s9/M00/0E/25/wKgBs1fH6t-ATbyMAAzxZRThPW8377.png?imageMogr2%2Fthumbnail%2F%21476x268r%2Fgravity%2FCenter%2Fcrop%2F%21476x268%2Fquality%2F100" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAdwAAAEMBAMAAACcsxrpAAAAElBMVEX88tz8+uz89uz8/vz88uT8+vT1Qw6wAAABb0lEQVR4nO3aUU7CQBRA0crACtwIOroCN0DC/veiUGhLKc380DqPcz5MnPfT61NT0jYNAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8G/knO/OUs77FS5lATnf96bTWcjeY55Iy1OHIbRlt+tNYXMvZbdpeepnEMK5NN2mtd+GXG8b+vf1szvatKFvMXNPTWm4yp/LruPmNoO/1C49cO5gvV154Nw+sg+PnLvJd7/WkXPPd1dNu9zDaBRI39SuNw8PIuem8b1U7NzrreN+YhTGoCmNbpSD5zajzwrRc0efCsLnFo+qJbdgVC25BaNqyS0YVUtuwahacgtG1ZJbMKqW3IJRteQWjKo18xA3BczdzSR9L3cZAHO2M/+Zvxa8joU8fp8o6ps3U8HboO+RXZ9y5o/+7D2PHwaG0T3VnbL2xT3B7qVqm4cLPqx9Xc/zKpvtpZfYKwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAr+wXgrGREXunUOAAAAABJRU5ErkJggg==" height="134" width="238">
-                            </div>
-                            <div class="caption">
-                                <h3 title="【清明/五一】北京直飞新加坡6天5晚自由行（新航往返/市区酒店+圣淘沙酒店混住/包含接机服务/可自选酒店）">【清明/五一】北京直飞新加坡6天5晚自由行（新航往返/市区酒店+圣淘沙酒店混住/包含接机服务/可自选酒店）</h3>
-                                <span class="price"><b>￥4299</b>起</span>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="item" style="display: none;" data-change="list">
-                        <a href="/sales/334455.html" target="_blank"
-                           data-mes-g="1-1-9" data-mes-t="位置9"
-                           data-mes-salesid="334455">
-                            <div class="image">
-                                <img data-original="https://c2-q.mafengwo.net/s10/M00/B3/E5/wKgBZ1ihFuOAL5LrAAHQBxA-YoM11.jpeg?imageMogr2%2Fthumbnail%2F%21476x268r%2Fgravity%2FCenter%2Fcrop%2F%21476x268%2Fquality%2F100" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAdwAAAEMBAMAAACcsxrpAAAAElBMVEX88tz8+uz89uz8/vz88uT8+vT1Qw6wAAABb0lEQVR4nO3aUU7CQBRA0crACtwIOroCN0DC/veiUGhLKc380DqPcz5MnPfT61NT0jYNAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8G/knO/OUs77FS5lATnf96bTWcjeY55Iy1OHIbRlt+tNYXMvZbdpeepnEMK5NN2mtd+GXG8b+vf1szvatKFvMXNPTWm4yp/LruPmNoO/1C49cO5gvV154Nw+sg+PnLvJd7/WkXPPd1dNu9zDaBRI39SuNw8PIuem8b1U7NzrreN+YhTGoCmNbpSD5zajzwrRc0efCsLnFo+qJbdgVC25BaNqyS0YVUtuwahacgtG1ZJbMKqW3IJRteQWjKo18xA3BczdzSR9L3cZAHO2M/+Zvxa8joU8fp8o6ps3U8HboO+RXZ9y5o/+7D2PHwaG0T3VnbL2xT3B7qVqm4cLPqx9Xc/zKpvtpZfYKwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAr+wXgrGREXunUOAAAAABJRU5ErkJggg==" height="134" width="238">
-                            </div>
-                            <div class="caption">
-                                <h3 title="北京直飞马尔代夫神仙珊瑚岛Hideaway Island6-7天自由行（六星级奢华度假村+私人管家服务+赠送一次浮潜活动+情人植树纪念活动+蜜月送SPA按摩+贴心中文接机）">北京直飞马尔代夫神仙珊瑚岛Hideaway Island6-7天自由行（六星级奢华度假村+私人管家服务+赠送一次浮潜活动+情人植树纪念活动+蜜月送SPA按摩+贴心中文接机）</h3>
-                                <span class="price"><b>￥15999</b>起</span>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="item" style="display: none;" data-change="list">
-                        <a href="/sales/2062872.html" target="_blank"
-                           data-mes-g="1-1-10" data-mes-t="位置10"
-                           data-mes-salesid="2062872">
-                            <div class="image">
-                                <img data-original="https://a3-q.mafengwo.net/s10/M00/32/C4/wKgBZ1i2OU2Ad7g6AAHcsyKPiJQ03.jpeg?imageMogr2%2Fthumbnail%2F%21476x268r%2Fgravity%2FCenter%2Fcrop%2F%21476x268%2Fquality%2F100" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAdwAAAEMBAMAAACcsxrpAAAAElBMVEX88tz8+uz89uz8/vz88uT8+vT1Qw6wAAABb0lEQVR4nO3aUU7CQBRA0crACtwIOroCN0DC/veiUGhLKc380DqPcz5MnPfT61NT0jYNAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8G/knO/OUs77FS5lATnf96bTWcjeY55Iy1OHIbRlt+tNYXMvZbdpeepnEMK5NN2mtd+GXG8b+vf1szvatKFvMXNPTWm4yp/LruPmNoO/1C49cO5gvV154Nw+sg+PnLvJd7/WkXPPd1dNu9zDaBRI39SuNw8PIuem8b1U7NzrreN+YhTGoCmNbpSD5zajzwrRc0efCsLnFo+qJbdgVC25BaNqyS0YVUtuwahacgtG1ZJbMKqW3IJRteQWjKo18xA3BczdzSR9L3cZAHO2M/+Zvxa8joU8fp8o6ps3U8HboO+RXZ9y5o/+7D2PHwaG0T3VnbL2xT3B7qVqm4cLPqx9Xc/zKpvtpZfYKwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAr+wXgrGREXunUOAAAAABJRU5ErkJggg==" height="134" width="238">
-                            </div>
-                            <div class="caption">
-                                <h3 title="【五一/端午】北京直飞马尔代夫尼亚玛6-7天自由行（奢华六星+私人泳池+早晚餐+水飞上岛+蜜月大礼包+赠定制情侣T恤+客服全程1对1服务）">【五一/端午】北京直飞马尔代夫尼亚玛6-7天自由行（奢华六星+私人泳池+早晚餐+水飞上岛+蜜月大礼包+赠定制情侣T恤+客服全程1对1服务）</h3>
-                                <span class="price"><b>￥15880</b>起</span>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="item" style="display: none;" data-change="list">
-                        <a href="/sales/2073549.html" target="_blank"
-                           data-mes-g="1-1-11" data-mes-t="位置11"
-                           data-mes-salesid="2073549">
-                            <div class="image">
-                                <img data-original="https://a2-q.mafengwo.net/s10/M00/23/5F/wKgBZ1idG-yANwkiAAEkbPONhBE33.jpeg?imageMogr2%2Fthumbnail%2F%21476x268r%2Fgravity%2FCenter%2Fcrop%2F%21476x268%2Fquality%2F100" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAdwAAAEMBAMAAACcsxrpAAAAElBMVEX88tz8+uz89uz8/vz88uT8+vT1Qw6wAAABb0lEQVR4nO3aUU7CQBRA0crACtwIOroCN0DC/veiUGhLKc380DqPcz5MnPfT61NT0jYNAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8G/knO/OUs77FS5lATnf96bTWcjeY55Iy1OHIbRlt+tNYXMvZbdpeepnEMK5NN2mtd+GXG8b+vf1szvatKFvMXNPTWm4yp/LruPmNoO/1C49cO5gvV154Nw+sg+PnLvJd7/WkXPPd1dNu9zDaBRI39SuNw8PIuem8b1U7NzrreN+YhTGoCmNbpSD5zajzwrRc0efCsLnFo+qJbdgVC25BaNqyS0YVUtuwahacgtG1ZJbMKqW3IJRteQWjKo18xA3BczdzSR9L3cZAHO2M/+Zvxa8joU8fp8o6ps3U8HboO+RXZ9y5o/+7D2PHwaG0T3VnbL2xT3B7qVqm4cLPqx9Xc/zKpvtpZfYKwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAr+wXgrGREXunUOAAAAABJRU5ErkJggg==" height="134" width="238">
-                            </div>
-                            <div class="caption">
-                                <h3 title="北京直飞长滩岛6-8天自由行（特价/赠日落风帆+菲式按摩/出海巡礼+芒果沙冰/海鲜BBQ+送签证+接送机+保险）">北京直飞长滩岛6-8天自由行（特价/赠日落风帆+菲式按摩/出海巡礼+芒果沙冰/海鲜BBQ+送签证+接送机+保险）</h3>
-                                <span class="price"><b>￥2999</b>起</span>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="item" style="display: none;" data-change="list">
-                        <a href="/sales/2118848.html" target="_blank"
-                           data-mes-g="1-1-12" data-mes-t="位置12"
-                           data-mes-salesid="2118848">
-                            <div class="image">
-                                <img data-original="https://b1-q.mafengwo.net/s9/M00/86/C2/wKgBs1hIz6CAIoEWAAlzxbB6Uwk69.jpeg?imageMogr2%2Fthumbnail%2F%21476x268r%2Fgravity%2FCenter%2Fcrop%2F%21476x268%2Fquality%2F100" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAdwAAAEMBAMAAACcsxrpAAAAElBMVEX88tz8+uz89uz8/vz88uT8+vT1Qw6wAAABb0lEQVR4nO3aUU7CQBRA0crACtwIOroCN0DC/veiUGhLKc380DqPcz5MnPfT61NT0jYNAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8G/knO/OUs77FS5lATnf96bTWcjeY55Iy1OHIbRlt+tNYXMvZbdpeepnEMK5NN2mtd+GXG8b+vf1szvatKFvMXNPTWm4yp/LruPmNoO/1C49cO5gvV154Nw+sg+PnLvJd7/WkXPPd1dNu9zDaBRI39SuNw8PIuem8b1U7NzrreN+YhTGoCmNbpSD5zajzwrRc0efCsLnFo+qJbdgVC25BaNqyS0YVUtuwahacgtG1ZJbMKqW3IJRteQWjKo18xA3BczdzSR9L3cZAHO2M/+Zvxa8joU8fp8o6ps3U8HboO+RXZ9y5o/+7D2PHwaG0T3VnbL2xT3B7qVqm4cLPqx9Xc/zKpvtpZfYKwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAr+wXgrGREXunUOAAAAABJRU5ErkJggg==" height="134" width="238">
-                            </div>
-                            <div class="caption">
-                                <h3 title="【清明】天津直飞大阪/东京4-6日往返机票(+199得个人单次旅游签证+含往返20KG行李额+拒签全退)">【清明】天津直飞大阪/东京4-6日往返机票(+199得个人单次旅游签证+含往返20KG行李额+拒签全退)</h3>
-                                <span class="price"><b>￥1599</b>起</span>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="item" style="display: none;" data-change="list">
-                        <a href="/sales/365600.html" target="_blank"
-                           data-mes-g="1-1-13" data-mes-t="位置13"
-                           data-mes-salesid="365600">
-                            <div class="image">
-                                <img data-original="https://c4-q.mafengwo.net/s10/M00/1B/78/wKgBZ1iqv1SAEiqLAACcGxSpwbg59.jpeg?imageMogr2%2Fthumbnail%2F%21476x268r%2Fgravity%2FCenter%2Fcrop%2F%21476x268%2Fquality%2F100" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAdwAAAEMBAMAAACcsxrpAAAAElBMVEX88tz8+uz89uz8/vz88uT8+vT1Qw6wAAABb0lEQVR4nO3aUU7CQBRA0crACtwIOroCN0DC/veiUGhLKc380DqPcz5MnPfT61NT0jYNAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8G/knO/OUs77FS5lATnf96bTWcjeY55Iy1OHIbRlt+tNYXMvZbdpeepnEMK5NN2mtd+GXG8b+vf1szvatKFvMXNPTWm4yp/LruPmNoO/1C49cO5gvV154Nw+sg+PnLvJd7/WkXPPd1dNu9zDaBRI39SuNw8PIuem8b1U7NzrreN+YhTGoCmNbpSD5zajzwrRc0efCsLnFo+qJbdgVC25BaNqyS0YVUtuwahacgtG1ZJbMKqW3IJRteQWjKo18xA3BczdzSR9L3cZAHO2M/+Zvxa8joU8fp8o6ps3U8HboO+RXZ9y5o/+7D2PHwaG0T3VnbL2xT3B7qVqm4cLPqx9Xc/zKpvtpZfYKwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAr+wXgrGREXunUOAAAAABJRU5ErkJggg==" height="134" width="238">
-                            </div>
-                            <div class="caption">
-                                <h3 title="北京直飞日本东京/大阪3-30天机票（赠签证/拒签全退）">北京直飞日本东京/大阪3-30天机票（赠签证/拒签全退）</h3>
-                                <span class="price"><b>￥2650</b>起</span>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="item" style="display: none;" data-change="list">
-                        <a href="/sales/317926.html" target="_blank"
-                           data-mes-g="1-1-14" data-mes-t="位置14"
-                           data-mes-salesid="317926">
-                            <div class="image">
-                                <img data-original="https://c3-q.mafengwo.net/s7/M00/8A/AC/wKgB6lS8nT6ANfqFAAeSSp6os9Q46.jpeg?imageMogr2%2Fthumbnail%2F%21476x268r%2Fgravity%2FCenter%2Fcrop%2F%21476x268%2Fquality%2F100" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAdwAAAEMBAMAAACcsxrpAAAAElBMVEX88tz8+uz89uz8/vz88uT8+vT1Qw6wAAABb0lEQVR4nO3aUU7CQBRA0crACtwIOroCN0DC/veiUGhLKc380DqPcz5MnPfT61NT0jYNAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8G/knO/OUs77FS5lATnf96bTWcjeY55Iy1OHIbRlt+tNYXMvZbdpeepnEMK5NN2mtd+GXG8b+vf1szvatKFvMXNPTWm4yp/LruPmNoO/1C49cO5gvV154Nw+sg+PnLvJd7/WkXPPd1dNu9zDaBRI39SuNw8PIuem8b1U7NzrreN+YhTGoCmNbpSD5zajzwrRc0efCsLnFo+qJbdgVC25BaNqyS0YVUtuwahacgtG1ZJbMKqW3IJRteQWjKo18xA3BczdzSR9L3cZAHO2M/+Zvxa8joU8fp8o6ps3U8HboO+RXZ9y5o/+7D2PHwaG0T3VnbL2xT3B7qVqm4cLPqx9Xc/zKpvtpZfYKwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAr+wXgrGREXunUOAAAAABJRU5ErkJggg==" height="134" width="238">
-                            </div>
-                            <div class="caption">
-                                <h3 title="【五一/端午】北京直飞意大利9-10天自由行 （国航全国免费联运/拒签全退/罗马进米兰出）">【五一/端午】北京直飞意大利9-10天自由行 （国航全国免费联运/拒签全退/罗马进米兰出）</h3>
-                                <span class="price"><b>￥9499</b>起</span>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="item" style="display: none;" data-change="list">
-                        <a href="/sales/2068811.html" target="_blank"
-                           data-mes-g="1-1-15" data-mes-t="位置15"
-                           data-mes-salesid="2068811">
-                            <div class="image">
-                                <img data-original="https://c2-q.mafengwo.net/s9/M00/8E/AC/wKgBs1eaAueAUF_zACErIphm3lY57.jpeg?imageMogr2%2Fthumbnail%2F%21476x268r%2Fgravity%2FCenter%2Fcrop%2F%21476x268%2Fquality%2F100" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAdwAAAEMBAMAAACcsxrpAAAAElBMVEX88tz8+uz89uz8/vz88uT8+vT1Qw6wAAABb0lEQVR4nO3aUU7CQBRA0crACtwIOroCN0DC/veiUGhLKc380DqPcz5MnPfT61NT0jYNAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8G/knO/OUs77FS5lATnf96bTWcjeY55Iy1OHIbRlt+tNYXMvZbdpeepnEMK5NN2mtd+GXG8b+vf1szvatKFvMXNPTWm4yp/LruPmNoO/1C49cO5gvV154Nw+sg+PnLvJd7/WkXPPd1dNu9zDaBRI39SuNw8PIuem8b1U7NzrreN+YhTGoCmNbpSD5zajzwrRc0efCsLnFo+qJbdgVC25BaNqyS0YVUtuwahacgtG1ZJbMKqW3IJRteQWjKo18xA3BczdzSR9L3cZAHO2M/+Zvxa8joU8fp8o6ps3U8HboO+RXZ9y5o/+7D2PHwaG0T3VnbL2xT3B7qVqm4cLPqx9Xc/zKpvtpZfYKwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAr+wXgrGREXunUOAAAAABJRU5ErkJggg==" height="134" width="238">
-                            </div>
-                            <div class="caption">
-                                <h3 title="【五一】北京往返巴厘岛6-7天自由行（送接送机+早餐+可任选酒店）">【五一】北京往返巴厘岛6-7天自由行（送接送机+早餐+可任选酒店）</h3>
-                                <span class="price"><b>￥3999</b>起</span>
-                            </div>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-
-
+        <%
+            }
+            %>
     </div>
-
 </div>
-
 <script type="text/javascript">
     $(function () {
         var $body = $('body');
@@ -1303,7 +1106,6 @@
 
     });
 </script><link href="${pageContext.request.contextPath}/css/index_4.css" rel="stylesheet" type="text/css"/>
-
 <div id="footer">
     <div class="ft-content">
 
@@ -1320,10 +1122,7 @@
     </div>
 </div>
 
-
-
 <link href="${pageContext.request.contextPath}/css/sales/sales1.css" rel="stylesheet" type="text/css"/>
-
 <div class="mfw-toolbar" id="_j_mfwtoolbar">
     <div class="toolbar-item-top">
         <a role="button" class="btn _j_gotop">
@@ -1344,8 +1143,6 @@
         </a>
     </div>
 </div>
-
-
 
 <script language="javascript" type="text/javascript">
     if (typeof M !== "undefined" && typeof M.loadResource === "function") {

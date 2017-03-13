@@ -46,6 +46,9 @@ public class ShopC {
     @Autowired
     public ILineService lineService;
 
+    @Autowired
+    public IPromoService promoService;
+
     private static final int SIZE = CommonConst.SIX_INT;
 
     @RequestMapping("/shop")
@@ -73,6 +76,28 @@ public class ShopC {
     public String sales(HttpServletRequest request, Map<String, Object> map){
         map.put("index", CommonConst.FOUR_INT);
 
+        List<PromoBean> list = promoService.selectAll();
+        List<PromoReturnBean> returnBeans = new ArrayList<>();
+        for (PromoBean p :list){
+            PromoReturnBean promoReturnBean = new PromoReturnBean();
+            promoReturnBean.setId(p.getId());
+            promoReturnBean.setTitle1(p.getTitle1());
+            promoReturnBean.setTitle2(p.getTitle2());
+            String orId = p.getOrders();
+            List<OrdersBean> listorder = new ArrayList<>();
+            if(orId != null || !"".equals(orId)) {
+                String[] ordersId = orId.split(CommonConst.SPLITOR);
+                for(String str : ordersId){
+                    OrdersBean o = ordersService.selectByPrimaryKey(Integer.parseInt(str));
+                    if(o!=null){
+                        listorder.add(o);
+                    }
+                }
+            }
+            promoReturnBean.setOrders(listorder);
+            returnBeans.add(promoReturnBean);
+        }
+        map.put("promo", returnBeans);
 
         return "sales";
     }
