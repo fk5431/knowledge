@@ -42,7 +42,7 @@
                 <li class="head-nav-index head-nav-active" id="head_1"><a
                         href="${pageContext.request.contextPath}/index">首页</a>
                 </li>
-                <li class="head-nav-place" id="head_2"><a href="http://www.mafengwo.cn/mdd/"
+                <li class="head-nav-place" id="head_2"><a href="#"
                                                           title="目的地">目的地</a>
                 </li>
                 <li class="head-nav-gonglve" id="head_3"><a href="${pageContext.request.contextPath}/content_list"
@@ -54,7 +54,7 @@
                         <span>穷游商城<%--<i class="icon-caret-down"></i>--%></span>
                     </a>
                 </li>
-                <li class="head-nav-place" id="head_4"><a href="http://www.mafengwo.cn/hotel/"
+                <li class="head-nav-place" id="head_4"><a href="#"
                                                           title="论坛">论坛</a>
                 </li>
                 <li class="head-nav-place" id="_j_nav_community">
@@ -162,7 +162,7 @@
                                     List<TypeBean> type = (List) request.getAttribute("type");
                                     for (int i = 0; i <list.size(); i++) {
                                 %>
-                                <li><a href="/search"><%=list.get(i).getProvince()%>(<%=list.get(i).getCount()%>)</a></li>
+                                <li><a href="#"><%=list.get(i).getProvince()%>(<%=list.get(i).getCount()%>)</a></li>
                                 <% }%>
                             </ul>
                         </div>
@@ -176,7 +176,7 @@
                                 <%
                                     for (int i = 0; i <list1.size(); i++) {
                                 %>
-                                <li><a href="/search"><%=list1.get(i).getContinent()%>(<%=list1.get(i).getCount()%>)</a></li>
+                                <li><a href="#"><%=list1.get(i).getContinent()%>(<%=list1.get(i).getCount()%>)</a></li>
 
                                 <% } %>
                             </ul>
@@ -191,7 +191,7 @@
                                 <%
                                     for (int i = 0; i <type.size(); i++) {
                                 %>
-                                <li><a href="/search"><%=type.get(i).getType()%>(<%=type.get(i).getCount()%>)</a></li>
+                                <li><a href="#"><%=type.get(i).getType()%>(<%=type.get(i).getCount()%>)</a></li>
                                <%}%>
                             </ul>
                         </div>
@@ -201,7 +201,7 @@
             <div class="rank">
                 <ul>
                     <li class="gl_list">
-                        <a href="/gonglve/mdd-11047.html" title="普吉岛" target="_blank">
+                        <a href="#" title="普吉岛" target="_blank">
                             <img src="http://c3-q.mafengwo.net/s8/M00/EB/98/wKgBpVWRB9WANAydAA7GxP1ONjg27.jpeg?imageMogr2%2Fthumbnail%2F%21130x184r%2Fgravity%2FCenter%2Fcrop%2F%21130x184%2Fquality%2F90" alt="普吉岛">
                         </a>
                         <p class="time">更新日期:2015-06-29</p>
@@ -212,39 +212,39 @@
                     </li>
                     <li>
                         <span class="num">2</span>
-                        <a href="/gonglve/mdd-10183.html" title="日本" target="_blank">日本</a>
+                        <a href="#" title="日本" target="_blank">日本</a>
                     </li>
                     <li>
                         <span class="num">3</span>
-                        <a href="/gonglve/mdd-10083.html" title="泰国" target="_blank">泰国</a>
+                        <a href="#" title="泰国" target="_blank">泰国</a>
                     </li>
                     <li>
                         <span class="num">4</span>
-                        <a href="/gonglve/mdd-11042.html" title="京都" target="_blank">京都</a>
+                        <a href="#" title="京都" target="_blank">京都</a>
                     </li>
                     <li>
                         <span class="num">5</span>
-                        <a href="/gonglve/mdd-10035.html" title="成都" target="_blank">成都</a>
+                        <a href="#" title="成都" target="_blank">成都</a>
                     </li>
                     <li>
                         <span class="num">6</span>
-                        <a href="/gonglve/mdd-10222.html" title="东京" target="_blank">东京</a>
+                        <a href="#" title="东京" target="_blank">东京</a>
                     </li>
                     <li>
                         <span class="num">7</span>
-                        <a href="/gonglve/mdd-10765.html" title="大阪" target="_blank">大阪</a>
+                        <a href="#" title="大阪" target="_blank">大阪</a>
                     </li>
                     <li>
                         <span class="num">8</span>
-                        <a href="/gonglve/mdd-10132.html" title="厦门" target="_blank">厦门</a>
+                        <a href="#" title="厦门" target="_blank">厦门</a>
                     </li>
                     <li>
                         <span class="num">9</span>
-                        <a href="/gonglve/mdd-11045.html" title="曼谷" target="_blank">曼谷</a>
+                        <a href="#" title="曼谷" target="_blank">曼谷</a>
                     </li>
                     <li>
                         <span class="num">10</span>
-                        <a href="/gonglve/mdd-10487.html" title="大理" target="_blank">大理</a>
+                        <a href="#" title="大理" target="_blank">大理</a>
                     </li>
                 </ul>
             </div>
@@ -304,7 +304,7 @@
                         for(var i in res.msg){
                             var item = res.msg[i];
                             item.value = item.value.replace(keyword,'<b class="highlight">'+keyword+'</b>');
-                            html += '<li><em><a href="/gonglve/'+item.type+'-'+item.id+'.html" style="color: #666" >'+item.value+'</a></em></li>'; //data-cs-l="/gonglve/'+item.type+'-'+item.id+'.html"
+                            html += '<li><em><a href="#'+item.type+'-'+item.id+'.html" style="color: #666" >'+item.value+'</a></em></li>'; //data-cs-l="/gonglve/'+item.type+'-'+item.id+'.html"
                         }
                         html += '<div class="clear"></div></ul>';
 

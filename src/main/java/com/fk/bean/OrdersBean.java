@@ -21,6 +21,8 @@ public class OrdersBean {
 
     private String image;
 
+    private String place;
+
     private String cost;
 
     public Integer getId() {
@@ -101,6 +103,14 @@ public class OrdersBean {
 
     public void setImage(String image) {
         this.image = image == null ? null : image.trim();
+    }
+
+    public String getPlace() {
+        return place;
+    }
+
+    public void setPlace(String place) {
+        this.place = place == null ? null : place.trim();
     }
 
     public String getCost() {

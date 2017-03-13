@@ -254,7 +254,7 @@
                                             %>
                                             <dl class="clearfix">
                                                 <dt>
-                                                    <span class="day-round"><b>01</b></span><%=lines.get(i).getTitle()%>
+                                                    <span class="day-round"><b>0<%=i+1%></b></span><%=lines.get(i).getTitle()%>
                                                 </dt>
                                                 <dd><%=lines.get(i).getSummary()%></dd>                                </dl>
                                             <dl class="clearfix">
@@ -440,7 +440,7 @@
             <div class="hd">相关推荐</div>
             <ul class="bd clearfix">
                 <li class="item" data-stat-area="相关推荐" data-stat-id="2151254">
-                    <a href="/sales/2151254.html" target="_blank">
+                    <a href="#" target="_blank">
                         <div class="image">
                             <img src="http://a2-q.mafengwo.net/s10/M00/D4/8F/wKgBZ1i1OjuARt4-AAJymOvaBFY96.jpeg?imageMogr2%2Fthumbnail%2F%21235x168r%2Fgravity%2FCenter%2Fcrop%2F%21235x168%2Fquality%2F100">
 
@@ -466,7 +466,7 @@
                     </a>
                 </li>
                 <li class="item" data-stat-area="相关推荐" data-stat-id="2145808">
-                    <a href="/sales/2145808.html" target="_blank">
+                    <a href="#" target="_blank">
                         <div class="image">
                             <img src="http://n3-q.mafengwo.net/s9/M00/F6/9F/wKgBs1gQF0CAeiQ6AANkpm2VY2Y13.jpeg?imageMogr2%2Fthumbnail%2F%21235x168r%2Fgravity%2FCenter%2Fcrop%2F%21235x168%2Fquality%2F100">
 
@@ -492,7 +492,7 @@
                     </a>
                 </li>
                 <li class="item" data-stat-area="相关推荐" data-stat-id="2144752">
-                    <a href="/sales/2144752.html" target="_blank">
+                    <a href="#" target="_blank">
                         <div class="image">
                             <img src="http://n2-q.mafengwo.net/s9/M00/87/5E/wKgBs1gRa16AGR9rAAZvcsdius018.jpeg?imageMogr2%2Fthumbnail%2F%21235x168r%2Fgravity%2FCenter%2Fcrop%2F%21235x168%2Fquality%2F100">
 
@@ -518,7 +518,7 @@
                     </a>
                 </li>
                 <li class="item" data-stat-area="相关推荐" data-stat-id="2117534">
-                    <a href="/sales/2117534.html" target="_blank">
+                    <a href="#" target="_blank">
                         <div class="image">
                             <img src="http://n4-q.mafengwo.net/s9/M00/0D/C0/wKgBs1hFWXuATpYgAA5H57yZtMs23.jpeg?imageMogr2%2Fthumbnail%2F%21235x168r%2Fgravity%2FCenter%2Fcrop%2F%21235x168%2Fquality%2F100">
 
@@ -544,7 +544,7 @@
                     </a>
                 </li>
                 <li class="item" data-stat-area="相关推荐" data-stat-id="2149921">
-                    <a href="/sales/2149921.html" target="_blank">
+                    <a href="#" target="_blank">
                         <div class="image">
                             <img src="http://n3-q.mafengwo.net/s9/M00/F6/9F/wKgBs1gQF0CAeiQ6AANkpm2VY2Y13.jpeg?imageMogr2%2Fthumbnail%2F%21235x168r%2Fgravity%2FCenter%2Fcrop%2F%21235x168%2Fquality%2F100">
 
@@ -570,7 +570,7 @@
                     </a>
                 </li>
                 <li class="item" data-stat-area="相关推荐" data-stat-id="2059512">
-                    <a href="/localdeals/2059512.html" target="_blank">
+                    <a href="#" target="_blank">
                         <div class="image">
                             <img src="http://n1-q.mafengwo.net/s10/M00/A4/0F/wKgBZ1ir6Y2AA3WDAAFJHx1Zcx421.jpeg?imageMogr2%2Fthumbnail%2F%21235x168r%2Fgravity%2FCenter%2Fcrop%2F%21235x168%2Fquality%2F100">
 
@@ -596,7 +596,7 @@
                     </a>
                 </li>
                 <li class="item" data-stat-area="相关推荐" data-stat-id="2074902">
-                    <a href="/sales/2074902.html" target="_blank">
+                    <a href="#" target="_blank">
                         <div class="image">
                             <img src="http://n2-q.mafengwo.net/s9/M00/79/4E/wKgBs1fkmAeAXKOlAADIh0LOB9E24.jpeg?imageMogr2%2Fthumbnail%2F%21235x168r%2Fgravity%2FCenter%2Fcrop%2F%21235x168%2Fquality%2F100">
 
@@ -622,7 +622,7 @@
                     </a>
                 </li>
                 <li class="item" data-stat-area="相关推荐" data-stat-id="2144787">
-                    <a href="/sales/2144787.html" target="_blank">
+                    <a href="#" target="_blank">
                         <div class="image">
                             <img src="http://a4-q.mafengwo.net/s10/M00/79/EC/wKgBZ1ilaV-ACtFFAALSn_9YlvA78.jpeg?imageMogr2%2Fthumbnail%2F%21235x168r%2Fgravity%2FCenter%2Fcrop%2F%21235x168%2Fquality%2F100">
 

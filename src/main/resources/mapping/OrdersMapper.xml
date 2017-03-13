@@ -12,12 +12,13 @@
     <result column="sellcount" property="sellcount" jdbcType="INTEGER" />
     <result column="price" property="price" jdbcType="INTEGER" />
     <result column="image" property="image" jdbcType="VARCHAR" />
+    <result column="place" jdbcType="VARCHAR" property="place" />
   </resultMap>
   <resultMap id="ResultMapWithBLOBs" type="com.fk.bean.OrdersBean" extends="BaseResultMap" >
     <result column="cost" property="cost" jdbcType="LONGVARCHAR" />
   </resultMap>
   <sql id="Base_Column_List" >
-    id, images, hotel, type, count, subject, title, sellcount, price, image
+    id, images, hotel, type, count, subject, title, sellcount, price, image, place
   </sql>
   <sql id="Blob_Column_List" >
     cost
@@ -38,11 +39,11 @@
     insert into orders (id, images, hotel,
     type, count, subject,
     title, sellcount, price,
-    image, cost)
+    image, place, cost)
     values (#{id,jdbcType=INTEGER}, #{images,jdbcType=VARCHAR}, #{hotel,jdbcType=VARCHAR},
     #{type,jdbcType=VARCHAR}, #{count,jdbcType=INTEGER}, #{subject,jdbcType=VARCHAR},
     #{title,jdbcType=VARCHAR}, #{sellcount,jdbcType=INTEGER}, #{price,jdbcType=INTEGER},
-    #{image,jdbcType=VARCHAR}, #{cost,jdbcType=LONGVARCHAR})
+    #{image,jdbcType=VARCHAR}, #{place,jdbcType=VARCHAR}, #{cost,jdbcType=LONGVARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="com.fk.bean.OrdersBean" >
     insert into orders
@@ -76,6 +77,9 @@
       </if>
       <if test="image != null" >
         image,
+      </if>
+      <if test="place != null">
+        place,
       </if>
       <if test="cost != null" >
         cost,
@@ -112,6 +116,9 @@
       <if test="image != null" >
         #{image,jdbcType=VARCHAR},
       </if>
+      <if test="place != null">
+        #{place,jdbcType=VARCHAR},
+      </if>
       <if test="cost != null" >
         #{cost,jdbcType=LONGVARCHAR},
       </if>
@@ -147,6 +154,9 @@
       <if test="image != null" >
         image = #{image,jdbcType=VARCHAR},
       </if>
+      <if test="place != null">
+        place = #{place,jdbcType=VARCHAR},
+      </if>
       <if test="cost != null" >
         cost = #{cost,jdbcType=LONGVARCHAR},
       </if>
@@ -164,6 +174,7 @@
     sellcount = #{sellcount,jdbcType=INTEGER},
     price = #{price,jdbcType=INTEGER},
     image = #{image,jdbcType=VARCHAR},
+    place = #{place,jdbcType=VARCHAR},
     cost = #{cost,jdbcType=LONGVARCHAR}
     where id = #{id,jdbcType=INTEGER}
   </update>
@@ -177,6 +188,7 @@
       title = #{title,jdbcType=VARCHAR},
       sellcount = #{sellcount,jdbcType=INTEGER},
       price = #{price,jdbcType=INTEGER},
+      place = #{place,jdbcType=VARCHAR},
       image = #{image,jdbcType=VARCHAR}
     where id = #{id,jdbcType=INTEGER}
   </update>

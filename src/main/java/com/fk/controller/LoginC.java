@@ -1,11 +1,8 @@
 package com.fk.controller;
 
-import com.fk.bean.IndexShowBean;
-import com.fk.bean.TravelBean;
-import com.fk.bean.User;
-import com.fk.service.IIndexShowService;
-import com.fk.service.IUserService;
-import com.fk.service.ITravelService;
+import com.fk.bean.*;
+import com.fk.dao.IndexshowshopDao;
+import com.fk.service.*;
 import com.fk.util.CommonConst;
 import com.fk.util.MD5;
 import com.fk.util.SendMail;
@@ -37,6 +34,12 @@ public class LoginC {
     @Autowired
     ITravelService travelService;
 
+    @Autowired
+    IIndexshowshopService indexshowshopService;
+
+    @Autowired
+    IOrdersService iOrdersService;
+
     @RequestMapping("/")
     public String index(HttpServletRequest request, Map<String, Object> map){
         //首页最上面样式
@@ -51,6 +54,16 @@ public class LoginC {
             list.add(travelBean);
         }
         map.put("list", list);
+        //热卖爆款
+        List<OrdersBean> listorders = new ArrayList<>();
+        for(int i=CommonConst.ONE_INT;i<=CommonConst.THREE_INT;i++){
+            IndexshowshopBean indexshowshopBean  = indexshowshopService.selectByPrimaryKey(i);
+            if(indexshowshopBean == null)
+                continue;
+            OrdersBean ordersBean = iOrdersService.selectByPrimaryKey(indexshowshopBean.getMid());
+            listorders.add(ordersBean);
+        }
+        map.put("orders", listorders);
         //热门游记
         List<TravelBean> travelList = new ArrayList<>();
         int count = travelService.countOverFive();

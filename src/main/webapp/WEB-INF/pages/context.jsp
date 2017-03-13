@@ -21,9 +21,6 @@
           rel="stylesheet" type="text/css">
     <link href="${pageContext.request.contextPath}/css/content_2.css"
           rel="stylesheet" type="text/css">
-    <script language="javascript"
-            src="${pageContext.request.contextPath}/js/content_1.js"
-            type="text/javascript"></script>
 </head>
 <body style="position: relative;">
 <a name="top_top"id="top_top"></a>
@@ -36,7 +33,7 @@
                 <li class="head-nav-index head-nav-active" id="head_1"><a
                         href="${pageContext.request.contextPath}/index">首页</a>
                 </li>
-                <li class="head-nav-place" id="head_2"><a href="http://www.mafengwo.cn/mdd/"
+                <li class="head-nav-place" id="head_2"><a href="#"
                                                           title="目的地">目的地</a>
                 </li>
                 <li class="head-nav-gonglve" id="head_3"><a href="${pageContext.request.contextPath}/content_list"
@@ -48,11 +45,11 @@
                         <span>穷游商城<%--<i class="icon-caret-down"></i>--%></span>
                     </a>
                 </li>
-                <li class="head-nav-place" id="head_4"><a href="http://www.mafengwo.cn/hotel/"
+                <li class="head-nav-place" id="head_4"><a href="#"
                                                           title="论坛">论坛</a>
                 </li>
                 <li class="head-nav-place" id="_j_nav_community">
-                    <a href="" title="留言薄">留言薄</a>
+                    <a href="#" title="留言薄">留言薄</a>
                 </li>
 
             </ul>
@@ -76,7 +73,7 @@
 <%--begin--%>
 <div class="container clearfix">
     <div class="col-main">
-        <div class="crumb"><a href="/gonglve/">旅游攻略首页</a> > ${travel.title}</div>
+        <div class="crumb"><a href="#">旅游攻略首页</a> > ${travel.title}</div>
         <h1 class="art-title">${travel.title}</h1>
         <div class="art-meta">
             <span>${travel.time}</span>
@@ -85,7 +82,7 @@
             ${travel.context}
 
 
-            <a href="http://m.mafengwo.cn/nb/public/sharejump.php?type=3&amp;id=7896684&amp;poi_type_id=1" class="poi" target="_blank">
+            <a href="${pageContext.request.contextPath}" class="poi" target="_blank">
                 <dl>
                     <dt><img src="http://b1-q.mafengwo.net/s6/M00/63/6A/wKgB4lMJqHiATh0nAAlRqnWGd5A25.jpeg?imageMogr2%2Fthumbnail%2F%21220x150r%2Fgravity%2FCenter%2Fcrop%2F%21220x150%2Fquality%2F100" width="220" height="150"></dt>
                     <dd>

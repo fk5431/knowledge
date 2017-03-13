@@ -1,5 +1,6 @@
 <%@ page import="java.util.List" %>
 <%@ page import="com.fk.bean.TravelBean" %>
+<%@ page import="com.fk.bean.OrdersBean" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -208,36 +209,21 @@
             <div class="hd">爆款热卖</div>
             <div class="bd">
                 <ul class="clearfix">
+                    <%
+                        List<OrdersBean> indexshop = (List) request.getAttribute("orders");
+                        for (int i = 0; i <indexshop.size(); i++) {
+                    %>
                     <li class="item ">
-                        <a href="#" target="_blank">
+                        <a href="${pageContext.request.contextPath}/shop?id=<%=indexshop.get(i).getId()%>" target="_blank">
                             <div class="image">
-                                <img src="${pageContext.request.contextPath}/images/shop_1.jpeg"
+                                <img src="<%=indexshop.get(i).getImage()%>"
                                      width="220" height="135">
                             </div>
-                            <h3>北京直飞东京4-14天往返含税机票（含行李托运/机票）</h3>
-                            <div class="price">￥<strong>1799</strong><em>起/人</em></div>
+                            <h3><%=indexshop.get(i).getTitle()%></h3>
+                            <div class="price">￥<strong><%=indexshop.get(i).getPrice()%></strong><em>起/人</em></div>
                         </a>
                     </li>
-                    <li class="item ">
-                        <a href="#" target="_blank">
-                            <div class="image">
-                                <img src="${pageContext.request.contextPath}/images/shop_2.jpeg"
-                                     width="220" height="135">
-                            </div>
-                            <h3>【大学生穷游网推荐 北京送签】韩国单次旅游签证（北京户籍可简化材料办理/可加急/拒签退全款/包回邮）</h3>
-                            <div class="price">￥<strong>245</strong><em>起/本</em></div>
-                        </a>
-                    </li>
-                    <li class="item ">
-                        <a href="#" target="_blank">
-                            <div class="image">
-                                <img src="${pageContext.request.contextPath}/images/shop_3.jpeg"
-                                     width="220" height="135">
-                            </div>
-                            <h3>【清明/五一假期】广州往返泰国曼谷5/6日含税机票（可搭配首晚酒店）赠目的地管家服务+电子地图</h3>
-                            <div class="price">￥<strong>1099</strong><em>起/人</em></div>
-                        </a>
-                    </li>
+                    <% } %>
                 </ul>
             </div>
         </div>
@@ -249,19 +235,16 @@
 
                     <li class="active _j_gs_tab"><a href="javascript:void(0);"
                                                     data-objid="0">热门攻略</a></li>
-                    <li class="_j_gs_tab"><a href="javascript:void(0);" >最新发表</a></li>
                 </ul>
                 <div class="tn-write"><a class="btn-add" href="/note/create_index.php" target="_blank"
                                          rel="nofollow"><i></i>写攻略</a></div>
-                <a class="tn-tips" href="/i/5500499.html" target="_blank"><i></i>我要上首页</a>
+                <a class="tn-tips" href="#" target="_blank"><i></i>我要上首页</a>
             </div>
             <div class="tn-selected _j_tag_choose_container">
 
             </div>
 
-            <div id="pagelet-block-d373e99b975b2c008689531b496d25bc" class="pagelet-block"
-                 data-api=":mfw:pagelet:recommendGinfoApi" data-params="{&quot;type&quot;:&quot;0&quot;}" data-async="1"
-                 data-controller="/js/index/ControllerRecommend">
+            <div id="pagelet-block-d373e99b975b2c008689531b496d25bc" class="pagelet-block">
                 <div id="_j_tn_content">
                     <div class="tn-list">
                         <% List<TravelBean> travelList = (List) request.getAttribute("travelList");
@@ -336,7 +319,7 @@
         <div class="asidebox box-gonglve">
             <div class="asidebox-hd">
                 <h2 class="hd-title">旅游攻略推荐</h2>
-                <a class="hd-right" href="/gonglve/">更多</a>
+                <a class="hd-right" href="#">更多</a>
             </div>
             <div class="asidebox-bd">
                 <dl class="clearfix">
