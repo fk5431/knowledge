@@ -42,7 +42,7 @@
                                                                                 title="旅游攻略">旅游攻略</a>
                 </li>
                 <li class="head-nav-place" id="_j_nav_sales" >
-                    <a href="${pageContext.request.contextPath}/shop"
+                    <a href="${pageContext.request.contextPath}/sales"
                         data-sales-nav="穷游商城">
                         <span>穷游商城<%--<i class="icon-caret-down"></i>--%></span>
                     </a>
@@ -236,7 +236,7 @@
                     <li class="active _j_gs_tab"><a href="javascript:void(0);"
                                                     data-objid="0">热门攻略</a></li>
                 </ul>
-                <div class="tn-write"><a class="btn-add" href="/note/create_index.php" target="_blank"
+                <div class="tn-write"><a class="btn-add" href="#" target="_blank"
                                          rel="nofollow"><i></i>写攻略</a></div>
                 <a class="tn-tips" href="#" target="_blank"><i></i>我要上首页</a>
             </div>

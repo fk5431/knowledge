@@ -49,7 +49,7 @@ public class ShopC {
     private static final int SIZE = CommonConst.SIX_INT;
 
     @RequestMapping("/shop")
-    public String context_list(HttpServletRequest request, Map<String, Object> map){
+    public String shop(HttpServletRequest request, Map<String, Object> map){
         map.put("index", CommonConst.FOUR_INT);
 
         String id = request.getParameter("id");
@@ -69,6 +69,14 @@ public class ShopC {
         return "shop";
     }
 
+    @RequestMapping("/sales")
+    public String sales(HttpServletRequest request, Map<String, Object> map){
+        map.put("index", CommonConst.FOUR_INT);
+
+
+        return "sales";
+    }
+
     @RequestMapping("count_shop")
     public String addCount(HttpServletRequest request, Map<String, Object> map){
         String id = request.getParameter("id");
@@ -77,7 +85,7 @@ public class ShopC {
             ordersBean.setCount(ordersBean.getCount() + CommonConst.ONE_INT);
             ordersService.updateByPrimaryKey(ordersBean);
         }
-        return context_list(request, map);
+        return shop(request, map);
     }
 
     private List<HotelBean> getHotels(String hotel) {
