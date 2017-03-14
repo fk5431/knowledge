@@ -4,29 +4,27 @@
     <resultMap id="BaseResultMap" type="com.fk.bean.MovieBean" >
         <id column="id" property="id" jdbcType="INTEGER" />
         <result column="title" property="title" jdbcType="VARCHAR" />
-        <result column="movietime" property="movietime" jdbcType="DATE" />
-        <result column="venue" property="venue" jdbcType="VARCHAR" />
-        <result column="screenings" property="screenings" jdbcType="VARCHAR" />
-        <result column="tickettime" property="tickettime" jdbcType="DATE" />
-        <result column="price" property="price" jdbcType="INTEGER" />
-        <result column="artist" property="artist" jdbcType="VARCHAR" />
-        <result column="duration" property="duration" jdbcType="VARCHAR" />
-        <result column="type" property="type" jdbcType="INTEGER" />
-    </resultMap>
-    <resultMap id="ResultMapWithBLOBs" type="com.fk.bean.MovieBean" extends="BaseResultMap" >
+        <result column="etitle" property="etitle" jdbcType="VARCHAR" />
+        <result column="type" property="type" jdbcType="VARCHAR" />
+        <result column="area" property="area" jdbcType="VARCHAR" />
+        <result column="time" property="time" jdbcType="VARCHAR" />
+        <result column="showtime" property="showtime" jdbcType="DATE" />
+        <result column="lookcount" property="lookcount" jdbcType="INTEGER" />
+        <result column="score" property="score" jdbcType="DOUBLE" />
+        <result column="boxoffice" property="boxoffice" jdbcType="INTEGER" />
+        <result column="directorId" property="directorid" jdbcType="INTEGER" />
+        <result column="performerIds" property="performerids" jdbcType="VARCHAR" />
+        <result column="prizeIds" property="prizeids" jdbcType="VARCHAR" />
+        <result column="image" property="image" jdbcType="VARCHAR" />
         <result column="introduce" property="introduce" jdbcType="LONGVARCHAR" />
+        <result column="atlas" property="atlas" jdbcType="LONGVARCHAR" />
     </resultMap>
     <sql id="Base_Column_List" >
-        id, title, movietime, venue, screenings, tickettime, price, artist, duration, type
-    </sql>
-    <sql id="Blob_Column_List" >
-        introduce
+        id, title, etitle, type, area, time, showtime, lookcount, score, boxoffice, directorId, performerIds, prizeIds, image,introduce, atlas
     </sql>
     <select id="selectByPrimaryKey" resultMap="ResultMapWithBLOBs" parameterType="java.lang.Integer" >
         select
         <include refid="Base_Column_List" />
-        ,
-        <include refid="Blob_Column_List" />
         from movie
         where id = #{id,jdbcType=INTEGER}
     </select>
@@ -35,14 +33,18 @@
         where id = #{id,jdbcType=INTEGER}
     </delete>
     <insert id="insert" parameterType="com.fk.bean.MovieBean" >
-        insert into movie (id, title, movietime,
-        venue, screenings, tickettime,
-        price, artist, duration,
-        type, introduce)
-        values (#{id,jdbcType=INTEGER}, #{title,jdbcType=VARCHAR}, #{movietime,jdbcType=DATE},
-        #{venue,jdbcType=VARCHAR}, #{screenings,jdbcType=VARCHAR}, #{tickettime,jdbcType=DATE},
-        #{price,jdbcType=INTEGER}, #{artist,jdbcType=VARCHAR}, #{duration,jdbcType=VARCHAR},
-        #{type,jdbcType=INTEGER}, #{introduce,jdbcType=LONGVARCHAR})
+        insert into movie (id, title, etitle,
+      type, area, time, showtime,
+      lookcount, score, boxoffice,
+      directorId, performerIds, prizeIds,
+      image, introduce, atlas
+      )
+    values (#{id,jdbcType=INTEGER}, #{title,jdbcType=VARCHAR}, #{etitle,jdbcType=VARCHAR},
+      #{type,jdbcType=VARCHAR}, #{area,jdbcType=VARCHAR}, #{time,jdbcType=VARCHAR}, #{showtime,jdbcType=DATE},
+      #{lookcount,jdbcType=INTEGER}, #{score,jdbcType=DOUBLE}, #{boxoffice,jdbcType=INTEGER},
+      #{directorid,jdbcType=INTEGER}, #{performerids,jdbcType=VARCHAR}, #{prizeids,jdbcType=VARCHAR},
+      #{image,jdbcType=VARCHAR}, #{introduce,jdbcType=LONGVARCHAR}, #{atlas,jdbcType=LONGVARCHAR}
+      )
     </insert>
     <insert id="insertSelective" parameterType="com.fk.bean.MovieBean" >
         insert into movie
@@ -53,32 +55,47 @@
             <if test="title != null" >
                 title,
             </if>
-            <if test="movietime != null" >
-                movietime,
-            </if>
-            <if test="venue != null" >
-                venue,
-            </if>
-            <if test="screenings != null" >
-                screenings,
-            </if>
-            <if test="tickettime != null" >
-                tickettime,
-            </if>
-            <if test="price != null" >
-                price,
-            </if>
-            <if test="artist != null" >
-                artist,
-            </if>
-            <if test="duration != null" >
-                duration,
+            <if test="etitle != null" >
+                etitle,
             </if>
             <if test="type != null" >
                 type,
             </if>
+            <if test="area != null" >
+                area,
+            </if>
+            <if test="time != null" >
+                time,
+            </if>
+            <if test="showtime != null" >
+                showtime,
+            </if>
+            <if test="lookcount != null" >
+                lookcount,
+            </if>
+            <if test="score != null" >
+                score,
+            </if>
+            <if test="boxoffice != null" >
+                boxoffice,
+            </if>
+            <if test="directorid != null" >
+                directorId,
+            </if>
+            <if test="performerids != null" >
+                performerIds,
+            </if>
+            <if test="prizeids != null" >
+                prizeIds,
+            </if>
+            <if test="image != null" >
+                image,
+            </if>
             <if test="introduce != null" >
                 introduce,
+            </if>
+            <if test="atlas != null" >
+                atlas,
             </if>
         </trim>
         <trim prefix="values (" suffix=")" suffixOverrides="," >
@@ -88,32 +105,47 @@
             <if test="title != null" >
                 #{title,jdbcType=VARCHAR},
             </if>
-            <if test="movietime != null" >
-                #{movietime,jdbcType=DATE},
-            </if>
-            <if test="venue != null" >
-                #{venue,jdbcType=VARCHAR},
-            </if>
-            <if test="screenings != null" >
-                #{screenings,jdbcType=VARCHAR},
-            </if>
-            <if test="tickettime != null" >
-                #{tickettime,jdbcType=DATE},
-            </if>
-            <if test="price != null" >
-                #{price,jdbcType=INTEGER},
-            </if>
-            <if test="artist != null" >
-                #{artist,jdbcType=VARCHAR},
-            </if>
-            <if test="duration != null" >
-                #{duration,jdbcType=VARCHAR},
+            <if test="etitle != null" >
+                #{etitle,jdbcType=VARCHAR},
             </if>
             <if test="type != null" >
-                #{type,jdbcType=INTEGER},
+                #{type,jdbcType=VARCHAR},
+            </if>
+            <if test="area != null" >
+                #{area,jdbcType=VARCHAR},
+            </if>
+            <if test="time != null" >
+                #{time,jdbcType=VARCHAR},
+            </if>
+            <if test="showtime != null" >
+                #{showtime,jdbcType=DATE},
+            </if>
+            <if test="lookcount != null" >
+                #{lookcount,jdbcType=INTEGER},
+            </if>
+            <if test="score != null" >
+                #{score,jdbcType=DOUBLE},
+            </if>
+            <if test="boxoffice != null" >
+                #{boxoffice,jdbcType=INTEGER},
+            </if>
+            <if test="directorid != null" >
+                #{directorid,jdbcType=INTEGER},
+            </if>
+            <if test="performerids != null" >
+                #{performerids,jdbcType=VARCHAR},
+            </if>
+            <if test="prizeids != null" >
+                #{prizeids,jdbcType=VARCHAR},
+            </if>
+            <if test="image != null" >
+                #{image,jdbcType=VARCHAR},
             </if>
             <if test="introduce != null" >
                 #{introduce,jdbcType=LONGVARCHAR},
+            </if>
+            <if test="atlas != null" >
+                #{atlas,jdbcType=LONGVARCHAR},
             </if>
         </trim>
     </insert>
@@ -123,61 +155,68 @@
             <if test="title != null" >
                 title = #{title,jdbcType=VARCHAR},
             </if>
-            <if test="movietime != null" >
-                movietime = #{movietime,jdbcType=DATE},
-            </if>
-            <if test="venue != null" >
-                venue = #{venue,jdbcType=VARCHAR},
-            </if>
-            <if test="screenings != null" >
-                screenings = #{screenings,jdbcType=VARCHAR},
-            </if>
-            <if test="tickettime != null" >
-                tickettime = #{tickettime,jdbcType=DATE},
-            </if>
-            <if test="price != null" >
-                price = #{price,jdbcType=INTEGER},
-            </if>
-            <if test="artist != null" >
-                artist = #{artist,jdbcType=VARCHAR},
-            </if>
-            <if test="duration != null" >
-                duration = #{duration,jdbcType=VARCHAR},
+            <if test="etitle != null" >
+                etitle = #{etitle,jdbcType=VARCHAR},
             </if>
             <if test="type != null" >
-                type = #{type,jdbcType=INTEGER},
+                type = #{type,jdbcType=VARCHAR},
+            </if>
+            <if test="area != null" >
+                area = #{area,jdbcType=VARCHAR},
+            </if>
+            <if test="time != null" >
+                time = #{time,jdbcType=VARCHAR},
+            </if>
+            <if test="showtime != null" >
+                showtime = #{showtime,jdbcType=DATE},
+            </if>
+            <if test="lookcount != null" >
+                lookcount = #{lookcount,jdbcType=INTEGER},
+            </if>
+            <if test="score != null" >
+                score = #{score,jdbcType=DOUBLE},
+            </if>
+            <if test="boxoffice != null" >
+                boxoffice = #{boxoffice,jdbcType=INTEGER},
+            </if>
+            <if test="directorid != null" >
+                directorId = #{directorid,jdbcType=INTEGER},
+            </if>
+            <if test="performerids != null" >
+                performerIds = #{performerids,jdbcType=VARCHAR},
+            </if>
+            <if test="prizeids != null" >
+                prizeIds = #{prizeids,jdbcType=VARCHAR},
+            </if>
+            <if test="image != null" >
+                image = #{image,jdbcType=VARCHAR},
             </if>
             <if test="introduce != null" >
                 introduce = #{introduce,jdbcType=LONGVARCHAR},
             </if>
+            <if test="atlas != null" >
+                atlas = #{atlas,jdbcType=LONGVARCHAR},
+            </if>
         </set>
         where id = #{id,jdbcType=INTEGER}
     </update>
-    <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.fk.bean.MovieBean" >
-        update movie
-        set title = #{title,jdbcType=VARCHAR},
-        movietime = #{movietime,jdbcType=DATE},
-        venue = #{venue,jdbcType=VARCHAR},
-        screenings = #{screenings,jdbcType=VARCHAR},
-        tickettime = #{tickettime,jdbcType=DATE},
-        price = #{price,jdbcType=INTEGER},
-        artist = #{artist,jdbcType=VARCHAR},
-        duration = #{duration,jdbcType=VARCHAR},
-        type = #{type,jdbcType=INTEGER},
-        introduce = #{introduce,jdbcType=LONGVARCHAR}
-        where id = #{id,jdbcType=INTEGER}
-    </update>
     <update id="updateByPrimaryKey" parameterType="com.fk.bean.MovieBean" >
-        update movie
-        set title = #{title,jdbcType=VARCHAR},
-        movietime = #{movietime,jdbcType=DATE},
-        venue = #{venue,jdbcType=VARCHAR},
-        screenings = #{screenings,jdbcType=VARCHAR},
-        tickettime = #{tickettime,jdbcType=DATE},
-        price = #{price,jdbcType=INTEGER},
-        artist = #{artist,jdbcType=VARCHAR},
-        duration = #{duration,jdbcType=VARCHAR},
-        type = #{type,jdbcType=INTEGER}
-        where id = #{id,jdbcType=INTEGER}
+       update movie
+    set title = #{title,jdbcType=VARCHAR},
+      etitle = #{etitle,jdbcType=VARCHAR},
+      type = #{type,jdbcType=VARCHAR},
+      area = #{area,jdbcType=VARCHAR},
+      time = #{time,jdbcType=VARCHAR},
+      showtime = #{showtime,jdbcType=DATE},
+      lookcount = #{lookcount,jdbcType=INTEGER},
+      score = #{score,jdbcType=DOUBLE},
+      boxoffice = #{boxoffice,jdbcType=INTEGER},
+      directorId = #{directorid,jdbcType=INTEGER},
+      performerIds = #{performerids,jdbcType=VARCHAR},
+      prizeIds = #{prizeids,jdbcType=VARCHAR},
+      image = #{image,jdbcType=VARCHAR},
+      introduce = #{introduce,jdbcType=LONGVARCHAR},
+      atlas = #{atlas,jdbcType=LONGVARCHAR}
+    where id = #{id,jdbcType=INTEGER}
     </update>
 </mapper>

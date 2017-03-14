@@ -7,23 +7,49 @@ public class MovieBean {
 
     private String title;
 
-    private Date movietime;
+    private String etitle;
 
-    private String venue;
+    private String type;
 
-    private String screenings;
+    private String area;
 
-    private Date tickettime;
+    private String time;
 
-    private Integer price;
+    private Date showtime;
 
-    private String artist;
+    private Integer lookcount;
 
-    private String duration;
+    private Double score;
 
-    private Integer type;
+    private Integer boxoffice;
+
+    private Integer directorid;
+
+    private String performerids;
+
+    private String prizeids;
+
+    private String image;
 
     private String introduce;
+
+    private String atlas;
+
+    public String getIntroduce() {
+        return introduce;
+    }
+
+    public void setIntroduce(String introduce) {
+        this.introduce = introduce == null ? null : introduce.trim();
+    }
+
+    public String getAtlas() {
+        return atlas;
+    }
+
+    public void setAtlas(String atlas) {
+        this.atlas = atlas == null ? null : atlas.trim();
+    }
 
     public Integer getId() {
         return id;
@@ -41,75 +67,99 @@ public class MovieBean {
         this.title = title == null ? null : title.trim();
     }
 
-    public Date getMovietime() {
-        return movietime;
+    public String getEtitle() {
+        return etitle;
     }
 
-    public void setMovietime(Date movietime) {
-        this.movietime = movietime;
+    public void setEtitle(String etitle) {
+        this.etitle = etitle == null ? null : etitle.trim();
     }
 
-    public String getVenue() {
-        return venue;
-    }
-
-    public void setVenue(String venue) {
-        this.venue = venue == null ? null : venue.trim();
-    }
-
-    public String getScreenings() {
-        return screenings;
-    }
-
-    public void setScreenings(String screenings) {
-        this.screenings = screenings == null ? null : screenings.trim();
-    }
-
-    public Date getTickettime() {
-        return tickettime;
-    }
-
-    public void setTickettime(Date tickettime) {
-        this.tickettime = tickettime;
-    }
-
-    public Integer getPrice() {
-        return price;
-    }
-
-    public void setPrice(Integer price) {
-        this.price = price;
-    }
-
-    public String getArtist() {
-        return artist;
-    }
-
-    public void setArtist(String artist) {
-        this.artist = artist == null ? null : artist.trim();
-    }
-
-    public String getDuration() {
-        return duration;
-    }
-
-    public void setDuration(String duration) {
-        this.duration = duration == null ? null : duration.trim();
-    }
-
-    public Integer getType() {
+    public String getType() {
         return type;
     }
 
-    public void setType(Integer type) {
-        this.type = type;
+    public void setType(String type) {
+        this.type = type == null ? null : type.trim();
     }
 
-    public String getIntroduce() {
-        return introduce;
+    public String getArea() {
+        return area;
     }
 
-    public void setIntroduce(String introduce) {
-        this.introduce = introduce == null ? null : introduce.trim();
+    public void setArea(String area) {
+        this.area = area == null ? null : area.trim();
+    }
+
+    public String getTime() {
+        return time;
+    }
+
+    public void setTime(String time) {
+        this.time = time == null ? null : time.trim();
+    }
+
+    public Date getShowtime() {
+        return showtime;
+    }
+
+    public void setShowtime(Date showtime) {
+        this.showtime = showtime;
+    }
+
+    public Integer getLookcount() {
+        return lookcount;
+    }
+
+    public void setLookcount(Integer lookcount) {
+        this.lookcount = lookcount;
+    }
+
+    public Double getScore() {
+        return score;
+    }
+
+    public void setScore(Double score) {
+        this.score = score;
+    }
+
+    public Integer getBoxoffice() {
+        return boxoffice;
+    }
+
+    public void setBoxoffice(Integer boxoffice) {
+        this.boxoffice = boxoffice;
+    }
+
+    public Integer getDirectorid() {
+        return directorid;
+    }
+
+    public void setDirectorid(Integer directorid) {
+        this.directorid = directorid;
+    }
+
+    public String getPerformerids() {
+        return performerids;
+    }
+
+    public void setPerformerids(String performerids) {
+        this.performerids = performerids == null ? null : performerids.trim();
+    }
+
+    public String getPrizeids() {
+        return prizeids;
+    }
+
+    public void setPrizeids(String prizeids) {
+        this.prizeids = prizeids == null ? null : prizeids.trim();
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image == null ? null : image.trim();
     }
 }

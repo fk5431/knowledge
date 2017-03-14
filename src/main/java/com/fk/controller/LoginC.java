@@ -28,8 +28,8 @@ public class LoginC {
 
     @RequestMapping("/")
     public String index( Map<String, Object> map){
-        map.put("login", 1);
-        return "login";
+        //map.put("login", 1);
+        return "index";
     }
 
     @RequestMapping(value = "/login", method = RequestMethod.POST)

@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.fk.dao.PerformerDao" >
+  <resultMap id="BaseResultMap" type="com.fk.bean.PerformerBean" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="name" property="name" jdbcType="VARCHAR" />
+    <result column="ename" property="ename" jdbcType="VARCHAR" />
+    <result column="birth" property="birth" jdbcType="DATE" />
+    <result column="fan" property="fan" jdbcType="INTEGER" />
+    <result column="boxoffice" property="boxoffice" jdbcType="DOUBLE" />
+    <result column="works" property="works" jdbcType="VARCHAR" />
+    <result column="introduce" property="introduce" jdbcType="VARCHAR" />
+    <result column="birthplace" property="birthplace" jdbcType="VARCHAR" />
+    <result column="sex" property="sex" jdbcType="VARCHAR" />
+    <result column="constellation" property="constellation" jdbcType="VARCHAR" />
+    <result column="prizeIds" property="prizeids" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, name, ename, birth, fan, boxoffice, works, introduce, birthplace, sex, constellation, 
+    prizeIds
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from performer
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from performer
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.fk.bean.PerformerBean" >
+    insert into performer (id, name, ename, 
+      birth, fan, boxoffice, 
+      works, introduce, birthplace, 
+      sex, constellation, prizeIds
+      )
+    values (#{id,jdbcType=INTEGER}, #{name,jdbcType=VARCHAR}, #{ename,jdbcType=VARCHAR}, 
+      #{birth,jdbcType=DATE}, #{fan,jdbcType=INTEGER}, #{boxoffice,jdbcType=DOUBLE}, 
+      #{works,jdbcType=VARCHAR}, #{introduce,jdbcType=VARCHAR}, #{birthplace,jdbcType=VARCHAR}, 
+      #{sex,jdbcType=VARCHAR}, #{constellation,jdbcType=VARCHAR}, #{prizeids,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.fk.bean.PerformerBean" >
+    insert into performer
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="name != null" >
+        name,
+      </if>
+      <if test="ename != null" >
+        ename,
+      </if>
+      <if test="birth != null" >
+        birth,
+      </if>
+      <if test="fan != null" >
+        fan,
+      </if>
+      <if test="boxoffice != null" >
+        boxoffice,
+      </if>
+      <if test="works != null" >
+        works,
+      </if>
+      <if test="introduce != null" >
+        introduce,
+      </if>
+      <if test="birthplace != null" >
+        birthplace,
+      </if>
+      <if test="sex != null" >
+        sex,
+      </if>
+      <if test="constellation != null" >
+        constellation,
+      </if>
+      <if test="prizeids != null" >
+        prizeIds,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="name != null" >
+        #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="ename != null" >
+        #{ename,jdbcType=VARCHAR},
+      </if>
+      <if test="birth != null" >
+        #{birth,jdbcType=DATE},
+      </if>
+      <if test="fan != null" >
+        #{fan,jdbcType=INTEGER},
+      </if>
+      <if test="boxoffice != null" >
+        #{boxoffice,jdbcType=DOUBLE},
+      </if>
+      <if test="works != null" >
+        #{works,jdbcType=VARCHAR},
+      </if>
+      <if test="introduce != null" >
+        #{introduce,jdbcType=VARCHAR},
+      </if>
+      <if test="birthplace != null" >
+        #{birthplace,jdbcType=VARCHAR},
+      </if>
+      <if test="sex != null" >
+        #{sex,jdbcType=VARCHAR},
+      </if>
+      <if test="constellation != null" >
+        #{constellation,jdbcType=VARCHAR},
+      </if>
+      <if test="prizeids != null" >
+        #{prizeids,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.fk.bean.PerformerBean" >
+    update performer
+    <set >
+      <if test="name != null" >
+        name = #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="ename != null" >
+        ename = #{ename,jdbcType=VARCHAR},
+      </if>
+      <if test="birth != null" >
+        birth = #{birth,jdbcType=DATE},
+      </if>
+      <if test="fan != null" >
+        fan = #{fan,jdbcType=INTEGER},
+      </if>
+      <if test="boxoffice != null" >
+        boxoffice = #{boxoffice,jdbcType=DOUBLE},
+      </if>
+      <if test="works != null" >
+        works = #{works,jdbcType=VARCHAR},
+      </if>
+      <if test="introduce != null" >
+        introduce = #{introduce,jdbcType=VARCHAR},
+      </if>
+      <if test="birthplace != null" >
+        birthplace = #{birthplace,jdbcType=VARCHAR},
+      </if>
+      <if test="sex != null" >
+        sex = #{sex,jdbcType=VARCHAR},
+      </if>
+      <if test="constellation != null" >
+        constellation = #{constellation,jdbcType=VARCHAR},
+      </if>
+      <if test="prizeids != null" >
+        prizeIds = #{prizeids,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.fk.bean.PerformerBean" >
+    update performer
+    set name = #{name,jdbcType=VARCHAR},
+      ename = #{ename,jdbcType=VARCHAR},
+      birth = #{birth,jdbcType=DATE},
+      fan = #{fan,jdbcType=INTEGER},
+      boxoffice = #{boxoffice,jdbcType=DOUBLE},
+      works = #{works,jdbcType=VARCHAR},
+      introduce = #{introduce,jdbcType=VARCHAR},
+      birthplace = #{birthplace,jdbcType=VARCHAR},
+      sex = #{sex,jdbcType=VARCHAR},
+      constellation = #{constellation,jdbcType=VARCHAR},
+      prizeIds = #{prizeids,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>
