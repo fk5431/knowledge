@@ -1,4 +1,6 @@
-<%--
+<%@ page import="java.util.List" %>
+<%@ page import="com.fk.bean.IndexshowBean" %>
+<%@ page import="com.fk.bean.NewsBean" %><%--
   Created by IntelliJ IDEA.
   User: fengkai
   Date: 15/02/17
@@ -20,14 +22,14 @@
 <body>
 <div class="header">
     <div class="header-inner">
-        <a href="http://maoyan.com/" class="logo" data-act="icon-click"></a>
+        <a href="${pageContext.request.contextPath}" class="logo" data-act="icon-click"></a>
 
         <div class="nav">
             <ul class="navbar">
-                <li><a href="http://maoyan.com/" data-act="home-click" class="active">首页</a></li>
-                <li><a href="http://maoyan.com/films" data-act="movies-click">电影</a></li>
-                <li><a href="http://maoyan.com/board" data-act="board-click">榜单</a></li>
-                <li><a href="http://maoyan.com/news" data-act="hotNews-click">热点</a></li>
+                <li><a href="${pageContext.request.contextPath}" id="index_1" class="active">首页</a></li>
+                <li><a href="#"  id="index_2">电影</a></li>
+                <li><a href="#" id="index_3">榜单</a></li>
+                <li><a href="#"  id="index_4">热点</a></li>
             </ul>
         </div>
 
@@ -62,10 +64,13 @@
 <div class="header-placeholder"></div>
 <div id="slider">
     <ul class="slides clearfix">
-        <li><img class="responsive" src="${pageContext.request.contextPath}/image/1.jpg"></li>
-        <li><img class="responsive" src="${pageContext.request.contextPath}/image/2.jpg"></li>
-        <li><img class="responsive" src="${pageContext.request.contextPath}/image/3.jpg"></li>
-        <li><img class="responsive" src="${pageContext.request.contextPath}/image/4.jpg"></li>
+        <%
+            List<NewsBean> newsBeanList = (List)request.getAttribute("indexshow");
+            for(int i=0;i<newsBeanList.size();i++){
+        %>
+        <li><a href="${pageContext.request.contextPath}/news?id=<%=newsBeanList.get(i).getId()%>">
+            <img class="responsive" src="<%=newsBeanList.get(i).getImage()%>"></a></li>
+        <% } %>
     </ul>
     <ul class="controls">
         <li><img src="${pageContext.request.contextPath}/image/prev.png" alt="previous"></li>
@@ -96,7 +101,7 @@
                                     <div class="ranking-top-left">
                                         <i class="ranking-top-icon"></i>
                                         <img class="ranking-img  default-img"
-                                             src="${pageContext.request.contextPath}/image/816948820288778c5a44fee5abbfa93c85612.jpg@120w_80h_1e_1c">
+                                             src="${pageContext.request.contextPath}/image/file/816948820288778c5a44fee5abbfa93c85612.jpg@120w_80h_1e_1c">
                                     </div>
                                     <div class="ranking-top-right">
                                         <div class="ranking-top-right-main">
@@ -618,7 +623,7 @@
                                         <div class="movie-poster">
                                             <img class="poster-default"
                                                  src="${pageContext.request.contextPath}/image/loading_2.e3d934bf.png">
-                                            <img src="${pageContext.request.contextPath}/image/0ec2ddc2bed2bad93017aacc473be337387115.jpg@160w_220h_1e_1c">
+                                            <img src="${pageContext.request.contextPath}/image/h1.jpg">
                                             <div class="movie-overlay movie-overlay-bg">
                                                 <div class="movie-info">
                                                     <div class="movie-score"><i class="integer">9.</i><i
@@ -645,7 +650,7 @@
                                         <div class="movie-poster">
                                             <img class="poster-default"
                                                  src="${pageContext.request.contextPath}/image/loading_2.e3d934bf.png">
-                                            <img src="${pageContext.request.contextPath}/image/0b7cc256954866593a8e79009acade71487726.jpg@160w_220h_1e_1c">
+                                            <img src="${pageContext.request.contextPath}/image/h2.jpg">
                                             <div class="movie-overlay movie-overlay-bg">
                                                 <div class="movie-info">
                                                     <div class="movie-score"><i class="integer">8.</i><i
@@ -673,7 +678,7 @@
                                         <div class="movie-poster">
                                             <img class="poster-default"
                                                  src="${pageContext.request.contextPath}/image/loading_2.e3d934bf.png">
-                                            <img src="${pageContext.request.contextPath}/image/acf88770d5b1d548bf8732b0691600a9697009.jpg@160w_220h_1e_1c">
+                                            <img src="${pageContext.request.contextPath}/image/h3.jpg">
                                             <div class="movie-overlay movie-overlay-bg">
                                                 <div class="movie-info">
                                                     <div class="movie-title" title="美女与野兽">美女与野兽</div>
@@ -697,7 +702,7 @@
                                         <div class="movie-poster">
                                             <img class="poster-default"
                                                  src="${pageContext.request.contextPath}/image/loading_2.e3d934bf.png">
-                                            <img src="${pageContext.request.contextPath}/image/f2c42c3bb14aa32726e5e6f42783a5945961833.jpeg@160w_220h_1e_1c">
+                                            <img src="${pageContext.request.contextPath}/image/hot/f2c42c3bb14aa32726e5e6f42783a5945961833.jpeg@160w_220h_1e_1c">
                                             <div class="movie-overlay movie-overlay-bg">
                                                 <div class="movie-info">
                                                     <div class="movie-score"><i class="integer">8.</i><i
@@ -725,7 +730,7 @@
                                         <div class="movie-poster">
                                             <img class="poster-default"
                                                  src="${pageContext.request.contextPath}/image/loading_2.e3d934bf.png">
-                                            <img src="${pageContext.request.contextPath}/image/7bba601685691f8d7c2bf07a1d5af2f6155618.jpg@160w_220h_1e_1c">
+                                            <img src="${pageContext.request.contextPath}/image/hot/7bba601685691f8d7c2bf07a1d5af2f6155618.jpg@160w_220h_1e_1c">
                                             <div class="movie-overlay movie-overlay-bg">
                                                 <div class="movie-info">
                                                     <div class="movie-title" title="金刚：骷髅岛">金刚：骷髅岛</div>
@@ -749,7 +754,7 @@
                                         <div class="movie-poster">
                                             <img class="poster-default"
                                                  src="${pageContext.request.contextPath}/image/loading_2.e3d934bf.png">
-                                            <img src="${pageContext.request.contextPath}/image/5be09f397d474988afaf930ac5346243715496.png@160w_220h_1e_1c">
+                                            <img src="${pageContext.request.contextPath}/image/hot/5be09f397d474988afaf930ac5346243715496.png@160w_220h_1e_1c">
                                             <div class="movie-overlay movie-overlay-bg">
                                                 <div class="movie-info">
                                                     <div class="movie-score"><i class="integer">8.</i><i
@@ -777,7 +782,7 @@
                                         <div class="movie-poster">
                                             <img class="poster-default"
                                                  src="${pageContext.request.contextPath}/image/loading_2.e3d934bf.png">
-                                            <img src="${pageContext.request.contextPath}/image/f61091a2c7dc541d472c9027ffd211856476496.jpg@160w_220h_1e_1c">
+                                            <img src="${pageContext.request.contextPath}/image/hot/f61091a2c7dc541d472c9027ffd211856476496.jpg@160w_220h_1e_1c">
                                             <div class="movie-overlay movie-overlay-bg">
                                                 <div class="movie-info">
                                                     <div class="movie-score"><i class="integer">8.</i><i
@@ -803,7 +808,7 @@
                                         <div class="movie-poster">
                                             <img class="poster-default"
                                                  src="${pageContext.request.contextPath}/image/loading_2.e3d934bf.png">
-                                            <img src="${pageContext.request.contextPath}/image/b02745ed0fb3346181bc30f2c814862f526137.jpeg@160w_220h_1e_1c">
+                                            <img src="${pageContext.request.contextPath}/image/hot/b02745ed0fb3346181bc30f2c814862f526137.jpeg@160w_220h_1e_1c">
                                             <div class="movie-overlay movie-overlay-bg">
                                                 <div class="movie-info">
                                                     <div class="movie-score"><i class="integer">4.</i><i
@@ -850,7 +855,7 @@
                                         <div class="movie-poster">
                                             <img class="poster-default"
                                                  src="${pageContext.request.contextPath}/image/loading_2.e3d934bf.png">
-                                            <img src="${pageContext.request.contextPath}/image/5674fe30c3b971e11cb07d0326a2d45e128017.jpg@160w_220h_1e_1c">
+                                            <img src="${pageContext.request.contextPath}/image/coming/5674fe30c3b971e11cb07d0326a2d45e128017.jpg@160w_220h_1e_1c">
                                             <div class="movie-overlay movie-overlay-bg">
                                                 <div class="movie-info">
                                                     <div class="movie-title" title="毛丰美">毛丰美</div>
@@ -875,7 +880,7 @@
                                         <div class="movie-poster">
                                             <img class="poster-default"
                                                  src="${pageContext.request.contextPath}/image/loading_2.e3d934bf.png">
-                                            <img src="${pageContext.request.contextPath}/image/acf88770d5b1d548bf8732b0691600a9697009.jpg@160w_220h_1e_1c">
+                                            <img src="${pageContext.request.contextPath}/image/h3.jpg">
                                             <div class="movie-overlay movie-overlay-bg">
                                                 <div class="movie-info">
                                                     <div class="movie-title" title="美女与野兽">美女与野兽</div>
@@ -902,7 +907,7 @@
                                         <div class="movie-poster">
                                             <img class="poster-default"
                                                  src="${pageContext.request.contextPath}/image/loading_2.e3d934bf.png">
-                                            <img src="${pageContext.request.contextPath}/image/cd8e2634f8b984e9fa70d1b0483bb0461008575.jpg@160w_220h_1e_1c">
+                                            <img src="${pageContext.request.contextPath}/image/coming/cd8e2634f8b984e9fa70d1b0483bb0461008575.jpg@160w_220h_1e_1c">
                                             <div class="movie-overlay movie-overlay-bg">
                                                 <div class="movie-info">
                                                     <div class="movie-title" title="通灵姐妹">通灵姐妹</div>
@@ -928,7 +933,7 @@
                                         <div class="movie-poster">
                                             <img class="poster-default"
                                                  src="${pageContext.request.contextPath}/image/loading_2.e3d934bf.png">
-                                            <img src="${pageContext.request.contextPath}/image/5df6677435174181f50583cd25ca7d182227912.jpg@160w_220h_1e_1c">
+                                            <img src="${pageContext.request.contextPath}/image/coming/5df6677435174181f50583cd25ca7d182227912.jpg@160w_220h_1e_1c">
                                             <div class="movie-overlay movie-overlay-bg">
                                                 <div class="movie-info">
                                                     <div class="movie-title" title="追击">追击</div>
@@ -953,7 +958,7 @@
                                         <div class="movie-poster">
                                             <img class="poster-default"
                                                  src="${pageContext.request.contextPath}/image/loading_2.e3d934bf.png">
-                                            <img src="${pageContext.request.contextPath}/image/2f73262d8cc882dd8d53aa08a1630a81932942.png@160w_220h_1e_1c">
+                                            <img src="${pageContext.request.contextPath}/image/5.png">
                                             <div class="movie-overlay movie-overlay-bg">
                                                 <div class="movie-info">
                                                     <div class="movie-title" title="走出尘埃">走出尘埃</div>
@@ -978,7 +983,7 @@
                                         <div class="movie-poster">
                                             <img class="poster-default"
                                                  src="${pageContext.request.contextPath}/image/loading_2.e3d934bf.png">
-                                            <img src="${pageContext.request.contextPath}/image/e648f30ee514f656ea6c33237f13473582185.jpg@160w_220h_1e_1c">
+                                            <img src="${pageContext.request.contextPath}/image/coming/e648f30ee514f656ea6c33237f13473582185.jpg@160w_220h_1e_1c">
                                             <div class="movie-overlay movie-overlay-bg">
                                                 <div class="movie-info">
                                                     <div class="movie-title" title="滚出来，凶手">滚出来，凶手</div>
@@ -1004,7 +1009,7 @@
                                         <div class="movie-poster">
                                             <img class="poster-default"
                                                  src="${pageContext.request.contextPath}/image/loading_2.e3d934bf.png">
-                                            <img src="${pageContext.request.contextPath}/image/ab81f374d84ec5a451977e445463f71a15673762.jpg@160w_220h_1e_1c">
+                                            <img src="${pageContext.request.contextPath}/image/7.jpg">
                                             <div class="movie-overlay movie-overlay-bg">
                                                 <div class="movie-info">
                                                     <div class="movie-title" title="唤爱">唤爱</div>
@@ -1029,7 +1034,7 @@
                                         <div class="movie-poster">
                                             <img class="poster-default"
                                                  src="${pageContext.request.contextPath}/image/loading_2.e3d934bf.png">
-                                            <img src="${pageContext.request.contextPath}/image/595d79697a7320759fce6f319793d20b855440.jpg@160w_220h_1e_1c">
+                                            <img src="${pageContext.request.contextPath}/image/8.jpg">
                                             <div class="movie-overlay movie-overlay-bg">
                                                 <div class="movie-info">
                                                     <div class="movie-title" title="二宝闯江湖">二宝闯江湖</div>
@@ -1107,7 +1112,7 @@
                                         <div class="movie-poster">
                                             <img class="poster-default"
                                                  src="${pageContext.request.contextPath}/image/loading_2.e3d934bf.png">
-                                            <img src="${pageContext.request.contextPath}/image/0b7cc256954866593a8e79009acade71487726.jpg@160w_220h_1e_1c">
+                                            <img src="${pageContext.request.contextPath}/image/h2.jpg">
                                             <div class="movie-overlay movie-overlay-bg">
                                                 <div class="movie-info">
                                                     <div class="movie-score"><i class="integer">8.</i><i
@@ -1130,7 +1135,7 @@
                                         <div class="movie-poster">
                                             <img class="poster-default"
                                                  src="${pageContext.request.contextPath}/image/loading_2.e3d934bf.png">
-                                            <img src="${pageContext.request.contextPath}/image/5be09f397d474988afaf930ac5346243715496.png@160w_220h_1e_1c">
+                                            <img src="${pageContext.request.contextPath}/image/hot/5be09f397d474988afaf930ac5346243715496.png@160w_220h_1e_1c">
                                             <div class="movie-overlay movie-overlay-bg">
                                                 <div class="movie-info">
                                                     <div class="movie-score"><i class="integer">8.</i><i
@@ -1153,7 +1158,7 @@
                                         <div class="movie-poster">
                                             <img class="poster-default"
                                                  src="${pageContext.request.contextPath}/image/loading_2.e3d934bf.png">
-                                            <img src="${pageContext.request.contextPath}/image/f2c42c3bb14aa32726e5e6f42783a5945961833.jpeg@160w_220h_1e_1c">
+                                            <img src="${pageContext.request.contextPath}/image/hot/f2c42c3bb14aa32726e5e6f42783a5945961833.jpeg@160w_220h_1e_1c">
                                             <div class="movie-overlay movie-overlay-bg">
                                                 <div class="movie-info">
                                                     <div class="movie-score"><i class="integer">8.</i><i
@@ -1176,7 +1181,7 @@
                                         <div class="movie-poster">
                                             <img class="poster-default"
                                                  src="${pageContext.request.contextPath}/image/loading_2.e3d934bf.png">
-                                            <img src="${pageContext.request.contextPath}/image/acf88770d5b1d548bf8732b0691600a9697009.jpg@160w_220h_1e_1c">
+                                            <img src="${pageContext.request.contextPath}/image/h3.jpg">
                                             <div class="movie-overlay movie-overlay-bg">
                                                 <div class="movie-info">
                                                     <div class="movie-title" title="美女与野兽">美女与野兽</div>
@@ -1195,7 +1200,7 @@
                                         <div class="movie-poster">
                                             <img class="poster-default"
                                                  src="${pageContext.request.contextPath}/image/loading_2.e3d934bf.png">
-                                            <img src="${pageContext.request.contextPath}/image/f61091a2c7dc541d472c9027ffd211856476496.jpg@160w_220h_1e_1c">
+                                            <img src="${pageContext.request.contextPath}/image/hot/f61091a2c7dc541d472c9027ffd211856476496.jpg@160w_220h_1e_1c">
                                             <div class="movie-overlay movie-overlay-bg">
                                                 <div class="movie-info">
                                                     <div class="movie-score"><i class="integer">8.</i><i
@@ -1216,7 +1221,7 @@
                                         <div class="movie-poster">
                                             <img class="poster-default"
                                                  src="${pageContext.request.contextPath}/image/loading_2.e3d934bf.png">
-                                            <img src="${pageContext.request.contextPath}/image/7bba601685691f8d7c2bf07a1d5af2f6155618.jpg@160w_220h_1e_1c">
+                                            <img src="${pageContext.request.contextPath}/image/hot/7bba601685691f8d7c2bf07a1d5af2f6155618.jpg@160w_220h_1e_1c">
                                             <div class="movie-overlay movie-overlay-bg">
                                                 <div class="movie-info">
                                                     <div class="movie-title" title="金刚：骷髅岛">金刚：骷髅岛</div>
@@ -1253,16 +1258,43 @@
 </script>
 <div class="footer" style="visibility: visible;">
     <p>
-        ©2016
-        猫眼电影 maoyan.com
-        <a href="https://tsm.miit.gov.cn/pages/EnterpriseSearchList_Portal.aspx?type=0&amp;keyword=%E4%BA%ACICP%E8%AF%81160733%E5%8F%B7&amp;pageNo=1"
-           target="_top">京ICP证160733号</a>
-        <a href="http://www.miibeian.gov.cn/" target="_top">京ICP备16022489号-1</a>
+        ©2017
+        福州文娱演出票务网 ${pageContext.request.contextPath}
+        <a href="*"
+           target="_top">*ICP证******号</a>
+        <a href="#" target="_top">*ICP备********号</a>
         京公网安备 11010502030881号
-        <a href="http://maoyan.com/about/licence" target="_top">网络文化经营许可证</a>
-        <a href="http://www.meituan.com/about/rules" target="_top">电子公告服务规则</a>
+        <a href="#" target="_top">网络文化经营许可证</a>
+        <a href="#" target="_top">电子公告服务规则</a>
     </p>
     <p>北京猫眼文化传媒有限公司</p>
 </div>
+<script>
+    var state = ${index};
+    if (state == 1) {
+        document.getElementById('index_1').className = 'active';
+        document.getElementById('index_2').className = '';
+        document.getElementById('index_3').className = '';
+        document.getElementById('index_4').className = '';
+    }
+    if (state == 2) {
+        document.getElementById('index_1').className = '';
+        document.getElementById('index_2').className = 'active';
+        document.getElementById('index_3').className = '';
+        document.getElementById('index_4').className = '';
+    }
+    if (state == 3) {
+        document.getElementById('index_1').className = '';
+        document.getElementById('index_2').className = '';
+        document.getElementById('index_3').className = 'active';
+        document.getElementById('index_4').className = '';
+    }
+    if (state == 4) {
+        document.getElementById('index_1').className = '';
+        document.getElementById('index_2').className = '';
+        document.getElementById('index_3').className = '';
+        document.getElementById('index_4').className = 'active';
+    }
+</script>
 </body>
 </html>

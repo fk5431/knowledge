@@ -1,7 +1,13 @@
 package com.fk.controller;
 
+import com.fk.bean.IndexshowBean;
+import com.fk.bean.NewsBean;
 import com.fk.bean.User;
+import com.fk.service.IHotmovieService;
+import com.fk.service.IIndexshowService;
+import com.fk.service.INewsService;
 import com.fk.service.IUserService;
+import com.fk.util.CommonConst;
 import com.fk.util.MD5;
 import com.fk.util.SendMail;
 import org.slf4j.Logger;
@@ -12,9 +18,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import javax.servlet.http.HttpServletRequest;
-import java.util.Date;
-import java.util.Map;
-import java.util.Random;
+import java.util.*;
 
 /**
  * Created by FK on 2017/2/3.
@@ -26,9 +30,33 @@ public class LoginC {
     @Autowired
     IUserService userService ;
 
+    @Autowired
+    IIndexshowService iIndexshowService;
+
+    @Autowired
+    INewsService newsService;
+
+    @Autowired
+    IHotmovieService hotmovieService;
+
+
     @RequestMapping("/")
     public String index( Map<String, Object> map){
-        //map.put("login", 1);
+        map.put("index", CommonConst.ONE_INT);
+
+        List<NewsBean> newsBeans = new ArrayList<>();
+        for(int i=CommonConst.ONE_INT;i<=CommonConst.FOUR_INT;i++){
+            IndexshowBean indexshowBean = iIndexshowService.selectByPrimaryKey(i);
+            if(indexshowBean !=null){
+                newsBeans.add(newsService.selectByPrimaryKey(indexshowBean.getMid()));
+            }
+        }
+        map.put("indexshow", newsBeans);
+
+
+
+
+
         return "index";
     }
 
@@ -38,8 +66,6 @@ public class LoginC {
         String password = request.getParameter("password");
         logger.debug("LoginC.login  in email[{}], password[{}].", email, password);
         User exists = userService.selectUserByEmail(email);
-        logger.debug("inputpassword[{}], mysqlpassword[{}]", MD5.encodeMD5(password), exists.getPassword());
-        logger.debug("inputpassword[{}], mysqlpassword[{}]", password, MD5.decodeMD5(exists.getPassword()));
 
         if(exists == null){
             map.put("errorcode", 2);

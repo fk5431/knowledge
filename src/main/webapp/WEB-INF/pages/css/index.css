@@ -33,7 +33,7 @@ a:focus, div:focus, input:focus { outline: medium none; }
 .header { position: fixed; top: 0px; z-index: 999; width: 100%; min-width: 1200px; background-color: rgb(255, 255, 255); border-bottom: 1px solid rgb(216, 216, 216); }
 .header .header-inner { width: 1200px; margin: 0px auto; height: 80px; }
 .header-placeholder { height: 81px; }
-.header .logo { float: left; width: 133px; height: 80px; background: transparent url('/movie/image/index.png') no-repeat scroll 0px center / contain ; }
+.header .logo { float: left; width: 133px; height: 80px; background: transparent url('/movie/image/index.jpg') no-repeat scroll 0px center / contain ; }
 .header .nav { display: inline-block; background-color: rgb(255, 255, 255); overflow: hidden; margin-left: 40px; float: left; }
 .header .nav .navbar li { float: left; }
 .header .nav .navbar li a { text-align: center; display: inline-block; height: 80px; line-height: 80px; width: 80px; font-size: 18px; color: rgb(51, 51, 51); }

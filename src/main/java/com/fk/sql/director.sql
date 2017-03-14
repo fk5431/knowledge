@@ -13,3 +13,4 @@ CREATE TABLE director(
   constellation VARCHAR(255) NOT  NULL ,
   prizeIds  VARCHAR(255)
 )DEFAULT CHARSET=utf8;
+INSERT INTO director VALUES (1,'','','1956-05-25',0,0,'','','','','','');
