@@ -1,8 +1,5 @@
 package com.fk.bean;
 
-/**
- * Created by FK on 2017/2/8.
- */
 public class User {
     private Integer id;
 
