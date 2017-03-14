@@ -10,61 +10,9 @@
     <bookmark url="file://$PROJECT_DIR$/src/main/java/com/fk/util/SendMail.java" line="96" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="11669da5-9530-45d4-b1a5-63fcb18bf569" name="Default" comment="设计数据库">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/image/hot/h3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/image/index.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/movie_war.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/movie_war_exploded.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources/f7330f1b-320a-4b22-b809-b10cbb8ffb96.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/kotlinc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/lib.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/bean/IndexshowBean.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/bean/NewsBean.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/dao/IndexshowDao.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/dao/NewsDao.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/service/IIndexshowService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/service/INewsService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/serviceImpl/IndexshowServiceImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/serviceImpl/NewsServiceImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/serviceImpl/PerformerServiceImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/serviceImpl/PrizeServiceImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/sql/indexshow.sql" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/sql/news.sql" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/util/CommonConst.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/mapping/IndexshowMapper.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/mapping/NewsMapper.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/fk/serviceImpl/IPerformerServiceImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/fk/serviceImpl/IPrizeServiceImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/image/816948820288778c5a44fee5abbfa93c85612.jpg@120w_80h_1e_1c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/image/816948820288778c5a44fee5abbfa93c85612.jpg@350w_220h_1e_1c" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/image/0b7cc256954866593a8e79009acade71487726.jpg@160w_220h_1e_1c" afterPath="$PROJECT_DIR$/src/main/webapp/image/hot/h2.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/image/0ec2ddc2bed2bad93017aacc473be337387115.jpg@160w_220h_1e_1c" afterPath="$PROJECT_DIR$/src/main/webapp/image/hot/h1.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/image/2f73262d8cc882dd8d53aa08a1630a81932942.png@160w_220h_1e_1c" afterPath="$PROJECT_DIR$/src/main/webapp/image/coming/5.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/image/5674fe30c3b971e11cb07d0326a2d45e128017.jpg@160w_220h_1e_1c" afterPath="$PROJECT_DIR$/src/main/webapp/image/coming/1.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/image/595d79697a7320759fce6f319793d20b855440.jpg@160w_220h_1e_1c" afterPath="$PROJECT_DIR$/src/main/webapp/image/coming/8.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/image/5be09f397d474988afaf930ac5346243715496.png@160w_220h_1e_1c" afterPath="$PROJECT_DIR$/src/main/webapp/image/hot/h6.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/image/5df6677435174181f50583cd25ca7d182227912.jpg@160w_220h_1e_1c" afterPath="$PROJECT_DIR$/src/main/webapp/image/coming/4.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/image/7bba601685691f8d7c2bf07a1d5af2f6155618.jpg@160w_220h_1e_1c" afterPath="$PROJECT_DIR$/src/main/webapp/image/hot/h5.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/image/ab81f374d84ec5a451977e445463f71a15673762.jpg@160w_220h_1e_1c" afterPath="$PROJECT_DIR$/src/main/webapp/image/coming/7.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/image/acf88770d5b1d548bf8732b0691600a9697009.jpg@160w_220h_1e_1c" afterPath="$PROJECT_DIR$/src/main/webapp/image/coming/2.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/image/b02745ed0fb3346181bc30f2c814862f526137.jpeg@160w_220h_1e_1c" afterPath="$PROJECT_DIR$/src/main/webapp/image/hot/h8.jpeg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/image/cd8e2634f8b984e9fa70d1b0483bb0461008575.jpg@160w_220h_1e_1c" afterPath="$PROJECT_DIR$/src/main/webapp/image/coming/3.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/image/e648f30ee514f656ea6c33237f13473582185.jpg@160w_220h_1e_1c" afterPath="$PROJECT_DIR$/src/main/webapp/image/coming/6.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/image/f2c42c3bb14aa32726e5e6f42783a5945961833.jpeg@160w_220h_1e_1c" afterPath="$PROJECT_DIR$/src/main/webapp/image/hot/h4.jpeg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/image/f61091a2c7dc541d472c9027ffd211856476496.jpg@160w_220h_1e_1c" afterPath="$PROJECT_DIR$/src/main/webapp/image/hot/h7.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/fk/controller/LoginC.class" afterPath="$PROJECT_DIR$/target/classes/com/fk/controller/LoginC.class" />
+    <list default="true" id="11669da5-9530-45d4-b1a5-63fcb18bf569" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/movie.sql" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/fk/controller/LoginC.java" afterPath="$PROJECT_DIR$/src/main/java/com/fk/controller/LoginC.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/fk/service/IHotmovieService.java" afterPath="$PROJECT_DIR$/src/main/java/com/fk/service/IHotmovieService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/fk/serviceImpl/DirectorServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/fk/serviceImpl/DirectorServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/fk/serviceImpl/ForthComingServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/fk/serviceImpl/ForthComingServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/fk/serviceImpl/HotmovieServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/fk/serviceImpl/HotmovieServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/fk/serviceImpl/IsthefileServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/fk/serviceImpl/IsthefileServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/fk/sql/director.sql" afterPath="$PROJECT_DIR$/src/main/java/com/fk/sql/director.sql" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/fk/sql/movie.sql" afterPath="$PROJECT_DIR$/src/main/java/com/fk/sql/movie.sql" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mapping/MovieMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapping/MovieMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/css/index.css" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/css/index.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/index.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/index.jsp" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -92,11 +40,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="LoginC.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="LoginC.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/fk/controller/LoginC.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="450">
               <caret line="55" column="0" lean-forward="false" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="movie.sql" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/movie.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-756">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -561,36 +519,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="movie" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="movie" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fk" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sql" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="Scratches" />
@@ -627,11 +555,11 @@
       <recent name="com.fk.dao" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources" />
+      <recent name="$PROJECT_DIR$/src/main/java/com/fk/sql" />
       <recent name="$PROJECT_DIR$/src/main/webapp/image/file" />
       <recent name="$PROJECT_DIR$/src/main/webapp/image/coming" />
       <recent name="$PROJECT_DIR$/src/main/webapp/image/hot" />
-      <recent name="$PROJECT_DIR$/src/main/webapp/image" />
-      <recent name="$PROJECT_DIR$/src/main/webapp/image/prize" />
     </key>
   </component>
   <component name="RunManager" selected="Tomcat Server.movie">
@@ -1231,7 +1159,7 @@
       <workItem from="1489454272865" duration="666000" />
       <workItem from="1489455084437" duration="53000" />
       <workItem from="1489457042235" duration="17450000" />
-      <workItem from="1489481143215" duration="4873000" />
+      <workItem from="1489481143215" duration="4987000" />
     </task>
     <task id="LOCAL-00001" summary="ssm  success">
       <created>1486712078887</created>
@@ -1289,15 +1217,22 @@
       <option name="project" value="LOCAL" />
       <updated>1489478317370</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="设计数据库">
+      <created>1489486030794</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1489486030794</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="85346000" />
+    <option name="totallyTimeSpent" value="85460000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1855" height="1056" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1315,7 +1250,7 @@
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.10703364" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23649338" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23649338" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -1361,13 +1296,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fk/sql/isthefile.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" column="22" lean-forward="true" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/fk/bean/MovieBeanWithBLOBs.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/fk/bean/MovieBean.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -1814,6 +1742,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
           <caret line="55" column="0" lean-forward="false" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/movie.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-756">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
