@@ -1,12 +1,7 @@
 package com.fk.controller;
 
-import com.fk.bean.IndexshowBean;
-import com.fk.bean.NewsBean;
-import com.fk.bean.User;
-import com.fk.service.IHotmovieService;
-import com.fk.service.IIndexshowService;
-import com.fk.service.INewsService;
-import com.fk.service.IUserService;
+import com.fk.bean.*;
+import com.fk.service.*;
 import com.fk.util.CommonConst;
 import com.fk.util.MD5;
 import com.fk.util.SendMail;
@@ -39,6 +34,15 @@ public class LoginC {
     @Autowired
     IHotmovieService hotmovieService;
 
+    @Autowired
+    IForthcomingService forthcomingService;
+
+    @Autowired
+    IIsthefileService iIsthefileService;
+
+    @Autowired
+    IMovieService movieService;
+
 
     @RequestMapping("/")
     public String index( Map<String, Object> map){
@@ -52,10 +56,44 @@ public class LoginC {
             }
         }
         map.put("indexshow", newsBeans);
+        List<MovieBean> listhot = new ArrayList<>();
+        List<HotmovieBean> hot =hotmovieService.selectAll();
+        for(int i=0;i<hot.size();i++){
+            MovieBean movieBean = movieService.selectByPrimaryKey(hot.get(i).getMovieid());
+            if(movieBean != null){
+                listhot.add(movieBean);
+            }
+        }
+        map.put("listhot", listhot);
 
+        List<MovieBean> listcoming = new ArrayList<>();
+        List<ForthcomingBean> forthcomingBean = forthcomingService.selectAll();
+        for(int i=0;i<forthcomingBean.size();i++){
+            MovieBean movieBean = movieService.selectByPrimaryKey(forthcomingBean.get(i).getMovieid());
+            if(movieBean != null){
+                listcoming.add(movieBean);
+            }
+        }
+        map.put("listcoming", listcoming);
 
+        List<MovieBean> lististhefile = new ArrayList<>();
+        List<IsthefileBean> isthefileBean = iIsthefileService.selectAll();
+        for(int i=0;i<isthefileBean.size();i++){
+            MovieBean movieBean = movieService.selectByPrimaryKey(isthefileBean.get(i).getMovieid());
+            if(movieBean != null){
+                lististhefile.add(movieBean);
+            }
+        }
+        map.put("lististhefile", lististhefile);
 
+        List<MovieBean> salered = movieService.selectSortByBoxofficeOfTen();
+        map.put("salered", salered);
 
+        List<MovieBean> look = movieService.selectSortByLookCountOfTen();
+        map.put("look", look);
+
+        List<MovieBean> score = movieService.selectSortByScoreOfTen();
+        map.put("score", score);
 
         return "index";
     }

@@ -9,6 +9,8 @@ public class PerformerBean {
 
     private String ename;
 
+    private String othername;
+
     private Date birth;
 
     private Integer fan;
@@ -21,9 +23,17 @@ public class PerformerBean {
 
     private String birthplace;
 
+    private String nationality;
+
     private String sex;
 
     private String constellation;
+
+    private String height;
+
+    private String image;
+
+    private String images;
 
     private String prizeids;
 
@@ -49,6 +59,14 @@ public class PerformerBean {
 
     public void setEname(String ename) {
         this.ename = ename == null ? null : ename.trim();
+    }
+
+    public String getOthername() {
+        return othername;
+    }
+
+    public void setOthername(String othername) {
+        this.othername = othername == null ? null : othername.trim();
     }
 
     public Date getBirth() {
@@ -99,6 +117,14 @@ public class PerformerBean {
         this.birthplace = birthplace == null ? null : birthplace.trim();
     }
 
+    public String getNationality() {
+        return nationality;
+    }
+
+    public void setNationality(String nationality) {
+        this.nationality = nationality == null ? null : nationality.trim();
+    }
+
     public String getSex() {
         return sex;
     }
@@ -113,6 +139,30 @@ public class PerformerBean {
 
     public void setConstellation(String constellation) {
         this.constellation = constellation == null ? null : constellation.trim();
+    }
+
+    public String getHeight() {
+        return height;
+    }
+
+    public void setHeight(String height) {
+        this.height = height == null ? null : height.trim();
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image == null ? null : image.trim();
+    }
+
+    public String getImages() {
+        return images;
+    }
+
+    public void setImages(String images) {
+        this.images = images == null ? null : images.trim();
     }
 
     public String getPrizeids() {

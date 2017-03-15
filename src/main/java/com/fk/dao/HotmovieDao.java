@@ -2,6 +2,8 @@ package com.fk.dao;
 
 import com.fk.bean.HotmovieBean;
 
+import java.util.List;
+
 public interface HotmovieDao {
     int deleteByPrimaryKey(Integer id);
 
@@ -14,4 +16,6 @@ public interface HotmovieDao {
     int updateByPrimaryKeySelective(HotmovieBean record);
 
     int updateByPrimaryKey(HotmovieBean record);
+
+    List<HotmovieBean> selectAll();
 }

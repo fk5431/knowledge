@@ -27,6 +27,16 @@ public class DirectorBean {
 
     private String prizeids;
 
+    private String othername;
+
+    private String nationality;
+
+    private String height;
+
+    private String images;
+
+    private String image;
+
     public Integer getId() {
         return id;
     }
@@ -121,5 +131,45 @@ public class DirectorBean {
 
     public void setPrizeids(String prizeids) {
         this.prizeids = prizeids == null ? null : prizeids.trim();
+    }
+
+    public String getOthername() {
+        return othername;
+    }
+
+    public void setOthername(String othername) {
+        this.othername = othername == null ? null : othername.trim();
+    }
+
+    public String getNationality() {
+        return nationality;
+    }
+
+    public void setNationality(String nationality) {
+        this.nationality = nationality == null ? null : nationality.trim();
+    }
+
+    public String getHeight() {
+        return height;
+    }
+
+    public void setHeight(String height) {
+        this.height = height == null ? null : height.trim();
+    }
+
+    public String getImages() {
+        return images;
+    }
+
+    public void setImages(String images) {
+        this.images = images == null ? null : images.trim();
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image == null ? null : image.trim();
     }
 }

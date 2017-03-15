@@ -5,22 +5,27 @@
     <id column="id" property="id" jdbcType="INTEGER" />
     <result column="name" property="name" jdbcType="VARCHAR" />
     <result column="ename" property="ename" jdbcType="VARCHAR" />
+    <result column="othername" property="othername" jdbcType="VARCHAR" />
     <result column="birth" property="birth" jdbcType="DATE" />
     <result column="fan" property="fan" jdbcType="INTEGER" />
     <result column="boxoffice" property="boxoffice" jdbcType="DOUBLE" />
     <result column="works" property="works" jdbcType="VARCHAR" />
     <result column="introduce" property="introduce" jdbcType="VARCHAR" />
     <result column="birthplace" property="birthplace" jdbcType="VARCHAR" />
+    <result column="nationality" property="nationality" jdbcType="VARCHAR" />
     <result column="sex" property="sex" jdbcType="VARCHAR" />
     <result column="constellation" property="constellation" jdbcType="VARCHAR" />
+    <result column="height" property="height" jdbcType="VARCHAR" />
+    <result column="image" property="image" jdbcType="VARCHAR" />
+    <result column="images" property="images" jdbcType="VARCHAR" />
     <result column="prizeIds" property="prizeids" jdbcType="VARCHAR" />
   </resultMap>
   <sql id="Base_Column_List" >
-    id, name, ename, birth, fan, boxoffice, works, introduce, birthplace, sex, constellation, 
-    prizeIds
+    id, name, ename, othername, birth, fan, boxoffice, works, introduce, birthplace,
+    nationality, sex, constellation, height, image, images, prizeIds
   </sql>
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
-    select 
+    select
     <include refid="Base_Column_List" />
     from performer
     where id = #{id,jdbcType=INTEGER}
@@ -30,16 +35,18 @@
     where id = #{id,jdbcType=INTEGER}
   </delete>
   <insert id="insert" parameterType="com.fk.bean.PerformerBean" >
-    insert into performer (id, name, ename, 
-      birth, fan, boxoffice, 
-      works, introduce, birthplace, 
-      sex, constellation, prizeIds
-      )
-    values (#{id,jdbcType=INTEGER}, #{name,jdbcType=VARCHAR}, #{ename,jdbcType=VARCHAR}, 
-      #{birth,jdbcType=DATE}, #{fan,jdbcType=INTEGER}, #{boxoffice,jdbcType=DOUBLE}, 
-      #{works,jdbcType=VARCHAR}, #{introduce,jdbcType=VARCHAR}, #{birthplace,jdbcType=VARCHAR}, 
-      #{sex,jdbcType=VARCHAR}, #{constellation,jdbcType=VARCHAR}, #{prizeids,jdbcType=VARCHAR}
-      )
+    insert into performer (id, name, ename,
+    othername, birth, fan,
+    boxoffice, works, introduce,
+    birthplace, nationality, sex,
+    constellation, height, image,
+    images, prizeIds)
+    values (#{id,jdbcType=INTEGER}, #{name,jdbcType=VARCHAR}, #{ename,jdbcType=VARCHAR},
+    #{othername,jdbcType=VARCHAR}, #{birth,jdbcType=DATE}, #{fan,jdbcType=INTEGER},
+    #{boxoffice,jdbcType=DOUBLE}, #{works,jdbcType=VARCHAR}, #{introduce,jdbcType=VARCHAR},
+    #{birthplace,jdbcType=VARCHAR}, #{nationality,jdbcType=VARCHAR}, #{sex,jdbcType=VARCHAR},
+    #{constellation,jdbcType=VARCHAR}, #{height,jdbcType=VARCHAR}, #{image,jdbcType=VARCHAR},
+    #{images,jdbcType=VARCHAR}, #{prizeids,jdbcType=VARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="com.fk.bean.PerformerBean" >
     insert into performer
@@ -52,6 +59,9 @@
       </if>
       <if test="ename != null" >
         ename,
+      </if>
+      <if test="othername != null" >
+        othername,
       </if>
       <if test="birth != null" >
         birth,
@@ -71,11 +81,23 @@
       <if test="birthplace != null" >
         birthplace,
       </if>
+      <if test="nationality != null" >
+        nationality,
+      </if>
       <if test="sex != null" >
         sex,
       </if>
       <if test="constellation != null" >
         constellation,
+      </if>
+      <if test="height != null" >
+        height,
+      </if>
+      <if test="image != null" >
+        image,
+      </if>
+      <if test="images != null" >
+        images,
       </if>
       <if test="prizeids != null" >
         prizeIds,
@@ -90,6 +112,9 @@
       </if>
       <if test="ename != null" >
         #{ename,jdbcType=VARCHAR},
+      </if>
+      <if test="othername != null" >
+        #{othername,jdbcType=VARCHAR},
       </if>
       <if test="birth != null" >
         #{birth,jdbcType=DATE},
@@ -109,11 +134,23 @@
       <if test="birthplace != null" >
         #{birthplace,jdbcType=VARCHAR},
       </if>
+      <if test="nationality != null" >
+        #{nationality,jdbcType=VARCHAR},
+      </if>
       <if test="sex != null" >
         #{sex,jdbcType=VARCHAR},
       </if>
       <if test="constellation != null" >
         #{constellation,jdbcType=VARCHAR},
+      </if>
+      <if test="height != null" >
+        #{height,jdbcType=VARCHAR},
+      </if>
+      <if test="image != null" >
+        #{image,jdbcType=VARCHAR},
+      </if>
+      <if test="images != null" >
+        #{images,jdbcType=VARCHAR},
       </if>
       <if test="prizeids != null" >
         #{prizeids,jdbcType=VARCHAR},
@@ -128,6 +165,9 @@
       </if>
       <if test="ename != null" >
         ename = #{ename,jdbcType=VARCHAR},
+      </if>
+      <if test="othername != null" >
+        othername = #{othername,jdbcType=VARCHAR},
       </if>
       <if test="birth != null" >
         birth = #{birth,jdbcType=DATE},
@@ -147,11 +187,23 @@
       <if test="birthplace != null" >
         birthplace = #{birthplace,jdbcType=VARCHAR},
       </if>
+      <if test="nationality != null" >
+        nationality = #{nationality,jdbcType=VARCHAR},
+      </if>
       <if test="sex != null" >
         sex = #{sex,jdbcType=VARCHAR},
       </if>
       <if test="constellation != null" >
         constellation = #{constellation,jdbcType=VARCHAR},
+      </if>
+      <if test="height != null" >
+        height = #{height,jdbcType=VARCHAR},
+      </if>
+      <if test="image != null" >
+        image = #{image,jdbcType=VARCHAR},
+      </if>
+      <if test="images != null" >
+        images = #{images,jdbcType=VARCHAR},
       </if>
       <if test="prizeids != null" >
         prizeIds = #{prizeids,jdbcType=VARCHAR},
@@ -163,14 +215,19 @@
     update performer
     set name = #{name,jdbcType=VARCHAR},
       ename = #{ename,jdbcType=VARCHAR},
+      othername = #{othername,jdbcType=VARCHAR},
       birth = #{birth,jdbcType=DATE},
       fan = #{fan,jdbcType=INTEGER},
       boxoffice = #{boxoffice,jdbcType=DOUBLE},
       works = #{works,jdbcType=VARCHAR},
       introduce = #{introduce,jdbcType=VARCHAR},
       birthplace = #{birthplace,jdbcType=VARCHAR},
+      nationality = #{nationality,jdbcType=VARCHAR},
       sex = #{sex,jdbcType=VARCHAR},
       constellation = #{constellation,jdbcType=VARCHAR},
+      height = #{height,jdbcType=VARCHAR},
+      image = #{image,jdbcType=VARCHAR},
+      images = #{images,jdbcType=VARCHAR},
       prizeIds = #{prizeids,jdbcType=VARCHAR}
     where id = #{id,jdbcType=INTEGER}
   </update>

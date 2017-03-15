@@ -22,6 +22,21 @@
     <sql id="Base_Column_List" >
         id, title, etitle, type, area, time, showtime, lookcount, score, boxoffice, directorId, performerIds, prizeIds, image,introduce, atlas
     </sql>
+    <select id="selectSortByScoreOfTen" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List" />
+        from movie ORDER BY score desc LIMIT 10
+    </select>
+    <select id="selectSortByLookCountOfTen" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List" />
+        from movie ORDER BY lookcount desc LIMIT 10
+    </select>
+    <select id="selectSortByBoxofficeOfTen" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List" />
+        from movie ORDER BY boxoffice desc LIMIT 10
+    </select>
     <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
         select
         <include refid="Base_Column_List" />

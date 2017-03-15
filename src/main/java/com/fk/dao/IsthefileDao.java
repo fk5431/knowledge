@@ -2,6 +2,8 @@ package com.fk.dao;
 
 import com.fk.bean.IsthefileBean;
 
+import java.util.List;
+
 public interface IsthefileDao {
     int deleteByPrimaryKey(Integer id);
 
@@ -14,4 +16,6 @@ public interface IsthefileDao {
     int updateByPrimaryKeySelective(IsthefileBean record);
 
     int updateByPrimaryKey(IsthefileBean record);
+
+    List<IsthefileBean> selectAll();
 }

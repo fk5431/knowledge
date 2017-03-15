@@ -2,6 +2,8 @@ package com.fk.dao;
 
 import com.fk.bean.ForthcomingBean;
 
+import java.util.List;
+
 public interface ForthcomingDao {
     int deleteByPrimaryKey(Integer id);
 
@@ -14,4 +16,6 @@ public interface ForthcomingDao {
     int updateByPrimaryKeySelective(ForthcomingBean record);
 
     int updateByPrimaryKey(ForthcomingBean record);
+
+    List<ForthcomingBean> selectAll();
 }

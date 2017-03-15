@@ -1,5 +1,6 @@
 package com.fk.bean;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class MovieBean {
@@ -99,8 +100,9 @@ public class MovieBean {
         this.time = time == null ? null : time.trim();
     }
 
-    public Date getShowtime() {
-        return showtime;
+    public String getShowtime() {
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
+        return simpleDateFormat.format(showtime);
     }
 
     public void setShowtime(Date showtime) {

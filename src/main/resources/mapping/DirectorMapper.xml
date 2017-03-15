@@ -14,13 +14,18 @@
     <result column="sex" property="sex" jdbcType="VARCHAR" />
     <result column="constellation" property="constellation" jdbcType="VARCHAR" />
     <result column="prizeIds" property="prizeids" jdbcType="VARCHAR" />
+    <result column="othername" property="othername" jdbcType="VARCHAR" />
+    <result column="nationality" property="nationality" jdbcType="VARCHAR" />
+    <result column="height" property="height" jdbcType="VARCHAR" />
+    <result column="images" property="images" jdbcType="VARCHAR" />
+    <result column="image" property="image" jdbcType="VARCHAR" />
   </resultMap>
   <sql id="Base_Column_List" >
-    id, name, ename, birth, fan, boxoffice, works, introduce, birthplace, sex, constellation, 
-    prizeIds
+    id, name, ename, birth, fan, boxoffice, works, introduce, birthplace, sex, constellation,
+    prizeIds, othername, nationality, height, images, image
   </sql>
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
-    select 
+    select
     <include refid="Base_Column_List" />
     from director
     where id = #{id,jdbcType=INTEGER}
@@ -30,16 +35,18 @@
     where id = #{id,jdbcType=INTEGER}
   </delete>
   <insert id="insert" parameterType="com.fk.bean.DirectorBean" >
-    insert into director (id, name, ename, 
-      birth, fan, boxoffice, 
-      works, introduce, birthplace, 
-      sex, constellation, prizeIds
-      )
-    values (#{id,jdbcType=INTEGER}, #{name,jdbcType=VARCHAR}, #{ename,jdbcType=VARCHAR}, 
-      #{birth,jdbcType=DATE}, #{fan,jdbcType=INTEGER}, #{boxoffice,jdbcType=DOUBLE}, 
-      #{works,jdbcType=VARCHAR}, #{introduce,jdbcType=VARCHAR}, #{birthplace,jdbcType=VARCHAR}, 
-      #{sex,jdbcType=VARCHAR}, #{constellation,jdbcType=VARCHAR}, #{prizeids,jdbcType=VARCHAR}
-      )
+    insert into director (id, name, ename,
+    birth, fan, boxoffice,
+    works, introduce, birthplace,
+    sex, constellation, prizeIds,
+    othername, nationality, height,
+    images, image)
+    values (#{id,jdbcType=INTEGER}, #{name,jdbcType=VARCHAR}, #{ename,jdbcType=VARCHAR},
+    #{birth,jdbcType=DATE}, #{fan,jdbcType=INTEGER}, #{boxoffice,jdbcType=DOUBLE},
+    #{works,jdbcType=VARCHAR}, #{introduce,jdbcType=VARCHAR}, #{birthplace,jdbcType=VARCHAR},
+    #{sex,jdbcType=VARCHAR}, #{constellation,jdbcType=VARCHAR}, #{prizeids,jdbcType=VARCHAR},
+    #{othername,jdbcType=VARCHAR}, #{nationality,jdbcType=VARCHAR}, #{height,jdbcType=VARCHAR},
+    #{images,jdbcType=VARCHAR}, #{image,jdbcType=VARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="com.fk.bean.DirectorBean" >
     insert into director
@@ -80,6 +87,21 @@
       <if test="prizeids != null" >
         prizeIds,
       </if>
+      <if test="othername != null" >
+        othername,
+      </if>
+      <if test="nationality != null" >
+        nationality,
+      </if>
+      <if test="height != null" >
+        height,
+      </if>
+      <if test="images != null" >
+        images,
+      </if>
+      <if test="image != null" >
+        image,
+      </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides="," >
       <if test="id != null" >
@@ -117,6 +139,21 @@
       </if>
       <if test="prizeids != null" >
         #{prizeids,jdbcType=VARCHAR},
+      </if>
+      <if test="othername != null" >
+        #{othername,jdbcType=VARCHAR},
+      </if>
+      <if test="nationality != null" >
+        #{nationality,jdbcType=VARCHAR},
+      </if>
+      <if test="height != null" >
+        #{height,jdbcType=VARCHAR},
+      </if>
+      <if test="images != null" >
+        #{images,jdbcType=VARCHAR},
+      </if>
+      <if test="image != null" >
+        #{image,jdbcType=VARCHAR},
       </if>
     </trim>
   </insert>
@@ -156,6 +193,21 @@
       <if test="prizeids != null" >
         prizeIds = #{prizeids,jdbcType=VARCHAR},
       </if>
+      <if test="othername != null" >
+        othername = #{othername,jdbcType=VARCHAR},
+      </if>
+      <if test="nationality != null" >
+        nationality = #{nationality,jdbcType=VARCHAR},
+      </if>
+      <if test="height != null" >
+        height = #{height,jdbcType=VARCHAR},
+      </if>
+      <if test="images != null" >
+        images = #{images,jdbcType=VARCHAR},
+      </if>
+      <if test="image != null" >
+        image = #{image,jdbcType=VARCHAR},
+      </if>
     </set>
     where id = #{id,jdbcType=INTEGER}
   </update>
@@ -171,7 +223,12 @@
       birthplace = #{birthplace,jdbcType=VARCHAR},
       sex = #{sex,jdbcType=VARCHAR},
       constellation = #{constellation,jdbcType=VARCHAR},
-      prizeIds = #{prizeids,jdbcType=VARCHAR}
+      prizeIds = #{prizeids,jdbcType=VARCHAR},
+      othername = #{othername,jdbcType=VARCHAR},
+      nationality = #{nationality,jdbcType=VARCHAR},
+      height = #{height,jdbcType=VARCHAR},
+      images = #{images,jdbcType=VARCHAR},
+      image = #{image,jdbcType=VARCHAR}
     where id = #{id,jdbcType=INTEGER}
   </update>
 </mapper>

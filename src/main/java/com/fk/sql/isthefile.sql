@@ -5,3 +5,13 @@ CREATE TABLE isthefile(
   movieid INT(11) not null,
   FOREIGN KEY(id) REFERENCES movie(id)
 )DEFAULT CHARSET=utf8;
+
+INSERT INTO isthefile VALUES(1,7,1);
+
+INSERT INTO isthefile VALUES(2,7,2);
+INSERT INTO isthefile VALUES(3,7,6);
+INSERT INTO isthefile VALUES(4,7,4);
+INSERT INTO isthefile VALUES(5,7,3);
+INSERT INTO isthefile VALUES(6,7,7);
+INSERT INTO isthefile VALUES(7,7,5);
+
