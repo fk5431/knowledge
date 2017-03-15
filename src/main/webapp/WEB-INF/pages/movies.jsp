@@ -95,7 +95,7 @@
                         <%}}%>
                     </ul>
                 </li>
-                <li class="tags-line tags-line-border" data-val="{tagTypeName:'source'}">
+                <li class="tags-line tags-line-border" >
                     <div class="tags-title">区域 :</div>
                     <ul class="tags">
                         <%
