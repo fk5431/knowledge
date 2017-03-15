@@ -250,7 +250,7 @@
                 <div class="panel">
                     <div class="panel-header">
                         <span class="panel-more">
-                            <a href="${pageContext.request.contextPath}/movie?type=hot" class="textcolor_red" data-act="all-playingMovie-click">
+                            <a href="${pageContext.request.contextPath}/movies?showType=1" class="textcolor_red" data-act="all-playingMovie-click">
                                 <span>全部</span>
                             </a>
                              <span class="panel-arrow panel-arrow-red"></span>
@@ -294,7 +294,7 @@
                 <div class="panel">
                     <div class="panel-header">
                         <span class="panel-more">
-                            <a href="${pageContext.request.contextPath}/movie?type=coming" class="textcolor_blue">
+                            <a href="${pageContext.request.contextPath}/movies?showType=2" class="textcolor_blue">
                             <span>全部</span>
                             </a>
                            <span class="panel-arrow panel-arrow-blue"></span>
@@ -342,7 +342,7 @@
                 <div class="panel">
                     <div class="panel-header">
                         <span class="panel-more">
-                            <a href="${pageContext.request.contextPath}/film?type=isthefile" class="textcolor_red" data-act="all-hotMovie-click">
+                            <a href="${pageContext.request.contextPath}/movies?showType=3" class="textcolor_red" data-act="all-hotMovie-click">
                                 <span>全部</span>
                             </a>
                             <span class="panel-arrow panel-arrow-red"></span>

@@ -3,6 +3,7 @@ CREATE TABLE typename(
   id INT(11) PRIMARY KEY AUTO_INCREMENT,
   typename VARCHAR(255) NOT NULL
 )DEFAULT CHARSET=utf8;
+INSERT INTO type(id, typename) VALUES(0, '全部');
 INSERT INTO type(typename) VALUES( '爱情');
 INSERT INTO type(typename) VALUES( '喜剧');
 INSERT INTO type(typename) VALUES( '动画');
@@ -29,4 +30,5 @@ INSERT INTO type(typename) VALUES( '黑色电影');
 INSERT INTO type(typename) VALUES( '短片');
 INSERT INTO type(typename) VALUES( '纪录片');
 INSERT INTO type(typename) VALUES( '其他');
-                          
+
+UPDATE typename SET id = 0 where id = 27

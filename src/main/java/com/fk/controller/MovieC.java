@@ -1,9 +1,6 @@
 package com.fk.controller;
 
-import com.fk.bean.DirectorBean;
-import com.fk.bean.MovieBean;
-import com.fk.bean.PerformerBean;
-import com.fk.bean.User;
+import com.fk.bean.*;
 import com.fk.service.*;
 import com.fk.util.CommonConst;
 import com.fk.util.MD5;
@@ -31,6 +28,9 @@ public class MovieC {
 
     @Autowired
     ITypeService typeService;
+
+    @Autowired
+    IPlaceService placeService;
 
     @Autowired
     IDirectorService directorService;
@@ -135,7 +135,22 @@ public class MovieC {
     public String movies(HttpServletRequest request, Map<String, Object> map){
         map.put("index", 2);
 
-        return "director";
+        List<TypeBean> typeBeans = typeService.selectAll();
+        map.put("typename", typeBeans);
+
+        List<PlaceBean> placeBeans = placeService.selectAll();
+        map.put("placename", placeBeans);
+
+
+        String showtype = request.getParameter("showType");
+
+        String type = request.getParameter("type");
+        map.put("type", 0);
+
+        String place = request.getParameter("place");
+        map.put("place", 0);
+
+        return "movies";
     }
 
 

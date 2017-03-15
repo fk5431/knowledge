@@ -4,6 +4,8 @@ package com.fk.dao;
 import com.fk.bean.TypeBean;
 import com.fk.bean.User;
 
+import java.util.List;
+
 /**
  * Created by FK on 2017/2/9.
  */
@@ -20,4 +22,6 @@ public interface TypeDao {
         int updateByPrimaryKeySelective(TypeBean record);
 
         int updateByPrimaryKey(TypeBean record);
+
+        List<TypeBean> selectAll();
 }

@@ -6,6 +6,8 @@ import com.fk.service.ITypeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 /**
  * Created by FK on 2017/2/9.
  */
@@ -17,5 +19,10 @@ public class TypeServiceImpl implements ITypeService {
     @Override
     public TypeBean selectByPrimaryKey(Integer id) {
         return typeDao.selectByPrimaryKey(id);
+    }
+
+    @Override
+    public List<TypeBean> selectAll() {
+        return typeDao.selectAll();
     }
 }
