@@ -39,7 +39,7 @@ public class MovieC {
     IPerformerService performerService;
 
     @RequestMapping(value = "/film")
-    public String login(HttpServletRequest request, Map<String, Object> map){
+    public String film(HttpServletRequest request, Map<String, Object> map){
         map.put("index", 0);
         String id = request.getParameter("id");
 
@@ -67,5 +67,76 @@ public class MovieC {
         map.put("performer", performer);
         return "film";
     }
+
+    @RequestMapping(value = "/lookcount")
+    public String lookcount(HttpServletRequest request, Map<String, Object> map){
+        String id = request.getParameter("id");
+        MovieBean movieBean = movieService.selectByPrimaryKey(Integer.parseInt(id));
+        movieBean.setLookcount(movieBean.getLookcount() + 1);
+        movieService.updateByPrimaryKey(movieBean);
+        return film(request, map);
+    }
+
+
+    @RequestMapping(value = "/socre")
+    public String socre(HttpServletRequest request, Map<String, Object> map){
+        String id = request.getParameter("id");
+        String userscore = request.getParameter("score");
+        MovieBean movieBean = movieService.selectByPrimaryKey(Integer.parseInt(id));
+        double score = movieBean.getScore();
+        int num = movieBean.getScorenum();
+        score = score * num + Double.parseDouble(userscore);
+        num += 1;
+        movieBean.setScore(score);
+        movieBean.setScorenum(num);
+        movieService.updateByPrimaryKey(movieBean);
+        return film(request, map);
+    }
+
+    @RequestMapping(value = "/director")
+    public String director(HttpServletRequest request, Map<String, Object> map){
+        map.put("index", 0);
+        String id = request.getParameter("id");
+
+        DirectorBean directorBean = directorService.selectByPrimaryKey(Integer.parseInt(id));
+        map.put("director", directorBean);
+        List<MovieBean> listmovie = new ArrayList<>();
+        String[] works = directorBean.getWorks().split(CommonConst.SPLITOR);
+        for(int i=0;i<works.length;i++){
+            MovieBean movieBean = movieService.selectByPrimaryKey(Integer.parseInt(works[i]));
+            listmovie.add(movieBean);
+        }
+        map.put("listmovie", listmovie);
+        String[] images = directorBean.getImages().split(CommonConst.SPLITOR);
+        map.put("images", images);
+        return "director";
+    }
+
+    @RequestMapping(value = "/performer")
+    public String performer(HttpServletRequest request, Map<String, Object> map){
+        map.put("index", 0);
+        String id = request.getParameter("id");
+
+        PerformerBean performerBean = performerService.selectByPrimaryKey(Integer.parseInt(id));
+        map.put("director", performerBean);
+        List<MovieBean> listmovie = new ArrayList<>();
+        String[] works = performerBean.getWorks().split(CommonConst.SPLITOR);
+        for(int i=0;i<works.length;i++){
+            MovieBean movieBean = movieService.selectByPrimaryKey(Integer.parseInt(works[i]));
+            listmovie.add(movieBean);
+        }
+        map.put("listmovie", listmovie);
+        String[] images = performerBean.getImages().split(CommonConst.SPLITOR);
+        map.put("images", images);
+        return "director";
+    }
+
+    @RequestMapping(value = "/movies")
+    public String movies(HttpServletRequest request, Map<String, Object> map){
+        map.put("index", 2);
+
+        return "director";
+    }
+
 
 }

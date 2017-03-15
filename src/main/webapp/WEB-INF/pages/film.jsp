@@ -34,7 +34,7 @@
         <div class="nav">
             <ul class="navbar">
                 <li><a href="${pageContext.request.contextPath}" id="index_1" class="active">首页</a></li>
-                <li><a href="#"  id="index_2">电影</a></li>
+                <li><a href="${pageContext.request.contextPath}/movies"  id="index_2">电影</a></li>
                 <li><a href="#" id="index_3">榜单</a></li>
                 <li><a href="#"  id="index_4">热点</a></li>
             </ul>
@@ -93,13 +93,13 @@
             </div>
             <div class="action-buyBtn">
                 <div class="action clearfix">
-                    <a class="wish" href="#">
+                    <a class="wish" href="${pageContext.request.contextPath}/lookcount?id=${movie.id}">
                         <div>
                             <i class="icon wish-icon"></i>
                             <span class="wish-msg" data-act="wish-click">想看</span>
                         </div>
                     </a>
-                    <a class="score-btn " href="#">
+                    <a class="score-btn" onclick="javascript:;disp_prompt()">
                         <div>
                             <i class="icon score-btn-icon"></i>
                             <span class="score-btn-msg">
@@ -311,71 +311,6 @@
         <div class="related">
             <div class="module">
                 <div class="mod-title">
-                    <h3>相关资讯</h3>
-                </div>
-                <div class="mod-content">
-                    <dl class="news-list">
-                        <dd class="news-item" data-act="new-click" data-val="{newsid:19439}">
-                            <div class="news-img">
-                                <a href="/films/news/19439" target="_blank">
-                                    <img class="news-img-default" src="//ms0.meituan.net/mywww/image/loading_2.e3d934bf.png">
-                                    <img class="news-img-detail" src="http://p1.meituan.net/movie/6c41d01257530b336410879d8a3bbbac228279.jpg@140w_86h_1e_1c">
-                                </a>
-                            </div>
-                            <div class="news-main">
-                                <div class="news-title">
-                                    <a href="/films/news/19439" target="_blank">《一条狗的使命》曝 “使命版”特辑，铁石心肠也会柔软</a>
-                                </div>
-                                <div class="news-info">
-                                    <span class="news-source">猫眼电影</span><!--
-        --><span><i class="news-icon news-icon-views"></i>253</span><!--
-        --><span><i class="news-icon news-icon-comments"></i>0</span>
-                                </div>
-                            </div>
-                        </dd>
-                        <dd class="news-item" data-act="new-click" data-val="{newsid:19430}">
-                            <div class="news-img">
-                                <a href="/films/news/19430" target="_blank">
-                                    <img class="news-img-default" src="//ms0.meituan.net/mywww/image/loading_2.e3d934bf.png">
-                                    <img class="news-img-detail" src="http://p0.meituan.net/movie/2391562928b58930b763b8523262c3a4163620.jpg@140w_86h_1e_1c">
-                                </a>
-                            </div>
-                            <div class="news-main">
-                                <div class="news-title">
-                                    <a href="/films/news/19430" target="_blank">《一条狗的使命》破4亿，曝 “使命版”特辑</a>
-                                </div>
-                                <div class="news-info">
-                                    <span class="news-source">猫眼电影</span><!--
-        --><span><i class="news-icon news-icon-views"></i>1145</span><!--
-        --><span><i class="news-icon news-icon-comments"></i>4</span>
-                                </div>
-                            </div>
-                        </dd>
-                        <dd class="news-item" data-act="new-click" data-val="{newsid:19404}">
-                            <div class="news-img">
-                                <a href="/films/news/19404" target="_blank">
-                                    <img class="news-img-default" src="//ms0.meituan.net/mywww/image/loading_2.e3d934bf.png">
-                                    <img class="news-img-detail" src="http://p0.meituan.net/movie/b60456931b672e56165e55fc09823e2841585.jpg@140w_86h_1e_1c">
-                                </a>
-                            </div>
-                            <div class="news-main">
-                                <div class="news-title">
-                                    <a href="/films/news/19404" target="_blank">一周观众口碑：总体评分狼不如狗，两部新片狼狗不如</a>
-                                </div>
-                                <div class="news-info">
-                                    <span class="news-source">猫眼电影</span><!--
-        --><span><i class="news-icon news-icon-views"></i>7598</span><!--
-        --><span><i class="news-icon news-icon-comments"></i>20</span>
-                                </div>
-                            </div>
-                        </dd>
-                    </dl>
-
-
-                </div>
-            </div>
-            <div class="module">
-                <div class="mod-title">
                     <h3>相关电影</h3>
                 </div>
                 <div class="mod-content">
@@ -383,7 +318,7 @@
                         <dl class="movie-list">
                             <dd>
                                 <div class="movie-item">
-                                    <a href="/films/341749" target="_blank" data-act="movie-click" data-val="{movieid:341749}">
+                                    <a href="#" target="_blank" data-act="movie-click" data-val="{movieid:341749}">
                                         <div class="movie-poster">
                                             <img class="poster-default" src="//ms0.meituan.net/mywww/image/loading_2.e3d934bf.png">
                                             <img src="http://p1.meituan.net/movie/8e5eabeadf237a10227a3124419410ef549583.jpg@106w_145h_1e_1c">
@@ -392,13 +327,13 @@
                                     <div class="movie-ver"></div>
                                 </div>
                                 <div class="channel-detail movie-item-title" title="我不是潘金莲">
-                                    <a href="/films/341749" target="_blank" data-act="movies-click" data-val="{movieId:341749}">我不是潘金莲</a>
+                                    <a href="#" target="_blank" data-act="movies-click" data-val="{movieId:341749}">我不是潘金莲</a>
                                 </div>
                                 <div class="channel-detail channel-detail-orange"><i class="integer">7.</i><i class="fraction">8</i></div>
 
                             </dd><dd>
                             <div class="movie-item">
-                                <a href="/films/1170255" target="_blank" data-act="movie-click" data-val="{movieid:1170255}">
+                                <a href="#" target="_blank" data-act="movie-click" data-val="{movieid:1170255}">
                                     <div class="movie-poster">
                                         <img class="poster-default" src="//ms0.meituan.net/mywww/image/loading_2.e3d934bf.png">
                                         <img src="http://p0.meituan.net/movie/c6cadc16e53ee7a0f79a9455a147449d50210.jpeg@106w_145h_1e_1c">
@@ -407,13 +342,13 @@
                                 <div class="movie-ver"></div>
                             </div>
                             <div class="channel-detail movie-item-title" title="乘风破浪">
-                                <a href="/films/1170255" target="_blank" data-act="movies-click" data-val="{movieId:1170255}">乘风破浪</a>
+                                <a href="#" target="_blank" data-act="movies-click" data-val="{movieId:1170255}">乘风破浪</a>
                             </div>
                             <div class="channel-detail channel-detail-orange"><i class="integer">8.</i><i class="fraction">8</i></div>
 
                         </dd><dd>
                             <div class="movie-item">
-                                <a href="/films/248916" target="_blank" data-act="movie-click" data-val="{movieid:248916}">
+                                <a href="#" target="_blank" data-act="movie-click" data-val="{movieid:248916}">
                                     <div class="movie-poster">
                                         <img class="poster-default" src="//ms0.meituan.net/mywww/image/loading_2.e3d934bf.png">
                                         <img src="http://p1.meituan.net/movie/fb54328788845ca6aaf8362875a699951041538.jpg@106w_145h_1e_1c">
@@ -422,13 +357,13 @@
                                 <div class="movie-ver"></div>
                             </div>
                             <div class="channel-detail movie-item-title" title="铁道飞虎">
-                                <a href="/films/248916" target="_blank" data-act="movies-click" data-val="{movieId:248916}">铁道飞虎</a>
+                                <a href="#" target="_blank" data-act="movies-click" data-val="{movieId:248916}">铁道飞虎</a>
                             </div>
                             <div class="channel-detail channel-detail-orange"><i class="integer">8.</i><i class="fraction">5</i></div>
 
                         </dd><dd>
                             <div class="movie-item">
-                                <a href="/films/338349" target="_blank" data-act="movie-click" data-val="{movieid:338349}">
+                                <a href="#" target="_blank" data-act="movie-click" data-val="{movieid:338349}">
                                     <div class="movie-poster">
                                         <img class="poster-default" src="//ms0.meituan.net/mywww/image/loading_2.e3d934bf.png">
                                         <img src="http://p0.meituan.net/movie/018ceaadb90ac5c1b9ba33546d1fb746401981.jpg@106w_145h_1e_1c">
@@ -437,13 +372,13 @@
                                 <div class="movie-ver"></div>
                             </div>
                             <div class="channel-detail movie-item-title" title="血战钢锯岭">
-                                <a href="/films/338349" target="_blank" data-act="movies-click" data-val="{movieId:338349}">血战钢锯岭</a>
+                                <a href="#" target="_blank" data-act="movies-click" data-val="{movieId:338349}">血战钢锯岭</a>
                             </div>
                             <div class="channel-detail channel-detail-orange"><i class="integer">9.</i><i class="fraction">4</i></div>
 
                         </dd><dd>
                             <div class="movie-item">
-                                <a href="/films/410612" target="_blank" data-act="movie-click" data-val="{movieid:410612}">
+                                <a href="#" target="_blank" data-act="movie-click" data-val="{movieid:410612}">
                                     <div class="movie-poster">
                                         <img class="poster-default" src="//ms0.meituan.net/mywww/image/loading_2.e3d934bf.png">
                                         <img src="http://p1.meituan.net/movie/13d4883803f25244d266c7cd3ac2f15d327618.jpg@106w_145h_1e_1c">
@@ -452,13 +387,13 @@
                                 <div class="movie-ver"></div>
                             </div>
                             <div class="channel-detail movie-item-title" title="驴得水">
-                                <a href="/films/410612" target="_blank" data-act="movies-click" data-val="{movieId:410612}">驴得水</a>
+                                <a href="#" target="_blank" data-act="movies-click" data-val="{movieId:410612}">驴得水</a>
                             </div>
                             <div class="channel-detail channel-detail-orange"><i class="integer">8.</i><i class="fraction">5</i></div>
 
                         </dd><dd>
                             <div class="movie-item">
-                                <a href="/films/246390" target="_blank" data-act="movie-click" data-val="{movieid:246390}">
+                                <a href="#" target="_blank" data-act="movie-click" data-val="{movieid:246390}">
                                     <div class="movie-poster">
                                         <img class="poster-default" src="//ms0.meituan.net/mywww/image/loading_2.e3d934bf.png">
                                         <img src="http://p1.meituan.net/movie/7c81af730b119bc04087df7cf2c88f0c310212.png@106w_145h_1e_1c">
@@ -467,7 +402,7 @@
                                 <div class="movie-ver"></div>
                             </div>
                             <div class="channel-detail movie-item-title" title="从你的全世界路过">
-                                <a href="/films/246390" target="_blank" data-act="movies-click" data-val="{movieId:246390}">从你的全世界路过</a>
+                                <a href="#" target="_blank" data-act="movies-click" data-val="{movieId:246390}">从你的全世界路过</a>
                             </div>
                             <div class="channel-detail channel-detail-orange"><i class="integer">8.</i><i class="fraction">6</i></div>
 
@@ -480,46 +415,12 @@
             </div>
         </div>
     </div>
-    <script id="comment-form-container" type="text/template">
-        <form id="comment-form" data-val="{movieid:342858}">
-            <div class="score-msg-container ">
-                <div class="score"><span class="num"></span>分</div>
-                <div class="score-message"></div>
-                <div class="no-score">
-                    请点击星星评分
-                </div>
-            </div>
-            <div class="score-star-contaienr">
-                <ul class="score-star clearfix" data-score="">
-                    <li>
-                        <i class="half-star left "></i><i class="half-star right "></i>    </li>
-                    <li>
-                        <i class="half-star left "></i><i class="half-star right "></i>    </li>
-                    <li>
-                        <i class="half-star left "></i><i class="half-star right "></i>    </li>
-                    <li>
-                        <i class="half-star left "></i><i class="half-star right "></i>    </li>
-                    <li>
-                        <i class="half-star left "></i><i class="half-star right "></i>    </li>
-                </ul>
-
-            </div>
-            <div class="content-container">
-                <textarea placeholder="快来说说你的看法吧" name="content" id="" cols="30" rows="10"></textarea>
-                <span class="word-count-info"></span>
-            </div>
-            <input type="hidden" name="score" />
-            <input class="btn" type="submit" value="提交" data-act="comment-submit-click" />
-        </form>
-        <div class="close">×</div>
-    </script>
 </div>
-
 <div class="footer" style="visibility: visible;">
     <p>
         ©2017
-        福州文娱演出票务网 ${pageContext.request.contextPath}
-        <a href="*"
+        福州文娱演出票务网
+        <a href="#"
            target="_top">*ICP证******号</a>
         <a href="#" target="_top">*ICP备********号</a>
         京公网安备 11010502030881号

@@ -36,6 +36,8 @@ public class MovieBean {
 
     private String atlas;
 
+    private Integer scorenum;
+
     public String getIntroduce() {
         return introduce;
     }
@@ -163,5 +165,13 @@ public class MovieBean {
 
     public void setImage(String image) {
         this.image = image == null ? null : image.trim();
+    }
+
+    public Integer getScorenum() {
+        return scorenum;
+    }
+
+    public void setScorenum(Integer scorenum) {
+        this.scorenum = scorenum;
     }
 }

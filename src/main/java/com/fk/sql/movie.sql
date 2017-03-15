@@ -9,6 +9,7 @@ CREATE TABLE movie(
     showtime DATE NOT NULL,
     lookcount INT(11) DEFAULT 0,
     score DOUBLE DEFAULT 0,
+    scorenum INT(11) DEFAULT 0,
     boxoffice INT(11) DEFAULT 0,
     introduce text not NULL,
     directorId INT(11) NOT NULL,
@@ -53,3 +54,5 @@ UPDATE movie set introduce = '大宝（女）和小宝（男）是一对情侣�
 UPDATE movie set performerIds = '1!=end=!2!=end=!3!=end=!4';
 
 UPDATE movie set atlas = '/movie/image/movie/1/1.jpeg!=end=!/movie/image/movie/1/2.jpeg!=end=!/movie/image/movie/1/3.jpeg!=end=!/movie/image/movie/1/4.jpeg!=end=!/movie/image/movie/1/5.jpeg';
+
+ALTER TABLE movie ADD COLUMN scorenum INT(11) DEFAULT 0;

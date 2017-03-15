@@ -1,5 +1,6 @@
 package com.fk.bean;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class DirectorBean {
@@ -61,8 +62,9 @@ public class DirectorBean {
         this.ename = ename == null ? null : ename.trim();
     }
 
-    public Date getBirth() {
-        return birth;
+    public String getBirth() {
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-DD");
+        return simpleDateFormat.format(birth);
     }
 
     public void setBirth(Date birth) {

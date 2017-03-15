@@ -28,7 +28,7 @@ UPDATE director SET works= '1!=end=!2';
 UPDATE director SET introduce= '拉斯·霍尔斯道姆，莱塞·霍尔斯道姆，瑞典电影导演。曾因电影《狗脸的岁月》和《苹果酒屋的法则》获得奥斯卡最佳导演奖提名。霍尔斯道姆生于瑞典斯德哥尔摩，父亲是牙医，母亲是瑞典作家KarinLyberg(1907–2000)。外祖父ErnstLyberg曾任瑞典财政部长。他一开始的职业是拍MV，尤其是为ABBA工作。《狗脸的岁月》大获成功后，他进军好莱坞。他在美国首部获得成功的电影是《不一样的天空》（1993）。1999年他的影片《苹果酒屋的法则》获奥斯卡最佳导演奖和最佳影片奖提名，他的声望达到了顶峰。';
 UPDATE director SET birthplace= '瑞典斯德哥尔摩';
 UPDATE director SET constellation= '双子座';
-UPDATE director SET prizeIds= '男';
+UPDATE director SET sex= '男';
 
 UPDATE director SET othername= 'Lars Hallström';
 UPDATE director SET nationality= '瑞典';

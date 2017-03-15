@@ -18,9 +18,10 @@
         <result column="image" property="image" jdbcType="VARCHAR" />
         <result column="introduce" property="introduce" jdbcType="LONGVARCHAR" />
         <result column="atlas" property="atlas" jdbcType="LONGVARCHAR" />
+        <result column="scorenum" property="scorenum" jdbcType="INTEGER" />
     </resultMap>
     <sql id="Base_Column_List" >
-        id, title, etitle, type, area, time, showtime, lookcount, score, boxoffice, directorId, performerIds, prizeIds, image,introduce, atlas
+        id, title, etitle, type, area, time, showtime, lookcount, score, boxoffice, directorId, performerIds, prizeIds, image,introduce, atlas, scorenum
     </sql>
     <select id="selectSortByScoreOfTen" resultMap="BaseResultMap">
         select
@@ -52,13 +53,13 @@
       type, area, time, showtime,
       lookcount, score, boxoffice,
       directorId, performerIds, prizeIds,
-      image, introduce, atlas
+      image, introduce, atlas, scorenum
       )
     values (#{id,jdbcType=INTEGER}, #{title,jdbcType=VARCHAR}, #{etitle,jdbcType=VARCHAR},
       #{type,jdbcType=VARCHAR}, #{area,jdbcType=VARCHAR}, #{time,jdbcType=VARCHAR}, #{showtime,jdbcType=DATE},
       #{lookcount,jdbcType=INTEGER}, #{score,jdbcType=DOUBLE}, #{boxoffice,jdbcType=INTEGER},
       #{directorid,jdbcType=INTEGER}, #{performerids,jdbcType=VARCHAR}, #{prizeids,jdbcType=VARCHAR},
-      #{image,jdbcType=VARCHAR}, #{introduce,jdbcType=LONGVARCHAR}, #{atlas,jdbcType=LONGVARCHAR}
+      #{image,jdbcType=VARCHAR}, #{introduce,jdbcType=LONGVARCHAR}, #{atlas,jdbcType=LONGVARCHAR}, #{scorenum,jdbcType=INTEGER}
       )
     </insert>
     <insert id="insertSelective" parameterType="com.fk.bean.MovieBean" >
@@ -112,6 +113,9 @@
             <if test="atlas != null" >
                 atlas,
             </if>
+            <if test="scorenum != null" >
+                scorenum,
+            </if>
         </trim>
         <trim prefix="values (" suffix=")" suffixOverrides="," >
             <if test="id != null" >
@@ -161,6 +165,9 @@
             </if>
             <if test="atlas != null" >
                 #{atlas,jdbcType=LONGVARCHAR},
+            </if>
+            <if test="scorenum != null" >
+                #{scorenum,jdbcType=INTEGER},
             </if>
         </trim>
     </insert>
@@ -212,6 +219,9 @@
             <if test="atlas != null" >
                 atlas = #{atlas,jdbcType=LONGVARCHAR},
             </if>
+            <if test="scorenum != null" >
+                scorenum = #{scorenum,jdbcType=INTEGER},
+            </if>
         </set>
         where id = #{id,jdbcType=INTEGER}
     </update>
@@ -231,7 +241,8 @@
       prizeIds = #{prizeids,jdbcType=VARCHAR},
       image = #{image,jdbcType=VARCHAR},
       introduce = #{introduce,jdbcType=LONGVARCHAR},
-      atlas = #{atlas,jdbcType=LONGVARCHAR}
+      atlas = #{atlas,jdbcType=LONGVARCHAR},
+      scorenum = #{scorenum,jdbcType=INTEGER}
     where id = #{id,jdbcType=INTEGER}
     </update>
 </mapper>

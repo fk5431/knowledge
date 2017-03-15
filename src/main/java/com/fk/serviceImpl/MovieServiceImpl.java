@@ -37,4 +37,9 @@ public class MovieServiceImpl implements IMovieService {
     public List<MovieBean> selectSortByScoreOfTen() {
         return movieDao.selectSortByScoreOfTen();
     }
+
+    @Override
+    public int updateByPrimaryKey(MovieBean record) {
+        return movieDao.updateByPrimaryKey(record);
+    }
 }

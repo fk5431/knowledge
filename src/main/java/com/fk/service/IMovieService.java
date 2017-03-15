@@ -12,4 +12,5 @@ public interface IMovieService {
     List<MovieBean> selectSortByBoxofficeOfTen();
     List<MovieBean> selectSortByLookCountOfTen();
     List<MovieBean> selectSortByScoreOfTen();
+    int updateByPrimaryKey(MovieBean record);
 }

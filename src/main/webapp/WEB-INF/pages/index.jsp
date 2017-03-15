@@ -26,7 +26,7 @@
         <div class="nav">
             <ul class="navbar">
                 <li><a href="${pageContext.request.contextPath}" id="index_1" class="active">首页</a></li>
-                <li><a href="#"  id="index_2">电影</a></li>
+                <li><a href="${pageContext.request.contextPath}/movies"  id="index_2">电影</a></li>
                 <li><a href="#" id="index_3">榜单</a></li>
                 <li><a href="#"  id="index_4">热点</a></li>
             </ul>
@@ -281,7 +281,7 @@
                                         </div>
                                     </a>
                                     <div class="movie-detail movie-detail-strong movie-sale">
-                                        <a href="{pageContext.request.contextPath}/buyfilm?id=<%=listhot.get(i).getId()%>" class="active" target="_top" >购票</a>
+                                        <a href="${pageContext.request.contextPath}/buyfilm?id=<%=listhot.get(i).getId()%>" class="active" target="_top" >购票</a>
                                     </div>
                                     <div class="movie-ver"></div>
                                 </div>
@@ -311,7 +311,7 @@
                             %>
                             <dd>
                                 <div class="movie-item">
-                                    <a href="${pageContext.request.contextPath}/film?id<%=listcoming.get(i).getId()%>" target="_top" >
+                                    <a href="${pageContext.request.contextPath}/film?id=<%=listcoming.get(i).getId()%>" target="_top" >
                                         <div class="movie-poster">
                                             <img class="poster-default"
                                                  src="${pageContext.request.contextPath}/image/loading_2.e3d934bf.png">
@@ -326,7 +326,7 @@
                                     <div class="movie-detail movie-wish"><span class="stonefont"><%=listcoming.get(i).getLookcount()%></span>人想看</div>
                                     <div class="movie-detail movie-detail-strong movie-presale">
                                         <a class="movie-presale-sep">预告片
-                                        </a><a data-act="presaleUpcomingMovie-click"  href="{pageContext.request.contextPath}/buyfilm?id=<%=listcoming.get(i).getId()%>">预 售</a>
+                                        </a><a data-act="presaleUpcomingMovie-click"  href="${pageContext.request.contextPath}/buyfilm?id=<%=listcoming.get(i).getId()%>">预 售</a>
                                     </div>
                                     <div class="movie-ver"></div>
                                 </div>
