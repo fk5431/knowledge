@@ -44,4 +44,9 @@ public class TravelServiceImpl implements ITravelService {
     public List<TravelBean> selectByCountOverFive() {
         return travelDao.selectByCountOverFive();
     }
+
+    @Override
+    public List<TravelBean> selectByPlace(String place) {
+        return travelDao.selectByPlace(place);
+    }
 }

@@ -15,53 +15,35 @@
   lookcount int(11) DEFAULT 0,
   subject VARCHAR(255)
 )DEFAULT CHARSET=utf8;
+INSERT INTO traveltips(id, time, place, image, title, context, type, author, line, summary, subject) VALUES(8, '2016-03-01 5:11:00','成都','/images/test/1.jpeg','10大成都骨灰级小吃','有一篇名为《被本地吃货吐槽最多的成都名小吃》的文章在网上广为传播，蚂小蜂看完觉得坐不住了，因为——多少吃货同党们到天府之国不就为了一己“食”欲、一饱口福么！','美食','冯凯','line','','');
+
+INSERT INTO traveltips(id, time, place, image, title, context, type, author, line) VALUES(1, '2017-02-21 10:11:00','摩洛哥','/images/index_1.jpeg','宝贝，妈妈带你去撒哈拉','context','type','贩暖','line');
+
 INSERT INTO traveltips(id, time, place, image, title, context, type, author, line) VALUES(1, '2017-02-21 10:11:00','摩洛哥','/images/index_1.jpeg','宝贝，妈妈带你去撒哈拉','context','type','贩暖','line');
 
 
 
-UPDATE traveltips SET context= '<div id="_j_paragraph_1" data-seq="182326831" data-index="1" class="article_title _j_anchorcnt _j_seqitem">
-                <h2 class="t5"><span class="_j_anchor">预告片</span></h2>
+UPDATE traveltips SET context= '<section class="mfw-pic"><img src="/travel/images/test/2.jpeg" width="100%"><div class="description"><p>图：这么一大盆串串看着就很诱人。 by panda</p></div>
+    </section><p>有一篇名为《被本地吃货吐槽最多的成都名小吃》的文章在网上广为传播，蚂小蜂看完觉得坐不住了，因为——多少吃货同党们到天府之国不就为了一己“食”欲、一饱口福么！</p>
 
+<p>其实好多骨灰级的美食都藏在成都的犄角旮旯里呢，三天三夜也说不完。蚂小蜂翻箱倒柜，从箱底扒拉出10种最拥有老成都儿时记忆的小吃——超级接地气的10种，既能当零嘴、又能让亲爱的肚子有饱腹感的10种。</p>
 
+<p>而且，能吃到这些的民间老店都是上了岁数的，有些甚至只是个流动摊点，多数还得拐进好几条小巷，不太好找。但这点挑战算啥，咱都是个合格的吃货对不对？</p>
 
-                <div id="_j_photo_183924242" data-seq="183924254" data-pid="183924242" class="add_pic _j_anchorcnt _j_seqitem"  style="width:680px">
-            <img class="_j_lazyload" style="height:538px;width:680px;background:#FCF2DC" src="/travel/images/4/4_1.jpeg" />
-                                        <span class="pic_tag">
-                    <i class="house"></i>乌兰布统
+<p>准备好纸抽，一大波好吃的马上袭来！</p>
 
-            </span>
-                        </div>
-                <div id="_j_photo_183924239" data-seq="183924251" data-pid="183924239" class="add_pic _j_anchorcnt _j_seqitem"  style="width:680px" data-poiid="355249">
-            <img class="_j_lazyload" style="height:538px;width:680px;background:#FCF2DC" src="/travel/images/4/4_2.jpeg" />
-                                        <span class="pic_tag">
-                    <i class="house"></i>小河头
+<div id="1" style=""></div>
+<h3 class="h2">蛋烘糕</h3>
+<section class="mfw-pic"><img src="/travel/images/test/3.jpeg" width="100%"><div class="description"><p>图：蛋烘糕。 by 竟小章</p></div>
+    </section><h4 class="h3">工人村陆记蛋烘糕</h4>
 
-            </span>
-                        </div>
-                <div id="_j_photo_183924240" data-seq="183924252" data-pid="183924240" class="add_pic _j_anchorcnt _j_seqitem"  style="width:680px">
-            <img class="_j_lazyload" style="height:467px;width:680px;background:#FCF2DC" src="/travel/images/4/4_3.jpeg" />
-                    </div>
-                <div id="_j_photo_183924241" data-seq="183924253" data-pid="183924241" class="add_pic _j_anchorcnt _j_seqitem"  style="width:680px">
-            <img class="_j_lazyload" style="height:538px;width:680px;background:#FCF2DC" src="/travel/images/4/4_4.jpeg" />
-                    </div>
-                <div id="_j_photo_183924249" data-seq="183924261" data-pid="183924249" class="add_pic _j_anchorcnt _j_seqitem"  style="width:680px" data-poiid="9595">
-            <img class="_j_lazyload" style="height:538px;width:680px;background:#FCF2DC" src="/travel/images/4/4_5.jpeg" />
-                                        <span class="pic_tag">
-                    <i class="house"></i>蛤蟆坝
+<p>这家深藏在小巷里的蛋烘糕，可算是“师爷辈”的，不仅摊主是个热情的老爷爷，而且依旧坚持纯手工制作，最老式的蜂窝煤炉子和小铁板锅就是他的最佳拍档。吃到这家蛋烘糕，绝对可以算是“资深吃货”了。</p>
 
-            </span>
-                        </div>
-                <div id="_j_photo_183924245" data-seq="183924257" data-pid="183924245" class="add_pic _j_anchorcnt _j_seqitem"  style="width:680px" data-poiid="17920786">
-            <img class="_j_lazyload" style="height:538px;width:680px;background:#FCF2DC" src="/travel/images/4/4_6.jpeg" />
-                                        <span class="pic_tag">
-                    <i class="house"></i>二八地
+<p>蛋烘糕皮脆内软，光是排队等着就被香薰得直垂涎，惹得不少人一口气吃二、三十个。啥口味都有，都是自个儿炒的馅，怪味蛋烘糕还会让你的舌尖走趟奇妙旅程。</p>
 
-            </span>
-                        </div>
-                <div id="_j_photo_183924246" data-seq="183924258" data-pid="183924246" class="add_pic _j_anchorcnt _j_seqitem"  style="width:680px" data-poiid="17920786">
-            <img class="_j_lazyload" style="height:538px;width:680px;background:#FCF2DC" src="/travel/images/4/4_7.jpeg" /></div></div>
+<p>不过，想吃要趁早。要是没碰上排队真是人品大爆发了，就算排上1小时也不足为奇。老爷爷说了：“就是张靓颖来了也一样排队”……</p>' WHERE id = 8;
 
-' WHERE id = 5;
+UPDATE traveltips SET image='/travel/images/test/1.jpeg' WHERE id = 8;
 UPDATE traveltips SET summary='/travel/images/index_2.jpeg' WHERE id = 2;
 UPDATE traveltips SET summary='/travel/images/index_3.jpeg' WHERE id = 3;
 UPDATE traveltips SET summary='/travel/images/index_4.jpeg' WHERE id = 4;
@@ -73,6 +55,8 @@ INSERT INTO traveltips(id, time, place, image, title, context, type, author, lin
 INSERT INTO traveltips(id, time, place, image, title, context, type, author, line) VALUES(4, '2017-02-24 10:11:00','斯里兰卡','/images/index_4.jpeg','走到世界的尽头，依然和你手牵手','context','type','小雪儿','line');
 INSERT INTO traveltips(id, time, place, image, title, context, type, author, line) VALUES(5, '2017-02-25 10:11:00','乌兰布统','/images/index_5.jpeg','冬季牧歌——雪原深处，见之不忘，思之如狂','context','type','昕小阳','line');
 INSERT INTO traveltips(id, time, place, image, title, context, type, author, line) VALUES(6, '2017-03-01 10:11:00','乌兰布统','/images/index_test_2.jpeg','没吃没喝只剩风景 穿越冬天的乌兰布统','自然界是有规律的，但 北京 的冬天却从不玩套路 比如，立冬都过了还没等来一场像样的雪 但却又迎来了单双号限行 于是，我们干脆离开 北京 前往 乌兰布统 抵达 乌兰布统 的前站，我们选择了...','type','车轮上的诗和远','line');
+
+
 INSERT INTO traveltips(id, time, place, image, title, context, type, author, line) VALUES(7, '2017-03-05 10:11:00','日本','/travel/images/context_1.jpeg','只看一部纪录片，就知道去日本吃什么和果子啦！','<section class="mfw-pic"><img src="/travel/images/context_1.jpeg" width="100%"><div class="description"><p>图：中村藤吉的抹茶蕨饼。 by kartzk</p></div>
             </section><p>如果让蚂小蜂列出日本旅行的必体验，“品尝和果子”一定是蚂小蜂会大力向你推荐的一条。</p>
 

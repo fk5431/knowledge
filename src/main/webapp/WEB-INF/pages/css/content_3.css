@@ -1,6 +1,6 @@
 /* å³ä¾§å·¥å…·æ  */
 .mfw-toolbar{position: fixed; right:50%; bottom:89px; height: auto; margin-right:-558px; display:none;z-index:10;}
-.mfw-toolbar i{ background: url(/travel/images/header-sprites9.png) no-repeat 0 0; display: inline-block;}
+.mfw-toolbar i{ background: url(/travel/images/header-sprites3.png) no-repeat 0 0; display: inline-block;}
 .mfw-toolbar .icon_top{ width:21px; height:12px; background-position:-60px -165px; margin-top:16px;}
 .mfw-toolbar .icon_down{ width:21px; height:12px; background-position:-60px -185px; margin-top:16px;}
 .mfw-toolbar .icon_feedback{ width:18px; height:18px; background-position:-90px -165px; margin-top:13px;}

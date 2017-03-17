@@ -42,8 +42,7 @@
                 <li class="head-nav-index head-nav-active" id="head_1"><a
                         href="${pageContext.request.contextPath}/index">首页</a>
                 </li>
-                <li class="head-nav-place" id="head_2"><a href="${pageContext.request.contextPath}/mdd"
-                                                          title="目的地">目的地</a>
+                <li class="head-nav-place" id="head_2"><a href="${pageContext.request.contextPath}/mdd" title="目的地">目的地</a>
                 </li>
                 <li class="head-nav-gonglve" id="head_3"><a href="${pageContext.request.contextPath}/content_list"
                                                             title="旅游攻略">旅游攻略</a>
@@ -84,7 +83,7 @@
     <div class="gonglve_wrap clearfix">
         <div class="cont-main _j_feed_list" >
             <div class="hd clearfix">
-                <h3>推荐攻略</h3>
+                <h3></h3>
             </div>
             <div class="gl-post">
                 <div data-cs-t="gonglve_feed" class="_j_feed_data" >
@@ -137,12 +136,12 @@
                         <%
                         }else{
                         %>
-                        <a class="pi _j_pageitem" href="${pageContext.request.contextPath}/content_list?page=<%=i%>"><%=i %></a>
+                        <a class="pi _j_pageitem" href="${pageContext.request.contextPath}/search?page=<%=i%>&indexsearch=${indexsearch}&key=${key}"><%=i%></a>
                         <%
                                 }
                             }
                         %>
-                        <a class="pg-next _j_pageitem" href="${pageContext.request.contextPath}/content_list?page=${pageNow+1}">下一页 &gt;&gt;</a>
+                        <a class="pg-next _j_pageitem" href="${pageContext.request.contextPath}/search?page=${pageNow+1}&indexsearch=${indexsearch}&key=${key}">下一页 &gt;&gt;</a>
                     </div>
 
                 </div>

@@ -34,6 +34,11 @@
   <select id="selectByCountOverFive" resultMap="ResultMapWithBLOBs">
     select <include refid="Base_Column_List" /> from traveltips where count > 5
   </select>
+
+  <select id="selectByPlace" resultMap="ResultMapWithBLOBs" parameterType="java.lang.String">
+    select <include refid="Base_Column_List" /> from traveltips where place like '%${_parameter}%'
+  </select>
+
   <select id="selectByPrimaryKey" resultMap="ResultMapWithBLOBs" parameterType="java.lang.Integer" >
     select
     <include refid="Base_Column_List" />

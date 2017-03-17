@@ -35,11 +35,9 @@
                 <li class="head-nav-index head-nav-active" id="head_1"><a
                         href="${pageContext.request.contextPath}/index">首页</a>
                 </li>
-                <li class="head-nav-place" id="head_2"><a href="${pageContext.request.contextPath}/index"
-                                                                          title="目的地">目的地</a>
+                <li class="head-nav-place" id="head_2"><a href="${pageContext.request.contextPath}/mdd" title="目的地">目的地</a>
                 </li>
-                <li class="head-nav-gonglve" id="head_3"><a href="${pageContext.request.contextPath}/content_list"
-                                                                                title="旅游攻略">旅游攻略</a>
+                <li class="head-nav-gonglve" id="head_3"><a href="${pageContext.request.contextPath}/content_list" title="旅游攻略">旅游攻略</a>
                 </li>
                 <li class="head-nav-place" id="_j_nav_sales" >
                     <a href="${pageContext.request.contextPath}/sales"
@@ -89,12 +87,13 @@
                         </div>
                         <h3><%=list.get(i).getTitle()%></h3>
                     </a>
-                    <p class="show-info">图片来自于<font color="#FF9900"><a href="/travel-scenic-spot/mafengwo/12033.html"
-                                                                       target="_blank"><%=list.get(i).getPlace()%></a></font>，此目的地共收藏了<font
-                            color="#FF9900"><a href="http://www.mafengwo.cn/photo/mdd/12033.html" target="_blank"
-                                               rel="nofollow">22473</a></font>张<a
-                            href="/travel-scenic-spot/mafengwo/12033.html" target="_blank"><%=list.get(i).getPlace()%></a>图片。本片由<font
-                            color="#FF9900"><a href="http://www.mafengwo.cn/u/10569551.html" target="_blank"><%=list.get(i).getAuthor()%></a></font>荣誉出品！
+                    <p class="show-info">图片来自于<font color="#FF9900">
+                        <a href="/travel-scenic-spot/mafengwo/12033.html" target="_blank"><%=list.get(i).getPlace()%></a></font>，此目的地共收藏了
+                        <font color="#FF9900">
+                            <a href="http://www.mafengwo.cn/photo/mdd/12033.html" target="_blank" >22473</a>
+                        </font>张
+                        <a href="/travel-scenic-spot/mafengwo/12033.html" target="_blank"><%=list.get(i).getPlace()%></a>图片。本片由
+                        <font color="#FF9900"><a target="_blank"><%=list.get(i).getAuthor()%></a></font>荣誉出品！
                     </p>
                 </li>
             <% } %>
@@ -113,12 +112,14 @@
     </div>
     <div class="search-container" id="_j_index_search">
         <div class="search-group">
+            <form action="${pageContext.request.contextPath}/search" method="get" id="subform">
             <div class="searchtab" id="_j_index_search_tab">
+
                 <ul class="clearfix">
-                    <li class="tab-selected" data-index="0"><i></i>全部</li>
-                    <li data-index="1"><i></i>酒店</li>
-                    <li data-index="2"><i></i>目的地</li>
-                    <li data-index="3"><i></i>自由行商城</li>
+                    <li class="tab-selected"> <input type="radio" checked="checked" name="indexsearch" value="all"/>全部</li>
+                    <li ><input type="radio" name="indexsearch" value="travel"/>旅游攻略</li>
+                    <li><input type="radio" name="indexsearch" value="shop"/>穷游商城</li>
+
                 </ul>
             </div>
             <%--检索--%>
@@ -126,77 +127,15 @@
             <div class="searchbar" id="_j_index_search_bar_all">
                 <div class="search-wrapper">
                     <div class="search-input">
-                        <input name="q" placeholder="搜目的地/攻略/酒店/旅行特价" id="_j_index_search_input_all" autocomplete="off"
-                               type="text">
+                        <input name="key" placeholder="搜目的地/攻略/酒店/旅行特价" id="_j_index_search_input_all" type="text">
                     </div>
                 </div>
                 <div class="search-button" id="_j_index_search_btn_all">
-                    <a role="button" href="javascript:"><i class="icon-search"></i></a>
+                     <a onclick="document.getElementById('subform').submit();" role="button"><i class="icon-search"></i></a>
                 </div>
             </div>
+            </form>
             <!-- 全部 end -->
-            <!-- 酒店 begin -->
-            <div class="searchbar searchbar-hotel hide" id="_j_index_search_bar_hotel">
-                <div class="search-wrapper">
-                    <form action="/hotel/s.php" method="get">
-                        <div class="search-input">
-                            <input name="keyword" placeholder="请输入国家、地区、城市名称" id="_j_index_search_input_hotel"
-                                   autocomplete="off" type="text">
-                        </div>
-                    </form>
-                    <div class="search-date" id="_j_check_in">
-                        <input readonly="readonly" id="dp1487740596228" class="hasDatepicker" type="text">
-                        <span></span>
-                        <i class="icon-cal"></i>
-                    </div>
-                    <div class="search-date" id="_j_check_out">
-                        <input readonly="readonly" id="dp1487740596229" class="hasDatepicker" type="text">
-                        <span></span>
-                        <i class="icon-cal"></i>
-                    </div>
-                </div>
-                <div class="search-button" id="_j_index_search_btn_hotel">
-                    <a role="button" href="javascript:"><i class="icon-search"></i></a>
-                </div>
-            </div>
-            <!-- 酒店 end -->
-            <!-- 目的地 begin -->
-            <div class="searchbar hide" id="_j_index_search_bar_mdd">
-                <form action="/search/s.php" method="get">
-                    <div class="search-wrapper">
-                        <div class="search-input">
-                            <input name="q" placeholder="我要去..." id="_j_index_search_input_mdd" autocomplete="off"
-                                   type="text">
-                        </div>
-                    </div>
-                    <div class="search-button" id="_j_index_search_btn_mdd">
-                        <a role="button" href="javascript:"><i class="icon-search"></i></a>
-                    </div>
-                </form>
-            </div>
-            <!-- 目的地 end -->
-            <!-- 出行服务 begin -->
-            <div class="searchbar hide" id="_j_index_search_bar_sales">
-                <div class="search-wrapper">
-                    <div class="search-input">
-                        <input placeholder="产品名称/目的地/优惠" id="_j_index_search_input_sales" autocomplete="off"
-                               type="text">
-                    </div>
-                </div>
-                <div class="search-button" id="_j_index_search_btn_sales">
-                    <a role="button" href="javascript:"><i class="icon-search"></i></a>
-                </div>
-            </div>
-            <!-- 出行服务 end -->
-            <!-- 目的地suggest begin -->
-            <div class="search-suggest-panel search-suggest-place hide" id="_j_index_suggest_list_mdd">
-                <ul class="suggest-list"></ul>
-            </div>
-            <!-- 目的地suggest end -->
-            <!-- 酒店suggest begin -->
-            <div class="search-suggest-panel search-suggest-hotel hide" id="_j_index_suggest_list_hotel">
-            </div>
-            <!-- 酒店suggest end -->
         </div>
     </div>
 </div>

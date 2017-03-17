@@ -13,11 +13,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <title>穷游商城的交易平台 - 大学生穷游网</title>
-
     <link href="${pageContext.request.contextPath}/css/sales/sales2.css" rel="stylesheet" type="text/css"/>
-
-
-
     <script language="javascript" src="${pageContext.request.contextPath}/js/sales/sales.js" type="text/javascript"></script>
     <script language="javascript" src="${pageContext.request.contextPath}/js/sales/sales1.js" type="text/javascript"></script>
     <link href="${pageContext.request.contextPath}/css/sales/sales3.css" rel="stylesheet" type="text/css"/>
@@ -35,11 +31,9 @@
                 <li class="head-nav-index head-nav-active" id="head_1"><a
                         href="${pageContext.request.contextPath}/index">首页</a>
                 </li>
-                <li class="head-nav-place" id="head_2"><a href="${pageContext.request.contextPath}/index"
-                                                          title="目的地">目的地</a>
+                <li class="head-nav-place" id="head_2"><a href="${pageContext.request.contextPath}/mdd" title="目的地">目的地</a>
                 </li>
-                <li class="head-nav-gonglve" id="head_3"><a href="${pageContext.request.contextPath}/content_list"
-                                                            title="旅游攻略">旅游攻略</a>
+                <li class="head-nav-gonglve" id="head_3"><a href="${pageContext.request.contextPath}/content_list" title="旅游攻略">旅游攻略</a>
                 </li>
                 <li class="head-nav-place" id="_j_nav_sales" >
                     <a href="${pageContext.request.contextPath}/sales"
@@ -80,10 +74,6 @@
         <div class="bb-hd">
             <div class="bb-title"><i class="icon-fh"></i>机票+酒店</div>
             <div class="depart" data-depart="1">
-                <div class="trigger" data-btn-depart="1">
-                    <i class="i-mark"></i>
-                    <i class="i-arr"></i>
-                </div>
             </div>
         </div>
         <div class="bb-bd">
@@ -94,9 +84,7 @@
         </div>
     </div>
     <!-- end-->
-
     <div class="sales-top clearfix">
-
         <div class="category" data-entire-nav="1">
 
             <div class="category-nav" data-mes-g="0-0" data-mes-t="热门区域" data-view-group="relatedMdd">
@@ -934,46 +922,25 @@
                 </div>
             </div>
         </div>
-
-
         <%--轮播图--%>
         <div class="sales-focus">
             <div class="sales-slide" data-mes-g="0-2" data-mes-t="轮播图区域" data-slide="1">
                 <ul class="slide-img" style="width:3650px;" data-mes-g="0-2-0" data-mes-t="轮播图">
+                    <%
+                        List<OrdersBean> ordersBeans = (List)request.getAttribute("shopshow");
+                        for(int i=0;i<ordersBeans.size();i++){
+                    %>
                     <li>
-                        <a href="#" target="_blank"
-                           data-mes-g="0-2-0-0" data-mes-t="图0">
-                            <img src="${pageContext.request.contextPath}/images/sales/1.jpeg" height="405" width="730">
+                        <a href="${pageContext.request.contextPath}/shop?id=<%=ordersBeans.get(i).getId()%>" target="_blank">
+                            <img src="<%=ordersBeans.get(i).getImage()%>" height="405" width="730">
                         </a>
                     </li>
-                    <li>
-                        <a href="#" target="_blank"
-                           data-mes-g="0-2-0-1" data-mes-t="图1">
-                            <img src="${pageContext.request.contextPath}/images/sales/2.jpeg" height="405" width="730">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" target="_blank"
-                           data-mes-g="0-2-0-2" data-mes-t="图2">
-                            <img src="${pageContext.request.contextPath}/images/sales/3.jpeg" height="405" width="730">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" target="_blank"
-                           data-mes-g="0-2-0-3" data-mes-t="图3">
-                            <img src="${pageContext.request.contextPath}/images/sales/4.png" height="405" width="730">
-                        </a>
-                    </li>
+                    <%}%>
                 </ul>
-                <ul class="slide-nav" data-mes-g="0-2-1" data-mes-t="导航区">
-                    <li class="on"
-                        data-mes-t="导航0">3.18大促5折起</li>
-                    <li
-                        data-mes-t="导航1">玩转欧洲</li>
-                    <li
-                        data-mes-t="导航2">打卡海南</li>
-                    <li
-                        data-mes-t="导航3">日本樱花季</li>
+                <ul class="slide-nav">
+                    <% for(int i=0;i<ordersBeans.size();i++){%>
+                    <li class="on"> <%=ordersBeans.get(i).getTitle()%></li>
+                    <%}%>
                 </ul>
                 <span class="slide-btn btn-left" data-btn-prev="1" data-mes-g="0-2-2" data-mes-t="控制左"><i></i></span>
                 <span class="slide-btn btn-right" data-btn-next="1" data-mes-g="0-2-3" data-mes-t="控制右"><i></i></span>
@@ -994,24 +961,19 @@
                         <i class="icon3"></i>
                         <strong>客服保障</strong>
                         <div>专业客服、实时在线</div>
-                    </li>
+                    </l i>
                 </ul>
             </div>
         </div>
         <div class="bg"></div>
-
     </div>
-
     <div data-mes-g="1" data-mes-t="BJ" id="layout_area">
         <%
             List<PromoReturnBean> list = (List) request.getAttribute("promo");
-
-
             for(int i=0;i<list.size();i++){
         %>
-            <div class="mod-promo" data-change="mod"
-                 data-mes-g="1" data-mes-t="模块每日特价">
-                <div class="mod-hd" data-mes-g="1-0" data-mes-t="顶部区">
+            <div class="mod-promo">
+                <div class="mod-hd">
                     <a>
                         <h2 ><%=list.get(i).getTitle1()%></h2>
                     </a>

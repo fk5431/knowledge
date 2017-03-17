@@ -28,9 +28,9 @@ public class SendMail {
     public static int sendEmail(String mailServer,String[] recipients,
                                 String emailSubject,String emailContent,String emailContentType){
         int res=0;
-        final String loginAccount = "1050577129@qq.com";
-        final String loginAuthCode = "mhvjolvnbmgtbdce";
-        String sender = "冯凯";
+        final String loginAccount = CommonConst.QQEMAIL;
+        final String loginAuthCode = CommonConst.QQEMAILSAFE;
+        String sender = CommonConst.SENDER;
         try {
             //跟smtp服务器建立一个连接
             Properties p = new Properties();
@@ -98,9 +98,9 @@ public class SendMail {
     public static int sendEmailToOne(String mailServer,String recipients,
                                 String emailSubject,String emailContent,String emailContentType){
         int res=0;
-        final String loginAccount = "1050577129@qq.com";
-        final String loginAuthCode = "mhvjolvnbmgtbdce";
-        String sender = "1050577129@qq.com";
+        final String loginAccount = CommonConst.QQEMAIL;
+        final String loginAuthCode = CommonConst.QQEMAILSAFE;
+        String sender = CommonConst.SENDER;
         try {
             //跟smtp服务器建立一个连接
             Properties p = new Properties();

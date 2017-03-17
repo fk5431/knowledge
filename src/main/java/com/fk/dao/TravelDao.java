@@ -24,4 +24,6 @@ public interface TravelDao {
 
     List<TravelBean> selectByCountOverFive();
 
+    List<TravelBean> selectByPlace(String place);
+
 }

@@ -17,4 +17,6 @@ public interface ITravelService {
     int updateByPrimaryKey(TravelBean record);
 
     List<TravelBean> selectByCountOverFive();
+
+    List<TravelBean> selectByPlace(String place);
 }

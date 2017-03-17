@@ -20,4 +20,13 @@ public class CommonConst {
     public static final String SPLITOR = "!=end=!";
 
 
+    public static final String QQEMAIL = "1050577129@qq.com";
+
+    public static final String QQEMAILSAFE = "mhvjolvnbmgtbdce";
+
+    public static final String SENDER = "冯凯";
+    public static final String TRAVEL = "travel";
+    public static final String SHOP = "shop";
+
+
 }

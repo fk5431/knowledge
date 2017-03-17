@@ -49,6 +49,9 @@ public class ShopC {
     @Autowired
     public IPromoService promoService;
 
+    @Autowired
+    public IShopshowService shopshowService;
+
     private static final int SIZE = CommonConst.SIX_INT;
 
     @RequestMapping("/shop")
@@ -75,7 +78,7 @@ public class ShopC {
     @RequestMapping("/sales")
     public String sales(HttpServletRequest request, Map<String, Object> map){
         map.put("index", CommonConst.FOUR_INT);
-
+        // 大模块
         List<PromoBean> list = promoService.selectAll();
         List<PromoReturnBean> returnBeans = new ArrayList<>();
         for (PromoBean p :list){
@@ -91,6 +94,9 @@ public class ShopC {
                     OrdersBean o = ordersService.selectByPrimaryKey(Integer.parseInt(str));
                     if(o!=null){
                         listorder.add(o);
+//                        listorder.add(o);
+//                        listorder.add(o);
+//                        listorder.add(o);
                     }
                 }
             }
@@ -98,6 +104,19 @@ public class ShopC {
             returnBeans.add(promoReturnBean);
         }
         map.put("promo", returnBeans);
+
+
+        List<OrdersBean> ordersBeans = new ArrayList<>();
+        for(int i=0;i<CommonConst.FOUR_INT;i++){
+            ShopshowBean shopshowBean = shopshowService.selectByPrimaryKey(i);
+            if(shopshowBean != null){
+                OrdersBean ordersBean = ordersService.selectByPrimaryKey(shopshowBean.getMid());
+                if(ordersBean != null){
+                    ordersBeans.add(ordersBean);
+                }
+            }
+        }
+        map.put("shopshow", ordersBeans);
 
         return "sales";
     }
