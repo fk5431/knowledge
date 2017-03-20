@@ -27,4 +27,8 @@ public interface MovieDao {
         List<MovieBean> selectSortByLookCountOfTen();
 
         List<MovieBean> selectSortByScoreOfTen();
+
+        List<MovieBean> selectByType(String s);
+        List<MovieBean> selectByTypeAll();
+        List<MovieBean> selectSortByTimeOfTen();
 }

@@ -154,8 +154,7 @@
             <div class="tab-container">
                 <div class="tab-title-container clearfix">
                     <div class="tab-title active">介绍</div>
-                    <div class="tab-title" >演职人员</div>
-                    <div class="tab-title" >奖项</div>
+                    <div class="tab-title" >参演人员</div>
                     <div class="tab-title">图集</div>
                 </div>
                 <div class="tab-content-container">
@@ -181,7 +180,7 @@
 
                                     <div class="celebrity-group">
                                         <div class="celebrity-type">
-                                            导演
+                                            主演
                                         </div>
                                         <ul class="celebrity-list clearfix">
                                             <li class="celebrity">
@@ -248,7 +247,7 @@
                         <div class="celebrity-container">
                             <div class="celebrity-group">
                                 <div class="celebrity-type">
-                                    导演
+                                    主演
                                     <span class="num">（1）</span>
                                 </div>
 
@@ -268,7 +267,7 @@
                             </div>
                             <div class="celebrity-group">
                                 <div class="celebrity-type">
-                                    演员
+                                    其他演员
                                     <span class="num">（63）</span>
                                 </div>
                                 <ul class="celebrity-list clearfix">
@@ -289,8 +288,6 @@
                                 </ul>
                             </div>
                         </div>
-                    </div>
-                    <div class="tab-award tab-content">
                     </div>
 
                     <div class="tab-img tab-content" >

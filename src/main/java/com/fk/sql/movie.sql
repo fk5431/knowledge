@@ -56,3 +56,6 @@ UPDATE movie set performerIds = '1!=end=!2!=end=!3!=end=!4';
 UPDATE movie set atlas = '/movie/image/movie/1/1.jpeg!=end=!/movie/image/movie/1/2.jpeg!=end=!/movie/image/movie/1/3.jpeg!=end=!/movie/image/movie/1/4.jpeg!=end=!/movie/image/movie/1/5.jpeg';
 
 ALTER TABLE movie ADD COLUMN scorenum INT(11) DEFAULT 0;
+
+UPDATE movie set type = '1!=end=!2' where id = 12;
+UPDATE movie set type = '5' where id = 10;

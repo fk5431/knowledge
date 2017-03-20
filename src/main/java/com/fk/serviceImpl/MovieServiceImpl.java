@@ -42,4 +42,19 @@ public class MovieServiceImpl implements IMovieService {
     public int updateByPrimaryKey(MovieBean record) {
         return movieDao.updateByPrimaryKey(record);
     }
+
+    @Override
+    public List<MovieBean> selectByType(String s) {
+        return movieDao.selectByType(s);
+    }
+
+    @Override
+    public List<MovieBean> selectByTypeAll() {
+        return movieDao.selectByTypeAll();
+    }
+
+    @Override
+    public List<MovieBean> selectSortByTimeOfTen() {
+        return movieDao.selectSortByTimeOfTen();
+    }
 }

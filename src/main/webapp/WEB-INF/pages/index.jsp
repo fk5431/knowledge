@@ -26,7 +26,7 @@
         <div class="nav">
             <ul class="navbar">
                 <li><a href="${pageContext.request.contextPath}" id="index_1" class="active">首页</a></li>
-                <li><a href="${pageContext.request.contextPath}/movies"  id="index_2">电影</a></li>
+                <li><a href="${pageContext.request.contextPath}/movies"  id="index_2">演出</a></li>
                 <li><a href="#" id="index_3">榜单</a></li>
                 <li><a href="#"  id="index_4">热点</a></li>
             </ul>
@@ -37,27 +37,15 @@
                 <img src="${pageContext.request.contextPath}/image/7dd82a16316ab32c8359debdb04396ef2897.png">
                 <span class="caret"></span>
                 <ul class="user-menu">
-                    <li><a href="javascript:void">登录</a></li>
+                    <li><a href="${pageContext.request.contextPath}/log">登录</a></li>
                 </ul>
             </div>
         </div>
 
-        <form action="http://maoyan.com/query" target="_blank" class="search-form" data-actform="search-click">
-            <input name="kw" class="search" maxlength="32" placeholder="找影视剧、影人、影院" autocomplete="off" type="search">
+        <form action="#" target="_blank" class="search-form" data-actform="search-click">
+            <input name="kw" class="search" maxlength="32" placeholder="找影人、演出" autocomplete="off" type="search">
             <input class="submit" value="" type="submit">
         </form>
-
-        <div class="app-download">
-            <a href="http://maoyan.com/app" target="_top">
-                <span class="iphone-icon"></span>
-                <span class="apptext">APP下载</span>
-                <span class="caret"></span>
-                <div class="download-icon">
-                    <p class="down-title">扫码下载APP</p>
-                    <p class="down-content">选座更优惠</p>
-                </div>
-            </a>
-        </div>
     </div>
 </div>
 <div class="header-placeholder"></div>
@@ -198,7 +186,7 @@
                 <div class="panel">
                     <div class="panel-header">
                         <span class="panel-title">
-                            <span class="textcolor_orange">TOP 100</span>
+                            <span class="textcolor_orange">TOP 10</span>
                         </span>
                     </div>
                     <div class="panel-content">
@@ -209,16 +197,16 @@
                                     if(i == 0){
                             %>
                             <li class="ranking-item ranking-top ranking-index-1">
-                                <a href="${pageContext.request.contextPath}/film?id=<%=look.get(i).getId()%>">
+                                <a href="${pageContext.request.contextPath}/film?id=<%=score.get(i).getId()%>">
                                     <div class="ranking-top-left">
                                         <i class="ranking-top-icon"></i>
-                                        <img class="ranking-img  default-img"src="<%=look.get(i).getImage()%>">
+                                        <img class="ranking-img  default-img"src="<%=score.get(i).getImage()%>">
                                     </div>
                                     <div class="ranking-top-right">
                                         <div class="ranking-top-right-main">
-                                            <span class="ranking-top-moive-name"><%=look.get(i).getTitle()%></span>
+                                            <span class="ranking-top-moive-name"><%=score.get(i).getTitle()%></span>
                                             <p class="ranking-top-wish">
-                                                <span class="stonefont"><%=look.get(i).getScore()%></span>分
+                                                <span class="stonefont"><%=score.get(i).getScore()%></span>分
                                             </p>
                                         </div>
                                     </div>
@@ -226,43 +214,99 @@
                             </li>
                             <%}else{%>
                             <li class="ranking-item ranking-index-<%=i+1%>">
-                                <a href="${pageContext.request.contextPath}/film?id=<%=look.get(i).getId()%>" target="_top">
+                                <a href="${pageContext.request.contextPath}/film?id=<%=score.get(i).getId()%>" target="_top">
                                     <span class="normal-link">
                                         <i class="ranking-index"><%=i+1%></i>
-                                        <span class="ranking-movie-name"><%=look.get(i).getTitle()%></span>
+                                        <span class="ranking-movie-name"><%=score.get(i).getTitle()%></span>
                                         <span class="ranking-num-info">
-                                            <span class="stonefont"><%=look.get(i).getScore()%></span>分
+                                            <span class="stonefont"><%=score.get(i).getScore()%></span>分
                                         </span>
                                     </span>
                                 </a>
                             </li>
                             <%}}%>
                         </ul>
-
-
                     </div>
                 </div>
             </div>
+            <div class="most-expect-wrapper">
+                <div class="panel">
+                    <div class="panel-header">
+                        <span class="panel-title">
+                            <span class="textcolor_orange">最近时间</span>
+                        </span>
+                    </div>
+                    <div class="panel-content">
+                        <ul class="ranking-wrapper ranking-mostExpect">
+                            <%
+                                List<MovieBean> time = (List)request.getAttribute("time");
+                                for(int i=0;i<time.size();i++){
+                                    if(i == 0){
+                            %>
+                            <li class="ranking-item ranking-top ranking-index-1">
+                                <a href="${pageContext.request.contextPath}/film?id=<%=time.get(i).getId()%>" target="_top">
+                                    <div class="ranking-top-left">
+                                        <i class="ranking-top-icon"></i>
+                                        <img class="ranking-img  default-img" src="<%=time.get(i).getImage()%>">
+                                    </div>
+                                    <div class="ranking-top-right">
+                                        <div class="ranking-top-right-main">
+                                            <span class="ranking-top-moive-name"><%=time.get(i).getTitle()%></span>
 
+                                            <p class="ranking-release-time">上映时间：<%=time.get(i).getShowtime()%></p>
+
+                                            <p class="ranking-top-wish">
+                                                <span class="stonefont"><%=time.get(i).getLookcount()%></span>人想看
+                                            </p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <%}else if(i == 1 || i ==2){%>
+                            <li class="ranking-item ranking-index-<%=i+1%>">
+                                <a href="${pageContext.request.contextPath}/film?id=<%=time.get(i).getId()%>" target="_top" >
+                                    <i class="ranking-index"><%=i+1%></i>
+                                    <span class="img-link"><img class="ranking-img default-img" src="<%=time.get(i).getImage()%>"></span>
+                                    <div class="name-link ranking-movie-name"><%=look.get(i).getTitle()%></div>
+                                    <span class="ranking-num-info"><span class="stonefont"><%=time.get(i).getLookcount()%></span>人想看</span>
+                                </a>
+                            </li>
+                            <%}else{%>
+                            <li class="ranking-item ranking-index-<%=i+1%>">
+                                <a href="${pageContext.request.contextPath}/film?id=<%=time.get(i).getId()%>" target="_top">
+                                    <span class="normal-link">
+                                        <i class="ranking-index"><%=i+1%></i>
+                                        <span class="ranking-movie-name"><%=time.get(i).getTitle()%></span>
+                                        <span class="ranking-num-info">
+                                            <span class="stonefont"><%=time.get(i).getLookcount()%></span>人想看
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+                            <%}}%>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="main">
             <div class="movie-grid">
                 <div class="panel">
                     <div class="panel-header">
                         <span class="panel-more">
-                            <a href="${pageContext.request.contextPath}/movies?showType=1" class="textcolor_red" data-act="all-playingMovie-click">
+                            <a href="${pageContext.request.contextPath}/movies?typeid=1" class="textcolor_red" data-act="all-playingMovie-click">
                                 <span>全部</span>
                             </a>
                              <span class="panel-arrow panel-arrow-red"></span>
                             </span>
                             <span class="panel-title">
-                            <span class="textcolor_red">正在热映（28部）</span>
+                            <span class="textcolor_red">演唱会</span>
                           </span>
                     </div>
                     <div class="panel-content">
                         <dl class="movie-list">
                         <%
-                            List<MovieBean> listhot = (List)request.getAttribute("listhot");
+                            List<MovieBean> listhot = (List)request.getAttribute("type1");
                             for(int i=0;i<listhot.size();i++){
                         %>
                             <dd>
@@ -294,103 +338,83 @@
                 <div class="panel">
                     <div class="panel-header">
                         <span class="panel-more">
-                            <a href="${pageContext.request.contextPath}/movies?showType=2" class="textcolor_blue">
+                            <a href="${pageContext.request.contextPath}/movies?typeid=2" class="textcolor_blue">
                             <span>全部</span>
                             </a>
                            <span class="panel-arrow panel-arrow-blue"></span>
                         </span>
                         <span class="panel-title">
-                            <span class="textcolor_blue">即将上映（269部）</span>
+                            <span class="textcolor_blue">话剧</span>
                         </span>
                     </div>
                     <div class="panel-content">
                         <dl class="movie-list">
                             <%
-                                List<MovieBean> listcoming = (List)request.getAttribute("listcoming");
+                                List<MovieBean> listcoming = (List)request.getAttribute("type2");
                                 for(int i=0;i<listcoming.size();i++){
                             %>
                             <dd>
                                 <div class="movie-item">
-                                    <a href="${pageContext.request.contextPath}/film?id=<%=listcoming.get(i).getId()%>" target="_top" >
+                                    <a href="${pageContext.request.contextPath}/film?id=<%=listcoming.get(i).getId()%>" target="_top"  >
                                         <div class="movie-poster">
                                             <img class="poster-default"
                                                  src="${pageContext.request.contextPath}/image/loading_2.e3d934bf.png">
                                             <img src="<%=listcoming.get(i).getImage()%>">
                                             <div class="movie-overlay movie-overlay-bg">
                                                 <div class="movie-info">
-                                                    <div class="movie-title  movie-title-padding" title="<%=listcoming.get(i).getScore()%>"><%=listcoming.get(i).getScore()%></div>
+                                                    <div class="movie-score"><i class="integer"><%=listcoming.get(i).getScore()%></i></div>
+                                                    <div class="movie-title movie-title-padding" title="<%=listcoming.get(i).getTitle()%>"><%=listcoming.get(i).getTitle()%> </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </a>
-                                    <div class="movie-detail movie-wish"><span class="stonefont"><%=listcoming.get(i).getLookcount()%></span>人想看</div>
-                                    <div class="movie-detail movie-detail-strong movie-presale">
-                                        <a class="movie-presale-sep">预告片
-                                        </a><a data-act="presaleUpcomingMovie-click"  href="${pageContext.request.contextPath}/buyfilm?id=<%=listcoming.get(i).getId()%>">预 售</a>
+                                    <div class="movie-detail movie-detail-strong movie-sale">
+                                        <a href="${pageContext.request.contextPath}/buyfilm?id=<%=listcoming.get(i).getId()%>" class="active" target="_top" >购票</a>
                                     </div>
                                     <div class="movie-ver"></div>
                                 </div>
-                                <div class="movie-detail movie-rt"><%=listcoming.get(i).getShowtime()%>上映</div>
-
                             </dd>
                             <%}%>
                         </dl>
-
                     </div>
                 </div>
 
                 <div class="panel">
                     <div class="panel-header">
                         <span class="panel-more">
-                            <a href="${pageContext.request.contextPath}/movies?showType=3" class="textcolor_red" data-act="all-hotMovie-click">
+                            <a href="${pageContext.request.contextPath}/movies?typeid=3" class="textcolor_red" data-act="all-hotMovie-click">
                                 <span>全部</span>
                             </a>
                             <span class="panel-arrow panel-arrow-red"></span>
                         </span>
                         <span class="panel-title">
-                            <span class="textcolor_red">热播电影</span>
-                        </span>
-                        <span class="panel-subtitle">
-                            <a href="${pageContext.request.contextPath}/film?typeid=1" class="textcolor_red">爱情</a>
-                        </span>
-                        <span class="panel-subtitle">
-                            <a href="${pageContext.request.contextPath}/film?typeid=2" class="textcolor_red">喜剧</a>
-                        </span>
-                        <span class="panel-subtitle">
-                            <a href="${pageContext.request.contextPath}/film?typeid=8" class="textcolor_red">动作</a>
-                        </span>
-                        <span class="panel-subtitle">
-                            <a href="${pageContext.request.contextPath}/film?typeid=5" class="textcolor_red">恐怖</a>
-                        </span>
-                        <span class="panel-subtitle">
-                            <a href="${pageContext.request.contextPath}/film?typeid=3" class="textcolor_red">动画</a>
+                            <span class="textcolor_red">音乐会</span>
                         </span>
                     </div>
                     <div class="panel-content">
                         <dl class="movie-list">
                             <%
-                                List<MovieBean> lististhefile = (List)request.getAttribute("lististhefile");
+                                List<MovieBean> lististhefile = (List)request.getAttribute("type3");
                                 for(int i=0;i<lististhefile.size();i++){
                             %>
                             <dd>
                                 <div class="movie-item">
-                                    <a href="${pageContext.request.contextPath}/film?id=<%=lististhefile.get(i).getId()%>" target="_top">
-                                        <% if (i == 0){%>
-                                        <div class="movie-poster movie-poster-long">
-                                            <%}else{%>
-                                                <div class="movie-poster">
-                                            <%}%>
+                                    <a href="${pageContext.request.contextPath}/film?id=<%=lististhefile.get(i).getId()%>" target="_top"  >
+                                        <div class="movie-poster">
                                             <img class="poster-default"
                                                  src="${pageContext.request.contextPath}/image/loading_2.e3d934bf.png">
                                             <img src="<%=lististhefile.get(i).getImage()%>">
                                             <div class="movie-overlay movie-overlay-bg">
                                                 <div class="movie-info">
                                                     <div class="movie-score"><i class="integer"><%=lististhefile.get(i).getScore()%></i></div>
-                                                    <div class="movie-title movie-title-padding" title="<%=listhot.get(i).getTitle()%>"><%=listhot.get(i).getTitle()%></div>
+                                                    <div class="movie-title movie-title-padding" title="<%=lististhefile.get(i).getTitle()%>"><%=lististhefile.get(i).getTitle()%> </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </a>
+                                    <div class="movie-detail movie-detail-strong movie-sale">
+                                        <a href="${pageContext.request.contextPath}/buyfilm?id=<%=lististhefile.get(i).getId()%>" class="active" target="_top" >购票</a>
+                                    </div>
                                     <div class="movie-ver"></div>
                                 </div>
                             </dd>
@@ -398,8 +422,142 @@
                         </dl>
                     </div>
                 </div>
+
+                <div class="panel">
+                    <div class="panel-header">
+                        <span class="panel-more">
+                            <a href="${pageContext.request.contextPath}/movies?typeid=4" class="textcolor_red" data-act="all-hotMovie-click">
+                                <span>全部</span>
+                            </a>
+                            <span class="panel-arrow panel-arrow-red"></span>
+                        </span>
+                        <span class="panel-title">
+                            <span class="textcolor_red">舞蹈表演</span>
+                        </span>
+                    </div>
+                    <div class="panel-content">
+                        <dl class="movie-list">
+                            <%
+                                List<MovieBean> type4 = (List)request.getAttribute("type4");
+                                for(int i=0;i<type4.size();i++){
+                            %>
+                            <dd>
+                                <div class="movie-item">
+                                    <a href="${pageContext.request.contextPath}/film?id=<%=type4.get(i).getId()%>" target="_top"  >
+                                        <div class="movie-poster">
+                                            <img class="poster-default"
+                                                 src="${pageContext.request.contextPath}/image/loading_2.e3d934bf.png">
+                                            <img src="<%=type4.get(i).getImage()%>">
+                                            <div class="movie-overlay movie-overlay-bg">
+                                                <div class="movie-info">
+                                                    <div class="movie-score"><i class="integer"><%=type4.get(i).getScore()%></i></div>
+                                                    <div class="movie-title movie-title-padding" title="<%=type4.get(i).getTitle()%>"><%=type4.get(i).getTitle()%> </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <div class="movie-detail movie-detail-strong movie-sale">
+                                        <a href="${pageContext.request.contextPath}/buyfilm?id=<%=type4.get(i).getId()%>" class="active" target="_top" >购票</a>
+                                    </div>
+                                    <div class="movie-ver"></div>
+                                </div>
+                            </dd>
+                            <%}%>
+                        </dl>
+                    </div>
+                </div>
+                <div class="panel">
+                    <div class="panel-header">
+                        <span class="panel-more">
+                            <a href="${pageContext.request.contextPath}/movies?typeid=5" class="textcolor_red" data-act="all-hotMovie-click">
+                                <span>全部</span>
+                            </a>
+                            <span class="panel-arrow panel-arrow-red"></span>
+                        </span>
+                        <span class="panel-title">
+                            <span class="textcolor_red">戏剧</span>
+                        </span>
+                    </div>
+                    <div class="panel-content">
+                        <dl class="movie-list">
+                            <%
+                                List<MovieBean> type5 = (List)request.getAttribute("type5");
+                                for(int i=0;i<type5.size();i++){
+                            %>
+                            <dd>
+                                <div class="movie-item">
+                                    <a href="${pageContext.request.contextPath}/film?id=<%=type5.get(i).getId()%>" target="_top"  >
+                                        <div class="movie-poster">
+                                            <img class="poster-default"
+                                                 src="${pageContext.request.contextPath}/image/loading_2.e3d934bf.png">
+                                            <img src="<%=type5.get(i).getImage()%>">
+                                            <div class="movie-overlay movie-overlay-bg">
+                                                <div class="movie-info">
+                                                    <div class="movie-score"><i class="integer"><%=type5.get(i).getScore()%></i></div>
+                                                    <div class="movie-title movie-title-padding" title="<%=type5.get(i).getTitle()%>"><%=type5.get(i).getTitle()%> </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <div class="movie-detail movie-detail-strong movie-sale">
+                                        <a href="${pageContext.request.contextPath}/buyfilm?id=<%=type5.get(i).getId()%>" class="active" target="_top" >购票</a>
+                                    </div>
+                                    <div class="movie-ver"></div>
+                                </div>
+                            </dd>
+                            <%}%>
+                        </dl>
+                    </div>
+                </div>
+                <div class="panel">
+                    <div class="panel-header">
+                        <span class="panel-more">
+                            <a href="${pageContext.request.contextPath}/movies?typeid=6" class="textcolor_red" data-act="all-hotMovie-click">
+                                <span>全部</span>
+                            </a>
+                            <span class="panel-arrow panel-arrow-red"></span>
+                        </span>
+                        <span class="panel-title">
+                            <span class="textcolor_red">儿童亲子</span>
+                        </span>
+                    </div>
+                    <div class="panel-content">
+                        <dl class="movie-list">
+                            <%
+                                List<MovieBean> type6 = (List)request.getAttribute("type6");
+                                for(int i=0;i<type6.size();i++){
+                            %>
+                            <dd>
+                                <div class="movie-item">
+                                    <a href="${pageContext.request.contextPath}/film?id=<%=type6.get(i).getId()%>" target="_top"  >
+                                        <div class="movie-poster">
+                                            <img class="poster-default"
+                                                 src="${pageContext.request.contextPath}/image/loading_2.e3d934bf.png">
+                                            <img src="<%=type6.get(i).getImage()%>">
+                                            <div class="movie-overlay movie-overlay-bg">
+                                                <div class="movie-info">
+                                                    <div class="movie-score"><i class="integer"><%=type6.get(i).getScore()%></i></div>
+                                                    <div class="movie-title movie-title-padding" title="<%=type6.get(i).getTitle()%>"><%=type6.get(i).getTitle()%> </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <div class="movie-detail movie-detail-strong movie-sale">
+                                        <a href="${pageContext.request.contextPath}/buyfilm?id=<%=type6.get(i).getId()%>" class="active" target="_top" >购票</a>
+                                    </div>
+                                    <div class="movie-ver"></div>
+                                </div>
+                            </dd>
+                            <%}%>
+                        </dl>
+                    </div>
+                </div>
+
+
             </div>
+
         </div>
+
     </div>
 
 </div>

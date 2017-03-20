@@ -1,5 +1,5 @@
-DROP TABLE IF EXISTS typename;
-CREATE TABLE typename(
+DROP TABLE IF EXISTS type;
+CREATE TABLE type(
   id INT(11) PRIMARY KEY AUTO_INCREMENT,
   typename VARCHAR(255) NOT NULL
 )DEFAULT CHARSET=utf8;
@@ -31,4 +31,12 @@ INSERT INTO type(typename) VALUES( '短片');
 INSERT INTO type(typename) VALUES( '纪录片');
 INSERT INTO type(typename) VALUES( '其他');
 
-UPDATE typename SET id = 0 where id = 27
+UPDATE type SET id = 0 where id = 27
+
+UPDATE type SET typename = '演唱会' where id = 1;
+UPDATE type SET typename = '话剧' where id = 2;
+UPDATE type SET typename = '音乐会' where id = 3;
+UPDATE type SET typename = '舞蹈表演' where id = 4;
+UPDATE type SET typename = '戏剧' where id = 5;
+UPDATE type SET typename = '儿童亲子' where id = 6;
+

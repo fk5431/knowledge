@@ -13,4 +13,10 @@ public interface IMovieService {
     List<MovieBean> selectSortByLookCountOfTen();
     List<MovieBean> selectSortByScoreOfTen();
     int updateByPrimaryKey(MovieBean record);
+
+    List<MovieBean> selectByType(String s);
+
+    List<MovieBean> selectByTypeAll();
+
+    List<MovieBean> selectSortByTimeOfTen();
 }

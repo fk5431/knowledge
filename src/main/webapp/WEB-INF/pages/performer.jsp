@@ -77,7 +77,7 @@
             </div>
 
             <div class="masterpiece">
-                <p class="pic-title">代表作</p>
+                <p class="pic-title">历史作品</p>
                 <ul class="master-list">
                     <%
                         List<MovieBean> list = (List) request.getAttribute("listmovie");
@@ -216,75 +216,6 @@
                                     <%}%>
                                 </ul>
                             </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-
-            <div class="award">
-                <div class="module">
-                    <div class="mod-title">
-                        <h3>奖项</h3>
-                        <span class="about-num">（共1次获奖，10次提名）</span>
-                    </div>
-                    <div class="mod-content">
-                        <div class="award-slider award-class slider slick-initialized slick-slider"><button type="button" data-role="none" class="slick-prev slick-arrow slick-disabled" aria-label="Previous" role="button" aria-disabled="true" style="display: none;">Previous</button>
-                            <div aria-live="polite" class="slick-list draggable"><div class="slick-track" style="opacity: 1; width: 1350px; transform: translate3d(0px, 0px, 0px);" role="listbox"><div class="item active slick-slide slick-current slick-active" data-index="1" data-act="award-click" data-slick-index="0" aria-hidden="false" style="width: 130px;" tabindex="-1" role="option" aria-describedby="slick-slide00">
-                                <img class="award-icon" src="ae0de4faa2366f9c23405c361387fe6f4358.jpg@128w_128h_1e_1c" alt="奥斯卡金像奖">
-                                <p class="award-name">奥斯卡金像奖</p>
-                                <p class="award-num">
-                                    <span>提名3次</span>
-                                </p>
-                            </div><div class="item slick-slide slick-active" data-index="2" data-act="award-click" data-slick-index="1" aria-hidden="false" style="width: 130px;" tabindex="-1" role="option" aria-describedby="slick-slide01">
-                                <img class="award-icon" src="f2cba4940357252555020310d18d6e4c6083.jpg@128w_128h_1e_1c" alt="威尼斯电影节">
-                                <p class="award-name">威尼斯电影节</p>
-                                <p class="award-num">
-                                    <span>提名1次</span>
-                                </p>
-                            </div><div class="item slick-slide slick-active" data-index="3" data-act="award-click" data-slick-index="2" aria-hidden="false" style="width: 130px;" tabindex="-1" role="option" aria-describedby="slick-slide02">
-                                <img class="award-icon" src="0fa9952f52d129e333404c6f34bb5e344089.jpg@128w_128h_1e_1c" alt="欧洲电影奖">
-                                <p class="award-name">欧洲电影奖</p>
-                                <p class="award-num">
-                                    <span>提名1次</span>
-                                </p>
-                            </div><div class="item slick-slide slick-active" data-index="4" data-act="award-click" data-slick-index="3" aria-hidden="false" style="width: 130px;" tabindex="-1" role="option" aria-describedby="slick-slide03">
-                                <img class="award-icon" src="838789cf240f39401d4d57841a39cbec6396.jpg@128w_128h_1e_1c" alt="英国电影和电视艺术学院奖">
-                                <p class="award-name">英国电影和电视艺术学院奖</p>
-                                <p class="award-num">
-                                    <span>提名1次</span>
-                                </p>
-                            </div><div class="item slick-slide slick-active" data-index="5" data-act="award-click" data-slick-index="4" aria-hidden="false" style="width: 130px;" tabindex="-1" role="option" aria-describedby="slick-slide04">
-                                <img class="award-icon" src="c2109ee3bfea364d5dfda837de5998fe5470.jpg@128w_128h_1e_1c" alt="西班牙戈雅奖">
-                                <p class="award-name">西班牙戈雅奖</p>
-                                <p class="award-num">
-                                    <span>提名1次</span>
-                                </p>
-                            </div><div class="item slick-slide" data-index="6" data-act="award-click" data-slick-index="5" aria-hidden="true" style="width: 130px;" tabindex="-1" role="option" aria-describedby="slick-slide05">
-                                <img class="award-icon" src="4a0c2722623b60e7e607255a993442ca3927.jpg@128w_128h_1e_1c" alt="意大利大卫奖">
-                                <p class="award-name">意大利大卫奖</p>
-                                <p class="award-num">
-                                    <span>提名1次</span>
-                                </p>
-                            </div><div class="item slick-slide" data-index="7" data-act="award-click" data-slick-index="6" aria-hidden="true" style="width: 130px;" tabindex="-1" role="option" aria-describedby="slick-slide06">
-                                <img class="award-icon" src="edcb26ee7e9bc39ca3b611f7f0999e3415634.jpg@128w_128h_1e_1c" alt="独立精神奖">
-                                <p class="award-name">独立精神奖</p>
-                                <p class="award-num">
-                                    <span>获奖1次</span>
-                                </p>
-                            </div><div class="item slick-slide" data-index="8" data-act="award-click" data-slick-index="7" aria-hidden="true" style="width: 130px;" tabindex="-1" role="option" aria-describedby="slick-slide07">
-                                <img class="award-icon" src="a7ec01552605e55a09a95c5fc047d55d14418.jpg@128w_128h_1e_1c" alt="美国导演工会奖">
-                                <p class="award-name">美国导演工会奖</p>
-                                <p class="award-num">
-                                    <span>提名1次</span>
-                                </p>
-                            </div><div class="item slick-slide" data-index="9" data-act="award-click" data-slick-index="8" aria-hidden="true" style="width: 130px;" tabindex="-1" role="option" aria-describedby="slick-slide08">
-                                <img class="award-icon" src="1abd7eaa97c31c0555f66a046303bf9e7128.jpg@128w_128h_1e_1c" alt="圣塞巴斯蒂安国际电影节">
-                                <p class="award-name">圣塞巴斯蒂安国际电影节</p>
-                                <p class="award-num">
-                                    <span>提名1次</span>
-                                </p>
-                            </div></div></div>
                         </div>
 
                     </div>

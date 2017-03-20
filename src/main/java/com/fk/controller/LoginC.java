@@ -56,35 +56,25 @@ public class LoginC {
             }
         }
         map.put("indexshow", newsBeans);
-        List<MovieBean> listhot = new ArrayList<>();
-        List<HotmovieBean> hot =hotmovieService.selectAll();
-        for(int i=0;i<hot.size();i++){
-            MovieBean movieBean = movieService.selectByPrimaryKey(hot.get(i).getMovieid());
-            if(movieBean != null){
-                listhot.add(movieBean);
-            }
-        }
-        map.put("listhot", listhot);
 
-        List<MovieBean> listcoming = new ArrayList<>();
-        List<ForthcomingBean> forthcomingBean = forthcomingService.selectAll();
-        for(int i=0;i<forthcomingBean.size();i++){
-            MovieBean movieBean = movieService.selectByPrimaryKey(forthcomingBean.get(i).getMovieid());
-            if(movieBean != null){
-                listcoming.add(movieBean);
-            }
-        }
-        map.put("listcoming", listcoming);
+        List<MovieBean> listhot = movieService.selectByType("1");
+        map.put("type1", listhot.subList(0,listhot.size()>6?6:listhot.size()));
 
-        List<MovieBean> lististhefile = new ArrayList<>();
-        List<IsthefileBean> isthefileBean = iIsthefileService.selectAll();
-        for(int i=0;i<isthefileBean.size();i++){
-            MovieBean movieBean = movieService.selectByPrimaryKey(isthefileBean.get(i).getMovieid());
-            if(movieBean != null){
-                lististhefile.add(movieBean);
-            }
-        }
-        map.put("lististhefile", lististhefile);
+        List<MovieBean> listcoming = movieService.selectByType("2");
+        map.put("type2", listcoming.subList(0,listcoming.size()>6?6:listcoming.size()));
+
+        List<MovieBean> lististhefile = movieService.selectByType("3");
+        map.put("type3", lististhefile.subList(0,lististhefile.size()>6?6:lististhefile.size()));
+
+        lististhefile = movieService.selectByType("4");
+        map.put("type4", lististhefile.subList(0,lististhefile.size()>6?6:lististhefile.size()));
+
+        lististhefile = movieService.selectByType("5");
+        map.put("type5", lististhefile.subList(0,lististhefile.size()>6?6:lististhefile.size()));
+
+        lististhefile = movieService.selectByType("6");
+        map.put("type6", lististhefile.subList(0,lististhefile.size()>6?6:lististhefile.size()));
+
 
         List<MovieBean> salered = movieService.selectSortByBoxofficeOfTen();
         map.put("salered", salered);
@@ -95,9 +85,23 @@ public class LoginC {
         List<MovieBean> score = movieService.selectSortByScoreOfTen();
         map.put("score", score);
 
+
+        List<MovieBean> time = movieService.selectSortByTimeOfTen();
+        map.put("time", time);
+
+
+
         return "index";
     }
 
+    @RequestMapping("/log")
+    public String log(){
+        return "log";
+    }
+    @RequestMapping("/reg")
+    public String reg(){
+        return "reg";
+    }
     @RequestMapping(value = "/login", method = RequestMethod.POST)
     public String login(HttpServletRequest request, Map<String, Object> map){
         String email = request.getParameter("email");
@@ -114,13 +118,12 @@ public class LoginC {
             return "error";
         }
 
-        return "index";
+        return index(map);
     }
 
     @RequestMapping(value = "regis", method = RequestMethod.POST)
     public String register(HttpServletRequest request, Map<String, Object> map){
-        String firstname = request.getParameter("firstname");
-        String lastname = request.getParameter("lastname");
+        String name = request.getParameter("name");
         String email = request.getParameter("email");
         String password = request.getParameter("password");
 
@@ -129,16 +132,19 @@ public class LoginC {
             map.put("errorcode", 1);
             return "error";
         }
-
+        if("".equals(name) || "".equals(email) || "".equals(password)){
+            map.put("errorcode", 1);
+            return "error";
+        }
         User user = new User();
-        user.setUsername(firstname+lastname);
+        user.setUsername(name);
         user.setEmail(email);
         user.setPassword(MD5.encodeMD5(password));
         int id = userService.saveUser(user);
-        logger.debug("LoginC.register  in firstname[{}], lastname[{}], email[{}], password[{}], id[{}]", firstname, lastname, email, password, id);
+        logger.debug("LoginC.register  in name[{}], email[{}], password[{}], id[{}]", name, email, password, id);
 
         map.put("login", 1);
-        return "login";
+        return "log";
     }
 
     @RequestMapping(value = "forgot", method = RequestMethod.GET)

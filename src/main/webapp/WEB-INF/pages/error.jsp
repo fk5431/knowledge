@@ -29,8 +29,8 @@
         alert("邮件链接失效，请您重新找回！");
         this.window.opener = null;
         window.history.back();
-    }else if (errorcode == 6){
-        alert("密码重置失败，请您重新尝试！");
+    }else if (errorcode == 8){
+        alert("数据不合法，请您重新尝试！");
         window.history.back(-1);
     }else if (errorcode == 7){
         alert("请登录您的邮箱完成密码找回！");

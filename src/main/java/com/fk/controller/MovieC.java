@@ -11,7 +11,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -37,6 +39,8 @@ public class MovieC {
 
     @Autowired
     IPerformerService performerService;
+
+    private static final int SIZE = 15;
 
     @RequestMapping(value = "/film")
     public String film(HttpServletRequest request, Map<String, Object> map){
@@ -132,23 +136,52 @@ public class MovieC {
     }
 
     @RequestMapping(value = "/movies")
-    public String movies(HttpServletRequest request, Map<String, Object> map){
-        map.put("index", 2);
+    public String movies(HttpServletRequest request, HttpServletResponse response, Map<String, Object> map){
+        map.put("index", CommonConst.TWO_INT);
 
         List<TypeBean> typeBeans = typeService.selectAll();
         map.put("typename", typeBeans);
 
-        List<PlaceBean> placeBeans = placeService.selectAll();
-        map.put("placename", placeBeans);
-
-
-        String showtype = request.getParameter("showType");
-
-        String type = request.getParameter("type");
-        map.put("type", 0);
-
-        String place = request.getParameter("place");
-        map.put("place", 0);
+        List<MovieBean> movieBeans = new ArrayList<>();
+        String type = request.getParameter("typeid");
+        Cookie[] cookies = request.getCookies();
+        for(Cookie c : cookies){
+            if((type == null || "".equals(type) ) && c.getName().equals("typeid")){
+                type = c.getValue();
+            }
+        }
+        if(type == null || "".equals(type) || "0".equals(type)){
+            type = "0";
+            movieBeans = movieService.selectByTypeAll();
+        }else {
+            movieBeans = movieService.selectByType(type);
+        }
+        map.put("type", Integer.parseInt(type));
+        Cookie cookie = new Cookie("typeid", type);
+        cookie.setMaxAge(-1);
+        response.addCookie(cookie);
+        int count = movieBeans.size();
+        int page = 1;
+        if(count % SIZE == 0)
+            page = count / SIZE;
+        else
+            page = count / SIZE + CommonConst.ONE_INT;
+        map.put("count", count);
+        map.put("size", SIZE);
+        map.put("page", page);
+        String page_ = request.getParameter("page");
+        int toPage;
+        if(page_ == null || "".equals(page_)){
+            toPage = 1;
+        }else {
+            toPage = Integer.parseInt(page_);
+        }
+        if(toPage > page){
+            toPage = page;
+        }
+        map.put("pageNow", toPage);
+        int start = (toPage - 1) * SIZE;
+        map.put("typeMovie", movieBeans.subList(start, movieBeans.size()<start +SIZE?movieBeans.size():start+SIZE));
 
         return "movies";
     }

@@ -6,42 +6,57 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
+
 <!DOCTYPE html>
-<html >
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Sign-Up/Login Form</title>
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/normalize.min.css">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css">
+    <title>登录 | 找回登录密码</title>
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/for.css">
 </head>
 
-<body>
-<div class="form" style="max-width:800px;">
+<body class="pg-retrieve theme--maoyan">
 
-    <ul class="tab-group" class="margin:0;">
-        <li class="tab active"><a href="#signup" style="width:100%;">找回密码</a></li>
+<header class="header--mini">
+    <div class="wrapper cf">
+        <a class="site-logo" href="http://www.maoyan.com">美团</a>
+    </div>
+</header>
+
+<div class="content">
+    <h3 class="headline"><span class="headline__content">找回登录密码</span></h3>
+    <ul class="steps-bar steps-bar--dark cf">
+        <li class="step step--first step--current" style="z-index:3">
+            <span class="step__num">1.</span>
+            <span>确认账号</span>
+            <span class="arrow__background"></span><span class="arrow__foreground"></span>
+        </li>
     </ul>
 
-    <div class="tab-content">
-        <div id="signup">
-            <h1>输入要找回的邮箱地址：</h1>
 
-            <form action="/sendmail" method="post">
+    <div class="form__wrapper">
+        <form class="form__content" method="POST" action="${pageContext.request.contextPath}/sendmail">
+            <div class="form-field">
+                <label>邮箱账户</label>
+                <input class="f-text account" name="email" type="text" placeholder="邮箱" />
+                <span class="tip" style="display:none;"><i class="icon"></i><span></span></span>
+            </div>
+            <div class="form-field">
+                <input type="hidden" name="csrf" value="jKZJZpBo-RKFYL-zEwrK7L-Nao_m0FcbdbkM" />
+                <input type="submit" class="btn" value="下一步" />
+            </div>
+        </form>
+    </div>
+</div>
 
-                <div class="field-wrap">
-                    <label>
-                        Email Address<span class="req">*</span>
-                    </label>
-                    <input type="email"required autocomplete="off" name="email"/>
-                </div>
-                <button type="submit" class="button button-block" onclick="validateCode()"/>Get</button>
-            </form>
+<footer class="footer--mini">
+    <p class="copyright">
+        ©2017
+        <a class="f1" target="_blank" href="#">*ICP证******号</a>&nbsp;
+        <span class="f1">×公网安备********号</span>
+    </p>
+</footer>
 
-        </div><!--signup -->
-    </div><!-- tab-content -->
-
-</div> <!-- /form -->
-<script src='${pageContext.request.contextPath}/js/jquery_2.1.3.js'></script>
-<script src="${pageContext.request.contextPath}/js/index.js"></script>
 </body>
 </html>
+
