@@ -1,8 +1,8 @@
 <%--
   Created by IntelliJ IDEA.
   User: fengkai
-  Date: 15/03/17
-  Time: 16:33
+  Date: 22/03/17
+  Time: 11:11
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -65,14 +65,14 @@
                 <p class="china-name cele-name">${director.name}</p>
                 <p class="eng-name cele-name">${director.ename}</p>
                 <p class="property">
-                    <span class="profession">演员</span>
+                    <span class="profession">主演</span>
                     <span class="birthday">${director.birth}</span>
                     <span class="height">${director.height}</span>
                 </p>
             </div>
 
             <div class="masterpiece">
-                <p class="pic-title">历史作品</p>
+                <p class="pic-title">历史表演</p>
                 <ul class="master-list">
                     <%
                         List<MovieBean> list = (List) request.getAttribute("listmovie");
@@ -138,7 +138,7 @@
                                     <dt class="basicInfo-item name">出生地</dt>
                                     <dd class="basicInfo-item value">${director.birthplace}</dd>
                                     <dt class="basicInfo-item name">身&nbsp;&nbsp;&nbsp;&nbsp;份</dt>
-                                    <dd class="basicInfo-item value">演员</dd>
+                                    <dd class="basicInfo-item value">导演</dd>
                                 </dl>
                                 <dl class="dl-right">
                                     <dt class="basicInfo-item name">性&nbsp;&nbsp;&nbsp;&nbsp;别</dt>
@@ -157,65 +157,6 @@
                 </div>
             </div>
 
-            <div class="photo">
-                <div class="module">
-                    <div class="mod-title">
-                        <h3>图片</h3>
-                        <%
-                            String[] images = (String[]) request.getAttribute("images");
-                        %>
-                        <span class="about-num">（<%=images.length%>张）</span>
-                        <a class="more" data-act="all-photo-click">全部</a>
-                    </div>
-                    <div class="mod-content">
-                        <div class="slider lazy photo-slider slider-webp">
-                            <%
-                                for(int i=0;i<images.length&&i<5;i++){
-                            %>
-                            <div class="item">
-                                <div class="image">
-                                    <a href="javascript:;" data-act="photo-click">
-                                        <img class="slider-photo default-img" src="<%=images[i]%>">
-                                    </a>
-                                </div>
-                            </div>
-                            <%}%>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-
-            <div class="work" style="height: auto;">
-                <div class="module" style="height: auto;">
-                    <div class="mod-title">
-                        <h3>作品</h3>
-                        <span class="about-num">（36部）</span>
-                    </div>
-                    <div class="mod-content"  style="height: auto;">
-                        <div class="folding-content"  style="height: auto;">
-                            <div class="movie-year"  style="height: auto;">
-                                <span class="year">所有作品</span>
-                                <ul class="movie-BY-list"  style="height: auto;">
-                                    <%
-                                        for(int i=0;i<list.size();i++){
-                                    %>
-                                    <li class="movie-BY-item"  style="height: auto;">
-                                        <a href="${pageContext.request.contextPath}/film?id=<%=list.get(i).getId()%>" target="_top">
-                                            <div class="movie-detail"  style="height: auto;">
-                                                <img class="default-img" alt="" src="<%=list.get(i).getImage()%>">
-                                                <p class="movie-name"><%=list.get(i).getTitle()%></p>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <%}%>
-                                </ul>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
 </div>

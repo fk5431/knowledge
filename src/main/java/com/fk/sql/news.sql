@@ -15,3 +15,30 @@ UPDATE news SEt image = '/movie/image/1.jpg' where id = 1;
 UPDATE news SEt image = '/movie/image/2.jpg' where id = 2;
 UPDATE news SEt image = '/movie/image/3.jpg' where id = 3;
 UPDATE news SEt image = '/movie/image/4.jpg' where id = 4;
+UPDATE news SEt content = '<p class="image-wrapper">
+                    <span style="color: rgb(51, 51, 51);">
+                        <img src="/movie/image/news/1_1.jpeg"/><br/>
+                    </span>
+                </p>
+                <p><span style="color: rgb(51, 51, 51);"><br/></span></p>
+                <p><span style="color: rgb(51, 51, 51);">据剧中演员杰里米&middot;斯威夫特透露，本剧改编大</span>电影<span
+                        style="color: rgb(51, 51, 51);">已经完成剧本的创作，并且曾一度以邮件形式发送至各主演处，然而不久后这些邮件却有如魔法般从邮箱中消失。尽管此项目还没有最终敲定，但斯威夫特坚信本片最早将于今年开拍。</span>
+                </p>
+                <p><span style="color: rgb(51, 51, 51);"><br/></span></p>
+                <p class="image-wrapper"><span style="color: rgb(51, 51, 51);">
+                    <img src="/movie/image/news/1_2.jpeg"/><br/></span>
+                </p>
+                <p><span style="color: rgb(51, 51, 51);"><br/></span></p>
+                <p><span style="color: rgb(51, 51, 51);">《</span>唐顿庄园<span style="color: rgb(51, 51, 51);">》制作方Carnival Films表示目前尚未有具体消息证实这一说法，一切有待官宣。</span>
+                </p>
+                <p><span style="color: rgb(51, 51, 51);"><br/></span></p>
+                <p class="image-wrapper">
+                    <span style="color: rgb(51, 51, 51);">
+                        <img src="/movie/image/news/1_3.jpeg"/><br/></span>
+                </p>
+                <p class="image-wrapper"><span style="color: rgb(51, 51, 51);">
+                    <img src="/movie/image/news/1_4.jpeg"/><br/></span>
+                </p>';
+
+ALTER  TABLE news add column introduce VARCHAR(255) not NULL;
+UPDATE news SEt introduce = '采访、文/少年英雄方枪枪2013年，汤姆·希德勒斯顿因出演电影《雷神》中的“洛基”而风靡全球。一般电影里的反派角色通常都会让人恨到心坎里，但惟独抖森饰演的“洛基”打破了这个常规...';

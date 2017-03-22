@@ -18,6 +18,9 @@ public class CommonConst {
     public static final int TEN_INT = 10;
 
     public static final String SPLITOR = "!=end=!";
+    public static final String LOGIN = "login";
+    public static final String YES = "yes";
+    public static final String NO = "no";
 
 
 }

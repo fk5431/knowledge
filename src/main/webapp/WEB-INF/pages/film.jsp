@@ -34,9 +34,9 @@
         <div class="nav">
             <ul class="navbar">
                 <li><a href="${pageContext.request.contextPath}" id="index_1" class="active">首页</a></li>
-                <li><a href="${pageContext.request.contextPath}/movies"  id="index_2">电影</a></li>
+                <li><a href="${pageContext.request.contextPath}/movies"  id="index_2">演出</a></li>
                 <li><a href="#" id="index_3">榜单</a></li>
-                <li><a href="#"  id="index_4">热点</a></li>
+                <li><a href="${pageContext.request.contextPath}/hot"  id="index_4">热点</a></li>
             </ul>
         </div>
 
@@ -45,27 +45,22 @@
                 <img src="${pageContext.request.contextPath}/image/7dd82a16316ab32c8359debdb04396ef2897.png">
                 <span class="caret"></span>
                 <ul class="user-menu">
-                    <li><a href="javascript:void">登录</a></li>
+                    <%
+                        String login = (String)request.getAttribute("login");
+                        if(login == null || "".equals(login) || !"yes".equals(login)){
+                    %>
+                    <li><a href="${pageContext.request.contextPath}/log">登录</a></li>
+                    <%}else{%>
+                    <li><a href="${pageContext.request.contextPath}/info">个人信息</a></li>
+                    <%}%>
                 </ul>
             </div>
         </div>
 
-        <form action="http://maoyan.com/query" target="_blank" class="search-form" data-actform="search-click">
-            <input name="kw" class="search" maxlength="32" placeholder="找影视剧、影人、影院" autocomplete="off" type="search">
+        <form action="#" target="_blank" class="search-form" data-actform="search-click">
+            <input name="kw" class="search" maxlength="32" placeholder="找影人、演出" autocomplete="off" type="search">
             <input class="submit" value="" type="submit">
         </form>
-
-        <div class="app-download">
-            <a href="http://maoyan.com/app" target="_top">
-                <span class="iphone-icon"></span>
-                <span class="apptext">APP下载</span>
-                <span class="caret"></span>
-                <div class="download-icon">
-                    <p class="down-title">扫码下载APP</p>
-                    <p class="down-content">选座更优惠</p>
-                </div>
-            </a>
-        </div>
     </div>
 </div>
 <div class="header-placeholder"></div>
@@ -99,11 +94,11 @@
                             <span class="wish-msg" data-act="wish-click">想看</span>
                         </div>
                     </a>
-                    <a class="score-btn" onclick="javascript:;disp_prompt()">
+                    <a class="score-btn" href="${pageContext.request.contextPath}/collect?id=${movie.id}">
                         <div>
                             <i class="icon score-btn-icon"></i>
                             <span class="score-btn-msg">
-                                评分
+                                收藏
                             </span>
                         </div>
                     </a>

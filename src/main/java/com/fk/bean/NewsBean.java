@@ -1,5 +1,6 @@
 package com.fk.bean;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class NewsBean {
@@ -12,6 +13,8 @@ public class NewsBean {
     private Integer count;
 
     private String image;
+
+    private String introduce;
 
     private String content;
 
@@ -31,8 +34,9 @@ public class NewsBean {
         this.title = title == null ? null : title.trim();
     }
 
-    public Date getTime() {
-        return time;
+    public String getTime() {
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd hh:mm");
+        return simpleDateFormat.format(time);
     }
 
     public void setTime(Date time) {
@@ -54,7 +58,13 @@ public class NewsBean {
     public void setImage(String image) {
         this.image = image == null ? null : image.trim();
     }
+    public String getIntroduce() {
+        return introduce;
+    }
 
+    public void setIntroduce(String introduce) {
+        this.introduce = introduce == null ? null : introduce.trim();
+    }
     public String getContent() {
         return content;
     }

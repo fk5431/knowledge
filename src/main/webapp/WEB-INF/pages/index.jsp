@@ -28,7 +28,7 @@
                 <li><a href="${pageContext.request.contextPath}" id="index_1" class="active">首页</a></li>
                 <li><a href="${pageContext.request.contextPath}/movies"  id="index_2">演出</a></li>
                 <li><a href="#" id="index_3">榜单</a></li>
-                <li><a href="#"  id="index_4">热点</a></li>
+                <li><a href="${pageContext.request.contextPath}/hot"  id="index_4">热点</a></li>
             </ul>
         </div>
 
@@ -37,7 +37,14 @@
                 <img src="${pageContext.request.contextPath}/image/7dd82a16316ab32c8359debdb04396ef2897.png">
                 <span class="caret"></span>
                 <ul class="user-menu">
+                    <%
+                        String login = (String)request.getAttribute("login");
+                        if(login == null || "".equals(login) || !"yes".equals(login)){
+                    %>
                     <li><a href="${pageContext.request.contextPath}/log">登录</a></li>
+                    <%}else{%>
+                    <li><a href="${pageContext.request.contextPath}/info">个人信息</a></li>
+                    <%}%>
                 </ul>
             </div>
         </div>

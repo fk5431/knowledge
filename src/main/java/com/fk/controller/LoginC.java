@@ -3,6 +3,7 @@ package com.fk.controller;
 import com.fk.bean.*;
 import com.fk.service.*;
 import com.fk.util.CommonConst;
+import com.fk.util.Login;
 import com.fk.util.MD5;
 import com.fk.util.SendMail;
 import org.slf4j.Logger;
@@ -12,7 +13,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.util.*;
 
 /**
@@ -45,7 +48,7 @@ public class LoginC {
 
 
     @RequestMapping("/")
-    public String index( Map<String, Object> map){
+    public String index(HttpServletRequest request, HttpServletResponse response, Map<String, Object> map){
         map.put("index", CommonConst.ONE_INT);
 
         List<NewsBean> newsBeans = new ArrayList<>();
@@ -56,7 +59,6 @@ public class LoginC {
             }
         }
         map.put("indexshow", newsBeans);
-
         List<MovieBean> listhot = movieService.selectByType("1");
         map.put("type1", listhot.subList(0,listhot.size()>6?6:listhot.size()));
 
@@ -75,7 +77,6 @@ public class LoginC {
         lististhefile = movieService.selectByType("6");
         map.put("type6", lististhefile.subList(0,lististhefile.size()>6?6:lististhefile.size()));
 
-
         List<MovieBean> salered = movieService.selectSortByBoxofficeOfTen();
         map.put("salered", salered);
 
@@ -85,14 +86,15 @@ public class LoginC {
         List<MovieBean> score = movieService.selectSortByScoreOfTen();
         map.put("score", score);
 
-
         List<MovieBean> time = movieService.selectSortByTimeOfTen();
         map.put("time", time);
-
-
+        if(Login.islogin(request)){
+            map.put("login", CommonConst.YES);
+        }
 
         return "index";
     }
+
 
     @RequestMapping("/log")
     public String log(){
@@ -103,7 +105,7 @@ public class LoginC {
         return "reg";
     }
     @RequestMapping(value = "/login", method = RequestMethod.POST)
-    public String login(HttpServletRequest request, Map<String, Object> map){
+    public String login(HttpServletRequest request, HttpServletResponse response, Map<String, Object> map){
         String email = request.getParameter("email");
         String password = request.getParameter("password");
         logger.debug("LoginC.login  in email[{}], password[{}].", email, password);
@@ -117,8 +119,19 @@ public class LoginC {
             map.put("errorcode", 3);
             return "error";
         }
-
-        return index(map);
+        Cookie[] cookies = request.getCookies();
+        for(Cookie c : cookies){
+            if("login".equals(c.getName())){
+                return index(request, response, map);
+            }
+        }
+        Cookie cookie = new Cookie("login", "yes");
+        Cookie cookie1 = new Cookie("userId", String.valueOf(exists.getId()));
+        cookie.setMaxAge(-1);
+        response.addCookie(cookie);
+        response.addCookie(cookie1);
+        map.put("login", CommonConst.YES);
+        return index(request, response, map);
     }
 
     @RequestMapping(value = "regis", method = RequestMethod.POST)

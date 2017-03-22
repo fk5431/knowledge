@@ -7,16 +7,44 @@
     <result column="time" property="time" jdbcType="DATE" />
     <result column="count" property="count" jdbcType="INTEGER" />
     <result column="image" property="image" jdbcType="VARCHAR" />
+    <result column="introduce" property="introduce" jdbcType="VARCHAR" />
   </resultMap>
   <resultMap id="ResultMapWithBLOBs" type="com.fk.bean.NewsBean" extends="BaseResultMap" >
     <result column="content" property="content" jdbcType="LONGVARCHAR" />
   </resultMap>
   <sql id="Base_Column_List" >
-    id, title, time, count, image
+    id, title, time, count, image, introduce
   </sql>
   <sql id="Blob_Column_List" >
     content
   </sql>
+  <select id="count" resultType="int" >
+      select
+      count(*)
+      from news
+  </select>
+  <select id="selectByCount" resultMap="ResultMapWithBLOBs" >
+    select
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from news ORDER BY count DESC limit 0,10
+  </select>
+  <select id="selectByTimeForSix" resultMap="ResultMapWithBLOBs" >
+    select
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from news ORDER BY time DESC limit 0,6
+  </select>
+  <select id="selectByStrat" resultMap="ResultMapWithBLOBs" parameterType="java.lang.Integer" >
+    select
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from news
+    limit #{start, jdbcType=INTEGER},10
+  </select>
   <select id="selectByPrimaryKey" resultMap="ResultMapWithBLOBs" parameterType="java.lang.Integer" >
     select
     <include refid="Base_Column_List" />
@@ -31,10 +59,10 @@
   </delete>
   <insert id="insert" parameterType="com.fk.bean.NewsBean" >
     insert into news (id, title, time,
-    count, image, content
+    count, image, content, introduce
     )
     values (#{id,jdbcType=INTEGER}, #{title,jdbcType=VARCHAR}, #{time,jdbcType=DATE},
-    #{count,jdbcType=INTEGER}, #{image,jdbcType=VARCHAR}, #{content,jdbcType=LONGVARCHAR}
+    #{count,jdbcType=INTEGER}, #{image,jdbcType=VARCHAR}, #{content,jdbcType=LONGVARCHAR}, #{introduce,jdbcType=VARCHAR}
     )
   </insert>
   <insert id="insertSelective" parameterType="com.fk.bean.NewsBean" >
@@ -54,6 +82,9 @@
       </if>
       <if test="image != null" >
         image,
+      </if>
+      <if test="introduce != null" >
+        introduce,
       </if>
       <if test="content != null" >
         content,
@@ -75,6 +106,9 @@
       <if test="image != null" >
         #{image,jdbcType=VARCHAR},
       </if>
+      <if test="introduce != null" >
+        #{introduce,jdbcType=VARCHAR},
+      </if>
       <if test="content != null" >
         #{content,jdbcType=LONGVARCHAR},
       </if>
@@ -95,6 +129,9 @@
       <if test="image != null" >
         image = #{image,jdbcType=VARCHAR},
       </if>
+      <if test="introduce != null" >
+        introduce = #{introduce,jdbcType=VARCHAR},
+      </if>
       <if test="content != null" >
         content = #{content,jdbcType=LONGVARCHAR},
       </if>
@@ -107,7 +144,8 @@
     time = #{time,jdbcType=DATE},
     count = #{count,jdbcType=INTEGER},
     image = #{image,jdbcType=VARCHAR},
-    content = #{content,jdbcType=LONGVARCHAR}
+      introduce = #{introduce,jdbcType=VARCHAR},
+      content = #{content,jdbcType=LONGVARCHAR}
     where id = #{id,jdbcType=INTEGER}
   </update>
   <update id="updateByPrimaryKey" parameterType="com.fk.bean.NewsBean" >
@@ -115,7 +153,8 @@
     set title = #{title,jdbcType=VARCHAR},
       time = #{time,jdbcType=DATE},
       count = #{count,jdbcType=INTEGER},
-      image = #{image,jdbcType=VARCHAR}
+      image = #{image,jdbcType=VARCHAR},
+      introduce = #{introduce,jdbcType=VARCHAR}
     where id = #{id,jdbcType=INTEGER}
   </update>
 </mapper>

@@ -3,6 +3,7 @@ package com.fk.controller;
 import com.fk.bean.*;
 import com.fk.service.*;
 import com.fk.util.CommonConst;
+import com.fk.util.Login;
 import com.fk.util.MD5;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -69,6 +70,10 @@ public class MovieC {
             }
         }
         map.put("performer", performer);
+
+        if(Login.islogin(request)){
+            map.put("login", CommonConst.YES);
+        }
         return "film";
     }
 
@@ -78,6 +83,9 @@ public class MovieC {
         MovieBean movieBean = movieService.selectByPrimaryKey(Integer.parseInt(id));
         movieBean.setLookcount(movieBean.getLookcount() + 1);
         movieService.updateByPrimaryKey(movieBean);
+        if(Login.islogin(request)){
+            map.put("login", CommonConst.YES);
+        }
         return film(request, map);
     }
 
@@ -94,6 +102,9 @@ public class MovieC {
         movieBean.setScore(score);
         movieBean.setScorenum(num);
         movieService.updateByPrimaryKey(movieBean);
+        if(Login.islogin(request)){
+            map.put("login", CommonConst.YES);
+        }
         return film(request, map);
     }
 
@@ -113,6 +124,9 @@ public class MovieC {
         map.put("listmovie", listmovie);
         String[] images = directorBean.getImages().split(CommonConst.SPLITOR);
         map.put("images", images);
+        if(Login.islogin(request)){
+            map.put("login", CommonConst.YES);
+        }
         return "director";
     }
 
@@ -132,6 +146,9 @@ public class MovieC {
         map.put("listmovie", listmovie);
         String[] images = performerBean.getImages().split(CommonConst.SPLITOR);
         map.put("images", images);
+        if(Login.islogin(request)){
+            map.put("login", CommonConst.YES);
+        }
         return "director";
     }
 
@@ -182,7 +199,9 @@ public class MovieC {
         map.put("pageNow", toPage);
         int start = (toPage - 1) * SIZE;
         map.put("typeMovie", movieBeans.subList(start, movieBeans.size()<start +SIZE?movieBeans.size():start+SIZE));
-
+        if(Login.islogin(request)){
+            map.put("login", CommonConst.YES);
+        }
         return "movies";
     }
 

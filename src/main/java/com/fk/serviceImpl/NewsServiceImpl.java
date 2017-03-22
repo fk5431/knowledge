@@ -7,6 +7,8 @@ import com.fk.service.INewsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 /**
  * Created by fengkai on 14/03/17.
  */
@@ -19,5 +21,26 @@ public class NewsServiceImpl implements INewsService {
     @Override
     public NewsBean selectByPrimaryKey(Integer id) {
         return newsDao.selectByPrimaryKey(id);
+    }
+
+
+    @Override
+    public List<NewsBean> selectByTimeForSix() {
+        return newsDao.selectByTimeForSix();
+    }
+
+    @Override
+    public List<NewsBean> selectByCount() {
+        return newsDao.selectByCount();
+    }
+
+    @Override
+    public int count() {
+        return newsDao.count();
+    }
+
+    @Override
+    public List<NewsBean> selectByStrat(int start) {
+        return newsDao.selectByStrat(start);
     }
 }
