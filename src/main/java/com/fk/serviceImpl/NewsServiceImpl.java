@@ -43,4 +43,9 @@ public class NewsServiceImpl implements INewsService {
     public List<NewsBean> selectByStrat(int start) {
         return newsDao.selectByStrat(start);
     }
+
+    @Override
+    public int deleteByPrimaryKey(Integer id) {
+        return newsDao.deleteByPrimaryKey(id);
+    }
 }

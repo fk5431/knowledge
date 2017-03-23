@@ -54,7 +54,7 @@ public class LoginC {
         List<NewsBean> newsBeans = new ArrayList<>();
         for(int i=CommonConst.ONE_INT;i<=CommonConst.FOUR_INT;i++){
             IndexshowBean indexshowBean = iIndexshowService.selectByPrimaryKey(i);
-            if(indexshowBean !=null){
+            if(indexshowBean !=null && indexshowBean.getMid() != -1){
                 newsBeans.add(newsService.selectByPrimaryKey(indexshowBean.getMid()));
             }
         }

@@ -7,4 +7,7 @@ import com.fk.bean.IndexshowBean;
  */
 public interface IIndexshowService {
     IndexshowBean selectByPrimaryKey(Integer id);
+
+    int updateByPrimaryKey(IndexshowBean record);
+
 }

@@ -17,4 +17,6 @@ public interface INewsService {
     int count();
 
     List<NewsBean> selectByStrat(int start);
+
+    int deleteByPrimaryKey(Integer id);
 }
