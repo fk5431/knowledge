@@ -17,10 +17,9 @@ import java.io.File;
 import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * Created by fengkai on 23/03/17.
@@ -86,14 +85,54 @@ public class Operative {
         return "operative/index";
     }
 
-    @RequestMapping("/operative/info")
-    public String info(){
 
-        return "operative/info";
-    }
     @RequestMapping("/operative/pass")
-    public String pass(){
+    public String pass(HttpServletRequest request, Map<String, Object> map){
+        int count = directorService.count();
+        int page = 1;
+        if(count % SIZENEW == 0)
+            page = count / SIZENEW;
+        else
+            page = count / SIZENEW + CommonConst.ONE_INT;
+        map.put("count", count);
+        map.put("size", SIZENEW);
+        map.put("page", page);
+        String page_ = request.getParameter("page");
+        int toPage;
+        if(page_ == null || "".equals(page_)){
+            toPage = 1;
+        }else {
+            toPage = Integer.parseInt(page_);
+        }
+        if(toPage > page){
+            toPage = page;
+        }
+        map.put("pageNow", toPage);
+        int start = (toPage - 1) * SIZENEW;
+        map.put("director", directorService.selectByStart(start));
 
+        int count1 = performerService.count();
+        int page1 = 1;
+        if(count1 % SIZENEW == 0)
+            page1 = count1 / SIZENEW;
+        else
+            page1 = count1 / SIZENEW + CommonConst.ONE_INT;
+        map.put("count1", count1);
+        map.put("size1", SIZENEW);
+        map.put("page1", page1);
+        String page_1 = request.getParameter("page1");
+        int toPage1;
+        if(page_1 == null || "".equals(page_1)){
+            toPage1 = 1;
+        }else {
+            toPage1 = Integer.parseInt(page_1);
+        }
+        if(toPage1 > page1){
+            toPage1 = page1;
+        }
+        map.put("pageNow1", toPage1);
+        int start1 = (toPage1 - 1) * SIZENEW;
+        map.put("performer", performerService.selectByStart(start1));
         return "operative/pass";
     }
     @RequestMapping("/operative/page")
@@ -151,6 +190,19 @@ public class Operative {
         String id = request.getParameter("id");
         newsService.deleteByPrimaryKey(Integer.parseInt(id));
         return adv(request, map);
+    }
+
+    @RequestMapping("/operative/deldirector")
+    public String deldirector(HttpServletRequest request, Map<String , Object> map){
+        String id = request.getParameter("id");
+        directorService.deleteByPrimaryKey(Integer.parseInt(id));
+        return pass(request, map);
+    }
+    @RequestMapping("/operative/delperformer")
+    public String delperformer(HttpServletRequest request, Map<String , Object> map){
+        String id = request.getParameter("id");
+        performerService.deleteByPrimaryKey(Integer.parseInt(id));
+        return pass(request, map);
     }
 
     @RequestMapping("/operative/addnews")
@@ -242,6 +294,7 @@ public class Operative {
         movieBean.setArea(area);
         movieBean.setBoxoffice(Integer.parseInt(boxoffice));
         movieBean.setEtitle(etitle);
+        movieBean.setPrizeids("");
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd hh:mm");
         try {
             movieBean.setShowtime(dateFormat.parse(time));
@@ -261,8 +314,22 @@ public class Operative {
             }
         }
         movieBean.setPerformerids(sb.toString());
-
-//        movieBean.setAtlas();
+        String reg = ":8080.*?\"";
+        Pattern pattern = Pattern.compile(reg);
+        Matcher matcher =  pattern.matcher(content);
+        StringBuffer sbcontent = new StringBuffer();
+        Boolean b = false;
+        while(matcher.find()){
+            String g = matcher.group();
+            if(b == false) {
+                sbcontent.append(g.substring(CommonConst.FIVE_INT, g.length() - CommonConst.ONE_INT));
+                b = true;
+            }else{
+                sbcontent.append(CommonConst.SPLITOR);
+                sbcontent.append(g.substring(CommonConst.FIVE_INT, g.length() - CommonConst.ONE_INT));
+            }
+        }
+        movieBean.setAtlas(sbcontent.toString());
 //        <p><img src="http://127.0.0.1:8080/movie/image/upload/20170324/1490349345219013330.jpg" title="1490349345219013330.jpg"/></p><p><img src="http://127.0.0.1:8080/movie/image/upload/20170324/1490349345220025367.png" title="1490349345220025367.png"/></p><p><img src="http://127.0.0.1:8080/movie/image/upload/20170324/1490349345238061557.jpg" title="1490349345238061557.jpg"/></p><p><img src="http://127.0.0.1:8080/movie/image/upload/20170324/1490349345282050166.jpg" title="1490349345282050166.jpg"/></p><p><img src="http://127.0.0.1:8080/movie/image/upload/20170324/1490349345299086634.jpg" title="1490349345299086634.jpg"/></p><p><br/></p>
         movieService.insertSelective(movieBean);
 
@@ -283,8 +350,30 @@ public class Operative {
         return "operative/book";
     }
     @RequestMapping("/operative/column")
-    public String column(){
-
+    public String column(HttpServletRequest request, Map<String ,Object> map){
+        int count = movieService.count();
+        int page = 1;
+        if(count % SIZE == 0)
+            page = count / SIZE;
+        else
+            page = count / SIZE + CommonConst.ONE_INT;
+        map.put("count", count);
+        map.put("size", SIZE);
+        map.put("page", page);
+        String page_ = request.getParameter("page");
+        int toPage;
+        if(page_ == null || "".equals(page_)){
+            toPage = 1;
+        }else {
+            toPage = Integer.parseInt(page_);
+        }
+        if(toPage > page){
+            toPage = page;
+        }
+        map.put("pageNow", toPage);
+        int start = (toPage - 1) * SIZE;
+        List<MovieBean> list = movieService.selectByStart(start);
+        map.put("movie", list);
         return "operative/column";
     }
 
@@ -294,6 +383,13 @@ public class Operative {
         String id = request.getParameter("id");
         userService.deleteByPrimaryKey(Integer.parseInt(id));
         return index(request, map);
+    }
+
+    @RequestMapping("/operative/delfilm")
+    public String delfilm(HttpServletRequest request, Map<String, Object> map){
+        String id = request.getParameter("id");
+        movieService.deleteByPrimaryKey(Integer.parseInt(id));
+        return column(request, map);
     }
 
     @RequestMapping("/operative/updateuser")

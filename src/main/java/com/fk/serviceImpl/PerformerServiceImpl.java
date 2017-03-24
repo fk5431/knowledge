@@ -26,4 +26,19 @@ public class PerformerServiceImpl implements IPerformerService {
     public List<PerformerBean> selectAll() {
         return performerDao.selectAll();
     }
+
+    @Override
+    public int count() {
+        return performerDao.count();
+    }
+
+    @Override
+    public List<PerformerBean> selectByStart(Integer start) {
+        return performerDao.selectByStart(start);
+    }
+
+    @Override
+    public int deleteByPrimaryKey(Integer id) {
+        return performerDao.deleteByPrimaryKey(id);
+    }
 }

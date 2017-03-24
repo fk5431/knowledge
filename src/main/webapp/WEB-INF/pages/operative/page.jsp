@@ -24,35 +24,26 @@
 <body style="background-color:#f2f9fd;">
 <div class="header bg-main">
     <div class="logo margin-big-left fadein-top">
-        <h1><img src="${pageContext.request.contextPath}/images/y.jpg" class="radius-circle rotate-hover" height="50"
-                 alt=""/>后台管理中心</h1>
+        <h1><img src="${pageContext.request.contextPath}/images/y.jpg" class="radius-circle rotate-hover" height="50" alt="" />后台管理中心</h1>
     </div>
-    <div class="head-l"><a class="button button-little bg-green" href="" target="_blank"><span class="icon-home"></span>
-        前台首页</a> &nbsp;&nbsp;<a href="##" class="button button-little bg-blue"><span class="icon-wrench"></span>
-        清除缓存</a> &nbsp;&nbsp;<a class="button button-little bg-red" href="login.html"><span
-            class="icon-power-off"></span> 退出登录</a></div>
+    <div class="head-l"><a class="button button-little bg-green" href="${pageContext.request.contextPath}" target="_blank"><span class="icon-home"></span> 前台首页</a> &nbsp;&nbsp;<a class="button button-little bg-red" href="${pageContext.request.contextPath}/operative/login"><span class="icon-power-off"></span> 退出登录</a> </div>
 </div>
 <div class="leftnav">
     <div class="leftnav-title"><strong><span class="icon-list"></span>菜单列表</strong></div>
-    <h2><span class="icon-user"></span>基本设置</h2>
+    <h2><span class="icon-user"></span>基本修改</h2>
     <ul style="display:block">
-        <li><a href="${pageContext.request.contextPath}/operative"><span class="icon-caret-right"></span>网站用户</a></li>
-        <li><a href="${pageContext.request.contextPath}/operative/pass"><span class="icon-caret-right"></span>修改密码</a>
-        </li>
-        <li><a href="${pageContext.request.contextPath}/operative/page"><span class="icon-caret-right"></span>资讯添加</a>
-        </li>
-        <li><a href="${pageContext.request.contextPath}/operative/adv"><span class="icon-caret-right"></span>首页轮播</a>
-        </li>
-        <li><a href="${pageContext.request.contextPath}/operative/book"><span class="icon-caret-right"></span>演出添加</a>
-        </li>
-        <li><a href="${pageContext.request.contextPath}/operative/column"><span class="icon-caret-right"></span>栏目管理</a>
-        </li>
+        <li><a href="${pageContext.request.contextPath}/operative" ><span class="icon-caret-right"></span>网站用户</a></li>
+        <li><a href="${pageContext.request.contextPath}/operative/pass" ><span class="icon-caret-right"></span>演员/助演管理</a></li>
+        <li><a href="${pageContext.request.contextPath}/operative/page" ><span class="icon-caret-right"></span>资讯添加</a></li>
+        <li><a href="${pageContext.request.contextPath}/operative/adv" ><span class="icon-caret-right"></span>首页轮播</a></li>
+        <li><a href="${pageContext.request.contextPath}/operative/book" ><span class="icon-caret-right"></span>演出添加</a></li>
+        <li><a href="${pageContext.request.contextPath}/operative/column" ><span class="icon-caret-right"></span>演出管理</a></li>
     </ul>
-    <h2><span class="icon-pencil-square-o"></span>栏目管理</h2>
+    <h2><span class="icon-pencil-square-o"></span>高级修改</h2>
     <ul>
-        <li><a href="list.html"><span class="icon-caret-right"></span>内容管理</a></li>
-        <li><a href="add.html"><span class="icon-caret-right"></span>添加内容</a></li>
-        <li><a href="cate.html"><span class="icon-caret-right"></span>分类管理</a></li>
+        <li><a href="${pageContext.request.contextPath}/operative/der" ><span class="icon-caret-right"></span>演员添加</a></li>
+        <li><a href="${pageContext.request.contextPath}/operative/per" ><span class="icon-caret-right"></span>助演添加</a></li>
+        <li><a href="${pageContext.request.contextPath}/operative/type" ><span class="icon-caret-right"></span>分类管理</a></li>
     </ul>
 </div>
 <script type="text/javascript">

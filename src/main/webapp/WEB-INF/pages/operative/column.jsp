@@ -1,8 +1,10 @@
-<%--
+<%@ page import="java.util.List" %>
+<%@ page import="com.fk.bean.User" %>
+<%@ page import="com.fk.bean.MovieBean" %><%--
   Created by IntelliJ IDEA.
   User: fengkai
   Date: 23/03/17
-  Time: 13:56
+  Time: 13:51
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -10,192 +12,104 @@
 <html lang="zh-cn">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <meta name="renderer" content="webkit">
-    <title>网站信息</title>
+    <title>后台管理中心</title>
     <link rel="stylesheet" href="${pageContext.request.contextPath}/ocss/pintuer.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/ocss/admin.css">
     <script src="${pageContext.request.contextPath}/ojs/jquery.js"></script>
     <script src="${pageContext.request.contextPath}/ojs/pintuer.js"></script>
 </head>
-<body>
-<div class="panel admin-panel">
-    <div class="panel-head"><strong class="icon-reorder"> 内容列表</strong></div>
-    <div class="padding border-bottom">
-        <a class="button border-yellow" href=""><span class="icon-plus-square-o"></span> 添加内容</a>
+<body style="background-color:#f2f9fd;">
+<div class="header bg-main">
+    <div class="logo margin-big-left fadein-top">
+        <h1><img src="${pageContext.request.contextPath}/images/y.jpg" class="radius-circle rotate-hover" height="50" alt="" />后台管理中心</h1>
     </div>
-    <table class="table table-hover text-center">
-        <tr>
-            <th width="5%">ID</th>
-            <th>栏目名称</th>
-            <th>排序</th>
-            <th width="250">操作</th>
-        </tr>
-
-        <tr>
-            <td>17</td>
-            <td>公司简介</td>
-            <td>1</td>
-            <td>
-                <div class="button-group">
-                    <a type="button" class="button border-main" href="#"><span class="icon-edit"></span>修改</a>
-                    <a class="button border-red" href="javascript:void(0)" onclick="return del(17)"><span class="icon-trash-o"></span> 删除</a>
-                </div>
-            </td>
-        </tr>
-
-        <tr>
-            <td>17</td>
-            <td>产品中心</td>
-            <td>1</td>
-            <td>
-                <div class="button-group">
-                    <a type="button" class="button border-main" href="#"><span class="icon-edit"></span>修改</a>
-                    <a class="button border-red" href="javascript:void(0)" onclick="return del(17)"><span class="icon-trash-o"></span> 删除</a>
-                </div>
-            </td>
-        </tr>
-
-        <tr>
-            <td>17</td>
-            <td>新闻资讯</td>
-            <td>1</td>
-            <td>
-                <div class="button-group">
-                    <a type="button" class="button border-main" href="#"><span class="icon-edit"></span>修改</a>
-                    <a class="button border-red" href="javascript:void(0)" onclick="return del(17)"><span class="icon-trash-o"></span> 删除</a>
-                </div>
-            </td>
-        </tr>
-
-        <tr>
-            <td>17</td>
-            <td>人才招聘</td>
-            <td>1</td>
-            <td>
-                <div class="button-group">
-                    <a type="button" class="button border-main" href="#"><span class="icon-edit"></span>修改</a>
-                    <a class="button border-red" href="javascript:void(0)" onclick="return del(17)"><span class="icon-trash-o"></span> 删除</a>
-                </div>
-            </td>
-        </tr>
-
-        <tr>
-            <td>17</td>
-            <td>联系我们</td>
-            <td>1</td>
-            <td>
-                <div class="button-group">
-                    <a type="button" class="button border-main" href="#"><span class="icon-edit"></span>修改</a>
-                    <a class="button border-red" href="javascript:void(0)" onclick="return del(17)"><span class="icon-trash-o"></span> 删除</a>
-                </div>
-            </td>
-        </tr>
-
-    </table>
+    <div class="head-l"><a class="button button-little bg-green" href="${pageContext.request.contextPath}" target="_blank"><span class="icon-home"></span> 前台首页</a> &nbsp;&nbsp;<a class="button button-little bg-red" href="${pageContext.request.contextPath}/operative/login"><span class="icon-power-off"></span> 退出登录</a> </div>
 </div>
-<script>
-    function del(id){
-        if(confirm("您确定要删除吗?")){
-
-        }
-    }
+<div class="leftnav">
+    <div class="leftnav-title"><strong><span class="icon-list"></span>菜单列表</strong></div>
+    <h2><span class="icon-user"></span>基本修改</h2>
+    <ul style="display:block">
+        <li><a href="${pageContext.request.contextPath}/operative" ><span class="icon-caret-right"></span>网站用户</a></li>
+        <li><a href="${pageContext.request.contextPath}/operative/pass" ><span class="icon-caret-right"></span>演员/助演管理</a></li>
+        <li><a href="${pageContext.request.contextPath}/operative/page" ><span class="icon-caret-right"></span>资讯添加</a></li>
+        <li><a href="${pageContext.request.contextPath}/operative/adv" ><span class="icon-caret-right"></span>首页轮播</a></li>
+        <li><a href="${pageContext.request.contextPath}/operative/book" ><span class="icon-caret-right"></span>演出添加</a></li>
+        <li><a href="${pageContext.request.contextPath}/operative/column" ><span class="icon-caret-right"></span>演出管理</a></li>
+    </ul>
+    <h2><span class="icon-pencil-square-o"></span>高级修改</h2>
+    <ul>
+        <li><a href="${pageContext.request.contextPath}/operative/der" ><span class="icon-caret-right"></span>演员添加</a></li>
+        <li><a href="${pageContext.request.contextPath}/operative/per" ><span class="icon-caret-right"></span>助演添加</a></li>
+        <li><a href="${pageContext.request.contextPath}/operative/type" ><span class="icon-caret-right"></span>分类管理</a></li>
+    </ul>
+</div>
+<script type="text/javascript">
+    $(function(){
+        $(".leftnav h2").click(function(){
+            $(this).next().slideToggle(200);
+            $(this).toggleClass("on");
+        })
+        $(".leftnav ul li a").click(function(){
+            $("#a_leader_txt").text($(this).text());
+            $(".leftnav ul li a").removeClass("on");
+            $(this).addClass("on");
+        })
+    });
 </script>
-<div class="panel admin-panel margin-top">
-    <div class="panel-head" id="add"><strong><span class="icon-pencil-square-o"></span>增加内容</strong></div>
-    <div class="body-content">
-        <form method="post" class="form-x" action="">
-            <input type="hidden" name="id"  value="" />
-            <div class="form-group">
-                <div class="label">
-                    <label>栏目名称：</label>
-                </div>
-                <div class="field">
-                    <input type="text" class="input w50" name="title" value="" data-validate="required:请输入标题" />
-                    <div class="tips"></div>
-                </div>
-            </div>
-            <div class="form-group">
-                <div class="label">
-                    <label>栏目图片：</label>
-                </div>
-                <div class="field">
-                    <input type="text" id="url1" name="banner" class="input tips" style="width:25%; float:left;"  value="" data-toggle="hover" data-place="right" data-image="" />
-                    <input type="button" class="button bg-blue margin-left" id="image1" value="+ 浏览上传"  style="float:left;">
-                    <div class="tipss">图片尺寸：1920*200</div>
-                </div>
-            </div>
-            <div class="form-group">
-                <div class="label">
-                    <label>英文标题：</label>
-                </div>
-                <div class="field">
-                    <input type="text" class="input w50" name="entitle" value="" />
-                    <div class="tips"></div>
-                </div>
-            </div>
-            <div class="form-group">
-                <div class="label">
-                    <label>关键字标题：</label>
-                </div>
-                <div class="field">
-                    <input type="text" class="input" name="s_title" value="" />
-                </div>
-            </div>
-            <div class="form-group">
-                <div class="label">
-                    <label>栏目关键字：</label>
-                </div>
-                <div class="field">
-                    <input type="text" class="input" name="s_keywords" value=""/>
-                </div>
-            </div>
-            <div class="form-group">
-                <div class="label">
-                    <label>关键字描述：</label>
-                </div>
-                <div class="field">
-                    <textarea type="text" class="input" name="s_desc" style="height:100px;" ></textarea>
-                </div>
-            </div>
-
-            <div class="form-group">
-                <div class="label">
-                    <label>显示：</label>
-                </div>
-                <div class="field">
-                    <div class="button-group radio">
-
-                        <label class="button active">
-                            <span class="icon icon-check"></span>
-                            <input name="isshow" value="1" type="radio" checked="checked">是
-                        </label>
-
-                        <label class="button active"><span class="icon icon-times"></span>
-                            <input name="isshow" value="0"  type="radio" checked="checked">否
-                        </label>
+<ul class="bread">
+    <li><a   class="icon-home"> 首页</a></li>
+    <li><a   id="a_leader_txt">网站信息</a></li>
+    <li><b>当前语言：</b><span style="color:red;">中文</span>  </li>
+</ul>
+<div class="admin">
+    <div class="panel admin-panel">
+        <div class="panel-head"><strong class="icon-reorder"> 内容列表</strong></div>
+        <div class="padding border-bottom">
+            <a class="button border-yellow" href=""><span class="icon-plus-square-o"></span> 添加内容</a>
+        </div>
+        <table class="table table-hover text-center">
+            <tr>
+                <th width="5%">ID</th>
+                <th>演出名称</th>
+                <th>演出时间</th>
+                <th width="250">操作</th>
+            </tr>
+            <%
+                List<MovieBean> movieBeans = (List)request.getAttribute("movie");
+                for(int i=0;i<movieBeans.size();i++){
+            %>
+            <tr>
+                <td><%=movieBeans.get(i).getId()%></td>
+                <td><%=movieBeans.get(i).getTitle()%></td>
+                <td><%=movieBeans.get(i).getShowtime()%></td>
+                <td>
+                    <div class="button-group">
+                        <a type="button" class="button border-main" href="${pageContext.request.contextPath}/film?id=<%=movieBeans.get(i).getId()%>" target="_blank"><span class="icon-edit"></span>查看</a>
+                        <a class="button border-red" href="${pageContext.request.contextPath}/operative/delfilm?id=<%=movieBeans.get(i).getId()%>"  ><span class="icon-trash-o"></span> 删除</a>
                     </div>
-                </div>
-            </div>
-            <div class="form-group">
-                <div class="label">
-                    <label>排序：</label>
-                </div>
-                <div class="field">
-                    <input type="text" class="input w50" name="sort" value="0"  data-validate="required:,number:排序必须为数字" />
-                    <div class="tips"></div>
-                </div>
-            </div>
-            <div class="form-group">
-                <div class="label">
-                    <label></label>
-                </div>
-                <div class="field">
-                    <button class="button bg-main icon-check-square-o" type="submit"> 提交</button>
-                </div>
-            </div>
-        </form>
+                </td>
+            </tr>
+            <%}%>
+            <tr>
+                <td colspan="8">
+                    <div class="pagelist">
+                        <%
+                            Integer pageAll = (Integer)request.getAttribute("page");
+                            Integer pageNow = (Integer)request.getAttribute("pageNow");
+
+                            for(int i=1;i<= pageAll.intValue();i++){
+                                if(i == pageNow.intValue()){
+                        %>
+                        <span class="current"><%=i%></span>
+                        <%}else{%>
+                        <a href="${pageContext.request.contextPath}/operative/column?page=<%=i%>"><%=i%></a>
+                        <%}}%>
+                        <a href="${pageContext.request.contextPath}/operative/column?page=${pageNow+1}">下一页</a>
+                    </div>
+                </td>
+            </tr>
+        </table>
     </div>
 </div>
-</body></html>
+</body>
+</html>

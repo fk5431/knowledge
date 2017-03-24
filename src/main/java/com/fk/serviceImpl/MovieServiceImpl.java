@@ -62,4 +62,19 @@ public class MovieServiceImpl implements IMovieService {
     public int insertSelective(MovieBean record) {
         return movieDao.insertSelective(record);
     }
+
+    @Override
+    public int deleteByPrimaryKey(Integer id) {
+        return movieDao.deleteByPrimaryKey(id);
+    }
+
+    @Override
+    public int count() {
+        return movieDao.count();
+    }
+
+    @Override
+    public List<MovieBean> selectByStart(Integer start) {
+        return movieDao.selectByStart(start);
+    }
 }

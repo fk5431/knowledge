@@ -11,4 +11,10 @@ public interface IPerformerService {
     PerformerBean selectByPrimaryKey(Integer id);
 
     List<PerformerBean> selectAll();
+
+    List<PerformerBean> selectByStart(Integer start);
+
+    int count();
+
+    int deleteByPrimaryKey(Integer id);
 }

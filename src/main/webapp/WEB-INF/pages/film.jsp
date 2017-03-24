@@ -198,7 +198,7 @@
                                         <ul class="celebrity-list clearfix">
                                             <%
                                                 List<PerformerBean> performerBeans = (List)request.getAttribute("performer");
-                                                for(int i=0;i<4;i++){
+                                                for(int i=0;i<4&&i<performerBeans.size();i++){
                                             %>
                                             <li class="celebrity actor">
                                                 <a href="${pageContext.request.contextPath}/performer?id=<%=performerBeans.get(i).getId()%>" target="_blank" class="portrait">
@@ -228,7 +228,7 @@
                                     <%
                                         MovieBean movie = (MovieBean)request.getAttribute("movie");
                                         String[] images = movie.getAtlas().split("!=end=!");
-                                        for (int i=0;i<5;i++){
+                                        for (int i=0;i<5&&i<images.length;i++){
                                     %>
                                     <div class="img<%=i+1%>"><img class="default-img" alt="" src="<%=images[i]%>"></div>
                                     <% } %>

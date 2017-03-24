@@ -23,6 +23,17 @@
     <sql id="Base_Column_List" >
         id, title, etitle, type, area, time, showtime, lookcount, score, boxoffice, directorId, performerIds, prizeIds, image,introduce, atlas, scorenum
     </sql>
+    <select id="selectByStart" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+        select
+        <include refid="Base_Column_List" />
+        from movie
+        limit #{start, jdbcType=INTEGER},10
+    </select>
+    <select id="count" resultType="int" >
+        select
+        count(*)
+        from movie
+    </select>
     <select id="selectByTypeAll" resultMap="BaseResultMap" >
         select
         <include refid="Base_Column_List" />

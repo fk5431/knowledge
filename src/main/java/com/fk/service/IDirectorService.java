@@ -10,4 +10,9 @@ import java.util.List;
 public interface IDirectorService {
     DirectorBean selectByPrimaryKey(Integer id);
     List<DirectorBean> selectAll();
+
+    List<DirectorBean> selectByStart(Integer start);
+
+    int count();
+    int deleteByPrimaryKey(Integer id);
 }

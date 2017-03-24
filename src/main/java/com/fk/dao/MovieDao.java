@@ -31,4 +31,6 @@ public interface MovieDao {
         List<MovieBean> selectByType(String s);
         List<MovieBean> selectByTypeAll();
         List<MovieBean> selectSortByTimeOfTen();
+        int count();
+        List<MovieBean> selectByStart(Integer start);
 }

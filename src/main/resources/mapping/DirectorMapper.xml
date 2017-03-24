@@ -24,6 +24,17 @@
     id, name, ename, birth, fan, boxoffice, works, introduce, birthplace, sex, constellation,
     prizeIds, othername, nationality, height, images, image
   </sql>
+  <select id="count" resultType="int">
+    select
+    count(*)
+    from director
+  </select>
+  <select id="selectByStart" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select
+    <include refid="Base_Column_List" />
+    from director
+    limit #{start, jdbcType=INTEGER},5
+  </select>
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
     select
     <include refid="Base_Column_List" />

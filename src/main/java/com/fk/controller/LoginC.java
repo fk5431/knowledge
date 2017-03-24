@@ -60,22 +60,22 @@ public class LoginC {
         }
         map.put("indexshow", newsBeans);
         List<MovieBean> listhot = movieService.selectByType("1");
-        map.put("type1", listhot.subList(0,listhot.size()>6?6:listhot.size()));
+        map.put("type1", listhot.subList(0,listhot.size()>CommonConst.EIGHT_INT?CommonConst.EIGHT_INT:listhot.size()));
 
         List<MovieBean> listcoming = movieService.selectByType("2");
-        map.put("type2", listcoming.subList(0,listcoming.size()>6?6:listcoming.size()));
+        map.put("type2", listcoming.subList(0,listcoming.size()>CommonConst.EIGHT_INT?CommonConst.EIGHT_INT:listcoming.size()));
 
         List<MovieBean> lististhefile = movieService.selectByType("3");
-        map.put("type3", lististhefile.subList(0,lististhefile.size()>6?6:lististhefile.size()));
+        map.put("type3", lististhefile.subList(0,lististhefile.size()>CommonConst.EIGHT_INT?CommonConst.EIGHT_INT:lististhefile.size()));
 
         lististhefile = movieService.selectByType("4");
-        map.put("type4", lististhefile.subList(0,lististhefile.size()>6?6:lististhefile.size()));
+        map.put("type4", lististhefile.subList(0,lististhefile.size()>CommonConst.EIGHT_INT?CommonConst.EIGHT_INT:lististhefile.size()));
 
         lististhefile = movieService.selectByType("5");
-        map.put("type5", lististhefile.subList(0,lististhefile.size()>6?6:lististhefile.size()));
+        map.put("type5", lististhefile.subList(0,lististhefile.size()>CommonConst.EIGHT_INT?CommonConst.EIGHT_INT:lististhefile.size()));
 
         lististhefile = movieService.selectByType("6");
-        map.put("type6", lististhefile.subList(0,lististhefile.size()>6?6:lististhefile.size()));
+        map.put("type6", lististhefile.subList(0,lististhefile.size()>CommonConst.EIGHT_INT?CommonConst.EIGHT_INT:lististhefile.size()));
 
         List<MovieBean> salered = movieService.selectSortByBoxofficeOfTen();
         map.put("salered", salered);

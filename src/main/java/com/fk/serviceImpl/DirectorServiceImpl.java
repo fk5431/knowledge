@@ -26,4 +26,19 @@ public class DirectorServiceImpl implements IDirectorService {
     public List<DirectorBean> selectAll() {
         return directorDao.selectAll();
     }
+
+    @Override
+    public int count() {
+        return directorDao.count();
+    }
+
+    @Override
+    public List<DirectorBean> selectByStart(Integer start) {
+        return directorDao.selectByStart(start);
+    }
+
+    @Override
+    public int deleteByPrimaryKey(Integer id) {
+        return directorDao.deleteByPrimaryKey(id);
+    }
 }

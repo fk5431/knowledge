@@ -20,4 +20,7 @@ public interface IMovieService {
 
     List<MovieBean> selectSortByTimeOfTen();
     int insertSelective(MovieBean record);
+    int deleteByPrimaryKey(Integer id);
+    int count();
+    List<MovieBean> selectByStart(Integer start);
 }

@@ -18,4 +18,8 @@ public interface PerformerDao {
     int updateByPrimaryKey(PerformerBean record);
 
     List<PerformerBean> selectAll();
+
+    List<PerformerBean> selectByStart(Integer start);
+
+    int count();
 }

@@ -18,4 +18,9 @@ public interface DirectorDao {
     int updateByPrimaryKey(DirectorBean record);
 
     List<DirectorBean> selectAll();
+
+    List<DirectorBean> selectByStart(Integer start);
+
+    int count();
+
 }
