@@ -19,4 +19,5 @@ public interface IMovieService {
     List<MovieBean> selectByTypeAll();
 
     List<MovieBean> selectSortByTimeOfTen();
+    int insertSelective(MovieBean record);
 }

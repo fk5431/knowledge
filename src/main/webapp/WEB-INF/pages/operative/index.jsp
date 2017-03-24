@@ -32,7 +32,7 @@
         <li><a href="${pageContext.request.contextPath}/operative/pass" ><span class="icon-caret-right"></span>修改密码</a></li>
         <li><a href="${pageContext.request.contextPath}/operative/page" ><span class="icon-caret-right"></span>资讯添加</a></li>
         <li><a href="${pageContext.request.contextPath}/operative/adv" ><span class="icon-caret-right"></span>首页轮播</a></li>
-        <li><a href="${pageContext.request.contextPath}/operative/book" ><span class="icon-caret-right"></span>留言管理</a></li>
+        <li><a href="${pageContext.request.contextPath}/operative/book" ><span class="icon-caret-right"></span>演出添加</a></li>
         <li><a href="${pageContext.request.contextPath}/operative/column" ><span class="icon-caret-right"></span>栏目管理</a></li>
     </ul>
     <h2><span class="icon-pencil-square-o"></span>栏目管理</h2>

@@ -57,4 +57,9 @@ public class MovieServiceImpl implements IMovieService {
     public List<MovieBean> selectSortByTimeOfTen() {
         return movieDao.selectSortByTimeOfTen();
     }
+
+    @Override
+    public int insertSelective(MovieBean record) {
+        return movieDao.insertSelective(record);
+    }
 }

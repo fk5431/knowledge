@@ -19,4 +19,5 @@ public interface INewsService {
     List<NewsBean> selectByStrat(int start);
 
     int deleteByPrimaryKey(Integer id);
+    int insertSelective(NewsBean record);
 }

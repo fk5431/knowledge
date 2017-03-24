@@ -6,6 +6,8 @@ import com.fk.service.IDirectorService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 /**
  * Created by fengkai on 14/03/17.
  */
@@ -18,5 +20,10 @@ public class DirectorServiceImpl implements IDirectorService {
     @Override
     public DirectorBean selectByPrimaryKey(Integer id) {
         return directorDao.selectByPrimaryKey(id);
+    }
+
+    @Override
+    public List<DirectorBean> selectAll() {
+        return directorDao.selectAll();
     }
 }

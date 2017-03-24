@@ -2,6 +2,8 @@ package com.fk.dao;
 
 import com.fk.bean.DirectorBean;
 
+import java.util.List;
+
 public interface DirectorDao {
     int deleteByPrimaryKey(Integer id);
 
@@ -14,4 +16,6 @@ public interface DirectorDao {
     int updateByPrimaryKeySelective(DirectorBean record);
 
     int updateByPrimaryKey(DirectorBean record);
+
+    List<DirectorBean> selectAll();
 }

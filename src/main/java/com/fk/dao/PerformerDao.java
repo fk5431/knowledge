@@ -2,6 +2,8 @@ package com.fk.dao;
 
 import com.fk.bean.PerformerBean;
 
+import java.util.List;
+
 public interface PerformerDao {
     int deleteByPrimaryKey(Integer id);
 
@@ -14,4 +16,6 @@ public interface PerformerDao {
     int updateByPrimaryKeySelective(PerformerBean record);
 
     int updateByPrimaryKey(PerformerBean record);
+
+    List<PerformerBean> selectAll();
 }

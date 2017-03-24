@@ -1,4 +1,7 @@
-<%--
+<%@ page import="java.util.List" %>
+<%@ page import="com.fk.bean.DirectorBean" %>
+<%@ page import="com.fk.bean.PerformerBean" %>
+<%@ page import="com.fk.bean.TypeBean" %><%--
   Created by IntelliJ IDEA.
   User: fengkai
   Date: 23/03/17
@@ -9,135 +12,335 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <meta name="renderer" content="webkit">
-    <title></title>
-    <link rel="stylesheet" href="css/pintuer.css">
-    <link rel="stylesheet" href="css/admin.css">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>后台管理中心</title>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/ocss/pintuer.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/ocss/admin.css">
     <script src="${pageContext.request.contextPath}/ojs/jquery.js"></script>
     <script src="${pageContext.request.contextPath}/ojs/pintuer.js"></script>
+    <script type="text/javascript" charset="utf-8" src="${pageContext.request.contextPath}/uedite/ueditor.config.js"></script>
+    <script type="text/javascript" charset="utf-8" src="${pageContext.request.contextPath}/uedite/ueditor.all.js"> </script>
+    <!--建议手动加在语言，避免在ie下有时因为加载语言失败导致编辑器加载失败-->
+    <!--这里加载的语言文件会覆盖你在配置项目里添加的语言类型，比如你在配置项目里配置的是英文，这里加载的中文，那最后就是中文-->
+    <script type="text/javascript" charset="utf-8" src="${pageContext.request.contextPath}/uedite/zh-cn.js"></script>
 </head>
-<body>
-<form method="post" action="">
-    <div class="panel admin-panel">
-        <div class="panel-head"><strong class="icon-reorder"> 留言管理</strong></div>
-        <div class="padding border-bottom">
-            <ul class="search">
-                <li>
-                    <button type="button"  class="button border-green" id="checkall"><span class="icon-check"></span> 全选</button>
-                    <button type="submit" class="button border-red"><span class="icon-trash-o"></span> 批量删除</button>
-                </li>
-            </ul>
-        </div>
-        <table class="table table-hover text-center">
-            <tr>
-                <th width="120">ID</th>
-                <th>姓名</th>
-                <th>电话</th>
-                <th>邮箱</th>
-                <th>其他</th>
-                <th width="25%">内容</th>
-                <th width="120">留言时间</th>
-                <th>操作</th>
-            </tr>
-            <tr>
-                <td><input type="checkbox" name="id[]" value="1" />
-                    1</td>
-                <td>神夜</td>
-                <td>13420925611</td>
-                <td>564379992@qq.com</td>
-                <td>深圳市民治街道</td>
-                <td>这是一套后台UI，喜欢的朋友请多多支持谢谢。</td>
-                <td>2016-07-01</td>
-                <td><div class="button-group"> <a class="button border-red" href="javascript:void(0)" onclick="return del(1)"><span class="icon-trash-o"></span> 删除</a> </div></td>
-            </tr>
-            <tr>
-                <td><input type="checkbox" name="id[]" value="1" />
-                    1</td>
-                <td>神夜</td>
-                <td>13420925611</td>
-                <td>564379992@qq.com</td>
-                <td>深圳市民治街道</td>
-                <td>这是一套后台UI，喜欢的朋友请多多支持谢谢。</td>
-                <td>2016-07-01</td>
-                <td><div class="button-group"> <a class="button border-red" href="javascript:void(0)" onclick="return del(1)"><span class="icon-trash-o"></span> 删除</a> </div></td>
-            </tr>
-            <tr>
-                <td><input type="checkbox" name="id[]" value="1" />
-                    1</td>
-                <td>神夜</td>
-                <td>13420925611</td>
-                <td>564379992@qq.com</td>
-                <td>深圳市民治街道</td>
-                <td>这是一套后台UI，喜欢的朋友请多多支持谢谢。</td>
-                <td>2016-07-01</td>
-                <td><div class="button-group"> <a class="button border-red" href="javascript:void(0)" onclick="return del(1)"><span class="icon-trash-o"></span> 删除</a> </div></td>
-            </tr>
-            <tr>
-                <td><input type="checkbox" name="id[]" value="1" />
-                    1</td>
-                <td>神夜</td>
-                <td>13420925611</td>
-                <td>564379992@qq.com</td>
-                <td>深圳市民治街道</td>
-                <td>这是一套后台UI，喜欢的朋友请多多支持谢谢。</td>
-                <td>2016-07-01</td>
-                <td><div class="button-group"> <a class="button border-red" href="javascript:void(0)" onclick="return del(1)"><span class="icon-trash-o"></span> 删除</a> </div></td>
-            </tr>
-            <tr>
-                <td><input type="checkbox" name="id[]" value="1" />
-                    1</td>
-                <td>神夜</td>
-                <td>13420925611</td>
-                <td>564379992@qq.com</td>
-                <td>深圳市民治街道</td>
-                <td>这是一套后台UI，喜欢的朋友请多多支持谢谢。</td>
-                <td>2016-07-01</td>
-                <td><div class="button-group"> <a class="button border-red" href="javascript:void(0)" onclick="return del(1)"><span class="icon-trash-o"></span> 删除</a> </div></td>
-            </tr>
-            <tr>
-                <td colspan="8"><div class="pagelist"> <a href="">上一页</a> <span class="current">1</span><a href="">2</a><a href="">3</a><a href="">下一页</a><a href="">尾页</a> </div></td>
-            </tr>
-        </table>
+<body style="background-color:#f2f9fd;">
+<div class="header bg-main">
+    <div class="logo margin-big-left fadein-top">
+        <h1><img src="${pageContext.request.contextPath}/images/y.jpg" class="radius-circle rotate-hover" height="50"
+                 alt=""/>后台管理中心</h1>
     </div>
-</form>
+    <div class="head-l"><a class="button button-little bg-green" href="" target="_blank"><span class="icon-home"></span>
+        前台首页</a> &nbsp;&nbsp;<a href="##" class="button button-little bg-blue"><span class="icon-wrench"></span>
+        清除缓存</a> &nbsp;&nbsp;<a class="button button-little bg-red" href="login.html"><span
+            class="icon-power-off"></span> 退出登录</a></div>
+</div>
+<div class="leftnav">
+    <div class="leftnav-title"><strong><span class="icon-list"></span>菜单列表</strong></div>
+    <h2><span class="icon-user"></span>基本设置</h2>
+    <ul style="display:block">
+        <li><a href="${pageContext.request.contextPath}/operative"><span class="icon-caret-right"></span>网站用户</a></li>
+        <li><a href="${pageContext.request.contextPath}/operative/pass"><span class="icon-caret-right"></span>修改密码</a>
+        </li>
+        <li><a href="${pageContext.request.contextPath}/operative/page"><span class="icon-caret-right"></span>资讯添加</a>
+        </li>
+        <li><a href="${pageContext.request.contextPath}/operative/adv"><span class="icon-caret-right"></span>首页轮播</a>
+        </li>
+        <li><a href="${pageContext.request.contextPath}/operative/book"><span class="icon-caret-right"></span>演出添加</a>
+        </li>
+        <li><a href="${pageContext.request.contextPath}/operative/column"><span class="icon-caret-right"></span>栏目管理</a>
+        </li>
+    </ul>
+    <h2><span class="icon-pencil-square-o"></span>栏目管理</h2>
+    <ul>
+        <li><a href="list.html"><span class="icon-caret-right"></span>内容管理</a></li>
+        <li><a href="add.html"><span class="icon-caret-right"></span>添加内容</a></li>
+        <li><a href="cate.html"><span class="icon-caret-right"></span>分类管理</a></li>
+    </ul>
+</div>
 <script type="text/javascript">
-
-    function del(id){
-        if(confirm("您确定要删除吗?")){
-
-        }
-    }
-
-    $("#checkall").click(function(){
-        $("input[name='id[]']").each(function(){
-            if (this.checked) {
-                this.checked = false;
-            }
-            else {
-                this.checked = true;
-            }
-        });
-    })
-
-    function DelSelect(){
-        var Checkbox=false;
-        $("input[name='id[]']").each(function(){
-            if (this.checked==true) {
-                Checkbox=true;
-            }
-        });
-        if (Checkbox){
-            var t=confirm("您确认要删除选中的内容吗？");
-            if (t==false) return false;
-        }
-        else{
-            alert("请选择您要删除的内容!");
-            return false;
-        }
-    }
-
+    $(function () {
+        $(".leftnav h2").click(function () {
+            $(this).next().slideToggle(200);
+            $(this).toggleClass("on");
+        })
+        $(".leftnav ul li a").click(function () {
+            $("#a_leader_txt").text($(this).text());
+            $(".leftnav ul li a").removeClass("on");
+            $(this).addClass("on");
+        })
+    });
 </script>
-</body></html>
+<ul class="bread">
+    <li><a href="{:U('Index/info')}" class="icon-home"> 首页</a></li>
+    <li><a href="##" id="a_leader_txt">网站信息</a></li>
+    <li><b>当前语言：</b><span style="color:red;">中文</span></li>
+</ul>
+<div class="admin">
+    <div class="panel admin-panel">
+        <div class="panel-head"><strong><span class="icon-pencil-square-o"></span> 单页信息</strong></div>
+        <div class="body-content">
+            <form method="post" class="form-x" action="${pageContext.request.contextPath}/operative/addmovie"
+                  enctype="multipart/form-data">
+                <div class="form-group">
+                    <div class="label">
+                        <label>中文标题：</label>
+                    </div>
+                    <div class="field">
+                        <input type="text" class="input" name="title" value=""/>
+                        <div class="tips"></div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="label">
+                        <label>英文标题：</label>
+                    </div>
+                    <div class="field">
+                        <input type="text" class="input" name="etitle" value=""/>
+                        <div class="tips"></div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="label">
+                        <label>类型：</label>
+                    </div>
+                    <div class="field">
+                        <select name="type">
+                            <%
+                                List<TypeBean> type = (List) request.getAttribute("type");
+                                for(int i=0;i<type.size();i++){
+                            %>
+                            <option value ="<%=type.get(i).getId()%>"><%=type.get(i).getTypename()%></option>
+                            <%}%>
+                        </select>
+                        <div class="tips"></div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="label">
+                        <label>地区：</label>
+                    </div>
+                    <div class="field">
+                        <input type="text" class="input" name="area" value=""/>
+                        <div class="tips"></div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="label">
+                        <label>时间：</label>
+                    </div>
+                    <div class="field">
+                        <input type="text" class="input" name="time" value=""/>
+                        <div class="tips"></div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="label">
+                        <label>演出时长：</label>
+                    </div>
+                    <div class="field">
+                        <input type="text" class="input" name="time1" value=""/>
+                        <div class="tips"></div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="label">
+                        <label>票房：</label>
+                    </div>
+                    <div class="field">
+                        <input type="text" class="input" name="boxoffice" value=""/>
+                        <div class="tips"></div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="label">
+                        <label>评分：</label>
+                    </div>
+                    <div class="field">
+                        <input type="text" class="input" name="score" value=""/>
+                        <div class="tips"></div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="label">
+                        <label>简介：</label>
+                    </div>
+                    <div class="field">
+                        <%--<input type="text" class="input" name="score" value=""/>--%>
+                        <textarea name="introduce"></textarea>
+                        <div class="tips"></div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="label">
+                        <label>主演：</label>
+                    </div>
+                    <div class="field">
+                        <select name="director">
+                            <%
+                                List<DirectorBean> directorBeans = (List) request.getAttribute("director");
+                                for(int i=0;i<directorBeans.size();i++){
+                            %>
+                            <option value ="<%=directorBeans.get(i).getId()%>"><%=directorBeans.get(i).getName()%></option>
+                            <%}%>
+                        </select>
+                        <div class="tips"></div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="label">
+                        <label>参与演员：</label>
+                    </div>
+                    <div class="field">
+                        <%
+                            List<PerformerBean> performerBeans = (List) request.getAttribute("performer");
+                            for(int i=0;i<performerBeans.size();i++){
+                        %>
+                        <label><input name="performer" type="checkbox" value="<%=performerBeans.get(i).getId()%>" /><%=performerBeans.get(i).getName()%> </label>
+                        <%}%>
+                        <div class="tips"></div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="label">
+                        <label>图片：</label>
+                    </div>
+                    <div class="field">
+                        <input name="image" type="file" accept="image/gif, image/jpeg"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="label">
+                        <label>图集下方上传：</label>
+                    </div>
+                    <div class="field">
+                        <script id="editor" type="text/plain" style="width:1024px;height:500px;" name="content"></script>
+                        <script type="text/javascript">
+                            //实例化编辑器
+                            //建议使用工厂方法getEditor创建和引用编辑器实例，如果在某个闭包下引用该编辑器，直接调用UE.getEditor('editor')就能拿到相关的实例
+                            var ue = UE.getEditor('editor');
+
+
+                            function isFocus(e){
+                                alert(UE.getEditor('editor').isFocus());
+                                UE.dom.domUtils.preventDefault(e)
+                            }
+                            function setblur(e){
+                                UE.getEditor('editor').blur();
+                                UE.dom.domUtils.preventDefault(e)
+                            }
+                            function insertHtml() {
+                                var value = prompt('插入html代码', '');
+                                UE.getEditor('editor').execCommand('insertHtml', value)
+                            }
+                            function createEditor() {
+                                enableBtn();
+                                UE.getEditor('editor');
+                            }
+                            function getAllHtml() {
+                                alert(UE.getEditor('editor').getAllHtml())
+                            }
+                            function getContent() {
+                                var arr = [];
+                                arr.push("使用editor.getContent()方法可以获得编辑器的内容");
+                                arr.push("内容为：");
+                                arr.push(UE.getEditor('editor').getContent());
+                                alert(arr.join("\n"));
+                            }
+                            function getPlainTxt() {
+                                var arr = [];
+                                arr.push("使用editor.getPlainTxt()方法可以获得编辑器的带格式的纯文本内容");
+                                arr.push("内容为：");
+                                arr.push(UE.getEditor('editor').getPlainTxt());
+                                alert(arr.join('\n'))
+                            }
+                            function setContent(isAppendTo) {
+                                var arr = [];
+                                arr.push("使用editor.setContent('欢迎使用ueditor')方法可以设置编辑器的内容");
+                                UE.getEditor('editor').setContent('欢迎使用ueditor', isAppendTo);
+                                alert(arr.join("\n"));
+                            }
+                            function setDisabled() {
+                                UE.getEditor('editor').setDisabled('fullscreen');
+                                disableBtn("enable");
+                            }
+
+                            function setEnabled() {
+                                UE.getEditor('editor').setEnabled();
+                                enableBtn();
+                            }
+
+                            function getText() {
+                                //当你点击按钮时编辑区域已经失去了焦点，如果直接用getText将不会得到内容，所以要在选回来，然后取得内容
+                                var range = UE.getEditor('editor').selection.getRange();
+                                range.select();
+                                var txt = UE.getEditor('editor').selection.getText();
+                                alert(txt)
+                            }
+
+                            function getContentTxt() {
+                                var arr = [];
+                                arr.push("使用editor.getContentTxt()方法可以获得编辑器的纯文本内容");
+                                arr.push("编辑器的纯文本内容为：");
+                                arr.push(UE.getEditor('editor').getContentTxt());
+                                alert(arr.join("\n"));
+                            }
+                            function hasContent() {
+                                var arr = [];
+                                arr.push("使用editor.hasContents()方法判断编辑器里是否有内容");
+                                arr.push("判断结果为：");
+                                arr.push(UE.getEditor('editor').hasContents());
+                                alert(arr.join("\n"));
+                            }
+                            function setFocus() {
+                                UE.getEditor('editor').focus();
+                            }
+                            function deleteEditor() {
+                                disableBtn();
+                                UE.getEditor('editor').destroy();
+                            }
+                            function disableBtn(str) {
+                                var div = document.getElementById('btns');
+                                var btns = UE.dom.domUtils.getElementsByTagName(div, "button");
+                                for (var i = 0, btn; btn = btns[i++];) {
+                                    if (btn.id == str) {
+                                        UE.dom.domUtils.removeAttributes(btn, ["disabled"]);
+                                    } else {
+                                        btn.setAttribute("disabled", "true");
+                                    }
+                                }
+                            }
+                            function enableBtn() {
+                                var div = document.getElementById('btns');
+                                var btns = UE.dom.domUtils.getElementsByTagName(div, "button");
+                                for (var i = 0, btn; btn = btns[i++];) {
+                                    UE.dom.domUtils.removeAttributes(btn, ["disabled"]);
+                                }
+                            }
+
+                            function getLocalData () {
+                                alert(UE.getEditor('editor').execCommand( "getlocaldata" ));
+                            }
+
+                            function clearLocalData () {
+                                UE.getEditor('editor').execCommand( "clearlocaldata" );
+                                alert("已清空草稿箱")
+                            }
+                        </script>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="label">
+                        <label></label>
+                    </div>
+                    <div class="field">
+                        <button class="button bg-main icon-check-square-o" type="submit"> 提交</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

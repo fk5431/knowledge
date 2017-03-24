@@ -48,4 +48,9 @@ public class NewsServiceImpl implements INewsService {
     public int deleteByPrimaryKey(Integer id) {
         return newsDao.deleteByPrimaryKey(id);
     }
+
+    @Override
+    public int insertSelective(NewsBean record) {
+        return newsDao.insertSelective(record);
+    }
 }

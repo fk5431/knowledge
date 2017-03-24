@@ -170,7 +170,7 @@ public class LoginC {
         String email = request.getParameter("email");
         Date now = new Date();
         String currentTime = "" + now.getTime();
-        String urlString = "http://localhost:8080/forgetPassword?key=";
+        String urlString = "http://localhost:8080/movie/forgetPassword?key=";
         String encryptedCode = MD5.encodeMD5(currentTime + "@" + email);
         String link = "<a href=\""+urlString + encryptedCode+"\"></a>";
         logger.debug("LoginC.sendMail in email[{}], link[{}]", email, link);
