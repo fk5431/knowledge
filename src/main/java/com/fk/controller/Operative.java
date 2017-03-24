@@ -15,6 +15,8 @@ import org.springframework.web.multipart.MultipartFile;
 import javax.servlet.http.HttpServletRequest;
 import java.io.File;
 import java.io.IOException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -240,7 +242,12 @@ public class Operative {
         movieBean.setArea(area);
         movieBean.setBoxoffice(Integer.parseInt(boxoffice));
         movieBean.setEtitle(etitle);
-        movieBean.setShowtime(new Date(time));
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd hh:mm");
+        try {
+            movieBean.setShowtime(dateFormat.parse(time));
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
         movieBean.setTime(time1);
         movieBean.setType(type);
         movieBean.setDirectorid(Integer.parseInt(director));
@@ -255,8 +262,10 @@ public class Operative {
         }
         movieBean.setPerformerids(sb.toString());
 
-        movieBean.setAtlas();
+//        movieBean.setAtlas();
+//        <p><img src="http://127.0.0.1:8080/movie/image/upload/20170324/1490349345219013330.jpg" title="1490349345219013330.jpg"/></p><p><img src="http://127.0.0.1:8080/movie/image/upload/20170324/1490349345220025367.png" title="1490349345220025367.png"/></p><p><img src="http://127.0.0.1:8080/movie/image/upload/20170324/1490349345238061557.jpg" title="1490349345238061557.jpg"/></p><p><img src="http://127.0.0.1:8080/movie/image/upload/20170324/1490349345282050166.jpg" title="1490349345282050166.jpg"/></p><p><img src="http://127.0.0.1:8080/movie/image/upload/20170324/1490349345299086634.jpg" title="1490349345299086634.jpg"/></p><p><br/></p>
         movieService.insertSelective(movieBean);
+
         return book(request, map);
     }
     @RequestMapping("/operative/book")
