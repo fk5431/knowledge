@@ -17,4 +17,5 @@ public interface IPerformerService {
     int count();
 
     int deleteByPrimaryKey(Integer id);
+    int insertSelective(PerformerBean record);
 }

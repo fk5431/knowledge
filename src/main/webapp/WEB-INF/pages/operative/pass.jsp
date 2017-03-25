@@ -86,7 +86,7 @@
                 <td><%=director.get(i).getOthername()%></td>
                 <td><%=director.get(i).getIntroduce()%></td>
                 <td><div class="button-group">
-                    <a class="button border-main" href="${pageContext.request.contextPath}/director?id=<%=director.get(i).getId()%>"><span class="icon-edit"></span> 查看</a>
+                    <a class="button border-main" href="${pageContext.request.contextPath}/director?id=<%=director.get(i).getId()%>" target="_blank"><span class="icon-edit"></span> 查看</a>
                     <a class="button border-red" href="${pageContext.request.contextPath}/deldirector?id=<%=director.get(i).getId()%>"><span class="icon-trash-o"></span> 删除</a>
                 </div></td>
             </tr>
@@ -139,7 +139,7 @@
                     <td><%=performerBeans.get(i).getOthername()%></td>
                     <td><%=performerBeans.get(i).getIntroduce()%></td>
                     <td><div class="button-group">
-                        <a class="button border-main" href="${pageContext.request.contextPath}/performer?id=<%=performerBeans.get(i).getId()%>"><span class="icon-edit"></span> 查看</a>
+                        <a class="button border-main" href="${pageContext.request.contextPath}/performer?id=<%=performerBeans.get(i).getId()%>" target="_blank"><span class="icon-edit"></span> 查看</a>
                         <a class="button border-red" href="${pageContext.request.contextPath}/delperformer?id=<%=performerBeans.get(i).getId()%>"><span class="icon-trash-o"></span> 删除</a>
                     </div></td>
                 </tr>

@@ -118,6 +118,9 @@ public class MovieC {
         List<MovieBean> listmovie = new ArrayList<>();
         String[] works = directorBean.getWorks().split(CommonConst.SPLITOR);
         for(int i=0;i<works.length;i++){
+            if("".equals(works[i])){
+                continue;
+            }
             MovieBean movieBean = movieService.selectByPrimaryKey(Integer.parseInt(works[i]));
             listmovie.add(movieBean);
         }

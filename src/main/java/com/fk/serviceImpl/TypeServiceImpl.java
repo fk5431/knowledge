@@ -25,4 +25,19 @@ public class TypeServiceImpl implements ITypeService {
     public List<TypeBean> selectAll() {
         return typeDao.selectAll();
     }
+
+    @Override
+    public List<TypeBean> selectByStart(Integer start) {
+        return typeDao.selectByStart(start);
+    }
+
+    @Override
+    public int deleteByPrimaryKey(Integer id) {
+        return typeDao.deleteByPrimaryKey(id);
+    }
+
+    @Override
+    public int updateByPrimaryKeySelective(TypeBean record) {
+        return typeDao.updateByPrimaryKeySelective(record);
+    }
 }

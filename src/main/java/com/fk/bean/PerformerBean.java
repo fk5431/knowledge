@@ -1,5 +1,6 @@
 package com.fk.bean;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class PerformerBean {
@@ -69,8 +70,9 @@ public class PerformerBean {
         this.othername = othername == null ? null : othername.trim();
     }
 
-    public Date getBirth() {
-        return birth;
+    public String getBirth() {
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
+        return simpleDateFormat.format(birth);
     }
 
     public void setBirth(Date birth) {

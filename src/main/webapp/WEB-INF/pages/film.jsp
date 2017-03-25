@@ -134,7 +134,7 @@
                 <div class="movie-index">
                     <p class="movie-index-title">累计票房</p>
                     <div class="movie-index-content box">
-                        <span class="stonefont">${movie.boxoffice}</span><span class="unit">亿</span>
+                        <span class="stonefont">${movie.boxoffice}</span><span class="unit"></span>
                     </div>
                 </div>
             </div>

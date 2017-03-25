@@ -139,7 +139,7 @@
                                     <dt class="basicInfo-item name">出生地</dt>
                                     <dd class="basicInfo-item value">${director.birthplace}</dd>
                                     <dt class="basicInfo-item name">身&nbsp;&nbsp;&nbsp;&nbsp;份</dt>
-                                    <dd class="basicInfo-item value">导演</dd>
+                                    <dd class="basicInfo-item value">演员</dd>
                                 </dl>
                                 <dl class="dl-right">
                                     <dt class="basicInfo-item name">性&nbsp;&nbsp;&nbsp;&nbsp;别</dt>

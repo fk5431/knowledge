@@ -24,4 +24,5 @@ public interface TypeDao {
         int updateByPrimaryKey(TypeBean record);
 
         List<TypeBean> selectAll();
+        List<TypeBean> selectByStart(Integer start);
 }

@@ -41,4 +41,9 @@ public class DirectorServiceImpl implements IDirectorService {
     public int deleteByPrimaryKey(Integer id) {
         return directorDao.deleteByPrimaryKey(id);
     }
+
+    @Override
+    public int insertSelective(DirectorBean record) {
+        return directorDao.insertSelective(record);
+    }
 }

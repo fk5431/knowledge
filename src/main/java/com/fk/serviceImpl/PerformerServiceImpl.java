@@ -41,4 +41,9 @@ public class PerformerServiceImpl implements IPerformerService {
     public int deleteByPrimaryKey(Integer id) {
         return performerDao.deleteByPrimaryKey(id);
     }
+
+    @Override
+    public int insertSelective(PerformerBean record) {
+        return performerDao.insertSelective(record);
+    }
 }

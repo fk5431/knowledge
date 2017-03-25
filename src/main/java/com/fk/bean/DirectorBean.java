@@ -63,7 +63,7 @@ public class DirectorBean {
     }
 
     public String getBirth() {
-        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-DD");
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
         return simpleDateFormat.format(birth);
     }
 

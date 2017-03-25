@@ -15,4 +15,5 @@ public interface IDirectorService {
 
     int count();
     int deleteByPrimaryKey(Integer id);
+    int insertSelective(DirectorBean record);
 }
