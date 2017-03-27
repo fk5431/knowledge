@@ -21,4 +21,9 @@ public class IndexShowServiceImpl implements IIndexShowService {
     public IndexShowBean selectByPrimaryKey(Integer id) {
         return indexShowDao.selectByPrimaryKey(id);
     }
+
+    @Override
+    public int updateByPrimaryKey(IndexShowBean record) {
+        return indexShowDao.updateByPrimaryKey(record);
+    }
 }

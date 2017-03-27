@@ -7,4 +7,5 @@ import com.fk.bean.ShopshowBean;
  */
 public interface IShopshowService {
     ShopshowBean selectByPrimaryKey(Integer id);
+    int updateByPrimaryKey(ShopshowBean record);
 }

@@ -9,4 +9,5 @@ import com.fk.bean.TravelBean;
  */
 public interface IIndexShowService {
     IndexShowBean selectByPrimaryKey(Integer id);
+    int updateByPrimaryKey(IndexShowBean record);
 }

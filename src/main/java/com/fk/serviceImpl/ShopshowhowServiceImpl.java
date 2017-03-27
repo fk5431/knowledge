@@ -22,4 +22,9 @@ public class ShopshowhowServiceImpl implements IShopshowService {
     public ShopshowBean selectByPrimaryKey(Integer id) {
         return shopShowDao.selectByPrimaryKey(id);
     }
+
+    @Override
+    public int updateByPrimaryKey(ShopshowBean record) {
+        return shopShowDao.updateByPrimaryKey(record);
+    }
 }

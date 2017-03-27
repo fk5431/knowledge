@@ -109,11 +109,10 @@ public class ShopC {
         List<OrdersBean> ordersBeans = new ArrayList<>();
         for(int i=0;i<CommonConst.FOUR_INT;i++){
             ShopshowBean shopshowBean = shopshowService.selectByPrimaryKey(i);
-            if(shopshowBean != null){
+            if(shopshowBean != null  && shopshowBean.getMid() != -1){
                 OrdersBean ordersBean = ordersService.selectByPrimaryKey(shopshowBean.getMid());
-                if(ordersBean != null){
+                if(ordersBean != null)
                     ordersBeans.add(ordersBean);
-                }
             }
         }
         map.put("shopshow", ordersBeans);

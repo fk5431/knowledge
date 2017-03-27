@@ -86,8 +86,9 @@
                 <td>
                     <div class="button-group">
                         <a type="button" class="button border-main" href="${pageContext.request.contextPath}/article?id=<%=travel.get(i).getId()%>" target="_blank"><span class="icon-edit"></span>查看</a>
-                        <a type="button" class="button border-main" href="${pageContext.request.contextPath}/operative/addtoindex?id=<%=travel.get(i).getId()%>" target="_blank"><span class="icon-edit"></span>添加到首页</a>
+                        <a type="button" class="button border-main" href="${pageContext.request.contextPath}/operative/addtoindex?id=<%=travel.get(i).getId()%>"><span class="icon-edit"></span>添加到首页</a>
                         <a class="button border-red" href="${pageContext.request.contextPath}/operative/article?id=<%=travel.get(i).getId()%>"  ><span class="icon-trash-o"></span> 删除</a>
+                        <a type="button" class="button border-main" href="${pageContext.request.contextPath}/operative/addtomdd?id=<%=travel.get(i).getId()%>"><span class="icon-edit"></span>添加到目的地</a>
                     </div>
                 </td>
             </tr>

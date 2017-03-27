@@ -1,11 +1,7 @@
 package com.fk.controller;
 
-import com.fk.bean.TravelBean;
-import com.fk.bean.TypeBean;
-import com.fk.bean.User;
-import com.fk.service.ITravelService;
-import com.fk.service.ITypeService;
-import com.fk.service.IUserService;
+import com.fk.bean.*;
+import com.fk.service.*;
 import com.fk.util.CommonConst;
 import com.fk.util.MD5;
 import org.apache.commons.io.FileUtils;
@@ -41,6 +37,18 @@ public class operative {
 
     @Autowired
     ITypeService typeService;
+
+    @Autowired
+    IIndexShowService indexShowService;
+
+    @Autowired
+    IIndexshowshopService indexshowshopService;
+
+    @Autowired
+    IShopshowService shopshowService;
+
+    @Autowired
+    IOrdersService ordersService;
 
     private static final int SIZE = 10;
 
@@ -125,50 +133,175 @@ public class operative {
 
         return "/operative/book";
     }
+    @RequestMapping("/operative/delindex")
+    public String delindex(HttpServletRequest request, Map<String, Object> map){
+
+        String id = request.getParameter("id");
+        IndexShowBean indexShowBean = indexShowService.selectByPrimaryKey(Integer.parseInt(id));
+        indexShowBean.setMid(-1);
+        indexShowService.updateByPrimaryKey(indexShowBean);
+        return adv(request, map);
+    }
+    @RequestMapping("/operative/delindexshop")
+    public String delindexshop(HttpServletRequest request, Map<String, Object> map){
+        String id = request.getParameter("id");
+        IndexshowshopBean indexshowshopBean = indexshowshopService.selectByPrimaryKey(Integer.parseInt(id));
+        indexshowshopBean.setMid(-1);
+        indexshowshopService.updateByPrimaryKey(indexshowshopBean);
+        return adv(request, map);
+    }
+    @RequestMapping("/operative/delshowshop")
+    public String delshowshop(HttpServletRequest request, Map<String, Object> map){
+        String id = request.getParameter("id");
+        ShopshowBean shopshowBean = shopshowService.selectByPrimaryKey(Integer.parseInt(id));
+        shopshowBean.setMid(-1);
+        shopshowService.updateByPrimaryKey(shopshowBean);
+        return adv(request, map);
+    }
+    @RequestMapping("/operative/addtoindex")
+    public String addtoindex(HttpServletRequest request, Map<String, Object> map){
+
+        String id = request.getParameter("id");
+        for(int i=CommonConst.ONE_INT;i<=CommonConst.FIVE_INT;i++){
+            IndexShowBean indexShowBean = indexShowService.selectByPrimaryKey(i);
+            if(indexShowBean.getMid() == -1){
+                indexShowBean.setMid(Integer.parseInt(id));
+                indexShowService.updateByPrimaryKey(indexShowBean);
+                return adv(request, map);
+            }else {
+                TravelBean travelBean = travelService.selectByPrimaryKey(indexShowBean.getMid());
+                if(travelBean == null){
+                    indexShowBean.setMid(Integer.parseInt(id));
+                    indexShowService.updateByPrimaryKey(indexShowBean);
+                    return adv(request, map);
+                }
+            }
+        }
+        map.put("errorcode", 8);
+        return "error";
+
+    }
+    @RequestMapping("/operative/addtomdd")
+    public String addtomdd(HttpServletRequest request, Map<String, Object> map){
+
+        String id = request.getParameter("id");
+        IndexShowBean indexShowBean = indexShowService.selectByPrimaryKey(CommonConst.SIX_INT);
+
+        if(indexShowBean.getMid() == -1 ){
+            indexShowBean.setMid(Integer.parseInt(id));
+            indexShowService.updateByPrimaryKey(indexShowBean);
+            return adv(request, map);
+        }else {
+            TravelBean travelBean = travelService.selectByPrimaryKey(indexShowBean.getMid());
+            if(travelBean == null){
+                indexShowBean.setMid(Integer.parseInt(id));
+                indexShowService.updateByPrimaryKey(indexShowBean);
+                return adv(request, map);
+            }
+        }
+
+        map.put("errorcode", 9);
+        return "error";
+    }
+
+    @RequestMapping("/operative/adv")
+    public String adv(HttpServletRequest request, Map<String, Object> map){
+
+        List<TravelBean> list = new ArrayList<>();
+        for(int i=CommonConst.ONE_INT;i<=CommonConst.FIVE_INT;i++){
+            IndexShowBean indexShowBean = indexShowService.selectByPrimaryKey(i);
+            if(indexShowBean != null && indexShowBean.getMid() != -1){
+                TravelBean travelBean = travelService.selectByPrimaryKey(indexShowBean.getMid());
+                if(travelBean != null) {
+                    list.add(travelBean);
+                }
+            }
+        }
+        map.put("indexshow", list);
+
+        IndexShowBean indexShowBean = indexShowService.selectByPrimaryKey(CommonConst.SIX_INT);
+        TravelBean travelBean = new TravelBean();
+        if(indexShowBean.getMid() != -1){
+            travelBean = travelService.selectByPrimaryKey(indexShowBean.getMid());
+        }
+        map.put("banner", travelBean);
+
+        //热卖爆款
+        List<OrdersBean> listorders = new ArrayList<>();
+        for(int i=CommonConst.ONE_INT;i<=CommonConst.THREE_INT;i++){
+            IndexshowshopBean indexshowshopBean  = indexshowshopService.selectByPrimaryKey(i);
+            if(indexshowshopBean != null  && indexshowshopBean.getMid() != -1){
+                 OrdersBean ordersBean = ordersService.selectByPrimaryKey(indexshowshopBean.getMid());
+                if(ordersBean != null){
+                    listorders.add(ordersBean);
+                }
+            }
+        }
+        map.put("orders", listorders);
+
+        List<OrdersBean> ordersBeans = new ArrayList<>();
+        for(int i=0;i<CommonConst.FOUR_INT;i++){
+            ShopshowBean shopshowBean = shopshowService.selectByPrimaryKey(i);
+            if(shopshowBean != null  && shopshowBean.getMid() != -1){
+                OrdersBean ordersBean = ordersService.selectByPrimaryKey(shopshowBean.getMid());
+                if(ordersBean != null){
+                    ordersBeans.add(ordersBean);
+                }
+            }
+        }
+        map.put("shopshow", ordersBeans);
+        return "/operative/adv";
+    }
 
     @RequestMapping("/operative/addart")
     public String addart(HttpServletRequest request, @RequestParam("image") MultipartFile file, Map<String, Object> map){
+        try{
 
-        String title = request.getParameter("title");
-        String author = request.getParameter("author");
-        String type = request.getParameter("type");
-        String area = request.getParameter("area");
-        String line = request.getParameter("line");
-        String summary = request.getParameter("summary");
-        String content = request.getParameter("content");
+            String title = request.getParameter("title");
+            String author = request.getParameter("author");
+            String type = request.getParameter("type");
+            String area = request.getParameter("area");
+            String line = request.getParameter("line");
+            String summary = request.getParameter("summary");
+            String content = request.getParameter("content");
 
-        String filename = file.getOriginalFilename();
-        String img ;
-        if("".equals(filename)){
-            img = "";
-        }else{
-            String path = ContextLoader.getCurrentWebApplicationContext().getServletContext().getRealPath("/");
-            filename = String.valueOf(System.currentTimeMillis()) + filename;
-            path = path + "images";
-            File upload = new File(path, filename);
-            try {
-                FileUtils.copyInputStreamToFile(file.getInputStream(), upload);
-            } catch (IOException e) {
-                e.printStackTrace();
+            String filename = file.getOriginalFilename();
+            String img ;
+            if("".equals(filename)){
+                img = "";
+            }else{
+                String path = ContextLoader.getCurrentWebApplicationContext().getServletContext().getRealPath("/");
+                filename = String.valueOf(System.currentTimeMillis()) + filename;
+                path = path + "images";
+                File upload = new File(path, filename);
+                try {
+                    FileUtils.copyInputStreamToFile(file.getInputStream(), upload);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+                img = "/travel/images/"+filename;
             }
-            img = "/travel/images/"+filename;
+
+            TravelBean travelBean = new TravelBean();
+            travelBean.setTitle(title);
+            travelBean.setCount(0);
+            travelBean.setImage(img);
+            travelBean.setType(type);
+            travelBean.setAuthor(author);
+            travelBean.setContext(content);
+            travelBean.setLine(line);
+            travelBean.setLookcount(0);
+            travelBean.setTime(new Date());
+            travelBean.setPlace(area);
+            travelBean.setSummary(summary);
+
+            travelService.insertSelective(travelBean);
+            return addarticle(request, map);
+        }catch (Exception e){
+            e.printStackTrace();
+            map.put("errorcode", 10);
+            return "error";
         }
-
-        TravelBean travelBean = new TravelBean();
-        travelBean.setTitle(title);
-        travelBean.setCount(0);
-        travelBean.setImage(img);
-        travelBean.setType(type);
-        travelBean.setAuthor(author);
-        travelBean.setContext(content);
-        travelBean.setLine(line);
-        travelBean.setLookcount(0);
-        travelBean.setTime(new Date());
-        travelBean.setPlace(area);
-        travelBean.setSummary(summary);
-
-        travelService.insertSelective(travelBean);
-        return addarticle(request, map);
     }
 
 }

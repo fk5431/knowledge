@@ -1,5 +1,6 @@
 <%@ page import="java.util.List" %>
-<%@ page import="com.fk.bean.NewsBean" %><%--
+<%@ page import="com.fk.bean.TravelBean" %>
+<%@ page import="com.fk.bean.OrdersBean" %> <%--
   Created by IntelliJ IDEA.
   User: fengkai
   Date: 23/03/17
@@ -32,8 +33,8 @@
         <li><a href="${pageContext.request.contextPath}/operative/pass" ><span class="icon-caret-right"></span>演员/助演管理</a></li>
         <li><a href="${pageContext.request.contextPath}/operative/page" ><span class="icon-caret-right"></span>资讯添加</a></li>
         <li><a href="${pageContext.request.contextPath}/operative/adv" ><span class="icon-caret-right"></span>首页轮播</a></li>
-        <li><a href="${pageContext.request.contextPath}/operative/book" ><span class="icon-caret-right"></span>演出添加</a></li>
-        <li><a href="${pageContext.request.contextPath}/operative/column" ><span class="icon-caret-right"></span>演出管理</a></li>
+        <li><a href="${pageContext.request.contextPath}/operative/addarticle" ><span class="icon-caret-right"></span>攻略添加</a></li>
+        <li><a href="${pageContext.request.contextPath}/operative/column" ><span class="icon-caret-right"></span>攻略管理</a></li>
     </ul>
     <h2><span class="icon-pencil-square-o"></span>高级修改</h2>
     <ul>
@@ -74,7 +75,7 @@
                 <th width="15%">操作</th>
             </tr>
             <%
-                List<NewsBean> list = (List)request.getAttribute("indexshow");
+                List<TravelBean> list = (List)request.getAttribute("indexshow");
                 for(int i=0;i<list.size();i++){
             %>
             <tr>
@@ -84,62 +85,98 @@
                 <td><%=list.get(i).getTime()%></td>
                 <td><%=list.get(i).getCount()%></td>
                 <td><div class="button-group">
-                    <a class="button border-red" href="${pageContext.request.contextPath}/operative/delnew?id=<%=list.get(i).getId()%>"><span class="icon-trash-o"></span> 删除</a>
+                    <a class="button border-red" href="${pageContext.request.contextPath}/operative/delindex?id=<%=i+1%>"><span class="icon-trash-o"></span> 删除</a>
                 </div></td>
             </tr>
             <%}%>
 
         </table>
     </div>
+    <div class="panel admin-panel">
+        <div class="panel-head"><strong class="icon-reorder"> 目的地banner</strong></div>
 
-    <div class="panel admin-panel margin-top" id="add">
-        <div class="panel-head"><strong><span class="icon-pencil-square-o"></span> 查看</strong></div>
-        <div class="body-content">
-            <table class="table table-hover text-center">
-                <tr>
-                    <th width="10%">ID</th>
-                    <th width="20%">图片</th>
-                    <th width="15%">名称</th>
-                    <th width="20%">时间</th>
-                    <th width="10%">访问量</th>
-                    <th width="15%">删除/添加到轮播图</th>
-                </tr>
-                <%
-                    List<NewsBean> news = (List)request.getAttribute("news");
-                    for(int i=0;i<news.size();i++){
-                %>
-                <tr>
-                    <td><%=news.get(i).getId()%></td>
-                    <td><img src="<%=news.get(i).getImage()%>"width="120" height="50" /></td>
-                    <td><%=news.get(i).getTitle()%></td>
-                    <td><%=news.get(i).getTime()%></td>
-                    <td><%=news.get(i).getCount()%></td>
-                    <td><div class="button-group">
-                        <a class="button border-main" href="${pageContext.request.contextPath}/operative/delnews?id=<%=news.get(i).getId()%>"><span class="icon-edit"></span> 删除</a>
-                        <a class="button border-red" href="${pageContext.request.contextPath}/operative/addnews?id=<%=news.get(i).getId()%>"><span class="icon-trash-o"></span> 添加</a>
-                    </div></td>
-                </tr>
-                <%}%>
-                <tr>
-                    <td colspan="8">
-                        <div class="pagelist">
-                            <%
-                                Integer pageAll = (Integer)request.getAttribute("page");
-                                Integer pageNow = (Integer)request.getAttribute("pageNow");
+        <table class="table table-hover text-center">
+            <tr>
+                <th width="10%">ID</th>
+                <th width="20%">图片</th>
+                <th width="15%">名称</th>
+                <th width="20%">时间</th>
+                <th width="10%">访问量</th>
+                <th width="15%">操作</th>
+            </tr>
 
-                                for(int i=1;i<= pageAll.intValue();i++){
-                                    if(i == pageNow.intValue()){
-                            %>
-                            <span class="current"><%=i%></span>
-                            <%}else{%>
-                            <a href="${pageContext.request.contextPath}/operative/adv?page=<%=i%>"><%=i%></a>
-                            <%}}%>
-                            <a href="${pageContext.request.contextPath}/operative/adv?page=${pageNow+1}">下一页</a>
-                        </div>
-                    </td>
-                </tr>
-            </table>
-        </div>
+            <tr>
+                <td>${banner.id}</td>
+                <td><img src="${banner.image}"width="120" height="50" /></td>
+                <td>${banner.title}</td>
+                <td>${banner.title}</td>
+                <td>${banner.count}</td>
+                <td><div class="button-group">
+                    <a class="button border-red" href="${pageContext.request.contextPath}/operative/delindex?id=6"><span class="icon-trash-o"></span> 删除</a>
+                </div></td>
+            </tr>
+
+        </table>
+    </div>
+    <div class="panel admin-panel">
+        <div class="panel-head"><strong class="icon-reorder"> 首页热卖爆款</strong></div>
+
+        <table class="table table-hover text-center">
+            <tr>
+                <th width="10%">ID</th>
+                <th width="20%">图片</th>
+                <th width="15%">名称</th>
+                <th width="20%">价格</th>
+                <th width="10%">访问量</th>
+                <th width="15%">操作</th>
+            </tr>
+            <%
+                List<OrdersBean> order = (List)request.getAttribute("orders");
+                for(int i=0;i<order.size();i++){
+            %>
+            <tr>
+                <td><%=order.get(i).getId()%></td>
+                <td><img src="<%=order.get(i).getImage()%>"width="120" height="50" /></td>
+                <td><%=order.get(i).getTitle()%></td>
+                <td><%=order.get(i).getPrice()%></td>
+                <td><%=order.get(i).getCount()%></td>
+                <td><div class="button-group">
+                    <a class="button border-red" href="${pageContext.request.contextPath}/operative/delindexshop?id=<%=i+1%>"><span class="icon-trash-o"></span> 删除</a>
+                </div></td>
+            </tr>
+            <%}%>
+
+        </table>
+    </div>
+    <div class="panel admin-panel">
+        <div class="panel-head"><strong class="icon-reorder"> 商城轮播图</strong></div>
+
+        <table class="table table-hover text-center">
+            <tr>
+                <th width="10%">ID</th>
+                <th width="20%">图片</th>
+                <th width="15%">名称</th>
+                <th width="20%">价格</th>
+                <th width="10%">访问量</th>
+                <th width="15%">操作</th>
+            </tr>
+            <%
+                List<OrdersBean> ordershop = (List)request.getAttribute("shopshow");
+                for(int i=0;i<ordershop.size();i++){
+            %>
+            <tr>
+                <td><%=ordershop.get(i).getId()%></td>
+                <td><img src="<%=ordershop.get(i).getImage()%>"width="120" height="50" /></td>
+                <td><%=ordershop.get(i).getTitle()%></td>
+                <td><%=ordershop.get(i).getPrice()%></td>
+                <td><%=ordershop.get(i).getCount()%></td>
+                <td><div class="button-group">
+                    <a class="button border-red" href="${pageContext.request.contextPath}/operative/delshowshop?id=<%=i+1%>"><span class="icon-trash-o"></span> 删除</a>
+                </div></td>
+            </tr>
+            <%}%>
+
+        </table>
     </div>
 </div>
 

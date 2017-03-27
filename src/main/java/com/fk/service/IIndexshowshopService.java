@@ -8,4 +8,5 @@ import com.fk.bean.IndexshowshopBean;
  */
 public interface IIndexshowshopService {
     IndexshowshopBean selectByPrimaryKey(Integer id);
+    int updateByPrimaryKey(IndexshowshopBean record);
 }

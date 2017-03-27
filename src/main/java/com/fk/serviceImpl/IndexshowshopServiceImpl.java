@@ -22,4 +22,9 @@ public class IndexshowshopServiceImpl implements IIndexshowshopService {
     public IndexshowshopBean selectByPrimaryKey(Integer id) {
         return indexshowshopDao.selectByPrimaryKey(id);
     }
+
+    @Override
+    public int updateByPrimaryKey(IndexshowshopBean record) {
+        return indexshowshopDao.updateByPrimaryKey(record);
+    }
 }

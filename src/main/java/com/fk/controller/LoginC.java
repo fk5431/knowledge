@@ -48,20 +48,22 @@ public class LoginC {
         List<TravelBean> list = new ArrayList<>();
         for(int i=CommonConst.ONE_INT;i<=CommonConst.FIVE_INT;i++){
             IndexShowBean indexShowBean = indexShowService.selectByPrimaryKey(i);
-            if(indexShowBean == null)
-                continue;
-            TravelBean travelBean = travelService.selectByPrimaryKey(indexShowBean.getMid());
-            list.add(travelBean);
+            if(indexShowBean != null && indexShowBean.getMid() != -1){
+                TravelBean travelBean = travelService.selectByPrimaryKey(indexShowBean.getMid());
+                if(travelBean !=null)
+                     list.add(travelBean);
+            }
         }
         map.put("list", list);
         //热卖爆款
         List<OrdersBean> listorders = new ArrayList<>();
         for(int i=CommonConst.ONE_INT;i<=CommonConst.THREE_INT;i++){
             IndexshowshopBean indexshowshopBean  = indexshowshopService.selectByPrimaryKey(i);
-            if(indexshowshopBean == null)
-                continue;
-            OrdersBean ordersBean = iOrdersService.selectByPrimaryKey(indexshowshopBean.getMid());
-            listorders.add(ordersBean);
+            if(indexshowshopBean != null  && indexshowshopBean.getMid() != -1){
+                OrdersBean ordersBean = iOrdersService.selectByPrimaryKey(indexshowshopBean.getMid());
+                if(ordersBean != null)
+                    listorders.add(ordersBean);
+            }
         }
         map.put("orders", listorders);
         //热门游记
