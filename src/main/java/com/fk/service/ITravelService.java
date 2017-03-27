@@ -1,6 +1,7 @@
 package com.fk.service;
 
 import com.fk.bean.TravelBean;
+import com.fk.bean.User;
 
 import java.util.List;
 
@@ -19,4 +20,9 @@ public interface ITravelService {
     List<TravelBean> selectByCountOverFive();
 
     List<TravelBean> selectByPlace(String place);
+
+    List<TravelBean> selectByStart(Integer start);
+
+    int deleteByPrimaryKey(Integer id);
+    int insertSelective(TravelBean record);
 }

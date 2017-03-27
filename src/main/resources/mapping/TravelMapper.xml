@@ -25,6 +25,12 @@
   <sql id="Blob_Column_List" >
     context
   </sql>
+  <select id="selectByStart" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select
+    <include refid="Base_Column_List" />
+    from traveltips
+    limit #{start, jdbcType=INTEGER},10
+  </select>
   <select id="count" resultType="int">
     select count(*) from traveltips
   </select>

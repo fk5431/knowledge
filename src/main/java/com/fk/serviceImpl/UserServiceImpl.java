@@ -6,6 +6,8 @@ import com.fk.service.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 /**
  * Created by FK on 2017/2/9.
  */
@@ -32,5 +34,15 @@ public class UserServiceImpl implements IUserService {
     @Override
     public int updateByEmail(User user) {
         return userDao.updateByEmail(user);
+    }
+
+    @Override
+    public int count() {
+        return userDao.count();
+    }
+
+    @Override
+    public List<User> selectByStart(Integer start) {
+        return userDao.selectByStart(start);
     }
 }

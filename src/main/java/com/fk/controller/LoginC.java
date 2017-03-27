@@ -132,7 +132,7 @@ public class LoginC {
             return "error";
         }
 
-        return "index";
+        return index_(request, map);
     }
 
     @RequestMapping(value = "/regis", method = RequestMethod.POST)

@@ -1,6 +1,7 @@
 package com.fk.serviceImpl;
 
 import com.fk.bean.TravelBean;
+import com.fk.bean.User;
 import com.fk.dao.TravelDao;
 import com.fk.service.ITravelService;
 import com.fk.util.CommonConst;
@@ -48,5 +49,20 @@ public class TravelServiceImpl implements ITravelService {
     @Override
     public List<TravelBean> selectByPlace(String place) {
         return travelDao.selectByPlace(place);
+    }
+
+    @Override
+    public List<TravelBean> selectByStart(Integer start) {
+        return travelDao.selectByStart(start);
+    }
+
+    @Override
+    public int deleteByPrimaryKey(Integer id) {
+        return travelDao.deleteByPrimaryKey(id);
+    }
+
+    @Override
+    public int insertSelective(TravelBean record) {
+        return travelDao.insertSelective(record);
     }
 }

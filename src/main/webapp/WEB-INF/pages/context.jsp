@@ -127,7 +127,7 @@
                 </a>
             </div>
         </div>
-        <div class="art-code" style="margin-top: 100px;"> <img src="http://images.mafengwo.net/images/qrcode-weixin.gif"></div>
+        <div class="art-code" style="margin-top: 100px;"> <img src="${pageContext.request.contextPath}/images/weixin.png"></div>
     </div>
     </div>
 </div>
