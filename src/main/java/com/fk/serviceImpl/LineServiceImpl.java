@@ -1,6 +1,7 @@
 package com.fk.serviceImpl;
 
 import com.fk.bean.LineBean;
+import com.fk.bean.User;
 import com.fk.dao.LineDao;
 import com.fk.service.ILineService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -40,5 +41,20 @@ public class LineServiceImpl implements ILineService {
     @Override
     public int updateByPrimaryKey(LineBean record) {
         return linelDao.updateByPrimaryKey(record);
+    }
+
+    @Override
+    public int count() {
+        return linelDao.count();
+    }
+
+    @Override
+    public List<LineBean> selectByStart(Integer start) {
+        return linelDao.selectByStart(start);
+    }
+
+    @Override
+    public int deleteByPrimaryKey(Integer id) {
+        return linelDao.deleteByPrimaryKey(id);
     }
 }

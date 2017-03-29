@@ -2,6 +2,7 @@ package com.fk.serviceImpl;
 
 import com.fk.bean.AreaBean;
 import com.fk.bean.HotelBean;
+import com.fk.bean.User;
 import com.fk.dao.AreaDao;
 import com.fk.dao.HotelDao;
 import com.fk.service.IAreaService;
@@ -28,5 +29,20 @@ public class HotelServiceImpl implements IHotelService {
     @Override
     public List<HotelBean> selectAll() {
         return hotelDao.selectAll();
+    }
+
+    @Override
+    public int count() {
+        return hotelDao.count();
+    }
+
+    @Override
+    public List<HotelBean> selectByStart(Integer start) {
+        return hotelDao.selectByStart(start);
+    }
+
+    @Override
+    public int deleteByPrimaryKey(Integer id) {
+        return hotelDao.deleteByPrimaryKey(id);
     }
 }

@@ -1,7 +1,6 @@
 <%@ page import="java.util.List" %>
-<%@ page import="com.fk.bean.DirectorBean" %>
-<%@ page import="com.fk.bean.PerformerBean" %>
-<%@ page import="com.fk.bean.TypeBean" %><%--
+<%@ page import="com.fk.bean.TypeBean" %>
+<%@ page import="com.fk.bean.HotelBean" %><%--
   Created by IntelliJ IDEA.
   User: fengkai
   Date: 23/03/17
@@ -70,256 +69,49 @@
 </ul>
 <div class="admin">
     <div class="panel admin-panel">
-        <div class="panel-head"><strong><span class="icon-pencil-square-o"></span> 单页信息</strong></div>
+        <div class="panel-head"><strong><span class="icon-pencil-square-o"></span> 网站信息</strong></div>
         <div class="body-content">
-            <form method="post" class="form-x" action="${pageContext.request.contextPath}/operative/addper"
-                  enctype="multipart/form-data">
-                <div class="form-group">
-                    <div class="label">
-                        <label>中文名字：</label>
-                    </div>
-                    <div class="field">
-                        <input type="text" class="input" name="name" value=""/>
-                        <div class="tips"></div>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="label">
-                        <label>英文名字：</label>
-                    </div>
-                    <div class="field">
-                        <input type="text" class="input" name="ename" value=""/>
-                        <div class="tips"></div>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="label">
-                        <label>别名：</label>
-                    </div>
-                    <div class="field">
-                        <input type="text" class="input" name="othername" value=""/>
-                        <div class="tips"></div>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="label">
-                        <label>生日：</label>
-                    </div>
-                    <div class="field">
-                        <input type="text" class="input" name="birth" value="yyyy-MM-dd"/>
-                        <div class="tips"></div>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="label">
-                        <label>身高：</label>
-                    </div>
-                    <div class="field">
-                        <input type="text" class="input" name="height" value=""/>
-                        <div class="tips"></div>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="label">
-                        <label>票房：</label>
-                    </div>
-                    <div class="field">
-                        <input type="text" class="input" name="boxoffice" value=""/>
-                        <div class="tips"></div>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="label">
-                        <label>粉丝：</label>
-                    </div>
-                    <div class="field">
-                        <input type="text" class="input" name="fan" value=""/>
-                        <div class="tips"></div>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="label">
-                        <label>出生地：</label>
-                    </div>
-                    <div class="field">
-                        <input type="text" class="input" name="birthplace" value=""/>
-                        <div class="tips"></div>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="label">
-                        <label>国籍：</label>
-                    </div>
-                    <div class="field">
-                        <input type="text" class="input" name="nationality" value=""/>
-                        <div class="tips"></div>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="label">
-                        <label>性别：</label>
-                    </div>
-                    <div class="field">
-                        <input type="text" class="input" name="sex" value=""/>
-                        <div class="tips"></div>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="label">
-                        <label>星座：</label>
-                    </div>
-                    <div class="field">
-                        <input type="text" class="input" name="constellation" value=""/>
-                        <div class="tips"></div>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="label">
-                        <label>简介：</label>
-                    </div>
-                    <div class="field">
-                        <%--<input type="text" class="input" name="score" value=""/>--%>
-                        <textarea name="introduce"></textarea>
-                        <div class="tips"></div>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="label">
-                        <label>照片：</label>
-                    </div>
-                    <div class="field">
-                        <input name="image" type="file" accept="image/gif, image/jpeg"/>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="label">
-                        <label>图集下方上传：</label>
-                    </div>
-                    <div class="field">
-                        <script id="editor" type="text/plain" style="width:1024px;height:500px;" name="content"></script>
-                        <script type="text/javascript">
-                            //实例化编辑器
-                            //建议使用工厂方法getEditor创建和引用编辑器实例，如果在某个闭包下引用该编辑器，直接调用UE.getEditor('editor')就能拿到相关的实例
-                            var ue = UE.getEditor('editor');
+            <table class="table table-hover text-center">
+                <tr>
+                    <th width="120">ID</th>
+                    <th>标题</th>
+                    <th>星级</th>
+                    <th>图片</th>
+                    <th>地址</th>
+                    <th>删除</th>
+                </tr>
+                <%
+                    List<HotelBean> users = (List) request.getAttribute("list");
+                    for(int i=0;i<users.size();i++){
+                %>
+                <tr>
+                    <td><%=users.get(i).getId()%></td>
+                    <td><%=users.get(i).getTitle()%></td>
+                    <td><%=users.get(i).getStar()%></td>
+                    <td><img src="<%=users.get(i).getImg()%>"width="120" height="50" /></td>
+                    <td><%=users.get(i).getAdress()%></td>
+                    <td><div class="button-group"> <a class="button border-red" href="${pageContext.request.contextPath}/operative/delhotle?id=<%=users.get(i).getId()%>"><span class="icon-trash-o"></span> 删除</a> </div></td>
+                </tr>
+                <%}%>
+                <tr>
+                    <td colspan="8">
+                        <div class="pagelist">
+                            <%
+                                Integer pageAll = (Integer)request.getAttribute("page");
+                                Integer pageNow = (Integer)request.getAttribute("pageNow");
 
-
-                            function isFocus(e){
-                                alert(UE.getEditor('editor').isFocus());
-                                UE.dom.domUtils.preventDefault(e)
-                            }
-                            function setblur(e){
-                                UE.getEditor('editor').blur();
-                                UE.dom.domUtils.preventDefault(e)
-                            }
-                            function insertHtml() {
-                                var value = prompt('插入html代码', '');
-                                UE.getEditor('editor').execCommand('insertHtml', value)
-                            }
-                            function createEditor() {
-                                enableBtn();
-                                UE.getEditor('editor');
-                            }
-                            function getAllHtml() {
-                                alert(UE.getEditor('editor').getAllHtml())
-                            }
-                            function getContent() {
-                                var arr = [];
-                                arr.push("使用editor.getContent()方法可以获得编辑器的内容");
-                                arr.push("内容为：");
-                                arr.push(UE.getEditor('editor').getContent());
-                                alert(arr.join("\n"));
-                            }
-                            function getPlainTxt() {
-                                var arr = [];
-                                arr.push("使用editor.getPlainTxt()方法可以获得编辑器的带格式的纯文本内容");
-                                arr.push("内容为：");
-                                arr.push(UE.getEditor('editor').getPlainTxt());
-                                alert(arr.join('\n'))
-                            }
-                            function setContent(isAppendTo) {
-                                var arr = [];
-                                arr.push("使用editor.setContent('欢迎使用ueditor')方法可以设置编辑器的内容");
-                                UE.getEditor('editor').setContent('欢迎使用ueditor', isAppendTo);
-                                alert(arr.join("\n"));
-                            }
-                            function setDisabled() {
-                                UE.getEditor('editor').setDisabled('fullscreen');
-                                disableBtn("enable");
-                            }
-
-                            function setEnabled() {
-                                UE.getEditor('editor').setEnabled();
-                                enableBtn();
-                            }
-
-                            function getText() {
-                                //当你点击按钮时编辑区域已经失去了焦点，如果直接用getText将不会得到内容，所以要在选回来，然后取得内容
-                                var range = UE.getEditor('editor').selection.getRange();
-                                range.select();
-                                var txt = UE.getEditor('editor').selection.getText();
-                                alert(txt)
-                            }
-
-                            function getContentTxt() {
-                                var arr = [];
-                                arr.push("使用editor.getContentTxt()方法可以获得编辑器的纯文本内容");
-                                arr.push("编辑器的纯文本内容为：");
-                                arr.push(UE.getEditor('editor').getContentTxt());
-                                alert(arr.join("\n"));
-                            }
-                            function hasContent() {
-                                var arr = [];
-                                arr.push("使用editor.hasContents()方法判断编辑器里是否有内容");
-                                arr.push("判断结果为：");
-                                arr.push(UE.getEditor('editor').hasContents());
-                                alert(arr.join("\n"));
-                            }
-                            function setFocus() {
-                                UE.getEditor('editor').focus();
-                            }
-                            function deleteEditor() {
-                                disableBtn();
-                                UE.getEditor('editor').destroy();
-                            }
-                            function disableBtn(str) {
-                                var div = document.getElementById('btns');
-                                var btns = UE.dom.domUtils.getElementsByTagName(div, "button");
-                                for (var i = 0, btn; btn = btns[i++];) {
-                                    if (btn.id == str) {
-                                        UE.dom.domUtils.removeAttributes(btn, ["disabled"]);
-                                    } else {
-                                        btn.setAttribute("disabled", "true");
-                                    }
-                                }
-                            }
-                            function enableBtn() {
-                                var div = document.getElementById('btns');
-                                var btns = UE.dom.domUtils.getElementsByTagName(div, "button");
-                                for (var i = 0, btn; btn = btns[i++];) {
-                                    UE.dom.domUtils.removeAttributes(btn, ["disabled"]);
-                                }
-                            }
-
-                            function getLocalData () {
-                                alert(UE.getEditor('editor').execCommand( "getlocaldata" ));
-                            }
-
-                            function clearLocalData () {
-                                UE.getEditor('editor').execCommand( "clearlocaldata" );
-                                alert("已清空草稿箱")
-                            }
-                        </script>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="label">
-                        <label></label>
-                    </div>
-                    <div class="field">
-                        <button class="button bg-main icon-check-square-o" type="submit"> 提交</button>
-                    </div>
-                </div>
-            </form>
+                                for(int i=1;i<= pageAll.intValue();i++){
+                                    if(i == pageNow.intValue()){
+                            %>
+                            <span class="current"><%=i%></span>
+                            <%}else{%>
+                            <a href="${pageContext.request.contextPath}/operative/per?page=<%=i%>"><%=i%></a>
+                            <%}}%>
+                            <a href="${pageContext.request.contextPath}/operative/per?page=${pageNow+1}">下一页</a>
+                        </div>
+                    </td>
+                </tr>
+            </table>
         </div>
     </div>
 </div>

@@ -1,6 +1,7 @@
 package com.fk.dao;
 
 import com.fk.bean.LineBean;
+import com.fk.bean.User;
 
 import java.util.List;
 
@@ -20,4 +21,7 @@ public interface LineDao {
     List<LineBean> selectByForginId(Integer id);
 
     int deleteByForginId(Integer id);
+    int count();
+
+    List<LineBean> selectByStart(Integer start);
 }

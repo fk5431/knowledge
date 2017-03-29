@@ -1,6 +1,7 @@
 package com.fk.dao;
 
 import com.fk.bean.HotelBean;
+import com.fk.bean.User;
 
 import java.util.List;
 
@@ -17,4 +18,7 @@ public interface HotelDao {
 
     int updateByPrimaryKey(HotelBean record);
     List<HotelBean> selectAll();
+    int count();
+
+    List<HotelBean> selectByStart(Integer start);
 }

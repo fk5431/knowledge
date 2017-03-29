@@ -12,6 +12,17 @@
   <sql id="Base_Column_List" >
     id, title, summary, hotle, meal, orderId
   </sql>
+  <select id="count" resultType="int">
+    select
+    count(*)
+    from line
+  </select>
+  <select id="selectByStart" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select
+    <include refid="Base_Column_List" />
+    from line
+    limit #{start, jdbcType=INTEGER},10
+  </select>
   <select id="selectByForginId" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
     select 
     <include refid="Base_Column_List" />

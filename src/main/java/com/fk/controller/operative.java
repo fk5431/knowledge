@@ -510,4 +510,99 @@ public class operative {
             return "error";
         }
     }
+
+    @RequestMapping("/operative/der")
+    public String der(HttpServletRequest request, Map<String, Object> map){
+        int count = lineService.count();
+        int page = 1;
+        if(count % SIZE == 0)
+            page = count / SIZE;
+        else
+            page = count / SIZE + CommonConst.ONE_INT;
+        map.put("count", count);
+        map.put("size", SIZE);
+        map.put("page", page);
+        String page_ = request.getParameter("page");
+        int toPage;
+        if(page_ == null || "".equals(page_)){
+            toPage = 1;
+        }else {
+            toPage = Integer.parseInt(page_);
+        }
+        if(toPage > page){
+            toPage = page;
+        }
+        map.put("pageNow", toPage);
+        int start = (toPage - 1) * SIZE;
+        List<LineBean> list = lineService.selectByStart(start);
+        List<ReturnLineAndOrders> returnLineAndOrderss = new ArrayList<>();
+        for(LineBean l : list){
+            ReturnLineAndOrders returnLineAndOrders = new ReturnLineAndOrders();
+            returnLineAndOrders.setLineId(l.getId());
+            returnLineAndOrders.setLinesummary(l.getSummary());
+            returnLineAndOrders.setLineTitle(l.getTitle());
+            int orderid = l.getOrderid();
+            OrdersBean ordersBean = ordersService.selectByPrimaryKey(orderid);
+            if(ordersBean == null){
+                returnLineAndOrders.setOrderId(-1);
+                returnLineAndOrders.setOrderTitle("该旅游已经被删除");
+            }else {
+                returnLineAndOrders.setOrderId(ordersBean.getId());
+                returnLineAndOrders.setOrderTitle(ordersBean.getTitle());
+            }
+            returnLineAndOrderss.add(returnLineAndOrders);
+        }
+        map.put("list", returnLineAndOrderss);
+        return "/operative/der";
+    }
+
+    @RequestMapping("/operative/delline")
+    public String delline(HttpServletRequest request, Map<String, Object> map){
+        String id = request.getParameter("id");
+
+        lineService.deleteByPrimaryKey(Integer.parseInt(id));
+
+        return der(request, map);
+    }
+
+
+    @RequestMapping("/operative/per")
+    public String per(HttpServletRequest request, Map<String, Object> map){
+        int count = hotelService.count();
+        int page = 1;
+        if(count % SIZE == 0)
+            page = count / SIZE;
+        else
+            page = count / SIZE + CommonConst.ONE_INT;
+        map.put("count", count);
+        map.put("size", SIZE);
+        map.put("page", page);
+        String page_ = request.getParameter("page");
+        int toPage;
+        if(page_ == null || "".equals(page_)){
+            toPage = 1;
+        }else {
+            toPage = Integer.parseInt(page_);
+        }
+        if(toPage > page){
+            toPage = page;
+        }
+        map.put("pageNow", toPage);
+        int start = (toPage - 1) * SIZE;
+        List<HotelBean> list = hotelService.selectByStart(start);
+
+        map.put("list", list);
+        return "/operative/per";
+    }
+
+    @RequestMapping("/operative/delhotle")
+    public String delhotle(HttpServletRequest request, Map<String, Object> map){
+        String id = request.getParameter("id");
+
+        hotelService.deleteByPrimaryKey(Integer.parseInt(id));
+
+        return per(request, map);
+    }
+
+
 }
