@@ -23,6 +23,19 @@
   <sql id="Blob_Column_List" >
     cost
   </sql>
+  <select id="count" resultType="int">
+    select
+    count(*)
+    from orders
+  </select>
+  <select id="selectByStart" resultMap="ResultMapWithBLOBs" parameterType="java.lang.Integer" >
+    select
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from orders
+    limit #{start, jdbcType=INTEGER},10
+  </select>
   <select id="selectByPrimaryKey" resultMap="ResultMapWithBLOBs" parameterType="java.lang.Integer" >
     select
     <include refid="Base_Column_List" />
@@ -45,7 +58,7 @@
     #{title,jdbcType=VARCHAR}, #{sellcount,jdbcType=INTEGER}, #{price,jdbcType=INTEGER},
     #{image,jdbcType=VARCHAR}, #{place,jdbcType=VARCHAR}, #{cost,jdbcType=LONGVARCHAR})
   </insert>
-  <insert id="insertSelective" parameterType="com.fk.bean.OrdersBean" >
+  <insert id="insertSelective" parameterType="com.fk.bean.OrdersBean" useGeneratedKeys="true" keyProperty="id">
     insert into orders
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="id != null" >

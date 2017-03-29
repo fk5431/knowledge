@@ -1,6 +1,9 @@
 package com.fk.dao;
 
 import com.fk.bean.OrdersBean;
+import com.fk.bean.User;
+
+import java.util.List;
 
 public interface OrdersDao {
     int deleteByPrimaryKey(Integer id);
@@ -16,4 +19,7 @@ public interface OrdersDao {
     int updateByPrimaryKeyWithBLOBs(OrdersBean record);
 
     int updateByPrimaryKey(OrdersBean record);
+
+    int count();
+    List<OrdersBean> selectByStart(Integer start);
 }

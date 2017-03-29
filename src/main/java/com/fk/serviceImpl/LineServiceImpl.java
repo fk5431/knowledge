@@ -26,4 +26,19 @@ public class LineServiceImpl implements ILineService {
     public List<LineBean> selectByForginId(Integer id) {
         return linelDao.selectByForginId(id);
     }
+
+    @Override
+    public int deleteByForginId(Integer id) {
+        return linelDao.deleteByForginId(id);
+    }
+
+    @Override
+    public int insertSelective(LineBean record) {
+        return linelDao.insertSelective(record);
+    }
+
+    @Override
+    public int updateByPrimaryKey(LineBean record) {
+        return linelDao.updateByPrimaryKey(record);
+    }
 }

@@ -28,6 +28,10 @@
     delete from line
     where id = #{id,jdbcType=INTEGER}
   </delete>
+  <delete id="deleteByForginId" parameterType="java.lang.Integer" >
+    delete from line
+    where orderId = #{id,jdbcType=INTEGER}
+  </delete>
   <insert id="insert" parameterType="com.fk.bean.LineBean" >
     insert into line (id, title, summary, 
       hotle, meal, orderId

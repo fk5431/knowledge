@@ -7,7 +7,6 @@ CREATE TABLE line(
   hotle VARCHAR(255) NOT NULL,
   meal VARCHAR(255) NOT NULL,
   orderId int(11) not null,
-  FOREIGN KEY(orderId) REFERENCES orders(id)
 ) DEFAULT CHARSET=utf8;
 INSERT INTO line VALUES(1, '深圳（全天自由活动）','深圳全天24小时接机接站，送至酒店休息自由活动，同时可以感受下特区的繁华；','深圳万事达酒店/同级酒店','早餐:自理，中餐:自理，晚餐:自理',1);
 INSERT INTO line VALUES(2, '香港','早上8点左右出发到皇岗口岸3楼出境大厅集合。抵达后前往：香港会展中心新翼、金紫荆广场，午餐后浏览闻名世界的海洋公园（含228元/人、约4个多小时），浅水湾、而后前往太平山（约20分钟）欣赏东方之珠美丽景色，晚餐后在码头乘观光船游览维多利亚港（含船票160元/人、约45分钟），沿着九龙半岛及港岛北面海岸畅游维多利亚港夜景，借宿一天形成后入住酒店。','香港邮轮酒店/同级酒店','早餐:自理，中餐:团餐，晚餐:团餐',1);

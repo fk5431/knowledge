@@ -18,4 +18,6 @@ public interface LineDao {
     int updateByPrimaryKey(LineBean record);
 
     List<LineBean> selectByForginId(Integer id);
+
+    int deleteByForginId(Integer id);
 }

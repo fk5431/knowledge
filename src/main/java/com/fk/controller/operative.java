@@ -14,6 +14,7 @@ import org.springframework.web.context.ContextLoader;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.sound.sampled.Line;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -49,6 +50,15 @@ public class operative {
 
     @Autowired
     IOrdersService ordersService;
+
+    @Autowired
+    IHotelService hotelService;
+
+    @Autowired
+    ILineService lineService;
+
+    @Autowired
+    IRecordService recordService;
 
     private static final int SIZE = 10;
 
@@ -125,6 +135,16 @@ public class operative {
 
         return column(request, map);
     }
+    @RequestMapping("/operative/delshop")
+    public String delshop(HttpServletRequest request, Map<String, Object> map){
+
+        String id = request.getParameter("id");
+        lineService.deleteByForginId(Integer.parseInt(id));
+        recordService.deleteByForginId(Integer.parseInt(id));
+        ordersService.deleteByPrimaryKey(Integer.parseInt(id));
+
+        return pass(request, map);
+    }
     @RequestMapping("/operative/addarticle")
     public String addarticle(HttpServletRequest request, Map<String, Object> map){
 
@@ -178,6 +198,52 @@ public class operative {
             }
         }
         map.put("errorcode", 8);
+        return "error";
+
+    }
+    @RequestMapping("/operative/addtoindexshop")
+    public String addtoindexshop(HttpServletRequest request, Map<String, Object> map){
+
+        String id = request.getParameter("id");
+        for(int i=CommonConst.ONE_INT;i<=CommonConst.THREE_INT;i++){
+            IndexshowshopBean indexshowshopBean = indexshowshopService.selectByPrimaryKey(i);
+            if(indexshowshopBean.getMid() == -1){
+                indexshowshopBean.setMid(Integer.parseInt(id));
+                indexshowshopService.updateByPrimaryKey(indexshowshopBean);
+                return adv(request, map);
+            }else {
+                OrdersBean ordersBean = ordersService.selectByPrimaryKey(indexshowshopBean.getMid());
+                if(ordersBean == null){
+                    indexshowshopBean.setMid(Integer.parseInt(id));
+                    indexshowshopService.updateByPrimaryKey(indexshowshopBean);
+                    return adv(request, map);
+                }
+            }
+        }
+        map.put("errorcode", 11);
+        return "error";
+
+    }
+    @RequestMapping("/operative/addtoshop")
+    public String addtoshop(HttpServletRequest request, Map<String, Object> map){
+
+        String id = request.getParameter("id");
+        for(int i=CommonConst.ONE_INT;i<=CommonConst.THREE_INT;i++){
+            ShopshowBean shopshowBean = shopshowService.selectByPrimaryKey(i);
+            if(shopshowBean.getMid() == -1){
+                shopshowBean.setMid(Integer.parseInt(id));
+                shopshowService.updateByPrimaryKey(shopshowBean);
+                return adv(request, map);
+            }else {
+                OrdersBean ordersBean = ordersService.selectByPrimaryKey(shopshowBean.getMid());
+                if(ordersBean == null){
+                    shopshowBean.setMid(Integer.parseInt(id));
+                    shopshowService.updateByPrimaryKey(shopshowBean);
+                    return adv(request, map);
+                }
+            }
+        }
+        map.put("errorcode", 12);
         return "error";
 
     }
@@ -303,5 +369,145 @@ public class operative {
             return "error";
         }
     }
+    @RequestMapping("/operative/pass")
+    public String pass(HttpServletRequest request, Map<String, Object> map){
+        int count = ordersService.count();
+        int page = 1;
+        if(count % SIZE == 0)
+            page = count / SIZE;
+        else
+            page = count / SIZE + CommonConst.ONE_INT;
+        map.put("count", count);
+        map.put("size", SIZE);
+        map.put("page", page);
+        String page_ = request.getParameter("page");
+        int toPage;
+        if(page_ == null || "".equals(page_)){
+            toPage = 1;
+        }else {
+            toPage = Integer.parseInt(page_);
+        }
+        if(toPage > page){
+            toPage = page;
+        }
+        map.put("pageNow", toPage);
+        int start = (toPage - 1) * SIZE;
+        List<OrdersBean> list = ordersService.selectByStart(start);
+        map.put("order", list);
 
+
+        return "/operative/pass";
+    }
+    @RequestMapping("/operative/page")
+    public String page(HttpServletRequest request, Map<String , Object> map) {
+        List<HotelBean> hotelBeans = hotelService.selectAll();
+        map.put("hotels", hotelBeans);
+
+        List<LineBean> lineBeans = lineService.selectByForginId(-1);
+        map.put("line", lineBeans);
+
+        return "/operative/page";
+    }
+    @RequestMapping("/operative/line")
+    public String line(HttpServletRequest request, Map<String , Object> map) {
+        return "/operative/line";
+    }
+    @RequestMapping("/operative/addline")
+    public String addline(HttpServletRequest request, Map<String , Object> map) {
+        String title = request.getParameter("title");
+        String summary = request.getParameter("summary");
+        String hotel = request.getParameter("hotel");
+        String meal = request.getParameter("meal");
+        LineBean lineBean = new LineBean();
+        lineBean.setTitle(title);
+        lineBean.setSummary(summary);
+        lineBean.setHotle(hotel);
+        lineBean.setMeal(meal);
+        lineBean.setOrderid(-1);
+        lineService.insertSelective(lineBean);
+
+        return "/operative/line";
+    }
+    @RequestMapping("/operative/addshop")
+    public String addshop(HttpServletRequest request, @RequestParam("image") MultipartFile file, Map<String, Object> map){
+        try{
+            String title = request.getParameter("title");
+            String cost = request.getParameter("cost");
+            String type = request.getParameter("type");
+            String subject = request.getParameter("subject");
+            int price = Integer.parseInt(request.getParameter("price"));
+            String[] hotelId = request.getParameterValues("hotel");
+            String[] lineId = request.getParameterValues("line");
+            String place = request.getParameter("place");
+            String content = request.getParameter("content");
+
+            String filename = file.getOriginalFilename();
+            String img ;
+            if("".equals(filename)){
+                img = "";
+            }else{
+                String path = ContextLoader.getCurrentWebApplicationContext().getServletContext().getRealPath("/");
+                filename = String.valueOf(System.currentTimeMillis()) + filename;
+                path = path + "images/sales";
+                File upload = new File(path, filename);
+                try {
+                    FileUtils.copyInputStreamToFile(file.getInputStream(), upload);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+                img = "/travel/images/sales/"+filename;
+            }
+
+            OrdersBean ordersBean = new OrdersBean();
+            ordersBean.setCost(cost);
+            ordersBean.setPlace(place);
+            ordersBean.setTitle(title);
+            ordersBean.setImage(img);
+            ordersBean.setCount(0);
+            StringBuffer sb = new StringBuffer();
+            boolean flag = true;
+            for(String h : hotelId){
+                if(flag != true){
+                    sb.append(CommonConst.SPLITOR);
+                }
+                sb.append(h);
+                flag = false;
+            }
+            ordersBean.setHotel(sb.toString());
+
+            String reg = ":8080.*?\"";
+            Pattern pattern = Pattern.compile(reg);
+            if(content == null)
+                content = "";
+            Matcher matcher =  pattern.matcher(content);
+            StringBuffer sbcontent = new StringBuffer();
+            Boolean b = false;
+            while(matcher.find()){
+                String g = matcher.group();
+                if(b == false) {
+                    sbcontent.append(g.substring(CommonConst.FIVE_INT, g.length() - CommonConst.ONE_INT));
+                    b = true;
+                }else{
+                    sbcontent.append(CommonConst.SPLITOR);
+                    sbcontent.append(g.substring(CommonConst.FIVE_INT, g.length() - CommonConst.ONE_INT));
+                }
+            }
+            ordersBean.setImages(sbcontent.toString());
+            ordersBean.setPrice(price);
+            ordersBean.setSellcount(0);
+            ordersBean.setSubject(subject);
+            ordersBean.setType(type);
+            ordersService.insertSelective(ordersBean);
+            for(String l : lineId){
+                LineBean lineBean = lineService.selectByPrimaryKey(Integer.parseInt(l));
+                lineBean.setOrderid(ordersBean.getId());
+                lineService.updateByPrimaryKey(lineBean);
+            }
+            return page(request, map);
+        }catch (Exception e){
+            e.printStackTrace();
+            map.put("errorcode", 10);
+            return "error";
+        }
+    }
 }

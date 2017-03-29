@@ -18,4 +18,5 @@ public interface RecordDao {
     int updateByPrimaryKey(RecordBean record);
 
     List<RecordBean> selectByForginId(Integer id);
+    int deleteByForginId(Integer id);
 }

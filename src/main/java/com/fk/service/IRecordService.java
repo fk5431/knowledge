@@ -11,4 +11,5 @@ public interface IRecordService {
     RecordBean selectByPrimaryKey(Integer id);
 
     List<RecordBean> selectByForginId(Integer id);
+    int deleteByForginId(Integer id);
 }

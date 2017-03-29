@@ -9,6 +9,8 @@ import com.fk.service.IHotelService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 /**
  * Created by fengkai on 28/02/17.
  */
@@ -21,5 +23,10 @@ public class HotelServiceImpl implements IHotelService {
     @Override
     public HotelBean selectByPrimaryKey(Integer id) {
         return hotelDao.selectByPrimaryKey(id);
+    }
+
+    @Override
+    public List<HotelBean> selectAll() {
+        return hotelDao.selectAll();
     }
 }

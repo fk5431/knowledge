@@ -45,6 +45,12 @@
     }else if (errorcode == 10){
         alert("请您完整的填写所有字段！");
         window.history.back(-1);
+    }else if (errorcode == 11){
+        alert("首页热卖爆款最多3个");
+        window.history.back(-1);
+    }else if (errorcode == 12){
+        alert("商城轮播图最多3个");
+        window.history.back(-1);
     }
 
 </script>

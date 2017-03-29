@@ -2,6 +2,8 @@ package com.fk.dao;
 
 import com.fk.bean.HotelBean;
 
+import java.util.List;
+
 public interface HotelDao {
     int deleteByPrimaryKey(Integer id);
 
@@ -14,4 +16,5 @@ public interface HotelDao {
     int updateByPrimaryKeySelective(HotelBean record);
 
     int updateByPrimaryKey(HotelBean record);
+    List<HotelBean> selectAll();
 }

@@ -1,4 +1,6 @@
-<%--
+<%@ page import="java.util.List" %>
+<%@ page import="com.fk.bean.HotelBean" %>
+<%@ page import="com.fk.bean.LineBean" %><%--
   Created by IntelliJ IDEA.
   User: fengkai
   Date: 23/03/17
@@ -33,11 +35,12 @@
     <h2><span class="icon-user"></span>基本修改</h2>
     <ul style="display:block">
         <li><a href="${pageContext.request.contextPath}/operative" ><span class="icon-caret-right"></span>网站用户</a></li>
-        <li><a href="${pageContext.request.contextPath}/operative/pass" ><span class="icon-caret-right"></span>演员/助演管理</a></li>
-        <li><a href="${pageContext.request.contextPath}/operative/page" ><span class="icon-caret-right"></span>资讯添加</a></li>
+        <li><a href="${pageContext.request.contextPath}/operative/pass" ><span class="icon-caret-right"></span>商城管理</a></li>
+        <li><a href="${pageContext.request.contextPath}/operative/page" ><span class="icon-caret-right"></span>商城添加</a></li>
         <li><a href="${pageContext.request.contextPath}/operative/adv" ><span class="icon-caret-right"></span>首页轮播</a></li>
-        <li><a href="${pageContext.request.contextPath}/operative/book" ><span class="icon-caret-right"></span>演出添加</a></li>
-        <li><a href="${pageContext.request.contextPath}/operative/column" ><span class="icon-caret-right"></span>演出管理</a></li>
+        <li><a href="${pageContext.request.contextPath}/operative/addarticle" ><span class="icon-caret-right"></span>攻略添加</a></li>
+        <li><a href="${pageContext.request.contextPath}/operative/column" ><span class="icon-caret-right"></span>攻略管理</a></li>
+        <li><a href="${pageContext.request.contextPath}/operative/line" ><span class="icon-caret-right"></span>路线添加</a></li>
     </ul>
     <h2><span class="icon-pencil-square-o"></span>高级修改</h2>
     <ul>
@@ -68,7 +71,7 @@
     <div class="panel admin-panel">
         <div class="panel-head"><strong><span class="icon-pencil-square-o"></span> 单页信息</strong></div>
         <div class="body-content">
-            <form method="post" class="form-x" action="${pageContext.request.contextPath}/operative/addnewstolist"
+            <form method="post" class="form-x" action="${pageContext.request.contextPath}/operative/addshop"
                   enctype="multipart/form-data">
                 <div class="form-group">
                     <div class="label">
@@ -76,6 +79,81 @@
                     </div>
                     <div class="field">
                         <input type="text" class="input" name="title" value=""/>
+                        <div class="tips"></div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="label">
+                        <label>花费说明：</label>
+                    </div>
+                    <div class="field">
+                        <textarea type="text" class="input" name="cost" value=""> </textarea>
+                        <div class="tips"></div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="label">
+                        <label>类型：</label>
+                    </div>
+                    <div class="field">
+                         <input type="text" class="input" name="type" value=""/>
+                        <div class="tips"></div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="label">
+                        <label>主题：</label>
+                    </div>
+                    <div class="field">
+                        <input type="text" class="input" name="subject" value="多个主题请以英文逗号分割"/>
+                        <div class="tips"></div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="label">
+                        <label>价格：</label>
+                    </div>
+                    <div class="field">
+                        <input type="text" class="input" name="price" value="整数"/>
+                        <div class="tips"></div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="label">
+                        <label>旅馆：</label>
+                    </div>
+                    <div class="field">
+                        <%
+                            List<HotelBean> hotelBeans = (List)request.getAttribute("hotels");
+                            for(int i=0;i<hotelBeans.size();i++){
+                        %>
+                            <label><input name="hotel" type="checkbox" value="<%=hotelBeans.get(i).getId()%>" /><%=hotelBeans.get(i).getTitle()%> </label>
+                        <%}%>
+                        <div class="tips"></div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="label">
+                        <label>地区：</label>
+                    </div>
+                    <div class="field">
+                        <%--<input type="text" class="input" name="score" value=""/>--%>
+                            <input type="text" class="input" name="place" value=""/>
+                        <div class="tips"></div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="label">
+                        <label>路线：</label>
+                    </div>
+                    <div class="field">
+                        <%
+                            List<LineBean> lineBeans = (List)request.getAttribute("line");
+                            for(int i=0;i<lineBeans.size();i++){
+                        %>
+                        <label><input name="line" type="checkbox" value="<%=lineBeans.get(i).getId()%>" /><%=lineBeans.get(i).getTitle()%> </label>
+                        <%}%>
                         <div class="tips"></div>
                     </div>
                 </div>
@@ -89,16 +167,7 @@
                 </div>
                 <div class="form-group">
                     <div class="label">
-                        <label>简介：</label>
-                    </div>
-                    <div class="field">
-                        <input type="text" class="input" name="introduce" value=""/>
-                        <div class="tips"></div>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="label">
-                        <label>内容：</label>
+                        <label>图文详情：</label>
                     </div>
                     <div class="field">
                         <script id="editor" type="text/plain" style="width:1024px;height:500px;" name="content"></script>

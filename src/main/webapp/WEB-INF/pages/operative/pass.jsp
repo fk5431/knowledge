@@ -1,7 +1,5 @@
 <%@ page import="java.util.List" %>
-<%@ page import="com.fk.bean.NewsBean" %>
-<%@ page import="com.fk.bean.DirectorBean" %>
-<%@ page import="com.fk.bean.PerformerBean" %><%--
+<%@ page import="com.fk.bean.OrdersBean" %><%--
   Created by IntelliJ IDEA.
   User: fengkai
   Date: 23/03/17
@@ -31,11 +29,12 @@
     <h2><span class="icon-user"></span>基本修改</h2>
     <ul style="display:block">
         <li><a href="${pageContext.request.contextPath}/operative" ><span class="icon-caret-right"></span>网站用户</a></li>
-        <li><a href="${pageContext.request.contextPath}/operative/pass" ><span class="icon-caret-right"></span>演员/助演管理</a></li>
-        <li><a href="${pageContext.request.contextPath}/operative/page" ><span class="icon-caret-right"></span>资讯添加</a></li>
+        <li><a href="${pageContext.request.contextPath}/operative/pass" ><span class="icon-caret-right"></span>商城管理</a></li>
+        <li><a href="${pageContext.request.contextPath}/operative/page" ><span class="icon-caret-right"></span>商城添加</a></li>
         <li><a href="${pageContext.request.contextPath}/operative/adv" ><span class="icon-caret-right"></span>首页轮播</a></li>
-        <li><a href="${pageContext.request.contextPath}/operative/book" ><span class="icon-caret-right"></span>演出添加</a></li>
-        <li><a href="${pageContext.request.contextPath}/operative/column" ><span class="icon-caret-right"></span>演出管理</a></li>
+        <li><a href="${pageContext.request.contextPath}/operative/addarticle" ><span class="icon-caret-right"></span>攻略添加</a></li>
+        <li><a href="${pageContext.request.contextPath}/operative/column" ><span class="icon-caret-right"></span>攻略管理</a></li>
+        <li><a href="${pageContext.request.contextPath}/operative/line" ><span class="icon-caret-right"></span>路线添加</a></li>
     </ul>
     <h2><span class="icon-pencil-square-o"></span>高级修改</h2>
     <ul>
@@ -64,31 +63,35 @@
 </ul>
 <div class="admin">
     <div class="panel admin-panel">
-        <div class="panel-head"><strong class="icon-reorder"> 主演信息</strong></div>
-
+        <div class="panel-head"><strong class="icon-reorder"> 内容列表</strong></div>
+        <div class="padding border-bottom">
+            <a class="button border-yellow" href="${pageContext.request.contextPath}/operative/addarticle"><span class="icon-plus-square-o"></span> 添加内容</a>
+        </div>
         <table class="table table-hover text-center">
             <tr>
-                <th width="2%">ID</th>
-                <th width="15%">图片</th>
-                <th width="5%">姓名</th>
-                <th width="5%">别名</th>
-                <th width="48%">简介</th>
-                <th width="15%">查看/删除</th>
+                <th width="5%">ID</th>
+                <th>旅游路线标题</th>
+                <th>旅游路线图片</th>
+                <th>旅游路线价格</th>
+                <th width="250">操作</th>
             </tr>
             <%
-                List<DirectorBean> director = (List)request.getAttribute("director");
-                for(int i=0;i<director.size();i++){
+                List<OrdersBean> order = (List)request.getAttribute("order");
+                for(int i=0;i<order.size();i++){
             %>
             <tr>
-                <td><%=director.get(i).getId()%></td>
-                <td><img src="<%=director.get(i).getImage()%>"width="120" height="50" /></td>
-                <td><%=director.get(i).getName()%></td>
-                <td><%=director.get(i).getOthername()%></td>
-                <td><%=director.get(i).getIntroduce()%></td>
-                <td><div class="button-group">
-                    <a class="button border-main" href="${pageContext.request.contextPath}/director?id=<%=director.get(i).getId()%>" target="_blank"><span class="icon-edit"></span> 查看</a>
-                    <a class="button border-red" href="${pageContext.request.contextPath}/deldirector?id=<%=director.get(i).getId()%>"><span class="icon-trash-o"></span> 删除</a>
-                </div></td>
+                <td><%=order.get(i).getId()%></td>
+                <td><%=order.get(i).getTitle()%></td>
+                <td><img src="<%=order.get(i).getImage()%>"width="120" height="50" /></td>
+                <td><%=order.get(i).getPrice()%></td>
+                <td>
+                    <div class="button-group">
+                        <a type="button" class="button border-main" href="${pageContext.request.contextPath}/shop?id=<%=order.get(i).getId()%>" target="_blank"><span class="icon-edit"></span>查看</a>
+                        <a type="button" class="button border-main" href="${pageContext.request.contextPath}/operative/addtoindexshop?id=<%=order.get(i).getId()%>"><span class="icon-edit"></span>添加到热卖</a>
+                        <a class="button border-red" href="${pageContext.request.contextPath}/operative/delshop?id=<%=order.get(i).getId()%>"  ><span class="icon-trash-o"></span> 删除</a>
+                        <a type="button" class="button border-main" href="${pageContext.request.contextPath}/operative/addtoshop?id=<%=order.get(i).getId()%>"><span class="icon-edit"></span>添加到商城</a>
+                    </div>
+                </td>
             </tr>
             <%}%>
             <tr>
@@ -110,60 +113,6 @@
                 </td>
             </tr>
         </table>
-    </div>
-
-    <div class="panel admin-panel margin-top" id="add">
-        <div class="panel-head">
-            <strong>
-                <span class="icon-pencil-square-o"></span> 助演信息
-            </strong>
-        </div>
-        <div class="body-content">
-            <table class="table table-hover text-center">
-                <tr>
-                    <th width="2%">ID</th>
-                    <th width="15%">图片</th>
-                    <th width="5%">姓名</th>
-                    <th width="5%">别名</th>
-                    <th width="48%">简介</th>
-                    <th width="15%">查看/删除</th>
-                </tr>
-                <%
-                    List<PerformerBean> performerBeans = (List)request.getAttribute("performer");
-                    for(int i=0;i<performerBeans.size();i++){
-                %>
-                <tr>
-                    <td><%=performerBeans.get(i).getId()%></td>
-                    <td><img src="<%=performerBeans.get(i).getImage()%>"width="120" height="50" /></td>
-                    <td><%=performerBeans.get(i).getName()%></td>
-                    <td><%=performerBeans.get(i).getOthername()%></td>
-                    <td><%=performerBeans.get(i).getIntroduce()%></td>
-                    <td><div class="button-group">
-                        <a class="button border-main" href="${pageContext.request.contextPath}/performer?id=<%=performerBeans.get(i).getId()%>" target="_blank"><span class="icon-edit"></span> 查看</a>
-                        <a class="button border-red" href="${pageContext.request.contextPath}/delperformer?id=<%=performerBeans.get(i).getId()%>"><span class="icon-trash-o"></span> 删除</a>
-                    </div></td>
-                </tr>
-                <%}%>
-                <tr>
-                    <td colspan="8">
-                        <div class="pagelist">
-                            <%
-                                Integer pageAll1 = (Integer)request.getAttribute("page1");
-                                Integer pageNow1 = (Integer)request.getAttribute("pageNow1");
-
-                                for(int i=1;i<= pageAll1.intValue();i++){
-                                    if(i == pageNow1.intValue()){
-                            %>
-                            <span class="current"><%=i%></span>
-                            <%}else{%>
-                            <a href="${pageContext.request.contextPath}/operative/pass?page1=<%=i%>"><%=i%></a>
-                            <%}}%>
-                            <a href="${pageContext.request.contextPath}/operative/pass?page1=${pageNow+1}">下一页</a>
-                        </div>
-                    </td>
-                </tr>
-            </table>
-        </div>
     </div>
 </div>
 
