@@ -11,19 +11,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="11669da5-9530-45d4-b1a5-63fcb18bf569" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/images/sales/detail-v4-sprites10.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/searchshop.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/fk/controller/Search.java" afterPath="$PROJECT_DIR$/src/main/java/com/fk/controller/Search.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/fk/controller/operative.java" afterPath="$PROJECT_DIR$/src/main/java/com/fk/controller/operative.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/fk/dao/OrdersDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/fk/dao/OrdersDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/fk/service/IHotelService.java" afterPath="$PROJECT_DIR$/src/main/java/com/fk/service/IHotelService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/fk/service/IOrdersService.java" afterPath="$PROJECT_DIR$/src/main/java/com/fk/service/IOrdersService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/fk/serviceImpl/HotelServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/fk/serviceImpl/HotelServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/fk/serviceImpl/OrdersServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/fk/serviceImpl/OrdersServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mapping/OrdersMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapping/OrdersMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/operative/type.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/operative/type.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/search.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/search.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/fk/controller/ShopC.java" afterPath="$PROJECT_DIR$/src/main/java/com/fk/controller/ShopC.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -54,7 +43,7 @@
       <file leaf-file-name="operative.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/fk/controller/operative.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="626">
+            <state relative-caret-position="10746">
               <caret line="621" column="32" lean-forward="false" selection-start-line="621" selection-start-column="32" selection-end-line="621" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="false" />
@@ -68,7 +57,7 @@
       <file leaf-file-name="index.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/index.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
+            <state relative-caret-position="2160">
               <caret line="120" column="74" lean-forward="false" selection-start-line="120" selection-start-column="70" selection-end-line="120" selection-end-column="74" />
               <folding />
             </state>
@@ -78,9 +67,11 @@
       <file leaf-file-name="Search.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/fk/controller/Search.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="478">
+            <state relative-caret-position="1566">
               <caret line="97" column="0" lean-forward="false" selection-start-line="97" selection-start-column="0" selection-end-line="97" selection-end-column="0" />
-              <folding />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -88,7 +79,7 @@
       <file leaf-file-name="OrdersMapper.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/mapping/OrdersMapper.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
+            <state relative-caret-position="522">
               <caret line="29" column="40" lean-forward="false" selection-start-line="29" selection-start-column="40" selection-end-line="29" selection-end-column="40" />
               <folding>
                 <marker date="1490867426431" expanded="true" signature="1446:1583" ph="select from orders" />
@@ -105,22 +96,30 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ContentC.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/fk/controller/ContentC.java">
+      <file leaf-file-name="ShopC.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/fk/controller/ShopC.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="82" column="70" lean-forward="false" selection-start-line="82" selection-start-column="70" selection-end-line="82" selection-end-column="70" />
-              <folding>
-                <element signature="imports" expanded="false" />
-              </folding>
+            <state relative-caret-position="396">
+              <caret line="76" column="53" lean-forward="false" selection-start-line="76" selection-start-column="53" selection-end-line="76" selection-end-column="53" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="searchshop.jsp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ContentC.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/fk/controller/ContentC.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="361">
+              <caret line="101" column="38" lean-forward="true" selection-start-line="101" selection-start-column="38" selection-end-line="101" selection-end-column="38" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="searchshop.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/searchshop.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1188">
+            <state relative-caret-position="867">
               <caret line="169" column="174" lean-forward="false" selection-start-line="169" selection-start-column="174" selection-end-line="169" selection-end-column="174" />
               <folding>
                 <marker date="1490867523243" expanded="true" signature="13920:13931" ph="..." />
@@ -130,11 +129,21 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="LoginC.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/fk/controller/LoginC.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="113">
+              <caret line="22" column="13" lean-forward="false" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="search.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/search.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1149">
-              <caret line="160" column="61" lean-forward="true" selection-start-line="160" selection-start-column="61" selection-end-line="160" selection-end-column="61" />
+            <state relative-caret-position="2880">
+              <caret line="160" column="61" lean-forward="false" selection-start-line="160" selection-start-column="61" selection-end-line="160" selection-end-column="61" />
               <folding>
                 <marker date="1490867008364" expanded="true" signature="14392:14403" ph="..." />
                 <marker date="1490867008364" expanded="true" signature="19134:19184" ph="..." />
@@ -155,26 +164,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="book.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/operative/book.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4932">
-              <caret line="274" column="10" lean-forward="false" selection-start-line="69" selection-start-column="4" selection-end-line="274" selection-end-column="10" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="type.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/operative/type.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="93" column="81" lean-forward="false" selection-start-line="93" selection-start-column="81" selection-end-line="93" selection-end-column="81" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -188,8 +177,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>shop</find>
-      <find>天津</find>
       <find>/images</find>
       <find>0-0-M10030P%E6%B5%B7%E5%8D%97-0-0-0-0-0.html</find>
       <find>/</find>
@@ -218,6 +205,8 @@
       <find>hotelService.selectByPrimaryKey</find>
       <find>addar</find>
       <find>content</find>
+      <find>article</find>
+      <find>shop</find>
     </findStrings>
     <replaceStrings>
       <replace>area</replace>
@@ -249,7 +238,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/webapp/uedite/ueditor.config.js" />
         <option value="$PROJECT_DIR$/src/main/java/com/fk/service/ITravelService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/fk/serviceImpl/TravelServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/fk/sql/traveltips.sql" />
@@ -260,7 +248,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/fk/sql/indexshowshop.sql" />
         <option value="$PROJECT_DIR$/src/main/java/com/fk/sql/shopshow.sql" />
         <option value="$PROJECT_DIR$/src/main/java/com/fk/controller/LoginC.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/fk/controller/ShopC.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/fk/service/IIndexshowshopService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/fk/serviceImpl/IndexshowshopServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/fk/service/IShopshowService.java" />
@@ -300,6 +287,8 @@
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/search.jsp" />
         <option value="$PROJECT_DIR$/src/main/resources/mapping/OrdersMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/searchshop.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/fk/controller/ContentC.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/fk/controller/ShopC.java" />
       </list>
     </option>
   </component>
@@ -441,7 +430,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -703,45 +691,12 @@
               <option name="myItemId" value="com" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fk" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bean" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="travel" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="travel" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
       <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1486,7 +1441,8 @@
       <workItem from="1490772034304" duration="9968000" />
       <workItem from="1490839279833" duration="608000" />
       <workItem from="1490859433697" duration="348000" />
-      <workItem from="1490859799286" duration="6634000" />
+      <workItem from="1490859799286" duration="6801000" />
+      <workItem from="1490867976277" duration="160000" />
     </task>
     <task id="LOCAL-00001" summary="ssm  success">
       <created>1486712078887</created>
@@ -1796,15 +1752,22 @@
       <option name="project" value="LOCAL" />
       <updated>1490781989833</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="简单修改下">
+      <created>1490867540805</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1490867540805</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="376448000" />
+    <option name="totallyTimeSpent" value="376775000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1855" height="1056" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1827,11 +1790,11 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27348644" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27348644" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32923076" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32672232" sideWeight="0.49811321" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17468214" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17689331" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
@@ -2136,16 +2099,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fk/controller/ShopC.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2250">
-          <caret line="137" column="65" lean-forward="false" selection-start-line="137" selection-start-column="34" selection-end-line="137" selection-end-column="65" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/operative/per.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="18">
@@ -2164,7 +2117,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/operative/type.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
+        <state relative-caret-position="1674">
           <caret line="93" column="81" lean-forward="false" selection-start-line="93" selection-start-column="81" selection-end-line="93" selection-end-column="81" />
           <folding />
         </state>
@@ -2174,7 +2127,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
           <caret line="12" column="3" lean-forward="false" selection-start-line="12" selection-start-column="3" selection-end-line="12" selection-end-column="42" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2201,7 +2153,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/fk/controller/operative.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="626">
+        <state relative-caret-position="10746">
           <caret line="621" column="32" lean-forward="false" selection-start-line="621" selection-start-column="32" selection-end-line="621" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="false" />
@@ -2215,7 +2167,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="432">
           <caret line="27" column="49" lean-forward="true" selection-start-line="27" selection-start-column="3" selection-end-line="27" selection-end-column="49" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2270,27 +2221,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fk/controller/LoginC.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="19" lean-forward="false" selection-start-line="0" selection-start-column="19" selection-end-line="0" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fk/controller/ContentC.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="82" column="70" lean-forward="false" selection-start-line="82" selection-start-column="70" selection-end-line="82" selection-end-column="70" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
+        <state relative-caret-position="2160">
           <caret line="120" column="74" lean-forward="false" selection-start-line="120" selection-start-column="70" selection-end-line="120" selection-end-column="74" />
           <folding />
         </state>
@@ -2298,8 +2231,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/search.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1149">
-          <caret line="160" column="61" lean-forward="true" selection-start-line="160" selection-start-column="61" selection-end-line="160" selection-end-column="61" />
+        <state relative-caret-position="2880">
+          <caret line="160" column="61" lean-forward="false" selection-start-line="160" selection-start-column="61" selection-end-line="160" selection-end-column="61" />
           <folding>
             <marker date="1490867008364" expanded="true" signature="14392:14403" ph="..." />
             <marker date="1490867008364" expanded="true" signature="19134:19184" ph="..." />
@@ -2317,7 +2250,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/mapping/OrdersMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
+        <state relative-caret-position="522">
           <caret line="29" column="40" lean-forward="false" selection-start-line="29" selection-start-column="40" selection-end-line="29" selection-end-column="40" />
           <folding>
             <marker date="1490867426431" expanded="true" signature="1446:1583" ph="select from orders" />
@@ -2335,20 +2268,46 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/fk/controller/Search.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="478">
+        <state relative-caret-position="1566">
           <caret line="97" column="0" lean-forward="false" selection-start-line="97" selection-start-column="0" selection-end-line="97" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/searchshop.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1188">
+        <state relative-caret-position="867">
           <caret line="169" column="174" lean-forward="false" selection-start-line="169" selection-start-column="174" selection-end-line="169" selection-end-column="174" />
           <folding>
             <marker date="1490867523243" expanded="true" signature="13920:13931" ph="..." />
             <marker date="1490867523243" expanded="true" signature="18662:18712" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fk/controller/LoginC.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="113">
+          <caret line="22" column="13" lean-forward="false" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fk/controller/ContentC.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="101" column="38" lean-forward="true" selection-start-line="101" selection-start-column="38" selection-end-line="101" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fk/controller/ShopC.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="76" column="53" lean-forward="false" selection-start-line="76" selection-start-column="53" selection-end-line="76" selection-end-column="53" />
+          <folding />
         </state>
       </provider>
     </entry>

@@ -72,6 +72,9 @@ public class ShopC {
         map.put("lines", lines);
         List<RecordBean> recordBean = recordService.selectByForginId(Integer.parseInt(id));
         map.put("record", recordBean);
+
+        ordersBean.setCount(ordersBean.getCount() + CommonConst.ONE_INT);
+        ordersService.updateByPrimaryKey(ordersBean);
         return "shop";
     }
 
