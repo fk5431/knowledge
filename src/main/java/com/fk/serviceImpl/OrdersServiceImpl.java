@@ -47,4 +47,9 @@ public class OrdersServiceImpl implements IOrdersService {
     public int insertSelective(OrdersBean record) {
         return ordersDao.insertSelective(record);
     }
+
+    @Override
+    public List<OrdersBean> selectByPlace(String place) {
+        return ordersDao.selectByPlace(place);
+    }
 }

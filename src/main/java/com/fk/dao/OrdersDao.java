@@ -22,4 +22,5 @@ public interface OrdersDao {
 
     int count();
     List<OrdersBean> selectByStart(Integer start);
+    List<OrdersBean> selectByPlace(String place);
 }

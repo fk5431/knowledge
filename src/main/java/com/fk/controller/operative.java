@@ -603,6 +603,49 @@ public class operative {
 
         return per(request, map);
     }
+    @RequestMapping("/operative/type")
+    public String type(HttpServletRequest request, Map<String, Object> map){
+
+        return "/operative/type";
+    }
+
+    @RequestMapping("/operative/addhotel")
+    public String addhotel(HttpServletRequest request, @RequestParam("image") MultipartFile file,Map<String, Object> map){
+        String title = request.getParameter("title");
+        String etitle = request.getParameter("etitle");
+        int star = Integer.parseInt(request.getParameter("star"));
+        String score = request.getParameter("score");
+        String adress = request.getParameter("adress");
+        String summary = request.getParameter("summary");
+        String filename = file.getOriginalFilename();
+        String img ;
+        if("".equals(filename)){
+            img = "";
+        }else{
+            String path = ContextLoader.getCurrentWebApplicationContext().getServletContext().getRealPath("/");
+            filename = String.valueOf(System.currentTimeMillis()) + filename;
+            path = path + "images/hotel";
+            File upload = new File(path, filename);
+            try {
+                FileUtils.copyInputStreamToFile(file.getInputStream(), upload);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            img = "/travel/images/hotel/"+filename;
+        }
+        HotelBean hotelBean = new HotelBean();
+        hotelBean.setTitle(title);
+        hotelBean.setEtitle(etitle);
+        hotelBean.setStar(star);
+        hotelBean.setAdress(adress);
+        hotelBean.setSummary(summary);
+        hotelBean.setImg(img);
+        hotelBean.setScore(score);
+
+        hotelService.insertSelective(hotelBean);
+
+        return type(request, map);
+    }
 
 
 }

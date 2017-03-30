@@ -1,8 +1,5 @@
 <%@ page import="java.util.List" %>
-<%@ page import="com.fk.bean.TravelBean" %>
-<%@ page import="com.fk.bean.ProvinceBean" %>
-<%@ page import="com.fk.bean.ContinentBean" %>
-<%@ page import="com.fk.bean.TypeBean" %>
+<%@ page import="com.fk.bean.*" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -89,7 +86,7 @@
                 <div data-cs-t="gonglve_feed" class="_j_feed_data" >
 
                     <%
-                        List<TravelBean> travel = (List) request.getAttribute("travel");
+                        List<OrdersBean> travel = (List) request.getAttribute("travel");
                         for(int i=0;i<travel.size();i++){
                     %>
 
@@ -97,7 +94,7 @@
                     <div class="feed-item _j_feed_item">
                         <a href="${pageContext.request.contextPath}/article?id=<%=travel.get(i).getId()%>">
                             <div class="bar clearfix">
-                                <span class="stat"><span class="num"><%=travel.get(i).getCount()%></span> 穷游客赞<i class="icon-hand"></i></span>
+                                <span class="stat"><span class="num"><%=travel.get(i).getSellcount()%></span> 穷游客买过<i class="icon-hand"></i></span>
                             </div>
                             <div class="title">
                                 <%=travel.get(i).getTitle()%>
@@ -108,15 +105,10 @@
                                 </dt>
                                 <dd>
                                     <div class="info">
-                                        <%=travel.get(i).getSummary()%>
+                                        <%=travel.get(i).getCost()%>
                                     </div>
-                                    <%
-                                        String[] ty = travel.get(i).getType().split("\\|");
-                                        for(int j=0;j<ty.length;j++){
-                                    %>
-                                    <span class="art-tag"><%=ty[j]%></span>
-                                    <% } %>
-                                    <div class="ext-r"><span class="nums"><%=travel.get(i).getLookcount()%>浏览</span></div>
+                                    <span class="art-tag"><%=travel.get(i).getSubject()%></span>
+                                    <div class="ext-r"><span class="nums"><%=travel.get(i).getCount()%>浏览</span></div>
                                 </dd>
                             </dl>
                         </a>
@@ -161,7 +153,7 @@
                                     List<TypeBean> type = (List) request.getAttribute("type");
                                     for (int i = 0; i <list.size(); i++) {
                                 %>
-                                <li><a href="${pageContext.request.contextPath}/search?indexsearch=travel&key=<%=list.get(i).getProvince()%>"><%=list.get(i).getProvince()%>(<%=list.get(i).getCount()%>)</a></li>
+                                <li><a href="${pageContext.request.contextPath}/search?indexsearch=shop&key=<%=list.get(i).getProvince()%>"><%=list.get(i).getProvince()%></a></li>
                                 <% }%>
                             </ul>
                         </div>
@@ -175,7 +167,7 @@
                                 <%
                                     for (int i = 0; i <list1.size(); i++) {
                                 %>
-                                <li><a href="${pageContext.request.contextPath}/search?indexsearch=travel&key=<%=list1.get(i).getContinent()%>"><%=list1.get(i).getContinent()%>(<%=list1.get(i).getCount()%>)</a></li>
+                                <li><a href="${pageContext.request.contextPath}/search?indexsearch=shop&key=<%=list1.get(i).getContinent()%>"><%=list1.get(i).getContinent()%></a></li>
 
                                 <% } %>
                             </ul>

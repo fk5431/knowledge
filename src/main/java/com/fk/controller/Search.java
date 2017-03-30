@@ -52,7 +52,7 @@ public class Search {
         if(CommonConst.TRAVEL.equals(indexsearch)){
             return searchTravel(request, map, key);
         }else if(CommonConst.SHOP.equals(indexsearch)){
-            return searchShop(map);
+            return searchShop(request, map, key);
         }else {
 
         }
@@ -71,8 +71,47 @@ public class Search {
         return "mdd";
     }
 
-    private String searchShop(Map<String, Object> map) {
-        return "sales";
+    private String searchShop(HttpServletRequest request, Map<String, Object> map, String key) {
+        map.put("index", CommonConst.FOUR_INT);
+
+        List<ProvinceBean> provinceBeanList = provinceService.selectAll();
+        map.put("province", provinceBeanList);
+
+        List<ContinentBean> continentBeanList = continentService.selectAll();
+        map.put("continent",continentBeanList);
+
+        List<TypeBean> typeBeans = typeService.selectAll();
+        map.put("type", typeBeans);
+
+
+        List<OrdersBean> ordersBeans = iOrdersService.selectByPlace(key);
+
+        int count = ordersBeans.size();
+        int page = 1;
+        if(count % SIZE == 0)
+            page = count / SIZE;
+        else
+            page = count / SIZE + CommonConst.ONE_INT;
+        map.put("count", count);
+        map.put("size", SIZE);
+        map.put("page", page);
+        String page_ = request.getParameter("page");
+        int toPage;
+        if(page_ == null || "".equals(page_)){
+            toPage = 1;
+        }else {
+            toPage = Integer.parseInt(page_);
+        }
+        if(toPage > page){
+            toPage = page;
+        }
+        map.put("pageNow", toPage);
+        if(toPage == 0)
+            toPage = 1;
+        int start = (toPage - 1) * SIZE;
+        map.put("travel", ordersBeans.subList(start, ordersBeans.size()<start +SIZE?ordersBeans.size():start+SIZE));
+
+        return "searchshop";
     }
 
     private String searchTravel(HttpServletRequest request, Map<String, Object> map, String key) {
@@ -107,7 +146,10 @@ public class Search {
             toPage = page;
         }
         map.put("pageNow", toPage);
-        map.put("travel", travelList);
+        if(toPage == 0)
+            toPage = 1;
+        int start = (toPage - 1) * SIZE;
+        map.put("travel", travelList.subList(start, travelList.size()<start +SIZE?travelList.size():start+SIZE));
 
         return "search";
     }

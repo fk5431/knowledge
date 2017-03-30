@@ -16,4 +16,5 @@ public interface IHotelService {
 
     List<HotelBean> selectByStart(Integer start);
     int deleteByPrimaryKey(Integer id);
+    int insertSelective(HotelBean record);
 }

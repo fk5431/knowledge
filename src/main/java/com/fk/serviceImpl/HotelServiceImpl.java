@@ -45,4 +45,9 @@ public class HotelServiceImpl implements IHotelService {
     public int deleteByPrimaryKey(Integer id) {
         return hotelDao.deleteByPrimaryKey(id);
     }
+
+    @Override
+    public int insertSelective(HotelBean record) {
+        return hotelDao.insertSelective(record);
+    }
 }

@@ -15,4 +15,5 @@ public interface IOrdersService {
     List<OrdersBean> selectByStart(Integer start);
     int deleteByPrimaryKey(Integer id);
     int insertSelective(OrdersBean record);
+    List<OrdersBean> selectByPlace(String place);
 }

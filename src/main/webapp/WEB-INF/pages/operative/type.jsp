@@ -64,49 +64,82 @@
 </ul>
 <div class="admin">
     <div class="panel admin-panel">
-        <div class="panel-head"><strong><span class="icon-pencil-square-o"></span> 网站信息</strong></div>
+        <div class="panel-head"><strong><span class="icon-pencil-square-o"></span> 单页信息</strong></div>
         <div class="body-content">
-            <table class="table table-hover text-center">
-                <tr>
-                    <th width="120">ID</th>
-                    <th>类型</th>
-                    <th>修改后类型</th>
-                    <th>修改密码</th>
-                    <th>删除</th>
-                </tr>
-                <%
-                    List<TypeBean> typeBeans = (List) request.getAttribute("type");
-                    for(int i=0;i<typeBeans.size();i++){
-                %>
-                <tr>
-                    <form action="${pageContext.request.contextPath}/operative/updatetype" method="get" id="user<%=i%>">
-                        <td><%=typeBeans.get(i).getId()%></td>
-                        <td><%=typeBeans.get(i).getTypename()%></td>
-                        <td><input type="text" name="typename"/><input type="text" name="id" hidden value="<%=typeBeans.get(i).getId()%>"/></td>
-                        <td><div class="button-group"> <a class="button border-red" onclick="document.getElementById('user<%=i%>').submit();return false"><span class="icon-trash-o"></span> 修改</a> </div></td>
-                        <td><div class="button-group"> <a class="button border-red" href="${pageContext.request.contextPath}/operative/deltype?id=<%=typeBeans.get(i).getId()%>"><span class="icon-trash-o"></span> 删除</a> </div></td>
-                    </form>
-                </tr>
-                <%}%>
-                <tr>
-                    <td colspan="8">
-                        <div class="pagelist">
-                            <%
-                                Integer pageAll = (Integer)request.getAttribute("page");
-                                Integer pageNow = (Integer)request.getAttribute("pageNow");
-
-                                for(int i=1;i<= pageAll.intValue();i++){
-                                    if(i == pageNow.intValue()){
-                            %>
-                            <span class="current"><%=i%></span>
-                            <%}else{%>
-                            <a href="${pageContext.request.contextPath}/operative/type?page=<%=i%>"><%=i%></a>
-                            <%}}%>
-                            <a href="${pageContext.request.contextPath}/operative/type?page=${pageNow+1}">下一页</a>
-                        </div>
-                    </td>
-                </tr>
-            </table>
+            <form method="post" class="form-x" action="${pageContext.request.contextPath}/operative/addhotel"
+                  enctype="multipart/form-data">
+                <div class="form-group">
+                    <div class="label">
+                        <label>旅店名称：</label>
+                    </div>
+                    <div class="field">
+                        <input type="text" class="input" name="title" value=""/>
+                        <div class="tips"></div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="label">
+                        <label>英文名称：</label>
+                    </div>
+                    <div class="field">
+                        <input type="text" class="input" name="etitle" value=""/>
+                        <div class="tips"></div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="label">
+                        <label>星级：</label>
+                    </div>
+                    <div class="field">
+                        <input type="text" class="input" name="star" value="请输入整数"/>
+                        <div class="tips"></div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="label">
+                        <label>分数：</label>
+                    </div>
+                    <div class="field">
+                        <input type="text" class="input" name="score" value=""/>
+                        <div class="tips"></div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="label">
+                        <label>地区：</label>
+                    </div>
+                    <div class="field">
+                        <input type="text" class="input" name="adress" value=""/>
+                        <div class="tips"></div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="label">
+                        <label>简介：</label>
+                    </div>
+                    <div class="field">
+                        <%--<input type="text" class="input" name="score" value=""/>--%>
+                        <textarea name="summary"></textarea>
+                        <div class="tips"></div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="label">
+                        <label>图片：</label>
+                    </div>
+                    <div class="field">
+                        <input name="image" type="file" accept="image/gif, image/jpeg"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="label">
+                        <label></label>
+                    </div>
+                    <div class="field">
+                        <button class="button bg-main icon-check-square-o" type="submit"> 提交</button>
+                    </div>
+                </div>
+            </form>
         </div>
     </div>
 </div>
