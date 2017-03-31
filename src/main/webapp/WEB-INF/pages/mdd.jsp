@@ -124,11 +124,10 @@
         </div>
         <div class="place-search-panel place-search-panel-sm">
             <h2>Don't fear the unknown</h2>
-            <form name="mdd-search-form" action="${pageContext.request.contextPath}/search" method="get">
+            <form name="mdd-search-form" action="${pageContext.request.contextPath}/searchtravelplace" method="get" id="subform">
                 <div class="searchbar">
-                    <input autocomplete="off" class="search-input" type="text" name="key" placeholder="我想去..."/>
-                    <input hidden type="text" name="indexsearch" value="travel"/>
-                    <a class="search-button" href="#" data-cs-l="搜索" role="button"><i class="icon-search"></i></a>
+                    <input autocomplete="off" class="search-input" type="text" name="place" placeholder="我想去..."/>
+                    <a class="search-button" onclick="document.getElementById('subform').submit();" ><i class="icon-search"></i></a>
                 </div>
             </form>
             <div class="search-suggest-panel search-suggest-place hide">

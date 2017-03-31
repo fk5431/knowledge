@@ -24,4 +24,14 @@ public class TypeServiceImpl implements ITypeService {
     public List<TypeBean> selectAll() {
         return typeDao.selectAll();
     }
+
+    @Override
+    public int updateByPrimaryKey(TypeBean record) {
+        return typeDao.updateByPrimaryKey(record);
+    }
+
+    @Override
+    public TypeBean selectByTypeName(String typename) {
+        return typeDao.selectByTypeName(typename);
+    }
 }

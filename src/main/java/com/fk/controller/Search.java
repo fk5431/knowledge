@@ -58,10 +58,61 @@ public class Search {
         }else if(CommonConst.SHOP.equals(indexsearch)){
             return searchShop(request, map, key);
         }else {
-
+            return searchAll(request, map, key);
         }
 
-        return "";
+    }
+
+    private String searchAll(HttpServletRequest request, Map<String, Object> map, String key) {
+        map.put("index", 0);
+        List<ProvinceBean> provinceBeanList = provinceService.selectAll();
+        map.put("province", provinceBeanList);
+
+        List<ContinentBean> continentBeanList = continentService.selectAll();
+        map.put("continent",continentBeanList);
+
+        List<TypeBean> typeBeans = typeService.selectAll();
+        map.put("type", typeBeans);
+
+        List<OrdersBean> ordersBeans = iOrdersService.selectByPlace(key);
+        List<TravelBean> travelList = travelService.selectByPlace(key);
+        List<Object> objects = new ArrayList<>();
+        objects.addAll(ordersBeans);
+        objects.addAll(travelList);
+        int count = objects.size();
+        int page = 1;
+        if(count % SIZE == 0)
+            page = count / SIZE;
+        else
+            page = count / SIZE + CommonConst.ONE_INT;
+        map.put("count", count);
+        map.put("size", SIZE);
+        map.put("page", page);
+        String page_ = request.getParameter("page");
+        int toPage;
+        if(page_ == null || "".equals(page_)){
+            toPage = 1;
+        }else {
+            toPage = Integer.parseInt(page_);
+        }
+        if(toPage > page){
+            toPage = page;
+        }
+        map.put("pageNow", toPage);
+        if(toPage == 0)
+            toPage = 1;
+        int start = (toPage - 1) * SIZE;
+        map.put("travel", objects.subList(start, objects.size()<start +SIZE?objects.size():start+SIZE));
+
+        return "searchall";
+    }
+
+    @RequestMapping("/searchtravelplace")
+    public String searchtravelplace(HttpServletRequest request, Map<String, Object> map){
+        String place = request.getParameter("place");
+
+
+        return searchAll(request, map, place);
     }
 
     @RequestMapping("/mdd")

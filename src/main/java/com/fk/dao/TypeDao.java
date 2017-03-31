@@ -19,4 +19,5 @@ public interface TypeDao {
 
     List<TypeBean> selectAll();
 
+    TypeBean selectByTypeName(String type);
 }

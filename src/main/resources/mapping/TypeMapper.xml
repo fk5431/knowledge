@@ -20,6 +20,12 @@
         from type
         where id = #{id,jdbcType=INTEGER}
     </select>
+    <select id="selectByTypeName" resultMap="BaseResultMap" parameterType="java.lang.String" >
+        select
+        <include refid="Base_Column_List" />
+        from type
+        where type = #{type,jdbcType=VARCHAR}
+    </select>
     <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
         delete from type
         where id = #{id,jdbcType=INTEGER}

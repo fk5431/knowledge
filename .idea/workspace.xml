@@ -10,23 +10,18 @@
     <bookmark url="file://$PROJECT_DIR$/src/main/java/com/fk/util/SendMail.java" line="96" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="11669da5-9530-45d4-b1a5-63fcb18bf569" name="Default" comment="简单修改下">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/util/Login.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/fk/controller/LoginC.class" afterPath="$PROJECT_DIR$/target/classes/com/fk/controller/LoginC.class" />
+    <list default="true" id="11669da5-9530-45d4-b1a5-63fcb18bf569" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/searchall.jsp" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/fk/util/1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/fk/util/hah.py" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/fk/controller/ContentC.java" afterPath="$PROJECT_DIR$/src/main/java/com/fk/controller/ContentC.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/fk/controller/LoginC.java" afterPath="$PROJECT_DIR$/src/main/java/com/fk/controller/LoginC.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/fk/controller/Search.java" afterPath="$PROJECT_DIR$/src/main/java/com/fk/controller/Search.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/fk/controller/ShopC.java" afterPath="$PROJECT_DIR$/src/main/java/com/fk/controller/ShopC.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/fk/util/CommonConst.java" afterPath="$PROJECT_DIR$/src/main/java/com/fk/util/CommonConst.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/content.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/content.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/context.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/context.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/index.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/index.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/fk/controller/operative.java" afterPath="$PROJECT_DIR$/src/main/java/com/fk/controller/operative.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/fk/dao/TypeDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/fk/dao/TypeDao.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/fk/service/ITypeService.java" afterPath="$PROJECT_DIR$/src/main/java/com/fk/service/ITypeService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/fk/serviceImpl/TypeServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/fk/serviceImpl/TypeServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mapping/TypeMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapping/TypeMapper.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/mdd.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/mdd.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/sales.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/sales.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/search.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/search.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/searchshop.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/searchshop.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/shop.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/shop.jsp" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -54,20 +49,118 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Search.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/fk/controller/Search.java">
+      <file leaf-file-name="operative.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/fk/controller/operative.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1102">
-              <caret line="75" column="9" lean-forward="false" selection-start-line="75" selection-start-column="9" selection-end-line="75" selection-end-column="9" />
+            <state relative-caret-position="504">
+              <caret line="367" column="53" lean-forward="false" selection-start-line="367" selection-start-column="53" selection-end-line="367" selection-end-column="53" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ShopC.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="TypeDao.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/fk/dao/TypeDao.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="342">
+              <caret line="21" column="41" lean-forward="false" selection-start-line="21" selection-start-column="41" selection-end-line="21" selection-end-column="41" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ITypeService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/fk/service/ITypeService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="198">
+              <caret line="14" column="47" lean-forward="false" selection-start-line="14" selection-start-column="47" selection-end-line="14" selection-end-column="47" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TypeServiceImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/fk/serviceImpl/TypeServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="432">
+              <caret line="33" column="36" lean-forward="false" selection-start-line="33" selection-start-column="20" selection-end-line="33" selection-end-column="36" />
+              <folding>
+                <element signature="e#575#576#0" expanded="true" />
+                <element signature="e#617#618#0" expanded="true" />
+                <element signature="e#685#686#0" expanded="true" />
+                <element signature="e#742#743#0" expanded="true" />
+                <element signature="e#813#814#0" expanded="true" />
+                <element signature="e#870#871#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TypeMapper.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/mapping/TypeMapper.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="468">
+              <caret line="26" column="27" lean-forward="false" selection-start-line="26" selection-start-column="23" selection-end-line="26" selection-end-column="27" />
+              <folding>
+                <marker date="1490945629683" expanded="true" signature="599:667" ph="SELECT FROM type" />
+                <marker date="1490945629683" expanded="true" signature="788:899" ph="select from type" />
+                <marker date="1490945629683" expanded="true" signature="1017:1132" ph="select from type" />
+                <marker date="1490945629683" expanded="true" signature="1227:1285" ph="delete from " />
+                <marker date="1490945629683" expanded="true" signature="1371:1516" ph="insert into type... " />
+                <marker date="1490945629683" expanded="true" signature="2413:2709" ph="update type " />
+                <marker date="1490945629683" expanded="true" signature="2807:2947" ph="update type " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Search.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/fk/controller/Search.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="208">
+              <caret line="66" column="28" lean-forward="false" selection-start-line="66" selection-start-column="28" selection-end-line="66" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/index.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="252">
+              <caret line="142" column="79" lean-forward="false" selection-start-line="142" selection-start-column="24" selection-end-line="142" selection-end-column="79" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mdd.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/mdd.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="144">
+              <caret line="126" column="127" lean-forward="false" selection-start-line="126" selection-start-column="127" selection-end-line="126" selection-end-column="127" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="searchall.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/searchall.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="190">
+              <caret line="195" column="123" lean-forward="false" selection-start-line="195" selection-start-column="123" selection-end-line="195" selection-end-column="123" />
+              <folding>
+                <marker date="1490944883876" expanded="true" signature="16357:16368" ph="..." />
+                <marker date="1490944883876" expanded="true" signature="21099:21149" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ShopC.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/fk/controller/ShopC.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
+            <state relative-caret-position="2052">
               <caret line="127" column="9" lean-forward="false" selection-start-line="127" selection-start-column="9" selection-end-line="127" selection-end-column="9" />
               <folding />
             </state>
@@ -104,7 +197,6 @@
       <find>colu</find>
       <find>add</find>
       <find>adv</find>
-      <find>addart</find>
       <find>page</find>
       <find>del</find>
       <find>p</find>
@@ -117,6 +209,7 @@
       <find>art</find>
       <find>regis</find>
       <find>登录</find>
+      <find>addart</find>
     </findStrings>
     <replaceStrings>
       <replace>area</replace>
@@ -148,11 +241,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/fk/sql/shopshow.sql" />
-        <option value="$PROJECT_DIR$/src/main/java/com/fk/service/IIndexshowshopService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/fk/serviceImpl/IndexshowshopServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/fk/service/IShopshowService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/fk/serviceImpl/ShopshowhowServiceImpl.java" />
         <option value="$PROJECT_DIR$/ERROR_CODE.txt" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/error.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/fk/dao/RecordDao.java" />
@@ -180,7 +268,6 @@
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/operative/type.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/fk/service/IHotelService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/fk/serviceImpl/HotelServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/fk/controller/operative.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/fk/dao/OrdersDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/fk/service/IOrdersService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/fk/serviceImpl/OrdersServiceImpl.java" />
@@ -190,15 +277,21 @@
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/index.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/content.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/context.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/mdd.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/sales.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/search.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/searchshop.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/shop.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/fk/controller/LoginC.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/fk/controller/ContentC.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/fk/controller/Search.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/fk/controller/ShopC.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/searchall.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/mdd.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/fk/controller/Search.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/fk/service/ITypeService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/fk/serviceImpl/TypeServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapping/TypeMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/fk/dao/TypeDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/fk/controller/operative.java" />
       </list>
     </option>
   </component>
@@ -430,40 +523,6 @@
               <option name="myItemId" value="webapp" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WEB-INF" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pages" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="operative" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="travel" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="travel" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -607,6 +666,74 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="service" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="travel" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="travel" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dao" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="travel" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="travel" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="controller" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -662,24 +789,24 @@
     <property name="GenerateAntBuildDialog.outputFileNameProperty" value="travel" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages" />
-      <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/operative" />
-      <recent name="$PROJECT_DIR$/src/main/webapp" />
-      <recent name="$PROJECT_DIR$/src/main/java/com/baidu" />
-      <recent name="$PROJECT_DIR$/src/main/java/com" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.fk.serviceImpl" />
-      <recent name="com.fk.service" />
-      <recent name="com.fk.controller" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/webapp/images" />
       <recent name="$PROJECT_DIR$/src/main/java/com/fk/sql" />
       <recent name="$PROJECT_DIR$/src/main/webapp/images/4" />
       <recent name="$PROJECT_DIR$/src/main/webapp" />
       <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/images" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.fk.serviceImpl" />
+      <recent name="com.fk.service" />
+      <recent name="com.fk.controller" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages" />
+      <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/operative" />
+      <recent name="$PROJECT_DIR$/src/main/webapp" />
+      <recent name="$PROJECT_DIR$/src/main/java/com/baidu" />
+      <recent name="$PROJECT_DIR$/src/main/java/com" />
     </key>
   </component>
   <component name="RunManager" selected="Tomcat Server.travel">
@@ -1388,7 +1515,7 @@
       <workItem from="1490859799286" duration="6801000" />
       <workItem from="1490867976277" duration="516000" />
       <workItem from="1490940581534" duration="772000" />
-      <workItem from="1490941419307" duration="2146000" />
+      <workItem from="1490941419307" duration="4209000" />
     </task>
     <task id="LOCAL-00001" summary="ssm  success">
       <created>1486712078887</created>
@@ -1712,15 +1839,22 @@
       <option name="project" value="LOCAL" />
       <updated>1490868140389</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="登录cookie完成">
+      <created>1490943633464</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1490943633464</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="380049000" />
+    <option name="totallyTimeSpent" value="382112000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1855" height="1056" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1747,7 +1881,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32923076" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32672232" sideWeight="0.49811321" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18131565" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18131565" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
@@ -1779,7 +1913,8 @@
     <MESSAGE value="运营端开始啦，有了前一个 这个刷刷刷" />
     <MESSAGE value="哈哈哈 就要完成了" />
     <MESSAGE value="简单修改下" />
-    <option name="LAST_COMMIT_MESSAGE" value="简单修改下" />
+    <MESSAGE value="登录cookie完成" />
+    <option name="LAST_COMMIT_MESSAGE" value="登录cookie完成" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1792,77 +1927,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fk/sql/line.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/operative/login.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/operative/line.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="397">
-          <caret line="47" column="124" lean-forward="false" selection-start-line="47" selection-start-column="124" selection-end-line="47" selection-end-column="124" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/operative/adv.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="403">
-          <caret line="45" column="6" lean-forward="true" selection-start-line="45" selection-start-column="6" selection-end-line="45" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/operative/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1080">
-          <caret line="113" column="10" lean-forward="true" selection-start-line="64" selection-start-column="3" selection-end-line="113" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapping/LineMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="22" column="13" lean-forward="false" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
-          <folding>
-            <marker date="1490780177850" expanded="true" signature="787:820" ph="select count... line" />
-            <marker date="1490780177850" expanded="true" signature="928:1029" ph="select from line" />
-            <marker date="1490780177850" expanded="true" signature="1140:1250" ph="select from line" />
-            <marker date="1490780177850" expanded="true" signature="1363:1462" ph="select from line" />
-            <marker date="1490780177850" expanded="true" signature="1549:1603" ph="delete from " />
-            <marker date="1490780177850" expanded="true" signature="1688:1747" ph="delete from " />
-            <marker date="1490780177850" expanded="true" signature="1825:2086" ph="insert into line... " />
-            <marker date="1490780177850" expanded="true" signature="3267:3787" ph="update line " />
-            <marker date="1490780177850" expanded="true" signature="3877:4138" ph="update line " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fk/bean/ReturnLineAndOrders.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="49" column="31" lean-forward="false" selection-start-line="49" selection-start-column="18" selection-end-line="49" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fk/dao/LineDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="8" column="39" lean-forward="true" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/fk/serviceImpl/LineServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="509">
@@ -2016,13 +2080,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fk/dao/TravelDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="27" column="49" lean-forward="true" selection-start-line="27" selection-start-column="3" selection-end-line="27" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/fk/dao/OrdersDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="378">
@@ -2106,14 +2163,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="56" column="16" lean-forward="false" selection-start-line="56" selection-start-column="16" selection-end-line="74" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/content.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="414">
@@ -2157,30 +2206,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/mdd.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="67" column="22" lean-forward="false" selection-start-line="67" selection-start-column="22" selection-end-line="67" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/sales.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="486">
           <caret line="70" column="22" lean-forward="false" selection-start-line="70" selection-start-column="22" selection-end-line="70" selection-end-column="22" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/search.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="82" column="22" lean-forward="false" selection-start-line="82" selection-start-column="22" selection-end-line="82" selection-end-column="22" />
-          <folding>
-            <marker date="1490943231719" expanded="true" signature="14940:14951" ph="..." />
-            <marker date="1490943231719" expanded="true" signature="19682:19732" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2242,26 +2272,143 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fk/controller/operative.java">
+    <entry file="jar://$USER_HOME$/Documents/software/jdk1.7.0_80/src.zip!/java/lang/String.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1211">
-          <caret line="621" column="32" lean-forward="false" selection-start-line="621" selection-start-column="32" selection-end-line="621" selection-end-column="32" />
+        <state relative-caret-position="199">
+          <caret line="107" column="19" lean-forward="false" selection-start-line="107" selection-start-column="19" selection-end-line="107" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fk/util/hah.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fk/util/1.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/search.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="132" column="42" lean-forward="true" selection-start-line="105" selection-start-column="19" selection-end-line="132" selection-end-column="42" />
+          <folding>
+            <marker date="1490943231719" expanded="true" signature="14940:14951" ph="..." />
+            <marker date="1490943231719" expanded="true" signature="19682:19732" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fk/controller/ShopC.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2052">
+          <caret line="127" column="9" lean-forward="false" selection-start-line="127" selection-start-column="9" selection-end-line="127" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/searchall.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="195" column="123" lean-forward="false" selection-start-line="195" selection-start-column="123" selection-end-line="195" selection-end-column="123" />
+          <folding>
+            <marker date="1490944883876" expanded="true" signature="16357:16368" ph="..." />
+            <marker date="1490944883876" expanded="true" signature="21099:21149" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="142" column="79" lean-forward="false" selection-start-line="142" selection-start-column="24" selection-end-line="142" selection-end-column="79" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/mdd.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="126" column="127" lean-forward="false" selection-start-line="126" selection-start-column="127" selection-end-line="126" selection-end-column="127" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/fk/controller/Search.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1102">
-          <caret line="75" column="9" lean-forward="false" selection-start-line="75" selection-start-column="9" selection-end-line="75" selection-end-column="9" />
+        <state relative-caret-position="208">
+          <caret line="66" column="28" lean-forward="false" selection-start-line="66" selection-start-column="28" selection-end-line="66" selection-end-column="28" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fk/controller/ShopC.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fk/dao/TravelDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="127" column="9" lean-forward="false" selection-start-line="127" selection-start-column="9" selection-end-line="127" selection-end-column="9" />
+        <state relative-caret-position="432">
+          <caret line="27" column="49" lean-forward="true" selection-start-line="27" selection-start-column="3" selection-end-line="27" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fk/service/ITypeService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="14" column="47" lean-forward="false" selection-start-line="14" selection-start-column="47" selection-end-line="14" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fk/serviceImpl/TypeServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="33" column="36" lean-forward="false" selection-start-line="33" selection-start-column="20" selection-end-line="33" selection-end-column="36" />
+          <folding>
+            <element signature="e#575#576#0" expanded="true" />
+            <element signature="e#617#618#0" expanded="true" />
+            <element signature="e#685#686#0" expanded="true" />
+            <element signature="e#742#743#0" expanded="true" />
+            <element signature="e#813#814#0" expanded="true" />
+            <element signature="e#870#871#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapping/TypeMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="468">
+          <caret line="26" column="27" lean-forward="false" selection-start-line="26" selection-start-column="23" selection-end-line="26" selection-end-column="27" />
+          <folding>
+            <marker date="1490945629683" expanded="true" signature="599:667" ph="SELECT FROM type" />
+            <marker date="1490945629683" expanded="true" signature="788:899" ph="select from type" />
+            <marker date="1490945629683" expanded="true" signature="1017:1132" ph="select from type" />
+            <marker date="1490945629683" expanded="true" signature="1227:1285" ph="delete from " />
+            <marker date="1490945629683" expanded="true" signature="1371:1516" ph="insert into type... " />
+            <marker date="1490945629683" expanded="true" signature="2413:2709" ph="update type " />
+            <marker date="1490945629683" expanded="true" signature="2807:2947" ph="update type " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fk/dao/TypeDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="21" column="41" lean-forward="false" selection-start-line="21" selection-start-column="41" selection-end-line="21" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fk/controller/operative.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="367" column="53" lean-forward="false" selection-start-line="367" selection-start-column="53" selection-end-line="367" selection-end-column="53" />
           <folding />
         </state>
       </provider>

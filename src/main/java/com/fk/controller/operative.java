@@ -362,6 +362,11 @@ public class operative {
             travelBean.setSummary(summary);
 
             travelService.insertSelective(travelBean);
+
+            TypeBean typeBean = typeService.selectByTypeName(type);
+            typeBean.setCount(typeBean.getCount() + CommonConst.ONE_INT);
+            typeService.updateByPrimaryKey(typeBean);
+
             return addarticle(request, map);
         }catch (Exception e){
             e.printStackTrace();

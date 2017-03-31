@@ -11,4 +11,6 @@ import java.util.List;
 public interface ITypeService {
 
     List<TypeBean> selectAll();
+    int updateByPrimaryKey(TypeBean record);
+    TypeBean selectByTypeName(String typename);
 }
