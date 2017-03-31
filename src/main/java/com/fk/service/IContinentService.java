@@ -12,4 +12,7 @@ import java.util.List;
 public interface IContinentService {
 
     List<ContinentBean> selectAll();
+    ContinentBean selectByName(String continent);
+    int updateByPrimaryKey(ContinentBean record);
+    ContinentBean selectByPrimaryKey(Integer id);
 }

@@ -25,6 +25,12 @@
   <sql id="Blob_Column_List" >
     context
   </sql>
+  <select id="selectByType" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select
+    <include refid="Base_Column_List" />
+    from traveltips
+    WHERE type = #{type,jdbcType=VARCHAR}
+  </select>
   <select id="selectByStart" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
     select
     <include refid="Base_Column_List" />
@@ -69,7 +75,7 @@
     #{count,jdbcType=INTEGER}, #{lookcount,jdbcType=INTEGER}, #{summary,jdbcType=VARCHAR},
     #{context,jdbcType=LONGVARCHAR})
   </insert>
-  <insert id="insertSelective" parameterType="com.fk.bean.TravelBean" >
+  <insert id="insertSelective" parameterType="com.fk.bean.TravelBean"  useGeneratedKeys="true" keyProperty="id">
     insert into traveltips
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="id != null" >

@@ -1,5 +1,7 @@
 <%@ page import="java.util.List" %>
-<%@ page import="com.fk.bean.TravelBean" %><%--
+<%@ page import="com.fk.bean.TravelBean" %>
+<%@ page import="com.fk.bean.PromoReturnBean" %>
+<%@ page import="com.fk.bean.OrdersBean" %><%--
   Created by IntelliJ IDEA.
   User: fengkai
   Date: 23/03/17
@@ -72,48 +74,44 @@
         <table class="table table-hover text-center">
             <tr>
                 <th width="5%">ID</th>
-                <th>攻略名称</th>
-                <th>攻略作者</th>
-                <th>攻略简介</th>
+                <th>模块大标题</th>
+                <th>模块小标题</th>
                 <th width="250">操作</th>
             </tr>
             <%
-                List<TravelBean> travel = (List)request.getAttribute("travel");
+                List<PromoReturnBean> travel = (List)request.getAttribute("promo");
                 for(int i=0;i<travel.size();i++){
             %>
             <tr>
                 <td><%=travel.get(i).getId()%></td>
-                <td><%=travel.get(i).getTitle()%></td>
-                <td><%=travel.get(i).getAuthor()%></td>
-                <td><%=travel.get(i).getSummary()%></td>
+                <td><%=travel.get(i).getTitle1()%></td>
+                <td><%=travel.get(i).getTitle2()%></td>
                 <td>
                     <div class="button-group">
-                        <a type="button" class="button border-main" href="${pageContext.request.contextPath}/article?id=<%=travel.get(i).getId()%>" target="_blank"><span class="icon-edit"></span>查看</a>
-                        <a type="button" class="button border-main" href="${pageContext.request.contextPath}/operative/addtoindex?id=<%=travel.get(i).getId()%>"><span class="icon-edit"></span>添加到首页</a>
-                        <a class="button border-red" href="${pageContext.request.contextPath}/operative/article?id=<%=travel.get(i).getId()%>"  ><span class="icon-trash-o"></span> 删除</a>
-                        <a type="button" class="button border-main" href="${pageContext.request.contextPath}/operative/addtomdd?id=<%=travel.get(i).getId()%>"><span class="icon-edit"></span>添加到目的地</a>
+                        <a type="button" class="button border-main" href="${pageContext.request.contextPath}/sales" target="_blank"><span class="icon-edit"></span>查看</a>
+                        <a class="button border-red" href="${pageContext.request.contextPath}/operative/delpromo?id=<%=travel.get(i).getId()%>"  ><span class="icon-trash-o"></span> 删除</a>
                     </div>
                 </td>
+            </tr>
+            <tr>
+                    <%
+                    List<OrdersBean> listorder = travel.get(i).getOrders();
+                    for(int j=0;j<listorder.size();j++){
+                    %><td>
+                        <a href="${pageContext.request.contextPath}/shop?id=<%=listorder.get(j).getId()%>" target="_blank"
+                           data-mes-g="1-1-0" data-mes-t="位置0"
+                           data-mes-salesid="2032398">
+                            <div class="image">
+                                <img src="<%=listorder.get(j).getImage()%>" height="134" width="238">
+                            </div>
+                            <div class="caption">
+                                <h3 title="<%=listorder.get(j).getTitle()%>"><%=listorder.get(j).getTitle()%></h3>
+                                <span class="price"><b>￥<%=listorder.get(j).getPrice()%></b>起</span>
+                            </div>
+                        </a></td>
+                    <%}%>
             </tr>
             <%}%>
-            <tr>
-                <td colspan="8">
-                    <div class="pagelist">
-                        <%
-                            Integer pageAll = (Integer)request.getAttribute("page");
-                            Integer pageNow = (Integer)request.getAttribute("pageNow");
-
-                            for(int i=1;i<= pageAll.intValue();i++){
-                                if(i == pageNow.intValue()){
-                        %>
-                        <span class="current"><%=i%></span>
-                        <%}else{%>
-                        <a href="${pageContext.request.contextPath}/operative/column?page=<%=i%>"><%=i%></a>
-                        <%}}%>
-                        <a href="${pageContext.request.contextPath}/operative/column?page=${pageNow+1}">下一页</a>
-                    </div>
-                </td>
-            </tr>
         </table>
     </div>
 </div>

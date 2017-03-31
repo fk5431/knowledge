@@ -60,6 +60,16 @@ public class operative {
     @Autowired
     IRecordService recordService;
 
+    @Autowired
+    IProvinceService provinceService;
+
+    @Autowired
+    IContinentService continentService;
+
+
+    @Autowired
+    IPromoService promoService;
+
     private static final int SIZE = 10;
 
     @RequestMapping("/operative")
@@ -150,7 +160,16 @@ public class operative {
 
         List<TypeBean> typeBeans = typeService.selectAll();
         map.put("type", typeBeans);
-
+        List<String> spe = new ArrayList<>();
+        List<ProvinceBean> provinceBeanList = provinceService.selectAll();
+        List<ContinentBean> continentBeanList = continentService.selectAll();
+        for(ProvinceBean p : provinceBeanList){
+            spe.add(p.getProvince());
+        }
+        for(ContinentBean c : continentBeanList){
+            spe.add(c.getContinent());
+        }
+        map.put("spe", spe);
         return "/operative/book";
     }
     @RequestMapping("/operative/delindex")
@@ -330,6 +349,7 @@ public class operative {
             String line = request.getParameter("line");
             String summary = request.getParameter("summary");
             String content = request.getParameter("content");
+            String spe = request.getParameter("spe");
 
             String filename = file.getOriginalFilename();
             String img ;
@@ -362,10 +382,32 @@ public class operative {
             travelBean.setSummary(summary);
 
             travelService.insertSelective(travelBean);
-
-            TypeBean typeBean = typeService.selectByTypeName(type);
-            typeBean.setCount(typeBean.getCount() + CommonConst.ONE_INT);
+            int travelId = travelBean.getId();
+            TypeBean typeBean = typeService.selectByPrimaryKey(Integer.parseInt(type));
+            typeBean.setCount(typeBean.getCount()==null?0:typeBean.getCount() + CommonConst.ONE_INT);
             typeService.updateByPrimaryKey(typeBean);
+            //TODO spe
+            ProvinceBean provinceBean = provinceService.selectByname(spe);
+            ContinentBean continentBean = continentService.selectByName(spe);
+            if(provinceBean != null){
+                provinceBean.setCount(provinceBean.getCount() + CommonConst.ONE_INT);
+                String str = provinceBean.getTravelid();
+                if(str == null || "".equals(str)){
+                    provinceBean.setTravelid(String.valueOf(travelId));
+                }else{
+                    provinceBean.setTravelid(provinceBean.getTravelid() + CommonConst.SPLITOR + String.valueOf(travelId));
+                }
+                provinceService.updateByPrimaryKey(provinceBean);
+            }else if(continentBean != null){
+                continentBean.setCount(continentBean.getCount() + CommonConst.ONE_INT);
+                String str = continentBean.getTraveid();
+                if(str == null || "".equals(str)){
+                    continentBean.setTraveid(String.valueOf(travelId));
+                }else {
+                    continentBean.setTraveid(continentBean.getTraveid() + CommonConst.SPLITOR + String.valueOf(travelId));
+                }
+                continentService.updateByPrimaryKey(continentBean);
+            }
 
             return addarticle(request, map);
         }catch (Exception e){
@@ -652,5 +694,67 @@ public class operative {
         return type(request, map);
     }
 
+    @RequestMapping("/operative/promo")
+    public String promo(HttpServletRequest request, Map<String, Object> map){
+        List<PromoBean> list = promoService.selectAll();
+        List<PromoReturnBean> returnBeans = new ArrayList<>();
+        for (PromoBean p :list){
+           // System.out.println();
+            PromoReturnBean promoReturnBean = new PromoReturnBean();
+            promoReturnBean.setId(p.getId());
+            promoReturnBean.setTitle1(p.getTitle1());
+            promoReturnBean.setTitle2(p.getTitle2());
+            String orId = p.getOrders();
+            List<OrdersBean> listorder = new ArrayList<>();
+            if(orId != null || !"".equals(orId)) {
+                String[] ordersId = orId.split(CommonConst.SPLITOR);
+                for(String str : ordersId){
+                    OrdersBean o = ordersService.selectByPrimaryKey(Integer.parseInt(str));
+                    if(o!=null)
+                        listorder.add(o);
+                }
+            }
+            promoReturnBean.setOrders(listorder);
+            returnBeans.add(promoReturnBean);
+        }
+        map.put("promo", returnBeans);
 
+        return  "/operative/promo";
+    }
+
+    @RequestMapping("/operative/delpromo")
+    public String delpromo(HttpServletRequest request, Map<String, Object> map){
+        String id = request.getParameter("id");
+        promoService.deleteByPrimaryKey(Integer.parseInt(id));
+
+        return  promo(request, map);
+    }
+
+    @RequestMapping("/operative/addpromoshow")
+    public String addpromoshow(HttpServletRequest request, Map<String, Object> map){
+
+        return  "/operative/addpromo";
+    }
+
+    @RequestMapping("/operative/addpromo")
+    public String addpromo(HttpServletRequest request, Map<String, Object> map){
+        String title1 = request.getParameter("title1");
+        String title2 = request.getParameter("title2");
+        String[] orders = request.getParameter("orders").split(",");
+        PromoBean promoBean = new PromoBean();
+        promoBean.setTitle1(title1);
+        promoBean.setTitle2(title2);
+        StringBuffer sb = new StringBuffer();
+        boolean flag = true;
+        for(String order : orders){
+            if(flag == false){
+                sb.append(CommonConst.SPLITOR);
+            }
+            sb.append(order);
+            flag = false;
+        }
+        promoBean.setOrders(sb.toString());
+        promoService.insertSelective(promoBean);
+        return addpromoshow(request, map);
+    }
 }

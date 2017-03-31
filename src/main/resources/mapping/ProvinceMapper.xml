@@ -6,14 +6,21 @@
         <result column="provinceID" property="provinceid" jdbcType="VARCHAR" />
         <result column="province" property="province" jdbcType="VARCHAR" />
         <result column="count" property="count" jdbcType="INTEGER" />
+        <result column="travelid" property="travelid" jdbcType="LONGVARCHAR" />
     </resultMap>
     <sql id="Base_Column_List" >
-        id, provinceID, province, count
+        id, provinceID, province, count, travelid
     </sql>
     <select id="selectAll" resultMap="BaseResultMap">
         select
         <include refid="Base_Column_List"/>
         from province
+    </select>
+    <select id="selectByname" resultMap="BaseResultMap" parameterType="java.lang.String" >
+        select
+        <include refid="Base_Column_List" />
+        from province
+        where province = #{province,jdbcType=VARCHAR}
     </select>
     <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
         select
@@ -27,9 +34,9 @@
     </delete>
     <insert id="insert" parameterType="com.fk.bean.ProvinceBean" >
         insert into province (id, provinceID, province,
-        count)
+        count,travelid)
         values (#{id,jdbcType=INTEGER}, #{provinceid,jdbcType=VARCHAR}, #{province,jdbcType=VARCHAR},
-        #{count,jdbcType=INTEGER})
+        #{count,jdbcType=INTEGER}),#{travelid,jdbcType=LONGVARCHAR})
     </insert>
     <insert id="insertSelective" parameterType="com.fk.bean.ProvinceBean" >
         insert into province
@@ -46,6 +53,9 @@
             <if test="count != null" >
                 count,
             </if>
+            <if test="travelid != null" >
+                travelid,
+            </if>
         </trim>
         <trim prefix="values (" suffix=")" suffixOverrides="," >
             <if test="id != null" >
@@ -59,6 +69,9 @@
             </if>
             <if test="count != null" >
                 #{count,jdbcType=INTEGER},
+            </if>
+            <if test="travelid != null" >
+                #{travelid,jdbcType=LONGVARCHAR},
             </if>
         </trim>
     </insert>
@@ -74,6 +87,9 @@
             <if test="count != null" >
                 count = #{count,jdbcType=INTEGER},
             </if>
+            <if test="travelid != null" >
+                travelid = #{travelid,jdbcType=LONGVARCHAR},
+            </if>
         </set>
         where id = #{id,jdbcType=INTEGER}
     </update>
@@ -81,7 +97,8 @@
     update province
     set provinceID = #{provinceid,jdbcType=VARCHAR},
       province = #{province,jdbcType=VARCHAR},
-      count = #{count,jdbcType=INTEGER}
+      count = #{count,jdbcType=INTEGER},
+      travelid = #{travelid,jdbcType=LONGVARCHAR}
     where id = #{id,jdbcType=INTEGER}
   </update>
 </mapper>

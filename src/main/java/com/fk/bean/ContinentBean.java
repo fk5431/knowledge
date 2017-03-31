@@ -7,6 +7,8 @@ public class ContinentBean {
 
     private Integer count;
 
+    private String traveid;
+
     public Integer getId() {
         return id;
     }
@@ -29,5 +31,13 @@ public class ContinentBean {
 
     public void setCount(Integer count) {
         this.count = count;
+    }
+
+    public String getTraveid() {
+        return traveid;
+    }
+
+    public void setTraveid(String traveid) {
+        this.traveid = traveid;
     }
 }

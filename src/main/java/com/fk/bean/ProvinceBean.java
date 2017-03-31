@@ -9,6 +9,8 @@ public class ProvinceBean {
 
     private Integer count;
 
+    private String travelid;
+
     public Integer getId() {
         return id;
     }
@@ -40,4 +42,14 @@ public class ProvinceBean {
     public void setCount(Integer count) {
         this.count = count;
     }
+
+    public String getTravelid() {
+        return travelid;
+    }
+
+    public void setTravelid(String travelid) {
+        this.travelid = travelid;
+    }
 }
+
+

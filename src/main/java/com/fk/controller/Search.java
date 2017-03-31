@@ -53,18 +53,6 @@ public class Search {
         if(Login.islogin(request)){
             map.put(CommonConst.LOGIN, CommonConst.YES);
         }
-        if(CommonConst.TRAVEL.equals(indexsearch)){
-            return searchTravel(request, map, key);
-        }else if(CommonConst.SHOP.equals(indexsearch)){
-            return searchShop(request, map, key);
-        }else {
-            return searchAll(request, map, key);
-        }
-
-    }
-
-    private String searchAll(HttpServletRequest request, Map<String, Object> map, String key) {
-        map.put("index", 0);
         List<ProvinceBean> provinceBeanList = provinceService.selectAll();
         map.put("province", provinceBeanList);
 
@@ -73,6 +61,146 @@ public class Search {
 
         List<TypeBean> typeBeans = typeService.selectAll();
         map.put("type", typeBeans);
+        if(CommonConst.TRAVEL.equals(indexsearch)){
+            return searchTravel(request, map, key);
+        }else if(CommonConst.SHOP.equals(indexsearch)){
+            return searchShop(request, map, key);
+        }else if("pro".equals(indexsearch)){
+            return pro(request, map, key);
+        }else if("con".equals(indexsearch)){
+            return con(request, map, key);
+        }else if("type".equals(indexsearch)){
+            return type(request, map, key);
+        }else {
+            return searchAll(request, map, key);
+        }
+
+    }
+
+    private String type(HttpServletRequest request, Map<String, Object> map, String key) {
+        map.put("index", CommonConst.THREE_INT);
+
+        List<TravelBean> travelList = travelService.selectByType(key);
+
+        int count = travelList.size();
+        int page = 1;
+        if(count % SIZE == 0)
+            page = count / SIZE;
+        else
+            page = count / SIZE + CommonConst.ONE_INT;
+        map.put("count", count);
+        map.put("size", SIZE);
+        map.put("page", page);
+        String page_ = request.getParameter("page");
+        int toPage;
+        if(page_ == null || "".equals(page_)){
+            toPage = 1;
+        }else {
+            toPage = Integer.parseInt(page_);
+        }
+        if(toPage > page){
+            toPage = page;
+        }
+        map.put("pageNow", toPage);
+        if(toPage == 0)
+            toPage = 1;
+        int start = (toPage - 1) * SIZE;
+        map.put("travel", travelList.subList(start, travelList.size()<start +SIZE?travelList.size():start+SIZE));
+
+        return "search";
+
+    }
+
+    private String con(HttpServletRequest request, Map<String, Object> map, String key) {
+        map.put("index", CommonConst.THREE_INT);
+
+        List<TravelBean> travelList = new ArrayList<>();
+
+        ContinentBean continentBean = continentService.selectByPrimaryKey(Integer.parseInt(key));
+        String[] strings = continentBean.getTraveid().split(CommonConst.SPLITOR);
+        for(String s : strings){
+            if(s!=null && !"".equals(s)) {
+                TravelBean travelBean = travelService.selectByPrimaryKey(Integer.parseInt(s));
+                if (s != null) {
+                    travelList.add(travelBean);
+                }
+            }
+        }
+
+        int count = travelList.size();
+        int page = 1;
+        if(count % SIZE == 0)
+            page = count / SIZE;
+        else
+            page = count / SIZE + CommonConst.ONE_INT;
+        map.put("count", count);
+        map.put("size", SIZE);
+        map.put("page", page);
+        String page_ = request.getParameter("page");
+        int toPage;
+        if(page_ == null || "".equals(page_)){
+            toPage = 1;
+        }else {
+            toPage = Integer.parseInt(page_);
+        }
+        if(toPage > page){
+            toPage = page;
+        }
+        map.put("pageNow", toPage);
+        if(toPage == 0)
+            toPage = 1;
+        int start = (toPage - 1) * SIZE;
+        map.put("travel", travelList.subList(start, travelList.size()<start +SIZE?travelList.size():start+SIZE));
+
+        return "search";
+    }
+
+    private String pro(HttpServletRequest request, Map<String, Object> map, String key) {
+        map.put("index", CommonConst.THREE_INT);
+
+        List<TravelBean> travelList = new ArrayList<>();
+
+        ProvinceBean provinceBean = provinceService.selectByPrimaryKey(Integer.parseInt(key));
+        String[] strings = provinceBean.getTravelid().split(CommonConst.SPLITOR);
+        for(String s : strings){
+            if(s!=null && !"".equals(s)) {
+                TravelBean travelBean = travelService.selectByPrimaryKey(Integer.parseInt(s));
+                if (s != null) {
+                    travelList.add(travelBean);
+                }
+            }
+        }
+
+        int count = travelList.size();
+        int page = 1;
+        if(count % SIZE == 0)
+            page = count / SIZE;
+        else
+            page = count / SIZE + CommonConst.ONE_INT;
+        map.put("count", count);
+        map.put("size", SIZE);
+        map.put("page", page);
+        String page_ = request.getParameter("page");
+        int toPage;
+        if(page_ == null || "".equals(page_)){
+            toPage = 1;
+        }else {
+            toPage = Integer.parseInt(page_);
+        }
+        if(toPage > page){
+            toPage = page;
+        }
+        map.put("pageNow", toPage);
+        if(toPage == 0)
+            toPage = 1;
+        int start = (toPage - 1) * SIZE;
+        map.put("travel", travelList.subList(start, travelList.size()<start +SIZE?travelList.size():start+SIZE));
+
+        return "search";
+    }
+
+    private String searchAll(HttpServletRequest request, Map<String, Object> map, String key) {
+        map.put("index", 0);
 
         List<OrdersBean> ordersBeans = iOrdersService.selectByPlace(key);
         List<TravelBean> travelList = travelService.selectByPlace(key);
@@ -131,14 +259,6 @@ public class Search {
     private String searchShop(HttpServletRequest request, Map<String, Object> map, String key) {
         map.put("index", CommonConst.FOUR_INT);
 
-        List<ProvinceBean> provinceBeanList = provinceService.selectAll();
-        map.put("province", provinceBeanList);
-
-        List<ContinentBean> continentBeanList = continentService.selectAll();
-        map.put("continent",continentBeanList);
-
-        List<TypeBean> typeBeans = typeService.selectAll();
-        map.put("type", typeBeans);
 
 
         List<OrdersBean> ordersBeans = iOrdersService.selectByPlace(key);
@@ -173,14 +293,6 @@ public class Search {
 
     private String searchTravel(HttpServletRequest request, Map<String, Object> map, String key) {
         map.put("index", CommonConst.THREE_INT);
-        List<ProvinceBean> provinceBeanList = provinceService.selectAll();
-        map.put("province", provinceBeanList);
-        List<ContinentBean> continentBeanList = continentService.selectAll();
-        map.put("continent",continentBeanList);
-        List<TypeBean> typeBeans = typeService.selectAll();
-        map.put("type", typeBeans);
-
-
         List<TravelBean> travelList = travelService.selectByPlace(key);
 
         int count = travelList.size();

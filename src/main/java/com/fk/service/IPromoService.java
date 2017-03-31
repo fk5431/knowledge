@@ -11,4 +11,6 @@ import java.util.List;
 public interface IPromoService {
     PromoBean selectByPrimaryKey(Integer id);
     List<PromoBean> selectAll();
+    int deleteByPrimaryKey(Integer id);
+    int insertSelective(PromoBean record);
 }

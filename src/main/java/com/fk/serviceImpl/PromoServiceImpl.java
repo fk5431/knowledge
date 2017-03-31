@@ -29,4 +29,14 @@ public class PromoServiceImpl implements IPromoService {
     public List<PromoBean> selectAll() {
         return promoDao.selectAll();
     }
+
+    @Override
+    public int deleteByPrimaryKey(Integer id) {
+        return promoDao.deleteByPrimaryKey(id);
+    }
+
+    @Override
+    public int insertSelective(PromoBean record) {
+        return promoDao.insertSelective(record);
+    }
 }

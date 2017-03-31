@@ -19,4 +19,5 @@ public interface ProvinceDao {
 
     List<ProvinceBean> selectAll();
 
+    ProvinceBean selectByname(String province);
 }

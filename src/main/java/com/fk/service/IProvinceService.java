@@ -11,4 +11,8 @@ import java.util.List;
 public interface IProvinceService {
 
     List<ProvinceBean> selectAll();
+
+    ProvinceBean selectByname(String province);
+    int updateByPrimaryKey(ProvinceBean record);
+    ProvinceBean selectByPrimaryKey(Integer id);
 }

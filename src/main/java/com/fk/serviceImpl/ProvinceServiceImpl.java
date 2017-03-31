@@ -23,4 +23,19 @@ public class ProvinceServiceImpl implements IProvinceService {
     public List<ProvinceBean> selectAll() {
         return provinceDao.selectAll();
     }
+
+    @Override
+    public ProvinceBean selectByname(String province) {
+        return provinceDao.selectByname(province);
+    }
+
+    @Override
+    public int updateByPrimaryKey(ProvinceBean record) {
+        return provinceDao.updateByPrimaryKey(record);
+    }
+
+    @Override
+    public ProvinceBean selectByPrimaryKey(Integer id) {
+        return provinceDao.selectByPrimaryKey(id);
+    }
 }

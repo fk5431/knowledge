@@ -5,17 +5,24 @@
     <id column="id" property="id" jdbcType="INTEGER" />
     <result column="continent" property="continent" jdbcType="VARCHAR" />
     <result column="count" property="count" jdbcType="INTEGER" />
+    <result column="traveId" property="traveid" jdbcType="LONGVARCHAR" />
   </resultMap>
   <sql id="Base_Column_List" >
-    id, continent, count
+    id, continent, count, traveId
   </sql>
   <select id="selectAll" resultMap="BaseResultMap">
     SELECT
     <include refid="Base_Column_List"/>
     from continent
   </select>
-  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+  <select id="selectByName" resultMap="BaseResultMap" parameterType="java.lang.String" >
     select 
+    <include refid="Base_Column_List" />
+    from continent
+    where continent = #{continent,jdbcType=INTEGER}
+  </select>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select
     <include refid="Base_Column_List" />
     from continent
     where id = #{id,jdbcType=INTEGER}
@@ -25,10 +32,10 @@
     where id = #{id,jdbcType=INTEGER}
   </delete>
   <insert id="insert" parameterType="com.fk.bean.ContinentBean" >
-    insert into continent (id, continent, count
+    insert into continent (id, continent, count,traveid
       )
-    values (#{id,jdbcType=INTEGER}, #{continent,jdbcType=VARCHAR}, #{count,jdbcType=INTEGER}
-      )
+    values (#{id,jdbcType=INTEGER}, #{continent,jdbcType=VARCHAR}, #{count,jdbcType=INTEGER},
+      #{traveid,jdbcType=LONGVARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="com.fk.bean.ContinentBean" >
     insert into continent
@@ -42,6 +49,9 @@
       <if test="count != null" >
         count,
       </if>
+      <if test="traveid != null" >
+        traveId,
+      </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides="," >
       <if test="id != null" >
@@ -52,6 +62,9 @@
       </if>
       <if test="count != null" >
         #{count,jdbcType=INTEGER},
+      </if>
+      <if test="traveid != null" >
+        #{traveid,jdbcType=LONGVARCHAR},
       </if>
     </trim>
   </insert>
@@ -64,13 +77,17 @@
       <if test="count != null" >
         count = #{count,jdbcType=INTEGER},
       </if>
+      <if test="traveid != null" >
+        traveId = #{traveid,jdbcType=LONGVARCHAR},
+      </if>
     </set>
     where id = #{id,jdbcType=INTEGER}
   </update>
   <update id="updateByPrimaryKey" parameterType="com.fk.bean.ContinentBean" >
     update continent
     set continent = #{continent,jdbcType=VARCHAR},
-      count = #{count,jdbcType=INTEGER}
+      count = #{count,jdbcType=INTEGER},
+          traveId = #{traveid,jdbcType=LONGVARCHAR}
     where id = #{id,jdbcType=INTEGER}
   </update>
 </mapper>

@@ -24,4 +24,19 @@ public class ContinentServiceImpl implements IContinentService {
     public List<ContinentBean> selectAll() {
         return continentDao.selectAll();
     }
+
+    @Override
+    public ContinentBean selectByName(String continent) {
+        return continentDao.selectByName(continent);
+    }
+
+    @Override
+    public int updateByPrimaryKey(ContinentBean record) {
+        return continentDao.updateByPrimaryKey(record);
+    }
+
+    @Override
+    public ContinentBean selectByPrimaryKey(Integer id) {
+        return continentDao.selectByPrimaryKey(id);
+    }
 }

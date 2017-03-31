@@ -25,4 +25,5 @@ public interface ITravelService {
 
     int deleteByPrimaryKey(Integer id);
     int insertSelective(TravelBean record);
+    List<TravelBean> selectByType(String type);
 }

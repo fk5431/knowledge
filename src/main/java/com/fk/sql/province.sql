@@ -39,3 +39,4 @@ INSERT INTO province VALUES (31,'650000','新疆维吾尔自治区', 0);
 INSERT INTO province VALUES (32,'710000','台湾省', 0);
 INSERT INTO province VALUES (33,'810000','香港特别行政区', 0);
 INSERT INTO province VALUES (34,'820000','澳门特别行政区', 0);
+alter table province add column travelid text not null;

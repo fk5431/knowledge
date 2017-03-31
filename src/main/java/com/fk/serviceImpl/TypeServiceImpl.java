@@ -34,4 +34,9 @@ public class TypeServiceImpl implements ITypeService {
     public TypeBean selectByTypeName(String typename) {
         return typeDao.selectByTypeName(typename);
     }
+
+    @Override
+    public TypeBean selectByPrimaryKey(Integer id) {
+        return typeDao.selectByPrimaryKey(id);
+    }
 }

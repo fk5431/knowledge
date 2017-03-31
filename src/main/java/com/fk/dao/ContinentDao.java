@@ -18,4 +18,6 @@ public interface ContinentDao {
     int updateByPrimaryKey(ContinentBean record);
 
     List<ContinentBean> selectAll();
+
+    ContinentBean selectByName(String continent);
 }

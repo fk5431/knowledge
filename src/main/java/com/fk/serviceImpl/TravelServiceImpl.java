@@ -65,4 +65,9 @@ public class TravelServiceImpl implements ITravelService {
     public int insertSelective(TravelBean record) {
         return travelDao.insertSelective(record);
     }
+
+    @Override
+    public List<TravelBean> selectByType(String type) {
+        return travelDao.selectByType(type);
+    }
 }

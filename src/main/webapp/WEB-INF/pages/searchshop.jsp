@@ -162,7 +162,7 @@
                                     List<TypeBean> type = (List) request.getAttribute("type");
                                     for (int i = 0; i <list.size(); i++) {
                                 %>
-                                <li><a href="${pageContext.request.contextPath}/search?indexsearch=shop&key=<%=list.get(i).getProvince()%>"><%=list.get(i).getProvince()%></a></li>
+                                <li><a href="${pageContext.request.contextPath}/search?indexsearch=pro&key=<%=list.get(i).getId()%>"><%=list.get(i).getProvince()%>(<%=list.get(i).getCount()%>)</a></li>
                                 <% }%>
                             </ul>
                         </div>
@@ -176,7 +176,7 @@
                                 <%
                                     for (int i = 0; i <list1.size(); i++) {
                                 %>
-                                <li><a href="${pageContext.request.contextPath}/search?indexsearch=shop&key=<%=list1.get(i).getContinent()%>"><%=list1.get(i).getContinent()%></a></li>
+                                <li><a href="${pageContext.request.contextPath}/search?indexsearch=con&key=<%=list1.get(i).getId()%>"><%=list1.get(i).getContinent()%>(<%=list1.get(i).getCount()%>)</a></li>
 
                                 <% } %>
                             </ul>
@@ -191,7 +191,7 @@
                                 <%
                                     for (int i = 0; i <type.size(); i++) {
                                 %>
-                                <li><a href="${pageContext.request.contextPath}/search?indexsearch=type&key=<%=type.get(i).getType()%>"><%=type.get(i).getType()%>(<%=type.get(i).getCount()%>)</a></li>
+                                <li><a href="${pageContext.request.contextPath}/search?indexsearch=type&key=<%=type.get(i).getId()%>"><%=type.get(i).getType()%>(<%=type.get(i).getCount()%>)</a></li>
                                <%}%>
                             </ul>
                         </div>
@@ -201,50 +201,48 @@
             <div class="rank">
                 <ul>
                     <li class="gl_list">
-                        <a href="#" title="普吉岛" target="_blank">
-                            <img src="http://c3-q.mafengwo.net/s8/M00/EB/98/wKgBpVWRB9WANAydAA7GxP1ONjg27.jpeg?imageMogr2%2Fthumbnail%2F%21130x184r%2Fgravity%2FCenter%2Fcrop%2F%21130x184%2Fquality%2F90" alt="普吉岛">
+                        <a href="${pageContext.request.contextPath}/searchtravelplace?place=普吉岛" title="普吉岛" target="_blank">
+                            <img src="${pageContext.request.contextPath}/images/ttt.jpeg" alt="普吉岛">
                         </a>
-                        <p class="time">更新日期:2015-06-29</p>
                         <div class="down_cout">
                             <span></span>
-                            <p>3101458人下载</p>
                         </div>
                     </li>
                     <li>
                         <span class="num">2</span>
-                        <a href="#" title="日本" target="_blank">日本</a>
+                        <a href="${pageContext.request.contextPath}/searchtravelplace?place=日本" title="日本" target="_blank">日本</a>
                     </li>
                     <li>
                         <span class="num">3</span>
-                        <a href="#" title="泰国" target="_blank">泰国</a>
+                        <a href="${pageContext.request.contextPath}/searchtravelplace?place=泰国" title="泰国" target="_blank">泰国</a>
                     </li>
                     <li>
                         <span class="num">4</span>
-                        <a href="#" title="京都" target="_blank">京都</a>
+                        <a href="${pageContext.request.contextPath}/searchtravelplace?place=京都" title="京都" target="_blank">京都</a>
                     </li>
                     <li>
                         <span class="num">5</span>
-                        <a href="#" title="成都" target="_blank">成都</a>
+                        <a href="${pageContext.request.contextPath}/searchtravelplace?place=成都" title="成都" target="_blank">成都</a>
                     </li>
                     <li>
                         <span class="num">6</span>
-                        <a href="#" title="东京" target="_blank">东京</a>
+                        <a href="${pageContext.request.contextPath}/searchtravelplace?place=东京" title="东京" target="_blank">东京</a>
                     </li>
                     <li>
                         <span class="num">7</span>
-                        <a href="#" title="大阪" target="_blank">大阪</a>
+                        <a href="${pageContext.request.contextPath}/searchtravelplace?place=大阪" title="大阪" target="_blank">大阪</a>
                     </li>
                     <li>
                         <span class="num">8</span>
-                        <a href="#" title="厦门" target="_blank">厦门</a>
+                        <a href="${pageContext.request.contextPath}/searchtravelplace?place=厦门" title="厦门" target="_blank">厦门</a>
                     </li>
                     <li>
                         <span class="num">9</span>
-                        <a href="#" title="曼谷" target="_blank">曼谷</a>
+                        <a href="${pageContext.request.contextPath}/searchtravelplace?place=曼谷" title="曼谷" target="_blank">曼谷</a>
                     </li>
                     <li>
                         <span class="num">10</span>
-                        <a href="#" title="大理" target="_blank">大理</a>
+                        <a href="${pageContext.request.contextPath}/searchtravelplace?place=大理" title="大理" target="_blank">大理</a>
                     </li>
                 </ul>
             </div>
@@ -527,6 +525,14 @@
 
 <script>
     var state = ${index};
+    if (state == 0) {
+        document.getElementById('head_1').className = 'head-nav-index';
+        document.getElementById('head_2').className = 'head-nav-place';
+        document.getElementById('head_3').className = 'head-nav-gonglve';
+        document.getElementById('_j_nav_sales').className = 'head-nav-place ';
+        document.getElementById('head_4').className = 'head-nav-hotel';
+        document.getElementById('_j_nav_community').className = 'head-nav-place';
+    }
     if (state == 1) {
         document.getElementById('head_1').className = 'head-nav-index head-nav-active';
         document.getElementById('head_2').className = 'head-nav-place';

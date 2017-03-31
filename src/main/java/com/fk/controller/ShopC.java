@@ -101,9 +101,6 @@ public class ShopC {
                     OrdersBean o = ordersService.selectByPrimaryKey(Integer.parseInt(str));
                     if(o!=null){
                         listorder.add(o);
-//                        listorder.add(o);
-//                        listorder.add(o);
-//                        listorder.add(o);
                     }
                 }
             }
