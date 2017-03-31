@@ -13,6 +13,7 @@ import com.fk.serviceImpl.ContinentServiceImpl;
 import com.fk.serviceImpl.ProvinceServiceImpl;
 import com.fk.serviceImpl.TravelServiceImpl;
 import com.fk.util.CommonConst;
+import com.fk.util.Login;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -88,7 +89,9 @@ public class ContentC {
             }
         }
         map.put("travel", travelList);
-
+        if(Login.islogin(request)){
+            map.put(CommonConst.LOGIN, CommonConst.YES);
+        }
         return "content";
     }
 
@@ -100,6 +103,9 @@ public class ContentC {
         travelBean.setLookcount(travelBean.getLookcount() + CommonConst.ONE_INT);
         travelService.updateByPrimaryKey(travelBean);
         map.put("travel", travelBean);
+        if(Login.islogin(request)){
+            map.put(CommonConst.LOGIN, CommonConst.YES);
+        }
         return "context";
     }
 
@@ -111,6 +117,7 @@ public class ContentC {
             travelBean.setCount(travelBean.getCount() + CommonConst.ONE_INT);
             travelService.updateByPrimaryKey(travelBean);
         }
+
         return article(request, map);
     }
 

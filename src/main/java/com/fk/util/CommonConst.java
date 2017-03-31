@@ -27,6 +27,10 @@ public class CommonConst {
     public static final String SENDER = "冯凯";
     public static final String TRAVEL = "travel";
     public static final String SHOP = "shop";
+    public static final String LOGIN = "login";
+    public static final String YES = "yes";
+    public static final String NO = "no";
+    public static final String USERID = "userId";
 
 
 }

@@ -60,14 +60,23 @@
             </ul>
             <div id="pagelet-block-abb1ca45f330cf8a24ad20466d690c67" class="pagelet-block">
                 <div class="login-out">
+                    <% String login = (String)request.getAttribute("login");
+                        if(login == null || "".equals(login) || !"yes".equals(login)){ %>
                     <a id="_j_showlogin" title="登录" href="${pageContext.request.contextPath}/login"
                        rel="nofollow">登录</a>
                     <span class="split">|</span>
-                    <a href="${pageContext.request.contextPath}/login" title="注册帐号"
+                    <a href="${pageContext.request.contextPath}/register" title="注册帐号"
                        rel="nofollow">注册</a>
                     <span class="split">|</span>
                     <a href="${pageContext.request.contextPath}/forget" title="找回密码"
                        rel="nofollow">找回密码</a>
+                    <%}else{%>
+                    <a id="_j_showlogin" title="我的" href="${pageContext.request.contextPath}/my"
+                       rel="nofollow">我的</a>
+                    <span class="split">|</span>
+                    <a href="${pageContext.request.contextPath}/logout" title="注册帐号"
+                       rel="nofollow">登出</a>
+                    <%}%>
                 </div>
             </div>
         </div>
@@ -92,7 +101,7 @@
 
 
                     <div class="feed-item _j_feed_item">
-                        <a href="${pageContext.request.contextPath}/article?id=<%=travel.get(i).getId()%>">
+                        <a href="${pageContext.request.contextPath}/shop?id=<%=travel.get(i).getId()%>" >
                             <div class="bar clearfix">
                                 <span class="stat"><span class="num"><%=travel.get(i).getSellcount()%></span> 穷游客买过<i class="icon-hand"></i></span>
                             </div>

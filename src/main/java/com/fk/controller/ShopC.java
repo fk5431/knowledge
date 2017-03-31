@@ -3,6 +3,7 @@ package com.fk.controller;
 import com.fk.bean.*;
 import com.fk.service.*;
 import com.fk.util.CommonConst;
+import com.fk.util.Login;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -75,6 +76,9 @@ public class ShopC {
 
         ordersBean.setCount(ordersBean.getCount() + CommonConst.ONE_INT);
         ordersService.updateByPrimaryKey(ordersBean);
+        if(Login.islogin(request)){
+            map.put(CommonConst.LOGIN, CommonConst.YES);
+        }
         return "shop";
     }
 
@@ -119,7 +123,9 @@ public class ShopC {
             }
         }
         map.put("shopshow", ordersBeans);
-
+        if(Login.islogin(request)){
+            map.put(CommonConst.LOGIN, CommonConst.YES);
+        }
         return "sales";
     }
 

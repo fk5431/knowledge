@@ -4,6 +4,7 @@ import com.fk.bean.*;
 import com.fk.dao.IndexshowshopDao;
 import com.fk.service.*;
 import com.fk.util.CommonConst;
+import com.fk.util.Login;
 import com.fk.util.MD5;
 import com.fk.util.SendMail;
 import org.slf4j.Logger;
@@ -13,7 +14,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.util.*;
 
 /**
@@ -103,12 +106,14 @@ public class LoginC {
         }else{
         }
         map.put("travelList", travelList);
-
+        if(Login.islogin(request)){
+            map.put(CommonConst.LOGIN, CommonConst.YES);
+        }
         return "index";
     }
 
     @RequestMapping("/index")
-    public String index_(HttpServletRequest request,  Map<String, Object> map){
+    public String index_(HttpServletRequest request, Map<String, Object> map){
         return index(request, map);
     }
     @RequestMapping(value = "/login")
@@ -117,9 +122,13 @@ public class LoginC {
 
         return "login";
     }
+    @RequestMapping(value = "/register")
+    public String regist(HttpServletRequest request, Map<String, Object> map){
+        return "login";
+    }
 
     @RequestMapping(value = "/loginUser", method = RequestMethod.POST)
-    public String loginUser(HttpServletRequest request, Map<String, Object> map){
+    public String loginUser(HttpServletRequest request, HttpServletResponse response, Map<String, Object> map){
         String email = request.getParameter("email");
         String password = request.getParameter("password");
         logger.debug("LoginC.loginUser  in email[{}], password[{}].", email, password);
@@ -134,6 +143,28 @@ public class LoginC {
             return "error";
         }
 
+        Cookie[] cookies = request.getCookies();
+        for(Cookie c : cookies){
+            if(CommonConst.LOGIN.equals(c.getName())){
+                if(CommonConst.YES.equals(c.getValue()))
+                    return index(request, map);
+            }
+        }
+        Cookie cookie = new Cookie(CommonConst.LOGIN, CommonConst.YES);
+        Cookie cookie1 = new Cookie(CommonConst.USERID, String.valueOf(exists.getId()));
+        cookie.setMaxAge(-1);
+        response.addCookie(cookie);
+        response.addCookie(cookie1);
+        map.put(CommonConst.LOGIN, CommonConst.YES);
+        return index_(request, map);
+    }
+
+    @RequestMapping("/logout")
+    public String logout(HttpServletRequest request, HttpServletResponse response, Map<String, Object> map){
+        //Cookie[] cookies = request.getCookies();
+        Cookie cookie = new Cookie(CommonConst.LOGIN, CommonConst.NO);
+        response.addCookie(cookie);
+        map.put(CommonConst.LOGIN, CommonConst.NO);
         return index_(request, map);
     }
 

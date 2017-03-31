@@ -3,6 +3,7 @@ package com.fk.controller;
 import com.fk.bean.*;
 import com.fk.service.*;
 import com.fk.util.CommonConst;
+import com.fk.util.Login;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -49,6 +50,9 @@ public class Search {
         String key = request.getParameter("key");
         map.put("indexsearch", indexsearch);
         map.put("key", key);
+        if(Login.islogin(request)){
+            map.put(CommonConst.LOGIN, CommonConst.YES);
+        }
         if(CommonConst.TRAVEL.equals(indexsearch)){
             return searchTravel(request, map, key);
         }else if(CommonConst.SHOP.equals(indexsearch)){
@@ -67,7 +71,9 @@ public class Search {
         IndexShowBean indexShowBean = indexShowService.selectByPrimaryKey(CommonConst.SIX_INT);
         TravelBean travelBean = travelService.selectByPrimaryKey(indexShowBean.getMid());
         map.put("travel", travelBean);
-
+        if(Login.islogin(request)){
+            map.put(CommonConst.LOGIN, CommonConst.YES);
+        }
         return "mdd";
     }
 
