@@ -179,9 +179,13 @@ public class Operative {
     @RequestMapping("/operative/delnew")
     public String delnew(HttpServletRequest request, Map<String , Object> map){
         String id = request.getParameter("id");
-        IndexshowBean indexshowBean = iIndexshowService.selectByPrimaryKey(Integer.parseInt(id));
-        indexshowBean.setMid(-1);
-        iIndexshowService.updateByPrimaryKey(indexshowBean);
+        for(int i=CommonConst.ONE_INT;i<=CommonConst.FOUR_INT;i++){
+            IndexshowBean indexshowBean = iIndexshowService.selectByPrimaryKey(i);
+            if(indexshowBean.getMid() == Integer.parseInt(id)){
+                indexshowBean.setMid(-1);
+                iIndexshowService.updateByPrimaryKey(indexshowBean);
+            }
+        }
         return adv(request, map);
     }
 
