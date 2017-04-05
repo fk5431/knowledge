@@ -757,4 +757,21 @@ public class operative {
         promoService.insertSelective(promoBean);
         return addpromoshow(request, map);
     }
+    @RequestMapping("/operative/login")
+    public String login(HttpServletRequest request, Map<String, Object> map){
+
+        return "/operative/login";
+    }
+    @RequestMapping("/operative/log")
+    public String log(HttpServletRequest request, Map<String, Object> map){
+        String name = request.getParameter("name");
+        String password = request.getParameter("password");
+        if(CommonConst.OUSERNAME.equals(name) && CommonConst.OPASS.equals(password)){
+            return "/operative/index";
+        }else {
+            map.put("errorcode", 3);
+            return "error";
+        }
+
+    }
 }
