@@ -220,8 +220,8 @@ public class LoginC {
         }
     }
 
-    @RequestMapping(value = "forgetPassword", method = RequestMethod.GET)
-    public String forgetPassword(HttpServletRequest request, Map<String, Object> map){
+        @RequestMapping(value = "forgetPassword", method = RequestMethod.GET)
+        public String forgetPassword(HttpServletRequest request, Map<String, Object> map){
         String key_MD5 = request.getParameter("key");
         String key =MD5.decodeMD5(key_MD5);
         String[] str = key.split("@", 2);
@@ -258,6 +258,10 @@ public class LoginC {
 
     @RequestMapping("/count")
     public String addCount(HttpServletRequest request, Map<String, Object> map){
+        if(!Login.islogin(request)){
+            //map.put(CommonConst.LOGIN, CommonConst.YES);
+            return "login";
+        }
         String id = request.getParameter("id");
         if(id!=null) {
             TravelBean travelBean = travelService.selectByPrimaryKey(Integer.parseInt(id));

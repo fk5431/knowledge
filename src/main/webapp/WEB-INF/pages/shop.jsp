@@ -35,11 +35,12 @@
             <div class="head-logo"><a class="mfw-logo" title="大学生穷游网" href="${pageContext.request.contextPath}"></a>
             </div>
             <ul class="head-nav" data-cs-t="headnav" id="_j_head_nav">
-                <li class="head-nav-index head-nav-active" id="head_1"><a href="${pageContext.request.contextPath}/index">首页</a>
+                <li class="head-nav-index head-nav-active" id="head_1"><a
+                        href="${pageContext.request.contextPath}/index">首页</a>
                 </li>
-                <li class="head-nav-place" id="head_2"><a href="${pageContext.request.contextPath}/mdd"  title="目的地">目的地</a>
+                <li class="head-nav-place" id="head_2"><a href="${pageContext.request.contextPath}/mdd" title="目的地">目的地</a>
                 </li>
-                <li class="head-nav-gonglve" id="head_3"><a href="${pageContext.request.contextPath}/content_list"  title="旅游攻略">旅游攻略</a>
+                <li class="head-nav-gonglve" id="head_3"><a href="${pageContext.request.contextPath}/content_list" title="旅游攻略">旅游攻略</a>
                 </li>
                 <li class="head-nav-place" id="_j_nav_sales" >
                     <a href="${pageContext.request.contextPath}/sales"
@@ -47,11 +48,8 @@
                         <span>穷游商城<%--<i class="icon-caret-down"></i>--%></span>
                     </a>
                 </li>
-                <li class="head-nav-place" id="head_4"><a href="${pageContext.request.contextPath}/index"
-                                                          title="论坛">论坛</a>
-                </li>
-                <li class="head-nav-place" id="_j_nav_community">
-                    <a href="${pageContext.request.contextPath}/index" title="留言薄">留言薄</a>
+                <li class="head-nav-place" id="head_4"><a href="${pageContext.request.contextPath}/my"
+                                                          title="个人中心">个人中心</a>
                 </li>
 
             </ul>
@@ -169,12 +167,17 @@
                                 </dt>
                                 <dd>
                                     <ul class="ui-selProp clearfix">
-                                        <li data-stock-id="59794071"data-child-type="2"data-level="0"data-name="6天5晚半自由行"data-role="0"><a href="javascript:void(0);"><span>${order.type}</span><i></i></a></li>
+                                        <li><a href="javascript:void(0);" id="hide"><span>${order.type}</span><i></i></a></li>
                                     </ul>
                                 </dd>
                             </dl>
                         </div>
                     </div>
+                    <script>
+                        $("#hide").click(function(){
+                            $("#hide").css("padding", "0 9px").css("border", "2px solid #ff9d00").css("text-decoration", "none");
+                        });
+                    </script>
                     <!-- 出行日期 -->
                     <dl class="clearfix top-bar" id="top_calendar_block" style="display: none;">
                         <dt class="label">2017年5月</dt>
@@ -201,11 +204,8 @@
                         <span class="total-price-ext"></span>
                         <span class="price-sg-room" style="display: none">(包含<span class="total-price">0</span>元单房差)</span></div>
                     <div class="on-countdown-hide">
-                        <div class="bargain">
-                            <a class="btn btn-disabled" href="javascript:void(0);">优惠购买</a>
-                        </div>
                         <span class="buy">
-                            <a class="btn" data-booking-btn="1" href="javascript:void(0);">立即购买</a>
+                            <a class="btn" href="${pageContext.request.contextPath}/buy?id=${order.id}">立即购买</a>
                         </span>
                     </div>
                 </div>

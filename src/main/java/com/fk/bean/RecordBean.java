@@ -18,6 +18,17 @@ public class RecordBean {
 
     private Integer orderid;
 
+    private String adress;
+    private String email;
+
+    private String wechat;
+
+    private String mob;
+
+    private String other;
+
+    private Integer userid;
+
     public Integer getId() {
         return id;
     }
@@ -73,5 +84,53 @@ public class RecordBean {
 
     public void setOrderid(Integer orderid) {
         this.orderid = orderid;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email == null ? null : email.trim();
+    }
+
+    public String getWechat() {
+        return wechat;
+    }
+
+    public void setWechat(String wechat) {
+        this.wechat = wechat == null ? null : wechat.trim();
+    }
+
+    public String getMob() {
+        return mob;
+    }
+
+    public void setMob(String mob) {
+        this.mob = mob == null ? null : mob.trim();
+    }
+
+    public String getOther() {
+        return other;
+    }
+
+    public void setOther(String other) {
+        this.other = other == null ? null : other.trim();
+    }
+
+    public Integer getUserid() {
+        return userid;
+    }
+
+    public void setUserid(Integer userid) {
+        this.userid = userid;
+    }
+
+    public String getAdress() {
+        return adress;
+    }
+
+    public void setAdress(String adress) {
+        this.adress = adress;
     }
 }

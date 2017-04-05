@@ -5939,77 +5939,7 @@ td,th {
     border-bottom:3px solid #fc9d27;
     color:#ff9d00
 }
-@media(max-width:1440px) {
-    .mfw-header {
-        height:58px
-    }
-    .header-wrap {
-        height:58px
-    }
-    .head-logo {
-        padding:13px 0;
-        height:32px
-    }
-    .head-logo .mfw-logo {
-        height:33px;
-        background:url(/travel/images/header-small-sprites.png) no-repeat 0 0
-    }
-    .login-out {
-        padding:16px 0
-    }
-    .head-nav {
-        line-height:58px;
-        font-size:14px
-    }
-    .head-nav li a:hover,.head-nav .head-nav-hover a {
-        height:55px
-    }
-    .drop-trigger {
-        height:58px
-    }
-    .head-msg {
-        line-height:58px
-    }
-    .head-msg-new {
-        top:11px
-    }
-    .head-user .user-image {
-        margin-top:10px
-    }
-    .drop-trigger .icon-caret-down {
-        top:27px
-    }
-    .head-daka {
-        padding-top:18px
-    }
-    .head-search {
-        height:58px
-    }
-    .head-search-wrapper {
-        padding:14px 0 13px;
-        height:30px
-    }
-    .head-searchform {
-        height:30px
-    }
-    .head-searchform input {
-        height:28px;
-        line-height:28px
-    }
-    .head-search-focus {
-        width:382px
-    }
-    .head-search-focus .head-searchform input {
-        width:360px
-    }
-    .head-search .icon-search {
-        top:5px;
-        right:5px
-    }
-    .head-nav-dropdown {
-        line-height:54px
-    }
-}.head-act-719 {
+ .head-act-719 {
      position:absolute;
      margin:2px 0 0 -60px;
      width:62px;

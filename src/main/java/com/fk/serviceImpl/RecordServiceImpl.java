@@ -31,4 +31,9 @@ public class RecordServiceImpl implements IRecordService {
     public int deleteByForginId(Integer id) {
         return recordDao.deleteByForginId(id);
     }
+
+    @Override
+    public int insertSelective(RecordBean record) {
+        return recordDao.insertSelective(record);
+    }
 }

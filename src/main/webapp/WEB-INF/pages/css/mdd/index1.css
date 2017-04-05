@@ -12,9 +12,7 @@
 .header-place-default .head-nav-dropdown{border-top-color:transparent;color:#fff;}
 
 /* retina css */
-@media (max-width:1440px){
-	.header-place-default .head-logo .mfw-logo{background:url(/images/mdd/place/mfw-logo-white-small.png) no-repeat 0 0;}
-}
+
 @media only screen and (-webkit-min-device-pixel-ratio: 2),only screen and (min-device-pixel-ratio: 2){
 	.header-place-default .head-logo .mfw-logo{background:url(/images/mdd/place/mfw-logo-white@2x.png) no-repeat;background-size:136px;}
 	.place-search-panel .icon-search{background:url(/images/header-sprites3@2x.png) no-repeat 0 -110px;background-size:200px;}

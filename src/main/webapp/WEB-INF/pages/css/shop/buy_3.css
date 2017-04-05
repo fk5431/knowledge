@@ -263,7 +263,7 @@ input {
 .err_area {
     width:622px;
     height:225px;
-    background:url(/travel/images/login/err_bg.jpg) no-repeat;
+    background:url(/images/login/err_bg.jpg) no-repeat;
     padding:160px 0 0 0;
     margin:40px auto 50px
 }
@@ -312,13 +312,13 @@ input {
     width:23px;
     height:23px;
     margin-left:5px;
-    background:url(/travel/images/icon_v.png) no-repeat;
+    background:url(/images/icon_v.png) no-repeat;
     vertical-align:middle
 }
 .icon_v_small {
     width:16px;
     height:15px;
-    background:url(/travel/images/icon_v_small.png) no-repeat;
+    background:url(/images/icon_v_small.png) no-repeat;
     vertical-align:middle
 }
 .block-loading {
@@ -329,7 +329,7 @@ input {
     padding:0;
     left:0;
     z-index:1;
-    background:url(/travel/images/common/loading_big.gif) no-repeat center center;
+    background:url(/images/common/loading_big.gif) no-repeat center center;
     background-color:rgba(255,255,255,0.9);
     background-color:#fff \9;
     filter:alpha(opacity=90)
@@ -354,7 +354,7 @@ input {
     position:absolute;
     width:64px;
     height:64px;
-    background:url(/travel/images/common/pickupGold-icon.png) no-repeat 0 0;
+    background:url(/images/common/pickupGold-icon.png) no-repeat 0 0;
     z-index:100;
     cursor:pointer;
     *background-position:0 -64px
@@ -379,7 +379,7 @@ input {
      }
  }@media only screen and (-webkit-min-device-pixel-ratio:2),only screen and (min-device-pixel-ratio:2) {
     .pickup-gold {
-        background-image:url(/travel/images/common/pickupGold-icon_2x.png);
+        background-image:url(/images/common/pickupGold-icon_2x.png);
         background-size:64px auto
     }
 }.acs_results {
@@ -591,7 +591,7 @@ input {
     width:222px
 }
 .eject_t {
-    background-image:url(/travel/images/plugins/eject.gif);
+    background-image:url(/images/plugins/eject.gif);
     background-position:0 0;
     width:17px;
     height:10px;
@@ -601,7 +601,7 @@ input {
     overflow:hidden
 }
 .eject_b {
-    background-image:url(/travel/images/plugins/eject.gif);
+    background-image:url(/images/plugins/eject.gif);
     background-position:0 -10px;
     width:17px;
     height:10px;
@@ -611,7 +611,7 @@ input {
     overflow:hidden
 }
 .eject_l {
-    background-image:url(/travel/images/plugins/eject.gif);
+    background-image:url(/images/plugins/eject.gif);
     background-position:0 -20px;
     width:10px;
     height:17px;
@@ -621,7 +621,7 @@ input {
     overflow:hidden
 }
 .eject_r {
-    background-image:url(/travel/images/plugins/eject.gif);
+    background-image:url(/images/plugins/eject.gif);
     background-position:0 -37px;
     width:10px;
     height:17px;
@@ -718,7 +718,7 @@ input {
     margin-right:9px;
     width:24px;
     height:24px;
-    background:url(/travel/images/suggest-sprite5.png) no-repeat;
+    background:url(/images/suggest-sprite5.png) no-repeat;
     overflow:hidden
 }
 .search-suggest .ss-list .ss-place {
@@ -755,7 +755,7 @@ input {
     background-position:0 -250px
 }
 .search-suggest .ss-list .ss-horse {
-    background:url(/travel/images/suggest-horse2.png)
+    background:url(/images/suggest-horse2.png)
 }
 .search-suggest .ss-list .ico-new {
     display:inline-block;
@@ -764,7 +764,7 @@ input {
     margin:2px 0 0 6px;
     width:26px;
     height:11px;
-    background:url(/travel/images/header/icon_new3.gif) 0 0 no-repeat;
+    background:url(/images/header/icon_new3.gif) 0 0 no-repeat;
     overflow:hidden
 }
 .search-suggest .ss-list .ss-more {
@@ -838,7 +838,7 @@ input {
     line-height:22px;
     text-align:center;
     padding-top:75px;
-    background:url(/travel/images/common/errface.gif) top center no-repeat
+    background:url(/images/common/errface.gif) top center no-repeat
 }
 .majaxerr a {
     font-size:14px;
@@ -856,7 +856,7 @@ input {
     line-height:22px;
     text-align:center;
     padding-top:75px;
-    background:url(/travel/images/game/box/small_coins.jpg) top center no-repeat
+    background:url(/images/game/box/small_coins.jpg) top center no-repeat
 }
 .majacoin a {
     font-size:14px;
@@ -956,7 +956,7 @@ a.mfwGGCloseBtn {
 .atsb_tit {
     clear:both;
     height:28px;
-    background:url(/travel/images/wengweng/l_bg.png) 3px -45px no-repeat;
+    background:url(/images/wengweng/l_bg.png) 3px -45px no-repeat;
     padding:0 0 0 25px;
     line-height:30px;
     color:#f60;
@@ -991,18 +991,18 @@ a.mfwGGCloseBtn {
     font-size:14px
 }
 #unitippoint {
-    background:url(/travel/images/plugins/TipPoint_fix.png) no-repeat;
+    background:url(/images/plugins/TipPoint_fix.png) no-repeat;
     height:19px;
     overflow:hidden
 }
 #unitipmid {
-    background:url(/travel/images/plugins/TipMid_fix.png) repeat;
+    background:url(/images/plugins/TipMid_fix.png) repeat;
     width:115px;
     height:auto;
     padding:5px 15px
 }
 #unitipcap {
-    background:url(/travel/images/plugins/TipCap_fix.png) no-repeat;
+    background:url(/images/plugins/TipCap_fix.png) no-repeat;
     height:7px;
     overflow:hidden
 }
@@ -1073,7 +1073,7 @@ a.mfwGGCloseBtn {
     height:15px;
     display:block;
     overflow:hidden;
-    background:url(http://file.mafengwo.cn/travel/images/home/tweet/btn_close.gif) no-repeat;
+    background:url(http://file.mafengwo.cn/images/home/tweet/btn_close.gif) no-repeat;
     line-height:100px
 }
 .p_w .c:hover {
@@ -1136,7 +1136,7 @@ a.mfwGGCloseBtn {
     position:absolute;
     bottom:-5px;
     right:-5px;
-    background:url(http://css.mafengwo.net/travel/images/common/fengshou.png) 0 -55px no-repeat
+    background:url(http://css.mafengwo.net/images/common/fengshou.png) 0 -55px no-repeat
 }
 .pop_info {
     width:212px;
@@ -1171,7 +1171,7 @@ a.mfwGGCloseBtn {
 .pop_info a.gender,.pop_info a.boy {
     width:17px;
     height:17px;
-    background:url(/travel/images/post/carte.png) no-repeat 0 0;
+    background:url(/images/post/carte.png) no-repeat 0 0;
     line-height:200px;
     overflow:hidden;
     vertical-align:middle
@@ -1182,7 +1182,7 @@ a.mfwGGCloseBtn {
 .pop_info a.vip {
     width:23px;
     height:9px;
-    background:url(/travel/images/post/carte.png) no-repeat -36px 0;
+    background:url(/images/post/carte.png) no-repeat -36px 0;
     line-height:0
 }
 .card_pop a.att {
@@ -1194,7 +1194,7 @@ a.mfwGGCloseBtn {
 .card_pop a.att i {
     width:8px;
     height:8px;
-    background:url(/travel/images/post/carte.png) no-repeat -60px 0;
+    background:url(/images/post/carte.png) no-repeat -60px 0;
     margin-top:4px
 }
 .card_pop a.comm {
@@ -1206,7 +1206,7 @@ a.mfwGGCloseBtn {
 .card_pop a.comm i {
     width:9px;
     height:9px;
-    background:url(/travel/images/post/carte.png) no-repeat -69px 0;
+    background:url(/images/post/carte.png) no-repeat -69px 0;
     margin-top:4px
 }
 .card_pop dt {
@@ -1257,7 +1257,7 @@ a.mfwGGCloseBtn {
 }
 ._na a.a_btn i {
     height:11px;
-    background:url(/travel/images/post/carte.png) no-repeat 0 -18px;
+    background:url(/images/post/carte.png) no-repeat 0 -18px;
     margin-top:2px
 }
 ._na a.a_btn i.dfbz {
@@ -1272,7 +1272,7 @@ a.mfwGGCloseBtn {
     margin-left:3px;
     width:16px;
     height:16px;
-    background:url(/travel/images/login/connect_ico.gif) no-repeat;
+    background:url(/images/login/connect_ico.gif) no-repeat;
     overflow:hidden;
     vertical-align:-3px;
     *vertical-align:middle
@@ -1332,7 +1332,7 @@ a.mfwGGCloseBtn {
     margin-right:-5px;
     width:34px;
     height:34px;
-    background:url(/travel/images/common/icon34_mfw.gif) no-repeat;
+    background:url(/images/common/icon34_mfw.gif) no-repeat;
     overflow:hidden;
     vertical-align:text-bottom
 }
@@ -1342,7 +1342,7 @@ a.mfwGGCloseBtn {
     font-weight:bold
 }
 .u_pop .u_info .i_unisex {
-    background:url(/travel/images/wengweng/icon_neutral.gif) 0 0 no-repeat
+    background:url(/images/wengweng/icon_neutral.gif) 0 0 no-repeat
 }
 .u_pop .u_info .u_box {
     height:28px
@@ -1393,7 +1393,7 @@ a.mfwGGCloseBtn {
 .u_pop .u_btn .btn1 a {
     width:46px;
     height:20px;
-    background:url(/travel/images/plugins/upop_bg.gif?v=2) 0 0 no-repeat;
+    background:url(/images/plugins/upop_bg.gif?v=2) 0 0 no-repeat;
     padding:0 0 0 19px
 }
 .u_pop .u_btn .btn2 {
@@ -1403,7 +1403,7 @@ a.mfwGGCloseBtn {
 .u_pop .u_btn .btn2 a {
     width:35px;
     height:20px;
-    background:url(/travel/images/plugins/upop_bg.gif?v=2) 0 -30px no-repeat;
+    background:url(/images/plugins/upop_bg.gif?v=2) 0 -30px no-repeat;
     padding:0 0 0 21px
 }
 .u_pop .u_btn .btn3 {
@@ -1413,7 +1413,7 @@ a.mfwGGCloseBtn {
 .u_pop .u_btn .btn3 a {
     width:22px;
     height:20px;
-    background:url(/travel/images/plugins/upop_bg.gif?v=2) 0 -60px no-repeat;
+    background:url(/images/plugins/upop_bg.gif?v=2) 0 -60px no-repeat;
     padding:0 0 0 19px
 }
 .u_pop .u_btn .btn4 {
@@ -1423,7 +1423,7 @@ a.mfwGGCloseBtn {
 .u_pop .u_btn .btn4 a {
     width:24px;
     height:20px;
-    background:url(/travel/images/plugins/upop_bg.gif?v=2) 0 -91px no-repeat;
+    background:url(/images/plugins/upop_bg.gif?v=2) 0 -91px no-repeat;
     padding:0 0 0 24px
 }
 .u_pop .u_btn .btn5 {
@@ -1433,7 +1433,7 @@ a.mfwGGCloseBtn {
 .u_pop .u_btn .btn5 a {
     width:24px;
     height:20px;
-    background:url(/travel/images/plugins/upop_bg.gif?v=2) 0 -120px no-repeat;
+    background:url(/images/plugins/upop_bg.gif?v=2) 0 -120px no-repeat;
     padding:0 0 0 24px
 }
 .u_pop .u_JB {
@@ -1486,7 +1486,7 @@ a.mfwGGCloseBtn {
     margin:1px 5px 1px 0;
     font-size:0;
     line-height:0;
-    background:url(/travel/images/plugins/msg.png) no-repeat 0 -160px;
+    background:url(/images/plugins/msg.png) no-repeat 0 -160px;
     position:absolute;
     left:5px;
     top:3px
@@ -1621,7 +1621,7 @@ a.mfwGGCloseBtn {
     height:72px;
     padding:8px 0 0 78px;
     float:left;
-    background:url(/travel/images/home/pri_bg.gif) no-repeat;
+    background:url(/images/home/pri_bg.gif) no-repeat;
     line-height:1.8em;
     color:#969696
 }
@@ -1707,7 +1707,7 @@ a.mfwGGCloseBtn {
     color:#900
 }
 .star-rating,.star-rating a:hover,.star-rating a:active,.star-rating a:focus,.star-rating .current-rating {
-    background:url(/travel/images/plugins/star.gif) left -1000px repeat-x
+    background:url(/images/plugins/star.gif) left -1000px repeat-x
 }
 .star-rating {
     position:relative;
@@ -1748,7 +1748,7 @@ a.mfwGGCloseBtn {
     height:10px
 }
 .small-star,.small-star a:hover,.small-star a:active,.small-star a:focus,.small-star .current-rating {
-    background-image:url(/travel/images/plugins/star_small.gif);
+    background-image:url(/images/plugins/star_small.gif);
     line-height:10px;
     height:10px
 }
@@ -1771,7 +1771,7 @@ a.mfwGGCloseBtn {
 }
 .tipsy-arrow {
     position:absolute;
-    background:url('/travel/images/plugins/tipsy.gif') no-repeat top left;
+    background:url('/images/plugins/tipsy.gif') no-repeat top left;
     width:9px;
     height:5px
 }
@@ -2128,7 +2128,7 @@ div.jqi .jqiclose {
     cursor:pointer;
     color:#bbb;
     font-weight:bold;
-    background:url(/travel/images/login/loginBox_btn.gif) -63px 0 no-repeat;
+    background:url(/images/login/loginBox_btn.gif) -63px 0 no-repeat;
     display:block;
     line-height:100px;
     overflow:hidden
@@ -2198,7 +2198,7 @@ div.jqi button.jqidefaultbutton {
     border:1px solid;
     border-color:#aaa #ddd #ddd #aaa;
     color:#999;
-    font:12px/22px Verdana,"å®‹ä½“";
+    font:12px/22px Verdana,"宋体";
     padding:2px 0 0 5px
 }
 .connect_gui .photo_view {
@@ -2221,7 +2221,7 @@ div.jqi button.jqidefaultbutton {
 .connect_gui .Boter button,.connect_gui .Boter input {
     width:92px;
     height:30px;
-    background:url(/travel/images/login/conect_btn.gif) 0 0 no-repeat;
+    background:url(/images/login/conect_btn.gif) 0 0 no-repeat;
     border:0;
     cursor:pointer;
     text-align:center;
@@ -2261,7 +2261,7 @@ div.jqi_w700 .jqi_w700close {
     cursor:pointer;
     color:#bbb;
     font-weight:bold;
-    background:url(/travel/images/login/loginBox_btn.gif) -63px 0 no-repeat;
+    background:url(/images/login/loginBox_btn.gif) -63px 0 no-repeat;
     display:block;
     line-height:100px;
     overflow:hidden
@@ -2309,7 +2309,7 @@ div.jqi_w700 button.jqi_w700defaultbutton {
     top:8px;
     width:36px;
     height:27px;
-    background:url(/travel/images/header/daka-popupBg2.png) no-repeat -75px 0;
+    background:url(/images/header/daka-popupBg2.png) no-repeat -75px 0;
     line-height:100px;
     cursor:pointer;
     overflow:hidden
@@ -2320,7 +2320,7 @@ div.jqi_w700 button.jqi_w700defaultbutton {
     top:8px;
     width:9px;
     height:9px;
-    background:url(/travel/images/header/daka-popupBg.png) no-repeat -122px 0;
+    background:url(/images/header/daka-popupBg.png) no-repeat -122px 0;
     overflow:hidden;
     -moz-transition:1s ease-in-out 0s;
     -webkit-transition:1s ease-in-out 0s
@@ -2377,7 +2377,7 @@ div.jqi_w700 button.jqi_w700defaultbutton {
     width:13px;
     height:16px;
     display:inline-block;
-    background:url(/travel/images/plugins/btn_del.gif) #ff6 0 3px no-repeat;
+    background:url(/images/plugins/btn_del.gif) #ff6 0 3px no-repeat;
     line-height:100px;
     overflow:hidden
 }
@@ -2385,13 +2385,13 @@ div.jqi_w700 button.jqi_w700defaultbutton {
     width:23px;
     height:23px;
     margin-left:5px;
-    background:url(/travel/images/icon_v.png) no-repeat;
+    background:url(/images/icon_v.png) no-repeat;
     vertical-align:middle
 }
 .icon_v_small {
     width:16px;
     height:15px;
-    background:url(/travel/images/icon_v_small.png) no-repeat;
+    background:url(/images/icon_v_small.png) no-repeat;
     vertical-align:middle
 }
 .mf {
@@ -2480,7 +2480,7 @@ div.jqi_w700 button.jqi_w700defaultbutton {
 .z_close {
     width:11px;
     height:10px;
-    background:url(/travel/images/home/home_bg.gif) -150px -8px no-repeat;
+    background:url(/images/home/home_bg.gif) -150px -8px no-repeat;
     text-indent:-9999px;
     *text-indent:0;
     line-height:200px;
@@ -2671,7 +2671,7 @@ div.jqi_w700 button.jqi_w700defaultbutton {
     display:block;
     width:58px;
     height:20px;
-    background:url(/travel/images/share_page.gif) no-repeat;
+    background:url(/images/share_page.gif) no-repeat;
     border:1px solid #e0e0e0;
     line-height:20px;
     text-indent:24px;
@@ -2729,9 +2729,9 @@ div.jqi_w700 button.jqi_w700defaultbutton {
     left:-10px;
     width:86px;
     height:67px;
-    background:url(/travel/images/share_tips2.png) no-repeat;
+    background:url(/images/share_tips2.png) no-repeat;
     _background:0;
-    filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,src="/travel/images/share_tips2.png");
+    filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,src="/images/share_tips2.png");
     line-height:200px;
     overflow:hidden
 }
@@ -2747,7 +2747,7 @@ div.jqi_w700 button.jqi_w700defaultbutton {
     width:28px;
     height:26px;
     margin-right:5px;
-    background:url(/travel/images/home/btn_up_gif.gif) no-repeat;
+    background:url(/images/home/btn_up_gif.gif) no-repeat;
     line-height:200px;
     overflow:hidden
 }
@@ -2797,7 +2797,7 @@ div.jqi_w700 button.jqi_w700defaultbutton {
     display:block;
     width:58px;
     height:20px;
-    background:url(/travel/images/connect_app/share_bar.gif) no-repeat;
+    background:url(/images/connect_app/share_bar.gif) no-repeat;
     line-height:20px;
     text-indent:24px;
     color:#666;
@@ -2858,7 +2858,7 @@ div.jqi_w700 button.jqi_w700defaultbutton {
     display:block;
     width:60px;
     height:22px;
-    background:url(http://file.mafengwo.net/travel/images/share_page2.gif) 0 -240px no-repeat;
+    background:url(http://file.mafengwo.net/images/share_page2.gif) 0 -240px no-repeat;
     line-height:20px;
     text-indent:24px;
     color:#666;
@@ -2877,9 +2877,9 @@ div.jqi_w700 button.jqi_w700defaultbutton {
     left:-2px;
     width:86px;
     height:67px;
-    background:url(http://file.mafengwo.net/travel/images/share_tips2.png) no-repeat;
+    background:url(http://file.mafengwo.net/images/share_tips2.png) no-repeat;
     _background:0;
-    _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,src="http://file.mafengwo.net/travel/images/share_tips2.png");
+    _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,src="http://file.mafengwo.net/images/share_tips2.png");
     line-height:200px;
     overflow:hidden
 }
@@ -2894,7 +2894,7 @@ div.jqi_w700 button.jqi_w700defaultbutton {
     width:28px;
     height:26px;
     margin-right:5px;
-    background:url(http://file.mafengwo.net/travel/images/home/btn_up2.gif) no-repeat;
+    background:url(http://file.mafengwo.net/images/home/btn_up2.gif) no-repeat;
     line-height:200px;
     overflow:hidden
 }
@@ -2935,7 +2935,7 @@ div.jqi_w700 button.jqi_w700defaultbutton {
 .ing_status .close a {
     width:10px;
     height:10px;
-    background:url(/travel/images/post/close.gif) 2px 2px no-repeat;
+    background:url(/images/post/close.gif) 2px 2px no-repeat;
     display:block;
     line-height:100px;
     overflow:hidden
@@ -2964,7 +2964,7 @@ div.jqi_w700 button.jqi_w700defaultbutton {
     display:block;
     width:58px;
     height:20px;
-    background:url(/travel/images/share_page.gif) no-repeat;
+    background:url(/images/share_page.gif) no-repeat;
     border:1px solid #e0e0e0;
     line-height:20px;
     text-indent:24px;
@@ -3036,7 +3036,7 @@ div.jqi_w700 button.jqi_w700defaultbutton {
     display:block;
     width:58px;
     height:20px;
-    background:url(/travel/images/share_page.gif) no-repeat;
+    background:url(/images/share_page.gif) no-repeat;
     border:1px solid #e0e0e0;
     line-height:20px;
     text-indent:24px;
@@ -3125,7 +3125,7 @@ div.jqi_w700 button.jqi_w700defaultbutton {
     top:9px;
     width:10px;
     height:10px;
-    background:url(/travel/images/login/close2.gif) no-repeat 0 0;
+    background:url(/images/login/close2.gif) no-repeat 0 0;
     line-height:200px;
     overflow:hidden
 }
@@ -3176,7 +3176,7 @@ div.jqi_w700 button.jqi_w700defaultbutton {
     width:126px;
     height:24px;
     margin-right:10px;
-    background:url(/travel/images/login/weibo_login.gif) no-repeat;
+    background:url(/images/login/weibo_login.gif) no-repeat;
     line-height:200px;
     overflow:hidden;
     vertical-align:-5px;
@@ -3205,7 +3205,7 @@ div.jqi_w700 button.jqi_w700defaultbutton {
     margin-top:5px
 }
 .pop_mfw_wb .BoxL .L2 button {
-    background:url(/travel/images/login/loginBox_btn2.gif) no-repeat 0 -83px
+    background:url(/images/login/loginBox_btn2.gif) no-repeat 0 -83px
 }
 .pop_mfw_wb .BoxL .L2 button:hover {
     background-position:0 -115px
@@ -3219,7 +3219,7 @@ div.jqi_w700 button.jqi_w700defaultbutton {
     cursor:pointer;
     color:#bbb;
     font-weight:bold;
-    background:url(/travel/images/login/loginBox_btn.gif) -63px 0 no-repeat;
+    background:url(/images/login/loginBox_btn.gif) -63px 0 no-repeat;
     display:block;
     line-height:100px;
     overflow:hidden
@@ -3342,7 +3342,7 @@ div.onekeytip .onekeytipclose {
     cursor:pointer;
     color:#bbb;
     font-weight:bold;
-    background:url(/travel/images/login/loginBox_btn.gif) -63px 0 no-repeat;
+    background:url(/images/login/loginBox_btn.gif) -63px 0 no-repeat;
     display:block;
     line-height:100px;
     overflow:hidden
@@ -3379,7 +3379,7 @@ div.snsfriend .snsfriendclose {
     cursor:pointer;
     color:#bbb;
     font-weight:bold;
-    background:url(/travel/images/login/loginBox_btn.gif) -63px 0 no-repeat;
+    background:url(/images/login/loginBox_btn.gif) -63px 0 no-repeat;
     display:block;
     line-height:100px;
     overflow:hidden
@@ -3411,7 +3411,7 @@ div.snsfriend .snsfriendmessage {
     overflow:hidden
 }
 .snspop .loading {
-    background:url(/travel/images/a/default_loader.gif) 235px 105px no-repeat
+    background:url(/images/a/default_loader.gif) 235px 105px no-repeat
 }
 .snspop dl {
     width:260px;
@@ -3443,7 +3443,7 @@ div.snsfriend .snsfriendmessage {
     display:inline-block;
     margin:-4px 0 0 5px;
     vertical-align:middle;
-    background:url(/travel/images/wengweng/icon_girl.gif) no-repeat
+    background:url(/images/wengweng/icon_girl.gif) no-repeat
 }
 .snspop dd b.gg {
     width:20px;
@@ -3451,7 +3451,7 @@ div.snsfriend .snsfriendmessage {
     display:inline-block;
     margin:-4px 0 0 5px;
     vertical-align:middle;
-    background:url(/travel/images/wengweng/icon_boy.gif) no-repeat
+    background:url(/images/wengweng/icon_boy.gif) no-repeat
 }
 .snspop dd span {
     font-family:Georgia;
@@ -3503,7 +3503,7 @@ div.snsfriend .snsfriendmessage {
     height:48px;
     display:inline-block;
     line-height:44px;
-    background:#f87e1b url(/travel/images/sina_app/snsPop_btn.gif) 23px 9px no-repeat;
+    background:#f87e1b url(/images/sina_app/snsPop_btn.gif) 23px 9px no-repeat;
     text-align:center;
     font-size:24px;
     color:#fff
@@ -3534,7 +3534,7 @@ div.snsfriend .snsfriendmessage {
     display:block;
     height:59px;
     width:211px;
-    background:url("/travel/images/login/a_bgh4.gif") 0 0 no-repeat
+    background:url("/images/login/a_bgh4.gif") 0 0 no-repeat
 }
 .login_li a img {
     float:left;
@@ -3609,10 +3609,10 @@ div.snsfriend .snsfriendmessage {
     text-decoration:none
 }
 .other_hz .Connect a.sina {
-    background:url("/travel/images/login/ico/ico_sina.gif") no-repeat scroll 4px 4px transparent
+    background:url("/images/login/ico/ico_sina.gif") no-repeat scroll 4px 4px transparent
 }
 .other_hz .Connect a.qq {
-    background:url("/travel/images/login/ico/ico_qq.gif") no-repeat scroll 4px 4px transparent
+    background:url("/images/login/ico/ico_qq.gif") no-repeat scroll 4px 4px transparent
 }
 .other_hz span {
     display:block;
@@ -3905,8 +3905,8 @@ div.jGrowl div.jGrowl-closer {
     width:28px;
     height:19px;
     padding:8px 0 0 8px;
-    background:url(/travel/images/other/popctn_bg.png) 0 -165px no-repeat;
-    _background:url(/travel/images/other/popctn_bg4.gif) 0 -165px no-repeat;
+    background:url(/images/other/popctn_bg.png) 0 -165px no-repeat;
+    _background:url(/images/other/popctn_bg4.gif) 0 -165px no-repeat;
     outline:0;
     position:absolute;
     right:0;
@@ -3916,7 +3916,7 @@ div.jGrowl div.jGrowl-closer {
 .popup-box a.close-btn i {
     width:9px;
     height:9px;
-    background:url(/travel/images/other/i_cross.gif) no-repeat;
+    background:url(/images/other/i_cross.gif) no-repeat;
     display:block;
     transition:1s ease-in-out 0s;
     -moz-transition:1s ease-in-out 0s;
@@ -3946,8 +3946,8 @@ div.jGrowl div.jGrowl-closer {
     width:55px;
     height:55px;
     display:inline-block;
-    background:url(/travel/images/other/popctn_bg.png) no-repeat;
-    _background:url(/travel/images/other/popctn_bg4.gif) no-repeat;
+    background:url(/images/other/popctn_bg.png) no-repeat;
+    _background:url(/images/other/popctn_bg4.gif) no-repeat;
     margin:34px 0 14px
 }
 .popup-box .pop-ico i.i1 {
@@ -4049,7 +4049,7 @@ div.jGrowl div.jGrowl-closer {
 .popup-box .weihu {
     width:100%;
     height:20px;
-    background:url(/travel/images/common/weihu.png) center 20px no-repeat;
+    background:url(/images/common/weihu.png) center 20px no-repeat;
     text-align:center;
     padding:120px 0 15px
 }
@@ -4059,7 +4059,7 @@ div.jGrowl div.jGrowl-closer {
     height:25px;
     padding:0 5px 0 36px;
     text-align:left;
-    background:url(/travel/images/other/btn_shareto2.png) no-repeat;
+    background:url(/images/other/btn_shareto2.png) no-repeat;
     border:0
 }
 .popup-box .pop-btn .weibo {
@@ -4093,7 +4093,7 @@ div.jGrowl div.jGrowl-closer {
     height:10px;
     display:inline-block;
     height:20px;
-    background:url(/travel/images/common/loading_big.gif) no-repeat;
+    background:url(/images/common/loading_big.gif) no-repeat;
     margin-top:32px
 }
 .pop-loading p {
@@ -4109,7 +4109,7 @@ div.jGrowl div.jGrowl-closer {
     float:left;
     width:267px;
     height:354px;
-    background:url(/travel/images/other/tai-activity-pop.jpg) no-repeat
+    background:url(/images/other/tai-activity-pop.jpg) no-repeat
 }
 .popup-jumei .activi-con {
     margin-left:270px;
@@ -4117,7 +4117,7 @@ div.jGrowl div.jGrowl-closer {
 }
 .popup-jumei .logo {
     height:40px;
-    background:url(/travel/images/other/tai-logo.png) no-repeat center top;
+    background:url(/images/other/tai-logo.png) no-repeat center top;
     text-align:center
 }
 .popup-jumei .activi-form {
@@ -4166,7 +4166,7 @@ div.jGrowl div.jGrowl-closer {
     margin:20px 20px 0 0;
     width:106px;
     height:48px;
-    background:url(/travel/images/header/daka-smallBg.png) no-repeat -138px -70px;
+    background:url(/images/header/daka-smallBg.png) no-repeat -138px -70px;
     overflow:hidden
 }
 .popup_addr {
@@ -4336,7 +4336,7 @@ div.jGrowl div.jGrowl-closer {
     height:15px;
     display:inline-block;
     margin-left:10px;
-    background:url(/travel/images/mfw-ask/edit.gif) 0 -30px no-repeat;
+    background:url(/images/mfw-ask/edit.gif) 0 -30px no-repeat;
     line-height:200px;
     overflow:hidden
 }
@@ -4499,7 +4499,7 @@ div.jGrowl div.jGrowl-closer {
     margin:40px 0 20px;
     width:68px;
     height:68px;
-    background:url(/travel/images/other/popctn_bg2.png) no-repeat 0 0
+    background:url(/images/other/popctn_bg2.png) no-repeat 0 0
 }
 .new-popbox .pop-ico i.i1 {
     background-position:0 -140px
@@ -4582,14 +4582,14 @@ div.jGrowl div.jGrowl-closer {
 .popup-box a.close-btn {
     width:36px;
     height:26px;
-    background:url(/travel/images/other/popctn_bg2.png) no-repeat 0 -280px;
+    background:url(/images/other/popctn_bg2.png) no-repeat 0 -280px;
     padding:0
 }
 .popup-box a.close-btn i {
     margin:2px;
     width:22px;
     height:22px;
-    background:url(/travel/images/other/popctn_bg2.png) no-repeat -40px -280px;
+    background:url(/images/other/popctn_bg2.png) no-repeat -40px -280px;
     overflow:hidden
 }
 .popbox-load .close-btn,.popbox-load .pop-btns {
@@ -4599,18 +4599,18 @@ div.jGrowl div.jGrowl-closer {
     margin-top:50px;
     width:68px;
     height:68px;
-    background:url(/travel/images/other/loading.gif) no-repeat
+    background:url(/images/other/loading.gif) no-repeat
 }
 .popbox-load .pop-ctn {
     margin-bottom:0
 }
 @media(min-resolution:1.25dppx),(-webkit-min-device-pixel-ratio:1.25),(min-device-pixel-ratio:1.25) {
     .new-popbox .pop-ico i,.new-popbox a.close-btn,.new-popbox a.close-btn i {
-        background-image:url(/travel/images/other/popctn_bg@2x.png);
+        background-image:url(/images/other/popctn_bg@2x.png);
         background-size:68px
     }
     .popbox-load .pop-ico i {
-        background:url(/travel/images/other/loading.gif) no-repeat
+        background:url(/images/other/loading.gif) no-repeat
     }
 }
 /*! normalize.css v3.0.2*/
@@ -4850,7 +4850,7 @@ td,th {
     display:block;
     width:82px;
     height:24px;
-    background:url(/travel/images/mfw-search/s-logo.png) no-repeat 0 0;
+    background:url(/images/mfw-search/s-logo.png) no-repeat 0 0;
     background-size:82px
 }
 .mfw-header.s-head .search-container {
@@ -4921,7 +4921,7 @@ td,th {
 .head-logo .mfw-logo {
     display:block;
     height:39px;
-    background:url(/travel/images/header-sprites3.png) no-repeat 0 0
+    background:url(/images/header-sprites13.png) no-repeat 0 0
 }
 .head-nav {
     float:left;
@@ -5098,7 +5098,7 @@ td,th {
     margin-right:6px;
     width:26px;
     height:26px;
-    background-image:url(/travel/images/header-sprites12.png);
+    background-image:url(/images/header-sprites13.png);
     background-position:0 -50px!important;
     overflow:hidden;
     vertical-align:-7px;
@@ -5160,7 +5160,7 @@ td,th {
     right:8px;
     width:20px;
     height:20px;
-    background-image:url(/travel/images/header-sprites12.png);
+    background-image:url(/images/header-sprites13.png);
     background-position:-30px -110px!important;
     overflow:hidden
 }
@@ -5279,7 +5279,7 @@ td,th {
     top:10px;
     width:16px;
     height:16px;
-    background:url(/travel/images/header-sprites12.png) no-repeat -60px -50px
+    background:url(/images/header-sprites13.png) no-repeat -60px -50px
 }
 .mfw-header .dropdown-user .icon-wo {
     height:17px;
@@ -5321,7 +5321,7 @@ td,th {
 .mfw-header .dropdown-user .icon-route {
     background-position:-180px -110px!important
 }
-.mfw-header .dropdown-user .icon-information {
+.mfw-header .dropdown-user .icon-gonglve {
     background-position:-120px -140px!important
 }
 .mfw-header .dropdown-panel {
@@ -5469,7 +5469,7 @@ td,th {
     margin:8px 0 0 -36px;
     width:24px;
     height:24px;
-    background:url(http://travel/images.mafengwo.net/travel/images/suggest-sprite5.png) no-repeat
+    background:url(http://images.mafengwo.net/images/suggest-sprite5.png) no-repeat
 }
 .search-suggest-panel .sicon-place {
     background-position:0 0
@@ -5514,10 +5514,10 @@ td,th {
     background-position:0 -275px
 }
 .search-suggest-panel .sicon-flight {
-    background:url(http://travel/images.mafengwo.net/travel/images/suggest-flighthotel.png) no-repeat
+    background:url(http://images.mafengwo.net/images/suggest-flighthotel.png) no-repeat
 }
 .search-suggest-panel .sicon-local {
-    background:url(http://travel/images.mafengwo.net/travel/images/suggest-local.png) no-repeat
+    background:url(http://images.mafengwo.net/images/suggest-local.png) no-repeat
 }
 .search-suggest-panel .ssp-more {
     display:block;
@@ -5616,7 +5616,7 @@ td,th {
     margin:10px;
     width:35px;
     height:35px;
-    background:url(http://travel/images.mafengwo.net/travel/images/suggest-loading.gif) no-repeat
+    background:url(http://images.mafengwo.net/images/suggest-loading.gif) no-repeat
 }
 .m-search-suggest.m-search-suggest-index {
     width:602px
@@ -5718,7 +5718,7 @@ td,th {
     margin-top:6px;
     width:32px;
     height:32px;
-    background:url(/travel/images/mdd/place/icon-place-nav6.png) no-repeat 0 0;
+    background:url(/images/mdd/place/icon-place-nav6.png) no-repeat 0 0;
     overflow:hidden
 }
 .mss-icon-scenic {
@@ -5949,26 +5949,96 @@ td,th {
     border-bottom:3px solid #fc9d27;
     color:#ff9d00
 }
- @media(min-resolution:1.25dppx),(-webkit-min-device-pixel-ratio:1.25),(min-device-pixel-ratio:1.25) {
+@media(max-width:1440px) {
+    .mfw-header {
+        height:58px
+    }
+    .header-wrap {
+        height:58px
+    }
+    .head-logo {
+        padding:13px 0;
+        height:32px
+    }
+    .head-logo .mfw-logo {
+        height:33px;
+        background:url(/images/header-small-sprites.png) no-repeat 0 0
+    }
+    .login-out {
+        padding:16px 0
+    }
+    .head-nav {
+        line-height:58px;
+        font-size:14px
+    }
+    .head-nav li a:hover,.head-nav .head-nav-hover a {
+        height:55px
+    }
+    .drop-trigger {
+        height:58px
+    }
+    .head-msg {
+        line-height:58px
+    }
+    .head-msg-new {
+        top:11px
+    }
+    .head-user .user-image {
+        margin-top:10px
+    }
+    .drop-trigger .icon-caret-down {
+        top:27px
+    }
+    .head-daka {
+        padding-top:18px
+    }
+    .head-search {
+        height:58px
+    }
+    .head-search-wrapper {
+        padding:14px 0 13px;
+        height:30px
+    }
+    .head-searchform {
+        height:30px
+    }
+    .head-searchform input {
+        height:28px;
+        line-height:28px
+    }
+    .head-search-focus {
+        width:382px
+    }
+    .head-search-focus .head-searchform input {
+        width:360px
+    }
+    .head-search .icon-search {
+        top:5px;
+        right:5px
+    }
+    .head-nav-dropdown {
+        line-height:54px
+    }
+}@media(min-resolution:1.25dppx),(-webkit-min-device-pixel-ratio:1.25),(min-device-pixel-ratio:1.25) {
     .head-logo .mfw-logo,.mfw-header .dropdown-user [class|="icon"],.searchtab i,.search-group .icon-search,.search-group .icon-cal,.login-out .weibo-login,.login-out .qq-login,.login-out .weixin-login,.head-search .icon-search {
-        background:url(/travel/images/header-sprites11@2x.png) no-repeat;
+        background:url(/images/header-sprites13@2x.png) no-repeat;
         background-size:200px
     }
     .mss-icon {
-        background-image:url(/travel/images/mdd/place/icon-place-nav3@2x.png);
+        background-image:url(/images/mdd/place/icon-place-nav3@2x.png);
         background-size:32px
     }
 }@media(min-resolution:1.25dppx) and (max-width:1440px),(-webkit-min-device-pixel-ratio:1.25) and (max-width:1440px),(min-device-pixel-ratio:1.25) and (max-width:1440px) {
     .head-logo .mfw-logo {
         height:33px;
-        background:url(/travel/images/header-small-sprites.png) no-repeat 0 -25px;
+        background:url(/images/header-small-sprites.png) no-repeat 0 -25px;
         background-size:125px
     }
 }.icoNew {
      position:absolute;
      width:26px;
      height:11px;
-     background:url(/travel/images/header/icon_new3.gif) 0 0 no-repeat;
+     background:url(/images/header/icon_new3.gif) 0 0 no-repeat;
      overflow:hidden
  }
 .ub-coin {
@@ -5977,7 +6047,7 @@ td,th {
 .new_daka_tips {
     width:176px;
     height:134px;
-    background-image:url(/travel/images/header/new_daka/tips_v3.png);
+    background-image:url(/images/header/new_daka/tips_v3.png);
     position:absolute;
     z-index:200;
     margin-top:-200px;
@@ -6034,7 +6104,7 @@ td,th {
     width:100%;
     height:100%;
     background-color:rgba(0,0,0,.8);
-    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=â€˜#99000000',endColorstr='#99000000â€™)
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=‘#99000000',endColorstr='#99000000’)
 }
 .ps-hb-content {
     position:absolute;
@@ -6043,7 +6113,7 @@ td,th {
     margin:-220px 0 0 -154px;
     width:308px;
     height:441px;
-    background:url(/travel/images/hotel/summer-hb.png) no-repeat 0 0;
+    background:url(/images/hotel/summer-hb.png) no-repeat 0 0;
     text-align:center
 }
 .ps-hb-word {
@@ -6081,7 +6151,7 @@ td,th {
 }
 .ps-hb-icons i {
     position:absolute;
-    background:url(/travel/images/hotel/summer-hb.png) no-repeat -310px 0;
+    background:url(/images/hotel/summer-hb.png) no-repeat -310px 0;
     -webkit-transition:all .3s linear 0s;
     transition:all .3s linear 0s
 }
@@ -6148,7 +6218,7 @@ td,th {
     right:-53px;
     width:50px;
     height:50px;
-    background:url(/travel/images/hotel/summer-hb.png) no-repeat -440px -60px;
+    background:url(/images/hotel/summer-hb.png) no-repeat -440px -60px;
     overflow:hidden;
     cursor:pointer;
     -webkit-transition:all .5s linear 0s;
@@ -6171,7 +6241,7 @@ td,th {
     top:0;
     width:30px;
     height:16px;
-    background:url(/travel/images/common/i-gray.png) no-repeat;
+    background:url(/images/common/i-gray.png) no-repeat;
     background-size:30px auto
 }
 @media(max-width:1440px) {

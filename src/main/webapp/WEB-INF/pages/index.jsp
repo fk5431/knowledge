@@ -1,4 +1,4 @@
-<%@ page import="java.util.List" %>
+    <%@ page import="java.util.List" %>
 <%@ page import="com.fk.bean.TravelBean" %>
 <%@ page import="com.fk.bean.OrdersBean" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -45,12 +45,10 @@
                         <span>穷游商城<%--<i class="icon-caret-down"></i>--%></span>
                     </a>
                 </li>
-                <li class="head-nav-place" id="head_4"><a href="${pageContext.request.contextPath}/index"
-                                                                            title="论坛">论坛</a>
+                <li class="head-nav-place" id="head_4"><a href="${pageContext.request.contextPath}/my"
+                                                                            title="个人中心">个人中心</a>
                 </li>
-                <li class="head-nav-place" id="_j_nav_community">
-                    <a href="${pageContext.request.contextPath}/index" title="留言薄">留言薄</a>
-                </li>
+
 
             </ul>
             <div id="pagelet-block-abb1ca45f330cf8a24ad20466d690c67" class="pagelet-block">
@@ -184,9 +182,9 @@
                     <li class="active _j_gs_tab"><a href="javascript:void(0);"
                                                     data-objid="0">热门攻略</a></li>
                 </ul>
-                <div class="tn-write"><a class="btn-add" href="#" target="_blank"
+                <div class="tn-write"><a class="btn-add" href="${pageContext.request.contextPath}/addarticle" target="_blank"
                                          rel="nofollow"><i></i>写攻略</a></div>
-                <a class="tn-tips" href="#" target="_blank"><i></i>我要上首页</a>
+                <a class="tn-tips"><i></i>我要上首页</a>
             </div>
             <div class="tn-selected _j_tag_choose_container">
 

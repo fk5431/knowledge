@@ -8,6 +8,11 @@ CREATE TABLE record(
   time DATE,
   type VARCHAR (255) not null,
   orderId int(11) NOT NULL,
+  email VARCHAR(255) ,
+  wechat VARCHAR(255),
+  mob VARCHAR(255),
+  other VARCHAR(255),
+  userId int(11),
+  adress VARCHAR(255),
   FOREIGN KEY(orderId) REFERENCES orders(id)
 ) DEFAULT CHARSET=utf8;
-INSERT INTO record VALUES(1,'冯凯', '888', 1, '2017-03-10 10:11:00', '6天5晚半自由行', 1);

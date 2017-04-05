@@ -41,11 +41,8 @@
                         <span>穷游商城<%--<i class="icon-caret-down"></i>--%></span>
                     </a>
                 </li>
-                <li class="head-nav-place" id="head_4"><a href="${pageContext.request.contextPath}/index"
-                                                          title="论坛">论坛</a>
-                </li>
-                <li class="head-nav-place" id="_j_nav_community">
-                    <a href="${pageContext.request.contextPath}/index" title="留言薄">留言薄</a>
+                <li class="head-nav-place" id="head_4"><a href="${pageContext.request.contextPath}/my"
+                                                          title="个人中心">个人中心</a>
                 </li>
 
             </ul>

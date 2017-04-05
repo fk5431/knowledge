@@ -4,14 +4,18 @@ import com.fk.bean.*;
 import com.fk.service.*;
 import com.fk.util.CommonConst;
 import com.fk.util.Login;
+import com.google.common.base.Objects;
+import com.google.common.base.Preconditions;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
@@ -52,6 +56,9 @@ public class ShopC {
 
     @Autowired
     public IShopshowService shopshowService;
+
+    @Autowired
+    public IUserService userService;
 
     private static final int SIZE = CommonConst.SIX_INT;
 
@@ -158,4 +165,73 @@ public class ShopC {
     }
 
 
+    @RequestMapping("/buy")
+    public String buy(HttpServletRequest request, Map<String, Object> map){
+
+        if(!Login.islogin(request)){
+            return "login";
+        }else{
+            map.put(CommonConst.LOGIN, CommonConst.YES);
+        }
+
+        map.put("index", 0);
+        String id = request.getParameter("id");
+        OrdersBean ordersBean = updateCost(ordersService.selectByPrimaryKey(Integer.parseInt(id)));
+        map.put("order", ordersBean);
+
+        return "buy";
+    }
+
+
+    @RequestMapping("/salesagreement")
+    public String salesagreement(HttpServletRequest request, Map<String, Object> map){
+        map.put("index", 0);
+
+        return "salesagreement";
+    }
+    @RequestMapping("/buyshop")
+    public String order(HttpServletRequest request, Map<String, Object> map){
+        try {
+            map.put("index", 0);
+            String adress = request.getParameter("adress");
+            Preconditions.checkNotNull(adress, "address not null");
+            String name = request.getParameter("name");
+            Preconditions.checkNotNull(name, "name not null");
+            String email = request.getParameter("email");
+            String wechat = request.getParameter("wechat");
+            String mob = request.getParameter("mob");
+            Preconditions.checkNotNull(mob, "mob not null");
+            String other = request.getParameter("other");
+            String id = request.getParameter("id");
+            String userId = "";
+            Cookie[] cookies = request.getCookies();
+            for(Cookie c : cookies){
+                if(CommonConst.USERID.equals(c.getName())){
+                     userId = c.getValue();
+                }
+            }
+            RecordBean recordBean = new RecordBean();
+            User user = userService.selectUserByID(Integer.parseInt(userId));
+            OrdersBean ordersBean = ordersService.selectByPrimaryKey(Integer.parseInt(id));
+            recordBean.setAdress(adress);
+            recordBean.setEmail(Objects.firstNonNull(email, ""));
+            recordBean.setMob(mob);
+            recordBean.setName(name);
+            recordBean.setNum(1);
+            recordBean.setOrderid(ordersBean.getId());
+            recordBean.setOther(Objects.firstNonNull(other,""));
+            recordBean.setPrice(String.valueOf(ordersBean.getPrice()));
+            recordBean.setTime(new Date(System.currentTimeMillis()));
+            recordBean.setType(ordersBean.getType());
+            recordBean.setUserid(user.getId());
+            recordBean.setWechat(Objects.firstNonNull(wechat, ""));
+
+            recordService.insertSelective(recordBean);
+        } catch (Exception e){
+            map.put("errorcode", 10);
+            e.printStackTrace();
+        }
+
+        return "my";
+    }
 }

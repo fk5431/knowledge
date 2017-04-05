@@ -42,11 +42,9 @@
                 <li class="head-nav-index head-nav-active" id="head_1"><a
                         href="${pageContext.request.contextPath}/index">首页</a>
                 </li>
-                <li class="head-nav-place" id="head_2"><a href="${pageContext.request.contextPath}/mdd"
-                                                          title="目的地">目的地</a>
+                <li class="head-nav-place" id="head_2"><a href="${pageContext.request.contextPath}/mdd" title="目的地">目的地</a>
                 </li>
-                <li class="head-nav-gonglve" id="head_3"><a href="${pageContext.request.contextPath}/content_list"
-                                                            title="旅游攻略">旅游攻略</a>
+                <li class="head-nav-gonglve" id="head_3"><a href="${pageContext.request.contextPath}/content_list" title="旅游攻略">旅游攻略</a>
                 </li>
                 <li class="head-nav-place" id="_j_nav_sales" >
                     <a href="${pageContext.request.contextPath}/sales"
@@ -54,11 +52,8 @@
                         <span>穷游商城<%--<i class="icon-caret-down"></i>--%></span>
                     </a>
                 </li>
-                <li class="head-nav-place" id="head_4"><a href="#"
-                                                          title="论坛">论坛</a>
-                </li>
-                <li class="head-nav-place" id="_j_nav_community">
-                    <a href="" title="留言薄">留言薄</a>
+                <li class="head-nav-place" id="head_4"><a href="${pageContext.request.contextPath}/my"
+                                                          title="个人中心">个人中心</a>
                 </li>
 
             </ul>

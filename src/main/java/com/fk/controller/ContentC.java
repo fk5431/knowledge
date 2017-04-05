@@ -111,6 +111,10 @@ public class ContentC {
 
     @RequestMapping("count_context")
     public String addCount(HttpServletRequest request, Map<String, Object> map){
+        if(!Login.islogin(request)){
+            //map.put(CommonConst.LOGIN, CommonConst.YES);
+            return "login";
+        }
         String id = request.getParameter("id");
         if(id!=null) {
             TravelBean travelBean = travelService.selectByPrimaryKey(Integer.parseInt(id));

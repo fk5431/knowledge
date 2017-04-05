@@ -9,37 +9,45 @@
     <result column="time" property="time" jdbcType="DATE" />
     <result column="type" property="type" jdbcType="VARCHAR" />
     <result column="orderId" property="orderid" jdbcType="INTEGER" />
+    <result column="adress" property="adress" jdbcType="VARCHAR" />
+    <result column="email" property="email" jdbcType="VARCHAR" />
+    <result column="wechat" property="wechat" jdbcType="VARCHAR" />
+    <result column="mob" property="mob" jdbcType="VARCHAR" />
+    <result column="other" property="other" jdbcType="VARCHAR" />
+    <result column="userId" property="userid" jdbcType="INTEGER" />
   </resultMap>
   <sql id="Base_Column_List" >
-    id, name, price, num, time, type, orderId
+    id, name, price, num, time, type, orderId, adress, email, wechat, mob, other, userId
   </sql>
   <select id="selectByForginId" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
-    select 
+    select
     <include refid="Base_Column_List" />
     from record
     where orderId = #{id,jdbcType=INTEGER}
   </select>
+  <delete id="deleteByForginId" parameterType="java.lang.Integer" >
+    delete from record
+    where orderId = #{id,jdbcType=INTEGER}
+  </delete>
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
     select
     <include refid="Base_Column_List" />
     from record
     where id = #{id,jdbcType=INTEGER}
   </select>
-  <delete id="deleteByForginId" parameterType="java.lang.Integer" >
-    delete from record
-    where orderId = #{id,jdbcType=INTEGER}
-  </delete>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
     delete from record
     where id = #{id,jdbcType=INTEGER}
   </delete>
   <insert id="insert" parameterType="com.fk.bean.RecordBean" >
-    insert into record (id, name, price, 
-      num, time, type, orderId
-      )
-    values (#{id,jdbcType=INTEGER}, #{name,jdbcType=VARCHAR}, #{price,jdbcType=VARCHAR}, 
-      #{num,jdbcType=INTEGER}, #{time,jdbcType=DATE}, #{type,jdbcType=VARCHAR}, #{orderid,jdbcType=INTEGER}
-      )
+    insert into record (id, name, price,
+    num, time, type, orderId,
+    adress, email, wechat,
+    mob, other, userId)
+    values (#{id,jdbcType=INTEGER}, #{name,jdbcType=VARCHAR}, #{price,jdbcType=VARCHAR},
+    #{num,jdbcType=INTEGER}, #{time,jdbcType=DATE}, #{type,jdbcType=VARCHAR}, #{orderid,jdbcType=INTEGER},
+    #{adress,jdbcType=VARCHAR}, #{email,jdbcType=VARCHAR}, #{wechat,jdbcType=VARCHAR},
+    #{mob,jdbcType=VARCHAR}, #{other,jdbcType=VARCHAR}, #{userid,jdbcType=INTEGER})
   </insert>
   <insert id="insertSelective" parameterType="com.fk.bean.RecordBean" >
     insert into record
@@ -65,6 +73,24 @@
       <if test="orderid != null" >
         orderId,
       </if>
+      <if test="adress != null" >
+        adress,
+      </if>
+      <if test="email != null" >
+        email,
+      </if>
+      <if test="wechat != null" >
+        wechat,
+      </if>
+      <if test="mob != null" >
+        mob,
+      </if>
+      <if test="other != null" >
+        other,
+      </if>
+      <if test="userid != null" >
+        userId,
+      </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides="," >
       <if test="id != null" >
@@ -87,6 +113,24 @@
       </if>
       <if test="orderid != null" >
         #{orderid,jdbcType=INTEGER},
+      </if>
+      <if test="adress != null" >
+        #{adress,jdbcType=VARCHAR},
+      </if>
+      <if test="email != null" >
+        #{email,jdbcType=VARCHAR},
+      </if>
+      <if test="wechat != null" >
+        #{wechat,jdbcType=VARCHAR},
+      </if>
+      <if test="mob != null" >
+        #{mob,jdbcType=VARCHAR},
+      </if>
+      <if test="other != null" >
+        #{other,jdbcType=VARCHAR},
+      </if>
+      <if test="userid != null" >
+        #{userid,jdbcType=INTEGER},
       </if>
     </trim>
   </insert>
@@ -111,6 +155,24 @@
       <if test="orderid != null" >
         orderId = #{orderid,jdbcType=INTEGER},
       </if>
+      <if test="adress != null" >
+        adress = #{adress,jdbcType=VARCHAR},
+      </if>
+      <if test="email != null" >
+        email = #{email,jdbcType=VARCHAR},
+      </if>
+      <if test="wechat != null" >
+        wechat = #{wechat,jdbcType=VARCHAR},
+      </if>
+      <if test="mob != null" >
+        mob = #{mob,jdbcType=VARCHAR},
+      </if>
+      <if test="other != null" >
+        other = #{other,jdbcType=VARCHAR},
+      </if>
+      <if test="userid != null" >
+        userId = #{userid,jdbcType=INTEGER},
+      </if>
     </set>
     where id = #{id,jdbcType=INTEGER}
   </update>
@@ -121,7 +183,13 @@
       num = #{num,jdbcType=INTEGER},
       time = #{time,jdbcType=DATE},
       type = #{type,jdbcType=VARCHAR},
-      orderId = #{orderid,jdbcType=INTEGER}
+      orderId = #{orderid,jdbcType=INTEGER},
+      adress = #{adress,jdbcType=VARCHAR},
+      email = #{email,jdbcType=VARCHAR},
+      wechat = #{wechat,jdbcType=VARCHAR},
+      mob = #{mob,jdbcType=VARCHAR},
+      other = #{other,jdbcType=VARCHAR},
+      userId = #{userid,jdbcType=INTEGER}
     where id = #{id,jdbcType=INTEGER}
   </update>
 </mapper>
