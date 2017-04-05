@@ -1,5 +1,6 @@
 <%@ page import="java.util.List" %>
-<%@ page import="com.fk.bean.TravelBean" %><%--
+<%@ page import="com.fk.bean.OrdersBean" %>
+<%@ page import="com.fk.bean.RecordBean" %><%--
   Created by IntelliJ IDEA.
   User: fengkai
   Date: 23/03/17
@@ -37,7 +38,7 @@
         <li><a href="${pageContext.request.contextPath}/operative/line" ><span class="icon-caret-right"></span>路线添加</a></li>
         <li><a href="${pageContext.request.contextPath}/operative/promo" ><span class="icon-caret-right"></span>商城模块管理</a></li>
         <li><a href="${pageContext.request.contextPath}/operative/addpromoshow" ><span class="icon-caret-right"></span>商城模块管理添加</a></li>
-        <li><a href="${pageContext.request.contextPath}/operative/manshop" ><span class="icon-caret-right"></span>订单管理添加</a></li>
+        <li><a href="${pageContext.request.contextPath}/operative/manshop" ><span class="icon-caret-right"></span>订单管理</a></li>
     </ul>
     <h2><span class="icon-pencil-square-o"></span>高级修改</h2>
     <ul>
@@ -68,32 +69,42 @@
 <div class="admin">
     <div class="panel admin-panel">
         <div class="panel-head"><strong class="icon-reorder"> 内容列表</strong></div>
-        <div class="padding border-bottom">
-            <a class="button border-yellow" href="${pageContext.request.contextPath}/operative/addarticle"><span class="icon-plus-square-o"></span> 添加内容</a>
-        </div>
         <table class="table table-hover text-center">
             <tr>
-                <th width="5%">ID</th>
-                <th>攻略名称</th>
-                <th>攻略作者</th>
-                <th>攻略简介</th>
-                <th width="250">操作</th>
+                <th>ID</th>
+                <th>用户ID </th>
+                <th>姓名</th>
+                <th>订单标题</th>
+                <th>订单价格</th>
+                <th>用户手机</th>
+                <th>用户地址</th>
+                <th>用户邮箱</th>
+                <th>用户微信</th>
+                <th>用户备注</th>
+                <th>时间</th>
+                <th>操作</th>
             </tr>
             <%
-                List<TravelBean> travel = (List)request.getAttribute("travel");
-                for(int i=0;i<travel.size();i++){
+                List<RecordBean> record = (List)request.getAttribute("record");
+                List<String> title = (List) request.getAttribute("title");
+                for(int i=0;i<record.size();i++){
             %>
             <tr>
-                <td><%=travel.get(i).getId()%></td>
-                <td><%=travel.get(i).getTitle()%></td>
-                <td><%=travel.get(i).getAuthor()%></td>
-                <td><%=travel.get(i).getSummary()%></td>
+                <td><%=record.get(i).getId()%></td>
+                <td><%=record.get(i).getUserid()%></td>
+                <td><%=record.get(i).getName()%></td>
+                <td><%=title.get(i)%></td>
+                <td><%=record.get(i).getPrice()%></td>
+                <td><%=record.get(i).getMob()%></td>
+                <td><%=record.get(i).getAdress()%></td>
+                <td><%=record.get(i).getEmail()%></td>
+                <td><%=record.get(i).getWechat()%></td>
+                <td><%=record.get(i).getOther()%></td>
+                <td><%=record.get(i).getTime()%></td>
                 <td>
                     <div class="button-group">
-                        <a type="button" class="button border-main" href="${pageContext.request.contextPath}/article?id=<%=travel.get(i).getId()%>" target="_blank"><span class="icon-edit"></span>查看</a>
-                        <a type="button" class="button border-main" href="${pageContext.request.contextPath}/operative/addtoindex?id=<%=travel.get(i).getId()%>"><span class="icon-edit"></span>添加到首页</a>
-                        <a class="button border-red" href="${pageContext.request.contextPath}/operative/article?id=<%=travel.get(i).getId()%>"  ><span class="icon-trash-o"></span> 删除</a>
-                        <a type="button" class="button border-main" href="${pageContext.request.contextPath}/operative/addtomdd?id=<%=travel.get(i).getId()%>"><span class="icon-edit"></span>添加到目的地</a>
+                        <a class="button border-red" href="${pageContext.request.contextPath}/operative/delorder?id=<%=record.get(i).getId()%>"  >
+                            <span class="icon-trash-o"></span> 删除</a>
                     </div>
                 </td>
             </tr>

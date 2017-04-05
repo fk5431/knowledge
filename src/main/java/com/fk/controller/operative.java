@@ -4,8 +4,8 @@ import com.fk.bean.*;
 import com.fk.service.*;
 import com.fk.util.CommonConst;
 import com.fk.util.MD5;
+import com.google.common.collect.Lists;
 import org.apache.commons.io.FileUtils;
-import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,7 +14,6 @@ import org.springframework.web.context.ContextLoader;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpServletRequest;
-import javax.sound.sampled.Line;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -773,5 +772,56 @@ public class operative {
             return "error";
         }
 
+    }
+    @RequestMapping("/operative/delorder")
+    public String delorder(HttpServletRequest request, Map<String, Object> map){
+       String id = request.getParameter("id");
+
+       recordService.deleteByPrimaryKey(Integer.parseInt(id));
+       return manshop(request, map);
+    }
+    @RequestMapping("/operative/manshop")
+    public String manshop(HttpServletRequest request, Map<String, Object> map){
+        try{
+            int count = recordService.count();
+            int page = 1;
+            if(count % SIZE == 0)
+                page = count / SIZE;
+            else
+                page = count / SIZE + CommonConst.ONE_INT;
+            map.put("count", count);
+            map.put("size", SIZE);
+            map.put("page", page);
+            String page_ = request.getParameter("page");
+            int toPage;
+            if(page_ == null || "".equals(page_)){
+                toPage = 1;
+            }else {
+                toPage = Integer.parseInt(page_);
+            }
+            if(toPage > page){
+                toPage = page;
+            }
+            map.put("pageNow", toPage);
+            int start = (toPage - 1) * SIZE;
+            List<RecordBean> list = recordService.selectByStart(start);
+            List<String> title = Lists.newArrayList();
+            map.put("record", list);
+            for(RecordBean r : list){
+                int orders = r.getOrderid();
+                String t = ordersService.selectByPrimaryKey(orders).getTitle();
+                title.add(t);
+            }
+            map.put("title", title);
+            return "operative/opeshop";
+        }catch (Exception e){
+            map.put("count", 0);
+            map.put("size", SIZE);
+            map.put("page", 1);
+            map.put("pageNow", 1);
+            map.put("record", Lists.newArrayList());
+            map.put("record", Lists.newArrayList());
+            return "operative/opeshop";
+        }
     }
 }

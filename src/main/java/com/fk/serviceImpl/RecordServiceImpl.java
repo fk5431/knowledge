@@ -36,4 +36,24 @@ public class RecordServiceImpl implements IRecordService {
     public int insertSelective(RecordBean record) {
         return recordDao.insertSelective(record);
     }
+
+    @Override
+    public List<RecordBean> selectAll() {
+        return recordDao.selectAll();
+    }
+
+    @Override
+    public int count() {
+        return recordDao.count();
+    }
+
+    @Override
+    public List<RecordBean> selectByStart(int start) {
+        return recordDao.selectByStart(start);
+    }
+
+    @Override
+    public int deleteByPrimaryKey(Integer id) {
+        return recordDao.deleteByPrimaryKey(id);
+    }
 }

@@ -19,4 +19,10 @@ public interface RecordDao {
 
     List<RecordBean> selectByForginId(Integer id);
     int deleteByForginId(Integer id);
+
+    List<RecordBean> selectAll();
+
+    int count();
+
+    List<RecordBean> selectByStart(int start);
 }

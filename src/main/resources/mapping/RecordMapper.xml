@@ -19,6 +19,22 @@
   <sql id="Base_Column_List" >
     id, name, price, num, time, type, orderId, adress, email, wechat, mob, other, userId
   </sql>
+  <select id="count" resultType="int">
+    select
+    count(*)
+    from record
+  </select>
+  <select id="selectByStart" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select
+    <include refid="Base_Column_List" />
+    from record
+    limit #{start, jdbcType=INTEGER},10
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select
+    <include refid="Base_Column_List" />
+    from record
+  </select>
   <select id="selectByForginId" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
     select
     <include refid="Base_Column_List" />
