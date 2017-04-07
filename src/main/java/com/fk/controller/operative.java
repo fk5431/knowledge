@@ -3,6 +3,7 @@ package com.fk.controller;
 import com.fk.bean.*;
 import com.fk.service.*;
 import com.fk.util.CommonConst;
+import com.fk.util.Login;
 import com.fk.util.MD5;
 import com.google.common.collect.Lists;
 import org.apache.commons.io.FileUtils;
@@ -13,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.context.ContextLoader;
 import org.springframework.web.multipart.MultipartFile;
 
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import java.io.File;
 import java.io.IOException;
@@ -34,6 +36,9 @@ public class operative {
 
     @Autowired
     ITravelService travelService;
+
+    @Autowired
+    IAuditService auditService;
 
     @Autowired
     ITypeService typeService;
@@ -68,6 +73,9 @@ public class operative {
 
     @Autowired
     IPromoService promoService;
+
+    @Autowired
+    IUsertravelService usertravelService;
 
     private static final int SIZE = 10;
 
@@ -136,13 +144,56 @@ public class operative {
         return "/operative/column";
     }
 
+    @RequestMapping("/operative/user")
+    public String audit(HttpServletRequest request, Map<String, Object> map){
+        try{
+            int count = auditService.count();
+            int page = 1;
+            if(count % SIZE == 0)
+                page = count / SIZE;
+            else
+                page = count / SIZE + CommonConst.ONE_INT;
+            map.put("count", count);
+            map.put("size", SIZE);
+            map.put("page", page);
+            String page_ = request.getParameter("page");
+            int toPage;
+            if(page_ == null || "".equals(page_)){
+                toPage = 1;
+            }else {
+                toPage = Integer.parseInt(page_);
+            }
+            if(toPage > page){
+                toPage = page;
+            }
+            map.put("pageNow", toPage);
+            int start = (toPage - 1) * SIZE;
+            List<AuditBean> list = auditService.selectByStart(start);
+            map.put("travel", list);
+        }catch (Exception e){
+            map.put("travel", new ArrayList<AuditBean>());
+        }
+
+
+        return "/operative/audit";
+    }
+
     @RequestMapping("/operative/article")
     public String del(HttpServletRequest request, Map<String, Object> map){
 
         String id = request.getParameter("id");
         travelService.deleteByPrimaryKey(Integer.parseInt(id));
-
+        usertravelService.deleteByTravelKey(Integer.parseInt(id));
         return column(request, map);
+    }
+
+    @RequestMapping("/operative/articleuser")
+    public String deluser(HttpServletRequest request, Map<String, Object> map){
+
+        String id = request.getParameter("id");
+        auditService.deleteByPrimaryKey(Integer.parseInt(id));
+        usertravelService.deleteByTravelKeyAnd0(Integer.parseInt(id));
+        return audit(request, map);
     }
     @RequestMapping("/operative/delshop")
     public String delshop(HttpServletRequest request, Map<String, Object> map){
@@ -415,6 +466,65 @@ public class operative {
             return "error";
         }
     }
+
+
+
+    @RequestMapping("/operative/agree")
+    public String agree(HttpServletRequest request, Map<String, Object> map){
+
+        int travelId = Integer.parseInt(request.getParameter("id"));
+        AuditBean auditBean = auditService.selectByPrimaryKey(travelId);
+        auditService.deleteByPrimaryKey(travelId);
+        TravelBean travelBean = new TravelBean();
+        travelBean.setTitle(auditBean.getTitle());
+        travelBean.setCount(0);
+        travelBean.setImage(auditBean.getImage());
+        travelBean.setType(auditBean.getType());
+        travelBean.setAuthor(auditBean.getAuthor());
+        travelBean.setContext(auditBean.getContext());
+        travelBean.setLine(auditBean.getLine());
+        travelBean.setLookcount(0);
+        travelBean.setTime(new Date());
+        travelBean.setPlace(auditBean.getPlace());
+        travelBean.setSummary(auditBean.getSummary());
+        travelService.insertSelective(travelBean);
+
+        UsertravelBean usertravelBean = usertravelService.selectByTravelId(auditBean.getId());
+        usertravelBean.setStatus(1);
+        usertravelBean.setTravelid(travelBean.getId());
+        usertravelService.updateByPrimaryKey(usertravelBean);
+
+        TypeBean typeBean = typeService.selectByPrimaryKey(Integer.parseInt(auditBean.getType()));
+        typeBean.setCount(typeBean.getCount()==null?0:typeBean.getCount() + CommonConst.ONE_INT);
+        typeService.updateByPrimaryKey(typeBean);
+        String spe = auditBean.getSmallimage();
+        ProvinceBean provinceBean = provinceService.selectByname(spe);
+        ContinentBean continentBean = continentService.selectByName(spe);
+        if(provinceBean != null){
+            provinceBean.setCount(provinceBean.getCount() + CommonConst.ONE_INT);
+            String str = provinceBean.getTravelid();
+            if(str == null || "".equals(str)){
+                provinceBean.setTravelid(String.valueOf(travelId));
+            }else{
+                provinceBean.setTravelid(provinceBean.getTravelid() + CommonConst.SPLITOR + String.valueOf(travelId));
+            }
+            provinceService.updateByPrimaryKey(provinceBean);
+        }else if(continentBean != null){
+            continentBean.setCount(continentBean.getCount() + CommonConst.ONE_INT);
+            String str = continentBean.getTraveid();
+            if(str == null || "".equals(str)){
+                continentBean.setTraveid(String.valueOf(travelId));
+            }else {
+                continentBean.setTraveid(continentBean.getTraveid() + CommonConst.SPLITOR + String.valueOf(travelId));
+            }
+            continentService.updateByPrimaryKey(continentBean);
+        }
+
+
+
+        return column(request, map);
+    }
+
     @RequestMapping("/operative/pass")
     public String pass(HttpServletRequest request, Map<String, Object> map){
         int count = ordersService.count();

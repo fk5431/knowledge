@@ -134,7 +134,7 @@
                             Integer pageAll = (Integer)request.getAttribute("page");
                             Integer pageNow = (Integer)request.getAttribute("pageNow");
 
-                            for(int i=1;i<= pageAll.intValue() - pageNow.intValue() + 1;i++){
+                            for(int i=1;i<= pageAll.intValue() ;i++){
                                 if(i == pageNow.intValue()){
                         %>
                         <span class="pg-current"><%=i %></span>

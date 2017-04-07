@@ -37,4 +37,5 @@ public class CommonConst {
     public static final String OPASS = "admin";
 
 
+    public static final String STATUS = "status";
 }

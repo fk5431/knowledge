@@ -1,14 +1,8 @@
 package com.fk.controller;
 
-import com.fk.bean.ContinentBean;
-import com.fk.bean.ProvinceBean;
-import com.fk.bean.TravelBean;
-import com.fk.bean.TypeBean;
+import com.fk.bean.*;
 import com.fk.dao.TravelDao;
-import com.fk.service.IContinentService;
-import com.fk.service.IProvinceService;
-import com.fk.service.ITravelService;
-import com.fk.service.ITypeService;
+import com.fk.service.*;
 import com.fk.serviceImpl.ContinentServiceImpl;
 import com.fk.serviceImpl.ProvinceServiceImpl;
 import com.fk.serviceImpl.TravelServiceImpl;
@@ -35,6 +29,9 @@ public class ContentC {
 
     @Autowired
     public ITravelService travelService;
+
+    @Autowired
+    public IAuditService auditService;
 
     @Autowired
     public IProvinceService provinceService;
@@ -102,6 +99,20 @@ public class ContentC {
         TravelBean travelBean = travelService.selectByPrimaryKey(Integer.parseInt(id));
         travelBean.setLookcount(travelBean.getLookcount() + CommonConst.ONE_INT);
         travelService.updateByPrimaryKey(travelBean);
+        map.put("travel", travelBean);
+        if(Login.islogin(request)){
+            map.put(CommonConst.LOGIN, CommonConst.YES);
+        }
+        return "context";
+    }
+
+    @RequestMapping("/articleuser")
+    public String articleuser(HttpServletRequest request, Map<String, Object> map){
+        map.put("index", CommonConst.THREE_INT);
+        String id = request.getParameter("id");
+        AuditBean travelBean = auditService.selectByPrimaryKey(Integer.parseInt(id));
+        travelBean.setLookcount(travelBean.getLookcount() + CommonConst.ONE_INT);
+        auditService.updateByPrimaryKey(travelBean);
         map.put("travel", travelBean);
         if(Login.islogin(request)){
             map.put(CommonConst.LOGIN, CommonConst.YES);
