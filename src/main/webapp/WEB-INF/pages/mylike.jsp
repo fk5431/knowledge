@@ -96,7 +96,7 @@
 
                 <div class="MAvaMore clearfix">
                     <div class="MAvaNums">
-                        <strong><a href="${pageContext.request.contextPath}/mylike" target="_blank">${like}</a></strong>
+                        <strong><a href="${pageContext.request.contextPath}/mylike" target="_blank">${count}</a></strong>
                         <p>喜欢</p>
                     </div>
                     <div class="MAvaNums">
@@ -181,75 +181,15 @@
                 </div>
             </div>
             <div class="common_block my_notes">
-                <div class="common_title clearfix">
-                    <h2>我的游记</h2>
-                </div>
-                <div class="notes_default_v2">
-                    <%
-                        String status = (String) request.getAttribute("status");
-                        if(status.equals("0")){
-                    %>
-                    <div class="notes_dcon">
-                        </div>
-                    <%}%>
-                    <a href="${pageContext.request.contextPath}/addarticle" title="写游记" class="btn_write"><i></i>写游记</a>
-                </div>
                 <div class="common_block my_notes">
                     <div class="notes_list">
-                <%
-                    if(!status.equals("0")){
-                %>
                 <ul>
                     <li>
                         <dl>
-                            <dt>
-                                <a ><img src="${pageContext.request.contextPath}/images/my/default.jpg" height="400" width="680" alt="封面"></a>
-                            <div class="hover_item">
-                                <div class="thumb_description">
-                                </div>
-                            <%
-                                String audit = (String)request.getAttribute("audit");
-                                if(audit.equals("0")){
-                            %>
-                                <div class="notes_status">
-                                    <span class="flt1 notes_handles tips">游记正在审核中呢~</span>
-                                </div>
-                            <%}%>
-                            </div>
-                            </dt>
-                            <%
-                                List<AuditBean> auditBeans = (List)request.getAttribute("auditBeans");
-                                for(int i=0;i<auditBeans.size();i++){
-                            %>
-                            <dd>
-                                <div class="note_title clearfix">
-                                    <div class="MDing">
-                                        <span id="topvote6847007">0</span><a href="${pageContext.request.contextPath}/notaudit" title="顶一下">顶</a>
-                                    </div>
-                                    <div class="note_info">
-                                        <h3 >
-                                            <a href="${pageContext.request.contextPath}/articleuser?id=<%=auditBeans.get(i).getId()%>" target="_blank" title="个人游记">个人游记</a></h3>
-                                        <div class="note_more">
-                                            <span class="MInfoNum"><i class="MIcoView"></i><em><%=auditBeans.get(i).getLookcount()%></em></span>
-                                            <span class="MInfoNum"><i class="MIcoStar"></i><em><%=auditBeans.get(i).getCount()%></em></span>
-                                            <span class="time"><%=auditBeans.get(i).getTime()%></span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="note_word">
-                                    <%=auditBeans.get(i).getSummary()%>
-                                </div>
-                            </dd>
-                            <%}%>
                             <%
                                 List<TravelBean> travel = (List)request.getAttribute("travel");
                                 for(int i=0;i<travel.size();i++){
-                                    if( i == 0){
                             %>
-                            <div class="notes_status"  style="position: relative;bottom: 0px;">
-                                <span class="flt1 notes_handles tips">游记审核过拉~</span>
-                            </div>
-                            <%}%>
                             <dd>
                                 <div class="note_title clearfix">
                                     <div class="MDing">
@@ -273,10 +213,9 @@
                         </dl>
                     </li>
                 </ul>
-                <%}%>
                     </div>
                 <div class="more_notes">
-                    <a href="/u/72219900/note.html">共<strong>${count}</strong>篇随笔</a>
+                    <a href="/u/72219900/note.html">共<strong>${count}</strong>篇顶过</a>
                 </div>
             </div>
             </div>

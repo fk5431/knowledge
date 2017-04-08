@@ -12,7 +12,7 @@
   author VARCHAR(255) NOT NULL,
   line VARCHAR(255) NOT NULL,
   count int(11) DEFAULT 0,
-  lookcount int(11) DEFAULT 0,
+  lookcount int(11) DEFAULT 0
 )DEFAULT CHARSET=utf8;
 CREATE TABLE audit (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -28,7 +28,6 @@ CREATE TABLE audit (
   `count` int(11) DEFAULT '0',
   `lookcount` int(11) DEFAULT '0',
   `summary` varchar(255) NOT NULL,
-  `subject` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
 INSERT INTO traveltips(id, time, place, image, title, context, type, author, line, summary, subject) VALUES(8, '2016-03-01 5:11:00','成都','/images/test/1.jpeg','10大成都骨灰级小吃','有一篇名为《被本地吃货吐槽最多的成都名小吃》的文章在网上广为传播，蚂小蜂看完觉得坐不住了，因为——多少吃货同党们到天府之国不就为了一己“食”欲、一饱口福么！','美食','冯凯','line','','');

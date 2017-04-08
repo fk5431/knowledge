@@ -4,6 +4,7 @@ import com.fk.bean.*;
 import com.fk.service.*;
 import com.fk.util.CommonConst;
 import com.fk.util.Login;
+import com.google.common.collect.Lists;
 import org.apache.commons.io.FileUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -16,10 +17,7 @@ import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import java.io.File;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 /**
  * Created by fengkai on 05/04/17.
@@ -45,6 +43,12 @@ public class My {
 
     @Autowired
     IAuditService auditService;
+
+    @Autowired
+    ITravelService travelService;
+
+    @Autowired
+    ILiketravelService liketravelService;
 
 
     @RequestMapping(value = "addarticle")
@@ -77,6 +81,62 @@ public class My {
         }else {
             map.put(CommonConst.LOGIN, CommonConst.YES);
         }
+        User user = getUser(request, map);
+
+        List<UsertravelBean> usertravelBeans = usertravelService.selectByUserId(user.getId());
+        if(usertravelBeans == null || usertravelBeans.size() == 0){
+            map.put(CommonConst.STATUS, "0");
+        }else{
+            map.put(CommonConst.STATUS, "1");
+            Collections.sort(usertravelBeans, new Comparator<UsertravelBean>() {
+                        @Override
+                        public int compare(UsertravelBean o1, UsertravelBean o2) {
+                            int c = o1.getStatus().compareTo(o2.getStatus());
+                            return c;
+//                            if(c > 0){
+//                                return -1;
+//                            }else if(c == 0){
+//                                return  0;
+//                            }else {
+//                                return 1;
+//                            }
+                        }
+                    }
+            );
+//            map.put("info", usertravelBeans);
+            ArrayList<TravelBean> travel = Lists.newArrayList();
+            ArrayList<AuditBean> auditBeans = Lists.newArrayList();
+            for(UsertravelBean u :usertravelBeans){
+                if(u.getStatus() == 0){
+                    auditBeans.add(auditService.selectByPrimaryKey(u.getTravelid()));
+                }else if(u.getStatus() == 1){
+                    travel.add(travelService.selectByPrimaryKey(u.getTravelid()));
+                }
+            }
+            map.put("travel",travel.size()>CommonConst.THREE_INT?travel.subList(0,3):travel);
+            map.put("auditBeans",auditBeans.size()>CommonConst.THREE_INT?auditBeans.subList(0,3):auditBeans);
+            map.put("count", travel.size()+auditBeans.size());
+            if(usertravelBeans.get(0).getStatus() == 0){
+                map.put("audit", "0");
+            }else{
+                map.put("audit", "1");
+            }
+        }
+
+        List<TravelBean> travelBeans = Lists.newArrayList();
+        List<LiketravelBean> liketravelBeans = liketravelService.selectByUserId(user.getId());
+        for(LiketravelBean l : liketravelBeans){
+            TravelBean travelBean = travelService.selectByPrimaryKey(l.getTravelid());
+            if(travelBean !=null)
+                travelBeans.add(travelBean);
+        }
+        map.put("like",travelBeans.size());
+
+
+        return "my";
+    }
+
+    private User getUser(HttpServletRequest request, Map<String, Object> map) {
         String userId = "0";
         Cookie[] cookies = request.getCookies();
         for(Cookie c : cookies){
@@ -88,17 +148,35 @@ public class My {
 
         map.put("index", CommonConst.FIVE_INT);
         map.put("user", user);
-
-        List<UsertravelBean> usertravelBeans = usertravelService.selectByUserId(user.getId());
-        if(usertravelBeans == null || usertravelBeans.size() == 0){
-            map.put(CommonConst.STATUS, "0");
-        }else{
-            map.put(CommonConst.STATUS, "1");
-        }
-
-        return "my";
+        return user;
     }
 
+    @RequestMapping("notaudit")
+    public String notaudit(HttpServletRequest request , Map<String, Object> map){
+        map.put("errorcode", 13);
+
+        return "error";
+    }
+    @RequestMapping("/mylike")
+    public String mylike(HttpServletRequest request , Map<String, Object> map){
+        if(!Login.islogin(request)){
+            return "login";
+        }else {
+            map.put(CommonConst.LOGIN, CommonConst.YES);
+        }
+        User user = getUser(request, map);
+
+        List<TravelBean> travelBeans = Lists.newArrayList();
+        List<LiketravelBean> liketravelBeans = liketravelService.selectByUserId(user.getId());
+        for(LiketravelBean l : liketravelBeans){
+            TravelBean travelBean = travelService.selectByPrimaryKey(l.getTravelid());
+            if(travelBean !=null)
+                travelBeans.add(travelBean);
+        }
+        map.put("travel", travelBeans);
+        map.put("count",travelBeans.size());
+        return "mylike";
+    }
 
     @RequestMapping("/operative/useraddart")
     public String useraddart(HttpServletRequest request, @RequestParam("image") MultipartFile file, Map<String, Object> map){

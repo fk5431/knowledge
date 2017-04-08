@@ -14,9 +14,9 @@
     <script language="javascript"
             src="${pageContext.request.contextPath}/js/index_3.js"
             type="text/javascript"></script>
-
-    <link href="${pageContext.request.contextPath}/css/content_1.css"
+    <link href="${pageContext.request.contextPath}/css/content_list_1.css"
           rel="stylesheet" type="text/css">
+
     <link href="${pageContext.request.contextPath}/css/context.css"
           rel="stylesheet" type="text/css">
     <link href="${pageContext.request.contextPath}/css/content_2.css"

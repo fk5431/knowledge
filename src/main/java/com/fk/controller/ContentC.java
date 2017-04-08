@@ -14,6 +14,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import java.util.ArrayList;
 import java.util.List;
@@ -41,6 +42,9 @@ public class ContentC {
 
     @Autowired
     public ITypeService typeService;
+
+    @Autowired
+    public ILiketravelService liketravelService;
 
     private static final int SIZE = CommonConst.SIX_INT;
 
@@ -126,11 +130,22 @@ public class ContentC {
             //map.put(CommonConst.LOGIN, CommonConst.YES);
             return "login";
         }
+        String userId = "0";
+        Cookie[] cookies = request.getCookies();
+        for(Cookie c: cookies){
+            if(c.getName().equals(CommonConst.USERID)){
+                userId = c.getValue();
+            }
+        }
         String id = request.getParameter("id");
         if(id!=null) {
             TravelBean travelBean = travelService.selectByPrimaryKey(Integer.parseInt(id));
             travelBean.setCount(travelBean.getCount() + CommonConst.ONE_INT);
             travelService.updateByPrimaryKey(travelBean);
+            LiketravelBean liketravelBean = new LiketravelBean();
+            liketravelBean.setTravelid(travelBean.getId());
+            liketravelBean.setUserid(Integer.parseInt(userId));
+            liketravelService.insertSelective(liketravelBean);
         }
 
         return article(request, map);

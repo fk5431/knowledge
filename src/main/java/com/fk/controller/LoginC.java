@@ -43,6 +43,9 @@ public class LoginC {
     @Autowired
     IOrdersService iOrdersService;
 
+    @Autowired
+    ILiketravelService liketravelService;
+
     @RequestMapping("/")
     public String index(HttpServletRequest request, Map<String, Object> map){
         //首页最上面样式
@@ -262,11 +265,22 @@ public class LoginC {
             //map.put(CommonConst.LOGIN, CommonConst.YES);
             return "login";
         }
+        String userId = "0";
+        Cookie[] cookies = request.getCookies();
+        for(Cookie c: cookies){
+            if(c.getName().equals(CommonConst.USERID)){
+                userId = c.getValue();
+            }
+        }
         String id = request.getParameter("id");
         if(id!=null) {
             TravelBean travelBean = travelService.selectByPrimaryKey(Integer.parseInt(id));
             travelBean.setCount(travelBean.getCount() + CommonConst.ONE_INT);
             travelService.updateByPrimaryKey(travelBean);
+            LiketravelBean liketravelBean = new LiketravelBean();
+            liketravelBean.setTravelid(travelBean.getId());
+            liketravelBean.setUserid(Integer.parseInt(userId));
+            liketravelService.insertSelective(liketravelBean);
         }
         return index(request, map);
     }

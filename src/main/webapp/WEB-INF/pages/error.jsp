@@ -51,6 +51,9 @@
     }else if (errorcode == 12){
         alert("商城轮播图最多3个");
         window.history.back(-1);
+    }else if (errorcode == 13){
+        alert("审核还未通过呢");
+        window.history.back(-1);
     }
 
 </script>
