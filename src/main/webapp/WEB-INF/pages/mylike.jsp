@@ -154,8 +154,8 @@
                     </li>
                     <li><a href="${pageContext.request.contextPath}/mywhere" target="_blank"><i class="add_footprint"></i><span>历史足迹</span></a></li>
                     <li><a href="${pageContext.request.contextPath}/mylike" target="_blank"><i class="ask_expert"></i><span>我感兴趣</span></a></li>
-                    <li class="last"><a href="${pageContext.request.contextPath}/myfriend" target="_blank"><i
-                            class="invite_friends"></i><span>发布结伴</span></a></li>
+                    <li class="last"><a <%--href="${pageContext.request.contextPath}/myfriend"--%> target="_blank"><i
+                            class="invite_friends"></i><span><%--发布结伴--%>敬请期待</span></a></li>
                 </ul>
                 <div class="open_corner">
                     <a role="button" id="_j_profile_setting"><span><i></i></span></a>
@@ -215,7 +215,7 @@
                 </ul>
                     </div>
                 <div class="more_notes">
-                    <a href="/u/72219900/note.html">共<strong>${count}</strong>篇顶过</a>
+                    <a href="${pageContext.request.contextPath}/alluserart">共<strong>${count}</strong>篇顶过</a>
                 </div>
             </div>
             </div>

@@ -40,6 +40,8 @@ public class My {
     @Autowired
     IUsertravelService usertravelService;
 
+    @Autowired
+    IRecordService recordService;
 
     @Autowired
     IAuditService auditService;
@@ -49,6 +51,9 @@ public class My {
 
     @Autowired
     ILiketravelService liketravelService;
+
+    @Autowired
+    IOrdersService ordersService;
 
 
     @RequestMapping(value = "addarticle")
@@ -178,6 +183,57 @@ public class My {
         return "mylike";
     }
 
+    @RequestMapping("alluserart")
+    public String alluserart(HttpServletRequest request, Map<String, Object> map) {
+        if (!Login.islogin(request)) {
+            return "login";
+        } else {
+            map.put(CommonConst.LOGIN, CommonConst.YES);
+        }
+        User user = getUser(request, map);
+
+        List<UsertravelBean> usertravelBeans = usertravelService.selectByUserId(user.getId());
+        if (usertravelBeans == null || usertravelBeans.size() == 0) {
+            map.put(CommonConst.STATUS, "0");
+        } else {
+            map.put(CommonConst.STATUS, "1");
+            ArrayList<TravelBean> travel = Lists.newArrayList();
+            for (UsertravelBean u : usertravelBeans) {
+                if (u.getStatus() == 1) {
+                    travel.add(travelService.selectByPrimaryKey(u.getTravelid()));
+                }
+            }
+            map.put("travel", travel);
+            map.put("count", travel.size());
+        }
+        return "alluserart";
+    }
+    @RequestMapping("mywhere")
+    public String mywhere(HttpServletRequest request, Map<String, Object> map) {
+        if (!Login.islogin(request)) {
+            return "login";
+        } else {
+            map.put(CommonConst.LOGIN, CommonConst.YES);
+        }
+        User user = getUser(request, map);
+
+        List<RecordBean> recordBeans = recordService.selectAll();
+        List<RecordBean> returnRecord = Lists.newArrayList();
+        List<OrdersBean> order = Lists.newArrayList();
+        for(RecordBean r : recordBeans){
+            if(r.getUserid() == user.getId()){
+                returnRecord.add(r);
+                OrdersBean ordersBean = ordersService.selectByPrimaryKey(r.getOrderid());
+                order.add(ordersBean);
+            }
+        }
+
+        map.put("record", returnRecord);
+        map.put("order", order);
+        map.put("count", order.size());
+
+        return "mywhere";
+    }
     @RequestMapping("/operative/useraddart")
     public String useraddart(HttpServletRequest request, @RequestParam("image") MultipartFile file, Map<String, Object> map){
         try{

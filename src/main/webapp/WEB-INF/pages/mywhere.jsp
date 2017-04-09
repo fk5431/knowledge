@@ -1,7 +1,5 @@
 <%@ page import="java.util.List" %>
-<%@ page import="com.fk.bean.UsertravelBean" %>
-<%@ page import="com.fk.bean.AuditBean" %>
-<%@ page import="com.fk.bean.TravelBean" %><%--
+<%@ page import="com.fk.bean.*" %><%--
   Created by IntelliJ IDEA.
   User: fengkai
   Date: 17/03/17
@@ -96,7 +94,7 @@
 
                 <div class="MAvaMore clearfix">
                     <div class="MAvaNums">
-                        <strong><a href="${pageContext.request.contextPath}/mylike" target="_blank">${like}</a></strong>
+                        <strong><a href="${pageContext.request.contextPath}/mylike" target="_blank">${count}</a></strong>
                         <p>喜欢</p>
                     </div>
                     <div class="MAvaNums">
@@ -154,7 +152,7 @@
                     </li>
                     <li><a href="${pageContext.request.contextPath}/mywhere" target="_blank"><i class="add_footprint"></i><span>历史足迹</span></a></li>
                     <li><a href="${pageContext.request.contextPath}/mylike" target="_blank"><i class="ask_expert"></i><span>我感兴趣</span></a></li>
-                    <li class="last"><a<%-- href="${pageContext.request.contextPath}/myfriend"--%> target="_blank"><i
+                    <li class="last"><a <%--href="${pageContext.request.contextPath}/myfriend"--%> target="_blank"><i
                             class="invite_friends"></i><span><%--发布结伴--%>敬请期待</span></a></li>
                 </ul>
                 <div class="open_corner">
@@ -181,102 +179,42 @@
                 </div>
             </div>
             <div class="common_block my_notes">
-                <div class="common_title clearfix">
-                    <h2>我的游记</h2>
-                </div>
-                <div class="notes_default_v2">
-                    <%
-                        String status = (String) request.getAttribute("status");
-                        if(status.equals("0")){
-                    %>
-                    <div class="notes_dcon">
-                        </div>
-                    <%}%>
-                    <a href="${pageContext.request.contextPath}/addarticle" title="写游记" class="btn_write"><i></i>写游记</a>
-                </div>
                 <div class="common_block my_notes">
                     <div class="notes_list">
-                <%
-                    if(!status.equals("0")){
-                %>
                 <ul>
                     <li>
                         <dl>
-                            <dt>
-                                <a ><img src="${pageContext.request.contextPath}/images/my/default.jpg" height="400" width="680" alt="封面"></a>
-                            <div class="hover_item">
-                                <div class="thumb_description">
-                                </div>
                             <%
-                                String audit = (String)request.getAttribute("audit");
-                                if(audit.equals("0")){
-                            %>
-                                <div class="notes_status">
-                                    <span class="flt1 notes_handles tips">游记正在审核中呢~</span>
-                                </div>
-                            <%}%>
-                            </div>
-                            </dt>
-                            <%
-                                List<AuditBean> auditBeans = (List)request.getAttribute("auditBeans");
-                                for(int i=0;i<auditBeans.size();i++){
+                                List<RecordBean> record = (List)request.getAttribute("record");
+                                List<OrdersBean> order = (List)request.getAttribute("order");
+                                for(int i=0;i<record.size();i++){
                             %>
                             <dd>
                                 <div class="note_title clearfix">
                                     <div class="MDing">
-                                        <span id="topvote6847007">0</span><a href="${pageContext.request.contextPath}/notaudit" title="顶一下">顶</a>
+                                        <span id="topvote6847007"></span><a href="${pageContext.request.contextPath}/shop?id=<%=record.get(i).getOrderid()%>">看</a>
                                     </div>
                                     <div class="note_info">
                                         <h3 >
-                                            <a href="${pageContext.request.contextPath}/articleuser?id=<%=auditBeans.get(i).getId()%>" target="_blank" title="个人游记">个人游记</a></h3>
+                                            <a href="${pageContext.request.contextPath}/shop?id=<%=record.get(i).getOrderid()%>" target="_blank"><%=order.get(i).getTitle()%></a></h3>
                                         <div class="note_more">
-                                            <span class="MInfoNum"><i class="MIcoView"></i><em><%=auditBeans.get(i).getLookcount()%></em></span>
-                                            <span class="MInfoNum"><i class="MIcoStar"></i><em><%=auditBeans.get(i).getCount()%></em></span>
-                                            <span class="time"><%=auditBeans.get(i).getTime()%></span>
+                                            <span class="MInfoNum">￥<em><%=record.get(i).getPrice()%></em></span>
+                                                <span class="MInfoNum"><i class="MIcoStar"></i><em><%=record.get(i).getNum()%></em></span>
+                                            <span class="time"><%=record.get(i).getTime()%></span>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="note_word">
-                                    <%=auditBeans.get(i).getSummary()%>
-                                </div>
-                            </dd>
-                            <%}%>
-                            <%
-                                List<TravelBean> travel = (List)request.getAttribute("travel");
-                                for(int i=0;i<travel.size();i++){
-                                    if( i == 0){
-                            %>
-                            <div class="notes_status"  style="position: relative;bottom: 0px;">
-                                <span class="flt1 notes_handles tips">游记审核过拉~</span>
-                            </div>
-                            <%}%>
-                            <dd>
-                                <div class="note_title clearfix">
-                                    <div class="MDing">
-                                        <span id="topvote6847007"><%=travel.get(i).getCount()%></span><a href="${pageContext.request.contextPath}/count?id=<%=travel.get(i).getId()%>" title="顶一下">顶</a>
-                                    </div>
-                                    <div class="note_info">
-                                        <h3 >
-                                            <a href="${pageContext.request.contextPath}/article?id=<%=travel.get(i).getId()%>" target="_blank" title="个人游记">个人游记</a></h3>
-                                        <div class="note_more">
-                                            <span class="MInfoNum"><i class="MIcoView"></i><em><%=travel.get(i).getLookcount()%></em></span>
-                                            <span class="MInfoNum"><i class="MIcoStar"></i><em><%=travel.get(i).getCount()%></em></span>
-                                            <span class="time"><%=travel.get(i).getTime()%></span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="note_word">
-                                    <%=travel.get(i).getSummary()%>
+                                     <%=record.get(i).getName()%>购买的该服务，收货地址是<%=record.get(i).getAdress()%>,联系方式是<%=record.get(i).getMob()%>,备注是<%=record.get(i).getOther()%>
                                 </div>
                             </dd>
                             <%}%>
                         </dl>
                     </li>
                 </ul>
-                <%}%>
                     </div>
                 <div class="more_notes">
-                    <a href="${pageContext.request.contextPath}/alluserart">共<strong>${count}</strong>篇随笔</a>
+                    <a>共去过<strong>${count}</strong>个地方</a>
                 </div>
             </div>
             </div>

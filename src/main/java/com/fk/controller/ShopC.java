@@ -232,6 +232,6 @@ public class ShopC {
             e.printStackTrace();
         }
 
-        return "my";
+        return sales(request, map);
     }
 }
