@@ -49,8 +49,8 @@
             </div>
         </div>
 
-        <form action="#" target="_blank" class="search-form" data-actform="search-click">
-            <input name="kw" class="search" maxlength="32" placeholder="找影人、演出" autocomplete="off" type="search">
+        <form action="${pageContext.request.contextPath}/search" target="_blank" class="search-form" data-actform="search-click">
+            <input name="kw" class="search" maxlength="32"  type="search">
             <input class="submit" value="" type="submit">
         </form>
     </div>
