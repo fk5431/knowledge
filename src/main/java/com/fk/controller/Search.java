@@ -201,6 +201,12 @@ public class Search {
 
     private String searchAll(HttpServletRequest request, Map<String, Object> map, String key) {
         map.put("index", 0);
+        List<ProvinceBean> provinceBeanList = provinceService.selectAll();
+        map.put("province", provinceBeanList);
+        List<ContinentBean> continentBeanList = continentService.selectAll();
+        map.put("continent",continentBeanList);
+        List<TypeBean> typeBeans = typeService.selectAll();
+        map.put("type", typeBeans);
 
         List<OrdersBean> ordersBeans = iOrdersService.selectByPlace(key);
         List<TravelBean> travelList = travelService.selectByPlace(key);

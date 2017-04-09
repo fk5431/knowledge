@@ -46,6 +46,9 @@ public class ContentC {
     @Autowired
     public ILiketravelService liketravelService;
 
+    @Autowired
+    public ICloudService cloudService;
+
     private static final int SIZE = CommonConst.SIX_INT;
 
     @RequestMapping("/content_list")
@@ -106,6 +109,27 @@ public class ContentC {
         map.put("travel", travelBean);
         if(Login.islogin(request)){
             map.put(CommonConst.LOGIN, CommonConst.YES);
+        }
+
+        Cookie[] cookies = request.getCookies();
+        String userId = "0";
+        for(Cookie c : cookies){
+            if(c.getName().equals(CommonConst.USERID)){
+                userId = c.getValue();
+            }
+        }
+        if(!userId.equals("0")){
+            CloudBean cloudBean = new CloudBean();
+            CloudBean t = cloudService.selectByPlaceAndUserId(travelBean.getPlace(), userId);
+            cloudBean.setUserid(Integer.parseInt(userId));
+            cloudBean.setCount(t==null?1:t.getCount() + 1);
+            cloudBean.setPlace(travelBean.getPlace());
+            cloudBean.setStatus(0);
+            if(t == null){
+                cloudService.insertSelective(cloudBean);
+            }else{
+                cloudService.updateByPrimaryKey(cloudBean);
+            }
         }
         return "context";
     }

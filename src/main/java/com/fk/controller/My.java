@@ -55,6 +55,9 @@ public class My {
     @Autowired
     IOrdersService ordersService;
 
+    @Autowired
+    ICloudService cloudService;
+
 
     @RequestMapping(value = "addarticle")
     public String addarticle(HttpServletRequest request, Map<String, Object> map){
@@ -137,7 +140,10 @@ public class My {
         }
         map.put("like",travelBeans.size());
 
-
+        List<CloudBean> cloudBeans0 = cloudService.selectByUserIdAndStatus0(user.getId());
+        List<CloudBean> cloudBeans1 = cloudService.selectByUserIdAndStatus1(user.getId());
+        map.put("cloud0", cloudBeans0);
+        map.put("cloud1", cloudBeans1);
         return "my";
     }
 

@@ -60,6 +60,9 @@ public class ShopC {
     @Autowired
     public IUserService userService;
 
+    @Autowired
+    public ICloudService cloudService;
+
     private static final int SIZE = CommonConst.SIX_INT;
 
     @RequestMapping("/shop")
@@ -85,6 +88,27 @@ public class ShopC {
         ordersService.updateByPrimaryKey(ordersBean);
         if(Login.islogin(request)){
             map.put(CommonConst.LOGIN, CommonConst.YES);
+        }
+
+        Cookie[] cookies = request.getCookies();
+        String userId = "0";
+        for(Cookie c : cookies){
+            if(c.getName().equals(CommonConst.USERID)){
+                userId = c.getValue();
+            }
+        }
+        if(!userId.equals("0")){
+            CloudBean cloudBean = new CloudBean();
+            CloudBean t = cloudService.selectByPlaceAndUserId(ordersBean.getPlace(), userId);
+            cloudBean.setUserid(Integer.parseInt(userId));
+            cloudBean.setCount(t==null?1:t.getCount() + 1);
+            cloudBean.setPlace(ordersBean.getPlace());
+            cloudBean.setStatus(1);
+            if(t == null){
+                cloudService.insertSelective(cloudBean);
+            }else{
+                cloudService.updateByPrimaryKey(cloudBean);
+            }
         }
         return "shop";
     }
