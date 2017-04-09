@@ -36,6 +36,9 @@
         alert("请登录您的邮箱完成密码找回！");
         this.window.opener = null;
         window.location.href = "https://www.baidu.com/s?ie=utf-8&f=8&rsv_bp=1&tn=baidu&wd=%E9%82%AE%E7%AE%B1&oq=js%2520%25E5%2585%25B3%25E9%2597%25AD%25E5%25BD%2593%25E5%2589%258D%25E9%25A1%25B5%25E9%259D%25A2&rsv_pq=fdbb7dee0006f039&rsv_t=7c13OZ8WwKax%2FiR9dJGKJxrmx%2FXQa7bnQF4Ut4Pz018OZ1uZ1kXcDFn26Lc&rqlang=cn&rsv_enter=1&inputT=2622&rsv_sug3=17&rsv_sug1=17&rsv_sug7=100&rsv_sug2=0&rsv_sug4=3596";
+    }else if (errorcode == 9){
+        alert("请输入整数！");
+        window.history.back(-1);
     }
 
 </script>

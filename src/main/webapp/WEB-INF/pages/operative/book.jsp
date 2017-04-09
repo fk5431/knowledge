@@ -47,6 +47,10 @@
         <li><a href="${pageContext.request.contextPath}/operative/der" ><span class="icon-caret-right"></span>演员添加</a></li>
         <li><a href="${pageContext.request.contextPath}/operative/per" ><span class="icon-caret-right"></span>助演添加</a></li>
         <li><a href="${pageContext.request.contextPath}/operative/type" ><span class="icon-caret-right"></span>分类管理</a></li>
+
+        <li><a href="${pageContext.request.contextPath}/operative/site" ><span class="icon-caret-right"></span>影院管理</a></li>
+        <li><a href="${pageContext.request.contextPath}/operative/addsite" ><span class="icon-caret-right"></span>影院添加</a></li>
+        <li><a href="${pageContext.request.contextPath}/operative/buy" ><span class="icon-caret-right"></span>订单管理</a></li>
     </ul>
 </div>
 <script type="text/javascript">

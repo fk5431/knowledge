@@ -1,6 +1,7 @@
 <%@ page import="java.util.List" %>
 <%@ page import="com.fk.bean.PerformerBean" %>
-<%@ page import="com.fk.bean.MovieBean" %><%--
+<%@ page import="com.fk.bean.MovieBean" %>
+<%@ page import="com.fk.bean.SiteBean" %><%--
   Created by IntelliJ IDEA.
   User: fengkai
   Date: 15/02/17
@@ -22,8 +23,7 @@
     </script>
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/file/file_1.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/file/file_2.css">
-    <script src="${pageContext.request.contextPath}/js/file/file_2.js"></script>
-    <script charset="utf-8" src="${pageContext.request.contextPath}/js/file/file_3.js"></script>
+    <link media="all" href="${pageContext.request.contextPath}/css/jquery-labelauty.css" type="text/css" rel="stylesheet">
     <link media="all" href="${pageContext.request.contextPath}/css/index.css" type="text/css" rel="stylesheet">
 </head>
 <body>
@@ -102,7 +102,6 @@
                         </div>
                     </a>
                 </div>
-                <a class="btn buy" href="${pageContext.request.contextPath}/buy?id=${movie.id}" target="_blank">立即购票</a>
             </div>
 
             <div class="movie-stats-container">
@@ -147,155 +146,71 @@
         <div class="main-content">
             <div class="tab-container">
                 <div class="tab-title-container clearfix">
-                    <div class="tab-title active">介绍</div>
-                    <div class="tab-title" >参演人员</div>
-                    <div class="tab-title">图集</div>
+                    <div class="tab-title active">在线购票</div>
                 </div>
                 <div class="tab-content-container">
                     <div class="tab-desc tab-content active">
                         <div class="module">
                             <div class="mod-title">
-                                <h3>剧情简介</h3>
+                                <h3>影院：</h3>
                             </div>
-                            <div class="mod-content">
-                                <span class="dra">
-                                    ${movie.introduce}
-                                </span>
-
-                            </div>
-                        </div>
-                        <div class="module">
-                            <div class="mod-title">
-                                <h3>演职人员</h3>
-                                <a class="more" href="#celebrity">全部</a>
-                            </div>
-                            <div class="mod-content">
-                                <div class="celebrity-container clearfix">
-
-                                    <div class="celebrity-group">
-                                        <div class="celebrity-type">
-                                            主演
-                                        </div>
-                                        <ul class="celebrity-list clearfix">
-                                            <li class="celebrity">
-                                                <a href="${pageContext.request.contextPath}/director?id=${director.id}" target="_blank" class="portrait">
-                                                    <img class="default-img" alt="" src="${director.image}">
-                                                </a>
-                                                <div class="info">
-                                                    <a href="${pageContext.request.contextPath}/director?id=${director.id}" target="_blank" class="name">
-                                                        ${director.name}
-                                                    </a>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </div>
-
-                                    <div class="celebrity-group">
-                                        <div class="celebrity-type">
-                                            演员
-                                        </div>
-                                        <ul class="celebrity-list clearfix">
-                                            <%
-                                                List<PerformerBean> performerBeans = (List)request.getAttribute("performer");
-                                                for(int i=0;i<4&&i<performerBeans.size();i++){
-                                            %>
-                                            <li class="celebrity actor">
-                                                <a href="${pageContext.request.contextPath}/performer?id=<%=performerBeans.get(i).getId()%>" target="_blank" class="portrait">
-                                                    <img class="default-img" alt="" src="<%=performerBeans.get(i).getImage()%>">
-                                                </a>
-                                                <div class="info">
-                                                    <a href="${pageContext.request.contextPath}/performer?id=<%=performerBeans.get(i).getId()%>" target="_blank" class="name">
-                                                        <%=performerBeans.get(i).getName()%>
-                                                    </a>
-                                                </div>
-                                            </li>
-                                            <%}%>
-                                        </ul>
-                                    </div>
-
-                                </div>
-
-                            </div>
-                        </div>
-                        <div class="module">
-                            <div class="mod-title">
-                                <h3>图集</h3>
-                                <a class="more" href="#img" data-act="all-photo-click">全部</a>
-                            </div>
-                            <div class="mod-content">
-                                <div class="album clearfix" data-act="movie-img-click">
+                            <style>
+                                ul { list-style-type: none;}
+                                li { display: inline-block;}
+                                li { margin: 10px 0;}
+                                input.labelauty + label { font: 12px "Microsoft Yahei";}
+                            </style>
+                            <form action="${pageContext.request.contextPath}/buymovie">
+                                <ul class="dowebok">
                                     <%
-                                        MovieBean movie = (MovieBean)request.getAttribute("movie");
-                                        String[] images = movie.getAtlas().split("!=end=!");
-                                        for (int i=0;i<5&&i<images.length;i++){
+                                        List<SiteBean> siteBeans = (List) request.getAttribute("site");
+                                        for(int i=0;i<siteBeans.size();i++){
+                                            if(i == 0){
                                     %>
-                                    <div class="img<%=i+1%>"><img class="default-img" alt="" src="<%=images[i]%>"></div>
-                                    <% } %>
-                                </div>
+                                    <li><input type="radio" name="radio"<%if(siteBeans.get(i).getStatus()== 0){%> disabled <%}%>checked data-labelauty="<%=siteBeans.get(i).getSite()%>" value="<%=siteBeans.get(i).getId()%>"></li>
+                                    <%}else{%>
+                                    <li><input type="radio" name="radio"<%if(siteBeans.get(i).getStatus()== 0){%> disabled <%}%> data-labelauty="<%=siteBeans.get(i).getSite()%>"  value="<%=siteBeans.get(i).getId()%>"></li>
+                                    <%}}%>
+                                </ul>
+                                <input hidden name="id" value="${movie.id}">
 
-                            </div>
+
+
+                                <style>
+                                    .button {
+                                        font-family: Arial;
+                                        color: #ffffff;
+                                        font-size: 35px;
+                                        padding: 13px;
+                                        text-decoration: none;
+                                        -webkit-border-radius: 28px;
+                                        -moz-border-radius: 28px;
+                                        border-radius: 28px;
+                                        -webkit-box-shadow: 0px 1px 3px #666666;
+                                        -moz-box-shadow: 0px 1px 3px #666666;
+                                        box-shadow: 0px 1px 3px #666666;
+                                        text-shadow: 1px 1px 3px #a3a3a3;
+                                        border: solid #4180eb 2px;
+                                        background: -webkit-gradient(linear, 0 0, 0 100%, from(#1f85de), to(#2068d4));
+                                        background: -moz-linear-gradient(top, #1f85de, #2068d4);
+                                    }
+                                    .button:hover {
+                                        background: #1f85de;
+                                    }
+                                </style>
+                                <button type="submit" class="button" value="提交"> 提交</button>
+                            </form>
+                                <script charset="utf-8" src="${pageContext.request.contextPath}/js/jquery-1.8.3.min.js"></script>
+                                <script charset="utf-8" src="${pageContext.request.contextPath}/js/jquery-labelauty.js"></script>
+                                <script>
+                                    $(function(){
+                                        $(':input').labelauty();
+                                    });
+                                </script>
                         </div>
 
                     </div>
-                    <div class="tab-celebrity tab-content">
-                        <div class="celebrity-container">
-                            <div class="celebrity-group">
-                                <div class="celebrity-type">
-                                    主演
-                                    <span class="num">（1）</span>
-                                </div>
 
-                                <ul class="celebrity-list clearfix">
-                                    <li class="celebrity " data-act="celebrity-click" data-val="{celebrityid:35331}">
-                                        <a href="${pageContext.request.contextPath}/director?id=${director.id}" target="_blank" class="portrait">
-                                            <img class="default-img" alt="" src="http://p1.meituan.net/movie/560a38ffc8dc68d4189e5c1bb058c15334759.jpg@128w_170h_1e_1c">
-                                        </a>
-                                        <div class="info">
-                                            <a href="${pageContext.request.contextPath}/director?id=${director.id}" target="_blank" class="name">
-                                                ${director.name}
-                                            </a>
-                                        </div>
-                                    </li>
-
-                                </ul>
-                            </div>
-                            <div class="celebrity-group">
-                                <div class="celebrity-type">
-                                    其他演员
-                                    <span class="num">（63）</span>
-                                </div>
-                                <ul class="celebrity-list clearfix">
-                                    <%
-                                        for(int i=0;i<performerBeans.size();i++){
-                                    %>
-                                    <li class="celebrity actor">
-                                        <a href="${pageContext.request.contextPath}/performer?id=<%=performerBeans.get(i).getId()%>" target="_blank" class="portrait">
-                                            <img class="default-img" alt="" src="<%=performerBeans.get(i).getImage()%>">
-                                        </a>
-                                        <div class="info">
-                                            <a href="${pageContext.request.contextPath}/performer?id=<%=performerBeans.get(i).getId()%>" target="_blank" class="name">
-                                                <%=performerBeans.get(i).getName()%>
-                                            </a>
-                                        </div>
-                                    </li>
-                                    <%}%>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="tab-img tab-content" >
-                        <ul class="clearfix">
-                            <%
-                                for (int i=0;i<images.length;i++){
-                            %>
-                            <li>
-                                <img class="default-img" data-act="movie-img-click" alt="" src="<%=images[i]%>">
-                            </li>
-                            <% } %>
-
-                        </ul>
-                    </div>
                 </div>
             </div>
         </div>
@@ -407,6 +322,8 @@
         </div>
     </div>
 </div>
+
+
 <div class="footer" style="visibility: visible;">
     <p>
         ©2017
@@ -453,8 +370,5 @@
         document.getElementById('index_4').className = 'active';
     }
 </script>
-<script src="${pageContext.request.contextPath}/js/file/file_4.js"></script>
-<script src="${pageContext.request.contextPath}/js/file/file_5.js"></script>
-
 
 </body></html>

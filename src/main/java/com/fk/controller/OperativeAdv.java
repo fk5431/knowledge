@@ -1,12 +1,12 @@
 package com.fk.controller;
 
-import com.fk.bean.DirectorBean;
-import com.fk.bean.PerformerBean;
-import com.fk.bean.TypeBean;
+import com.fk.bean.*;
 import com.fk.service.IDirectorService;
 import com.fk.service.IPerformerService;
+import com.fk.service.ISiteService;
 import com.fk.service.ITypeService;
 import com.fk.util.CommonConst;
+import com.fk.util.MD5;
 import org.apache.commons.io.FileUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -20,6 +20,7 @@ import java.io.File;
 import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.regex.Matcher;
@@ -39,6 +40,10 @@ public class OperativeAdv {
 
     @Autowired
     ITypeService typeService;
+
+    @Autowired
+    ISiteService siteService;
+
     private static final int SIZE = 10;
     @RequestMapping("/operative/addder")
     public String addder (HttpServletRequest request, @RequestParam("image") MultipartFile file, Map<String, Object> map){
@@ -238,5 +243,75 @@ public class OperativeAdv {
         String id = request.getParameter("id");
         typeService.deleteByPrimaryKey(Integer.parseInt(id));
         return type(request, map);
+    }
+    @RequestMapping("/operative/site")
+    public String site(HttpServletRequest request, Map<String, Object> map){
+        int count = siteService.count();
+        int page = 1;
+        if(count % SIZE == 0)
+            page = count / SIZE;
+        else
+            page = count / SIZE + CommonConst.ONE_INT;
+        map.put("count", count);
+        map.put("size", SIZE);
+        map.put("page", page);
+        String page_ = request.getParameter("page");
+        int toPage;
+        if(page_ == null || "".equals(page_)){
+            toPage = 1;
+        }else {
+            toPage = Integer.parseInt(page_);
+        }
+        if(toPage > page){
+            toPage = page;
+        }
+        map.put("pageNow", toPage);
+        int start = (toPage - 1) * SIZE;
+        List<SiteBean> list = siteService.selectByStart(start);
+        map.put("site", list);
+
+        return "/operative/site";
+    }
+    @RequestMapping("/operative/updatesite")
+    public String updatesite(HttpServletRequest request, Map<String, Object> map){
+        try {
+            String id = request.getParameter("id");
+            String status = request.getParameter("status");
+            SiteBean siteBean = siteService.selectByPrimaryKey(Integer.parseInt(id));
+            siteBean.setStatus(Integer.parseInt(status));
+            siteService.updateByPrimaryKey(siteBean);
+        } catch (NumberFormatException e) {
+            e.printStackTrace();
+            map.put("errorcode", 9);
+            return "error";
+        }
+        return site(request, map);
+    }
+    @RequestMapping("/operative/delsite")
+    public String delsite(HttpServletRequest request, Map<String, Object> map){
+        String id = request.getParameter("id");
+        siteService.deleteByPrimaryKey(Integer.parseInt(id));
+        return site(request, map);
+    }
+    @RequestMapping("/operative/addsite")
+    public String addsite(HttpServletRequest request, Map<String, Object> map){
+
+        return "/operative/addsite";
+    }
+    @RequestMapping("/operative/addsiteinfo")
+    public String addsiteinfo(HttpServletRequest request, Map<String, Object> map){
+        try {
+            String site = request.getParameter("site");
+            String status = request.getParameter("status");
+            SiteBean siteBean = new SiteBean();
+            siteBean.setSite(site);
+            siteBean.setStatus(Integer.parseInt(status));
+            siteService.insert(siteBean);
+        } catch (NumberFormatException e) {
+            e.printStackTrace();
+            map.put("errorcode", 9);
+            return "error";
+        }
+        return addsite(request, map);
     }
 }

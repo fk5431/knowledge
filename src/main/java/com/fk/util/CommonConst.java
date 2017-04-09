@@ -23,4 +23,5 @@ public class CommonConst {
     public static final String NO = "no";
 
 
+    public static String BUYMOVIEID = "buyMovieId";
 }
