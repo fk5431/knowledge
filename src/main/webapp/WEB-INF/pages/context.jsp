@@ -86,23 +86,6 @@
             ${travel.context}
 
 
-            <a href="${pageContext.request.contextPath}" class="poi" target="_blank">
-                <dl>
-                    <dt><img src="http://b1-q.mafengwo.net/s6/M00/63/6A/wKgB4lMJqHiATh0nAAlRqnWGd5A25.jpeg?imageMogr2%2Fthumbnail%2F%21220x150r%2Fgravity%2FCenter%2Fcrop%2F%21220x150%2Fquality%2F100" width="220" height="150"></dt>
-                    <dd>
-                        <p class="t1">御菓子御殿(国際通りむつみ橋店)</p>
-                        <p class="t2"></p>
-                        <div class="t3">
-                            <strong>70</strong>蜂评/<strong>9</strong>游记提及</div>
-                        <div class="t4">
-                            <span>小吃</span>
-                            <span>连锁/加盟</span>
-                            那霸
-                        </div>
-                    </dd>
-                </dl></a>
-
-
             <h3 class="h2">说出你最爱的和果子</h3>
 
             <p>和果子这么多，那一款最戳中你的心呢？不妨留言说出来，看看有没有与你喜好相同的有缘人吧~</p>

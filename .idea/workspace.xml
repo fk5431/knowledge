@@ -11,13 +11,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="11669da5-9530-45d4-b1a5-63fcb18bf569" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/alluserart.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/mywhere.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/fk/controller/My.java" afterPath="$PROJECT_DIR$/src/main/java/com/fk/controller/My.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/fk/controller/ShopC.java" afterPath="$PROJECT_DIR$/src/main/java/com/fk/controller/ShopC.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/my.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/my.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/mylike.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/mylike.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/context.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/context.jsp" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -44,67 +39,7 @@
     <favorites_list name="knowledge" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="My.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/fk/controller/My.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="331">
-              <caret line="232" column="37" lean-forward="false" selection-start-line="232" selection-start-column="37" selection-end-line="232" selection-end-column="37" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="alluserart.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/alluserart.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="154" column="75" lean-forward="false" selection-start-line="154" selection-start-column="68" selection-end-line="154" selection-end-column="75" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="mywhere.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/mywhere.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="295">
-              <caret line="207" column="169" lean-forward="false" selection-start-line="207" selection-start-column="169" selection-end-line="207" selection-end-column="169" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RecordBean.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/fk/bean/RecordBean.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="104" column="24" lean-forward="false" selection-start-line="104" selection-start-column="18" selection-end-line="104" selection-end-column="24" />
-              <folding>
-                <element signature="e#1449#1450#0" expanded="true" />
-                <element signature="e#1479#1480#0" expanded="true" />
-                <element signature="e#1933#1934#0" expanded="true" />
-                <element signature="e#1959#1960#0" expanded="true" />
-                <element signature="e#2398#2399#0" expanded="true" />
-                <element signature="e#2427#2428#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="OrdersBean.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/fk/bean/OrdersBean.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-19">
-              <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -118,7 +53,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>submit</find>
       <find>order</find>
       <find>/rest/sales/order/</find>
       <find>成交记录</find>
@@ -148,6 +82,7 @@
       <find>发布</find>
       <find>buyshop</find>
       <find>共</find>
+      <find>fe</find>
     </findStrings>
     <replaceStrings>
       <replace>area</replace>
@@ -231,13 +166,13 @@
         <option value="$PROJECT_DIR$/src/main/java/com/fk/dao/LiketravelDao.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mapping/LiketravelMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/fk/controller/ContentC.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/context.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/my.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/mylike.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/alluserart.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/fk/controller/ShopC.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/mywhere.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/fk/controller/My.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/context.jsp" />
       </list>
     </option>
   </component>
@@ -1405,14 +1340,7 @@
       <workItem from="1491546271191" duration="8825000" />
       <workItem from="1491636605180" duration="428000" />
       <workItem from="1491637067385" duration="13570000" />
-      <workItem from="1491705439819" duration="6682000" />
-    </task>
-    <task id="LOCAL-00008" summary="累死我了">
-      <created>1487753970686</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1487753970686</updated>
+      <workItem from="1491705439819" duration="6834000" />
     </task>
     <task id="LOCAL-00009" summary="累死我了">
       <created>1487922918989</created>
@@ -1750,11 +1678,18 @@
       <option name="project" value="LOCAL" />
       <updated>1491668492221</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="终于特么要结束了">
+      <created>1491713612229</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1491713612229</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="454928000" />
+    <option name="totallyTimeSpent" value="455080000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -2146,14 +2081,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/context.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/my.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="38">
@@ -2240,11 +2167,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/fk/controller/My.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="331">
+        <state relative-caret-position="-410">
           <caret line="232" column="37" lean-forward="false" selection-start-line="232" selection-start-column="37" selection-end-line="232" selection-end-column="37" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/context.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="87" column="0" lean-forward="true" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
