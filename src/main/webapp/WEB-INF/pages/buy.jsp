@@ -21,6 +21,7 @@
             "imgs":[""],
             "myComment":{}};
     </script>
+    <link href="${pageContext.request.contextPath}/css/shop/buy_4.css" rel="stylesheet" type="text/css"/>
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/file/file_1.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/file/file_2.css">
     <link media="all" href="${pageContext.request.contextPath}/css/jquery-labelauty.css" type="text/css" rel="stylesheet">
@@ -175,6 +176,39 @@
                                 <input hidden name="id" value="${movie.id}">
 
 
+                                <div class="res-inf" id="baseInfoForm">
+                                    <h2>预订人信息（<span>用于接收订单反馈</span>）</h2>
+                                    <div class="user-int clearfix">
+                                        <div class="form-sec flt1" style="clear: both">
+                                            <label for="base_name">姓名</label>
+                                            <input id="base_name" type="text" class="bord-red" placeholder="请填写您的真实姓名" value=""
+                                                   data-required="1" data-title="姓名" name="name">
+                                        </div>
+                                        <div class="form-sec flt1" style="clear: both">
+                                            <label for="base_email">邮箱</label>
+                                            <div class="parentCls">
+                                                <input data-E id="base_email" type="text" class="bord-red" placeholder="请填写邮箱" value=""
+                                                       data-required="1" data-title="邮箱" name="email">
+                                            </div>
+                                        </div>
+                                        <div class="form-sec flt1" style="clear: both">
+                                            <label for="base_wechat">微信</label>
+                                            <input id="base_wechat" type="text" placeholder="仅作为备用联系方式" value="" name="wechat">
+                                        </div>
+                                        <div class="ver-code clearfix">
+                                            <p class="form-sec flt1">
+                                                <input id="base_phone" type="tel" placeholder="手机" value="" data-required="1"
+                                                       data-title="手机号" name="mob">
+                                                <label for="base_phone">手机</label>
+                                            </p>
+                                        </div>
+                                        <div class="form-sec form-tare">
+                                            <label for="base_description">备注信息</label>
+                                            <textarea id="base_description" type="text" placeholder="备注信息" name="other"></textarea>
+                                        </div>
+                                        <input name="id" value="${order.id}" hidden>
+                                    </div>
+                                </div>
 
                                 <style>
                                     .button {
