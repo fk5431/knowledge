@@ -83,6 +83,7 @@
                         / ${movie.time}
                     </li>
                     <li class="ellipsis">${movie.showtime}大陆上映</li>
+                    <li class="ellipsis">￥${movie.prizeids}</li>
                 </ul>
             </div>
             <div class="action-buyBtn">

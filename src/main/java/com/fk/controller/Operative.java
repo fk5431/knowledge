@@ -269,6 +269,14 @@ public class Operative {
         String time = request.getParameter("time");
         String time1 = request.getParameter("time1");
         String score = request.getParameter("score");
+        String price = request.getParameter("price");
+        try {
+            int p = Integer.parseInt(price);
+        } catch (NumberFormatException e) {
+            e.printStackTrace();
+            map.put("errorcode", 8);
+            return "error";
+        }
         String introduce = request.getParameter("introduce");
         String director = request.getParameter("director");
         String[] performer = request.getParameterValues("performer");
@@ -300,6 +308,7 @@ public class Operative {
         movieBean.setArea(area);
         movieBean.setBoxoffice(0);
         movieBean.setEtitle(etitle);
+        movieBean.setPrizeids(price);
         movieBean.setPrizeids("");
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd hh:mm");
         try {

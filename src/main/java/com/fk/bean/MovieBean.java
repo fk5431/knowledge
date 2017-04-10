@@ -28,7 +28,7 @@ public class MovieBean {
 
     private String performerids;
 
-    private String prizeids;
+    private String prizeids; //改成价格
 
     private String image;
 

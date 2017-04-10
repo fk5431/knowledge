@@ -49,6 +49,10 @@ public class MovieC {
         String id = request.getParameter("id");
 
         MovieBean movieBean = movieService.selectByPrimaryKey(Integer.parseInt(id));
+        if(movieBean.getPrizeids().equals("")){
+            movieBean.setPrizeids("0");
+        }
+        movieBean.setBoxoffice(movieBean.getBoxoffice() * Integer.parseInt(movieBean.getPrizeids()));
         map.put("movie", movieBean);
         String[] types = movieBean.getType().split(CommonConst.SPLITOR);
         StringBuffer sb = new StringBuffer();

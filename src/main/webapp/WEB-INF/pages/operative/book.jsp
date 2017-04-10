@@ -138,12 +138,22 @@
                         <div class="tips"></div>
                     </div>
                 </div>
+
                 <div class="form-group">
                     <div class="label">
                         <label>评分：</label>
                     </div>
                     <div class="field">
                         <input type="text" class="input" name="score" value=""/>
+                        <div class="tips"></div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="label">
+                        <label>价格（整数）：</label>
+                    </div>
+                    <div class="field">
+                        <input type="text" class="input" name="price" value=""/>
                         <div class="tips"></div>
                     </div>
                 </div>
