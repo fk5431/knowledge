@@ -16,7 +16,7 @@ public interface IHistoryService {
 
     int count();
 
-    List<HistoryBean> selectByStart(int start);
+    List<HistoryBean> selectByStart(int id, int start);
 
     HistoryBean selectByMovieId(Integer id);
 }

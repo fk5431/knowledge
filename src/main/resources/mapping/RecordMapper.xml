@@ -17,16 +17,29 @@
     <sql id="Base_Column_List" >
         id, siteId, siteName, name, email, wechat, mob, other, movieId, movieName, userId
     </sql>
+    <select id="countByUserId" resultType="int"  parameterType="java.lang.Integer" >
+        select
+        count(*)
+        from record
+        WHERE userId = #{id,jdbcType=INTEGER}
+    </select>
     <select id="count" resultType="int">
         select
         count(*)
         from record
     </select>
-    <select id="selectByStart" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    <select id="selectByStartAll" resultMap="BaseResultMap"  parameterType="java.lang.Integer" >
         select
         <include refid="Base_Column_List" />
         from record
-        limit #{start, jdbcType=INTEGER},10
+        limit #{id,jdbcType=INTEGER},10
+    </select>
+    <select id="selectByStart" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List" />
+        from record
+        where userId = #{0}
+        limit #{1},10
     </select>
     <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
         select

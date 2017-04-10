@@ -350,7 +350,7 @@ public class OperativeAdv {
             }
             map.put("pageNow", toPage);
             int start = (toPage - 1) * SIZE;
-            List<RecordBean> list = recordService.selectByStart(start);
+            List<RecordBean> list = recordService.selectByStartAll(start);
             map.put("record", list);
 
 

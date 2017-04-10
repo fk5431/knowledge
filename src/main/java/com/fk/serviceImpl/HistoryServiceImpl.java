@@ -34,8 +34,8 @@ public class HistoryServiceImpl implements IHistoryService {
     }
 
     @Override
-    public List<HistoryBean> selectByStart(int start) {
-        return historyDao.selectByStart(start);
+    public List<HistoryBean> selectByStart(int id, int start) {
+        return historyDao.selectByStart(id, start);
     }
 
     @Override

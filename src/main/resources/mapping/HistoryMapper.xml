@@ -24,13 +24,14 @@
         count(*)
         from history
     </select>
-    <select id="selectByStart" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    <select id="selectByStart" resultMap="BaseResultMap"  >
         select
         <include refid="Base_Column_List" />
         ,
         <include refid="Blob_Column_List" />
         from history
-        limit #{start, jdbcType=INTEGER},10
+        WHERE userId = #{0}
+        limit #{1},10
     </select>
     <select id="selectByMovieId" resultMap="ResultMapWithBLOBs" parameterType="java.lang.Integer" >
         select

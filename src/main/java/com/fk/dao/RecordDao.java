@@ -24,5 +24,9 @@ public interface RecordDao {
 
     int count();
 
-    List<RecordBean> selectByStart(int start);
+    List<RecordBean> selectByStart(int id, int start);
+
+    List<RecordBean> selectByStartAll(int start);
+
+    int countByUserId(int id);
 }

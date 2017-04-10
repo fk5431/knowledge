@@ -13,14 +13,6 @@
 <html>
 <head>
     <title>一条狗的使命 - 福州文娱演出票务网</title>
-    <script async="" src="${pageContext.request.contextPath}/js/file/file_1.js"></script>
-    <script>
-        cid = 128432;
-        val = {"id":342858};
-        window.system = {"movieId":"342858",
-            "imgs":[""],
-            "myComment":{}};
-    </script>
     <link href="${pageContext.request.contextPath}/css/shop/buy_4.css" rel="stylesheet" type="text/css"/>
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/file/file_1.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/file/file_2.css">
@@ -180,31 +172,28 @@
                                     <h2>预订人信息（<span>用于接收订单反馈</span>）</h2>
                                     <div class="user-int clearfix">
                                         <div class="form-sec flt1" style="clear: both">
-                                            <label for="base_name">姓名</label>
-                                            <input id="base_name" type="text" class="bord-red" placeholder="请填写您的真实姓名" value=""
-                                                   data-required="1" data-title="姓名" name="name">
+                                            <%--<label for="base_name">姓名</label>--%>
+                                            <input id="base_name" type="text" class="bord-red" value="姓名" name="name">
                                         </div>
                                         <div class="form-sec flt1" style="clear: both">
-                                            <label for="base_email">邮箱</label>
+                                            <%--<label for="base_email">邮箱</label>--%>
                                             <div class="parentCls">
-                                                <input data-E id="base_email" type="text" class="bord-red" placeholder="请填写邮箱" value=""
-                                                       data-required="1" data-title="邮箱" name="email">
+                                                <input data-E id="base_email" type="text" class="bord-red" value="邮箱"  name="email">
                                             </div>
                                         </div>
                                         <div class="form-sec flt1" style="clear: both">
-                                            <label for="base_wechat">微信</label>
-                                            <input id="base_wechat" type="text" placeholder="仅作为备用联系方式" value="" name="wechat">
+                                            <%--<label for="base_wechat">微信</label>--%>
+                                            <input id="base_wechat" type="text" value="仅作为备用联系方式" name="wechat">
                                         </div>
                                         <div class="ver-code clearfix">
                                             <p class="form-sec flt1">
-                                                <input id="base_phone" type="tel" placeholder="手机" value="" data-required="1"
-                                                       data-title="手机号" name="mob">
-                                                <label for="base_phone">手机</label>
+                                                <input id="base_phone" type="tel" value="手机号" name="mob">
+                                                <%--<label for="base_phone">手机</label>--%>
                                             </p>
                                         </div>
                                         <div class="form-sec form-tare">
-                                            <label for="base_description">备注信息</label>
-                                            <textarea id="base_description" type="text" placeholder="备注信息" name="other"></textarea>
+                                            <label></label>
+                                            <textarea id="base_description" type="text" value="备注信息" name="other">备注信息</textarea>
                                         </div>
                                         <input name="id" value="${order.id}" hidden>
                                     </div>

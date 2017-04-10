@@ -46,8 +46,8 @@ public class CollectServiceImpl implements ICollectService {
     }
 
     @Override
-    public List<CollectBean> selectByStartC(int start) {
-        return collectDao.selectByStartC(start);
+    public List<CollectBean> selectByStartC(int id, int start) {
+        return collectDao.selectByStartC(id, start);
     }
 
     @Override
@@ -56,7 +56,17 @@ public class CollectServiceImpl implements ICollectService {
     }
 
     @Override
-    public List<CollectBean> selectByStartL(int start) {
-        return collectDao.selectByStartL(start);
+    public List<CollectBean> selectByStartL(int id, int start) {
+        return collectDao.selectByStartL(id, start);
+    }
+
+    @Override
+    public int countC(int id) {
+        return collectDao.countCByUserId(id);
+    }
+
+    @Override
+    public int countL(int id) {
+        return collectDao.countLByUserId(id);
     }
 }

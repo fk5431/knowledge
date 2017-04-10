@@ -34,12 +34,22 @@ public class RecordServiceImpl implements IRecordService{
     }
 
     @Override
-    public List<RecordBean> selectByStart(int start) {
-        return recordDao.selectByStart(start);
+    public List<RecordBean> selectByStart(int id, int start) {
+        return recordDao.selectByStart(id, start);
     }
 
     @Override
     public int deleteByPrimaryKey(Integer id) {
         return recordDao.deleteByPrimaryKey(id);
+    }
+
+    @Override
+    public List<RecordBean> selectByStartAll(int start) {
+        return recordDao.selectByStartAll(start);
+    }
+
+    @Override
+    public int count(int id) {
+        return recordDao.countByUserId(id);
     }
 }

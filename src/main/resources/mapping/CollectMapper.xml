@@ -25,26 +25,38 @@
         count(*)
         from collect WHERE status = '0'
     </select>
+    <select id="countCByUserId" resultType="int"  parameterType="java.lang.Integer">
+        select
+        count(*)
+        from collect WHERE status = '0'
+        and userId = #{id,jdbcType=INTEGER}
+    </select>
     <select id="selectByStartC" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
         select
         <include refid="Base_Column_List" />
         ,
         <include refid="Blob_Column_List" />
-        from collect WHERE status = '0'
-        limit #{start, jdbcType=INTEGER},10
+        from collect WHERE status = '0' and userId = #{0}
+        limit #{1},10
+    </select>
+    <select id="countLByUserId" resultType="int"  parameterType="java.lang.Integer">
+        select
+        count(*)
+        from collect WHERE status = '1'
+          and userId = #{id,jdbcType=INTEGER}
     </select>
     <select id="countL" resultType="int">
         select
         count(*)
         from collect WHERE status = '1'
     </select>
-    <select id="selectByStartL" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    <select id="selectByStartL" resultMap="BaseResultMap" >
         select
         <include refid="Base_Column_List" />
         ,
         <include refid="Blob_Column_List" />
-        from collect collect WHERE status = '1'
-        limit #{start, jdbcType=INTEGER},10
+        from collect collect WHERE status = '1' and userId = #{0}
+        limit #{1},10
     </select>
     <select id="count" resultType="int">
         select

@@ -20,9 +20,13 @@ public interface ICollectService {
 
     int countC();
 
-    List<CollectBean> selectByStartC(int start);
+    List<CollectBean> selectByStartC(int id, int start);
 
     int countL();
 
-    List<CollectBean> selectByStartL(int start);
+    List<CollectBean> selectByStartL(int id, int start);
+
+    int countC(int id);
+
+    int countL(int id);
 }

@@ -14,6 +14,10 @@ public interface IRecordService {
 
     int count();
 
-    List<RecordBean> selectByStart(int start);
+    List<RecordBean> selectByStart(int id, int start);
     int deleteByPrimaryKey(Integer id);
+
+    List<RecordBean> selectByStartAll(int start);
+
+    int count(int id);
 }

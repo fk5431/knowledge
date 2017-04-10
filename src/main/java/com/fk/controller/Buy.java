@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -140,9 +141,9 @@ public class Buy {
         if(type == null || "".equals(type)){
             type = "1";
         }
-        int count3 = collectService.countC();
-        int count4 = collectService.countL();
-        int count2 = recordService.count();
+        int count3 = collectService.countC(Integer.parseInt(userId));
+        int count4 = collectService.countL(Integer.parseInt(userId));
+        int count2 = recordService.count(Integer.parseInt(userId));
         map.put("count2",count2);
         map.put("count3",count3);
         map.put("count4",count4);
@@ -170,7 +171,7 @@ public class Buy {
             }
             map.put("pageNow", toPage);
             int start = (toPage - 1) * SIZE;
-            List<HistoryBean> list = historyService.selectByStart(start);
+            List<HistoryBean> list = historyService.selectByStart(Integer.parseInt(userId),start);
             map.put("his", list);
             map.put("type", "1");
         }else if(type.equals("2")){
@@ -197,8 +198,12 @@ public class Buy {
             }
             map.put("pageNow", toPage);
             int start = (toPage - 1) * SIZE;
-            List<RecordBean> list = recordService.selectByStart(start);
-            List<MovieBean> movieBeans = movieService.selectByStart(start);
+            List<RecordBean> list = recordService.selectByStart(Integer.parseInt(userId), start);
+            List<MovieBean> movieBeans =new ArrayList<>();
+            for(RecordBean r : list){
+                MovieBean movieBean = movieService.selectByPrimaryKey(r.getMovieid());
+                movieBeans.add(movieBean);
+            }
             map.put("his", list);
             map.put("movie", movieBeans);
             map.put("type", "2");
@@ -226,7 +231,7 @@ public class Buy {
             }
             map.put("pageNow", toPage);
             int start = (toPage - 1) * SIZE;
-            List<CollectBean> list = collectService.selectByStartC(start);
+            List<CollectBean> list = collectService.selectByStartC(Integer.parseInt(userId), start);
             map.put("his", list);
             map.put("type", "3");
         }else if(type.equals("4")){
@@ -253,7 +258,7 @@ public class Buy {
             }
             map.put("pageNow", toPage);
             int start = (toPage - 1) * SIZE;
-            List<CollectBean> list = collectService.selectByStartL(start);
+            List<CollectBean> list = collectService.selectByStartL(Integer.parseInt(userId), start);
             map.put("his", list);
             map.put("type", "4");
         }
