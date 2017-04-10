@@ -23,4 +23,8 @@ public interface IMovieService {
     int deleteByPrimaryKey(Integer id);
     int count();
     List<MovieBean> selectByStart(Integer start);
+
+    List<MovieBean> selectSortByNum();
+
+    MovieBean selectByTitle(String kw);
 }

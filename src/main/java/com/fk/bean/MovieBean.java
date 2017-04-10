@@ -22,7 +22,7 @@ public class MovieBean {
 
     private Double score;
 
-    private Integer boxoffice;
+    private Integer boxoffice;//改成订票数
 
     private Integer directorid;
 
@@ -36,7 +36,7 @@ public class MovieBean {
 
     private String atlas;
 
-    private Integer scorenum;
+    private Integer scorenum;//改成收藏数
 
     public String getIntroduce() {
         return introduce;

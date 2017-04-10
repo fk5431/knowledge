@@ -268,7 +268,6 @@ public class Operative {
         String area = request.getParameter("area");
         String time = request.getParameter("time");
         String time1 = request.getParameter("time1");
-        String boxoffice = request.getParameter("boxoffice");
         String score = request.getParameter("score");
         String introduce = request.getParameter("introduce");
         String director = request.getParameter("director");
@@ -299,7 +298,7 @@ public class Operative {
         movieBean.setLookcount(0);
         movieBean.setTitle(title);
         movieBean.setArea(area);
-        movieBean.setBoxoffice(Integer.parseInt(boxoffice));
+        movieBean.setBoxoffice(0);
         movieBean.setEtitle(etitle);
         movieBean.setPrizeids("");
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd hh:mm");

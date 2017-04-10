@@ -97,6 +97,9 @@ public class Buy {
         recordBean.setSitename(siteBean.getSite());
         recordService.insertSelective(recordBean);
 
+        movieBean.setBoxoffice(movieBean.getBoxoffice() + 1);
+        movieService.updateByPrimaryKey(movieBean);
+
         return info(request, map);
     }
 
@@ -105,9 +108,6 @@ public class Buy {
     public String info(HttpServletRequest request, Map<String, Object> map){
 
 
-
-
         return "userinfo";
     }
-
 }

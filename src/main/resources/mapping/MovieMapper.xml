@@ -39,10 +39,20 @@
         <include refid="Base_Column_List" />
         from movie
     </select>
+    <select id="selectByTitle" resultMap="BaseResultMap" parameterType="java.lang.String">
+        select
+        <include refid="Base_Column_List" />
+        from movie WHERE title LIKE '%${_parameter}%'
+    </select>
     <select id="selectByType" resultMap="BaseResultMap" parameterType="java.lang.String">
         select
         <include refid="Base_Column_List" />
         from movie WHERE type LIKE '%${_parameter}%'
+    </select>
+    <select id="selectSortByNum" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List" />
+        from movie ORDER BY scorenum desc LIMIT 10
     </select>
     <select id="selectSortByTimeOfTen" resultMap="BaseResultMap">
         select

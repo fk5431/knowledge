@@ -140,15 +140,6 @@
                 </div>
                 <div class="form-group">
                     <div class="label">
-                        <label>票房：</label>
-                    </div>
-                    <div class="field">
-                        <input type="text" class="input" name="boxoffice" value=""/>
-                        <div class="tips"></div>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="label">
                         <label>评分：</label>
                     </div>
                     <div class="field">

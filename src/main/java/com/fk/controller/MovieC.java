@@ -77,6 +77,46 @@ public class MovieC {
         return "film";
     }
 
+    @RequestMapping("search")
+    public String search(HttpServletRequest request, Map<String, Object> map){
+
+        String kw = request.getParameter("kw");
+
+        map.put("index", 0);
+
+        MovieBean movieBean = movieService.selectByTitle(kw);
+        if(movieBean == null){
+            map.put("errorcode", 10);
+            return "error";
+        }
+        map.put("movie", movieBean);
+        String[] types = movieBean.getType().split(CommonConst.SPLITOR);
+        StringBuffer sb = new StringBuffer();
+        for(String str : types){
+            sb.append(typeService.selectByPrimaryKey(Integer.parseInt(str)).getTypename() + " ，");
+        }
+        String type = sb.substring(0, sb.length()-1);
+        map.put("type", type);
+//      导演  director
+        DirectorBean director = directorService.selectByPrimaryKey(movieBean.getDirectorid());
+        map.put("director", director);
+//        演员 performer
+        List<PerformerBean> performer = new ArrayList<>();
+        String[] performers = movieBean.getPerformerids().split(CommonConst.SPLITOR);
+        for(int i=0;i<performers.length;i++){
+            PerformerBean performerBean = performerService.selectByPrimaryKey(Integer.parseInt(performers[i]));
+            if(performerBean != null){
+                performer.add(performerBean);
+            }
+        }
+        map.put("performer", performer);
+
+        if(Login.islogin(request)){
+            map.put("login", CommonConst.YES);
+        }
+        return "film";
+    }
+
     @RequestMapping(value = "/lookcount")
     public String lookcount(HttpServletRequest request, Map<String, Object> map){
         String id = request.getParameter("id");

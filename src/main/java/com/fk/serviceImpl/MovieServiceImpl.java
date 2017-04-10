@@ -77,4 +77,14 @@ public class MovieServiceImpl implements IMovieService {
     public List<MovieBean> selectByStart(Integer start) {
         return movieDao.selectByStart(start);
     }
+
+    @Override
+    public List<MovieBean> selectSortByNum() {
+        return movieDao.selectSortByNum();
+    }
+
+    @Override
+    public MovieBean selectByTitle(String kw) {
+        return movieDao.selectByTitle(kw);
+    }
 }

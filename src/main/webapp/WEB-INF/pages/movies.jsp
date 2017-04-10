@@ -25,7 +25,7 @@
             <ul class="navbar">
                 <li><a href="${pageContext.request.contextPath}" id="index_1" class="active">首页</a></li>
                 <li><a href="${pageContext.request.contextPath}/movies"  id="index_2">演出</a></li>
-                <li><a href="#" id="index_3">榜单</a></li>
+                <li><a href="${pageContext.request.contextPath}/top" id="index_3">榜单</a></li>
                 <li><a href="${pageContext.request.contextPath}/hot"  id="index_4">热点</a></li>
             </ul>
         </div>

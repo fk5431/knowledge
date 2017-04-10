@@ -33,4 +33,8 @@ public interface MovieDao {
         List<MovieBean> selectSortByTimeOfTen();
         int count();
         List<MovieBean> selectByStart(Integer start);
+
+    List<MovieBean> selectSortByNum();
+
+        MovieBean selectByTitle(String kw);
 }
