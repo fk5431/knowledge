@@ -49,6 +49,9 @@ public class Operative {
     @Autowired
     IMovieService movieService;
 
+    @Autowired
+    IRecordService recordService;
+
     private static final int SIZE = 10;
     private static final int SIZENEW = 5;
 
@@ -393,6 +396,7 @@ public class Operative {
     public String delfilm(HttpServletRequest request, Map<String, Object> map){
         String id = request.getParameter("id");
         movieService.deleteByPrimaryKey(Integer.parseInt(id));
+        recordService.deleteByMovieId(Integer.parseInt(id));
         return column(request, map);
     }
 

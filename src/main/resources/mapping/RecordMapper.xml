@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.fk.dao.RecordDao" >
+    <resultMap id="BaseResultMap" type="com.fk.bean.RecordBean" >
+        <id column="id" property="id" jdbcType="INTEGER" />
+        <result column="siteId" property="siteid" jdbcType="INTEGER" />
+        <result column="siteName" property="sitename" jdbcType="VARCHAR" />
+        <result column="name" property="name" jdbcType="VARCHAR" />
+        <result column="email" property="email" jdbcType="VARCHAR" />
+        <result column="wechat" property="wechat" jdbcType="VARCHAR" />
+        <result column="mob" property="mob" jdbcType="VARCHAR" />
+        <result column="other" property="other" jdbcType="VARCHAR" />
+        <result column="movieId" property="movieid" jdbcType="INTEGER" />
+        <result column="movieName" property="moviename" jdbcType="VARCHAR" />
+        <result column="userId" property="userid" jdbcType="INTEGER" />
+    </resultMap>
+    <sql id="Base_Column_List" >
+        id, siteId, siteName, name, email, wechat, mob, other, movieId, movieName, userId
+    </sql>
+    <select id="count" resultType="int">
+        select
+        count(*)
+        from record
+    </select>
+    <select id="selectByStart" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+        select
+        <include refid="Base_Column_List" />
+        from record
+        limit #{start, jdbcType=INTEGER},10
+    </select>
+    <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+        select
+        <include refid="Base_Column_List" />
+        from record
+        where id = #{id,jdbcType=INTEGER}
+    </select>
+    <delete id="deleteByMovieId" parameterType="java.lang.Integer" >
+        delete from record
+        where movieId = #{id,jdbcType=INTEGER}
+    </delete>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+        delete from record
+        where id = #{id,jdbcType=INTEGER}
+    </delete>
+    <insert id="insert" parameterType="com.fk.bean.RecordBean" >
+        insert into record (id, siteId, siteName,
+        name, email, wechat,
+        mob, other, movieId,
+        movieName, userId)
+        values (#{id,jdbcType=INTEGER}, #{siteid,jdbcType=INTEGER}, #{sitename,jdbcType=VARCHAR},
+        #{name,jdbcType=VARCHAR}, #{email,jdbcType=VARCHAR}, #{wechat,jdbcType=VARCHAR},
+        #{mob,jdbcType=VARCHAR}, #{other,jdbcType=VARCHAR}, #{movieid,jdbcType=INTEGER},
+        #{moviename,jdbcType=VARCHAR}, #{userid,jdbcType=INTEGER})
+    </insert>
+    <insert id="insertSelective" parameterType="com.fk.bean.RecordBean" >
+        insert into record
+        <trim prefix="(" suffix=")" suffixOverrides="," >
+            <if test="id != null" >
+                id,
+            </if>
+            <if test="siteid != null" >
+                siteId,
+            </if>
+            <if test="sitename != null" >
+                siteName,
+            </if>
+            <if test="name != null" >
+                name,
+            </if>
+            <if test="email != null" >
+                email,
+            </if>
+            <if test="wechat != null" >
+                wechat,
+            </if>
+            <if test="mob != null" >
+                mob,
+            </if>
+            <if test="other != null" >
+                other,
+            </if>
+            <if test="movieid != null" >
+                movieId,
+            </if>
+            <if test="moviename != null" >
+                movieName,
+            </if>
+            <if test="userid != null" >
+                userId,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides="," >
+            <if test="id != null" >
+                #{id,jdbcType=INTEGER},
+            </if>
+            <if test="siteid != null" >
+                #{siteid,jdbcType=INTEGER},
+            </if>
+            <if test="sitename != null" >
+                #{sitename,jdbcType=VARCHAR},
+            </if>
+            <if test="name != null" >
+                #{name,jdbcType=VARCHAR},
+            </if>
+            <if test="email != null" >
+                #{email,jdbcType=VARCHAR},
+            </if>
+            <if test="wechat != null" >
+                #{wechat,jdbcType=VARCHAR},
+            </if>
+            <if test="mob != null" >
+                #{mob,jdbcType=VARCHAR},
+            </if>
+            <if test="other != null" >
+                #{other,jdbcType=VARCHAR},
+            </if>
+            <if test="movieid != null" >
+                #{movieid,jdbcType=INTEGER},
+            </if>
+            <if test="moviename != null" >
+                #{moviename,jdbcType=VARCHAR},
+            </if>
+            <if test="userid != null" >
+                #{userid,jdbcType=INTEGER},
+            </if>
+        </trim>
+    </insert>
+    <update id="updateByPrimaryKeySelective" parameterType="com.fk.bean.RecordBean" >
+        update record
+        <set >
+            <if test="siteid != null" >
+                siteId = #{siteid,jdbcType=INTEGER},
+            </if>
+            <if test="sitename != null" >
+                siteName = #{sitename,jdbcType=VARCHAR},
+            </if>
+            <if test="name != null" >
+                name = #{name,jdbcType=VARCHAR},
+            </if>
+            <if test="email != null" >
+                email = #{email,jdbcType=VARCHAR},
+            </if>
+            <if test="wechat != null" >
+                wechat = #{wechat,jdbcType=VARCHAR},
+            </if>
+            <if test="mob != null" >
+                mob = #{mob,jdbcType=VARCHAR},
+            </if>
+            <if test="other != null" >
+                other = #{other,jdbcType=VARCHAR},
+            </if>
+            <if test="movieid != null" >
+                movieId = #{movieid,jdbcType=INTEGER},
+            </if>
+            <if test="moviename != null" >
+                movieName = #{moviename,jdbcType=VARCHAR},
+            </if>
+            <if test="userid != null" >
+                userId = #{userid,jdbcType=INTEGER},
+            </if>
+        </set>
+        where id = #{id,jdbcType=INTEGER}
+    </update>
+    <update id="updateByPrimaryKey" parameterType="com.fk.bean.RecordBean" >
+        update record
+        set siteId = #{siteid,jdbcType=INTEGER},
+        siteName = #{sitename,jdbcType=VARCHAR},
+        name = #{name,jdbcType=VARCHAR},
+        email = #{email,jdbcType=VARCHAR},
+        wechat = #{wechat,jdbcType=VARCHAR},
+        mob = #{mob,jdbcType=VARCHAR},
+        other = #{other,jdbcType=VARCHAR},
+        movieId = #{movieid,jdbcType=INTEGER},
+        movieName = #{moviename,jdbcType=VARCHAR},
+        userId = #{userid,jdbcType=INTEGER}
+        where id = #{id,jdbcType=INTEGER}
+    </update>
+</mapper>

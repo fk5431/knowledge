@@ -38,8 +38,8 @@
                 <span class="caret"></span>
                 <ul class="user-menu">
                     <%
-                        String login = (String)request.getAttribute("login");
-                        if(login == null || "".equals(login) || !"yes".equals(login)){
+                            String login = (String)request.getAttribute("login");
+                            if(login == null || "".equals(login) || !"yes".equals(login)){
                     %>
                     <li><a href="${pageContext.request.contextPath}/log">登录</a></li>
                     <%}else{%>

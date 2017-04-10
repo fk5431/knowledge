@@ -85,6 +85,8 @@ public class MovieC {
         movieService.updateByPrimaryKey(movieBean);
         if(Login.islogin(request)){
             map.put("login", CommonConst.YES);
+        }else{
+            return "log";
         }
         return film(request, map);
     }

@@ -1,10 +1,7 @@
 package com.fk.controller;
 
 import com.fk.bean.*;
-import com.fk.service.IDirectorService;
-import com.fk.service.IPerformerService;
-import com.fk.service.ISiteService;
-import com.fk.service.ITypeService;
+import com.fk.service.*;
 import com.fk.util.CommonConst;
 import com.fk.util.MD5;
 import org.apache.commons.io.FileUtils;
@@ -43,6 +40,9 @@ public class OperativeAdv {
 
     @Autowired
     ISiteService siteService;
+
+    @Autowired
+    IRecordService recordService;
 
     private static final int SIZE = 10;
     @RequestMapping("/operative/addder")
@@ -313,5 +313,52 @@ public class OperativeAdv {
             return "error";
         }
         return addsite(request, map);
+    }
+    @RequestMapping("/operative/delrecord")
+    public String delrecord(HttpServletRequest request, Map<String, Object> map){
+        try {
+            String id = request.getParameter("id");
+            recordService.deleteByPrimaryKey(Integer.parseInt(id));
+        } catch (NumberFormatException e) {
+            e.printStackTrace();
+            map.put("errorcode", 9);
+            return "error";
+        }
+        return addsite(request, map);
+    }
+    @RequestMapping("/operative/buy")
+    public String buy(HttpServletRequest request, Map<String, Object> map){
+        try {
+            int count = recordService.count();
+            int page = 1;
+            if(count % SIZE == 0)
+                page = count / SIZE;
+            else
+                page = count / SIZE + CommonConst.ONE_INT;
+            map.put("count", count);
+            map.put("size", SIZE);
+            map.put("page", page);
+            String page_ = request.getParameter("page");
+            int toPage;
+            if(page_ == null || "".equals(page_)){
+                toPage = 1;
+            }else {
+                toPage = Integer.parseInt(page_);
+            }
+            if(toPage > page){
+                toPage = page;
+            }
+            map.put("pageNow", toPage);
+            int start = (toPage - 1) * SIZE;
+            List<RecordBean> list = recordService.selectByStart(start);
+            map.put("record", list);
+
+
+        } catch (NumberFormatException e) {
+            e.printStackTrace();
+            map.put("errorcode", 9);
+            return "error";
+        }
+        return "/operative/buy";
     }
 }

@@ -1,8 +1,10 @@
 package com.fk.controller;
 
 import com.fk.bean.MovieBean;
+import com.fk.bean.RecordBean;
 import com.fk.bean.SiteBean;
 import com.fk.service.IMovieService;
+import com.fk.service.IRecordService;
 import com.fk.service.ISiteService;
 import com.fk.service.ITypeService;
 import com.fk.util.CommonConst;
@@ -32,6 +34,9 @@ public class Buy {
     @Autowired
     ISiteService siteService;
 
+    @Autowired
+    IRecordService recordService;
+
     @RequestMapping("/buy")
     public String buy(HttpServletRequest request, Map<String, Object> map){
         map.put("index", 0);
@@ -50,6 +55,8 @@ public class Buy {
         map.put("type", type);
         if(Login.islogin(request)){
             map.put("login", CommonConst.YES);
+        }else{
+            return "log";
         }
 
         List<SiteBean> siteBeans = siteService.selectAll();
@@ -62,11 +69,43 @@ public class Buy {
     public String buymovie(HttpServletRequest request, HttpServletResponse response, Map<String , Object> map){
         String id = request.getParameter("id");
         String radio = request.getParameter("radio");
+        String name = request.getParameter("name");
+        String email = request.getParameter("email");
+        String wechat = request.getParameter("wechat");
+        String mob = request.getParameter("mob");
+        String other = request.getParameter("other");
+        String userId = "0";
+        Cookie[] cookies = request.getCookies();
+        for(Cookie c : cookies){
+            if(c.getName().equals(CommonConst.USERID)){
+                userId = c.getValue();
+            }
+        }
+
+        MovieBean movieBean = movieService.selectByPrimaryKey(Integer.parseInt(id));
+        SiteBean siteBean = siteService.selectByPrimaryKey(Integer.parseInt(radio));
+        RecordBean recordBean = new RecordBean();
+        recordBean.setMob(mob==null?"":mob);
+        recordBean.setUserid(Integer.parseInt(userId));
+        recordBean.setWechat(wechat==null?"":wechat);
+        recordBean.setEmail(email==null?"":email);
+        recordBean.setMovieid(Integer.parseInt(id));
+        recordBean.setMoviename(movieBean.getTitle());
+        recordBean.setName(name==null?"":name);
+        recordBean.setOther(other==null?"":other);
+        recordBean.setSiteid(siteBean.getId());
+        recordBean.setSitename(siteBean.getSite());
+        recordService.insertSelective(recordBean);
+
+        return info(request, map);
+    }
+
+
+    @RequestMapping("info")
+    public String info(HttpServletRequest request, Map<String, Object> map){
 
 
         return "userinfo";
     }
-
-
 
 }

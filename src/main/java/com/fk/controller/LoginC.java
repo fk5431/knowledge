@@ -126,7 +126,7 @@ public class LoginC {
             }
         }
         Cookie cookie = new Cookie("login", "yes");
-        Cookie cookie1 = new Cookie("userId", String.valueOf(exists.getId()));
+        Cookie cookie1 = new Cookie(CommonConst.USERID, String.valueOf(exists.getId()));
         cookie.setMaxAge(-1);
         response.addCookie(cookie);
         response.addCookie(cookie1);
