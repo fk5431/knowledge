@@ -173,7 +173,7 @@
                             <div class="mod-content">
                                 <div class="celebrity-container clearfix">
 
-                                    <div class="celebrity-group">
+                                  <%--  <div class="celebrity-group">
                                         <div class="celebrity-type">
                                             主演
                                         </div>
@@ -189,7 +189,7 @@
                                                 </div>
                                             </li>
                                         </ul>
-                                    </div>
+                                    </div>--%>
 
                                     <div class="celebrity-group">
                                         <div class="celebrity-type">
@@ -240,7 +240,7 @@
                     </div>
                     <div class="tab-celebrity tab-content">
                         <div class="celebrity-container">
-                            <div class="celebrity-group">
+                           <%-- <div class="celebrity-group">
                                 <div class="celebrity-type">
                                     主演
                                     <span class="num">（1）</span>
@@ -259,10 +259,10 @@
                                     </li>
 
                                 </ul>
-                            </div>
+                            </div>--%>
                             <div class="celebrity-group">
                                 <div class="celebrity-type">
-                                    其他演员
+                                    演员
                                     <span class="num">（63）</span>
                                 </div>
                                 <ul class="celebrity-list clearfix">

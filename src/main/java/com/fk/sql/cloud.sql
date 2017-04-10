@@ -1,0 +1,8 @@
+DROP TABLE IF EXISTS cloud;
+CREATE TABLE cloud(
+  id INT(11) PRIMARY KEY AUTO_INCREMENT,
+  userId INT(11) NOT NULL,
+  actorId INT(11) not null,
+  actorName VARCHAR(255) NOT NULL ,
+  actorStatus int(11) DEFAULT 0
+)DEFAULT CHARSET=utf8;
