@@ -18,6 +18,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import java.util.Random;
 
 /**
  * Created by fengkai on 15/03/17.
@@ -105,6 +106,28 @@ public class MovieC {
                 historyBean.setTime(movieBean.getShowtime());
                 historyService.insertSelective(historyBean);
             }
+        }
+
+        List<MovieBean> other = movieService.selectByType(movieBean.getType());
+        List<MovieBean> returnother = new ArrayList<>();
+        if(other.size() <= 6){
+            map.put("other", other);
+        }else {
+            Random random=new Random();
+            int [] r=new int[6];
+            for (int i = 0; i < r.length;) {
+                int temp=random.nextInt(other.size());
+                if(temp==0)continue;
+                for (int j : r) {
+                    if(j==temp)continue;
+                }
+                r[i]=temp;
+                i++;
+            }
+            for(int j : r){
+                returnother.add(other.get(j));
+            }
+            map.put("other", returnother);
         }
 
         return "film";

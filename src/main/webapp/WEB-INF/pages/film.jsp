@@ -303,102 +303,32 @@
         <div class="related">
             <div class="module">
                 <div class="mod-title">
-                    <h3>相关电影</h3>
+                    <h3>相关系列</h3>
                 </div>
                 <div class="mod-content">
                     <div class="related-movies">
                         <dl class="movie-list">
+                            <%
+                                List<MovieBean> other = (List)request.getAttribute("other");
+                                for (int i=0;i<other.size();i++){
+                            %>
                             <dd>
                                 <div class="movie-item">
-                                    <a href="#" target="_blank" data-act="movie-click" data-val="{movieid:341749}">
+                                    <a href="${pageContext.request.contextPath}/film?id=<%=other.get(i).getId()%>" target="_blank">
                                         <div class="movie-poster">
-                                            <img class="poster-default" src="//ms0.meituan.net/mywww/image/loading_2.e3d934bf.png">
-                                            <img src="http://p1.meituan.net/movie/8e5eabeadf237a10227a3124419410ef549583.jpg@106w_145h_1e_1c">
+                                            <img src="<%=other.get(i).getImage()%>">
                                         </div>
                                     </a>
                                     <div class="movie-ver"></div>
                                 </div>
-                                <div class="channel-detail movie-item-title" title="我不是潘金莲">
-                                    <a href="#" target="_blank" data-act="movies-click" data-val="{movieId:341749}">我不是潘金莲</a>
+                                <div class="channel-detail movie-item-title" title="">
+                                    <a href="${pageContext.request.contextPath}/film?id=<%=other.get(i).getId()%>" target="_blank"><%=other.get(i).getTitle()%></a>
                                 </div>
-                                <div class="channel-detail channel-detail-orange"><i class="integer">7.</i><i class="fraction">8</i></div>
+                                <div class="channel-detail channel-detail-orange"><i class="integer"><%=other.get(i).getScore()%></i></div>
 
-                            </dd><dd>
-                            <div class="movie-item">
-                                <a href="#" target="_blank" data-act="movie-click" data-val="{movieid:1170255}">
-                                    <div class="movie-poster">
-                                        <img class="poster-default" src="//ms0.meituan.net/mywww/image/loading_2.e3d934bf.png">
-                                        <img src="http://p0.meituan.net/movie/c6cadc16e53ee7a0f79a9455a147449d50210.jpeg@106w_145h_1e_1c">
-                                    </div>
-                                </a>
-                                <div class="movie-ver"></div>
-                            </div>
-                            <div class="channel-detail movie-item-title" title="乘风破浪">
-                                <a href="#" target="_blank" data-act="movies-click" data-val="{movieId:1170255}">乘风破浪</a>
-                            </div>
-                            <div class="channel-detail channel-detail-orange"><i class="integer">8.</i><i class="fraction">8</i></div>
-
-                        </dd><dd>
-                            <div class="movie-item">
-                                <a href="#" target="_blank" data-act="movie-click" data-val="{movieid:248916}">
-                                    <div class="movie-poster">
-                                        <img class="poster-default" src="//ms0.meituan.net/mywww/image/loading_2.e3d934bf.png">
-                                        <img src="http://p1.meituan.net/movie/fb54328788845ca6aaf8362875a699951041538.jpg@106w_145h_1e_1c">
-                                    </div>
-                                </a>
-                                <div class="movie-ver"></div>
-                            </div>
-                            <div class="channel-detail movie-item-title" title="铁道飞虎">
-                                <a href="#" target="_blank" data-act="movies-click" data-val="{movieId:248916}">铁道飞虎</a>
-                            </div>
-                            <div class="channel-detail channel-detail-orange"><i class="integer">8.</i><i class="fraction">5</i></div>
-
-                        </dd><dd>
-                            <div class="movie-item">
-                                <a href="#" target="_blank" data-act="movie-click" data-val="{movieid:338349}">
-                                    <div class="movie-poster">
-                                        <img class="poster-default" src="//ms0.meituan.net/mywww/image/loading_2.e3d934bf.png">
-                                        <img src="http://p0.meituan.net/movie/018ceaadb90ac5c1b9ba33546d1fb746401981.jpg@106w_145h_1e_1c">
-                                    </div>
-                                </a>
-                                <div class="movie-ver"></div>
-                            </div>
-                            <div class="channel-detail movie-item-title" title="血战钢锯岭">
-                                <a href="#" target="_blank" data-act="movies-click" data-val="{movieId:338349}">血战钢锯岭</a>
-                            </div>
-                            <div class="channel-detail channel-detail-orange"><i class="integer">9.</i><i class="fraction">4</i></div>
-
-                        </dd><dd>
-                            <div class="movie-item">
-                                <a href="#" target="_blank" data-act="movie-click" data-val="{movieid:410612}">
-                                    <div class="movie-poster">
-                                        <img class="poster-default" src="//ms0.meituan.net/mywww/image/loading_2.e3d934bf.png">
-                                        <img src="http://p1.meituan.net/movie/13d4883803f25244d266c7cd3ac2f15d327618.jpg@106w_145h_1e_1c">
-                                    </div>
-                                </a>
-                                <div class="movie-ver"></div>
-                            </div>
-                            <div class="channel-detail movie-item-title" title="驴得水">
-                                <a href="#" target="_blank" data-act="movies-click" data-val="{movieId:410612}">驴得水</a>
-                            </div>
-                            <div class="channel-detail channel-detail-orange"><i class="integer">8.</i><i class="fraction">5</i></div>
-
-                        </dd><dd>
-                            <div class="movie-item">
-                                <a href="#" target="_blank" data-act="movie-click" data-val="{movieid:246390}">
-                                    <div class="movie-poster">
-                                        <img class="poster-default" src="//ms0.meituan.net/mywww/image/loading_2.e3d934bf.png">
-                                        <img src="http://p1.meituan.net/movie/7c81af730b119bc04087df7cf2c88f0c310212.png@106w_145h_1e_1c">
-                                    </div>
-                                </a>
-                                <div class="movie-ver"></div>
-                            </div>
-                            <div class="channel-detail movie-item-title" title="从你的全世界路过">
-                                <a href="#" target="_blank" data-act="movies-click" data-val="{movieId:246390}">从你的全世界路过</a>
-                            </div>
-                            <div class="channel-detail channel-detail-orange"><i class="integer">8.</i><i class="fraction">6</i></div>
-
-                        </dd></dl>
+                            </dd>
+                            <%}%>
+                        </dl>
 
                     </div>
 

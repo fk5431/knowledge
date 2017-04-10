@@ -291,7 +291,7 @@
                         <div class="Profile-sideColumn" data-za-module="RightSideBar">
                             <div class="Card">
                                 <div class="Card-header Profile-sideColumnTitle">
-                                    <div class="Card-headerText">个人成就</div>
+                                    <div class="Card-headerText">标签云</div>
                                 </div>
                                 <div class="Profile-sideColumnItems">
                                     <div class="Profile-sideColumnItem">
