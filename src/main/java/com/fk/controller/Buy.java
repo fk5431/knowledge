@@ -1,12 +1,7 @@
 package com.fk.controller;
 
-import com.fk.bean.MovieBean;
-import com.fk.bean.RecordBean;
-import com.fk.bean.SiteBean;
-import com.fk.service.IMovieService;
-import com.fk.service.IRecordService;
-import com.fk.service.ISiteService;
-import com.fk.service.ITypeService;
+import com.fk.bean.*;
+import com.fk.service.*;
 import com.fk.util.CommonConst;
 import com.fk.util.Login;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -37,6 +32,16 @@ public class Buy {
     @Autowired
     IRecordService recordService;
 
+    @Autowired
+    IUserService userService;
+
+    @Autowired
+    IHistoryService historyService;
+
+    @Autowired
+    ICollectService collectService;
+
+    private static final int SIZE = 10;
     @RequestMapping("/buy")
     public String buy(HttpServletRequest request, Map<String, Object> map){
         map.put("index", 0);
@@ -67,6 +72,11 @@ public class Buy {
 
     @RequestMapping("/buymovie")
     public String buymovie(HttpServletRequest request, HttpServletResponse response, Map<String , Object> map){
+        if(Login.islogin(request)){
+            map.put("login", CommonConst.YES);
+        }else{
+            return "log";
+        }
         String id = request.getParameter("id");
         String radio = request.getParameter("radio");
         String name = request.getParameter("name");
@@ -107,6 +117,114 @@ public class Buy {
     @RequestMapping("info")
     public String info(HttpServletRequest request, Map<String, Object> map){
 
+        if(Login.islogin(request)){
+            map.put("login", CommonConst.YES);
+        }else{
+            return "log";
+        }
+        map.put("index", 0);
+        String userId = "0";
+        Cookie[] cookies = request.getCookies();
+        for(Cookie c : cookies){
+            if(c.getName().equals(CommonConst.USERID)){
+                userId = c.getValue();
+            }
+        }
+        User user = userService.selectUserByID(Integer.parseInt(userId));
+        map.put("user", user);
+
+        String type = request.getParameter("type");
+        if(type == null || "".equals(type)){
+            type = "1";
+        }
+        int count3 = collectService.countC();
+        int count4 = collectService.countL();
+        map.put("count3",count3);
+        map.put("count4",count4);
+        if(type.equals("1")){
+            int count = historyService.count();
+            int page = 1;
+            if(count % SIZE == 0)
+                page = count / SIZE;
+            else
+                page = count / SIZE + CommonConst.ONE_INT;
+            if(page == 0)
+                page = 1;
+            map.put("count", count);
+            map.put("size", SIZE);
+            map.put("page", page);
+            String page_ = request.getParameter("page");
+            int toPage;
+            if(page_ == null || "".equals(page_)){
+                toPage = 1;
+            }else {
+                toPage = Integer.parseInt(page_);
+            }
+            if(toPage > page){
+                toPage = page;
+            }
+            map.put("pageNow", toPage);
+            int start = (toPage - 1) * SIZE;
+            List<HistoryBean> list = historyService.selectByStart(start);
+            map.put("his", list);
+            map.put("type", "1");
+        }else if(type.equals("2")){
+
+        }else if(type.equals("3")){
+            int count = collectService.countC();
+            int page = 1;
+            if(count % SIZE == 0)
+                page = count / SIZE;
+            else
+                page = count / SIZE + CommonConst.ONE_INT;
+            if(page == 0)
+                page = 1;
+            map.put("count", count);
+            map.put("size", SIZE);
+            map.put("page", page);
+            String page_ = request.getParameter("page");
+            int toPage;
+            if(page_ == null || "".equals(page_)){
+                toPage = 1;
+            }else {
+                toPage = Integer.parseInt(page_);
+            }
+            if(toPage > page){
+                toPage = page;
+            }
+            map.put("pageNow", toPage);
+            int start = (toPage - 1) * SIZE;
+            List<CollectBean> list = collectService.selectByStartC(start);
+            map.put("his", list);
+            map.put("type", "3");
+        }else if(type.equals("4")){
+            int count = collectService.countL();
+            int page = 1;
+            if(count % SIZE == 0)
+                page = count / SIZE;
+            else
+                page = count / SIZE + CommonConst.ONE_INT;
+            if(page == 0)
+                page = 1;
+            map.put("count", count);
+            map.put("size", SIZE);
+            map.put("page", page);
+            String page_ = request.getParameter("page");
+            int toPage;
+            if(page_ == null || "".equals(page_)){
+                toPage = 1;
+            }else {
+                toPage = Integer.parseInt(page_);
+            }
+            if(toPage > page){
+                toPage = page;
+            }
+            map.put("pageNow", toPage);
+            int start = (toPage - 1) * SIZE;
+            List<CollectBean> list = collectService.selectByStartL(start);
+            map.put("his", list);
+            map.put("type", "4");
+        }
 
         return "userinfo";
     }

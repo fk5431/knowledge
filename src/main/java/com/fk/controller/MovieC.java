@@ -41,6 +41,15 @@ public class MovieC {
     @Autowired
     IPerformerService performerService;
 
+    @Autowired
+    IHistoryService historyService;
+
+    @Autowired
+    IUserService userService;
+
+    @Autowired
+    ICollectService collectService;
+
     private static final int SIZE = 15;
 
     @RequestMapping(value = "/film")
@@ -77,7 +86,27 @@ public class MovieC {
 
         if(Login.islogin(request)){
             map.put("login", CommonConst.YES);
+            String userId = "0";
+            Cookie[] cookies = request.getCookies();
+            for(Cookie c : cookies){
+                if(CommonConst.USERID.equals(c.getName())){
+                    userId = c.getValue();
+                }
+            }
+            HistoryBean his = historyService.selectByMovieId(movieBean.getId());
+            if(his == null) {
+                HistoryBean historyBean = new HistoryBean();
+                historyBean.setUserid(Integer.parseInt(userId));
+                historyBean.setMovieid(movieBean.getId());
+                historyBean.setImage(movieBean.getImage());
+                historyBean.setIntroduce(movieBean.getIntroduce());
+                historyBean.setMovietitle(movieBean.getTitle());
+                historyBean.setScore(movieBean.getScore());
+                historyBean.setTime(movieBean.getShowtime());
+                historyService.insertSelective(historyBean);
+            }
         }
+
         return "film";
     }
 
@@ -123,15 +152,65 @@ public class MovieC {
 
     @RequestMapping(value = "/lookcount")
     public String lookcount(HttpServletRequest request, Map<String, Object> map){
-        String id = request.getParameter("id");
-        MovieBean movieBean = movieService.selectByPrimaryKey(Integer.parseInt(id));
-        movieBean.setLookcount(movieBean.getLookcount() + 1);
-        movieService.updateByPrimaryKey(movieBean);
         if(Login.islogin(request)){
             map.put("login", CommonConst.YES);
         }else{
             return "log";
         }
+        String id = request.getParameter("id");
+        MovieBean movieBean = movieService.selectByPrimaryKey(Integer.parseInt(id));
+        movieBean.setLookcount(movieBean.getLookcount() + 1);
+        movieService.updateByPrimaryKey(movieBean);
+        String userId = "0";
+        Cookie[] cookies = request.getCookies();
+        for(Cookie c : cookies){
+            if(c.getName().equals(CommonConst.USERID)){
+                userId = c.getValue();
+            }
+        }
+        User user = userService.selectUserByID(Integer.parseInt(userId));
+        CollectBean collectBean = new CollectBean();
+        collectBean.setTime(movieBean.getShowtime());
+        collectBean.setScore(movieBean.getScore());
+        collectBean.setIntroduce(movieBean.getIntroduce());
+        collectBean.setUserid(user.getId());
+        collectBean.setImage(movieBean.getImage());
+        collectBean.setMovieid(movieBean.getId());
+        collectBean.setMovietitle(movieBean.getTitle());
+        collectBean.setStatus("1");
+        collectService.insertSelective(collectBean);
+        return film(request, map);
+    }
+
+    @RequestMapping(value = "/collect")
+    public String collect(HttpServletRequest request, Map<String, Object> map){
+        if(Login.islogin(request)){
+            map.put("login", CommonConst.YES);
+        }else{
+            return "log";
+        }
+        String id = request.getParameter("id");
+        MovieBean movieBean = movieService.selectByPrimaryKey(Integer.parseInt(id));
+        movieBean.setScorenum(movieBean.getScorenum() + 1);
+        movieService.updateByPrimaryKey(movieBean);
+        String userId = "0";
+        Cookie[] cookies = request.getCookies();
+        for(Cookie c : cookies){
+            if(c.getName().equals(CommonConst.USERID)){
+                userId = c.getValue();
+            }
+        }
+        User user = userService.selectUserByID(Integer.parseInt(userId));
+        CollectBean collectBean = new CollectBean();
+        collectBean.setTime(movieBean.getShowtime());
+        collectBean.setScore(movieBean.getScore());
+        collectBean.setIntroduce(movieBean.getIntroduce());
+        collectBean.setUserid(user.getId());
+        collectBean.setImage(movieBean.getImage());
+        collectBean.setMovieid(movieBean.getId());
+        collectBean.setMovietitle(movieBean.getTitle());
+        collectBean.setStatus("0");
+        collectService.insertSelective(collectBean);
         return film(request, map);
     }
 

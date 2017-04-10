@@ -100,6 +100,23 @@ public class LoginC {
     public String log(){
         return "log";
     }
+
+    @RequestMapping("/logout")
+    public String logout(HttpServletRequest request, HttpServletResponse response, Map<String, Object> map){
+        Cookie[] cookies = request.getCookies();
+        for(Cookie c : cookies){
+            if("login".equals(c.getName())){
+                c.setValue("no");
+                response.addCookie(c);
+            }else if(CommonConst.USERID.equals(c.getName())){
+                c.setMaxAge(1);
+                response.addCookie(c);
+            }
+        }
+
+
+        return "log";
+    }
     @RequestMapping("/reg")
     public String reg(){
         return "reg";
@@ -121,7 +138,7 @@ public class LoginC {
         }
         Cookie[] cookies = request.getCookies();
         for(Cookie c : cookies){
-            if("login".equals(c.getName())){
+            if("login".equals(c.getName()) && "yes".equals(c.getValue())){
                 return index(request, response, map);
             }
         }

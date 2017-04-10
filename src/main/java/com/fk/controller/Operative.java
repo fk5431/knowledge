@@ -52,6 +52,9 @@ public class Operative {
     @Autowired
     IRecordService recordService;
 
+    @Autowired
+    IHistoryService historyService;
+
     private static final int SIZE = 10;
     private static final int SIZENEW = 5;
 
@@ -404,6 +407,7 @@ public class Operative {
         String id = request.getParameter("id");
         movieService.deleteByPrimaryKey(Integer.parseInt(id));
         recordService.deleteByMovieId(Integer.parseInt(id));
+        historyService.deleteMyMovieId(Integer.parseInt(id));
         return column(request, map);
     }
 
