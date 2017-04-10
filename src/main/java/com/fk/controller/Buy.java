@@ -139,6 +139,8 @@ public class Buy {
         }
         int count3 = collectService.countC();
         int count4 = collectService.countL();
+        int count2 = recordService.count();
+        map.put("count2",count2);
         map.put("count3",count3);
         map.put("count4",count4);
         if(type.equals("1")){
@@ -169,7 +171,34 @@ public class Buy {
             map.put("his", list);
             map.put("type", "1");
         }else if(type.equals("2")){
-
+            int count = recordService.count();
+            int page = 1;
+            if(count % SIZE == 0)
+                page = count / SIZE;
+            else
+                page = count / SIZE + CommonConst.ONE_INT;
+            if(page == 0)
+                page = 1;
+            map.put("count", count);
+            map.put("size", SIZE);
+            map.put("page", page);
+            String page_ = request.getParameter("page");
+            int toPage;
+            if(page_ == null || "".equals(page_)){
+                toPage = 1;
+            }else {
+                toPage = Integer.parseInt(page_);
+            }
+            if(toPage > page){
+                toPage = page;
+            }
+            map.put("pageNow", toPage);
+            int start = (toPage - 1) * SIZE;
+            List<RecordBean> list = recordService.selectByStart(start);
+            List<MovieBean> movieBeans = movieService.selectByStart(start);
+            map.put("his", list);
+            map.put("movie", movieBeans);
+            map.put("type", "2");
         }else if(type.equals("3")){
             int count = collectService.countC();
             int page = 1;

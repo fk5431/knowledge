@@ -1,6 +1,8 @@
 <%@ page import="java.util.List" %>
 <%@ page import="com.fk.bean.HistoryBean" %>
-<%@ page import="com.fk.bean.CollectBean" %><%--
+<%@ page import="com.fk.bean.CollectBean" %>
+<%@ page import="com.fk.bean.RecordBean" %>
+<%@ page import="com.fk.bean.MovieBean" %><%--
   Created by IntelliJ IDEA.
   User: fengkai
   Date: 15/02/17
@@ -166,7 +168,8 @@
                                             </div>
                                         </div>
                                         <%}}else if("2".equals(type)){
-                                            List<HistoryBean> his = (List)request.getAttribute("his");
+                                            List<RecordBean> his = (List)request.getAttribute("his");
+                                            List<MovieBean> movie = (List)request.getAttribute("movie");
                                             for (int i=0;i<his.size();i++){
                                         %>
                                         <div class="List-item">
@@ -177,7 +180,7 @@
                                                             <div class="Popover">
                                                                 <div id="Popover-15688-46640-toggle" class="UserLink-link">
                                                                     <a href="${pageContext.request.contextPath}/film?id=<%=his.get(i).getMovieid()%>">
-                                                                    <img class="Avatar Avatar--large UserLink-avatar" src="<%=his.get(i).getImage()%>"  style="width: 60px; height: 83px;">
+                                                                    <img class="Avatar Avatar--large UserLink-avatar" src="<%=movie.get(i).getImage()%>"  style="width: 60px; height: 83px;">
                                                                     </a>
                                                                 </div>
                                                             </div>
@@ -189,7 +192,7 @@
                                                                 <span class="UserLink UserItem-name">
                                                                     <div class="Popover">
                                                                         <div id="Popover-15691-69832-toggle" >
-                                                                            <a class="UserLink-link" target="_top" href="${pageContext.request.contextPath}/film?id=<%=his.get(i).getMovieid()%>"><%=his.get(i).getMovietitle()%></a>
+                                                                            <a class="UserLink-link" target="_top" href="${pageContext.request.contextPath}/film?id=<%=his.get(i).getMovieid()%>"><%=his.get(i).getMoviename()%></a>
                                                                         </div>
                                                                     </div>
                                                                 </span>
@@ -198,11 +201,12 @@
                                                         <div class="ContentItem-meta">
                                                             <div>
                                                                 <div class="RichText">
-                                                                    <%=his.get(i).getIntroduce()%>
+                                                                    备注： <%=his.get(i).getOther()%>
                                                                 </div>
                                                                 <div class="ContentItem-status">
-                                                                    <span class="ContentItem-statusItem">评分 <%=his.get(i).getScore()%></span>
-                                                                    <span class="ContentItem-statusItem">时间 <%=his.get(i).getTime()%></span>
+                                                                    <span class="ContentItem-statusItem">购买人 <%=his.get(i).getName()%></span>
+                                                                    <span class="ContentItem-statusItem">手机号 <%=his.get(i).getMob()%></span>
+                                                                    <span class="ContentItem-statusItem">场馆 <%=his.get(i).getSitename()%></span>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -256,6 +260,16 @@
                                             </div>
                                         </div>
                                         <%}}%>
+                                        <style>
+                                            .pagelist {padding:10px 0; text-align:center;}
+                                            .pagelist span,.pagelist a{ border-radius:3px; border:1px solid #dfdfdf;display:inline-block; padding:5px 12px;}
+                                            .pagelist a{ margin:0 3px;}
+                                            .pagelist span.current{ background:#09F; color:#FFF; border-color:#09F; margin:0 2px;}
+                                            .pagelist a:hover{background:#09F; color:#FFF; border-color:#09F; }
+                                            .pagelist label{ padding-left:15px; color:#999;}
+                                            .pagelist label b{color:red; font-weight:normal; margin:0 3px;}
+
+                                        </style>
                                         <div class="pagelist">
                                             <%
                                                 Integer pageAll = (Integer)request.getAttribute("page");
