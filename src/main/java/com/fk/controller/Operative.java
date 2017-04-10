@@ -262,7 +262,7 @@ public class Operative {
 
     @RequestMapping("/operative/addmovie")
     public String addmovie(HttpServletRequest request, @RequestParam("image") MultipartFile file, Map<String , Object> map){
-        String title = request.getParameter("title");
+        try { String title = request.getParameter("title");
         String etitle = request.getParameter("etitle");
         String type = request.getParameter("type");
         String area = request.getParameter("area");
@@ -270,13 +270,8 @@ public class Operative {
         String time1 = request.getParameter("time1");
         String score = request.getParameter("score");
         String price = request.getParameter("price");
-        try {
-            int p = Integer.parseInt(price);
-        } catch (NumberFormatException e) {
-            e.printStackTrace();
-            map.put("errorcode", 8);
-            return "error";
-        }
+
+
         String introduce = request.getParameter("introduce");
         String director = request.getParameter("director");
         String[] performer = request.getParameterValues("performer");
@@ -347,7 +342,11 @@ public class Operative {
         movieBean.setAtlas(sbcontent.toString());
 //        <p><img src="http://127.0.0.1:8080/movie/image/upload/20170324/1490349345219013330.jpg" title="1490349345219013330.jpg"/></p><p><img src="http://127.0.0.1:8080/movie/image/upload/20170324/1490349345220025367.png" title="1490349345220025367.png"/></p><p><img src="http://127.0.0.1:8080/movie/image/upload/20170324/1490349345238061557.jpg" title="1490349345238061557.jpg"/></p><p><img src="http://127.0.0.1:8080/movie/image/upload/20170324/1490349345282050166.jpg" title="1490349345282050166.jpg"/></p><p><img src="http://127.0.0.1:8080/movie/image/upload/20170324/1490349345299086634.jpg" title="1490349345299086634.jpg"/></p><p><br/></p>
         movieService.insertSelective(movieBean);
-
+        } catch (NumberFormatException e) {
+            e.printStackTrace();
+            map.put("errorcode", 8);
+            return "error";
+        }
         return book(request, map);
     }
     @RequestMapping("/operative/book")
