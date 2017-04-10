@@ -325,13 +325,6 @@ public class Operative {
                 sb.append(CommonConst.SPLITOR);
                 sb.append(performer[i]);
             }
-            PerformerBean per = performerService.selectByPrimaryKey(Integer.parseInt(performer[i]));
-            if(per.getWorks() == null || per.getWorks().equals("")){
-                per.setWorks(String.valueOf(movieBean.getId()));
-            }else {
-                per.setWorks(per.getWorks() + CommonConst.SPLITOR+String.valueOf(movieBean.getId()));
-            }
-            performerService.updateByPrimaryKey(per);
         }
         movieBean.setPerformerids(sb.toString());
         String reg = ":8080.*?\"";

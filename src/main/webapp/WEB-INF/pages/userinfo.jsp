@@ -14,6 +14,7 @@
 <html>
 <head>
     <title>个人信息</title>
+    <link media="all" href="${pageContext.request.contextPath}/css/wordbox.css" type="text/css" rel="stylesheet">
     <link media="all" href="${pageContext.request.contextPath}/css/index.css" type="text/css" rel="stylesheet">
     <link media="all" href="${pageContext.request.contextPath}/css/info.css" type="text/css" rel="stylesheet">
 </head>
@@ -291,45 +292,59 @@
                         <div class="Profile-sideColumn" data-za-module="RightSideBar">
                             <div class="Card">
                                 <div class="Card-header Profile-sideColumnTitle">
-                                    <div class="Card-headerText">标签云</div>
+                                    <div class="Card-headerText">云</div>
                                 </div>
                                 <div class="Profile-sideColumnItems">
-                                    <div class="Profile-sideColumnItem">
-                                        <div class="IconGraf">
-                                            <div class="IconGraf-iconWrapper">
-                                                <svg viewBox="0 0 20 18" xmlns="http://www.w3.org/2000/svg"
-                                                     class="Icon IconGraf-icon Icon--like" width="16" height="16"
-                                                     aria-hidden="true" style="height: 16px; width: 16px;">
-                                                    <title></title>
-                                                    <g>
-                                                        <path d="M.718 7.024c-.718 0-.718.63-.718.63l.996 9.693c0 .703.718.65.718.65h1.45c.916 0 .847-.65.847-.65V7.793c-.09-.88-.853-.79-.846-.79l-2.446.02zm11.727-.05S13.2 5.396 13.6 2.89C13.765.03 11.55-.6 10.565.53c-1.014 1.232 0 2.056-4.45 5.83C5.336 6.965 5 8.01 5 8.997v6.998c-.016 1.104.49 2 1.99 2h7.586c2.097 0 2.86-1.416 2.86-1.416s2.178-5.402 2.346-5.91c1.047-3.516-1.95-3.704-1.95-3.704l-5.387.007z"></path>
-                                                    </g>
-                                                </svg>
-                                            </div><!-- react-text: 287 -->获得 <!-- /react-text -->
-                                            <!-- react-text: 288 -->1<!-- /react-text --><!-- react-text: 289 --> 次赞同
-                                            <!-- /react-text --></div>
-                                    </div>
-                                    <div class="Profile-sideColumnItem">
-                                        <div class="IconGraf">
-                                            <div class="IconGraf-iconWrapper">
-                                                <svg width="16" height="16" viewBox="0 0 16 16"
-                                                     class="Icon IconGraf-icon Icon--commonEdit" aria-hidden="true"
-                                                     style="height: 16px; width: 16px;"><title></title>
-                                                    <g>
-                                                        <path d="M8 15.5C3.858 15.5.5 12.142.5 8 .5 3.858 3.858.5 8 .5c4.142 0 7.5 3.358 7.5 7.5 0 4.142-3.358 7.5-7.5 7.5zm3.032-11.643c-.22-.214-.574-.208-.79.013L5.1 9.173 6.778 10.8l5.142-5.303c.215-.222.21-.575-.01-.79l-.878-.85zm-6.77 7.107L4 12l1.028-.293.955-.27L4.503 10l-.242.964z"
-                                                              fill-rule="evenodd"></path>
-                                                    </g>
-                                                </svg>
-                                            </div>
-                                            <a class="Profile-sideColumnItemLink"
-                                               href="https://www.zhihu.com/people/narr/logs" target="_top">
-                                                <!-- react-text: 297 -->参与 <!-- /react-text --><!-- react-text: 298 -->4
-                                                <!-- /react-text --><!-- react-text: 299 --> 次公共编辑
-                                                <!-- /react-text --></a></div>
-                                    </div>
+                                    <div id="box-fixedWidth2" class="wordbox"></div>
+
+                                    <script type="text/javascript" src="${pageContext.request.contextPath}/js/jquery-1.8.3.min.js"></script>
+                                    <script type="text/javascript" src="${pageContext.request.contextPath}/js/wordbox.js"></script>
+                                    <script type="text/javascript">
+                                        $(function() {
+                                            var titles = [${sb1}];
+                                            var ids = [${sb2}];
+                                            var words = [];
+                                            for(var i = 0; i < titles.length; i++) {
+                                                words[i] = {
+                                                    'title' : titles[i],
+                                                    'url' : '${pageContext.request.contextPath}/performer?id='+ids[i]
+                                                }
+                                            }
+                                            var colors1 = ['#F46779', '#045DA4'];
+                                            var colors2 = ['#D59A3E', '#C58B59'];
+                                            var colors3 = ['#49B4E0', '#FCBDA2', '#EBADBD', '#D5C2AF', '#C0BDE5', '#CBCC7F', '#FFDA7F', '#8dd0c3', '#bbbfc6', '#a4d9ef', '#bbdb98'];
+                                            // responsive
+                                            // 响应式wordbox需要有外层嵌套div
+                                            $('#box-fixedWidth2').wordbox({
+                                                isLead: true,
+                                                words: words,
+                                                colors: colors3,
+                                                borderWidth: 2,
+                                                isFixedWidth: true,
+                                                width: 280,
+                                                height: 300
+                                            });
+                                            // 鼠标浮动加下划线
+                                            $('.box a').hover(function(event) {
+                                                $(this).css({'text-decoration': 'underline'});
+                                                event.stopPropagation();
+                                            }, function(event) {
+                                                $(this).css({'text-decoration': 'none'});
+                                                event.stopPropagation();
+                                            });
+                                            // 鼠标浮动字体变大
+                                            var fontSize = $('#box-responsive').css('font-size');
+                                            $('#box-fixedWidth1 .box a').hover(function(event) {
+                                                $(this).css({'font-size': '1.4em'});
+                                                event.stopPropagation();
+                                            }, function(event) {
+                                                $(this).css({'font-size': fontSize});
+                                                event.stopPropagation();
+                                            });
+                                        });
+                                    </script>
                                 </div>
                             </div><!-- react-empty: 300 -->
-
                         </div>
                     </div>
                 </div>

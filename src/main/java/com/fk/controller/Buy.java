@@ -259,8 +259,21 @@ public class Buy {
         }
 
         List<CloudBean> cloudBeans = cloudService.selectByCountTwo(Integer.parseInt(userId));
-        map.put("cloud", cloudBeans);
-
+        StringBuffer sb1 = new StringBuffer();
+        StringBuffer sb2 = new StringBuffer();
+        boolean flag = false;
+        for(CloudBean c : cloudBeans){
+            if(flag == false){
+                flag = true;
+                sb1.append("'"+c.getActorname()+"'");
+                sb2.append("'"+c.getActorid()+"'");
+            }else{
+                sb1.append(",'"+c.getActorname()+"'");
+                sb2.append(",'"+c.getActorid()+"'");
+            }
+        }
+        map.put("sb1", sb1.toString());
+        map.put("sb2", sb2.toString());
         return "userinfo";
     }
     //TODO 演员的work
