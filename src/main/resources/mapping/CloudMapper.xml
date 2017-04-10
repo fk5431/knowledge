@@ -11,6 +11,18 @@
     <sql id="Base_Column_List" >
         id, userId, actorId, actorName, actorStatus
     </sql>
+    <select id="selectByCountTwo" resultMap="BaseResultMap" parameterType="java.lang.Integer">
+        select
+        <include refid="Base_Column_List" />
+        from cloud
+        where userId = #{id,jdbcType=INTEGER} ORDER BY actorStatus desc limit 0,20
+    </select>
+    <select id="selectByUserIdAndActorId" resultMap="BaseResultMap" >
+        select
+        <include refid="Base_Column_List" />
+        from cloud
+        where userId = #{0} and actorId = #{1}
+    </select>
     <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
         select
         <include refid="Base_Column_List" />

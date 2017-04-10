@@ -18,4 +18,5 @@ public interface IPerformerService {
 
     int deleteByPrimaryKey(Integer id);
     int insertSelective(PerformerBean record);
+    int updateByPrimaryKey(PerformerBean record);
 }

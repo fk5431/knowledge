@@ -325,6 +325,13 @@ public class Operative {
                 sb.append(CommonConst.SPLITOR);
                 sb.append(performer[i]);
             }
+            PerformerBean per = performerService.selectByPrimaryKey(Integer.parseInt(performer[i]));
+            if(per.getWorks() == null || per.getWorks().equals("")){
+                per.setWorks(String.valueOf(movieBean.getId()));
+            }else {
+                per.setWorks(per.getWorks() + CommonConst.SPLITOR+String.valueOf(movieBean.getId()));
+            }
+            performerService.updateByPrimaryKey(per);
         }
         movieBean.setPerformerids(sb.toString());
         String reg = ":8080.*?\"";
@@ -345,6 +352,15 @@ public class Operative {
         movieBean.setAtlas(sbcontent.toString());
 //        <p><img src="http://127.0.0.1:8080/movie/image/upload/20170324/1490349345219013330.jpg" title="1490349345219013330.jpg"/></p><p><img src="http://127.0.0.1:8080/movie/image/upload/20170324/1490349345220025367.png" title="1490349345220025367.png"/></p><p><img src="http://127.0.0.1:8080/movie/image/upload/20170324/1490349345238061557.jpg" title="1490349345238061557.jpg"/></p><p><img src="http://127.0.0.1:8080/movie/image/upload/20170324/1490349345282050166.jpg" title="1490349345282050166.jpg"/></p><p><img src="http://127.0.0.1:8080/movie/image/upload/20170324/1490349345299086634.jpg" title="1490349345299086634.jpg"/></p><p><br/></p>
         movieService.insertSelective(movieBean);
+        for(int i=0;i<performer.length;i++){
+            PerformerBean per = performerService.selectByPrimaryKey(Integer.parseInt(performer[i]));
+            if(per.getWorks() == null || per.getWorks().equals("")){
+                per.setWorks(String.valueOf(movieBean.getId()));
+            }else {
+                per.setWorks(per.getWorks() + CommonConst.SPLITOR+String.valueOf(movieBean.getId()));
+            }
+            performerService.updateByPrimaryKey(per);
+        }
         } catch (NumberFormatException e) {
             e.printStackTrace();
             map.put("errorcode", 8);

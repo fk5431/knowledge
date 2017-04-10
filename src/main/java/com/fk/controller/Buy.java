@@ -41,6 +41,9 @@ public class Buy {
     @Autowired
     ICollectService collectService;
 
+    @Autowired
+    ICloudService cloudService;
+
     private static final int SIZE = 10;
     @RequestMapping("/buy")
     public String buy(HttpServletRequest request, Map<String, Object> map){
@@ -255,6 +258,10 @@ public class Buy {
             map.put("type", "4");
         }
 
+        List<CloudBean> cloudBeans = cloudService.selectByCountTwo(Integer.parseInt(userId));
+        map.put("cloud", cloudBeans);
+
         return "userinfo";
     }
+    //TODO 演员的work
 }

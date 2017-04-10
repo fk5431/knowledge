@@ -98,7 +98,7 @@
       #{image,jdbcType=VARCHAR}, #{introduce,jdbcType=LONGVARCHAR}, #{atlas,jdbcType=LONGVARCHAR}, #{scorenum,jdbcType=INTEGER}
       )
     </insert>
-    <insert id="insertSelective" parameterType="com.fk.bean.MovieBean" >
+    <insert id="insertSelective" parameterType="com.fk.bean.MovieBean"  useGeneratedKeys="true" keyProperty="id">
         insert into movie
         <trim prefix="(" suffix=")" suffixOverrides="," >
             <if test="id != null" >

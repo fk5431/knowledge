@@ -51,6 +51,9 @@ public class MovieC {
     @Autowired
     ICollectService collectService;
 
+    @Autowired
+    ICloudService cloudService;
+
     private static final int SIZE = 15;
 
     @RequestMapping(value = "/film")
@@ -106,6 +109,24 @@ public class MovieC {
                 historyBean.setTime(movieBean.getShowtime());
                 historyService.insertSelective(historyBean);
             }
+            for(int i=0;i<performers.length;i++){
+                PerformerBean performerBean = performerService.selectByPrimaryKey(Integer.parseInt(performers[i]));
+                if(performerBean != null){
+                    CloudBean cloud = cloudService.selectByUserIdAndActorId(Integer.parseInt(userId), performerBean.getId());
+                    if(cloud == null) {
+                        CloudBean cloudBean = new CloudBean();
+                        cloudBean.setUserid(Integer.parseInt(userId));
+                        cloudBean.setActorid(performerBean.getId());
+                        cloudBean.setActorname(performerBean.getName());
+                        cloudBean.setActorstatus(0);
+                        cloudService.insertSelective(cloudBean);
+                    }else{
+                        cloud.setActorstatus(cloud.getActorstatus()+1);
+                        cloudService.updateByPrimaryKey(cloud);
+                    }
+                }
+            }
+
         }
 
         List<MovieBean> other = movieService.selectByType(movieBean.getType());

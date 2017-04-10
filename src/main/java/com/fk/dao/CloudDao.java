@@ -2,6 +2,8 @@ package com.fk.dao;
 
 import com.fk.bean.CloudBean;
 
+import java.util.List;
+
 /**
  * Created by fengkai on 10/04/17.
  */
@@ -17,4 +19,8 @@ public interface CloudDao {
     int updateByPrimaryKeySelective(CloudBean record);
 
     int updateByPrimaryKey(CloudBean record);
+
+    CloudBean selectByUserIdAndActorId(int userId, Integer id);
+
+    List<CloudBean> selectByCountTwo(int id);
 }
