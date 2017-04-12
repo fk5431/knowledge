@@ -33,6 +33,7 @@ public class StorageManager {
                 ioe.flush();
                 ioe.close();
             } catch (IOException var5) {
+                var5.printStackTrace();
                 return new BaseState(false, 4);
             }
 
@@ -72,6 +73,7 @@ public class StorageManager {
                 return state;
             }
         } catch (IOException var10) {
+            var10.printStackTrace();
             return new BaseState(false, 4);
         }
     }
@@ -100,6 +102,7 @@ public class StorageManager {
 
             return state;
         } catch (IOException var8) {
+            var8.printStackTrace();
             return new BaseState(false, 4);
         }
     }
@@ -119,6 +122,7 @@ public class StorageManager {
             try {
                 FileUtils.moveFile(tmpFile, targetFile);
             } catch (IOException var5) {
+                var5.printStackTrace();
                 return new BaseState(false, 4);
             }
 

@@ -74,6 +74,7 @@ public class BinaryUploader {
             } catch (FileUploadException var14) {
                 return new BaseState(false, 6);
             } catch (IOException var15) {
+                var15.printStackTrace();
                 return new BaseState(false, 4);
             }
         }
