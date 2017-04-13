@@ -1,19 +1,21 @@
 package com.fk.controller;
 
-import com.fk.bean.NewsBean;
-import com.fk.bean.PhotoBean;
-import com.fk.bean.ReturnPhotoBean;
+import com.fk.bean.*;
+import com.fk.dao.DiscussDao;
 import com.fk.service.INewsService;
 import com.fk.service.IPhotoService;
+import com.fk.service.IUserService;
 import com.fk.util.CommonConst;
 import com.fk.util.Login;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
@@ -28,6 +30,11 @@ public class Hot {
 
     @Autowired
     IPhotoService photoService;
+
+    @Autowired
+    DiscussDao discussDao;
+    @Autowired
+    IUserService  userService;
 
     private static final int SIZE = 10;
 
@@ -81,7 +88,41 @@ public class Hot {
         if(Login.islogin(request)){
             map.put("login", CommonConst.YES);
         }
+
+        List<DiscussBean> discussBeans = discussDao.selectByNewsId(newsBean.getId());
+        map.put("discuss", discussBeans);
+
         return "news";
+    }
+    @RequestMapping("/addDiscuss")
+
+    public String addDiscuss(HttpServletRequest request, HttpServletResponse response, Map<String, Object> map){
+        map.put("index", "0");
+        int id = Integer.parseInt(request.getParameter("id"));
+        String key = request.getParameter("key");
+        String userId = "0";
+        if(!Login.islogin(request)){
+            return "log";
+        }else {
+            map.put(CommonConst.LOGIN, CommonConst.YES);
+        }
+
+        Cookie[] cookies = request.getCookies();
+        for(Cookie c : cookies){
+            if(CommonConst.USERID.equals(c.getName())){
+                userId = c.getValue();
+            }
+        }
+        User user = userService.selectUserByID(Integer.parseInt(userId));
+        DiscussBean discussBean = new DiscussBean();
+        discussBean.setUsername(user.getUsername());
+        discussBean.setUserid(user.getId());
+        discussBean.setContent(key);
+        discussBean.setNewsid(id);
+        discussBean.setTime(new Date());
+        discussDao.insertSelective(discussBean);
+
+        return news(request, response, map);
     }
 
     @RequestMapping("/photo")

@@ -1,5 +1,6 @@
 <%@ page import="java.util.List" %>
-<%@ page import="com.fk.bean.NewsBean" %><%--
+<%@ page import="com.fk.bean.NewsBean" %>
+<%@ page import="com.fk.bean.DiscussBean" %><%--
   Created by IntelliJ IDEA.
   User: fengkai
   Date: 22/03/17
@@ -86,73 +87,56 @@
                 </div>
                 <div class="mod-content">
                     <dl class="comments-list">
+                        <%
+                            List<DiscussBean> list = (List)request.getAttribute("discuss");
+                            for(int i=0;i<list.size();i++){
+                        %>
                         <dd class="comment-item">
                             <div class="comment-avatar">
-                                <img src="http://p1.meituan.net/50.50/movie/58d3cb55f20171b337d1da4b33d2e2531171.png"
-                                     alt=""
-                                     style="background-image: url(https://img.meituan.net/avatar/ce56ae3907491f990075f07d9b6b941f143404.jpg@50w_50h_1e_1c)"/>
-                                <div class="level level-v3"></div>
+                                <img src="${pageContext.request.contextPath}/image/ico.png"/>
                             </div>
                             <div class="comment-main">
                                 <div class="comment-info">
                                     <div class="comment-nickname">
-                                        来也匆匆去也匆匆
+                                        <%=list.get(i).getUsername()%>
                                     </div>
                                     <div class="comment-time">
-                                        17分钟前&nbsp;天津
+                                        <%=list.get(i).getTime()%>
                                     </div>
                                 </div>
                                 <div class="comment-content">
-                                    那是三小姐希望能来
+                                    <%=list.get(i).getContent()%>
                                 </div>
                             </div>
                         </dd>
-                        <dd class="comment-item">
-                            <div class="comment-avatar">
-                                <img src="http://p1.meituan.net/50.50/movie/58d3cb55f20171b337d1da4b33d2e2531171.png"
-                                     alt=""
-                                     style="background-image: url(https://img.meituan.net/avatar/c51918ff779456fa442aae83df25ea66131893.jpg@50w_50h_1e_1c)"/>
-                                <div class="level level-v4"></div>
-                            </div>
-                            <div class="comment-main">
-                                <div class="comment-info">
-                                    <div class="comment-nickname">
-                                        唯爱影
-                                    </div>
-                                    <div class="comment-time">
-                                        52分钟前&nbsp;黄山
-                                    </div>
-                                </div>
-                                <div class="comment-content">
-                                    大表哥不管怎样都是帅的
-                                </div>
-                            </div>
-                        </dd>
-                        <dd class="comment-item">
-                            <div class="comment-avatar">
-                                <img src="http://p1.meituan.net/50.50/movie/58d3cb55f20171b337d1da4b33d2e2531171.png"
-                                     alt=""
-                                     style="background-image: url(https://img.meituan.net/avatar/d0b86da1775c183bc93979e41afa9092145721.jpg@50w_50h_1e_1c)"/>
-                                <div class="level level-v4"></div>
-                            </div>
-                            <div class="comment-main">
-                                <div class="comment-info">
-                                    <div class="comment-nickname">
-                                        绍晓南
-                                    </div>
-                                    <div class="comment-time">
-                                        1小时前&nbsp;合肥
-                                    </div>
-                                </div>
-                                <div class="comment-content">
-                                    二小姐能回归就更好了，🌺🌺
-                                </div>
-                            </div>
-                        </dd>
+                        <%}%>
                     </dl>
-
+                    <%
+                        if(list.size() == 0){
+                    %>
+                    <div class="no-comments">
+                        <div class="no-comments-img"></div>
+                        <div class="no-comments-text">暂无评论</div>
+                    </div>
+                    <%}%>
                 </div>
             </div>
+            <div class="module">
+                <div class="mod-title">
+                    <h3>评论</h3>
+                </div>
+                <div class="mod-content">
+                    <form action="${pageContext.request.contextPath}/addDiscuss">
+                    <input name="key" type="text" id="key" value="评论字数不超过50" size="30"
+                           onmouseover=this.focus();this.select();
+                           onclick="if(value==defaultValue){value='';this.style.color='#000'}"
+                           onBlur="if(!value){value=defaultValue;this.style.color='#999'}" style="color:#999;width: 400px;" />
+                        <input name="id" value="${newsBean.id}" hidden>
+                        <input type="submit" value="提交">
+                    </form>
+                </div>
+            </div>
+
         </div>
     </div>
 </div>
