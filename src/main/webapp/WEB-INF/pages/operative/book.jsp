@@ -125,7 +125,7 @@
                         <label>时间：</label>
                     </div>
                     <div class="field">
-                        <input type="text" class="input" name="time" value=""/>
+                        <input type="text" class="input" name="time" value="yyyy-MM-dd hh:mm"/>
                         <div class="tips"></div>
                     </div>
                 </div>

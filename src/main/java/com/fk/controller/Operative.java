@@ -265,96 +265,101 @@ public class Operative {
 
     @RequestMapping("/operative/addmovie")
     public String addmovie(HttpServletRequest request, @RequestParam("image") MultipartFile file, Map<String , Object> map){
-        try { String title = request.getParameter("title");
-        String etitle = request.getParameter("etitle");
-        String type = request.getParameter("type");
-        String area = request.getParameter("area");
-        String time = request.getParameter("time");
-        String time1 = request.getParameter("time1");
-        String score = request.getParameter("score");
-        String price = request.getParameter("price");
+        try {
+            String title = request.getParameter("title");
+            String etitle = request.getParameter("etitle");
+            String type = request.getParameter("type");
+            String area = request.getParameter("area");
+            String time = request.getParameter("time");
+            String time1 = request.getParameter("time1");
+            String score = request.getParameter("score");
+            String price = request.getParameter("price");
 
 
-        String introduce = request.getParameter("introduce");
-        String director = request.getParameter("director");
-        String[] performer = request.getParameterValues("performer");
-        String content = request.getParameter("content");
-        String filename = file.getOriginalFilename();
-        String img ;
-        if("".equals(filename)){
-            img = "";
-        }else{
-            String path = ContextLoader.getCurrentWebApplicationContext().getServletContext().getRealPath("/");
-            filename = String.valueOf(System.currentTimeMillis()) + filename;
-            path = path + "image/movie";
-            File upload = new File(path, filename);
+            String introduce = request.getParameter("introduce");
+            String director = request.getParameter("director");
+            String[] performer = request.getParameterValues("performer");
+            String content = request.getParameter("content");
+            String filename = file.getOriginalFilename();
+            String img ;
+            if("".equals(filename)){
+                img = "";
+            }else{
+                String path = ContextLoader.getCurrentWebApplicationContext().getServletContext().getRealPath("/");
+                filename = String.valueOf(System.currentTimeMillis()) + filename;
+                path = path + "image/movie";
+                File upload = new File(path, filename);
+                try {
+                    FileUtils.copyInputStreamToFile(file.getInputStream(), upload);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+
+                img = "/movie/image/movie/"+filename;
+            }
+            MovieBean movieBean = new MovieBean();
+            movieBean.setScorenum(0);
+            movieBean.setScore(Double.parseDouble(score));
+            movieBean.setImage(img);
+            movieBean.setIntroduce(introduce);
+            movieBean.setLookcount(0);
+            movieBean.setTitle(title);
+            movieBean.setArea(area);
+            movieBean.setBoxoffice(0);
+            movieBean.setEtitle(etitle);
+            movieBean.setPrizeids(price);
+            movieBean.setPrizeids("");
+            SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd hh:mm");
             try {
-                FileUtils.copyInputStreamToFile(file.getInputStream(), upload);
-            } catch (IOException e) {
+                movieBean.setShowtime(dateFormat.parse(time));
+            } catch (ParseException e) {
                 e.printStackTrace();
             }
-
-            img = "/movie/image/movie/"+filename;
-        }
-        MovieBean movieBean = new MovieBean();
-        movieBean.setScorenum(0);
-        movieBean.setScore(Double.parseDouble(score));
-        movieBean.setImage(img);
-        movieBean.setIntroduce(introduce);
-        movieBean.setLookcount(0);
-        movieBean.setTitle(title);
-        movieBean.setArea(area);
-        movieBean.setBoxoffice(0);
-        movieBean.setEtitle(etitle);
-        movieBean.setPrizeids(price);
-        movieBean.setPrizeids("");
-        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd hh:mm");
-        try {
-            movieBean.setShowtime(dateFormat.parse(time));
-        } catch (ParseException e) {
-            e.printStackTrace();
-        }
-        movieBean.setTime(time1);
-        movieBean.setType(type);
-        movieBean.setDirectorid(Integer.parseInt(director));
-        StringBuffer sb = new StringBuffer();
-        for(int i=0;i<performer.length;i++){
-            if(i == 0)
-                sb.append(performer[i]);
-            else{
-                sb.append(CommonConst.SPLITOR);
-                sb.append(performer[i]);
+            movieBean.setTime(time1);
+            movieBean.setType(type);
+            movieBean.setDirectorid(Integer.parseInt(director));
+            StringBuffer sb = new StringBuffer();
+            if(performer!=null) {
+                for (int i = 0; i < performer.length; i++) {
+                    if (i == 0)
+                        sb.append(performer[i]);
+                    else {
+                        sb.append(CommonConst.SPLITOR);
+                        sb.append(performer[i]);
+                    }
+                }
             }
-        }
-        movieBean.setPerformerids(sb.toString());
-        String reg = ":8080.*?\"";
-        Pattern pattern = Pattern.compile(reg);
-        Matcher matcher =  pattern.matcher(content);
-        StringBuffer sbcontent = new StringBuffer();
-        Boolean b = false;
-        while(matcher.find()){
-            String g = matcher.group();
-            if(b == false) {
-                sbcontent.append(g.substring(CommonConst.FIVE_INT, g.length() - CommonConst.ONE_INT));
-                b = true;
-            }else{
-                sbcontent.append(CommonConst.SPLITOR);
-                sbcontent.append(g.substring(CommonConst.FIVE_INT, g.length() - CommonConst.ONE_INT));
+            movieBean.setPerformerids(sb.toString());
+            String reg = ":8080.*?\"";
+            Pattern pattern = Pattern.compile(reg);
+            Matcher matcher =  pattern.matcher(content);
+            StringBuffer sbcontent = new StringBuffer();
+            Boolean b = false;
+            while(matcher.find()){
+                String g = matcher.group();
+                if(b == false) {
+                    sbcontent.append(g.substring(CommonConst.FIVE_INT, g.length() - CommonConst.ONE_INT));
+                    b = true;
+                }else{
+                    sbcontent.append(CommonConst.SPLITOR);
+                    sbcontent.append(g.substring(CommonConst.FIVE_INT, g.length() - CommonConst.ONE_INT));
+                }
             }
-        }
-        movieBean.setAtlas(sbcontent.toString());
-//        <p><img src="http://127.0.0.1:8080/movie/image/upload/20170324/1490349345219013330.jpg" title="1490349345219013330.jpg"/></p><p><img src="http://127.0.0.1:8080/movie/image/upload/20170324/1490349345220025367.png" title="1490349345220025367.png"/></p><p><img src="http://127.0.0.1:8080/movie/image/upload/20170324/1490349345238061557.jpg" title="1490349345238061557.jpg"/></p><p><img src="http://127.0.0.1:8080/movie/image/upload/20170324/1490349345282050166.jpg" title="1490349345282050166.jpg"/></p><p><img src="http://127.0.0.1:8080/movie/image/upload/20170324/1490349345299086634.jpg" title="1490349345299086634.jpg"/></p><p><br/></p>
-        movieService.insertSelective(movieBean);
-        for(int i=0;i<performer.length;i++){
-            PerformerBean per = performerService.selectByPrimaryKey(Integer.parseInt(performer[i]));
-            if(per.getWorks() == null || per.getWorks().equals("")){
-                per.setWorks(String.valueOf(movieBean.getId()));
-            }else {
-                per.setWorks(per.getWorks() + CommonConst.SPLITOR+String.valueOf(movieBean.getId()));
+            movieBean.setAtlas(sbcontent.toString());
+    //        <p><img src="http://127.0.0.1:8080/movie/image/upload/20170324/1490349345219013330.jpg" title="1490349345219013330.jpg"/></p><p><img src="http://127.0.0.1:8080/movie/image/upload/20170324/1490349345220025367.png" title="1490349345220025367.png"/></p><p><img src="http://127.0.0.1:8080/movie/image/upload/20170324/1490349345238061557.jpg" title="1490349345238061557.jpg"/></p><p><img src="http://127.0.0.1:8080/movie/image/upload/20170324/1490349345282050166.jpg" title="1490349345282050166.jpg"/></p><p><img src="http://127.0.0.1:8080/movie/image/upload/20170324/1490349345299086634.jpg" title="1490349345299086634.jpg"/></p><p><br/></p>
+            movieService.insertSelective(movieBean);
+            if(performer!=null) {
+                for(int i=0;i<performer.length;i++){
+                    PerformerBean per = performerService.selectByPrimaryKey(Integer.parseInt(performer[i]));
+                    if(per.getWorks() == null || per.getWorks().equals("")){
+                        per.setWorks(String.valueOf(movieBean.getId()));
+                    }else {
+                        per.setWorks(per.getWorks() + CommonConst.SPLITOR+String.valueOf(movieBean.getId()));
+                    }
+                    performerService.updateByPrimaryKey(per);
+                }
             }
-            performerService.updateByPrimaryKey(per);
-        }
-        } catch (NumberFormatException e) {
+        } catch (Exception e) {
             e.printStackTrace();
             map.put("errorcode", 8);
             return "error";

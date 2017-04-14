@@ -15,10 +15,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-import java.util.Random;
+import java.util.*;
 
 /**
  * Created by fengkai on 15/03/17.
@@ -80,10 +77,12 @@ public class MovieC {
 //        演员 performer
         List<PerformerBean> performer = new ArrayList<>();
         String[] performers = movieBean.getPerformerids().split(CommonConst.SPLITOR);
-        for(int i=0;i<performers.length;i++){
-            PerformerBean performerBean = performerService.selectByPrimaryKey(Integer.parseInt(performers[i]));
-            if(performerBean != null){
-                performer.add(performerBean);
+        if( !(performers.length == 1 && performers[0].equals(""))){
+            for(int i=0;i<performers.length;i++){
+                PerformerBean performerBean = performerService.selectByPrimaryKey(Integer.parseInt(performers[i]));
+                if(performerBean != null){
+                    performer.add(performerBean);
+                }
             }
         }
         map.put("performer", performer);
@@ -97,7 +96,7 @@ public class MovieC {
                     userId = c.getValue();
                 }
             }
-            HistoryBean his = historyService.selectByMovieId(movieBean.getId());
+            HistoryBean his = historyService.selectByMovieId(Integer.parseInt(userId), movieBean.getId());
             if(his == null) {
                 HistoryBean historyBean = new HistoryBean();
                 historyBean.setUserid(Integer.parseInt(userId));
@@ -107,22 +106,28 @@ public class MovieC {
                 historyBean.setMovietitle(movieBean.getTitle());
                 historyBean.setScore(movieBean.getScore());
                 historyBean.setTime(movieBean.getShowtime());
+                historyBean.setDate(new Date());
                 historyService.insertSelective(historyBean);
+            }else{
+                his.setDate(new Date());
+                historyService.updateByPrimaryKey(his);
             }
-            for(int i=0;i<performers.length;i++){
-                PerformerBean performerBean = performerService.selectByPrimaryKey(Integer.parseInt(performers[i]));
-                if(performerBean != null){
-                    CloudBean cloud = cloudService.selectByUserIdAndActorId(Integer.parseInt(userId), performerBean.getId());
-                    if(cloud == null) {
-                        CloudBean cloudBean = new CloudBean();
-                        cloudBean.setUserid(Integer.parseInt(userId));
-                        cloudBean.setActorid(performerBean.getId());
-                        cloudBean.setActorname(performerBean.getName());
-                        cloudBean.setActorstatus(0);
-                        cloudService.insertSelective(cloudBean);
-                    }else{
-                        cloud.setActorstatus(cloud.getActorstatus()+1);
-                        cloudService.updateByPrimaryKey(cloud);
+            if( !(performers.length == 1 && performers[0].equals(""))) {
+                for (int i = 0; i < performers.length; i++) {
+                    PerformerBean performerBean = performerService.selectByPrimaryKey(Integer.parseInt(performers[i]));
+                    if (performerBean != null) {
+                        CloudBean cloud = cloudService.selectByUserIdAndActorId(Integer.parseInt(userId), performerBean.getId());
+                        if (cloud == null) {
+                            CloudBean cloudBean = new CloudBean();
+                            cloudBean.setUserid(Integer.parseInt(userId));
+                            cloudBean.setActorid(performerBean.getId());
+                            cloudBean.setActorname(performerBean.getName());
+                            cloudBean.setActorstatus(0);
+                            cloudService.insertSelective(cloudBean);
+                        } else {
+                            cloud.setActorstatus(cloud.getActorstatus() + 1);
+                            cloudService.updateByPrimaryKey(cloud);
+                        }
                     }
                 }
             }

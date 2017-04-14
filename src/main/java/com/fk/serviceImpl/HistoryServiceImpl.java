@@ -39,7 +39,12 @@ public class HistoryServiceImpl implements IHistoryService {
     }
 
     @Override
-    public HistoryBean selectByMovieId(Integer id) {
-        return historyDao.selectByMovieId(id);
+    public HistoryBean selectByMovieId(int userId, Integer id) {
+        return historyDao.selectByMovieId(userId, id);
+    }
+
+    @Override
+    public int updateByPrimaryKey(HistoryBean record) {
+        return historyDao.updateByPrimaryKey(record);
     }
 }

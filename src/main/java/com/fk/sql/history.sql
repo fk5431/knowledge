@@ -7,5 +7,6 @@ CREATE TABLE history(
   image VARCHAR(255) NOT NULL ,
   score DOUBLE DEFAULT 0,
   introduce text not NULL,
-  time VARCHAR(255) NOT NULL
+  time VARCHAR(255) NOT NULL,
+  date DATETIME
 )DEFAULT CHARSET=utf8;

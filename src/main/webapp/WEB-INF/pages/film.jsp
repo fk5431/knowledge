@@ -11,7 +11,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>一条狗的使命 - 福州文娱演出票务网</title>
+    <title>${movie.title} - 福州文娱演出票务网</title>
     <script async="" src="${pageContext.request.contextPath}/js/file/file_1.js"></script>
     <script>
         cid = 128432;
@@ -263,7 +263,7 @@
                             <div class="celebrity-group">
                                 <div class="celebrity-type">
                                     演员
-                                    <span class="num">（63）</span>
+                                    <span class="num">（${performer.size()}）</span>
                                 </div>
                                 <ul class="celebrity-list clearfix">
                                     <%

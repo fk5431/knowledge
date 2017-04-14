@@ -29,5 +29,5 @@ public interface HistoryDao {
 
     List<HistoryBean> selectByStart(int id,int start);
 
-    HistoryBean selectByMovieId(Integer id);
+    HistoryBean selectByMovieId(int userId, Integer id);
 }

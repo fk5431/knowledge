@@ -9,6 +9,7 @@
         <result column="image" property="image" jdbcType="VARCHAR" />
         <result column="score" property="score" jdbcType="DOUBLE" />
         <result column="time" property="time" jdbcType="VARCHAR" />
+        <result column="date" property="date" jdbcType="TIMESTAMP" />
     </resultMap>
     <resultMap id="ResultMapWithBLOBs" type="com.fk.bean.HistoryBean" extends="BaseResultMap" >
         <result column="introduce" property="introduce" jdbcType="LONGVARCHAR" />
@@ -30,16 +31,16 @@
         ,
         <include refid="Blob_Column_List" />
         from history
-        WHERE userId = #{0}
+        WHERE userId = #{0} order by date desc
         limit #{1},10
     </select>
-    <select id="selectByMovieId" resultMap="ResultMapWithBLOBs" parameterType="java.lang.Integer" >
+    <select id="selectByMovieId" resultMap="ResultMapWithBLOBs">
         select
         <include refid="Base_Column_List" />
         ,
         <include refid="Blob_Column_List" />
         from history
-        where movieid = #{id,jdbcType=INTEGER}
+        where userId = #{0} and movieid = #{1}
     </select>
     <select id="selectByPrimaryKey" resultMap="ResultMapWithBLOBs" parameterType="java.lang.Integer" >
         select
@@ -60,10 +61,10 @@
     <insert id="insert" parameterType="com.fk.bean.HistoryBean" >
         insert into history (id, userId, movieid,
         movietitle, image, score,
-        time, introduce)
+        time, introduce, date)
         values (#{id,jdbcType=INTEGER}, #{userid,jdbcType=INTEGER}, #{movieid,jdbcType=INTEGER},
         #{movietitle,jdbcType=VARCHAR}, #{image,jdbcType=VARCHAR}, #{score,jdbcType=DOUBLE},
-        #{time,jdbcType=VARCHAR}, #{introduce,jdbcType=LONGVARCHAR})
+        #{time,jdbcType=VARCHAR}, #{introduce,jdbcType=LONGVARCHAR}, #{date,jdbcType=TIMESTAMP})
     </insert>
     <insert id="insertSelective" parameterType="com.fk.bean.HistoryBean" >
         insert into history
@@ -92,6 +93,9 @@
             <if test="introduce != null" >
                 introduce,
             </if>
+            <if test="date != null" >
+                date,
+            </if>
         </trim>
         <trim prefix="values (" suffix=")" suffixOverrides="," >
             <if test="id != null" >
@@ -117,6 +121,9 @@
             </if>
             <if test="introduce != null" >
                 #{introduce,jdbcType=LONGVARCHAR},
+            </if>
+            <if test="date != null" >
+                #{date,jdbcType=TIMESTAMP},
             </if>
         </trim>
     </insert>
@@ -144,6 +151,9 @@
             <if test="introduce != null" >
                 introduce = #{introduce,jdbcType=LONGVARCHAR},
             </if>
+            <if test="date != null" >
+                date = #{introduce,jdbcType=TIMESTAMP},
+            </if>
         </set>
         where id = #{id,jdbcType=INTEGER}
     </update>
@@ -155,7 +165,8 @@
         image = #{image,jdbcType=VARCHAR},
         score = #{score,jdbcType=DOUBLE},
         time = #{time,jdbcType=VARCHAR},
-        introduce = #{introduce,jdbcType=LONGVARCHAR}
+        introduce = #{introduce,jdbcType=LONGVARCHAR},
+        date = #{date,jdbcType=TIMESTAMP}
         where id = #{id,jdbcType=INTEGER}
     </update>
     <update id="updateByPrimaryKey" parameterType="com.fk.bean.HistoryBean" >
@@ -165,7 +176,8 @@
         movietitle = #{movietitle,jdbcType=VARCHAR},
         image = #{image,jdbcType=VARCHAR},
         score = #{score,jdbcType=DOUBLE},
-        time = #{time,jdbcType=VARCHAR}
+        time = #{time,jdbcType=VARCHAR},
+        date = #{date,jdbcType=TIMESTAMP}
         where id = #{id,jdbcType=INTEGER}
     </update>
 </mapper>

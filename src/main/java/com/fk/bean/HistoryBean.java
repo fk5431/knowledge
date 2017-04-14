@@ -1,5 +1,7 @@
 package com.fk.bean;
 
+import java.util.Date;
+
 public class HistoryBean {
     private Integer id;
 
@@ -16,6 +18,8 @@ public class HistoryBean {
     private String time;
 
     private String introduce;
+
+    private Date date;
 
     public Integer getId() {
         return id;
@@ -79,5 +83,13 @@ public class HistoryBean {
 
     public void setIntroduce(String introduce) {
         this.introduce = introduce == null ? null : introduce.trim();
+    }
+
+    public Date getDate() {
+        return date;
+    }
+
+    public void setDate(Date date) {
+        this.date = date;
     }
 }
