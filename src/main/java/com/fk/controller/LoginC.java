@@ -1,9 +1,7 @@
 package com.fk.controller;
 
-import com.fk.bean.User;
 import com.fk.service.UserService;
 import com.fk.util.MD5;
-import com.fk.util.SendMail;
 import com.google.common.base.Preconditions;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -13,9 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import javax.servlet.http.HttpServletRequest;
-import java.util.Date;
 import java.util.Map;
-import java.util.Random;
 
 /**
  * Created by FK on 2017/2/3.
@@ -29,8 +25,7 @@ public class LoginC {
 
     @RequestMapping("/")
     public String index( Map<String, Object> map){
-        map.put("login", 1);
-        return "login";
+        return "/index";
     }
 
     @RequestMapping(value = "/login", method = RequestMethod.POST)
@@ -43,7 +38,7 @@ public class LoginC {
 
         userService.login(email, password, request, map);
 
-        return "index";
+        return "/WEB-INF/pages/index.html";
     }
 
     @RequestMapping(value = "regis", method = RequestMethod.POST)
