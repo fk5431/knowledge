@@ -71,9 +71,10 @@ public class UserService {
             String currentTime = "" + now.getTime();
             String urlString = "http://localhost:8080/forgetPassword?key=";
             String encryptedCode = MD5.encodeMD5(currentTime + "@" + email);
-            String link = "<a href=\""+urlString + encryptedCode+"\"></a>";
+            String link = "<a href=\""+urlString + encryptedCode+"\">链接</a>";
             logger.debug("LoginC.sendMail in email[{}], link[{}]", email, link);
-            int re = SendMail.sendEmailToOne("smtp.qq.com",email,"知识库密码找回","请点击链接完成密码修改"+link +urlString + encryptedCode ,"text/html;charset=utf-8");
+            SendMail send = new SendMail();
+            int re = send.sendEmailToOne(email,"知识库密码找回","请点击链接完成密码修改"+link + "  " +urlString + encryptedCode);
             return re;
         } catch (Exception e) {
             e.printStackTrace();
@@ -91,7 +92,8 @@ public class UserService {
                 return -1;
             }
             String resetP = RandomUtil.Random();
-            int re = SendMail.sendEmailToOne("smtp.qq.com",str[1],"知识库密码","密码重置为"+resetP,"text/html;charset=utf-8");
+            SendMail send = new SendMail();
+            int re = send.sendEmailToOne(str[1],"知识库密码","密码重置为"+resetP);
             if(re != CommonConst.ONE_INT){
                 return re;
             }

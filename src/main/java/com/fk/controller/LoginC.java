@@ -59,7 +59,7 @@ public class LoginC {
         return "forgot";
     }
 
-    @RequestMapping(value = "sendmail", method = RequestMethod.POST)
+    @RequestMapping(value = "sendmail")
     public String sendEmail(HttpServletRequest request, Map<String, Object> map){
         String email = request.getParameter("email");
         Preconditions.checkNotNull(email, "email cannot be null");
@@ -75,7 +75,7 @@ public class LoginC {
         }
     }
 
-    @RequestMapping(value = "forgetPassword", method = RequestMethod.GET)
+    @RequestMapping(value = "forgetPassword")
     public String forgetPassword(HttpServletRequest request, Map<String, Object> map){
         String key_MD5 = request.getParameter("key");
         Preconditions.checkNotNull(key_MD5, "key cannot be null");

@@ -1,16 +1,33 @@
 package com.fk.util;
 
 import com.sun.mail.util.MailSSLSocketFactory;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import javax.mail.*;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
+import java.io.InputStream;
 import java.util.Properties;
 
 /**
  * Created by fengkai on 13/02/17.
  */
 public class SendMail {
+
+    private static String account = "";
+
+    private static String authcode = "";
+    private static String mailserver = "";
+    private static String emailcontenttype = "";
+
+    private Logger logger = LoggerFactory.getLogger(SendMail.class);
+    static {
+        account = PropertiesStr.account;
+        authcode = PropertiesStr.authcode;
+        mailserver = PropertiesStr.mailserver;
+        emailcontenttype = PropertiesStr.emailcontenttype;
+    }
 
 
     /**
@@ -95,22 +112,20 @@ public class SendMail {
         return res;
     }
 
-    public static int sendEmailToOne(String mailServer,String recipients,
-                                String emailSubject,String emailContent,String emailContentType){
+    public int sendEmailToOne(String recipients,String emailSubject,String emailContent){
+        logger.error(account);
         int res=0;
-        final String loginAccount = "1050577129@qq.com";
-        final String loginAuthCode = "mhvjolvnbmgtbdce";
-        String sender = "1050577129@qq.com";
         try {
             //跟smtp服务器建立一个连接
             Properties p = new Properties();
-            //设置邮件服务器主机名
-            p.setProperty("mail.host",mailServer);
-            //发送服务器需要身份验证,要采用指定用户名密码的方式去认证
-            p.setProperty("mail.smtp.auth", "true");
-            //发送邮件协议名称
-            p.setProperty("mail.transport.protocol", "smtp");
-
+//            //设置邮件服务器主机名
+//            p.setProperty("mail.host",mailServer);
+//            //发送服务器需要身份验证,要采用指定用户名密码的方式去认证
+//            p.setProperty("", "true");
+//            //发送邮件协议名称
+//            p.setProperty("mail.transport.protocol", "smtp");
+            InputStream is = this.getClass().getResourceAsStream("/mail.properties");
+            p.load(is);
             //开启SSL加密，否则会失败
             MailSSLSocketFactory sf = new MailSSLSocketFactory();
             sf.setTrustAllHosts(true);
@@ -121,7 +136,7 @@ public class SendMail {
             Session session = Session.getDefaultInstance(p, new Authenticator() {
                 protected PasswordAuthentication getPasswordAuthentication() {
                     //用户名可以用QQ账号也可以用邮箱的别名:第一个参数为邮箱账号,第二个为授权码
-                    PasswordAuthentication pa = new PasswordAuthentication(loginAccount,loginAuthCode);
+                    PasswordAuthentication pa = new PasswordAuthentication(account,authcode);
                     return pa;
                 }
             });
@@ -134,22 +149,16 @@ public class SendMail {
             MimeMessage msg = new MimeMessage(session);
             //邮件信息封装
             //1发件人
-            msg.setFrom(new InternetAddress(sender));
-
+            msg.setFrom(new InternetAddress(account));
             //2收件人:可以多个
             //一个的收件人
-            //msg.setRecipient(RecipientType.TO, new InternetAddress("linsenzhong@126.com"));
-
             InternetAddress[] receptientsEmail=new InternetAddress[1];
             receptientsEmail[0]=new InternetAddress(recipients);
-
-            //多个收件人
             msg.setRecipients(Message.RecipientType.TO,receptientsEmail);
-
             //3邮件内容:主题、内容
             msg.setSubject(emailSubject);
             //msg.setContent("Hello, 我是debug!!!", );//纯文本
-            msg.setContent(emailContent,emailContentType);//发html格式的文本
+            msg.setContent(emailContent,emailcontenttype);//发html格式的文本
             //发送动作
             Transport.send(msg);
             System.out.println("邮件发送成功");
@@ -164,8 +173,8 @@ public class SendMail {
         return res;
     }
     public static void main(String[] args) {
-        int a = sendEmailToOne("smtp.qq.com","15275247807@163.com","nihao","text","text/html;charset=utf-8");
-        System.out.println(a);
+     //   int a = sendEmailToOne("smtp.qq.com","15275247807@163.com","nihao","text","text/html;charset=utf-8");
+//        System.out.println(a);
 
     }
 }
