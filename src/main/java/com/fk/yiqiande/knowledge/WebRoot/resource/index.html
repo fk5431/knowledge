@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Engineering Village - Quick Search</title>
+<script type="text/javascript" src="standard.js"></script>
+<link rel="stylesheet" type="text/css" href="index1.css" media="all">
+</head>
+<body>
+<div id="container">
+
+
+	<div id="container">
+		<div id="searchformwrap">
+			<div id="searchformbox">
+				<div id="searchformtabsbox">
+					<ul id="searchformtabs" aria-label="Search forms" role="navigation"
+						style="width: 100%;">
+						<li><h1 class="link" >
+								<a id="quickSearchTab" href="#" class="tablink here"
+									title="Quick Search  (currently selected form)">高级搜索</a>
+							</h1></li>
+					</ul>
+				</div>
+				<script type="text/javascript">
+				function sy(){
+			        var curWwwPath = window.document.location.href;
+			        var pathName =  window.document.location.pathname;
+			        var pos = curWwwPath.indexOf(pathName);
+			        var localhostPaht = curWwwPath.substring(0,pos);
+			        var projectName = pathName.substring(0,pathName.substr(1).indexOf('/')+1);
+			      
+			        return (localhostPaht + projectName)+"/advancedsearch";
+			        }
+				</script>
+				<script type="text/javascript">
+					function save(){
+						document.quicksearch.action="http://localhost:8080/knowledge/advancedsearch_save";
+						document.quicksearch.submit();
+					}
+				</script>
+				<div id="searchcontents" class="shadowbox" role="search"
+					aria-label="Quick Search">
+
+
+					<div id="searchform">
+						<form method="POST" name="quicksearch"
+							action="advancedsearch"
+							id="searchform"
+							target="_top">
+
+							<div id="searchcomponentfullwrap" class="searchcomponentfullwrap"
+								style="padding-bottom: 0px;">
+								<div id="searchfields">
+									<h2 class="searchcomponentlabel">SEARCH FOR</h2>
+									<div class="searchforline">
+										<label class="hidden" for="srchWrd1">Search 1</label> <span
+											style="position: relative; display: inline;"
+											class="twitter-typeahead">
+											<input style="position: absolute; border-color: transparent; box-shadow: none; background: rgb(255, 255, 255) none repeat scroll 0% 0%;"
+											class="tt-hint" autocomplete="off" spellcheck="off"
+											disabled="" type="text">
+											<input dir="auto" style="position: relative; vertical-align: top; background-color: transparent;"
+											spellcheck="false" autocomplete="off" name="searchWord1"
+											id="srchWrd1" title="Search Text Box 1"
+											class="searchword tt-query" value="" type="text">
+											<span style="position: absolute; left: -9999px; visibility: hidden; white-space: nowrap; font-family: MS Shell Dlg \32 ; font-size: 13.3333px; font-style: normal; font-variant: normal; font-weight: 400; word-spacing: 0px; letter-spacing: 0px; text-indent: 0px; text-rendering: optimizelegibility; text-transform: none;"></span><span
+											style="position: absolute; left: 1px; z-index: 999; display: none;"
+											class="tt-dropdown-menu"></span></span> <span>in</span> <label
+											class="hidden" for="sect1">Search Within 1</label> <select
+											size="1" name="section1" id="sect1"
+											title="Search Within Dropdown 1" class="section">
+											<option value="title">标题</option>
+											<option value="user">上传者</option>
+											<option value="tags">标签</option>
+											<option value="abstracString">摘要</option>
+											<option value="fname">文件名字</option>
+											<option value="introduction">描述</option>
+										</select> <a
+											class="helpurl"
+											title="Learn more about available search fields by database">
+									 
+										</a>
+									</div>
+
+									<div class="searchforconnector">
+										<label class="hidden" for="cbnt1">Combine Terms 1</label> <select
+											size="1" name="boolean1" id="cbnt1"
+											title="boolean operator for combining textbox 1 and textbox 2"
+											class="boolean">
+											<option value="AND">AND</option>
+											<option value="OR">OR</option>
+											<option value="NOT">NOT</option>
+										</select>
+									</div>
+									<div class="searchforline">
+										<label class="hidden" for="srchWrd2">Search 2</label> <span
+											style="position: relative; display: inline;"
+											class="twitter-typeahead"><input
+											style="position: absolute; border-color: transparent; box-shadow: none; background: rgb(255, 255, 255) none repeat scroll 0% 0%;"
+											class="tt-hint" autocomplete="off" spellcheck="off"
+											disabled="" type="text"><input dir="auto"
+											style="position: relative; vertical-align: top; background-color: transparent;"
+											spellcheck="false" autocomplete="off" name="searchWord2"
+											id="srchWrd2" title="Search Text Box 2"
+											class="searchword tt-query" value="" type="text"><span
+											style="position: absolute; left: -9999px; visibility: hidden; white-space: nowrap; font-family: MS Shell Dlg \32 ; font-size: 13.3333px; font-style: normal; font-variant: normal; font-weight: 400; word-spacing: 0px; letter-spacing: 0px; text-indent: 0px; text-rendering: optimizelegibility; text-transform: none;"></span><span
+											style="position: absolute; left: 1px; z-index: 999; display: none;"
+											class="tt-dropdown-menu"></span></span> <span>in</span> <label
+											class="hidden" for="sect2">Search Within 2</label> <select
+											size="1" name="section2" id="sect2"
+											title="Search Within Dropdown 2" class="section">
+											<option value="title">标题</option>
+											<option value="user">上传者</option>
+											<option value="tags">标签</option> 
+											<option value="abstracString">摘要</option>
+											<option value="fname">文件名字</option>
+											<option value="introduction">描述</option>
+										</select>
+									</div>
+
+									<div class="searchforconnector">
+										<label class="hidden" for="cbnt2">Combine Terms 2</label> <select
+											size="1" name="boolean2" id="cbnt2"
+											title="boolean operator for combining textbox 2 and textbox 3"
+											class="boolean">
+											<option value="AND">AND</option>
+											<option value="OR">OR</option>
+											<option value="NOT">NOT</option>
+										</select>
+									</div>
+									<div class="searchforline">
+										<label class="hidden" for="srchWrd3">Search 3</label> <span
+											style="position: relative; display: inline;"
+											class="twitter-typeahead"><input
+											style="position: absolute; border-color: transparent; box-shadow: none; background: rgb(255, 255, 255) none repeat scroll 0% 0%;"
+											class="tt-hint" autocomplete="off" spellcheck="off"
+											disabled="" type="text"><input dir="auto"
+											style="position: relative; vertical-align: top; background-color: transparent;"
+											spellcheck="false" autocomplete="off" name="searchWord3"
+											id="srchWrd3" title="Search Text Box 3"
+											class="searchword tt-query" value="" type="text"><span
+											style="position: absolute; left: -9999px; visibility: hidden; white-space: nowrap; font-family: MS Shell Dlg \32 ; font-size: 13.3333px; font-style: normal; font-variant: normal; font-weight: 400; word-spacing: 0px; letter-spacing: 0px; text-indent: 0px; text-rendering: optimizelegibility; text-transform: none;"></span><span
+											style="position: absolute; left: 1px; z-index: 999; display: none;"
+											class="tt-dropdown-menu"></span></span> <span> in </span> <label
+											class="hidden" for="sect3">Search Within 3</label> <select
+											size="1" name="section3" id="sect3"
+											title="Search Within Dropdown 3" class="section">
+											<option value="title">标题</option>
+											<option value="user">上传者</option>
+											<option value="tags">标签</option> 
+											<option value="abstracString">摘要</option>
+											<option value="fname">文件名字</option>
+											<option value="introduction">描述</option>
+										</select>
+									</div>
+
+								</div>
+
+								<div id="addsearcherror" class="searchforline"
+									style="display: none; padding-left: 400px;">
+									<img src="1x1_transparent.png"
+										class="sprite sprite-warning_red" alt="Error message"><b>
+										最多可以筛选10个条件</b>
+								</div>
+
+								<ul id="search_toolbar" class="horizlist">
+
+									<li id="resetsearch_tool" class="text" style="display: none;">
+										<input  type="hidden">
+										<input class="formreset" value="重置" title="Reset search"
+												type="reset">
+									</li>
+									<li id="addsearchfield_tool" class="text"><span
+										id="addsearchllinkgray" title="Add search field"
+										class="greytext" style="display: none;"><img
+											src="1x1_transparent.png"
+											class="addsearchimg sprite sprite-addsearchfield" alt="">
+											增加条件</span><a id="addsearchllink" href="#"
+										title="Add search field"><img src="1x1_transparent.png"
+											class="addsearchimg sprite sprite-addsearchfield" alt="">
+											增加条件</a></li>
+									<li id="submitsearch_tool" class="last">
+									<input disabled="disabled" value="搜索" title="搜索" class="button searchbtn" type="submit">
+									</li>
+								</ul>
+
+								<div class="clear"></div>
+
+
+							</div>
+
+							<div id="advancedOptions">
+								<h2 class="advancedOptionslabel">
+									<span id="advancedOptionstoggle">高级条件&nbsp;<a
+										class="historyplus" id="advancedOptionstoggleAnchor" href="#"
+										title="Show adavanced options"><img
+											src="1x1_transparent.png" class="sprite sprite-login_expand"
+											alt=""></a></span>
+								</h2>
+								<div id="advancedOptionshidden"
+									style="float: none; clear: both; display: none;">
+									<div class="searchcomponentseparator" style="padding: 0px;">
+										<hr>
+									</div>
+									<div class="clear"></div>
+
+									<div class="searchcomponentshortwrap">
+										<div id="limittowrap" style="width: 380px; float: left;">
+
+											<div class="searchcomponentlabel">
+												<h2 class="h2help">时间</h2>
+												<a
+													href="http://help.engineeringvillage.com/Engineering_Village_Help_CSH.htm#search_limits_avail_by_database.htm"
+													title="Learn more about search limits" class="helpurl">
+ 
+												</a>
+												<div style="margin-top:26px;"><h2 class="h2help">类型</h2></div>
+											</div>
+											<div class="searchlimitbybox">
+												<fieldset>
+													<ul>
+														<li><label class="hidden" for="yearrangechx">Limit
+																To Year Range</label>
+																<input checked="checked"
+															id="yearrangechx" value="yearrange" type="radio">
+															<label class="hidden" for="startyrrange">Start
+																Year</label> <select name="startYear" style="width: 5em;"
+															id="startyrrange" title="Choose a date range"> 
+																<option value="1969">1969</option>
+																<option value="1970">1970</option>
+																<option value="1971">1971</option>
+																<option value="1972">1972</option>
+																<option value="1973">1973</option>
+																<option value="1974">1974</option>
+																<option value="1975">1975</option>
+																<option value="1976">1976</option>
+																<option value="1977">1977</option>
+																<option value="1978">1978</option>
+																<option value="1979">1979</option>
+																<option value="1980">1980</option>
+																<option value="1981">1981</option>
+																<option value="1982">1982</option>
+																<option value="1983">1983</option>
+																<option value="1984">1984</option>
+																<option value="1985">1985</option>
+																<option value="1986">1986</option>
+																<option value="1987">1987</option>
+																<option value="1988">1988</option>
+																<option value="1989">1989</option>
+																<option value="1990">1990</option>
+																<option value="1991">1991</option>
+																<option value="1992">1992</option>
+																<option value="1993">1993</option>
+																<option value="1994">1994</option>
+																<option value="1995">1995</option>
+																<option value="1996">1996</option>
+																<option value="1997">1997</option>
+																<option value="1998">1998</option>
+																<option value="1999">1999</option>
+																<option value="2000">2000</option>
+																<option value="2001">2001</option>
+																<option value="2002">2002</option>
+																<option value="2003">2003</option>
+																<option value="2004">2004</option>
+																<option value="2005">2005</option>
+																<option value="2006">2006</option>
+																<option value="2007">2007</option>
+																<option value="2008">2008</option>
+																<option value="2009">2009</option>
+																<option value="2010">2010</option>
+																<option value="2011">2011</option>
+																<option value="2012">2012</option>
+																<option value="2013">2013</option>
+																<option value="2014">2014</option>
+																<option value="2015">2015</option>
+																<option value="2016">2016</option>
+														</select>
+
+															<div class="searchcomponentlabel"
+																style="float: none; margin: 0px 15px; display: inline;">
+																TO</div> <label class="hidden" for="endyearrange">End
+																Year</label> <select name="endYear" style="width: 5em;"
+															id="endyearrange" title="Choose a date range"> 
+																<option value="1969">1969</option>
+																<option value="1970">1970</option>
+																<option value="1971">1971</option>
+																<option value="1972">1972</option>
+																<option value="1973">1973</option>
+																<option value="1974">1974</option>
+																<option value="1975">1975</option>
+																<option value="1976">1976</option>
+																<option value="1977">1977</option>
+																<option value="1978">1978</option>
+																<option value="1979">1979</option>
+																<option value="1980">1980</option>
+																<option value="1981">1981</option>
+																<option value="1982">1982</option>
+																<option value="1983">1983</option>
+																<option value="1984">1984</option>
+																<option value="1985">1985</option>
+																<option value="1986">1986</option>
+																<option value="1987">1987</option>
+																<option value="1988">1988</option>
+																<option value="1989">1989</option>
+																<option value="1990">1990</option>
+																<option value="1991">1991</option>
+																<option value="1992">1992</option>
+																<option value="1993">1993</option>
+																<option value="1994">1994</option>
+																<option value="1995">1995</option>
+																<option value="1996">1996</option>
+																<option value="1997">1997</option>
+																<option value="1998">1998</option>
+																<option value="1999">1999</option>
+																<option value="2000">2000</option>
+																<option value="2001">2001</option>
+																<option value="2002">2002</option>
+																<option value="2003">2003</option>
+																<option value="2004">2004</option>
+																<option value="2005">2005</option>
+																<option value="2006">2006</option>
+																<option value="2007">2007</option>
+																<option value="2008">2008</option>
+																<option value="2009">2009</option>
+																<option value="2010">2010</option>
+																<option value="2011">2011</option>
+																<option value="2012">2012</option>
+																<option value="2013">2013</option>
+																<option value="2014">2014</option>
+																<option value="2015">2015</option>
+																<option value="2016" selected="selected">2016</option>
+														</select> <input  type="hidden"></li>
+													</ul>
+												</fieldset>
+														&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	
+														<select name="ftype" style="width: 5em;"
+															id="startyrrange" title="Choose a date range"> 
+																<option value="-1">全部</option>
+																<option value="0">文档</option>
+																<option value="1">图片</option>
+																<option value="2">音乐</option>
+																<option value="3">视频</option>
+																<option value="4">压缩包</option>
+																<option value="5">其他</option>
+														</select>
+											</div>
+												
+										</div>
+
+
+										<div class="clear"></div>
+
+									</div>
+
+									<div id="buttonsbottom" class="searchcomponentshortwrap"
+										style="position: relative; margin-top: -30px; float: none; z-index: 1;">
+										<div style="float: right; margin-bottom: 7px;">
+											<input disabled="disabled" class="button searchbtn"
+												value="保存并搜索" title="Submit Search" type="button" onclick="save()">&nbsp;
+											<input disabled="disabled" class="button searchbtn"
+												value="搜索" title="Submit Search" type="submit">&nbsp;
+											<input class="formreset" value="重置" title="Reset search"
+												type="reset">&nbsp;
+											<div class="clear"></div>
+										</div>
+										<div class="clear"></div>
+									</div>
+								</div>
+							</div>
+							<div style="display: none;">
+								<input type="hidden"><input 
+									type="hidden">
+							</div>
+						</form>
+					</div>
+					<!-- END searchform -->
+				</div>
+				<!-- END searchcontents -->
+				<br class="clear">
+			</div>
+			<!-- END searchformbox -->
+
+
+
+		</div>
+		<!-- end searchformwrap -->
+
+	</div>
+	<!-- END container -->
+
+	<div class="clear"></div>
+
+</div>
+
+
+<input id="modalReleaseVersion" value="04212016" type="hidden">
+
+
+<script type="text/javascript" src="idle.js"></script>
+<!-- dialog window markup -->
+
+
+
+
+
+
+<script src="SearchForm.js"></script>
+
+
+
+<div class="addsearchfieldcopy" style="display: none;">
+	<div class="searchforconnector" id="addsearchforconnector">
+		<select size="1" name="booleans" id="connector" class="boolean">
+			<option value="AND">AND</option>
+			<option value="OR">OR</option>
+			<option value="NOT">NOT</option>
+		</select>
+	</div>
+	<div class="searchforline" id="addsearchforline">
+		<input name="searchWords" value="" class="searchwordcopy" type="text">
+
+		<span>in</span> <select size="1" name="sections" class="section">
+			[
+			<option value="title">标题</option>,
+			<option value="user">上传者</option>,
+			<option value="tags">标签</option>, 
+			<option value="abstracString">摘要</option>,
+			<option value="fname">文件名字</option>,
+			<option value="introduction">描述</option>]
+		</select> <a href="#" class="removesearchlink"
+			title="Remove this search field."><img src="1x1_transparent.png"
+			alt="" class="sprite sprite-Delete"></a>
+	</div>
+</div>
+
+<script type="text/javascript">
+	$(document)
+			.ready(
+					function() {
+						var expand_adv_options = false;
+						SEARCHFORM.init({
+							"expandAdvOptions" : expand_adv_options
+						});
+						var autosuggest_session = true;
+						AUTOSUGGEST
+								.init({
+									"enabled" : autosuggest_session,
+									"helpurl" : "http://help.engineeringvillage.com/Engineering_Village_Help_CSH.htm#autocomplete_ei.htm"
+								});
+
+						// Add extra search fields if present on request
+
+					});
+</script>
+
+</body>
+</html>

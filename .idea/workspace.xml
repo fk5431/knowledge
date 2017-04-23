@@ -1597,7 +1597,7 @@
       <workItem from="1492566680492" duration="4260000" />
       <workItem from="1492656878821" duration="9858000" />
       <workItem from="1492738315903" duration="4628000" />
-      <workItem from="1492942094502" duration="5669000" />
+      <workItem from="1492942094502" duration="5791000" />
     </task>
     <task id="LOCAL-00001" summary="ssm  success">
       <created>1486712078887</created>
@@ -1683,11 +1683,18 @@
       <option name="project" value="LOCAL" />
       <updated>1492957036268</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="按照以前的写把">
+      <created>1492957171159</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1492957171159</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="92624000" />
+    <option name="totallyTimeSpent" value="92746000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
