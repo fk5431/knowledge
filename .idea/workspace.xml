@@ -10,7 +10,7 @@
     <bookmark url="file://$PROJECT_DIR$/src/main/java/com/fk/util/SendMail.java" line="113" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="11669da5-9530-45d4-b1a5-63fcb18bf569" name="Default" comment="">
+    <list default="true" id="11669da5-9530-45d4-b1a5-63fcb18bf569" name="Default" comment="按照以前的写把">
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/FlexPaperViewer.swf" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/Paper.swf" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/WEB-INF/classes/com/fk/bean/SQL/Save.class" />
@@ -375,34 +375,9 @@
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/vcastr22.swf" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/word.swf" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/src/match.pdf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/课程设计报告（纸质版）.doc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/软件开发计划.docx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/软件设计说明书.docx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/sql/browse.sql" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/sql/cdirectory.sql" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/sql/cdocument.sql" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/sql/file.sql" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/sql/fileRoles.sql" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/sql/ftype.sql" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/sql/ktype.sql" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/sql/role.sql" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/sql/rule.sql" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/sql/tags.sql" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/sql/userRoles.sql" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/.classpath" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/.idea/misc.xml" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/.idea/modules.xml" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/.idea/workspace.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/.myeclipse/profiler/UserService (1).xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/.project" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/.settings/.jsdtscope" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/.settings/com.genuitec.eclipse.core.prefs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/.settings/org.eclipse.core.resources.prefs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/.settings/org.eclipse.jdt.core.prefs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/.settings/org.eclipse.wst.common.component" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/.settings/org.eclipse.wst.common.project.facet.core.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/.settings/org.eclipse.wst.jsdt.ui.superType.container" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/.settings/org.eclipse.wst.jsdt.ui.superType.name" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/META-INF/MANIFEST.MF" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/WEB-INF/classes/c3p0-config.xml" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/WEB-INF/classes/struts.xml" />
@@ -687,18 +662,6 @@
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/upload.html" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/uploadmore.html" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/users.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/knowledge.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/pd文件/base.pdb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/pd文件/base.pdm" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/pd文件/kmis.ldb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/pd文件/kmis.ldm" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/pd文件/kmis.pdb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/pd文件/kmis.pdm" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/pd文件/kmis2.pdm" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/pd文件/kmis改.pdm" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/pd文件/test.pdb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/pd文件/test.pdm" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/pom.xml" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/src/c3p0-config.xml" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/src/com/fk/bean/SQL/Save.java" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/src/com/fk/bean/SQL/SaveSql.java" />
@@ -784,7 +747,6 @@
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/src/main/webapp/index.jsp" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/src/struts.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/fk/sql/user.sql" afterPath="$PROJECT_DIR$/src/main/java/com/fk/sql/user.sql" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -953,6 +915,12 @@
       <map>
         <entry key="$PROJECT_DIR$" value="fengkai" />
       </map>
+    </option>
+    <option name="PUSH_TAGS">
+      <GitPushTagMode>
+        <option name="argument" value="--follow-tags" />
+        <option name="title" value="Current Branch" />
+      </GitPushTagMode>
     </option>
   </component>
   <component name="GradleLocalSettings">
@@ -1901,7 +1869,7 @@
       <workItem from="1492566680492" duration="4260000" />
       <workItem from="1492656878821" duration="9858000" />
       <workItem from="1492738315903" duration="4628000" />
-      <workItem from="1492942094502" duration="3634000" />
+      <workItem from="1492942094502" duration="4640000" />
     </task>
     <task id="LOCAL-00001" summary="ssm  success">
       <created>1486712078887</created>
@@ -1959,11 +1927,18 @@
       <option name="project" value="LOCAL" />
       <updated>1492680658683</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="按照以前的写把">
+      <created>1492955726446</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1492955726446</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="90589000" />
+    <option name="totallyTimeSpent" value="91595000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
@@ -2018,7 +1993,8 @@
     <MESSAGE value="meger 修复" />
     <MESSAGE value="改一下毕设项目的结构" />
     <MESSAGE value="加了点模板" />
-    <option name="LAST_COMMIT_MESSAGE" value="加了点模板" />
+    <MESSAGE value="按照以前的写把" />
+    <option name="LAST_COMMIT_MESSAGE" value="按照以前的写把" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
