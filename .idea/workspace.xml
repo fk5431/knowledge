@@ -11,99 +11,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="11669da5-9530-45d4-b1a5-63fcb18bf569" name="Default" comment="按照以前的写把">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/WEB-INF/classes/com/fk/bean/SQL/Save.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/WEB-INF/classes/com/fk/bean/SQL/SaveSql.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/WEB-INF/classes/com/fk/bean/file/Cdocument.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/WEB-INF/classes/com/fk/bean/file/Directory.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/WEB-INF/classes/com/fk/bean/file/ShowFile.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/WEB-INF/classes/com/fk/bean/file/UploadFile.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/WEB-INF/classes/com/fk/bean/page/Page.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/WEB-INF/classes/com/fk/bean/page/Page_center.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/WEB-INF/classes/com/fk/bean/user/User.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/WEB-INF/classes/com/fk/centerAction/Center.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/WEB-INF/classes/com/fk/centerAction/Center1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/WEB-INF/classes/com/fk/centerAction/Center2.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/WEB-INF/classes/com/fk/centerAction/Center3.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/WEB-INF/classes/com/fk/centerAction/PagingCenterAction.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/WEB-INF/classes/com/fk/centerAction/PagingCenterAction1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/WEB-INF/classes/com/fk/centerAction/PagingCenterAction2.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/WEB-INF/classes/com/fk/centerAction/PagingCenterAction3.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/WEB-INF/classes/com/fk/dao/center/CenterDao.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/WEB-INF/classes/com/fk/dao/loginRegister/CdirectoryDao.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/WEB-INF/classes/com/fk/dao/loginRegister/UserDao.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/WEB-INF/classes/com/fk/dao/other/Operate.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/WEB-INF/classes/com/fk/dao/resources/ResourcesDao.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/WEB-INF/classes/com/fk/dao/showfile/ShowFileDao.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/WEB-INF/classes/com/fk/dao/upload/UploadDao.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/WEB-INF/classes/com/fk/elasticsearch/DataFactory.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/WEB-INF/classes/com/fk/elasticsearch/ElasticSearchHandler.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/WEB-INF/classes/com/fk/elasticsearch/File.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/WEB-INF/classes/com/fk/elasticsearch/JsonUtil.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/WEB-INF/classes/com/fk/elasticsearch/PaddingSearchOfText.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/WEB-INF/classes/com/fk/elasticsearch/PaddingSearchOfText_Center.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/WEB-INF/classes/com/fk/elasticsearch/SearchOfText.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/WEB-INF/classes/com/fk/elasticsearch/SearchOfTextCenter.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/WEB-INF/classes/com/fk/extract/ExtractTextFromHtml.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/WEB-INF/classes/com/fk/extract/ExtractTextFromOffice.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/WEB-INF/classes/com/fk/extract/ExtractTextFromPDF.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/WEB-INF/classes/com/fk/extract/ExtractTextFromZip.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/WEB-INF/classes/com/fk/loginRegisterAction/DeleteMoreUser.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/WEB-INF/classes/com/fk/loginRegisterAction/DeleteuserAction.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/WEB-INF/classes/com/fk/loginRegisterAction/LoginAction.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/WEB-INF/classes/com/fk/loginRegisterAction/PagingAction.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/WEB-INF/classes/com/fk/loginRegisterAction/RegisterAction.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/WEB-INF/classes/com/fk/loginRegisterAction/UpdateUser.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/WEB-INF/classes/com/fk/main/MainAction.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/WEB-INF/classes/com/fk/managerAction/ManageDeleteFile.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/WEB-INF/classes/com/fk/managerAction/ManageDeleteMoreFile.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/WEB-INF/classes/com/fk/managerAction/ManageFile.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/WEB-INF/classes/com/fk/managerAction/ManageUser.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/WEB-INF/classes/com/fk/managerAction/PagingResources.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/WEB-INF/classes/com/fk/other/CopyFlv.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/WEB-INF/classes/com/fk/other/Preview.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/WEB-INF/classes/com/fk/other/SendDocumentAction.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/WEB-INF/classes/com/fk/other/SendcdirectoryAction.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/WEB-INF/classes/com/fk/preview/ConvertSingleVideo$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/WEB-INF/classes/com/fk/preview/ConvertSingleVideo$2.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/WEB-INF/classes/com/fk/preview/ConvertSingleVideo.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/WEB-INF/classes/com/fk/preview/DocConverter.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/WEB-INF/classes/com/fk/preview/Test.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/WEB-INF/classes/com/fk/recommended/RecommendFactory$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/WEB-INF/classes/com/fk/recommended/RecommendFactory$2.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/WEB-INF/classes/com/fk/recommended/RecommendFactory$3.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/WEB-INF/classes/com/fk/recommended/RecommendFactory$4.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/WEB-INF/classes/com/fk/recommended/RecommendFactory$5.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/WEB-INF/classes/com/fk/recommended/RecommendFactory$6.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/WEB-INF/classes/com/fk/recommended/RecommendFactory$EVALUATOR.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/WEB-INF/classes/com/fk/recommended/RecommendFactory$NEIGHBORHOOD.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/WEB-INF/classes/com/fk/recommended/RecommendFactory$RECOMMENDER.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/WEB-INF/classes/com/fk/recommended/RecommendFactory$SIMILARITY.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/WEB-INF/classes/com/fk/recommended/RecommendFactory.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/WEB-INF/classes/com/fk/recommended/Test.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/WEB-INF/classes/com/fk/resources/PagingResources.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/WEB-INF/classes/com/fk/resources/PagingResourcesOfCenter.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/WEB-INF/classes/com/fk/resources/PagingResourcesOfService.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/WEB-INF/classes/com/fk/resources/ResourcesAction.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/WEB-INF/classes/com/fk/searchAction/SearchOfCenter.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/WEB-INF/classes/com/fk/searchAction/SearchOfCenterFrom.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/WEB-INF/classes/com/fk/searchAction/SearchOfCenterKtypeid.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/WEB-INF/classes/com/fk/searchAction/SearchOfCenterSimpleAction.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/WEB-INF/classes/com/fk/searchAction/SearchOfResourcesAdvanced.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/WEB-INF/classes/com/fk/searchAction/SearchOfResourcesAdvancedSave.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/WEB-INF/classes/com/fk/searchAction/SearchOfResourcesAdvanced_center.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/WEB-INF/classes/com/fk/searchAction/SearchOfResourcesSimple.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/WEB-INF/classes/com/fk/searchAction/SearchOfSaveResourcesAdvanced.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/WEB-INF/classes/com/fk/searchAction/SearchOfTag.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/WEB-INF/classes/com/fk/searchAction/SearchUser.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/WEB-INF/classes/com/fk/service/user/UserService.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/WEB-INF/classes/com/fk/showfile/ShowFileAction.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/WEB-INF/classes/com/fk/test/Test.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/WEB-INF/classes/com/fk/test/Test1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/WEB-INF/classes/com/fk/updown/FileDownAction.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/WEB-INF/classes/com/fk/uploader/UploadAction.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/WEB-INF/classes/com/fk/uploader/UploadMoreAction.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/WEB-INF/classes/com/fk/utils/JdbcUtil.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/WEB-INF/classes/match.pdf" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/WEB-INF/lib/ant.jar" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/WEB-INF/lib/asm-3.3.jar" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/WEB-INF/lib/asm-commons-3.3.jar" />
@@ -184,9 +91,6 @@
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/css/fonts/fontawesome-webfont.eot" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/css/fonts/fontawesome-webfont.ttf" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/css/fonts/fontawesome-webfont.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/iconfont/iconfont.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/iconfont/iconfont.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/iconfont/iconfont.woff" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/images/1.jpg" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/images/10.jpg" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/images/11.jpg" />
@@ -274,176 +178,8 @@
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/img/searchBox.png" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/img/txt.png" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/img/z.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/resource/1x1_transparent.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/resource/DS_FY_Regular.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/resource/ELS_Wordmark_1C_151_RGB.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/resource/KB_advance-search-collapsed.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/resource/KB_advance-search-expanded.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/resource/KB_checkbox.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/resource/KB_dsnews-icon-small.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/resource/KB_headerbg.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/resource/KB_lookup.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/resource/KB_qa-icon-small.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/resource/KB_search_clear.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/resource/KB_search_submit.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/resource/KB_sprite_collapse.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/resource/KB_sr-icon-small.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/resource/KB_user.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/resource/LoginBox.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/resource/black_pipe.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/resource/confirmation.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/resource/divider_features.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/resource/divider_login.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/resource/divider_suite.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/resource/ei_w.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/resource/ei_x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/resource/error.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/resource/export.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/resource/favicon.ico" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/resource/feedback.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/resource/gradient.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/resource/info-i-icon.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/resource/info_message.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/resource/lock.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/resource/login_collapse.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/resource/login_expand.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/resource/logo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/resource/mail.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/resource/re-logo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/resource/red_warning.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/resource/spinner.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/resource/sprite_common.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/resource/tb_close.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/resource/tb_preload.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/resource/triangle.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/resource/ui-bg_flat_0_aaaaaa_40x100.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/resource/ui-bg_flat_75_148C75_40x100.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/resource/ui-bg_flat_75_ffffff_40x100.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/resource/ui-bg_glass_55_fbf9ee_1x400.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/resource/ui-bg_glass_65_ffffff_1x400.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/resource/ui-bg_glass_75_bbdad2_1x400.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/resource/ui-bg_glass_75_dadada_1x400.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/resource/ui-bg_glass_75_e6e6e6_1x400.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/resource/ui-bg_glass_95_fef1ec_1x400.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/resource/ui-bg_highlight-soft_75_148C75_1x100.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/resource/ui-bg_highlight-soft_75_cccccc_1x100.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/resource/ui-icons_222222_256x240.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/resource/ui-icons_2e83ff_256x240.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/resource/ui-icons_454545_256x240.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/resource/ui-icons_888888_256x240.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/resource/ui-icons_FFFFFF_256x240.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/resource/ui-icons_cd0a0a_256x240.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/resource/warning.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/upload/Kalimba.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/upload/by.ppt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/upload/visio.vsdx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/upload/word.doc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/upload/免费下载pdf文件转换工具.swf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/META-INF/MANIFEST.MF" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/WEB-INF/classes/c3p0-config.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/WEB-INF/classes/struts.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/WEB-INF/web.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/css/base.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/css/bootstrap.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/css/bootstrap.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/css/bootstrap.min1.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/css/bootstrap5152.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/css/common.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/css/cs-select.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/css/cs-skin-border.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/css/css.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/css/custom5152.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/css/drop-down.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/css/file.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/css/font-awesome.css" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/css/fonts/fontawesome-webfont.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/css/login2.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/css/magnific-popup.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/css/main.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/css/main5152.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/css/premium.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/css/responsive.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/css/responsive5152.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/css/style.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/css/style3.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/css/style_error.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/css/style_music.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/css/templatemo-style.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/css/theme.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/css/ui-choose.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/css/web.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/css/zerogrid.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/css1/bootstrap.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/css1/bootstrap.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/css1/common.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/css1/cs-select.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/css1/cs-skin-border.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/css1/kn_index.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/css1/style.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/css1/zerogrid.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/iconfont/demo.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/iconfont/demo.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/iconfont/iconfont.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/iconfont/iconfont.svg" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/images/login.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/js/_errorjquery-1.8.2.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/js/bootstrap.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/js/bootstrap.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/js/classie.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/js/css3-mediaqueries.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/js/flexpaper_flash.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/js/flexpaper_flash_debug.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/js/hover.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/js/html5.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/js/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/js/jquery-1.10.2.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/js/jquery-1.11.3.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/js/jquery-1.7.2.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/js/jquery-1.8.3.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/js/jquery-1.9.0.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/js/jquery-ui.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/js/jquery.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/js/jquery.magnific-popup.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/js/jquery.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/js/jquery.select.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/js/jquery.singlePageNav.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/js/jquery.touchSwipe.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/js/jquery_.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/js/libs/modernizr.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/js/navigation.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/js/searchActions.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/js/select-widget-min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/js/selectFx.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/js/swfobject.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/js/windstagball.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/resource/DS_FY_Regular.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/resource/EngineeringVillageTM_Wmk_151_RGB.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/resource/KB_overlay.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/resource/SearchForm.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/resource/buildUrl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/resource/core.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/resource/error.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/resource/idle.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/resource/index.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/resource/index.dat" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/resource/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/resource/index.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/resource/index1.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/resource/index1.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/resource/index1.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/resource/io.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/resource/jquery-1.7.2.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/resource/jquery.cookie.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/resource/jquery.json-2.2.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/resource/jquery.suggest.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/resource/oop.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/resource/page.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/resource/resource.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/resource/resource_Advanced.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/resource/resource_center.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/resource/resource_elastic.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/resource/searchActions.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/yiqiande/knowledge/WebRoot/resource/standard.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -1597,7 +1333,7 @@
       <workItem from="1492566680492" duration="4260000" />
       <workItem from="1492656878821" duration="9858000" />
       <workItem from="1492738315903" duration="4628000" />
-      <workItem from="1492942094502" duration="5791000" />
+      <workItem from="1492942094502" duration="5982000" />
     </task>
     <task id="LOCAL-00001" summary="ssm  success">
       <created>1486712078887</created>
@@ -1690,11 +1426,18 @@
       <option name="project" value="LOCAL" />
       <updated>1492957171159</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="按照以前的写把">
+      <created>1492957310333</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1492957310333</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="92746000" />
+    <option name="totallyTimeSpent" value="92937000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
