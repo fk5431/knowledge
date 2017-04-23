@@ -1,0 +1,6 @@
+ DROP TABLE IF EXISTS ktype;
+ CREATE TABLE ktype(
+  ktypeid int(11) PRIMARY key not NULL AUTO_INCREMENT,
+  ktype VARCHAR (11) NOT NULL ,
+  count int(11) DEFAULT 0
+)DEFAULT CHARSET=utf8;

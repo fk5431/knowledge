@@ -1,0 +1,7 @@
+ DROP TABLE IF EXISTS tags;
+ CREATE TABLE tags(
+  id int(11) PRIMARY key not NULL AUTO_INCREMENT,
+  uid int(11) NOT NULL ,
+  tag VARCHAR(255) not NULL ,
+  count int(11) DEFAULT 0
+)DEFAULT CHARSET=utf8;

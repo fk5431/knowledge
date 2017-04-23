@@ -1,0 +1,5 @@
+ DROP TABLE IF EXISTS fileRoles;
+ CREATE TABLE fileRoles(
+  fid int(11) PRIMARY key not NULL AUTO_INCREMENT,
+  ruleid int(11) DEFAULT 0
+)DEFAULT CHARSET=utf8;

@@ -1,0 +1,7 @@
+ DROP TABLE IF EXISTS cdirectory;
+ CREATE TABLE cdirectory(
+  did int(11) PRIMARY key not NULL AUTO_INCREMENT,
+  fid int(11) NOT NULL ,
+  url VARCHAR (255)  NOT NULL,
+  fname VARCHAR (255)  NOT NULL
+)DEFAULT CHARSET=utf8;
