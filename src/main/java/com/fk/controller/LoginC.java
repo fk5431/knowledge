@@ -21,71 +21,78 @@ public class LoginC {
     private Logger logger = LoggerFactory.getLogger(LoginC.class);
 
     @Autowired
-    UserService userService ;
+    UserService userService;
 
     @RequestMapping("/")
-    public String index( Map<String, Object> map){
-        return "/index";
+    public String index(Map<String, Object> map) {
+        return "login";
     }
 
     @RequestMapping(value = "/login", method = RequestMethod.POST)
-    public String login(HttpServletRequest request, Map<String, Object> map){
+    public String login(HttpServletRequest request, Map<String, Object> map) {
         String email = request.getParameter("email");
         String password = request.getParameter("password");
         logger.debug("LoginC.login  in email[{}], password[{}].", email, password);
         Preconditions.checkNotNull(email, "email cannot be null");
         Preconditions.checkNotNull(password, "password cannot be null");
-
         userService.login(email, password, request, map);
 
-        return "/WEB-INF/pages/index.html";
+        String errorcode = (String) map.get("errorcode");
+        if (errorcode != null) {
+            return "/info/error";
+        }
+        return "login";
     }
 
-    @RequestMapping(value = "regis", method = RequestMethod.POST)
-    public String register(HttpServletRequest request, Map<String, Object> map){
-        String name = request.getParameter("name");
+    @RequestMapping(value = "register", method = RequestMethod.POST)
+    public String register(HttpServletRequest request, Map<String, Object> map) {
+        String name = request.getParameter("uname");
         String email = request.getParameter("email");
-        String password = request.getParameter("password");
+        String password = request.getParameter("pwd");
         logger.debug("LoginC.register  in name[{}], email[{}], password[{}].", name, email, password);
         Preconditions.checkNotNull(name, "name cannot be null");
         Preconditions.checkNotNull(email, "email cannot be null");
         Preconditions.checkNotNull(password, "password cannot be null");
         userService.register(name, email, password, request, map);
+        String errorcode = (String) map.get("errorcode");
+        if (errorcode != null && errorcode.equals("1")) {
+            return "/info/error";
+        }
         return "login";
     }
 
     @RequestMapping(value = "forgot", method = RequestMethod.GET)
-    public String forgotPassword(){
+    public String forgotPassword() {
         return "forgot";
     }
 
     @RequestMapping(value = "sendmail")
-    public String sendEmail(HttpServletRequest request, Map<String, Object> map){
+    public String sendEmail(HttpServletRequest request, Map<String, Object> map) {
         String email = request.getParameter("email");
         Preconditions.checkNotNull(email, "email cannot be null");
 
         int result = userService.sendEmail(email, map);
 
-        if(result == 1){
+        if (result == 1) {
             map.put("errorcode", 7);
             return "error";
-        }else{
+        } else {
             map.put("errorcode", 4);
             return "error";
         }
     }
 
     @RequestMapping(value = "forgetPassword")
-    public String forgetPassword(HttpServletRequest request, Map<String, Object> map){
+    public String forgetPassword(HttpServletRequest request, Map<String, Object> map) {
         String key_MD5 = request.getParameter("key");
         Preconditions.checkNotNull(key_MD5, "key cannot be null");
-        String key =MD5.decodeMD5(key_MD5);
+        String key = MD5.decodeMD5(key_MD5);
         String[] str = key.split("@", 2);
         int result = userService.forgetPassword(key, str, request, map);
-        if(result == 1){
+        if (result == 1) {
             map.put("email", str[1]);
             return "sendSuccess";
-        }else{
+        } else {
             map.put("errorcode", 6);
             return "error";
         }

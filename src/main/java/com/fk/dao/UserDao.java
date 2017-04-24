@@ -1,25 +1,21 @@
 package com.fk.dao;
 
-import com.fk.bean.User;
+import com.fk.bean.UserBean;
 
-/**
- * Created by FK on 2017/2/9.
- */
 public interface UserDao {
+    int deleteByPrimaryKey(Integer uid);
 
-        int deleteByPrimaryKey(Integer id);
+    int insert(UserBean record);
 
-        int insert(User record);
+    int insertSelective(UserBean record);
 
-        int insertSelective(User record);
+    UserBean selectByPrimaryKey(Integer uid);
 
-        User selectByPrimaryKey(Integer id);
+    int updateByPrimaryKeySelective(UserBean record);
 
-        int updateByPrimaryKeySelective(User record);
+    int updateByPrimaryKey(UserBean record);
 
-        int updateByPrimaryKey(User record);
+    UserBean selectByEmail(String email);
 
-        User selectByEmail(String email);
-
-        int updateByEmail(User user);
+    void updateByEmail(UserBean user);
 }

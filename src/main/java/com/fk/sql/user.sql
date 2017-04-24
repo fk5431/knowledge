@@ -2,6 +2,7 @@
  CREATE TABLE user(
   uid int(11) PRIMARY key not NULL AUTO_INCREMENT,
   uname VARCHAR(255) NOT NULL ,
+  uemail VARCHAR(255) NOT NULL ,
   pwd VARCHAR(255) not NULL ,
   ismanage int(2) DEFAULT 0
 )DEFAULT CHARSET=utf8;

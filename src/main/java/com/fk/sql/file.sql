@@ -8,7 +8,7 @@
   tags VARCHAR (255) NOT NULL ,
   ftypeid int(11) NOT NULL ,
   uploadtime DATE NOT NULL ,
-  abstract VARCHAR (255) NOT NULL ,
+  abstract_S VARCHAR (255) NOT NULL ,
   introduction text NOT NULL ,
   url VARCHAR (255) NOT NULL ,
   url_image VARCHAR (255) NOT NULL ,

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.fk.dao.RuleDao" >
+  <resultMap id="BaseResultMap" type="com.fk.bean.RuleBean" >
+    <id column="ruleid" property="ruleid" jdbcType="INTEGER" />
+    <result column="uid" property="uid" jdbcType="INTEGER" />
+    <result column="rulename" property="rulename" jdbcType="VARCHAR" />
+    <result column="introduction" property="introduction" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    ruleid, uid, rulename, introduction
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from rule
+    where ruleid = #{ruleid,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from rule
+    where ruleid = #{ruleid,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.fk.bean.RuleBean" >
+    insert into rule (ruleid, uid, rulename, 
+      introduction)
+    values (#{ruleid,jdbcType=INTEGER}, #{uid,jdbcType=INTEGER}, #{rulename,jdbcType=VARCHAR}, 
+      #{introduction,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.fk.bean.RuleBean" >
+    insert into rule
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="ruleid != null" >
+        ruleid,
+      </if>
+      <if test="uid != null" >
+        uid,
+      </if>
+      <if test="rulename != null" >
+        rulename,
+      </if>
+      <if test="introduction != null" >
+        introduction,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="ruleid != null" >
+        #{ruleid,jdbcType=INTEGER},
+      </if>
+      <if test="uid != null" >
+        #{uid,jdbcType=INTEGER},
+      </if>
+      <if test="rulename != null" >
+        #{rulename,jdbcType=VARCHAR},
+      </if>
+      <if test="introduction != null" >
+        #{introduction,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.fk.bean.RuleBean" >
+    update rule
+    <set >
+      <if test="uid != null" >
+        uid = #{uid,jdbcType=INTEGER},
+      </if>
+      <if test="rulename != null" >
+        rulename = #{rulename,jdbcType=VARCHAR},
+      </if>
+      <if test="introduction != null" >
+        introduction = #{introduction,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where ruleid = #{ruleid,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.fk.bean.RuleBean" >
+    update rule
+    set uid = #{uid,jdbcType=INTEGER},
+      rulename = #{rulename,jdbcType=VARCHAR},
+      introduction = #{introduction,jdbcType=VARCHAR}
+    where ruleid = #{ruleid,jdbcType=INTEGER}
+  </update>
+</mapper>

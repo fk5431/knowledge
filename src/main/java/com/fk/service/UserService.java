@@ -1,6 +1,6 @@
 package com.fk.service;
 
-import com.fk.bean.User;
+import com.fk.bean.UserBean;
 import com.fk.dao.UserDao;
 import com.fk.util.CommonConst;
 import com.fk.util.MD5;
@@ -30,12 +30,12 @@ public class UserService {
 
     public void login(String email, String password, HttpServletRequest request, Map<String, Object> map) {
         try{
-            User exists = userDao.selectByEmail(email);
+            UserBean exists = userDao.selectByEmail(email);
             if(exists == null){
                 map.put("errorcode", 2);
                 return;
             }
-            if(!MD5.decodeMD5(exists.getPassword()).equals(password)){
+            if(!MD5.decodeMD5(exists.getPwd()).equals(password)){
                 map.put("errorcode", 3);
                 return;
             }
@@ -47,15 +47,16 @@ public class UserService {
 
     public void register(String name, String email, String password, HttpServletRequest request, Map<String, Object> map) {
         try {
-            User exists = userDao.selectByEmail(email);
+            UserBean exists = userDao.selectByEmail(email);
             if(exists != null){
                 map.put("errorcode", 1);
                 return;
             }
-            User user = new User();
-            user.setUsername(name);
-            user.setEmail(email);
-            user.setPassword(MD5.encodeMD5(password));
+            UserBean user = new UserBean();
+            user.setUemail(name);
+            user.setUemail(email);
+            user.setPwd(MD5.encodeMD5(password));
+            user.setIsmanage(0);
             userDao.insertSelective(user);
 
             map.put("login", 1);
@@ -97,8 +98,8 @@ public class UserService {
             if(re != CommonConst.ONE_INT){
                 return re;
             }
-            User user = userDao.selectByEmail(str[1]);
-            user.setPassword(MD5.encodeMD5(resetP));
+            UserBean user = userDao.selectByEmail(str[1]);
+            user.setPwd(MD5.encodeMD5(resetP));
             userDao.updateByEmail(user);
             return re;
         } catch (NumberFormatException e) {
