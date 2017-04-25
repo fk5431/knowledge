@@ -29,6 +29,8 @@ public class FileBean {
 
     private String urlTransforms;
 
+    private Integer canTransforms;
+
     private String introduction;
 
     public Integer getFid() {
@@ -133,6 +135,14 @@ public class FileBean {
 
     public void setUrlTransforms(String urlTransforms) {
         this.urlTransforms = urlTransforms == null ? null : urlTransforms.trim();
+    }
+
+    public Integer getCanTransforms() {
+        return canTransforms;
+    }
+
+    public void setCanTransforms(Integer canTransforms) {
+        this.canTransforms = canTransforms;
     }
 
     public String getIntroduction() {

@@ -28,6 +28,12 @@
     }else if (errorcode == 5){
         alert("已存在的值，请您重新输入！");
         window.history.back(-1);
+    }else if (errorcode == 6){
+        alert("缺少相应字段，请您重新输入！");
+        window.history.back(-1);
+    }else if (errorcode == 7){
+        alert("文件不要使用中文，请您重新选择！");
+        window.history.back(-1);
     }
 </script>
 </body>

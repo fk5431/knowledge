@@ -5,6 +5,8 @@ public class KtypeBean {
 
     private String ktype;
 
+    private String ktypeurl;
+
     private Integer count;
 
     public Integer getKtypeid() {
@@ -21,6 +23,14 @@ public class KtypeBean {
 
     public void setKtype(String ktype) {
         this.ktype = ktype == null ? null : ktype.trim();
+    }
+
+    public String getKtypeurl() {
+        return ktypeurl;
+    }
+
+    public void setKtypeurl(String ktypeurl) {
+        this.ktypeurl = ktypeurl == null ? null : ktypeurl.trim();
     }
 
     public Integer getCount() {

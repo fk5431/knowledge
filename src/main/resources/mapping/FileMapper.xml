@@ -15,13 +15,14 @@
     <result column="url_image" property="urlImage" jdbcType="VARCHAR" />
     <result column="ktypeid" property="ktypeid" jdbcType="INTEGER" />
     <result column="url_transforms" property="urlTransforms" jdbcType="VARCHAR" />
+    <result column="can_transforms" property="canTransforms" jdbcType="INTEGER" />
   </resultMap>
   <resultMap id="ResultMapWithBLOBs" type="com.fk.bean.FileBean" extends="BaseResultMap" >
     <result column="introduction" property="introduction" jdbcType="LONGVARCHAR" />
   </resultMap>
   <sql id="Base_Column_List" >
     fid, uid, fname, uuidname, title, tags, ftypeid, uploadtime, abstract_S, url, url_image,
-    ktypeid, url_transforms
+    ktypeid, url_transforms, can_transforms
   </sql>
   <sql id="Blob_Column_List" >
     introduction
@@ -43,12 +44,14 @@
     uuidname, title, tags,
     ftypeid, uploadtime, abstract_S,
     url, url_image, ktypeid,
-    url_transforms, introduction)
+    url_transforms, can_transforms, introduction
+    )
     values (#{fid,jdbcType=INTEGER}, #{uid,jdbcType=INTEGER}, #{fname,jdbcType=VARCHAR},
     #{uuidname,jdbcType=VARCHAR}, #{title,jdbcType=VARCHAR}, #{tags,jdbcType=VARCHAR},
     #{ftypeid,jdbcType=INTEGER}, #{uploadtime,jdbcType=DATE}, #{abstractS,jdbcType=VARCHAR},
     #{url,jdbcType=VARCHAR}, #{urlImage,jdbcType=VARCHAR}, #{ktypeid,jdbcType=INTEGER},
-    #{urlTransforms,jdbcType=VARCHAR}, #{introduction,jdbcType=LONGVARCHAR})
+    #{urlTransforms,jdbcType=VARCHAR}, #{canTransforms,jdbcType=INTEGER}, #{introduction,jdbcType=LONGVARCHAR}
+    )
   </insert>
   <insert id="insertSelective" parameterType="com.fk.bean.FileBean" >
     insert into file
@@ -91,6 +94,9 @@
       </if>
       <if test="urlTransforms != null" >
         url_transforms,
+      </if>
+      <if test="canTransforms != null" >
+        can_transforms,
       </if>
       <if test="introduction != null" >
         introduction,
@@ -136,6 +142,9 @@
       <if test="urlTransforms != null" >
         #{urlTransforms,jdbcType=VARCHAR},
       </if>
+      <if test="canTransforms != null" >
+        #{canTransforms,jdbcType=INTEGER},
+      </if>
       <if test="introduction != null" >
         #{introduction,jdbcType=LONGVARCHAR},
       </if>
@@ -180,6 +189,9 @@
       <if test="urlTransforms != null" >
         url_transforms = #{urlTransforms,jdbcType=VARCHAR},
       </if>
+      <if test="canTransforms != null" >
+        can_transforms = #{canTransforms,jdbcType=INTEGER},
+      </if>
       <if test="introduction != null" >
         introduction = #{introduction,jdbcType=LONGVARCHAR},
       </if>
@@ -200,6 +212,7 @@
     url_image = #{urlImage,jdbcType=VARCHAR},
     ktypeid = #{ktypeid,jdbcType=INTEGER},
     url_transforms = #{urlTransforms,jdbcType=VARCHAR},
+    can_transforms = #{canTransforms,jdbcType=INTEGER},
     introduction = #{introduction,jdbcType=LONGVARCHAR}
     where fid = #{fid,jdbcType=INTEGER}
   </update>
@@ -216,7 +229,8 @@
       url = #{url,jdbcType=VARCHAR},
       url_image = #{urlImage,jdbcType=VARCHAR},
       ktypeid = #{ktypeid,jdbcType=INTEGER},
-      url_transforms = #{urlTransforms,jdbcType=VARCHAR}
+      url_transforms = #{urlTransforms,jdbcType=VARCHAR},
+      can_transforms = #{canTransforms,jdbcType=INTEGER}
     where fid = #{fid,jdbcType=INTEGER}
   </update>
 </mapper>
