@@ -172,4 +172,9 @@ public class OperativeC {
 
         return "/operative/ftypeform";
     }
+    @RequestMapping("/usertable")
+    public String usertable(){
+
+        return "/operative/usertable";
+    }
 }
