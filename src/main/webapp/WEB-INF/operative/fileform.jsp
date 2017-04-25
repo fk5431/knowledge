@@ -54,34 +54,38 @@
                     <div class="menu_section">
                         <h3>General</h3>
                         <ul class="nav side-menu">
-                            <li><a><i class="fa fa-home"></i> 首页 <span class="fa fa-chevron-down"></span></a>
+                            <li><a><i class="fa fa-home"></i> 开始 <span class="fa fa-chevron-down"></span></a>
                                 <ul class="nav child_menu">
-                                    <li><a href="../../cttp_1_gentelella/production/index.html">Dashboard</a></li>
-                                    <li><a href="../../cttp_1_gentelella/production/index2.html">Dashboard2</a></li>
-                                    <li><a href="../../cttp_1_gentelella/production/index3.html">Dashboard3</a></li>
+                                    <li><a href="${pageContext.request.contextPath}/operative">首页</a></li>
+                                    <li><a href="${pageContext.request.contextPath}/logout">退出</a></li>
+                                    <li><a href="${pageContext.request.contextPath}">前台</a></li>
                                 </ul>
                             </li>
                             <li><a><i class="fa fa-edit"></i> 添加内容 <span class="fa fa-chevron-down"></span></a>
                                 <ul class="nav child_menu">
-                                    <li><a>文件添加</a></li>
-                                    <li><a href="${pageContext.request.contextPath}/addktype">类型添加</a></li>
-                                    <li><a href="${pageContext.request.contextPath}/addftype">分类添加</a></li>
-                                    <li><a href="${pageContext.request.contextPath}/adduser">用户添加</a></li>
+                                    <li><a href="${pageContext.request.contextPath}/ftypeform">文件添加</a></li>
+                                    <li><a href="${pageContext.request.contextPath}/ktypeform">类型添加</a></li>
+                                    <li><a href="${pageContext.request.contextPath}/ftypeform">分类添加</a></li>
+                                    <li><a href="${pageContext.request.contextPath}/userform">用户添加</a></li>
                                 </ul>
                             </li>
 
                             <li>
                                 <a><i class="fa fa-table"></i> 管理 <span class="fa fa-chevron-down"></span></a>
                                 <ul class="nav child_menu">
-                                    <li><a href="../../cttp_1_gentelella/production/tables.html">用户管理</a></li>
-
+                                    <li><a href="${pageContext.request.contextPath}/usertable">用户管理</a></li>
+                                    <li><a href="${pageContext.request.contextPath}/filetable">文件管理</a></li>
+                                    <li><a href="${pageContext.request.contextPath}/ktypetable">类型管理</a></li>
+                                    <li><a href="${pageContext.request.contextPath}/ftypetable">分类管理</a></li>
+                                    <li><a href="${pageContext.request.contextPath}/tagstable">用户标签管理</a></li>
+                                    <li><a href="${pageContext.request.contextPath}/documenttable">文档管理</a></li>
                                 </ul>
                             </li>
 
-                            <li><a><i class="fa fa-clone"></i>备用 <span class="fa fa-chevron-down"></span></a>
+                            <li><a><i class="fa fa-clone"></i>高级 <span class="fa fa-chevron-down"></span></a>
                                 <ul class="nav child_menu">
-                                    <li><a href="../../cttp_1_gentelella/production/fixed_sidebar.html">Fixed Sidebar</a></li>
-                                    <li><a href="../../cttp_1_gentelella/production/fixed_footer.html">Fixed Footer</a> </li>
+                                    <li><a href="${pageContext.request.contextPath}/spuerusertable">超级管理员管理管理员</a></li>
+                                    <li><a href="${pageContext.request.contextPath}/spueruserform">超级管理员添加管理员</a> </li>
                                 </ul>
                             </li>
                         </ul>
