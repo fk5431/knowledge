@@ -11,6 +11,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import java.util.Date;
 import java.util.Map;
@@ -28,9 +29,9 @@ public class UserService {
 
     private Logger logger = LoggerFactory.getLogger(UserService.class);
 
-    public void login(String email, String password, HttpServletRequest request, Map<String, Object> map) {
+    public void login(String name, String password, HttpServletRequest request, Map<String, Object> map, Cookie c) {
         try{
-            UserBean exists = userDao.selectByEmail(email);
+            UserBean exists = userDao.selectByName(name);
             if(exists == null){
                 map.put("errorcode", 2);
                 return;
@@ -39,21 +40,27 @@ public class UserService {
                 map.put("errorcode", 3);
                 return;
             }
+            c.setValue(String .valueOf(exists.getUid()));
         }catch (Exception e){
             e.printStackTrace();
-            logger.debug("UserService.login  in email[{}], password[{}], id[{}]", email, password, e);
+            logger.debug("UserService.login  in name[{}], password[{}], id[{}]", name, password, e);
         }
     }
 
     public void register(String name, String email, String password, HttpServletRequest request, Map<String, Object> map) {
         try {
             UserBean exists = userDao.selectByEmail(email);
+            UserBean existsname = userDao.selectByName(name);
             if(exists != null){
                 map.put("errorcode", 1);
                 return;
             }
+            if(existsname != null){
+                map.put("errorcode", 4);
+                return;
+            }
             UserBean user = new UserBean();
-            user.setUemail(name);
+            user.setUname(name);
             user.setUemail(email);
             user.setPwd(MD5.encodeMD5(password));
             user.setIsmanage(0);
@@ -109,4 +116,36 @@ public class UserService {
     }
 
 
+    public void index(int userId, Map<String, Object> map) {
+        UserBean user = null;
+        if(userId != 0){
+            user = userDao.selectByPrimaryKey(userId);
+        }
+
+        if(user == null ){
+            noUser(map);
+        }else {
+            userIndex(user, map);
+        }
+
+//        File file = new File("D:\\upload\\intro.csv");
+//        FileWriter fileWritter = new FileWriter(file,false);
+//        BufferedWriter bufferWritter = new BufferedWriter(fileWritter);
+//        for(Cdocument d : document){
+////				System.out.println(d.toString());
+//            bufferWritter.write(d.toString());
+//            bufferWritter.newLine();
+//        }
+//        bufferWritter.close();
+    }
+
+    private void userIndex(UserBean user, Map<String, Object> map) {
+        
+        
+    }
+
+    private void noUser(Map<String, Object> map) {
+        
+        
+    }
 }

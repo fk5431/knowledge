@@ -19,8 +19,14 @@
     }else if (errorcode == 2){
         alert("用户名不存在，请您注册！");
         window.history.back(-1);
-    }else  if (errorcode == 3){
+    }else if (errorcode == 3){
         alert("密码错误，请您重新登录！");
+        window.history.back(-1);
+    }else if (errorcode == 4){
+        alert("该用户名已存在，请您重新登录！");
+        window.history.back(-1);
+    }else if (errorcode == 5){
+        alert("已存在的值，请您重新输入！");
         window.history.back(-1);
     }
 </script>

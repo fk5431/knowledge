@@ -3,6 +3,8 @@ package com.fk.bean;
 public class FtypeBean {
     private Integer ftypeid;
 
+    private String ftypename;
+
     private String ftype;
 
     public Integer getFtypeid() {
@@ -11,6 +13,14 @@ public class FtypeBean {
 
     public void setFtypeid(Integer ftypeid) {
         this.ftypeid = ftypeid;
+    }
+
+    public String getFtypename() {
+        return ftypename;
+    }
+
+    public void setFtypename(String ftypename) {
+        this.ftypename = ftypename == null ? null : ftypename.trim();
     }
 
     public String getFtype() {

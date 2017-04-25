@@ -11,6 +11,12 @@
   <sql id="Base_Column_List" >
     uid, uname, uemail, pwd, ismanage
   </sql>
+  <select id="selectByName" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select
+    <include refid="Base_Column_List" />
+    from user
+    where uname = #{name,jdbcType=VARCHAR}
+  </select>
   <select id="selectByEmail" resultMap="BaseResultMap" parameterType="java.lang.String" >
     select
     <include refid="Base_Column_List" />

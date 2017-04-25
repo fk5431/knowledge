@@ -2,6 +2,8 @@ package com.fk.dao;
 
 import com.fk.bean.FtypeBean;
 
+import java.util.List;
+
 public interface FtypeDao {
     int deleteByPrimaryKey(Integer ftypeid);
 
@@ -14,4 +16,8 @@ public interface FtypeDao {
     int updateByPrimaryKeySelective(FtypeBean record);
 
     int updateByPrimaryKey(FtypeBean record);
+
+    FtypeBean selectByName(String ftypename);
+
+    List<FtypeBean> selectAll();
 }

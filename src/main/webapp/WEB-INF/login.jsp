@@ -13,7 +13,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <script type="text/javascript" src="${pageContext.request.contextPath }/js/login/jquery-1.9.0.min.js"></script>
     <script type="text/javascript" src="${pageContext.request.contextPath }/js/login/login.js"></script>
-    <link href="${pageContext.request.contextPath }/css/login2.css"
+    <link href="${pageContext.request.contextPath }/css/login.css"
           rel="stylesheet" type="text/css"/>
 </head>
 <body>
@@ -57,7 +57,7 @@
                         <div style="padding-left:50px;margin-top:20px;">
                             <input type="submit" value="登 录" style="width:150px;"  class="button_blue"/>
                         </div>
-                        <div class="pwdArea" id="pwdArea">
+                        <div >
                             <a href="${pageContext.request.contextPath}/forgot">忘记密码</a>
                         </div>
                     </form>

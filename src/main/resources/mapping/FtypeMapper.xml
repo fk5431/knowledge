@@ -3,13 +3,25 @@
 <mapper namespace="com.fk.dao.FtypeDao" >
   <resultMap id="BaseResultMap" type="com.fk.bean.FtypeBean" >
     <id column="ftypeid" property="ftypeid" jdbcType="INTEGER" />
+    <result column="ftypename" property="ftypename" jdbcType="VARCHAR" />
     <result column="ftype" property="ftype" jdbcType="VARCHAR" />
   </resultMap>
   <sql id="Base_Column_List" >
-    ftypeid, ftype
+    ftypeid, ftypename, ftype
   </sql>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select
+    <include refid="Base_Column_List" />
+    from ftype
+  </select>
+  <select id="selectByName" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select
+    <include refid="Base_Column_List" />
+    from ftype
+    where ftypename = #{ftypename,jdbcType=VARCHAR}
+  </select>
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
-    select 
+    select
     <include refid="Base_Column_List" />
     from ftype
     where ftypeid = #{ftypeid,jdbcType=INTEGER}
@@ -19,14 +31,19 @@
     where ftypeid = #{ftypeid,jdbcType=INTEGER}
   </delete>
   <insert id="insert" parameterType="com.fk.bean.FtypeBean" >
-    insert into ftype (ftypeid, ftype)
-    values (#{ftypeid,jdbcType=INTEGER}, #{ftype,jdbcType=VARCHAR})
+    insert into ftype (ftypeid, ftypename, ftype
+    )
+    values (#{ftypeid,jdbcType=INTEGER}, #{ftypename,jdbcType=VARCHAR}, #{ftype,jdbcType=VARCHAR}
+    )
   </insert>
   <insert id="insertSelective" parameterType="com.fk.bean.FtypeBean" >
     insert into ftype
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="ftypeid != null" >
         ftypeid,
+      </if>
+      <if test="ftypename != null" >
+        ftypename,
       </if>
       <if test="ftype != null" >
         ftype,
@@ -36,6 +53,9 @@
       <if test="ftypeid != null" >
         #{ftypeid,jdbcType=INTEGER},
       </if>
+      <if test="ftypename != null" >
+        #{ftypename,jdbcType=VARCHAR},
+      </if>
       <if test="ftype != null" >
         #{ftype,jdbcType=VARCHAR},
       </if>
@@ -44,6 +64,9 @@
   <update id="updateByPrimaryKeySelective" parameterType="com.fk.bean.FtypeBean" >
     update ftype
     <set >
+      <if test="ftypename != null" >
+        ftypename = #{ftypename,jdbcType=VARCHAR},
+      </if>
       <if test="ftype != null" >
         ftype = #{ftype,jdbcType=VARCHAR},
       </if>
@@ -52,7 +75,8 @@
   </update>
   <update id="updateByPrimaryKey" parameterType="com.fk.bean.FtypeBean" >
     update ftype
-    set ftype = #{ftype,jdbcType=VARCHAR}
+    set ftypename = #{ftypename,jdbcType=VARCHAR},
+      ftype = #{ftype,jdbcType=VARCHAR}
     where ftypeid = #{ftypeid,jdbcType=INTEGER}
   </update>
 </mapper>

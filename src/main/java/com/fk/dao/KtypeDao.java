@@ -2,6 +2,8 @@ package com.fk.dao;
 
 import com.fk.bean.KtypeBean;
 
+import java.util.List;
+
 public interface KtypeDao {
     int deleteByPrimaryKey(Integer ktypeid);
 
@@ -14,4 +16,8 @@ public interface KtypeDao {
     int updateByPrimaryKeySelective(KtypeBean record);
 
     int updateByPrimaryKey(KtypeBean record);
+
+    KtypeBean selectByName(String ktype);
+
+    List<KtypeBean> selectAll();
 }

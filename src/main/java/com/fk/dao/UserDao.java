@@ -18,4 +18,6 @@ public interface UserDao {
     UserBean selectByEmail(String email);
 
     void updateByEmail(UserBean user);
+
+    UserBean selectByName(String name);
 }

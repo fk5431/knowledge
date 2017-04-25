@@ -1,6 +1,8 @@
 package com.fk.controller;
 
+import com.fk.bean.UserBean;
 import com.fk.service.UserService;
+import com.fk.util.CommonConst;
 import com.fk.util.MD5;
 import com.google.common.base.Preconditions;
 import org.slf4j.Logger;
@@ -10,7 +12,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.util.Map;
 
 /**
@@ -24,24 +28,27 @@ public class LoginC {
     UserService userService;
 
     @RequestMapping("/")
-    public String index(Map<String, Object> map) {
-        return "login";
+    public String indexshow(HttpServletRequest request, Map<String, Object> map) {
+        return index(request, map);
     }
 
     @RequestMapping(value = "/login", method = RequestMethod.POST)
-    public String login(HttpServletRequest request, Map<String, Object> map) {
-        String email = request.getParameter("email");
-        String password = request.getParameter("password");
-        logger.debug("LoginC.login  in email[{}], password[{}].", email, password);
-        Preconditions.checkNotNull(email, "email cannot be null");
+    public String login(HttpServletRequest request, HttpServletResponse response, Map<String, Object> map) {
+        String name = request.getParameter("uname");
+        String password = request.getParameter("pwd");
+        logger.debug("LoginC.login  in name[{}], password[{}].", name, password);
+        Preconditions.checkNotNull(name, "name cannot be null");
         Preconditions.checkNotNull(password, "password cannot be null");
-        userService.login(email, password, request, map);
-
-        String errorcode = (String) map.get("errorcode");
+        Cookie c = new Cookie(CommonConst.USERID, "0");
+        userService.login(name, password, request, map, c);
+        if(c!=null && !c.getValue().equals("0")){
+            response.addCookie(c);
+        }
+        Object errorcode =  map.get("errorcode");
         if (errorcode != null) {
             return "/info/error";
         }
-        return "login";
+        return index(request, map);
     }
 
     @RequestMapping(value = "register", method = RequestMethod.POST)
@@ -54,8 +61,8 @@ public class LoginC {
         Preconditions.checkNotNull(email, "email cannot be null");
         Preconditions.checkNotNull(password, "password cannot be null");
         userService.register(name, email, password, request, map);
-        String errorcode = (String) map.get("errorcode");
-        if (errorcode != null && errorcode.equals("1")) {
+        Object errorcode =  map.get("errorcode");
+        if (errorcode != null ) {
             return "/info/error";
         }
         return "login";
@@ -96,6 +103,22 @@ public class LoginC {
             map.put("errorcode", 6);
             return "error";
         }
+    }
+
+    @RequestMapping(value = "/index")
+    public String index(HttpServletRequest request, Map<String, Object> map){
+        int userId = 0;
+        Cookie[] cookies = request.getCookies();
+        for(Cookie c : cookies){
+            if(c.getName().equals(CommonConst.USERID)){
+                userId = Integer.parseInt(c.getValue());
+            }
+        }
+
+        userService.index(userId, map);
+
+
+        return "index";
     }
 
 }
