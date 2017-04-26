@@ -18,8 +18,10 @@
     <link rel="stylesheet" href="${pageContext.request.contextPath}/ocss/admin.css">
     <script src="${pageContext.request.contextPath}/ojs/jquery.js"></script>
     <script src="${pageContext.request.contextPath}/ojs/pintuer.js"></script>
-    <script type="text/javascript" charset="utf-8" src="${pageContext.request.contextPath}/uedite/ueditor.config.js"></script>
-    <script type="text/javascript" charset="utf-8" src="${pageContext.request.contextPath}/uedite/ueditor.all.js"> </script>
+    <script type="text/javascript" charset="utf-8"
+            src="${pageContext.request.contextPath}/uedite/ueditor.config.js"></script>
+    <script type="text/javascript" charset="utf-8"
+            src="${pageContext.request.contextPath}/uedite/ueditor.all.js"></script>
     <!--建议手动加在语言，避免在ie下有时因为加载语言失败导致编辑器加载失败-->
     <!--这里加载的语言文件会覆盖你在配置项目里添加的语言类型，比如你在配置项目里配置的是英文，这里加载的中文，那最后就是中文-->
     <script type="text/javascript" charset="utf-8" src="${pageContext.request.contextPath}/uedite/zh-cn.js"></script>
@@ -27,30 +29,42 @@
 <body style="background-color:#f2f9fd;">
 <div class="header bg-main">
     <div class="logo margin-big-left fadein-top">
-        <h1><img src="${pageContext.request.contextPath}/images/y.jpg" class="radius-circle rotate-hover" height="50" alt="" />后台管理中心</h1>
+        <h1>后台管理中心</h1>
     </div>
-    <div class="head-l"><a class="button button-little bg-green" href="${pageContext.request.contextPath}" target="_blank"><span class="icon-home"></span> 前台首页</a> &nbsp;&nbsp;<a class="button button-little bg-red" href="${pageContext.request.contextPath}/operative/login"><span class="icon-power-off"></span> 退出登录</a> </div>
+    <div class="head-l"><a class="button button-little bg-green" href="${pageContext.request.contextPath}"
+                           target="_blank"><span class="icon-home"></span> 前台首页</a> &nbsp;&nbsp;<a
+            class="button button-little bg-red" href="${pageContext.request.contextPath}/operative/login"><span
+            class="icon-power-off"></span> 退出登录</a></div>
 </div>
 <div class="leftnav">
     <div class="leftnav-title"><strong><span class="icon-list"></span>菜单列表</strong></div>
     <h2><span class="icon-user"></span>基本修改</h2>
     <ul style="display:block">
-        <li><a href="${pageContext.request.contextPath}/operative" ><span class="icon-caret-right"></span>网站用户</a></li>
-        <li><a href="${pageContext.request.contextPath}/operative/pass" ><span class="icon-caret-right"></span>演员/助演管理</a></li>
-        <li><a href="${pageContext.request.contextPath}/operative/page" ><span class="icon-caret-right"></span>资讯添加</a></li>
-        <li><a href="${pageContext.request.contextPath}/operative/adv" ><span class="icon-caret-right"></span>首页轮播</a></li>
-        <li><a href="${pageContext.request.contextPath}/operative/book" ><span class="icon-caret-right"></span>演出添加</a></li>
-        <li><a href="${pageContext.request.contextPath}/operative/column" ><span class="icon-caret-right"></span>演出管理</a></li>
+        <li><a href="${pageContext.request.contextPath}/operative"><span class="icon-caret-right"></span>网站用户</a></li>
+        <li><a href="${pageContext.request.contextPath}/operative/pass"><span class="icon-caret-right"></span>演员管理</a>
+        </li>
+        <li><a href="${pageContext.request.contextPath}/operative/page"><span class="icon-caret-right"></span>资讯添加</a>
+        </li>
+        <li><a href="${pageContext.request.contextPath}/operative/adv"><span class="icon-caret-right"></span>首页轮播</a>
+        </li>
+        <li><a href="${pageContext.request.contextPath}/operative/book"><span class="icon-caret-right"></span>演出添加</a>
+        </li>
+        <li><a href="${pageContext.request.contextPath}/operative/column"><span class="icon-caret-right"></span>演出管理</a>
+        </li>
     </ul>
     <h2><span class="icon-pencil-square-o"></span>高级修改</h2>
     <ul>
-        <li><a href="${pageContext.request.contextPath}/operative/der" ><span class="icon-caret-right"></span>演员添加</a></li>
-        <li><a href="${pageContext.request.contextPath}/operative/per" ><span class="icon-caret-right"></span>助演添加</a></li>
-        <li><a href="${pageContext.request.contextPath}/operative/type" ><span class="icon-caret-right"></span>分类管理</a></li>
+        <li><a href="${pageContext.request.contextPath}/operative/per"><span class="icon-caret-right"></span>演员添加</a>
+        </li>
+        <li><a href="${pageContext.request.contextPath}/operative/type"><span class="icon-caret-right"></span>分类管理</a>
+        </li>
 
-        <li><a href="${pageContext.request.contextPath}/operative/site" ><span class="icon-caret-right"></span>影院管理</a></li>
-        <li><a href="${pageContext.request.contextPath}/operative/addsite" ><span class="icon-caret-right"></span>影院添加</a></li>
-        <li><a href="${pageContext.request.contextPath}/operative/buy" ><span class="icon-caret-right"></span>订单管理</a></li>
+        <li><a href="${pageContext.request.contextPath}/operative/site"><span class="icon-caret-right"></span>影院管理</a>
+        </li>
+        <li><a href="${pageContext.request.contextPath}/operative/addsite"><span
+                class="icon-caret-right"></span>影院添加</a></li>
+        <li><a href="${pageContext.request.contextPath}/operative/buy"><span class="icon-caret-right"></span>订单管理</a>
+        </li>
     </ul>
 </div>
 <script type="text/javascript">
@@ -67,9 +81,7 @@
     });
 </script>
 <ul class="bread">
-    <li><a  class="icon-home"> 首页</a></li>
-    <li><a id="a_leader_txt">网站信息</a></li>
-    <li><b>当前语言：</b><span style="color:red;">中文</span></li>
+    <li><a class="icon-home"> 首页</a></li>
 </ul>
 <div class="admin">
     <div class="panel admin-panel">
@@ -199,18 +211,19 @@
                         <label>图集下方上传：</label>
                     </div>
                     <div class="field">
-                        <script id="editor" type="text/plain" style="width:1024px;height:500px;" name="content"></script>
+                        <script id="editor" type="text/plain" style="width:1024px;height:500px;"
+                                name="content"></script>
                         <script type="text/javascript">
                             //实例化编辑器
                             //建议使用工厂方法getEditor创建和引用编辑器实例，如果在某个闭包下引用该编辑器，直接调用UE.getEditor('editor')就能拿到相关的实例
                             var ue = UE.getEditor('editor');
 
 
-                            function isFocus(e){
+                            function isFocus(e) {
                                 alert(UE.getEditor('editor').isFocus());
                                 UE.dom.domUtils.preventDefault(e)
                             }
-                            function setblur(e){
+                            function setblur(e) {
                                 UE.getEditor('editor').blur();
                                 UE.dom.domUtils.preventDefault(e)
                             }
@@ -303,12 +316,12 @@
                                 }
                             }
 
-                            function getLocalData () {
-                                alert(UE.getEditor('editor').execCommand( "getlocaldata" ));
+                            function getLocalData() {
+                                alert(UE.getEditor('editor').execCommand("getlocaldata"));
                             }
 
-                            function clearLocalData () {
-                                UE.getEditor('editor').execCommand( "clearlocaldata" );
+                            function clearLocalData() {
+                                UE.getEditor('editor').execCommand("clearlocaldata");
                                 alert("已清空草稿箱")
                             }
                         </script>

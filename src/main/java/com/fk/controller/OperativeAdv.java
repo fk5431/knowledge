@@ -134,12 +134,13 @@ public class OperativeAdv {
         performerBean.setConstellation(constellation);
         String sex = request.getParameter("sex");
         performerBean.setSex(sex);
-        String birth = request.getParameter("birth");
-        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
         try {
+            String birth = request.getParameter("birth");
+            SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
             performerBean.setBirth(simpleDateFormat.parse(birth));
         } catch (ParseException e) {
-            e.printStackTrace();
+            //e.printStackTrace();
+            performerBean.setBirth(null);
         }
         String nationality = request.getParameter("nationality");
         performerBean.setNationality(nationality);

@@ -25,4 +25,6 @@ public class CommonConst {
 
     public static String BUYMOVIEID = "buyMovieId";
     public static String USERID = "userId";
+    public static String SUPERNAME = "wangyifan";
+    public static String SUPERPASSWORD = "wangyifan";
 }

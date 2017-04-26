@@ -436,4 +436,22 @@ public class Operative {
         return index(request, map);
     }
 
+
+    @RequestMapping("/operative/login")
+    public String logout(HttpServletRequest request, Map<String, Object> map){
+
+        return "/operative/login";
+    }
+
+    @RequestMapping("/operative/logout")
+    public String login(HttpServletRequest request, Map<String, Object> map){
+        String name = request.getParameter("name");
+        String password = request.getParameter("password");
+        if(name.equals(CommonConst.SUPERNAME) && password.equals(CommonConst.SUPERPASSWORD)){
+            return index(request, map);
+        }
+        return "/operative/login";
+    }
+
+
 }

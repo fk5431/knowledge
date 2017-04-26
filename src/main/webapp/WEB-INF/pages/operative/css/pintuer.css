@@ -976,13 +976,13 @@ a.text-white:hover, .bg-inverse a:hover{color:#ddd;}
 .bg-white,.button.bg,.border-white .button.active,.pointer.border-white .active,.nav-pills.border-white .active a,.nav-main.border-white .nav-head,.pagination.border-white .active
 {background-color:#fff;}
 .bg-red,.border-red .button.active,.pointer.border-red .active,.nav-pills.border-red .active a,.nav-main.border-red .nav-head,.pagination.border-red .active
-{background-color:#e33;}
+{}
 .bg-yellow,.border-yellow .button.active,.pointer.border-yellow .active,.nav-pills.border-yellow .active a,.nav-main.border-yellow .nav-head,.pagination.border-yellow .active
 {background-color:#f60;}
 .bg-blue,.border-blue .button.active,.pointer.border-blue active,.nav-pills.border-blue .active a,.nav-main.border-blue .nav-head,.pagination.border-blue .active
 {background-color:#0ae;}
 .bg-green,.border-green .button.active,.pointer.border-green .active,.nav-pills.border-green .active a,.pagination.border-green .active
-{background-color:#2c7;}
+{}
 .bg-red-light,.table .red, .table .red td, .table .red th,.alert-red,.border-red-light .button.active,.pointer.border-red-light .active,.nav-pills.border-red-light .active a,.nav-main.border-red-light .nav-head,.pagination.border-red-light .active
 {background-color:#fee;}
 .bg-yellow-light,.table .yellow, .table .yellow td, .table .yellow th,.alert-yellow,.border-yellow-light .button.active,.pointer.border-yellow-light .active,.nav-pills.border-yellow-light .active a,.nav-main.border-yellow-light .nav-head,.pagination.border-yellow-light .active
@@ -1003,15 +1003,15 @@ a.text-white:hover, .bg-inverse a:hover{color:#ddd;}
 .border-white,.border-white .button,.border-white .tab-nav li a,.border-white .tab-body,.button.bg-white,.selected.border-white,.pointer.border-white li,.nav.border-white .active a,.nav.nav-tabs.border-white,.nav-main.border-white a, .nav-main.border-white .nav-head,.pagination.border-white li,.pager.border-white a
 {border-color:#fff;}
 .border-red,.border-red .button,.border-red .tab-nav li a,.border-red .tab-body,.button.bg-red,.selected.border-red,.pointer.border-red li,.check-error .input,.nav.border-red .active a,.nav.nav-tabs.border-red,.nav-main.border-red a, .nav-main.border-red .nav-head,.pagination.border-red li,.pager.border-red a
-{border-color:#e33;}
+{}
 .border-yellow,.border-yellow .button,.border-yellow .tab-nav li a,.border-yellow .tab-body,.button.bg-yellow,.selected.border-yellow,.pointer.border-yellow li,.check-warning .input,.nav.border-yellow .active a,.nav.nav-tabs.border-yellow,.nav-main.border-yellow a, .nav-main.border-yellow .nav-head,.pagination.border-yellow li,.pager.border-yellow a
 {border-color:#f60;}
 .border-blue,.border-blue .button,.border-blue .tab-nav li a,.border-blue .tab-body,.button.bg-blue,.selected.border-blue,.pointer.border-blue li,.nav.border-blue .active a,.nav.nav-tabs.border-blue,.nav-main.border-blue a, .nav-main.border-blue .nav-head,.pagination.border-blue li,.pager.border-blue a
 {border-color:#0ae;}
 .border-green,.border-green .button,.border-green .tab-nav li a,.border-green .tab-body,.button.bg-green,.selected.border-green,.pointer.border-green li,.check-success .input,.nav.border-green .active a,.nav.nav-tabs.border-green,.nav-main.border-green a, .nav-main.border-green .nav-head,.pagination.border-green li,.pager.border-green a
-{border-color:#2c7;}
+{}
 .border-red-light,.border-red-light .button,.border-red-light .tab-nav li a,.border-red-light .tab-body,.button.bg-red-light,.selected.border-red-light,.alert-red,.pointer.border-red-light li,.nav.border-red-light .active a,.nav.nav-tabs.border-red-light,.nav-main.border-red-light a, .nav-main.border-red-light .nav-head,.pagination.border-red-light li,.pager.border-red-light a
-{border-color:#fee;}
+{}
 .border-yellow-light,.border-yellow-light .button,.border-yellow-light .tab-nav li a,.border-yellow-light .tab-body,.button.bg-yellow-light,.selected.border-yellow-light,.alert-yellow,.pointer.border-yellow-light li,.nav.border-yellow-light .active a,.nav.nav-tabs.border-yellow-light,.nav-main.border-yellow-light a, .nav-main.border-yellow-light .nav-head,.pagination.border-yellow-light li,.pager.border-yellow-light a
 {border-color:#ffd;}
 .border-blue-light,.border-blue-light .button,.border-blue-light .tab-nav li a,.border-blue-light .tab-body,.button.bg-blue-light,.selected.border-blue-light,.alert-blue,.pointer.border-blue-light li,.nav.border-blue-light .active a,.nav.nav-tabs.border-blue-light,.nav-main.border-blue-light a, .nav-main.border-blue-light .nav-head,.pagination.border-blue-light li,.pager.border-blue-light a
@@ -1022,14 +1022,10 @@ a.text-white:hover, .bg-inverse a:hover{color:#ddd;}
 .button.border-black:hover,.button.border-black:focus,.button.bg-black:hover,.button.bg-black:focus{color:#fff;border-color:#666;background-color:#666;}
 .button.border-gray:hover,.button.border-gray:focus,.button.bg-gray:hover,.button.bg-gray:focus{color:#fff;border-color:#aaa;background-color:#aaa;}
 .button.border-white:hover,.button.border-white:focus,.button.bg-white:hover,.button.bg-white:focus{color:#333;border-color:#f5f5f5;background-color:#f5f5f5;}
-.button.border-red:hover,.button.border-red:focus,.button.bg-red:hover,.button.bg-red:focus{color:#fff;border-color:#f00;background-color:#f00;}
 .button.border-yellow:hover,.button.border-yellow:focus,.button.bg-yellow:hover,.button.bg-yellow:focus{color:#fff;border-color:#f90;background-color:#f90;}
 .button.border-blue:hover,.button.border-blue:focus,.button.bg-blue:hover,.button.bg-blue:focus{color:#fff;border-color:#3bd;background-color:#3bd;}
-.button.border-green:hover,.button.border-green:focus,.button.bg-green:hover,.button.bg-green:focus{color:#fff;border-color:#5d8;background-color:#5d8;}
-.button.border-red-light:hover,.button.border-red-light:focus,.button.bg-red-light:hover,.button.bg-red-light:focus,.alert-red:hover{color:#e33;border-color:#fdc;background-color:#fdc;}
 .button.border-yellow-light:hover,.button.border-yellow-light:focus,.button.bg-yellow-light:hover,.button.bg-yellow-light:focus,.alert-yellow:hover{color:#f60;border-color:#fec;background-color:#fec;}
 .button.border-blue-light:hover,.button.border-blue-light:focus,.button.bg-blue-light:hover,.button.bg-blue-light:focus,.alert-blue:hover{color:#0ae;border-color:#def;background-color:#def;}
-.button.border-green-light:hover,.button.border-green-light:focus,.button.bg-green-light:hover,.button.bg-green-light:focus,.alert-green:hover{color:#2c7;border-color:#cfa;background-color:#cfa;}
 
 
 
