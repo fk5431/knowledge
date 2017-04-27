@@ -4,6 +4,7 @@ import com.fk.bean.FileBean;
 import com.fk.bean.FtypeBean;
 import com.fk.bean.KtypeBean;
 import com.fk.bean.UserBean;
+import com.fk.service.FtypeService;
 import com.fk.service.KtypeService;
 import com.fk.service.OperativeService;
 import com.fk.service.UserService;
@@ -45,6 +46,9 @@ public class OperativeC {
 
     @Autowired
     KtypeService ktypeService;
+
+    @Autowired
+    FtypeService ftypeService;
 
 
     @RequestMapping("/operative")
@@ -232,6 +236,13 @@ public class OperativeC {
 
         return "/operative/ktypetable";
     }
+    @RequestMapping("/ftypetable")
+    public String ftypetable(HttpServletRequest request, Map<String, Object> map){
+
+        ftypeService.selectAllFtype(request, map);
+
+        return "/operative/ftypetable";
+    }
     @RequestMapping("/updateuser")
     public String updateuser(HttpServletRequest request, Map<String, Object> map){
         String name = request.getParameter("name");
@@ -254,6 +265,19 @@ public class OperativeC {
         ktypeService.updateKtype(id, name, file, map);
         return ktypetable(request, map);
     }
+    @RequestMapping("/updateftype")
+    public String updateftype(HttpServletRequest request, Map<String, Object> map){
+        String name = request.getParameter("name");
+        String id = request.getParameter("id");
+        String type = request.getParameter("type");
+        FtypeBean file = new FtypeBean();
+        file.setFtypeid(Integer.parseInt(id));
+        file.setFtype(type);
+        file.setFtypename(name);
+
+        ftypeService.updateftype(file, map);
+        return ftypetable(request, map);
+    }
     @RequestMapping("/deluser")
     public String deluser(HttpServletRequest request, Map<String, Object> map){
         String id = request.getParameter("id");
@@ -265,6 +289,12 @@ public class OperativeC {
         String id = request.getParameter("id");
         ktypeService.delKtype(Integer.parseInt(id), map);
         return ktypetable(request, map);
+    }
+    @RequestMapping("/delftype")
+    public String delftype(HttpServletRequest request, Map<String, Object> map){
+        String id = request.getParameter("id");
+        ftypeService.delFtype(Integer.parseInt(id), map);
+        return ftypetable(request, map);
     }
     @RequestMapping("/operative/logout")
     public String logout(HttpServletRequest request, HttpServletResponse response){
