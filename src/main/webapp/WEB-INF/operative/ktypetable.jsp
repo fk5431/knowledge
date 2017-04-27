@@ -16,7 +16,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>用户管理</title>
+    <title>分类管理</title>
 
     <link href="${pageContext.request.contextPath}/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
@@ -35,7 +35,7 @@
             <div class="">
                 <div class="page-title">
                     <div class="title_left">
-                        <h3>用户管理</h3>
+                        <h3>分类管理</h3>
                     </div>
 
                     <div class="title_right">
@@ -56,7 +56,7 @@
                     <div class="col-md-12 col-sm-12 col-xs-12">
                         <div class="x_panel">
                             <div class="x_title">
-                                <h2>用户管理 <small>Users</small></h2>
+                                <h2>分类管理 <small>ktype</small></h2>
                                 <ul class="nav navbar-right panel_toolbox">
                                     <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                                     </li>
@@ -72,31 +72,29 @@
                                     <thead>
                                     <tr>
                                         <th>ID</th>
-                                        <th>姓名</th>
-                                        <th>新姓名</th>
-                                        <th>邮箱</th>
-                                        <th>新邮箱</th>
-                                        <th>密码</th>
-                                        <th>新密码</th>
+                                        <th>分类名称</th>
+                                        <th>新分类名称</th>
+                                        <th>图片链接</th>
+                                        <th>新图片链接</th>
+                                        <th>文件数</th>
                                         <th>修改</th>
                                         <th>删除</th>
                                     </tr>
                                     </thead>
 
                                     <tbody>
-                                    <c:forEach var="u" items="${user}">
-                                    <form action="${pageContext.request.contextPath}/updateuser" method="get" id="user${u.uid}">
+                                    <c:forEach var="k" items="${ktype}">
+                                    <form action="${pageContext.request.contextPath}/updatektype" method="post" enctype="multipart/form-data" id="user${k.ktypeid}">
                                         <tr>
-                                            <td>${u.uid}</td>
-                                            <td>${u.uname}</td>
+                                            <td>${k.ktypeid}</td>
+                                            <td>${k.ktype}</td>
                                             <td><input type="text" name="name">
-                                                <input type="text" name="id" hidden value="${u.uid}"/></td>
-                                            <td>${u.uemail}</td>
-                                            <td><input type="text" name="email"></td>
-                                            <td>${u.pwd}</td>
-                                            <td><input type="text" name="pwd"></td>
-                                            <td><a onclick="document.getElementById('user${u.uid}').submit();return false">修改</a></td>
-                                            <td><a href="${pageContext.request.contextPath}/deluser?id=${u.uid}">删除</a> </td>
+                                                <input type="text" name="id" hidden value="${k.ktypeid}"/></td>
+                                            <td><img src="${k.ktypeurl}"></td>
+                                            <td><input type="file" name="image"></td>
+                                            <td>${k.count}</td>
+                                            <td><a onclick="document.getElementById('user${k.ktypeid}').submit();return false">修改</a></td>
+                                            <td><a href="${pageContext.request.contextPath}/delktype" >删除</a> </td>
                                         </tr>
                                     </form>
                                     </c:forEach>

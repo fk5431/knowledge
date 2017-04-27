@@ -4,6 +4,7 @@ import com.fk.bean.FileBean;
 import com.fk.bean.FtypeBean;
 import com.fk.bean.KtypeBean;
 import com.fk.bean.UserBean;
+import com.fk.service.KtypeService;
 import com.fk.service.OperativeService;
 import com.fk.service.UserService;
 import com.fk.util.CommonConst;
@@ -41,6 +42,9 @@ public class OperativeC {
 
     @Autowired
     UserService userService;
+
+    @Autowired
+    KtypeService ktypeService;
 
 
     @RequestMapping("/operative")
@@ -221,6 +225,13 @@ public class OperativeC {
 
         return "/operative/usertable";
     }
+    @RequestMapping("/ktypetable")
+    public String ktypetable(HttpServletRequest request, Map<String, Object> map){
+
+        ktypeService.selectAllKtype(request, map);
+
+        return "/operative/ktypetable";
+    }
     @RequestMapping("/updateuser")
     public String updateuser(HttpServletRequest request, Map<String, Object> map){
         String name = request.getParameter("name");
@@ -233,6 +244,20 @@ public class OperativeC {
         userBean.setUid(Integer.parseInt(id));
         userBean.setUemail(email);
         userService.updateUser(userBean, map);
+        return usertable(request, map);
+    }
+    @RequestMapping("/updatektype")
+    public String updatektype(HttpServletRequest request, @RequestParam("image")MultipartFile file, Map<String, Object> map){
+        String name = request.getParameter("name");
+        String id = request.getParameter("id");
+
+        ktypeService.updateKtype(id, name, file, map);
+        return usertable(request, map);
+    }
+    @RequestMapping("/deluser")
+    public String deluser(HttpServletRequest request, Map<String, Object> map){
+        String id = request.getParameter("id");
+        userService.delUser(Integer.parseInt(id), map);
         return usertable(request, map);
     }
     @RequestMapping("/operative/logout")

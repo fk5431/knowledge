@@ -20,4 +20,5 @@ public interface KtypeDao {
     KtypeBean selectByName(String ktype);
 
     List<KtypeBean> selectAll();
+
 }

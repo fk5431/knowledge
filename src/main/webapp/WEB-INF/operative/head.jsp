@@ -34,8 +34,8 @@
                     <li><a>  添加内容 <span class="fa fa-chevron-down"></span></a>
                         <ul class="nav child_menu">
                             <li><a href="${pageContext.request.contextPath}/fileform">文件添加</a></li>
-                            <li><a href="${pageContext.request.contextPath}/ktypeform">类型添加</a></li>
-                            <li><a href="${pageContext.request.contextPath}/ftypeform">分类添加</a></li>
+                            <li><a href="${pageContext.request.contextPath}/ktypeform">分类添加</a></li>
+                            <li><a href="${pageContext.request.contextPath}/ftypeform">类型添加</a></li>
                             <li><a href="${pageContext.request.contextPath}/userform">用户添加</a></li>
                         </ul>
                     </li>
@@ -45,8 +45,8 @@
                         <ul class="nav child_menu">
                             <li><a href="${pageContext.request.contextPath}/usertable">用户管理</a></li>
                             <li><a href="${pageContext.request.contextPath}/filetable">文件管理</a></li>
-                            <li><a href="${pageContext.request.contextPath}/ktypetable">类型管理</a></li>
-                            <li><a href="${pageContext.request.contextPath}/ftypetable">分类管理</a></li>
+                            <li><a href="${pageContext.request.contextPath}/ktypetable">分类管理</a></li>
+                            <li><a href="${pageContext.request.contextPath}/ftypetable">类型管理</a></li>
                             <li><a href="${pageContext.request.contextPath}/tagstable">用户标签管理</a></li>
                             <li><a href="${pageContext.request.contextPath}/documenttable">文档管理</a></li>
                         </ul>

@@ -210,4 +210,8 @@ public class UserService {
             logger.debug("UserService.selectAllUser  in ]",  e);
         }
     }
+
+    public void delUser(int i, Map<String, Object> map) {
+        userDao.deleteByPrimaryKey(i);
+    }
 }
