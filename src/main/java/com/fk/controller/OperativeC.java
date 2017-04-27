@@ -252,13 +252,19 @@ public class OperativeC {
         String id = request.getParameter("id");
 
         ktypeService.updateKtype(id, name, file, map);
-        return usertable(request, map);
+        return ktypetable(request, map);
     }
     @RequestMapping("/deluser")
     public String deluser(HttpServletRequest request, Map<String, Object> map){
         String id = request.getParameter("id");
         userService.delUser(Integer.parseInt(id), map);
         return usertable(request, map);
+    }
+    @RequestMapping("/delktype")
+    public String delktype(HttpServletRequest request, Map<String, Object> map){
+        String id = request.getParameter("id");
+        ktypeService.delKtype(Integer.parseInt(id), map);
+        return ktypetable(request, map);
     }
     @RequestMapping("/operative/logout")
     public String logout(HttpServletRequest request, HttpServletResponse response){

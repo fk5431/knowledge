@@ -42,10 +42,10 @@ public class KtypeService {
     public void updateKtype(String id, String name, MultipartFile file, Map<String, Object> map) {
         try{
             KtypeBean ktypeBean = ktypeDao.selectByPrimaryKey(Integer.parseInt(id));
-            if(name != null){
+            if(name != null && !"".equals(name)){
                 ktypeBean.setKtype(name);
             }
-            if(file != null){
+            if(file != null && file.getSize() != 0){
                 String filename = file.getOriginalFilename();
                 String path = ContextLoader.getCurrentWebApplicationContext().getServletContext().getRealPath("/");
                 filename = String.valueOf(System.currentTimeMillis()) + filename;
@@ -64,5 +64,9 @@ public class KtypeService {
             e.printStackTrace();
             logger.error("KtypeService.selectAllKtype  in ]",  e);
         }
+    }
+
+    public void delKtype(int i, Map<String, Object> map) {
+        ktypeDao.deleteByPrimaryKey(i);
     }
 }

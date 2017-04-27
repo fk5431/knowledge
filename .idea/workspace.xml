@@ -11,14 +11,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="11669da5-9530-45d4-b1a5-63fcb18bf569" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/service/KtypeService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/operative/ktypetable.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/fk/controller/OperativeC.java" afterPath="$PROJECT_DIR$/src/main/java/com/fk/controller/OperativeC.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/fk/dao/KtypeDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/fk/dao/KtypeDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/fk/service/UserService.java" afterPath="$PROJECT_DIR$/src/main/java/com/fk/service/UserService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/operative/head.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/operative/head.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/operative/usertable.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/operative/usertable.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/fk/service/KtypeService.java" afterPath="$PROJECT_DIR$/src/main/java/com/fk/service/KtypeService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/operative/ktypetable.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/operative/ktypetable.jsp" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -49,18 +45,18 @@
       <file leaf-file-name="head.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/operative/head.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="36" column="82" lean-forward="false" selection-start-line="36" selection-start-column="82" selection-end-line="36" selection-end-column="82" />
+            <state relative-caret-position="468">
+              <caret line="47" column="79" lean-forward="true" selection-start-line="47" selection-start-column="79" selection-end-line="47" selection-end-column="79" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OperativeC.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="OperativeC.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/fk/controller/OperativeC.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="424">
-              <caret line="170" column="33" lean-forward="false" selection-start-line="170" selection-start-column="33" selection-end-line="170" selection-end-column="33" />
+            <state relative-caret-position="622">
+              <caret line="121" column="0" lean-forward="false" selection-start-line="121" selection-start-column="0" selection-end-line="121" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -68,22 +64,27 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="KtypeService.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/fk/service/KtypeService.java">
+      <file leaf-file-name="ktypetable.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/operative/ktypetable.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="625">
-              <caret line="61" column="51" lean-forward="false" selection-start-line="61" selection-start-column="51" selection-end-line="61" selection-end-column="51" />
-              <folding />
+            <state relative-caret-position="594">
+              <caret line="96" column="115" lean-forward="false" selection-start-line="96" selection-start-column="115" selection-end-line="96" selection-end-column="115" />
+              <folding>
+                <element signature="n#style#0;n#img#0;n#td#3;n#tr#0;n#form#0;n#tbody#0;n#table#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ktypetable.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/operative/ktypetable.jsp">
+      <file leaf-file-name="KtypeService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/fk/service/KtypeService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="486">
-              <caret line="90" column="77" lean-forward="false" selection-start-line="90" selection-start-column="73" selection-end-line="90" selection-end-column="77" />
-              <folding />
+            <state relative-caret-position="262">
+              <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+              <folding>
+                <element signature="e#2461#2462#0" expanded="true" />
+                <element signature="e#2507#2508#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -103,6 +104,16 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="151">
               <caret line="69" column="102" lean-forward="false" selection-start-line="69" selection-start-column="102" selection-end-line="69" selection-end-column="102" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="usertable.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/operative/usertable.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="211">
+              <caret line="98" column="97" lean-forward="true" selection-start-line="98" selection-start-column="97" selection-end-line="98" selection-end-column="97" />
               <folding />
             </state>
           </provider>
@@ -219,8 +230,8 @@
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/operative/head.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/operative/usertable.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/fk/service/UserService.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/operative/ktypetable.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/fk/controller/OperativeC.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/operative/ktypetable.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/fk/service/KtypeService.java" />
       </list>
     </option>
@@ -1403,7 +1414,7 @@
       <workItem from="1492995966163" duration="23791000" />
       <workItem from="1493087170240" duration="18861000" />
       <workItem from="1493193088903" duration="2215000" />
-      <workItem from="1493258128400" duration="15242000" />
+      <workItem from="1493258128400" duration="15831000" />
     </task>
     <task id="LOCAL-00001" summary="ssm  success">
       <created>1486712078887</created>
@@ -1559,15 +1570,22 @@
       <option name="project" value="LOCAL" />
       <updated>1493277768779</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="分类 用户删除">
+      <created>1493279236703</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1493279236703</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="153060000" />
+    <option name="totallyTimeSpent" value="153649000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1855" height="1056" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1594,7 +1612,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28392485" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32923076" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20674406" sideWeight="0.49435028" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20674406" sideWeight="0.49435028" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20121615" sideWeight="0.50564975" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
@@ -1624,7 +1642,8 @@
     <MESSAGE value="message 不保存？????" />
     <MESSAGE value="后台可以完善了" />
     <MESSAGE value="用户完善了  妈的 cookie为什么传不过来啊" />
-    <option name="LAST_COMMIT_MESSAGE" value="用户完善了  妈的 cookie为什么传不过来啊" />
+    <MESSAGE value="分类 用户删除" />
+    <option name="LAST_COMMIT_MESSAGE" value="分类 用户删除" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1647,20 +1666,8 @@
           <properties />
           <option name="timeStamp" value="25" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/fk/controller/OperativeC.java</url>
-          <line>99</line>
-          <properties />
-          <option name="timeStamp" value="37" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/fk/controller/OperativeC.java</url>
-          <line>121</line>
-          <properties />
-          <option name="timeStamp" value="43" />
-        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="44" />
+      <option name="time" value="46" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -2079,41 +2086,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/operative/usertable.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="589">
-          <caret line="98" column="111" lean-forward="false" selection-start-line="98" selection-start-column="111" selection-end-line="98" selection-end-column="111" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fk/service/UserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="539">
-          <caret line="214" column="38" lean-forward="false" selection-start-line="214" selection-start-column="38" selection-end-line="214" selection-end-column="38" />
-          <folding>
-            <element signature="e#7403#7404#0" expanded="true" />
-            <element signature="e#7448#7449#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/operative/ktypetable.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="90" column="77" lean-forward="false" selection-start-line="90" selection-start-column="73" selection-end-line="90" selection-end-column="77" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/operative/head.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="36" column="82" lean-forward="false" selection-start-line="36" selection-start-column="82" selection-end-line="36" selection-end-column="82" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/operative/ktypeform.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="151">
@@ -2130,21 +2102,61 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fk/controller/OperativeC.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/operative/usertable.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="424">
-          <caret line="170" column="33" lean-forward="false" selection-start-line="170" selection-start-column="33" selection-end-line="170" selection-end-column="33" />
+        <state relative-caret-position="211">
+          <caret line="98" column="97" lean-forward="true" selection-start-line="98" selection-start-column="97" selection-end-line="98" selection-end-column="97" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fk/service/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="214" column="8" lean-forward="false" selection-start-line="214" selection-start-column="8" selection-end-line="214" selection-end-column="8" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#7403#7404#0" expanded="true" />
+            <element signature="e#7448#7449#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/operative/head.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="468">
+          <caret line="47" column="79" lean-forward="true" selection-start-line="47" selection-start-column="79" selection-end-line="47" selection-end-column="79" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/operative/ktypetable.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="594">
+          <caret line="96" column="115" lean-forward="false" selection-start-line="96" selection-start-column="115" selection-end-line="96" selection-end-column="115" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#td#3;n#tr#0;n#form#0;n#tbody#0;n#table#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/fk/service/KtypeService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="625">
-          <caret line="61" column="51" lean-forward="false" selection-start-line="61" selection-start-column="51" selection-end-line="61" selection-end-column="51" />
-          <folding />
+        <state relative-caret-position="262">
+          <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+          <folding>
+            <element signature="e#2461#2462#0" expanded="true" />
+            <element signature="e#2507#2508#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fk/controller/OperativeC.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="622">
+          <caret line="121" column="0" lean-forward="false" selection-start-line="121" selection-start-column="0" selection-end-line="121" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

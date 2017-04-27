@@ -90,11 +90,11 @@
                                             <td>${k.ktype}</td>
                                             <td><input type="text" name="name">
                                                 <input type="text" name="id" hidden value="${k.ktypeid}"/></td>
-                                            <td><img src="${k.ktypeurl}"></td>
+                                            <td><img src="${k.ktypeurl}" style="height: 100px; width: 100px;"></td>
                                             <td><input type="file" name="image"></td>
                                             <td>${k.count}</td>
                                             <td><a onclick="document.getElementById('user${k.ktypeid}').submit();return false">修改</a></td>
-                                            <td><a href="${pageContext.request.contextPath}/delktype" >删除</a> </td>
+                                            <td><a href="${pageContext.request.contextPath}/delktype?id=${k.ktypeid}" >删除</a> </td>
                                         </tr>
                                     </form>
                                     </c:forEach>
