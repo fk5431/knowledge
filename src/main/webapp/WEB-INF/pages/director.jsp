@@ -191,7 +191,7 @@
                 <div class="module" style="height: auto;">
                     <div class="mod-title">
                         <h3>作品</h3>
-                        <span class="about-num">（36部）</span>
+                        <span class="about-num">（<%=list.size()%>部）</span>
                     </div>
                     <div class="mod-content"  style="height: auto;">
                         <div class="folding-content"  style="height: auto;">

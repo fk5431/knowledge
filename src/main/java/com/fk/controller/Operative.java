@@ -267,7 +267,7 @@ public class Operative {
     public String addmovie(HttpServletRequest request, @RequestParam("image") MultipartFile file, Map<String , Object> map){
         try {
             String title = request.getParameter("title");
-            String etitle = request.getParameter("etitle");
+            String etitle = "";
             String type = request.getParameter("type");
             String area = request.getParameter("area");
             String time = request.getParameter("time");
@@ -277,7 +277,6 @@ public class Operative {
 
 
             String introduce = request.getParameter("introduce");
-            String director = request.getParameter("director");
             String[] performer = request.getParameterValues("performer");
             String content = request.getParameter("content");
             String filename = file.getOriginalFilename();
@@ -317,7 +316,7 @@ public class Operative {
             }
             movieBean.setTime(time1);
             movieBean.setType(type);
-            movieBean.setDirectorid(Integer.parseInt(director));
+            movieBean.setDirectorid(1);
             StringBuffer sb = new StringBuffer();
             if(performer!=null) {
                 for (int i = 0; i < performer.length; i++) {
@@ -328,8 +327,11 @@ public class Operative {
                         sb.append(performer[i]);
                     }
                 }
+                movieBean.setPerformerids(sb.toString());
+            }else {
+                movieBean.setPerformerids("");
             }
-            movieBean.setPerformerids(sb.toString());
+
             String reg = ":8080.*?\"";
             Pattern pattern = Pattern.compile(reg);
             Matcher matcher =  pattern.matcher(content);
@@ -441,6 +443,12 @@ public class Operative {
     public String logout(HttpServletRequest request, Map<String, Object> map){
 
         return "/operative/login";
+    }
+
+    @RequestMapping("/500")
+    public String error_500(HttpServletRequest request, Map<String, Object> map){
+
+        return "/500";
     }
 
     @RequestMapping("/operative/logout")

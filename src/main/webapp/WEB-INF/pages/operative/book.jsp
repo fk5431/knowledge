@@ -100,15 +100,6 @@
                 </div>
                 <div class="form-group">
                     <div class="label">
-                        <label>英文标题：</label>
-                    </div>
-                    <div class="field">
-                        <input type="text" class="input" name="etitle" value=""/>
-                        <div class="tips"></div>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="label">
                         <label>类型：</label>
                     </div>
                     <div class="field">
@@ -180,23 +171,7 @@
                         <div class="tips"></div>
                     </div>
                 </div>
-                <div class="form-group">
-                    <div class="label">
-                        <label>主演：</label>
-                    </div>
-                    <div class="field">
-                        <select name="director">
-                            <%
-                                List<DirectorBean> directorBeans = (List) request.getAttribute("director");
-                                for (int i = 0; i < directorBeans.size(); i++) {
-                            %>
-                            <option value="<%=directorBeans.get(i).getId()%>"><%=directorBeans.get(i).getName()%>
-                            </option>
-                            <%}%>
-                        </select>
-                        <div class="tips"></div>
-                    </div>
-                </div>
+
                 <div class="form-group">
                     <div class="label">
                         <label>参与演员：</label>

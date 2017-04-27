@@ -140,7 +140,7 @@ public class OperativeAdv {
             performerBean.setBirth(simpleDateFormat.parse(birth));
         } catch (ParseException e) {
             //e.printStackTrace();
-            performerBean.setBirth(null);
+            //performerBean.setBirth(null);
         }
         String nationality = request.getParameter("nationality");
         performerBean.setNationality(nationality);
