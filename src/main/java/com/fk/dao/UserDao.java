@@ -2,6 +2,8 @@ package com.fk.dao;
 
 import com.fk.bean.UserBean;
 
+import java.util.List;
+
 public interface UserDao {
     int deleteByPrimaryKey(Integer uid);
 
@@ -20,4 +22,6 @@ public interface UserDao {
     void updateByEmail(UserBean user);
 
     UserBean selectByName(String name);
+
+    List<UserBean> selectALL_1();
 }

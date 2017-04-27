@@ -13,7 +13,10 @@ import org.springframework.stereotype.Service;
 
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.xml.registry.infomodel.User;
 import java.util.Date;
+import java.util.List;
 import java.util.Map;
 import java.util.Random;
 
@@ -147,5 +150,64 @@ public class UserService {
     private void noUser(Map<String, Object> map) {
         
         
+    }
+
+    public void superlogin(UserBean userBean, HttpServletResponse response, Map<String, Object> map) {
+        try{
+            UserBean exists = userDao.selectByName(userBean.getUname());
+            if(exists == null){
+                map.put("errorcode", 2);
+                return;
+            }
+            if(!MD5.decodeMD5(exists.getPwd()).equals(userBean.getPwd())){
+                map.put("errorcode", 3);
+                return;
+            }
+            if(exists.getIsmanage() != 2 && exists.getIsmanage() != 0){
+                map.put(CommonConst.ERRORCODE, 2);
+                return;
+            }
+            if(exists.getIsmanage() == 2) {
+                Cookie c = new Cookie(CommonConst.SUPERUSERID, CommonConst.YES);
+                c.setMaxAge(-1);
+                response.addCookie(c);
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+            logger.debug("UserService.login  in name[{}], password[{}], id[{}]", userBean.getUname(), userBean.getPwd(), e);
+        }
+    }
+
+    public void selectAllUser(HttpServletRequest request, Map<String, Object> map) {
+        try{
+            List<UserBean> userBeans = userDao.selectALL_1();
+            for(UserBean u : userBeans){
+                u.setPwd(MD5.decodeMD5(u.getPwd()));
+            }
+            map.put("user", userBeans);
+        }catch (Exception e){
+            e.printStackTrace();
+            logger.debug("UserService.selectAllUser  in ]",  e);
+        }
+    }
+
+    public void updateUser(UserBean userBean, Map<String, Object> map) {
+        try{
+            UserBean userUpdate = userDao.selectByPrimaryKey(userBean.getUid());
+            if(userBean.getUname() != null && !"".equals(userBean.getUname())){
+                userUpdate.setUname(userBean.getUname());
+            }
+            if(userBean.getPwd() != null && !"".equals(userBean.getPwd())){
+                userUpdate.setPwd(MD5.encodeMD5(userBean.getPwd()));
+            }
+            if(userBean.getUemail() != null && !"".equals(userBean.getUemail())){
+                userUpdate.setUemail(userBean.getUemail());
+            }
+            userDao.updateByPrimaryKey(userUpdate);
+
+        }catch (Exception e){
+            e.printStackTrace();
+            logger.debug("UserService.selectAllUser  in ]",  e);
+        }
     }
 }

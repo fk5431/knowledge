@@ -39,7 +39,7 @@ public class OperativeService {
     private Logger logger = LoggerFactory.getLogger(UserService.class);
 
 
-    public void adduser(UserBean userBean, Map<Object, String> map) {
+    public void adduser(UserBean userBean, Map<String, Object> map) {
         try {
             UserBean user = userDao.selectByEmail(userBean.getUemail());
             UserBean username = userDao.selectByName(userBean.getUname());

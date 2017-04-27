@@ -34,6 +34,9 @@
     }else if (errorcode == 7){
         alert("文件不要使用中文，请您重新选择！");
         window.history.back(-1);
+    }else if (errorcode == 8){
+        alert("你没有权限添加管理员，请您重新选择！");
+        window.history.back(-1);
     }
 </script>
 </body>

@@ -9,12 +9,12 @@
         <!-- menu profile quick info -->
         <div class="profile clearfix">
             <div class="profile_pic">
-                <img src="${pageContext.request.contextPath}/images/author.jpg" alt="..."
+                <img src="${pageContext.request.contextPath}/images/author.jpg" alt=".  .."
                      class="img-circle profile_img">
             </div>
             <div class="profile_info">
-                <span>Welcome,</span>
-                <h2>John Doe</h2>
+                <span>欢迎,</span>
+                <h2>管理员</h2>
             </div>
         </div>
         <!-- /menu profile quick info -->
@@ -27,7 +27,7 @@
                     <li><a> 开始 <span class="fa fa-chevron-down"></span></a>
                         <ul class="nav child_menu">
                             <li><a href="${pageContext.request.contextPath}/operative">首页</a></li>
-                            <li><a href="${pageContext.request.contextPath}/logout">退出</a></li>
+                            <li><a href="${pageContext.request.contextPath}/operative/logout">退出</a></li>
                             <li><a href="${pageContext.request.contextPath}">前台</a></li>
                         </ul>
                     </li>
@@ -71,25 +71,16 @@
             <div class="nav toggle">
                 <a id="menu_toggle"><i class="fa fa-bars"></i></a>
             </div>
-
             <ul class="nav navbar-nav navbar-right">
                 <li class="">
                     <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown"
                        aria-expanded="false">
-                        <img src="../../cttp_1_gentelella/production/images/img.jpg" alt="">John Doe
+                        <img src="${pageContext.request.contextPath}/images/author.jpg" alt="">管理员
                         <span class=" fa fa-angle-down"></span>
                     </a>
                     <ul class="dropdown-menu dropdown-usermenu pull-right">
-                        <li><a href="javascript:;"> Profile</a></li>
-                        <li>
-                            <a href="javascript:;">
-                                <span class="badge bg-red pull-right">50%</span>
-                                <span>Settings</span>
-                            </a>
-                        </li>
-                        <li><a href="javascript:;">Help</a></li>
-                        <li><a href="../../cttp_1_gentelella/production/login.html"><i
-                                class="fa fa-sign-out pull-right"></i> Log Out</a></li>
+                        <li><a href="${pageContext.request.contextPath}/operative/logout"><i
+                                class="fa fa-sign-out pull-right"></i> 退出</a></li>
                     </ul>
                 </li>
             </ul>
