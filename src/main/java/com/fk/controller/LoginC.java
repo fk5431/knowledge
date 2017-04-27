@@ -120,5 +120,11 @@ public class LoginC {
 
         return "index";
     }
+    @RequestMapping(value = "/userlogin")
+    public String userlogin(HttpServletRequest request, Map<String, Object> map){
+
+
+        return "login";
+    }
 
 }
