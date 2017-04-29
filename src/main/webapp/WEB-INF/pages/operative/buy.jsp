@@ -33,7 +33,7 @@
     <div class="leftnav-title"><strong><span class="icon-list"></span>菜单列表</strong></div>
     <h2><span class="icon-user"></span>基本修改</h2>
     <ul style="display:block">
-        <li><a href="${pageContext.request.contextPath}/operative"><span class="icon-caret-right"></span>网站用户</a></li>
+        <li><a href="${pageContext.request.contextPath}/operative/user"><span class="icon-caret-right"></span>网站用户</a></li>
         <li><a href="${pageContext.request.contextPath}/operative/pass"><span class="icon-caret-right"></span>演员管理</a>
         </li>
         <li><a href="${pageContext.request.contextPath}/operative/page"><span class="icon-caret-right"></span>资讯添加</a>

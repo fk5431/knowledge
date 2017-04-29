@@ -58,7 +58,7 @@ public class Operative {
     private static final int SIZE = 10;
     private static final int SIZENEW = 5;
 
-    @RequestMapping("/operative" )
+    @RequestMapping("/operative/user" )
     public String index(HttpServletRequest request, Map<String, Object> map){
         int count = userService.count();
         int page = 1;
@@ -439,6 +439,11 @@ public class Operative {
     }
 
 
+    @RequestMapping("/operative")
+    public String index_login(HttpServletRequest request, Map<String, Object> map){
+
+        return logout(request, map);
+    }
     @RequestMapping("/operative/login")
     public String logout(HttpServletRequest request, Map<String, Object> map){
 
