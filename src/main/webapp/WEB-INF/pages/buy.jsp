@@ -50,7 +50,7 @@
             </div>
         </div>
         <form action="${pageContext.request.contextPath}/search" target="_blank" class="search-form" data-actform="search-click">
-            <input name="kw" class="search" maxlength="32" placeholder="找影人、演出" autocomplete="off" type="search">
+            <input name="kw" class="search" maxlength="32" placeholder="找演出" autocomplete="off" type="search">
             <input class="submit" value="" type="submit">
         </form>
     </div>
