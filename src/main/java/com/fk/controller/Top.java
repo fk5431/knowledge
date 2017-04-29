@@ -90,6 +90,8 @@ public class Top {
             //        演员 performer
             String[] performers = movieBean.getPerformerids().split(CommonConst.SPLITOR);
             for(int i=0;i<performers.length;i++){
+                if(performers[i].equals(""))
+                    continue;
                 PerformerBean performerBean = performerService.selectByPrimaryKey(Integer.parseInt(performers[i]));
                 if(performerBean != null){
                     sb.append(",");

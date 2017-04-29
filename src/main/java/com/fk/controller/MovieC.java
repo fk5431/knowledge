@@ -72,8 +72,8 @@ public class MovieC {
         String type = sb.substring(0, sb.length()-1);
         map.put("type", type);
 //      导演  director
-        DirectorBean director = directorService.selectByPrimaryKey(movieBean.getDirectorid());
-        map.put("director", director);
+//        DirectorBean director = directorService.selectByPrimaryKey(movieBean.getDirectorid());
+//        map.put("director", director);
 //        演员 performer
         List<PerformerBean> performer = new ArrayList<>();
         String[] performers = movieBean.getPerformerids().split(CommonConst.SPLITOR);
@@ -180,8 +180,8 @@ public class MovieC {
         String type = sb.substring(0, sb.length()-1);
         map.put("type", type);
 //      导演  director
-        DirectorBean director = directorService.selectByPrimaryKey(movieBean.getDirectorid());
-        map.put("director", director);
+//        DirectorBean director = directorService.selectByPrimaryKey(movieBean.getDirectorid());
+//        map.put("director", director);
 //        演员 performer
         List<PerformerBean> performer = new ArrayList<>();
         String[] performers = movieBean.getPerformerids().split(CommonConst.SPLITOR);
@@ -195,6 +195,75 @@ public class MovieC {
 
         if(Login.islogin(request)){
             map.put("login", CommonConst.YES);
+        }
+
+        if(Login.islogin(request)){
+            map.put("login", CommonConst.YES);
+            String userId = "0";
+            Cookie[] cookies = request.getCookies();
+            for(Cookie c : cookies){
+                if(CommonConst.USERID.equals(c.getName())){
+                    userId = c.getValue();
+                }
+            }
+            HistoryBean his = historyService.selectByMovieId(Integer.parseInt(userId), movieBean.getId());
+            if(his == null) {
+                HistoryBean historyBean = new HistoryBean();
+                historyBean.setUserid(Integer.parseInt(userId));
+                historyBean.setMovieid(movieBean.getId());
+                historyBean.setImage(movieBean.getImage());
+                historyBean.setIntroduce(movieBean.getIntroduce());
+                historyBean.setMovietitle(movieBean.getTitle());
+                historyBean.setScore(movieBean.getScore());
+                historyBean.setTime(movieBean.getShowtime());
+                historyBean.setDate(new Date());
+                historyService.insertSelective(historyBean);
+            }else{
+                his.setDate(new Date());
+                historyService.updateByPrimaryKey(his);
+            }
+            if( !(performers.length == 1 && performers[0].equals(""))) {
+                for (int i = 0; i < performers.length; i++) {
+                    PerformerBean performerBean = performerService.selectByPrimaryKey(Integer.parseInt(performers[i]));
+                    if (performerBean != null) {
+                        CloudBean cloud = cloudService.selectByUserIdAndActorId(Integer.parseInt(userId), performerBean.getId());
+                        if (cloud == null) {
+                            CloudBean cloudBean = new CloudBean();
+                            cloudBean.setUserid(Integer.parseInt(userId));
+                            cloudBean.setActorid(performerBean.getId());
+                            cloudBean.setActorname(performerBean.getName());
+                            cloudBean.setActorstatus(0);
+                            cloudService.insertSelective(cloudBean);
+                        } else {
+                            cloud.setActorstatus(cloud.getActorstatus() + 1);
+                            cloudService.updateByPrimaryKey(cloud);
+                        }
+                    }
+                }
+            }
+
+        }
+
+        List<MovieBean> other = movieService.selectByType(movieBean.getType());
+        List<MovieBean> returnother = new ArrayList<>();
+        if(other.size() <= 6){
+            map.put("other", other);
+        }else {
+            Random random=new Random();
+            int [] r=new int[6];
+            for (int i = 0; i < r.length;) {
+                int temp=random.nextInt(other.size());
+                if(temp==0)continue;
+                for (int j : r) {
+                    if(j==temp)continue;
+                }
+                r[i]=temp;
+                i++;
+            }
+            for(int j : r){
+                returnother.add(other.get(j));
+            }
+            map.put("other", returnother);
         }
         return "film";
     }
