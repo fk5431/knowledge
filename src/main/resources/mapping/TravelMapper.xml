@@ -37,6 +37,12 @@
     from traveltips
     limit #{start, jdbcType=INTEGER},10
   </select>
+  <select id="selectByStart_6" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select
+    <include refid="Base_Column_List" />
+    from traveltips
+    limit #{start, jdbcType=INTEGER},6
+  </select>
   <select id="count" resultType="int">
     select count(*) from traveltips
   </select>

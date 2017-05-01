@@ -28,4 +28,6 @@ public interface TravelDao {
     List<TravelBean> selectByPlace(String place);
     List<TravelBean> selectByType(String type);
     List<TravelBean> selectByStart(Integer start);
+
+    List<TravelBean> selectByStart_6(Integer start);
 }

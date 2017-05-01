@@ -57,6 +57,11 @@ public class TravelServiceImpl implements ITravelService {
     }
 
     @Override
+    public List<TravelBean> selectByStart_6(Integer start) {
+        return travelDao.selectByStart_6(start);
+    }
+
+    @Override
     public int deleteByPrimaryKey(Integer id) {
         return travelDao.deleteByPrimaryKey(id);
     }
@@ -70,4 +75,5 @@ public class TravelServiceImpl implements ITravelService {
     public List<TravelBean> selectByType(String type) {
         return travelDao.selectByType(type);
     }
+
 }

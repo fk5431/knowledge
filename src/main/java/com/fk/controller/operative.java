@@ -622,14 +622,18 @@ public class operative {
             ordersBean.setCount(0);
             StringBuffer sb = new StringBuffer();
             boolean flag = true;
-            for(String h : hotelId){
-                if(flag != true){
-                    sb.append(CommonConst.SPLITOR);
+            if(hotelId != null) {
+                for (String h : hotelId) {
+                    if (flag != true) {
+                        sb.append(CommonConst.SPLITOR);
+                    }
+                    sb.append(h);
+                    flag = false;
                 }
-                sb.append(h);
-                flag = false;
+                ordersBean.setHotel(sb.toString());
+            }else {
+                ordersBean.setHotel("");
             }
-            ordersBean.setHotel(sb.toString());
 
             String reg = ":8080.*?\"";
             Pattern pattern = Pattern.compile(reg);

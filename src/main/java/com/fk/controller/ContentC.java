@@ -84,14 +84,15 @@ public class ContentC {
             toPage = page;
         }
         map.put("pageNow", toPage);
-        for(int i=1;i<=SIZE ;i++){
-            TravelBean travelBean = travelService.selectByPrimaryKey((toPage - 1) * SIZE + i);
-            if(travelBean == null){
-
-            }else {
-                travelList.add(travelBean);
-            }
-        }
+        travelList = travelService.selectByStart_6((toPage - 1) * SIZE);
+//        for(int i=1;i<=SIZE ;i++){
+//            TravelBean travelBean = travelService.selectByPrimaryKey( + i);
+//            if(travelBean == null){
+//
+//            }else {
+//                travelList.add(travelBean);
+//            }
+//        }
         map.put("travel", travelList);
         if(Login.islogin(request)){
             map.put(CommonConst.LOGIN, CommonConst.YES);

@@ -170,6 +170,9 @@ public class ShopC {
 
     private List<HotelBean> getHotels(String hotel) {
         List<HotelBean> list = new ArrayList<>();
+        if(hotel.equals("")){
+            return list;
+        }
         String[] strs = hotel.split(CommonConst.SPLITOR);
         for(String str : strs){
             HotelBean hotelBean = hotelService.selectByPrimaryKey(Integer.parseInt(str));

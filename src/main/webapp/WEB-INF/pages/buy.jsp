@@ -4,14 +4,11 @@
 <head>
     <title>请确认支付</title>
     <link href="${pageContext.request.contextPath}/css/index_1.css" rel="stylesheet" type="text/css"/>
-    <script language="javascript" src="${pageContext.request.contextPath}/js/shop/buy_1.js"
-            type="text/javascript"></script>
+    <script language="javascript" src="${pageContext.request.contextPath}/js/shop/buy_1.js"  type="text/javascript"></script>
 
-    <script language="javascript" src="${pageContext.request.contextPath}/js/shop/buy_2.js"
-            type="text/javascript"></script>
+    <script language="javascript" src="${pageContext.request.contextPath}/js/shop/buy_2.js"  type="text/javascript"></script>
     <link href="${pageContext.request.contextPath}/css/shop/buy_4.css" rel="stylesheet" type="text/css"/>
-    <script language="javascript" src="${pageContext.request.contextPath}/js/shop/buy_3.js"
-            type="text/javascript"></script>
+    <script language="javascript" src="${pageContext.request.contextPath}/js/shop/buy_3.js"  type="text/javascript"></script>
 
 </head>
 <body>
