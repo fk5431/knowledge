@@ -80,7 +80,7 @@ public class UserService {
         try {
             Date now = new Date();
             String currentTime = "" + now.getTime();
-            String urlString = "http://localhost:8080/forgetPassword?key=";
+            String urlString = "http://localhost:8080/knowledge/forgetPassword?key=";
             String encryptedCode = MD5.encodeMD5(currentTime + "@" + email);
             String link = "<a href=\""+urlString + encryptedCode+"\">链接</a>";
             logger.debug("LoginC.sendMail in email[{}], link[{}]", email, link);

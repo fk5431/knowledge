@@ -8,7 +8,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>错误</title>
+    <title>提示</title>
 </head>
 <body>
 <script>
@@ -37,6 +37,15 @@
     }else if (errorcode == 8){
         alert("你没有权限添加管理员，请您重新选择！");
         window.history.back(-1);
+    }else if (errorcode == 9){
+        alert("邮箱错误，请重新输入邮箱或联系管理员！");
+        window.history.back(-1);
+    }else if (errorcode == 11){
+        alert("密码重置失败，请重试或者联系管理员！");
+        window.history.back(-1);
+    }else if (errorcode == 10){
+        alert("确认链接以发送至邮箱，请登录查看!");
+        window.location.href="http://www.hao123.com/mail";
     }
 </script>
 </body>

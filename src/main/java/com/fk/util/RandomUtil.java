@@ -13,6 +13,8 @@ public class RandomUtil {
         for(int i=0;i<8;i++){
             int num = random.nextInt(53);
             if(num % 2 == 0){
+                if(num > 25)
+                    num += 6;
                 sb.append((char)('A' + num));
             }else{
                 sb.append(random.nextInt(10));
@@ -21,4 +23,7 @@ public class RandomUtil {
         return sb.toString();
     }
 
+    public static void main(String[] args) {
+        System.out.println(RandomUtil.Random());
+    }
 }

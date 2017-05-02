@@ -46,7 +46,7 @@ public class SendMail {
                                 String emailSubject,String emailContent,String emailContentType){
         int res=0;
         final String loginAccount = "1050577129@qq.com";
-        final String loginAuthCode = "mhvjolvnbmgtbdce";
+        final String loginAuthCode = "eqyhxxqflswybcdj";
         String sender = "冯凯";
         try {
             //跟smtp服务器建立一个连接
@@ -113,7 +113,7 @@ public class SendMail {
     }
 
     public int sendEmailToOne(String recipients,String emailSubject,String emailContent){
-        logger.error(account);
+//        logger.error(account);
         int res=0;
         try {
             //跟smtp服务器建立一个连接

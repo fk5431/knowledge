@@ -11,6 +11,9 @@
     <title>提示</title>
 </head>
 <body>
-
+<script>
+    alert("密码以重置，请登录邮箱进行查看!");
+    window.location.href="http://www.hao123.com/mail";
+</script>
 </body>
 </html>

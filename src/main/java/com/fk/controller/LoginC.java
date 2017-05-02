@@ -81,11 +81,11 @@ public class LoginC {
         int result = userService.sendEmail(email, map);
 
         if (result == 1) {
-            map.put("errorcode", 7);
-            return "error";
+            map.put("errorcode", 10);
+            return "/info/error";
         } else {
-            map.put("errorcode", 4);
-            return "error";
+            map.put("errorcode", 9);
+            return "/info/error";
         }
     }
 
@@ -98,10 +98,10 @@ public class LoginC {
         int result = userService.forgetPassword(key, str, request, map);
         if (result == 1) {
             map.put("email", str[1]);
-            return "sendSuccess";
+            return "/info/info";
         } else {
-            map.put("errorcode", 6);
-            return "error";
+            map.put("errorcode", 11);
+            return "/info/error";
         }
     }
 
