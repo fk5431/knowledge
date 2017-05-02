@@ -15,10 +15,7 @@ import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.xml.registry.infomodel.User;
-import java.util.Date;
-import java.util.List;
-import java.util.Map;
-import java.util.Random;
+import java.util.*;
 
 /**
  * Created by FK on 2017/2/9.
@@ -29,6 +26,9 @@ public class UserService {
 
     @Autowired
     UserDao userDao;
+
+    private final int SIZE = 10;
+
 
     private Logger logger = LoggerFactory.getLogger(UserService.class);
 
@@ -180,13 +180,36 @@ public class UserService {
         }
     }
 
-    public void selectAllUser(HttpServletRequest request, Map<String, Object> map) {
+    public void selectAllUser(String page_, Map<String, Object> map) {
         try{
-            List<UserBean> userBeans = userDao.selectALL_1();
-            for(UserBean u : userBeans){
+            int count = userDao.count();
+            int page = 1;
+            if(count % SIZE == 0)
+                page = count / SIZE;
+            else
+                page = count / SIZE + CommonConst.ONE_INT;
+            map.put("count", count);
+            map.put("size", SIZE);
+            map.put("page", page);
+            int toPage;
+            if(page_ == null || "".equals(page_)){
+                toPage = 1;
+            }else {
+                toPage = Integer.parseInt(page_);
+            }
+            if(toPage > page){
+                toPage = page;
+            }
+            map.put("pageNow", toPage);
+            int start = (toPage - 1) * SIZE;
+            List<UserBean> list = userDao.selectByStart(start);
+            List<UserBean> userBeans = new ArrayList<>();
+            for(UserBean u : list){
                 u.setPwd(MD5.decodeMD5(u.getPwd()));
+                userBeans.add(u);
             }
             map.put("user", userBeans);
+
         }catch (Exception e){
             e.printStackTrace();
             logger.debug("UserService.selectAllUser  in ]",  e);

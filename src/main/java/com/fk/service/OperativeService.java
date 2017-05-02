@@ -4,6 +4,7 @@ import com.fk.bean.FileBean;
 import com.fk.bean.FtypeBean;
 import com.fk.bean.KtypeBean;
 import com.fk.bean.UserBean;
+import com.fk.dao.FileDao;
 import com.fk.dao.FtypeDao;
 import com.fk.dao.KtypeDao;
 import com.fk.dao.UserDao;
@@ -35,6 +36,9 @@ public class OperativeService {
 
     @Autowired
     KtypeDao ktypeDao;
+
+    @Autowired
+    FileDao fileDao;
 
     private Logger logger = LoggerFactory.getLogger(UserService.class);
 
@@ -133,11 +137,44 @@ public class OperativeService {
             }
 
             String url = "/knowledge/upload/"+filename;
-
+            if(fileBean.getCanTransforms() == 0){
+                transforms(file, fileBean);
+            }else{
+                fileBean.setUrlImage("");
+                fileBean.setUrlTransforms("");
+            }
             fileBean.setUrl(url);
+            fileBean.setUuidname(filename);
+        }else{
             fileBean.setUrlImage("");
             fileBean.setUrlTransforms("");
-            fileBean.setUuidname(filename);
+            fileBean.setUrl("");
+            fileBean.setUuidname("");
+            fileBean.setFname("");
         }
+        //tags
+        String tags = fileBean.getTags();
+        StringBuffer sb = new StringBuffer();
+        boolean flag = false;
+        for(String tag : tags.split(",")){
+            if(flag == false) {
+                sb.append(tag);
+                flag = true;
+            }else {
+                sb.append(CommonConst.SPLITOR);
+                sb.append(tag);
+            }
+        }
+        fileBean.setTags(sb.toString());
+        fileDao.insertSelective(fileBean);
     }
+
+    private void transforms(MultipartFile file, FileBean fileBean) {
+        String suffix = fileBean.getFname().substring(fileBean.getFname().lastIndexOf("."));
+        logger.debug("===================================trasforms, suffix{[]}", suffix);
+        fileBean.setUrlImage("");
+        fileBean.setUrlTransforms("");
+    }
+
+
 }

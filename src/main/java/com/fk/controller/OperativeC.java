@@ -54,7 +54,7 @@ public class OperativeC {
     @RequestMapping("/operative")
     public String operative(HttpServletRequest request, Map<String, Object> map) {
 
-        return "/operative/index";
+        return "/operative/login";
     }
 
     @RequestMapping("/addfile")
@@ -81,9 +81,10 @@ public class OperativeC {
             fileBean.setKtypeid(Integer.parseInt(ktype));
             fileBean.setTags(tags);
             fileBean.setTitle(title);
-            fileBean.setUid(0);
+            fileBean.setUid(-1);
             fileBean.setUploadtime(new Date());
             fileBean.setCanTransforms(Integer.parseInt(can));
+            fileBean.setCount(0);
 
             operativeService.addFile(fileBean, file, map);
 
@@ -207,6 +208,15 @@ public class OperativeC {
 
 
 
+    @RequestMapping("/filetable")
+    public String filetable(){
+
+
+
+
+        return "/operative/filetable";
+    }
+
     @RequestMapping("/userform")
     public String userform(){
 
@@ -224,8 +234,9 @@ public class OperativeC {
     }
     @RequestMapping("/usertable")
     public String usertable(HttpServletRequest request, Map<String, Object> map){
+        String page_ = request.getParameter("page");
 
-        userService.selectAllUser(request, map);
+        userService.selectAllUser(page_, map);
 
         return "/operative/usertable";
     }

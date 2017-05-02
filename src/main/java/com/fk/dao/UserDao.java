@@ -2,6 +2,7 @@ package com.fk.dao;
 
 import com.fk.bean.UserBean;
 
+import javax.xml.registry.infomodel.User;
 import java.util.List;
 
 public interface UserDao {
@@ -26,4 +27,8 @@ public interface UserDao {
     List<UserBean> selectALL_1();
 
     List<UserBean> selectALL_2();
+
+    int count();
+
+    List<UserBean> selectByStart(int start);
 }

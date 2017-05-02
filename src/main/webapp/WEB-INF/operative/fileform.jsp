@@ -103,7 +103,7 @@
                                     <div class="form-group">
                                         <label class="control-label col-md-3 col-sm-3 col-xs-12">能否转换</label>
                                         <div class="col-md-6 col-sm-6 col-xs-12">
-                                            <select class="form-control" name="ftype">
+                                            <select class="form-control" name="can">
                                                 <option value="1" selected>不能</option>
                                                 <option value="0">能</option>
                                             </select>

@@ -16,7 +16,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>用户管理</title>
+    <title>文件管理</title>
 
     <link href="${pageContext.request.contextPath}/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
@@ -35,7 +35,7 @@
             <div class="">
                 <div class="page-title">
                     <div class="title_left">
-                        <h3>用户管理</h3>
+                        <h3>文件管理</h3>
                     </div>
 
                     <div class="title_right">
@@ -56,9 +56,7 @@
                     <div class="col-md-12 col-sm-12 col-xs-12">
                         <div class="x_panel">
                             <div class="x_title">
-                                <h2>用户管理
-                                    <small>Users</small>
-                                </h2>
+                                <h2>类型管理 <small>ktype</small></h2>
                                 <ul class="nav navbar-right panel_toolbox">
                                     <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                                     </li>
@@ -74,38 +72,34 @@
                                     <thead>
                                     <tr>
                                         <th>ID</th>
-                                        <th>姓名</th>
-                                        <th>新姓名</th>
-                                        <th>邮箱</th>
-                                        <th>新邮箱</th>
-                                        <th>密码</th>
-                                        <th>新密码</th>
+                                        <th>标题</th>
+                                        <th>上传用户</th>
+                                        <th>分类</th>
+                                        <th>类型</th>
+                                        <th>标签</th>
+                                        <th>简介</th>
+                                        <th>是否有附件</th>
+                                        <th>时间</th>
                                         <th>修改</th>
+                                        <th>查看</th>
                                         <th>删除</th>
                                     </tr>
                                     </thead>
 
                                     <tbody>
-                                    <c:forEach var="u" items="${user}">
-                                        <form action="${pageContext.request.contextPath}/updateuser" method="get"
-                                              id="user${u.uid}">
-                                            <tr>
-                                                <td>${u.uid}</td>
-                                                <td>${u.uname}</td>
-                                                <td><input type="text" name="name">
-                                                    <input type="text" name="id" hidden value="${u.uid}"/></td>
-                                                <td>${u.uemail}</td>
-                                                <td><input type="text" name="email"></td>
-                                                <td>${u.pwd}</td>
-                                                <td><input type="text" name="pwd"></td>
-                                                <td>
-                                                    <a onclick="document.getElementById('user${u.uid}').submit();return false">修改</a>
-                                                </td>
-                                                <td>
-                                                    <a href="${pageContext.request.contextPath}/deluser?id=${u.uid}">删除</a>
-                                                </td>
-                                            </tr>
-                                        </form>
+                                    <c:forEach var="f" items="${ftype}">
+                                    <form action="${pageContext.request.contextPath}/updateftype" method="post" id="user${f.ftypeid}">
+                                        <tr>
+                                            <td>${f.ftypeid}</td>
+                                            <td>${f.ftypename}</td>
+                                            <td><input type="text" name="name">
+                                                <input type="text" name="id" hidden value="${f.ftypeid}"/></td>
+                                            <td>${f.ftype}</td>
+                                            <td><input type="text" name="type"></td>
+                                            <td><a onclick="document.getElementById('user${f.ftypeid}').submit();return false">修改</a></td>
+                                            <td><a href="${pageContext.request.contextPath}/delftype?id=${f.ftypeid}" >删除</a> </td>
+                                        </tr>
+                                    </form>
                                     </c:forEach>
                                     </tbody>
                                 </table>
@@ -113,26 +107,6 @@
                         </div>
                     </div>
 
-                </div>
-                <div>
-                    <div class="col-sm-7">
-                        <div class="dataTables_paginate paging_simple_numbers" id="datatable-checkbox_paginate">
-                            <ul class="pagination">
-
-                                <li class="paginate_button previous <c:if test="${pageNow == 1}"> disabled</c:if>" id="datatable-checkbox_previous"><a
-                                        href="${pageContext.request.contextPath}/usertable?page=${pageNow-1}" aria-controls="datatable-checkbox" data-dt-idx="0" tabindex="0">Previous</a>
-                                </li>
-                                <c:forEach var="i" begin="1" end="${page}" >
-                                    <li class="paginate_button active"><a href="${pageContext.request.contextPath}/usertable?page=${i}" aria-controls="datatable-checkbox"  data-dt-idx="1" tabindex="0">1</a></li>
-                                </c:forEach>
-
-                                <li class="paginate_button next <c:if test="${pageNow == page}"> disabled</c:if> " id="datatable-checkbox_next">
-                                    <a href="${pageContext.request.contextPath}/usertable?page=${pageNow+1}"
-                                       aria-controls="datatable-checkbox" data-dt-idx="7" tabindex="0">Next</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
