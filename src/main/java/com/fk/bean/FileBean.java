@@ -31,6 +31,8 @@ public class FileBean {
 
     private Integer canTransforms;
 
+    private Integer count;
+
     private String introduction;
 
     public Integer getFid() {
@@ -143,6 +145,14 @@ public class FileBean {
 
     public void setCanTransforms(Integer canTransforms) {
         this.canTransforms = canTransforms;
+    }
+
+    public Integer getCount() {
+        return count;
+    }
+
+    public void setCount(Integer count) {
+        this.count = count;
     }
 
     public String getIntroduction() {

@@ -41,10 +41,10 @@ public class LoginC {
         Preconditions.checkNotNull(password, "password cannot be null");
         String uid = userService.login(name, password, request, map);
         if(!uid.equals("")){
-//            Cookie cookie = new Cookie(CommonConst.LOGIN, CommonConst.YES);
+            Cookie cookie = new Cookie(CommonConst.LOGIN, CommonConst.YES);
             Cookie cookie1 = new Cookie(CommonConst.USERID, uid);
-//            cookie.setMaxAge(-1);
-//            response.addCookie(cookie);
+            cookie.setMaxAge(-1);
+            response.addCookie(cookie);
             response.addCookie(cookie1);
         }
         Object errorcode =  map.get("errorcode");
@@ -110,7 +110,7 @@ public class LoginC {
 
     @RequestMapping(value = "/index")
     public String index(HttpServletRequest request, Map<String, Object> map){
-        int userId = 0;
+        int userId = -1;
         Cookie[] cookies = request.getCookies();
         for(Cookie c : cookies){
             if(c.getName().equals(CommonConst.USERID)){

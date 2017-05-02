@@ -14,5 +14,6 @@
   url_image VARCHAR (255) NOT NULL ,
   ktypeid int(11) NOT NULL ,
   url_transforms VARCHAR(255) NOT NULL ,
-  can_transforms int(2)
+  can_transforms int(2),
+  count int(11) DEFAULT 0
 )DEFAULT CHARSET=utf8;

@@ -132,6 +132,10 @@ public class UserService {
             userIndex(user, map);
         }
 
+    }
+
+    private void userIndex(UserBean user, Map<String, Object> map) {
+
 //        File file = new File("D:\\upload\\intro.csv");
 //        FileWriter fileWritter = new FileWriter(file,false);
 //        BufferedWriter bufferWritter = new BufferedWriter(fileWritter);
@@ -141,11 +145,6 @@ public class UserService {
 //            bufferWritter.newLine();
 //        }
 //        bufferWritter.close();
-    }
-
-    private void userIndex(UserBean user, Map<String, Object> map) {
-        
-        
     }
 
     private void noUser(Map<String, Object> map) {
