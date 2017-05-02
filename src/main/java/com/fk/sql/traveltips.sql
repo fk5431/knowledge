@@ -124,3 +124,6 @@ INSERT INTO traveltips(id, time, place, image, title, context, type, author, lin
             <h3 class="h2">和果子店铺大推荐</h3>
 
             <p>虽然《甜言蜜语》中有许多优质的选择，但是蚂小蜂还是忍不住先要推荐一些和果子店铺给你们。</p>','type','冯凯','line');
+
+
+alter table traveltips modify column context LONGTEXT;
