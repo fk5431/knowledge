@@ -16,4 +16,6 @@ public interface IPhotoService {
     int deleteByPrimaryKey(int i);
 
     int insert(PhotoBean photoBean);
+
+    int update(PhotoBean photoBean);
 }

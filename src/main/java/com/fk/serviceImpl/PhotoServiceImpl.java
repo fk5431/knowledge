@@ -46,4 +46,9 @@ public class PhotoServiceImpl implements IPhotoService{
     public int insert(PhotoBean photoBean) {
         return photoDao.insertSelective(photoBean);
     }
+
+    @Override
+    public int update(PhotoBean photoBean) {
+        return photoDao.updateByPrimaryKey(photoBean);
+    }
 }
