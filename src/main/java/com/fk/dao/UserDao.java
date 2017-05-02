@@ -24,4 +24,6 @@ public interface UserDao {
     UserBean selectByName(String name);
 
     List<UserBean> selectALL_1();
+
+    List<UserBean> selectALL_2();
 }

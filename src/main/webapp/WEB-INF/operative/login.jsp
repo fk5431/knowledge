@@ -21,7 +21,7 @@
     <div class="login_wrapper">
         <div class="animate form login_form">
             <section class="login_content">
-                <form action="${pageContext.request.contextPath}/operative/login" id="myform">
+                <form action="${pageContext.request.contextPath}/operativelogin" id="myform" method="post">
                     <h1>knowledge base</h1>
                     <h1>back-stage management</h1>
                     <div>

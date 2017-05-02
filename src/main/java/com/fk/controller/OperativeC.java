@@ -191,7 +191,7 @@ public class OperativeC {
 
         return "/operative/fileform";
     }
-    @RequestMapping("/operative/login")
+    @RequestMapping("/operativelogin")
     public String login(HttpServletRequest request, HttpServletResponse response, Map<String, Object> map){
         String name = request.getParameter("name");
         String pwd = request.getParameter("pwd");
@@ -296,10 +296,33 @@ public class OperativeC {
         ftypeService.delFtype(Integer.parseInt(id), map);
         return ftypetable(request, map);
     }
-    @RequestMapping("/operative/logout")
-    public String logout(HttpServletRequest request, HttpServletResponse response){
+    @RequestMapping("/operativelogout")
+    public String logout(HttpServletRequest request, HttpServletResponse response, Map<String, Object> map){
         Cookie c = new Cookie(CommonConst.SUPERUSERID, CommonConst.NO);
         response.addCookie(c);
         return "/operative/login";
+    }
+    @RequestMapping("/spuerusertable")
+    public String spuerusertable(HttpServletRequest request, Map<String, Object> map){
+        Cookie[] cookies = request.getCookies();
+        boolean flag = false;
+        for(Cookie c : cookies){
+            if(CommonConst.SUPERUSERID.equals(c.getName())){
+                if(CommonConst.YES.equals(c.getValue())){
+                    flag = true;
+                }
+            }
+        }
+        if(flag == false){
+            map.put(CommonConst.ERRORCODE, 12);
+            return "/info/error";
+        }
+        userService.selectAllSuperUser(request, map);
+        return "/operative/superusertable";
+    }
+    @RequestMapping("/spueruserform")
+    public String spueruserform(HttpServletRequest request, HttpServletResponse response){
+
+        return "/operative/superuserform";
     }
 }

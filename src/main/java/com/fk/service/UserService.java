@@ -32,22 +32,23 @@ public class UserService {
 
     private Logger logger = LoggerFactory.getLogger(UserService.class);
 
-    public void login(String name, String password, HttpServletRequest request, Map<String, Object> map, Cookie c) {
+    public String login(String name, String password, HttpServletRequest request, Map<String, Object> map) {
         try{
             UserBean exists = userDao.selectByName(name);
             if(exists == null){
                 map.put("errorcode", 2);
-                return;
+                return "";
             }
             if(!MD5.decodeMD5(exists.getPwd()).equals(password)){
                 map.put("errorcode", 3);
-                return;
+                return "";
             }
-            c.setValue(String .valueOf(exists.getUid()));
+            return String.valueOf(exists.getUid());
         }catch (Exception e){
             e.printStackTrace();
             logger.debug("UserService.login  in name[{}], password[{}], id[{}]", name, password, e);
         }
+        return "";
     }
 
     public void register(String name, String email, String password, HttpServletRequest request, Map<String, Object> map) {
@@ -168,9 +169,11 @@ public class UserService {
                 return;
             }
             if(exists.getIsmanage() == 2) {
-                Cookie c = new Cookie(CommonConst.SUPERUSERID, CommonConst.YES);
-                c.setMaxAge(-1);
-                response.addCookie(c);
+                Cookie cookie1 = new Cookie(CommonConst.SUPERUSERID, CommonConst.YES);
+                response.addCookie(cookie1);
+            }else{
+                Cookie cookie1 = new Cookie(CommonConst.SUPERUSERID, CommonConst.NO);
+                response.addCookie(cookie1);
             }
         }catch (Exception e){
             e.printStackTrace();
@@ -213,5 +216,18 @@ public class UserService {
 
     public void delUser(int i, Map<String, Object> map) {
         userDao.deleteByPrimaryKey(i);
+    }
+
+    public void selectAllSuperUser(HttpServletRequest request, Map<String, Object> map) {
+        try{
+            List<UserBean> userBeans = userDao.selectALL_2();
+            for(UserBean u : userBeans){
+                u.setPwd(MD5.decodeMD5(u.getPwd()));
+            }
+            map.put("user", userBeans);
+        }catch (Exception e){
+            e.printStackTrace();
+            logger.debug("UserService.selectAllUser  in ]",  e);
+        }
     }
 }

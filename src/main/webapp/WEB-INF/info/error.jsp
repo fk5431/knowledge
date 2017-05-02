@@ -46,6 +46,9 @@
     }else if (errorcode == 10){
         alert("确认链接以发送至邮箱，请登录查看!");
         window.location.href="http://www.hao123.com/mail";
+    }else if (errorcode == 12){
+        alert("你没有权限管理管理员!!");
+        window.history.back(-1);
     }
 </script>
 </body>

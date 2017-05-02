@@ -39,10 +39,13 @@ public class LoginC {
         logger.debug("LoginC.login  in name[{}], password[{}].", name, password);
         Preconditions.checkNotNull(name, "name cannot be null");
         Preconditions.checkNotNull(password, "password cannot be null");
-        Cookie c = new Cookie(CommonConst.USERID, "0");
-        userService.login(name, password, request, map, c);
-        if(c!=null && !c.getValue().equals("0")){
-            response.addCookie(c);
+        String uid = userService.login(name, password, request, map);
+        if(!uid.equals("")){
+//            Cookie cookie = new Cookie(CommonConst.LOGIN, CommonConst.YES);
+            Cookie cookie1 = new Cookie(CommonConst.USERID, uid);
+//            cookie.setMaxAge(-1);
+//            response.addCookie(cookie);
+            response.addCookie(cookie1);
         }
         Object errorcode =  map.get("errorcode");
         if (errorcode != null) {
