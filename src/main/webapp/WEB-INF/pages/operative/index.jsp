@@ -133,13 +133,13 @@
                             %>
                             <span class="current"><%=i%></span>
                             <%} else {%>
-                            <a href="${pageContext.request.contextPath}/operative?page=<%=i%>"><%=i%>
+                            <a href="${pageContext.request.contextPath}/operative/user?page=<%=i%>"><%=i%>
                             </a>
                             <%
                                     }
                                 }
                             %>
-                            <a href="${pageContext.request.contextPath}/operative?page=${pageNow+1}">下一页</a>
+                            <a href="${pageContext.request.contextPath}/operative/user?page=${pageNow+1}">下一页</a>
                         </div>
                     </td>
                 </tr>
