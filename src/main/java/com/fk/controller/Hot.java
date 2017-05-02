@@ -130,6 +130,8 @@ public class Hot {
         map.put("index", "0");
         int id = Integer.parseInt(request.getParameter("id"));
         PhotoBean photoBean = photoService.selectByPrimaryKey(id);
+        photoBean.setCount(photoBean.getCount() + 1);
+        photoService.insert(photoBean);
         String[] imgs = photoBean.getImages().split(CommonConst.SPLITOR);
         map.put("images", imgs);
         map.put("title", photoBean.getTitle());

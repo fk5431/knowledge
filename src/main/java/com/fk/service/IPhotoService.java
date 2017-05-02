@@ -12,4 +12,8 @@ public interface IPhotoService {
     int count();
     List<PhotoBean> selectByStrat(int start);
     PhotoBean selectByPrimaryKey(Integer id);
+
+    int deleteByPrimaryKey(int i);
+
+    int insert(PhotoBean photoBean);
 }

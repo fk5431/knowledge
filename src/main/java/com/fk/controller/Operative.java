@@ -55,6 +55,9 @@ public class Operative {
     @Autowired
     IHistoryService historyService;
 
+    @Autowired
+    IPhotoService photoService;
+
     private static final int SIZE = 10;
     private static final int SIZENEW = 5;
 
@@ -263,6 +266,35 @@ public class Operative {
         return page();
     }
 
+    @RequestMapping("/operative/addphoto")
+    public String addphoto(HttpServletRequest request, Map<String , Object> map){
+        String title = request.getParameter("title");
+        String content = request.getParameter("content");
+
+        String reg = ":8080.*?\"";
+        Pattern pattern = Pattern.compile(reg);
+        Matcher matcher =  pattern.matcher(content);
+        StringBuffer sbcontent = new StringBuffer();
+        Boolean b = false;
+        while(matcher.find()){
+            String g = matcher.group();
+            if(b == false) {
+                sbcontent.append(g.substring(CommonConst.FIVE_INT, g.length() - CommonConst.ONE_INT));
+                b = true;
+            }else{
+                sbcontent.append(CommonConst.SPLITOR);
+                sbcontent.append(g.substring(CommonConst.FIVE_INT, g.length() - CommonConst.ONE_INT));
+            }
+        }
+        PhotoBean photoBean = new PhotoBean();
+        photoBean.setTitle(title);
+        photoBean.setCount(0);
+        photoBean.setImages(sbcontent.toString());
+
+        photoService.insert(photoBean);
+        return photo(request, map);
+    }
+
     @RequestMapping("/operative/addmovie")
     public String addmovie(HttpServletRequest request, @RequestParam("image") MultipartFile file, Map<String , Object> map){
         try {
@@ -418,6 +450,13 @@ public class Operative {
         return index(request, map);
     }
 
+    @RequestMapping("/operative/delphoto")
+    public String delphoto(HttpServletRequest request, Map<String, Object> map){
+        String id = request.getParameter("id");
+        photoService.deleteByPrimaryKey(Integer.parseInt(id));
+        return showphoto(request, map);
+    }
+
     @RequestMapping("/operative/delfilm")
     public String delfilm(HttpServletRequest request, Map<String, Object> map){
         String id = request.getParameter("id");
@@ -448,6 +487,38 @@ public class Operative {
     public String logout(HttpServletRequest request, Map<String, Object> map){
 
         return "/operative/login";
+    }
+    @RequestMapping("/operative/photo")
+    public String photo(HttpServletRequest request, Map<String, Object> map){
+
+        return "/operative/photo";
+    }
+    @RequestMapping("/operative/showphoto")
+    public String showphoto(HttpServletRequest request, Map<String, Object> map){
+        int count = photoService.count();
+        int page = 1;
+        if(count % SIZE == 0)
+            page = count / SIZE;
+        else
+            page = count / SIZE + CommonConst.ONE_INT;
+        map.put("count", count);
+        map.put("size", SIZE);
+        map.put("page", page);
+        String page_ = request.getParameter("page");
+        int toPage;
+        if(page_ == null || "".equals(page_)){
+            toPage = 1;
+        }else {
+            toPage = Integer.parseInt(page_);
+        }
+        if(toPage > page){
+            toPage = page;
+        }
+        map.put("pageNow", toPage);
+        int start = (toPage - 1) * SIZE;
+        List<PhotoBean> list = photoService.selectByStrat(start);
+        map.put("photo", list);
+        return "/operative/showphoto";
     }
 
     @RequestMapping("/500")
