@@ -28,6 +28,19 @@
   <sql id="Blob_Column_List" >
     introduction
   </sql>
+  <select id="selectByStart" resultMap="ResultMapWithBLOBs" parameterType="java.lang.Integer" >
+    select
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from file
+    limit #{start, jdbcType=INTEGER},10
+  </select>
+  <select id="count" resultType="java.lang.Integer">
+    select
+    count(*)
+    from file
+  </select>
   <select id="selectByPrimaryKey" resultMap="ResultMapWithBLOBs" parameterType="java.lang.Integer" >
     select
     <include refid="Base_Column_List" />

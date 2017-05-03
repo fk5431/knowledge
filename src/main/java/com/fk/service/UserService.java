@@ -122,7 +122,7 @@ public class UserService {
 
     public void index(int userId, Map<String, Object> map) {
         UserBean user = null;
-        if(userId != 0){
+        if(userId != -1){
             user = userDao.selectByPrimaryKey(userId);
         }
 

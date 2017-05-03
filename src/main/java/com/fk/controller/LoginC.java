@@ -112,14 +112,15 @@ public class LoginC {
     public String index(HttpServletRequest request, Map<String, Object> map){
         int userId = -1;
         Cookie[] cookies = request.getCookies();
-        for(Cookie c : cookies){
-            if(c.getName().equals(CommonConst.USERID)){
-                userId = Integer.parseInt(c.getValue());
+        if(cookies != null){
+            for(Cookie c : cookies){
+                if(c.getName().equals(CommonConst.USERID)){
+                    userId = Integer.parseInt(c.getValue());
+                }
             }
         }
 
         userService.index(userId, map);
-
 
         return "index";
     }

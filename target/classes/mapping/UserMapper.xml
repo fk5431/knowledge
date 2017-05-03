@@ -11,6 +11,16 @@
   <sql id="Base_Column_List" >
     uid, uname, uemail, pwd, ismanage
   </sql>
+  <select id="selectByStart" resultMap="BaseResultMap" parameterType="java.lang.Integer">
+    select
+    <include refid="Base_Column_List" />
+    from user limit #{start, jdbcType=INTEGER},10
+  </select>
+  <select id="count" resultMap="BaseResultMap" >
+    select
+    count(*)
+    from user
+  </select>
   <select id="selectALL_1" resultMap="BaseResultMap" >
     select
     <include refid="Base_Column_List" />

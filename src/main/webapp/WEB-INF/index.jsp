@@ -22,35 +22,8 @@
 <body>
 <div class="wrap-body">
     <header>
-        <div class="nav-bar">
-            <div class="wrap-nav zerogrid">
-                <div class="row">
-                    <div class="col-1-3">
-                        <div class="wrap-col">
-                            <div class="logo">
-                                <a href="main.jsp"><img src="${pageContext.request.contextPath}/images/logo.png" /></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-2-3">
-                        <div class="wrap-col f-right">
-                            <div id="menu" style="margin-left:2px;margin-top:1px;">
-                                <nav>
-                                    <ul>
-                                        <!-- 导航栏名称改-->
-                                        <li class="active"><a href="main">首页</a></li>
-                                        <li><a href="resources">资源中心</a></li>
-                                        <li><a href="center">个人中心</a></li>
-                                        <li><a href="index.jsp"><img src="${pageContext.request.contextPath}/images/default.jpg"
-                                                                     style="width:35px;margin-top:2px;" title="注销"></a></li>
-                                    </ul>
-                                </nav>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <jsp:include page="head.jsp"></jsp:include>
+
         <div class="wrap-header" style="margin-top: 70px;">
             <h1></h1>
             <div style="margin:0 auto;">

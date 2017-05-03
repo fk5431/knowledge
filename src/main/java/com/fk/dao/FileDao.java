@@ -2,6 +2,8 @@ package com.fk.dao;
 
 import com.fk.bean.FileBean;
 
+import java.util.List;
+
 public interface FileDao {
     int deleteByPrimaryKey(Integer fid);
 
@@ -16,4 +18,8 @@ public interface FileDao {
     int updateByPrimaryKeyWithBLOBs(FileBean record);
 
     int updateByPrimaryKey(FileBean record);
+
+    int count();
+
+    List<FileBean> selectByStart(int start);
 }
