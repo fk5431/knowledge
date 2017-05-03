@@ -710,14 +710,12 @@ button.ui-button::-moz-focus-inner { border: 0px none; padding: 0px; }
 .KB_facetlist.collapsed .KB_facetlist_content { display: none; }
 .KB_facetlist h3 { position: relative; margin: 0px; padding: 0px; border: 0px none; height: 47px; line-height: 47px; background-color: rgb(255, 255, 255); color: rgb(56, 87, 106); font-size: 15px; font-family: "3dsFont",helvetica,arial,sans-serif; font-weight: normal; text-indent: 10px; }
 .KB_facetlist h3:hover { cursor: pointer; background-color: rgb(237, 241, 246); text-decoration: none; }
-.KB_facetlist h3 .icon { display: inline-block; margin-right: 18px; height: 15px; width: 15px; vertical-align: text-top; background-image: url("KB_sprite_collapse_001.png"); background-position: 0px -15px; background-repeat: no-repeat; }
 .KB_facetlist h3 .infos { position: absolute; right: 2px; display: none; font-size: 10px; -moz-user-select: none; }
 .KB_facetlist .KB_facetlist_content { padding-bottom: 4px; background-color: rgb(248, 246, 246); }
 .KB_facetlist .KB_facetlist_content.collapsed { display: none; }
 .KB_facetlist .KB_facetlist_content .category { position: relative; list-style: outside none none; padding-left: 15px; height: 22px; }
 .KB_facetlist .KB_facetlist_content .category:hover { background-color: rgb(216, 214, 214); }
 .KB_facetlist .KB_facetlist_content .category a { overflow: hidden; display: inline-block; width: 210px; height: 22px; color: rgb(102, 128, 144); font-size: 14px; font-family: "3dsFont",helvetica,arial,sans-serif; text-indent: 15px; line-height: 22px; white-space: nowrap; text-overflow: ellipsis; }
-.KB_facetlist .KB_facetlist_content .category a::before { overflow: hidden; content: " "; display: block; float: left; width: 17px; height: 17px; margin-top: 3px; background-image: url("KB_checkbox.png"); background-repeat: no-repeat; }
 .KB_facetlist .KB_facetlist_content .category a:hover { text-decoration: none; }
 .KB_facetlist .KB_facetlist_content .category.refined { background-color: rgb(200, 198, 198); }
 .KB_facetlist .KB_facetlist_content .category.refined a::before { background-position: -17px 0px; }
@@ -725,7 +723,6 @@ button.ui-button::-moz-focus-inner { border: 0px none; padding: 0px; }
 .KB_facetlist .KB_facetlist_content .category .count:hover { overflow: visible; text-overflow: initial; }
 .KB_facetlist .KB_facetlist_content .KB_facetlist_filter { padding: 7px 10px; height: 30px; border-bottom: 1px solid rgb(231, 231, 231); }
 .KB_facetlist .KB_facetlist_content .KB_facetlist_filter::after { content: " "; }
-.KB_facetlist .KB_facetlist_content .KB_facetlist_filter input { display: block; position: relative; box-sizing: border-box; padding: 0px 20px 0px 32px; width: 240px; height: 100%; color: rgb(126, 126, 126); font-size: 15px; font-family: "3dsFont",helvetica,arial,sans-serif; border: medium none; background-color: transparent; background-image: url("KB_lookup.png"); background-position: 5px center; background-repeat: no-repeat; outline-color: rgba(47, 83, 134, 0); transition: outline-color 1s ease 0s, box-shadow 0.5s ease 0s; }
 .KB_facetlist .KB_facetlist_content .KB_facetlist_filter input:hover { outline: 1px solid rgba(47, 83, 134, 0.5); }
 .KB_facetlist .KB_facetlist_content .KB_facetlist_filter input:focus { border: medium none; outline: 1px solid rgb(47, 83, 134); box-shadow: 0px 0px 3px 2px rgb(182, 200, 210); }
 .KB_facetlist .KB_facetlist_content .KB_facetlist_filter .exa-input-delete { right: 10px; color: rgb(47, 84, 134); padding: 0px 2px; line-height: 45px; font-size: 19px; font-weight: bold; -moz-user-select: none; }
@@ -772,8 +769,6 @@ button.ui-button::-moz-focus-inner { border: 0px none; padding: 0px; }
 .mashup .navigationHeader .headerSort .ordered:hover, .mashup .navigationHeader .headerSort .ordered_asc:hover, .mashup .navigationHeader .headerSort .ordered_desc:hover { background-color: white; }
 .mashup .navigationHeader .headerSort .ordered a, .mashup .navigationHeader .headerSort .ordered_asc a, .mashup .navigationHeader .headerSort .ordered_desc a { color: black; text-decoration: none; }
 .mashup .navigationHeader .headerSort .ordered a:hover, .mashup .navigationHeader .headerSort .ordered_asc a:hover, .mashup .navigationHeader .headerSort .ordered_desc a:hover { color: black; }
-.mashup .navigationHeader .headerSort .ordered_asc { background-image: url("arr-up.png"); padding-left: 15px; }
-.mashup .navigationHeader .headerSort .ordered_desc { background-image: url("arr-down.png"); padding-left: 15px; }
 }
 /* ::::: https://kb.dsxclient.3ds.com/onesearch/resources/widgets/displayHits/css/style.less (@media screen, print) ::::: */
 
@@ -781,11 +776,9 @@ button.ui-button::-moz-focus-inner { border: 0px none; padding: 0px; }
 .widget-drop-shadow { box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.3); }
 .mashup .displayHits { text-align: left; }
 .mashup .displayHits li.hit { vertical-align: top; }
-.mashup .displayHits li.hit h3 { margin: 0px; border-width: 1px 1px 0px; border-style: solid solid none; border-color: rgb(204, 204, 204) rgb(204, 204, 204) -moz-use-text-color; -moz-border-top-colors: none; -moz-border-right-colors: none; -moz-border-bottom-colors: none; -moz-border-left-colors: none; border-image: none; line-height: 25px; font-weight: normal; min-height: 25px; background-color: rgb(247, 247, 247); background-image: -moz-linear-gradient(center top , rgb(247, 247, 247), rgb(233, 233, 233)); padding-left: 5px; word-break: break-all; word-wrap: break-word; }
 .mashup .displayHits li.hit h3 .icon { float: left; margin-right: 5px; margin-top: 5px; width: 15px; }
 .mashup .displayHits li.hit h3 .header-left { float: none; padding: 0px; border: 0px none; }
 .mashup .displayHits li.hit h3 span { float: right; padding-left: 9px; padding-right: 9px; border-left: 1px solid rgb(204, 204, 204); border-bottom: 1px solid rgb(204, 204, 204); cursor: pointer; }
-.mashup .displayHits li.hit h3 span:hover { background-color: rgb(233, 233, 233); background-image: -moz-linear-gradient(center top , rgb(233, 233, 233), rgb(247, 247, 247)); text-decoration: underline; }
 .mashup .displayHits li.hit h3 span a { font-weight: normal; color: rgb(51, 51, 51); }
 .mashup .displayHits li.hit div.hitInfo { background: rgb(255, 255, 255) none repeat scroll 0% 0%; border: 1px solid rgb(204, 204, 204); padding: 10px; margin: 0px 0px 5px; }
 .mashup .displayHits li.hit div.hitInfo .refines-separator { color: rgb(0, 0, 0); font-size: 11px; font-weight: bold; }
