@@ -20,112 +20,73 @@
     <base href="<%=basePath%>">
 
     <title>资源中心</title>
-    <script type="text/javascript"
-            src="${pageContext.request.contextPath }/js/resource/jquery-1.7.2.min.js"
-            charset="utf-8"></script>
-    <script type="text/javascript"
-            src="${pageContext.request.contextPath }/js/resource/buildUrl.js"
-            charset="utf-8"></script>
-    <script type="text/javascript"
-            src="${pageContext.request.contextPath }/js/resource/oop.js"
-            charset="utf-8"></script>
-    <script type="text/javascript"
-            src="${pageContext.request.contextPath }/js/resource/KB_overlay.js"
-            charset="utf-8"></script>
-    <link rel="stylesheet" type="text/css"
-          href="${pageContext.request.contextPath }/css/resource/index.css"
-          media="all" />
-    <link rel="stylesheet" type="text/css"
-          href="${pageContext.request.contextPath }/css/resource/page.css"
-          media="all" />
+
+    <link rel="stylesheet" href="${pageContext.request.contextPath }/css/resource/index.css"  />
+    <link rel="stylesheet"  href="${pageContext.request.contextPath }/css/resource/page.css"  />
+    <link href="${pageContext.request.contextPath}/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/index_style.css">
+
 
 </head>
 
 <body id="body" class="mashup mashup-style web modern gecko firefox theme_enterprise">
 <header>
     <jsp:include page="head.jsp"></jsp:include>
-</header>
-<div  style="width: 1340px;margin:0 auto;">
-    <div id="mainWrapper" style="width: 100%;">
-        <div class="table-layout-wrapper pageLayout">
-            <table class="table-layout" style="width: 100%;">
-                <colgroup>
-                    <col width="100%" />
-                </colgroup>
-                <tbody>
-                <tr id="row_0" class="row">
-                    <td id="KB_search_top" colspan="1" rowspan="1" class="cell"
-                        align="center" valign="top">
-                        <div class="row-wrapper">
-                            <div id="KB_header" class="wuid WTCjTYJa WTCjTYJa_0_search">
-                                <h1>资源中心 resource center</h1>
+    <div class="row-wrapper">
+        <div id="KB_header" class="wuid WTCjTYJa WTCjTYJa_0_search">
+            <h1>资源中心 resource center</h1>
+        </div>
+        <div id="KB_searchbar"
+             class="wuid 9CCHnuD6 9CCHnuD6_0_search searchForm">
+            <form class="selected" method="get"
+                  action="search_text">
+                <table class="searchWidget" border="0" cellpadding="0"
+                       cellspacing="0">
+                    <tbody>
+                    <tr>
+                        <td>
+                            <div id="KB_pleaselogin">
+                                <span style="font-family: 楷体;">搜索关键字</span> <br />
+                                search with keyword
                             </div>
-                            <div id="KB_searchbar"
-                                 class="wuid 9CCHnuD6 9CCHnuD6_0_search searchForm">
-                                <form class="selected" method="get"
-                                      action="search_text">
-                                    <table class="searchWidget" border="0" cellpadding="0"
-                                           cellspacing="0">
-                                        <tbody>
-                                        <tr>
-                                            <td>
-                                                <div id="KB_pleaselogin">
-                                                    <span style="font-family: 楷体;">搜索关键字</span> <br />
-                                                    search with keyword
-                                                </div>
-                                                <div class="searchFormContent" style="display: table;">
-                                                    <div class="KB_searchInput_row"
-                                                         style="display: table-row;">
-                                                        <div style="display: table-cell; vertical-align: top;">
-                                                            <div class="KB_searchInput_wrapper">
-                                                                <input autocomplete="off" name="searchText" value=""
-                                                                       class="searchInput" placeholder="请输入查询内容" type="text" />
-                                                                <span style="display: none;" class="clearsearch"></span>
-                                                            </div>
-                                                        </div>
-                                                        <div style="display: table-cell;" class="searchButton">
-                                                            <input value="Search" type="submit" />
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <div id="KB_toolbox">
-                                                    <div class="advancedsearch">
-                                                        <div  style="margin-top:8px;"><a class="advancedSearchLink">高级搜索 </a></div>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        </tbody>
-                                    </table>
-                                </form>
-                                <div class="advancedSearchFormContent" style=" overflow-y:scroll;">
-                                    <div style="margin-left:180px;">
-                                        <iframe src="${pageContext.request.contextPath }/resource/index.jsp" width="797" height="500"
-                                                frameborder="0" scrolling="no"> </iframe>
+                            <div class="searchFormContent" style="display: table;">
+                                <div class="KB_searchInput_row"
+                                     style="display: table-row;">
+                                    <div style="display: table-cell; vertical-align: top;">
+                                        <div class="KB_searchInput_wrapper">
+                                            <input autocomplete="off" name="searchText" value=""
+                                                   class="searchInput" placeholder="请输入查询内容" type="text" />
+                                            <span style="display: none;" class="clearsearch"></span>
+                                        </div>
                                     </div>
-                                    <div>
-                                        <table>
-                                            <c:forEach items="${sql }" var="s" >
-                                                <tr>
-                                                    <td> <a href="${pageContext.request.contextPath }/search_save?search=${s.id}">${s.sql }</a></td>
-                                                </tr>
-                                            </c:forEach>
-                                        </table>
+                                    <div style="display: table-cell;" class="searchButton">
+                                        <input value="Search" type="submit" />
                                     </div>
                                 </div>
                             </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div id="KB_toolbox">
+                                <div class="advancedsearch">
+                                    <div  style="margin-top:8px;"><a class="advancedSearchLink">高级搜索 </a></div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </form>
 
-                        </div>
-                    </td>
-                </tr>
-                </tbody>
-            </table>
+        </div>
+
+    </div>
+</header>
+<div  style="margin:0 auto;">
+    <div id="mainWrapper" style="width: 100%;">
+        <div class="table-layout-wrapper pageLayout">
             <table class="table-layout" style="width: 100%;">
-
                 <tbody>
                 <tr id="KB_search_wrapper" class="row">
                     <td id="KB_search_left" colspan="1" rowspan="1" class="cell"
@@ -219,7 +180,6 @@
                                         </c:if>
                                     </c:if>
                                 </c:forEach>
-
 
 									<a href="${pageContext.request.contextPath }/resource?page=${pageNow+1 }" data-page="907" class="btn btn-xs btn-default">&gt;</a>
 									<a href="${pageContext.request.contextPath }/resource?page=${page }" data-page="907" class="btn btn-xs btn-default">末页</a>

@@ -11,26 +11,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="11669da5-9530-45d4-b1a5-63fcb18bf569" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/bean/FileReturnBean.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/controller/Resource.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/service/ResourceService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/head.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resource.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/css/resource/index.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/css/resource/page.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/js/resource/KB_overlay.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/js/resource/buildUrl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/js/resource/jquery-1.7.2.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/js/resource/oop.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/center.jsp" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/fk/dao/UserDao.class" afterPath="$PROJECT_DIR$/target/classes/com/fk/dao/UserDao.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/images/KB_search_submit.png" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/js/operative/bootstrap.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/js/operative/custom.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/js/operative/jquery.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/js/operative/switchery.min.js" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/fk/controller/LoginC.class" afterPath="$PROJECT_DIR$/target/classes/com/fk/controller/LoginC.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/fk/controller/LoginC.java" afterPath="$PROJECT_DIR$/src/main/java/com/fk/controller/LoginC.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/fk/dao/FileDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/fk/dao/FileDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/fk/service/UserService.java" afterPath="$PROJECT_DIR$/src/main/java/com/fk/service/UserService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mapping/FileMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapping/FileMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/index.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/index.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/mapping/UserMapper.xml" afterPath="$PROJECT_DIR$/target/classes/mapping/UserMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resource.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resource.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/css/resource/index.css" afterPath="$PROJECT_DIR$/src/main/webapp/css/resource/index.css" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -61,9 +50,11 @@
       <file leaf-file-name="resource.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/resource.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="434">
-              <caret line="216" column="63" lean-forward="false" selection-start-line="216" selection-start-column="63" selection-end-line="216" selection-end-column="63" />
-              <folding />
+            <state relative-caret-position="164">
+              <caret line="38" column="30" lean-forward="false" selection-start-line="38" selection-start-column="30" selection-end-line="38" selection-end-column="30" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -71,7 +62,7 @@
       <file leaf-file-name="ResourceService.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/fk/service/ResourceService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="46">
+            <state relative-caret-position="141">
               <caret line="52" column="32" lean-forward="false" selection-start-line="52" selection-start-column="28" selection-end-line="52" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -95,7 +86,7 @@
       <file leaf-file-name="Resource.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/fk/controller/Resource.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="356">
+            <state relative-caret-position="357">
               <caret line="23" column="30" lean-forward="false" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -210,7 +201,6 @@
         <option value="$PROJECT_DIR$/src/main/resources/mapping/UserMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/fk/dao/UserDao.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/operative/usertable.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/index.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/center.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/fk/controller/Center.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/fk/service/ResourceServer.java" />
@@ -222,8 +212,9 @@
         <option value="$PROJECT_DIR$/src/main/java/com/fk/service/UserService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/fk/controller/LoginC.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/fk/bean/FileReturnBean.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/resource.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/fk/service/ResourceService.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/index.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/resource.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/css/resource/index.css" />
       </list>
     </option>
@@ -434,7 +425,33 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="operative" />
+              <option name="myItemId" value="login" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="knowledge" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="knowledge" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="images" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -661,18 +678,18 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/webapp/js" />
       <recent name="$PROJECT_DIR$/src/main/webapp/css/operative" />
       <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF/operative" />
       <recent name="$PROJECT_DIR$/src/main/webapp/js/operative" />
       <recent name="$PROJECT_DIR$/src/main/webapp" />
-      <recent name="$PROJECT_DIR$/src/main/webapp/js/login" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/webapp/images" />
       <recent name="$PROJECT_DIR$/src/main/webapp/css/resource" />
       <recent name="$PROJECT_DIR$/src/main/webapp/js/resource" />
       <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF/operative" />
       <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF" />
-      <recent name="$PROJECT_DIR$/src/main/webapp/images" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.fk.bean" />
@@ -1370,7 +1387,7 @@
       <workItem from="1493706038793" duration="4604000" />
       <workItem from="1493710719732" duration="527000" />
       <workItem from="1493711266132" duration="7173000" />
-      <workItem from="1493773888837" duration="12108000" />
+      <workItem from="1493773888837" duration="14239000" />
     </task>
     <task id="LOCAL-00001" summary="ssm  success">
       <created>1486712078887</created>
@@ -1582,15 +1599,22 @@
       <option name="project" value="LOCAL" />
       <updated>1493719717850</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="资源页面">
+      <created>1493793688358</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1493793688358</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="186081000" />
+    <option name="totallyTimeSpent" value="188212000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1855" height="1056" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1606,7 +1630,7 @@
       <window_info id="JSF" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21085595" sideWeight="0.49806523" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1920668" sideWeight="0.49806523" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2348643" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -1617,7 +1641,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2807933" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32881" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15201768" sideWeight="0.49435028" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15201768" sideWeight="0.49435028" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20121615" sideWeight="0.50564975" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
@@ -1653,7 +1677,8 @@
     <MESSAGE value="密码找回" />
     <MESSAGE value="houtai superuser session" />
     <MESSAGE value="user" />
-    <option name="LAST_COMMIT_MESSAGE" value="user" />
+    <MESSAGE value="资源页面" />
+    <option name="LAST_COMMIT_MESSAGE" value="资源页面" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1701,13 +1726,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fk/bean/FtypeBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="32" column="1" lean-forward="false" selection-start-line="32" selection-start-column="1" selection-end-line="32" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/fk/sql/ktype.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
@@ -1978,19 +1996,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="29" column="14" lean-forward="false" selection-start-line="29" selection-start-column="14" selection-end-line="29" selection-end-column="14" />
-          <folding>
-            <marker date="1493775574533" expanded="true" signature="350:14503" ph="..." />
-            <marker date="1493775574533" expanded="true" signature="653:14495" ph="..." />
-            <marker date="1493775574533" expanded="true" signature="677:14488" ph="..." />
-            <marker date="1493775574533" expanded="true" signature="690:2188" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/fk/service/FtypeService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="486">
@@ -2028,7 +2033,7 @@
         <state relative-caret-position="378">
           <caret line="21" column="13" lean-forward="false" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="13" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -2107,7 +2112,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/fk/controller/Resource.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="356">
+        <state relative-caret-position="357">
           <caret line="23" column="30" lean-forward="false" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -2115,25 +2120,43 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/resource.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="434">
-          <caret line="216" column="63" lean-forward="false" selection-start-line="216" selection-start-column="63" selection-end-line="216" selection-end-column="63" />
+        <state relative-caret-position="324">
+          <caret line="18" column="0" lean-forward="true" selection-start-line="16" selection-start-column="3" selection-end-line="18" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/resource/page.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-220">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/css/resource/index.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="233">
-          <caret line="493" column="34" lean-forward="false" selection-start-line="493" selection-start-column="34" selection-end-line="493" selection-end-column="34" />
+        <state relative-caret-position="361">
+          <caret line="665" column="22" lean-forward="false" selection-start-line="665" selection-start-column="22" selection-end-line="665" selection-end-column="22" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/resource.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="38" column="30" lean-forward="false" selection-start-line="38" selection-start-column="30" selection-end-line="38" selection-end-column="30" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/fk/service/ResourceService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
+        <state relative-caret-position="141">
           <caret line="52" column="32" lean-forward="false" selection-start-line="52" selection-start-column="28" selection-end-line="52" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
