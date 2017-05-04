@@ -5808,8 +5808,9 @@
     }
 
     #container {
-        max-width: 1020px;
-        min-width: 1020px;
+        width: 767px;
+        height: 236px;
+        margin: 0 auto;
     }
 
     #searchResultsContainer {
@@ -5821,7 +5822,7 @@
         margin: 0px;
         white-space: nowrap;
         float: left;
-        width: 797px;
+        width: 767px;
         min-height: 0px;
     }
 
@@ -6045,9 +6046,9 @@
 
     #searchformtabs LI A.here:link, #searchformtabs LI A.here:visited {
         background: rgb(239, 239, 239) none repeat scroll 0% 0%;
-        border-left: 1px solid rgb(171, 171, 171);
-        border-top: 1px solid rgb(171, 171, 171);
-        border-right: 1px solid rgb(171, 171, 171);
+        /*border-left: 1px solid rgb(171, 171, 171);*/
+        /*border-top: 1px solid rgb(171, 171, 171);*/
+        /*border-right: 1px solid rgb(171, 171, 171);*/
         font-weight: bold;
         font-size: 16px;
         position: relative;

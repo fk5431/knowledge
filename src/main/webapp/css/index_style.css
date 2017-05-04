@@ -937,14 +937,6 @@ textarea {display:block;width:90%;height:200px; border-radius:4px;-webkit-border
 #ff .sendButton:hover {opacity: 0.8;}
 
 */
-body {
-    font-family: "Helvetica Neue", Helvetica, Microsoft Yahei,
-    Hiragino Sans GB, WenQuanYi Micro Hei, sans-serif;
-    word-wrap: break-word;
-    background-color: black;
-    word-wrap: break-word;
-    font-size: 14px;
-}
 
 .doctypeUl {
     margin-left: -30px;
