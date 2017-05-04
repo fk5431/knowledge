@@ -20,7 +20,7 @@ public class StorageManager {
     public static State saveBinaryFile(byte[] data, String path) {
         File file = new File(path);
         State state = valid(file);
-        if(!state.isSuccess()) {
+        if (!state.isSuccess()) {
             return state;
         } else {
             try {
@@ -34,7 +34,7 @@ public class StorageManager {
             }
 
             BaseState state1 = new BaseState(true, file.getAbsolutePath());
-            state1.putInfo("size", (long)data.length);
+            state1.putInfo("size", (long) data.length);
             state1.putInfo("title", file.getName());
             return state1;
         }
@@ -51,18 +51,18 @@ public class StorageManager {
             boolean count = false;
 
             int count1;
-            while((count1 = bis.read(dataBuf)) != -1) {
+            while ((count1 = bis.read(dataBuf)) != -1) {
                 bos.write(dataBuf, 0, count1);
             }
 
             bos.flush();
             bos.close();
-            if(tmpFile.length() > maxSize) {
+            if (tmpFile.length() > maxSize) {
                 tmpFile.delete();
                 return new BaseState(false, 1);
             } else {
                 state = saveTmpFile(tmpFile, path);
-                if(!state.isSuccess()) {
+                if (!state.isSuccess()) {
                     tmpFile.delete();
                 }
 
@@ -85,14 +85,14 @@ public class StorageManager {
             boolean count = false;
 
             int count1;
-            while((count1 = bis.read(dataBuf)) != -1) {
+            while ((count1 = bis.read(dataBuf)) != -1) {
                 bos.write(dataBuf, 0, count1);
             }
 
             bos.flush();
             bos.close();
             state = saveTmpFile(tmpFile, path);
-            if(!state.isSuccess()) {
+            if (!state.isSuccess()) {
                 tmpFile.delete();
             }
 
@@ -112,7 +112,7 @@ public class StorageManager {
     private static State saveTmpFile(File tmpFile, String path) {
         BaseState state = null;
         File targetFile = new File(path);
-        if(targetFile.canWrite()) {
+        if (targetFile.canWrite()) {
             return new BaseState(false, 2);
         } else {
             try {
@@ -131,6 +131,6 @@ public class StorageManager {
 
     private static State valid(File file) {
         File parentPath = file.getParentFile();
-        return !parentPath.exists() && !parentPath.mkdirs()?new BaseState(false, 3):(!parentPath.canWrite()?new BaseState(false, 2):new BaseState(true));
+        return !parentPath.exists() && !parentPath.mkdirs() ? new BaseState(false, 3) : (!parentPath.canWrite() ? new BaseState(false, 2) : new BaseState(true));
     }
 }

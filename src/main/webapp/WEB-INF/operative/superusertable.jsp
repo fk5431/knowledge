@@ -56,7 +56,9 @@
                     <div class="col-md-12 col-sm-12 col-xs-12">
                         <div class="x_panel">
                             <div class="x_title">
-                                <h2>管理管理员信息 <small>Users</small></h2>
+                                <h2>管理管理员信息
+                                    <small>Users</small>
+                                </h2>
                                 <ul class="nav navbar-right panel_toolbox">
                                     <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                                     </li>
@@ -85,20 +87,25 @@
 
                                     <tbody>
                                     <c:forEach var="u" items="${user}">
-                                    <form action="${pageContext.request.contextPath}/updateuser" method="get" id="user${u.uid}">
-                                        <tr>
-                                            <td>${u.uid}</td>
-                                            <td>${u.uname}</td>
-                                            <td><input type="text" name="name">
-                                                <input type="text" name="id" hidden value="${u.uid}"/></td>
-                                            <td>${u.uemail}</td>
-                                            <td><input type="text" name="email"></td>
-                                            <td>${u.pwd}</td>
-                                            <td><input type="text" name="pwd"></td>
-                                            <td><a onclick="document.getElementById('user${u.uid}').submit();return false">修改</a></td>
-                                            <td><a href="${pageContext.request.contextPath}/deluser?id=${u.uid}">删除</a> </td>
-                                        </tr>
-                                    </form>
+                                        <form action="${pageContext.request.contextPath}/updateuser" method="get"
+                                              id="user${u.uid}">
+                                            <tr>
+                                                <td>${u.uid}</td>
+                                                <td>${u.uname}</td>
+                                                <td><input type="text" name="name">
+                                                    <input type="text" name="id" hidden value="${u.uid}"/></td>
+                                                <td>${u.uemail}</td>
+                                                <td><input type="text" name="email"></td>
+                                                <td>${u.pwd}</td>
+                                                <td><input type="text" name="pwd"></td>
+                                                <td>
+                                                    <a onclick="document.getElementById('user${u.uid}').submit();return false">修改</a>
+                                                </td>
+                                                <td>
+                                                    <a href="${pageContext.request.contextPath}/deluser?id=${u.uid}">删除</a>
+                                                </td>
+                                            </tr>
+                                        </form>
                                     </c:forEach>
                                     </tbody>
                                 </table>

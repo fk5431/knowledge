@@ -25,14 +25,13 @@
                     <h1>knowledge base</h1>
                     <h1>back-stage management</h1>
                     <div>
-                        <input type="text" class="form-control" placeholder="Username" required="" name="name" />
+                        <input type="text" class="form-control" placeholder="Username" required="" name="name"/>
                     </div>
                     <div>
                         <input type="password" class="form-control" placeholder="Password" required="" name="pwd"/>
                     </div>
                     <script>
-                        function submit()
-                        {
+                        function submit() {
                             document.getElementById("myform").submit();
                         }
                     </script>
@@ -48,7 +47,7 @@
                         </p>
 
                         <div class="clearfix"></div>
-                        <br />
+                        <br/>
 
                         <div>
                             <h1><i class="fa fa-paw"></i> knowledge base</h1>

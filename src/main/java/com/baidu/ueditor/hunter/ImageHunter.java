@@ -29,12 +29,12 @@ public class ImageHunter {
     private List<String> filters = null;
 
     public ImageHunter(Map<String, Object> conf) {
-        this.filename = (String)conf.get("filename");
-        this.savePath = (String)conf.get("savePath");
-        this.rootPath = (String)conf.get("rootPath");
-        this.maxSize = ((Long)conf.get("maxSize")).longValue();
-        this.allowTypes = Arrays.asList((String[])conf.get("allowFiles"));
-        this.filters = Arrays.asList((String[])conf.get("filter"));
+        this.filename = (String) conf.get("filename");
+        this.savePath = (String) conf.get("savePath");
+        this.rootPath = (String) conf.get("rootPath");
+        this.maxSize = ((Long) conf.get("maxSize")).longValue();
+        this.allowTypes = Arrays.asList((String[]) conf.get("allowFiles"));
+        this.filters = Arrays.asList((String[]) conf.get("filter"));
     }
 
     public State capture(String[] list) {
@@ -42,7 +42,7 @@ public class ImageHunter {
         String[] var6 = list;
         int var5 = list.length;
 
-        for(int var4 = 0; var4 < var5; ++var4) {
+        for (int var4 = 0; var4 < var5; ++var4) {
             String source = var6[var4];
             state.addState(this.captureRemoteData(source));
         }
@@ -57,25 +57,25 @@ public class ImageHunter {
 
         try {
             url = new URL(urlStr);
-            if(!this.validHost(url.getHost())) {
+            if (!this.validHost(url.getHost())) {
                 return new BaseState(false, 201);
             } else {
-                connection = (HttpURLConnection)url.openConnection();
+                connection = (HttpURLConnection) url.openConnection();
                 connection.setInstanceFollowRedirects(true);
                 connection.setUseCaches(true);
-                if(!this.validContentState(connection.getResponseCode())) {
+                if (!this.validContentState(connection.getResponseCode())) {
                     return new BaseState(false, 202);
                 } else {
                     suffix = MIMEType.getSuffix(connection.getContentType());
-                    if(!this.validFileType(suffix)) {
+                    if (!this.validFileType(suffix)) {
                         return new BaseState(false, 8);
-                    } else if(!this.validFileSize(connection.getContentLength())) {
+                    } else if (!this.validFileSize(connection.getContentLength())) {
                         return new BaseState(false, 1);
                     } else {
                         String e = this.getPath(this.savePath, this.filename, suffix);
                         String physicalPath = this.rootPath + e;
                         State state = StorageManager.saveFileByInputStream(connection.getInputStream(), physicalPath);
-                        if(state.isSuccess()) {
+                        if (state.isSuccess()) {
                             state.putInfo("url", PathFormat.format(e));
                             state.putInfo("source", urlStr);
                         }
@@ -96,7 +96,7 @@ public class ImageHunter {
     private boolean validHost(String hostname) {
         try {
             InetAddress e = InetAddress.getByName(hostname);
-            if(e.isSiteLocalAddress()) {
+            if (e.isSiteLocalAddress()) {
                 return false;
             }
         } catch (UnknownHostException var3) {
@@ -115,6 +115,6 @@ public class ImageHunter {
     }
 
     private boolean validFileSize(int size) {
-        return (long)size < this.maxSize;
+        return (long) size < this.maxSize;
     }
 }

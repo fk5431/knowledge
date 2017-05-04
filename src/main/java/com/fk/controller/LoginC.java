@@ -40,14 +40,14 @@ public class LoginC {
         Preconditions.checkNotNull(name, "name cannot be null");
         Preconditions.checkNotNull(password, "password cannot be null");
         String uid = userService.login(name, password, request, map);
-        if(!uid.equals("")){
+        if (!uid.equals("")) {
             Cookie cookie = new Cookie(CommonConst.LOGIN, CommonConst.YES);
             Cookie cookie1 = new Cookie(CommonConst.USERID, uid);
             cookie.setMaxAge(-1);
             response.addCookie(cookie);
             response.addCookie(cookie1);
         }
-        Object errorcode =  map.get("errorcode");
+        Object errorcode = map.get("errorcode");
         if (errorcode != null) {
             return "/info/error";
         }
@@ -64,8 +64,8 @@ public class LoginC {
         Preconditions.checkNotNull(email, "email cannot be null");
         Preconditions.checkNotNull(password, "password cannot be null");
         userService.register(name, email, password, request, map);
-        Object errorcode =  map.get("errorcode");
-        if (errorcode != null ) {
+        Object errorcode = map.get("errorcode");
+        if (errorcode != null) {
             return "/info/error";
         }
         return "login";
@@ -109,12 +109,12 @@ public class LoginC {
     }
 
     @RequestMapping(value = "/index")
-    public String index(HttpServletRequest request, Map<String, Object> map){
+    public String index(HttpServletRequest request, Map<String, Object> map) {
         int userId = -1;
         Cookie[] cookies = request.getCookies();
-        if(cookies != null){
-            for(Cookie c : cookies){
-                if(c.getName().equals(CommonConst.USERID)){
+        if (cookies != null) {
+            for (Cookie c : cookies) {
+                if (c.getName().equals(CommonConst.USERID)) {
                     userId = Integer.parseInt(c.getValue());
                 }
             }
@@ -124,8 +124,9 @@ public class LoginC {
 
         return "index";
     }
+
     @RequestMapping(value = "/userlogin")
-    public String userlogin(HttpServletRequest request, Map<String, Object> map){
+    public String userlogin(HttpServletRequest request, Map<String, Object> map) {
 
 
         return "login";

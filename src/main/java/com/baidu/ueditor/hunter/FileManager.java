@@ -23,31 +23,31 @@ public class FileManager {
     private int count = 0;
 
     public FileManager(Map<String, Object> conf) {
-        this.rootPath = (String)conf.get("rootPath");
-        this.dir = this.rootPath + (String)conf.get("dir");
+        this.rootPath = (String) conf.get("rootPath");
+        this.dir = this.rootPath + (String) conf.get("dir");
         this.allowFiles = this.getAllowFiles(conf.get("allowFiles"));
-        this.count = ((Integer)conf.get("count")).intValue();
+        this.count = ((Integer) conf.get("count")).intValue();
     }
 
     public State listFile(int index) {
         File dir = new File(this.dir);
         Object state = null;
-        if(!dir.exists()) {
+        if (!dir.exists()) {
             return new BaseState(false, 302);
-        } else if(!dir.isDirectory()) {
+        } else if (!dir.isDirectory()) {
             return new BaseState(false, 301);
         } else {
             Collection list = FileUtils.listFiles(dir, this.allowFiles, true);
-            if(index >= 0 && index <= list.size()) {
+            if (index >= 0 && index <= list.size()) {
                 Object[] fileList = Arrays.copyOfRange(list.toArray(), index, index + this.count);
                 state = this.getState(fileList);
             } else {
                 state = new MultiState(true);
             }
 
-            ((State)state).putInfo("start", (long)index);
-            ((State)state).putInfo("total", (long)list.size());
-            return (State)state;
+            ((State) state).putInfo("start", (long) index);
+            ((State) state).putInfo("total", (long) list.size());
+            return (State) state;
         }
     }
 
@@ -58,13 +58,13 @@ public class FileManager {
         Object[] var8 = files;
         int var7 = files.length;
 
-        for(int var6 = 0; var6 < var7; ++var6) {
+        for (int var6 = 0; var6 < var7; ++var6) {
             Object obj = var8[var6];
-            if(obj == null) {
+            if (obj == null) {
                 break;
             }
 
-            file = (File)obj;
+            file = (File) obj;
             fileState = new BaseState(true);
             fileState.putInfo("url", PathFormat.format(this.getPath(file)));
             state.addState(fileState);
@@ -81,13 +81,13 @@ public class FileManager {
     private String[] getAllowFiles(Object fileExt) {
         String[] exts = null;
         String ext = null;
-        if(fileExt == null) {
+        if (fileExt == null) {
             return new String[0];
         } else {
-            exts = (String[])fileExt;
+            exts = (String[]) fileExt;
             int i = 0;
 
-            for(int len = exts.length; i < len; ++i) {
+            for (int len = exts.length; i < len; ++i) {
                 ext = exts[i];
                 exts[i] = ext.replace(".", "");
             }

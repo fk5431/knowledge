@@ -29,40 +29,40 @@ public class BinaryUploader {
     public static final State save(HttpServletRequest request, Map<String, Object> conf) {
         FileItemStream fileStream = null;
         boolean isAjaxUpload = request.getHeader("X_Requested_With") != null;
-        if(!ServletFileUpload.isMultipartContent(request)) {
+        if (!ServletFileUpload.isMultipartContent(request)) {
             return new BaseState(false, 5);
         } else {
             ServletFileUpload upload = new ServletFileUpload(new DiskFileItemFactory());
-            if(isAjaxUpload) {
+            if (isAjaxUpload) {
                 upload.setHeaderEncoding("UTF-8");
             }
 
             try {
-                for(FileItemIterator e = upload.getItemIterator(request); e.hasNext(); fileStream = null) {
+                for (FileItemIterator e = upload.getItemIterator(request); e.hasNext(); fileStream = null) {
                     fileStream = e.next();
-                    if(!fileStream.isFormField()) {
+                    if (!fileStream.isFormField()) {
                         break;
                     }
                 }
 
-                if(fileStream == null) {
+                if (fileStream == null) {
                     return new BaseState(false, 7);
                 } else {
-                    String savePath = (String)conf.get("savePath");
+                    String savePath = (String) conf.get("savePath");
                     String originFileName = fileStream.getName();
                     String suffix = FileType.getSuffixByFilename(originFileName);
                     originFileName = originFileName.substring(0, originFileName.length() - suffix.length());
                     savePath = savePath + suffix;
-                    long maxSize = ((Long)conf.get("maxSize")).longValue();
-                    if(!validType(suffix, (String[])conf.get("allowFiles"))) {
+                    long maxSize = ((Long) conf.get("maxSize")).longValue();
+                    if (!validType(suffix, (String[]) conf.get("allowFiles"))) {
                         return new BaseState(false, 8);
                     } else {
                         savePath = PathFormat.parse(savePath, originFileName);
-                        String physicalPath = (String)conf.get("rootPath") + savePath;
+                        String physicalPath = (String) conf.get("rootPath") + savePath;
                         InputStream is = fileStream.openStream();
                         State storageState = StorageManager.saveFileByInputStream(is, physicalPath, maxSize);
                         is.close();
-                        if(storageState.isSuccess()) {
+                        if (storageState.isSuccess()) {
                             storageState.putInfo("url", PathFormat.format(savePath));
                             storageState.putInfo("type", suffix);
                             storageState.putInfo("original", originFileName + suffix);

@@ -31,7 +31,7 @@
                             <li><a href="${pageContext.request.contextPath}">前台</a></li>
                         </ul>
                     </li>
-                    <li><a>  添加内容 <span class="fa fa-chevron-down"></span></a>
+                    <li><a> 添加内容 <span class="fa fa-chevron-down"></span></a>
                         <ul class="nav child_menu">
                             <li><a href="${pageContext.request.contextPath}/fileform">文件添加</a></li>
                             <li><a href="${pageContext.request.contextPath}/ktypeform">分类添加</a></li>

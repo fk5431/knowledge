@@ -32,16 +32,16 @@ public class ActionEnter {
 
     public String exec() {
         String callbackName = this.request.getParameter("callback");
-        return callbackName != null?(!this.validCallbackName(callbackName)?(new BaseState(false, 401)).toJSONString():callbackName + "(" + this.invoke() + ");"):this.invoke();
+        return callbackName != null ? (!this.validCallbackName(callbackName) ? (new BaseState(false, 401)).toJSONString() : callbackName + "(" + this.invoke() + ");") : this.invoke();
     }
 
     public String invoke() {
-        if(this.actionType != null && ActionMap.mapping.containsKey(this.actionType)) {
-            if(this.configManager != null && this.configManager.valid()) {
+        if (this.actionType != null && ActionMap.mapping.containsKey(this.actionType)) {
+            if (this.configManager != null && this.configManager.valid()) {
                 State state = null;
                 int actionCode = ActionMap.getType(this.actionType);
                 Map conf = null;
-                switch(actionCode) {
+                switch (actionCode) {
                     case 0:
                         return this.configManager.getAllConfig().toString();
                     case 1:
@@ -53,7 +53,7 @@ public class ActionEnter {
                         break;
                     case 5:
                         conf = this.configManager.getConfig(actionCode);
-                        String[] list = this.request.getParameterValues((String)conf.get("fieldName"));
+                        String[] list = this.request.getParameterValues((String) conf.get("fieldName"));
                         state = (new ImageHunter(conf)).capture(list);
                         break;
                     case 6:

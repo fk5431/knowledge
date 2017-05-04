@@ -5,8 +5,8 @@
   Time: 17:15
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%
     String path = request.getContextPath();
     String basePath = request.getScheme() + "://"
@@ -21,8 +21,8 @@
 
     <title>资源中心</title>
 
-    <link rel="stylesheet" href="${pageContext.request.contextPath }/css/resource/index.css"  />
-    <link rel="stylesheet"  href="${pageContext.request.contextPath }/css/resource/page.css"  />
+    <link rel="stylesheet" href="${pageContext.request.contextPath }/css/resource/index.css"/>
+    <link rel="stylesheet" href="${pageContext.request.contextPath }/css/resource/page.css"/>
     <link href="${pageContext.request.contextPath}/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/index_style.css">
 
@@ -46,7 +46,7 @@
                     <tr>
                         <td>
                             <div id="KB_pleaselogin">
-                                <span style="font-family: 楷体;">搜索关键字</span> <br />
+                                <span style="font-family: 楷体;">搜索关键字</span> <br/>
                                 search with keyword
                             </div>
                             <div class="searchFormContent" style="display: table;">
@@ -55,12 +55,12 @@
                                     <div style="display: table-cell; vertical-align: top;">
                                         <div class="KB_searchInput_wrapper">
                                             <input autocomplete="off" name="searchText" value=""
-                                                   class="searchInput" placeholder="请输入查询内容" type="text" />
+                                                   class="searchInput" placeholder="请输入查询内容" type="text"/>
                                             <span style="display: none;" class="clearsearch"></span>
                                         </div>
                                     </div>
                                     <div style="display: table-cell;" class="searchButton">
-                                        <input value="Search" type="submit" />
+                                        <input value="Search" type="submit"/>
                                     </div>
                                 </div>
                             </div>
@@ -70,7 +70,7 @@
                         <td>
                             <div id="KB_toolbox">
                                 <div class="advancedsearch">
-                                    <div  style="margin-top:8px;"><a class="advancedSearchLink">高级搜索 </a></div>
+                                    <div style="margin-top:8px;"><a class="advancedSearchLink">高级搜索 </a></div>
                                 </div>
                             </div>
                         </td>
@@ -83,7 +83,7 @@
 
     </div>
 </header>
-<div  style="margin:0 auto;">
+<div style="margin:0 auto;">
     <div id="mainWrapper" style="width: 100%;">
         <div class="table-layout-wrapper pageLayout">
             <table class="table-layout" style="width: 100%;">
@@ -95,8 +95,7 @@
                             <div id="KB_refinesum"
                                  class="wuid ORaw9pWO ORaw9pWO_0_search searchWidget">
                                 <h2 class="widgetHeader">
-                                    Filter by <span id="KB_refinesum_tooltip"
-                                                    title="Sub-filters may not represent the whole set of parent filter">?</span>
+                                    Filter by
                                 </h2>
                                 <div id="KB_refinesum_list"></div>
                             </div>
@@ -133,7 +132,7 @@
                                         <li class="KB_hit dsnews">
                                             <h3 class="KB_hit_title">
                                                 <a href="showfile?id=${f.fid}" target="_blank"> <span
-                                                        title="${f.title }" >${f.title }</span>
+                                                        title="${f.title }">${f.title }</span>
                                                 </a>
                                             </h3>
                                             <p class="KB_question">
@@ -154,15 +153,19 @@
                             </div>
                             <div class="csdn-pagination hide-set page1">
 									<span class="page-nav"> <b>共<i>${count }条第${pageNow}页</i></b>
-									<a href="${pageContext.request.contextPath }/resource?page=1" data-page="1" class="btn btn-xs btn-default">首页</a>
-                                        <a href="${pageContext.request.contextPath }/resource?page=<c:choose><c:when test="${pageNow == 1}">1</c:when><c:otherwise>${pageNow-1}</c:otherwise></c:choose>" data-page="1" class="btn btn-xs btn-default">&lt;</a>
+									<a href="${pageContext.request.contextPath }/resource?page=1" data-page="1"
+                                       class="btn btn-xs btn-default">首页</a>
+                                        <a href="${pageContext.request.contextPath }/resource?page=<c:choose><c:when test="${pageNow == 1}">1</c:when><c:otherwise>${pageNow-1}</c:otherwise></c:choose>"
+                                           data-page="1" class="btn btn-xs btn-default">&lt;</a>
 								<c:forEach var="t" begin="1" end="${page }">
                                     <c:if test="${page <= 5 }">
                                         <c:if test="${t == pageNow }">
-                                            <a href="${pageContext.request.contextPath }/resource?page=${t}" data-page="1" class="btn btn-xs btn-default active cblue">${t }</a>
+                                            <a href="${pageContext.request.contextPath }/resource?page=${t}"
+                                               data-page="1" class="btn btn-xs btn-default active cblue">${t }</a>
                                         </c:if>
                                         <c:if test="${t != pageNow }">
-                                            <a href="${pageContext.request.contextPath }/resource?page=${t}" data-page="1" class="btn btn-xs btn-default cblue">${t }</a>
+                                            <a href="${pageContext.request.contextPath }/resource?page=${t}"
+                                               data-page="1" class="btn btn-xs btn-default cblue">${t }</a>
                                         </c:if>
                                     </c:if>
                                     <c:if test="${page > 5 }">
@@ -170,10 +173,12 @@
                                             <a class="btn btn-xs btn-default active cblue">...</a>
                                         </c:if>
                                         <c:if test="${t >= pageNow - 2}">
-                                            <a href="${pageContext.request.contextPath }/resource?page=${t}" data-page="1" class="btn btn-xs btn-default active cblue">${t }</a>
+                                            <a href="${pageContext.request.contextPath }/resource?page=${t}"
+                                               data-page="1" class="btn btn-xs btn-default active cblue">${t }</a>
                                         </c:if>
                                         <c:if test="${t = pageNow + 2}">
-                                            <a href="${pageContext.request.contextPath }/resource?page=${t}" data-page="1" class="btn btn-xs btn-default active cblue">${t }</a>
+                                            <a href="${pageContext.request.contextPath }/resource?page=${t}"
+                                               data-page="1" class="btn btn-xs btn-default active cblue">${t }</a>
                                         </c:if>
                                         <c:if test="${pageNow< page - 2}">
                                             <a class="btn btn-xs btn-default active cblue">...</a>
@@ -181,8 +186,10 @@
                                     </c:if>
                                 </c:forEach>
 
-									<a href="${pageContext.request.contextPath }/resource?page=${pageNow+1 }" data-page="907" class="btn btn-xs btn-default">&gt;</a>
-									<a href="${pageContext.request.contextPath }/resource?page=${page }" data-page="907" class="btn btn-xs btn-default">末页</a>
+									<a href="${pageContext.request.contextPath }/resource?page=${pageNow+1 }"
+                                       data-page="907" class="btn btn-xs btn-default">&gt;</a>
+									<a href="${pageContext.request.contextPath }/resource?page=${page }" data-page="907"
+                                       class="btn btn-xs btn-default">末页</a>
 									</span>
                             </div>
                         </div>

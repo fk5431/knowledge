@@ -56,7 +56,9 @@
                     <div class="col-md-12 col-sm-12 col-xs-12">
                         <div class="x_panel">
                             <div class="x_title">
-                                <h2>分类管理 <small>ktype</small></h2>
+                                <h2>分类管理
+                                    <small>ktype</small>
+                                </h2>
                                 <ul class="nav navbar-right panel_toolbox">
                                     <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                                     </li>
@@ -84,19 +86,24 @@
 
                                     <tbody>
                                     <c:forEach var="k" items="${ktype}">
-                                    <form action="${pageContext.request.contextPath}/updatektype" method="post" enctype="multipart/form-data" id="user${k.ktypeid}">
-                                        <tr>
-                                            <td>${k.ktypeid}</td>
-                                            <td>${k.ktype}</td>
-                                            <td><input type="text" name="name">
-                                                <input type="text" name="id" hidden value="${k.ktypeid}"/></td>
-                                            <td><img src="${k.ktypeurl}" style="height: 100px; width: 100px;"></td>
-                                            <td><input type="file" name="image"></td>
-                                            <td>${k.count}</td>
-                                            <td><a onclick="document.getElementById('user${k.ktypeid}').submit();return false">修改</a></td>
-                                            <td><a href="${pageContext.request.contextPath}/delktype?id=${k.ktypeid}" >删除</a> </td>
-                                        </tr>
-                                    </form>
+                                        <form action="${pageContext.request.contextPath}/updatektype" method="post"
+                                              enctype="multipart/form-data" id="user${k.ktypeid}">
+                                            <tr>
+                                                <td>${k.ktypeid}</td>
+                                                <td>${k.ktype}</td>
+                                                <td><input type="text" name="name">
+                                                    <input type="text" name="id" hidden value="${k.ktypeid}"/></td>
+                                                <td><img src="${k.ktypeurl}" style="height: 100px; width: 100px;"></td>
+                                                <td><input type="file" name="image"></td>
+                                                <td>${k.count}</td>
+                                                <td>
+                                                    <a onclick="document.getElementById('user${k.ktypeid}').submit();return false">修改</a>
+                                                </td>
+                                                <td>
+                                                    <a href="${pageContext.request.contextPath}/delktype?id=${k.ktypeid}">删除</a>
+                                                </td>
+                                            </tr>
+                                        </form>
                                     </c:forEach>
                                     </tbody>
                                 </table>

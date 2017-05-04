@@ -1,93 +1,93 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.fk.dao.KtypeDao" >
-  <resultMap id="BaseResultMap" type="com.fk.bean.KtypeBean" >
-    <id column="ktypeid" property="ktypeid" jdbcType="INTEGER" />
-    <result column="ktype" property="ktype" jdbcType="VARCHAR" />
-    <result column="ktypeUrl" property="ktypeurl" jdbcType="VARCHAR" />
-    <result column="count" property="count" jdbcType="INTEGER" />
-  </resultMap>
-  <sql id="Base_Column_List" >
-    ktypeid, ktype, ktypeUrl, count
-  </sql>
-  <select id="selectAll" resultMap="BaseResultMap"  >
-    select
-    <include refid="Base_Column_List" />
-    from ktype
-  </select>
-  <select id="selectByName" resultMap="BaseResultMap" parameterType="java.lang.String" >
-    select
-    <include refid="Base_Column_List" />
-    from ktype
-    where ktype = #{ktype,jdbcType=VARCHAR}
-  </select>
-  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
-    select
-    <include refid="Base_Column_List" />
-    from ktype
-    where ktypeid = #{ktypeid,jdbcType=INTEGER}
-  </select>
-  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
-    delete from ktype
-    where ktypeid = #{ktypeid,jdbcType=INTEGER}
-  </delete>
-  <insert id="insert" parameterType="com.fk.bean.KtypeBean" >
-    insert into ktype (ktypeid, ktype, ktypeUrl,
-    count)
-    values (#{ktypeid,jdbcType=INTEGER}, #{ktype,jdbcType=VARCHAR}, #{ktypeurl,jdbcType=VARCHAR},
-    #{count,jdbcType=INTEGER})
-  </insert>
-  <insert id="insertSelective" parameterType="com.fk.bean.KtypeBean" >
-    insert into ktype
-    <trim prefix="(" suffix=")" suffixOverrides="," >
-      <if test="ktypeid != null" >
-        ktypeid,
-      </if>
-      <if test="ktype != null" >
-        ktype,
-      </if>
-      <if test="ktypeurl != null" >
-        ktypeUrl,
-      </if>
-      <if test="count != null" >
-        count,
-      </if>
-    </trim>
-    <trim prefix="values (" suffix=")" suffixOverrides="," >
-      <if test="ktypeid != null" >
-        #{ktypeid,jdbcType=INTEGER},
-      </if>
-      <if test="ktype != null" >
-        #{ktype,jdbcType=VARCHAR},
-      </if>
-      <if test="ktypeurl != null" >
-        #{ktypeurl,jdbcType=VARCHAR},
-      </if>
-      <if test="count != null" >
-        #{count,jdbcType=INTEGER},
-      </if>
-    </trim>
-  </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="com.fk.bean.KtypeBean" >
-    update ktype
-    <set >
-      <if test="ktype != null" >
-        ktype = #{ktype,jdbcType=VARCHAR},
-      </if>
-      <if test="ktypeurl != null" >
+<mapper namespace="com.fk.dao.KtypeDao">
+    <resultMap id="BaseResultMap" type="com.fk.bean.KtypeBean">
+        <id column="ktypeid" property="ktypeid" jdbcType="INTEGER"/>
+        <result column="ktype" property="ktype" jdbcType="VARCHAR"/>
+        <result column="ktypeUrl" property="ktypeurl" jdbcType="VARCHAR"/>
+        <result column="count" property="count" jdbcType="INTEGER"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        ktypeid, ktype, ktypeUrl, count
+    </sql>
+    <select id="selectAll" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from ktype
+    </select>
+    <select id="selectByName" resultMap="BaseResultMap" parameterType="java.lang.String">
+        select
+        <include refid="Base_Column_List"/>
+        from ktype
+        where ktype = #{ktype,jdbcType=VARCHAR}
+    </select>
+    <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer">
+        select
+        <include refid="Base_Column_List"/>
+        from ktype
+        where ktypeid = #{ktypeid,jdbcType=INTEGER}
+    </select>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+        delete from ktype
+        where ktypeid = #{ktypeid,jdbcType=INTEGER}
+    </delete>
+    <insert id="insert" parameterType="com.fk.bean.KtypeBean">
+        insert into ktype (ktypeid, ktype, ktypeUrl,
+        count)
+        values (#{ktypeid,jdbcType=INTEGER}, #{ktype,jdbcType=VARCHAR}, #{ktypeurl,jdbcType=VARCHAR},
+        #{count,jdbcType=INTEGER})
+    </insert>
+    <insert id="insertSelective" parameterType="com.fk.bean.KtypeBean">
+        insert into ktype
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="ktypeid != null">
+                ktypeid,
+            </if>
+            <if test="ktype != null">
+                ktype,
+            </if>
+            <if test="ktypeurl != null">
+                ktypeUrl,
+            </if>
+            <if test="count != null">
+                count,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="ktypeid != null">
+                #{ktypeid,jdbcType=INTEGER},
+            </if>
+            <if test="ktype != null">
+                #{ktype,jdbcType=VARCHAR},
+            </if>
+            <if test="ktypeurl != null">
+                #{ktypeurl,jdbcType=VARCHAR},
+            </if>
+            <if test="count != null">
+                #{count,jdbcType=INTEGER},
+            </if>
+        </trim>
+    </insert>
+    <update id="updateByPrimaryKeySelective" parameterType="com.fk.bean.KtypeBean">
+        update ktype
+        <set>
+            <if test="ktype != null">
+                ktype = #{ktype,jdbcType=VARCHAR},
+            </if>
+            <if test="ktypeurl != null">
+                ktypeUrl = #{ktypeurl,jdbcType=VARCHAR},
+            </if>
+            <if test="count != null">
+                count = #{count,jdbcType=INTEGER},
+            </if>
+        </set>
+        where ktypeid = #{ktypeid,jdbcType=INTEGER}
+    </update>
+    <update id="updateByPrimaryKey" parameterType="com.fk.bean.KtypeBean">
+        update ktype
+        set ktype = #{ktype,jdbcType=VARCHAR},
         ktypeUrl = #{ktypeurl,jdbcType=VARCHAR},
-      </if>
-      <if test="count != null" >
-        count = #{count,jdbcType=INTEGER},
-      </if>
-    </set>
-    where ktypeid = #{ktypeid,jdbcType=INTEGER}
-  </update>
-  <update id="updateByPrimaryKey" parameterType="com.fk.bean.KtypeBean" >
-    update ktype
-    set ktype = #{ktype,jdbcType=VARCHAR},
-    ktypeUrl = #{ktypeurl,jdbcType=VARCHAR},
-    count = #{count,jdbcType=INTEGER}
-    where ktypeid = #{ktypeid,jdbcType=INTEGER}
-  </update>
+        count = #{count,jdbcType=INTEGER}
+        where ktypeid = #{ktypeid,jdbcType=INTEGER}
+    </update>
 </mapper>

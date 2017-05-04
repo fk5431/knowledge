@@ -31,7 +31,7 @@ public class PathFormat {
         currentDate = new Date();
         StringBuffer sb = new StringBuffer();
 
-        while(matcher.find()) {
+        while (matcher.find()) {
             matcher.appendReplacement(sb, getString(matcher.group(1)));
         }
 
@@ -50,9 +50,9 @@ public class PathFormat {
         currentDate = new Date();
         StringBuffer sb = new StringBuffer();
 
-        while(matcher.find()) {
+        while (matcher.find()) {
             matchStr = matcher.group(1);
-            if(matchStr.indexOf("filename") != -1) {
+            if (matchStr.indexOf("filename") != -1) {
                 filename = filename.replace("$", "\\$").replaceAll("[\\/:*?\"<>|]", "");
                 matcher.appendReplacement(sb, filename);
             } else {
@@ -66,7 +66,7 @@ public class PathFormat {
 
     private static String getString(String pattern) {
         pattern = pattern.toLowerCase();
-        return pattern.indexOf("time") != -1?getTimestamp():(pattern.indexOf("yyyy") != -1?getFullYear():(pattern.indexOf("yy") != -1?getYear():(pattern.indexOf("mm") != -1?getMonth():(pattern.indexOf("dd") != -1?getDay():(pattern.indexOf("hh") != -1?getHour():(pattern.indexOf("ii") != -1?getMinute():(pattern.indexOf("ss") != -1?getSecond():(pattern.indexOf("rand") != -1?getRandom(pattern):pattern))))))));
+        return pattern.indexOf("time") != -1 ? getTimestamp() : (pattern.indexOf("yyyy") != -1 ? getFullYear() : (pattern.indexOf("yy") != -1 ? getYear() : (pattern.indexOf("mm") != -1 ? getMonth() : (pattern.indexOf("dd") != -1 ? getDay() : (pattern.indexOf("hh") != -1 ? getHour() : (pattern.indexOf("ii") != -1 ? getMinute() : (pattern.indexOf("ss") != -1 ? getSecond() : (pattern.indexOf("rand") != -1 ? getRandom(pattern) : pattern))))))));
     }
 
     private static String getTimestamp() {

@@ -1,82 +1,82 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.fk.dao.CdirectoryDao" >
-  <resultMap id="BaseResultMap" type="com.fk.bean.CdirectoryBean" >
-    <id column="did" property="did" jdbcType="INTEGER" />
-    <result column="fid" property="fid" jdbcType="INTEGER" />
-    <result column="url" property="url" jdbcType="VARCHAR" />
-    <result column="fname" property="fname" jdbcType="VARCHAR" />
-  </resultMap>
-  <sql id="Base_Column_List" >
-    did, fid, url, fname
-  </sql>
-  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
-    select 
-    <include refid="Base_Column_List" />
-    from cdirectory
-    where did = #{did,jdbcType=INTEGER}
-  </select>
-  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
-    delete from cdirectory
-    where did = #{did,jdbcType=INTEGER}
-  </delete>
-  <insert id="insert" parameterType="com.fk.bean.CdirectoryBean" >
-    insert into cdirectory (did, fid, url, 
-      fname)
-    values (#{did,jdbcType=INTEGER}, #{fid,jdbcType=INTEGER}, #{url,jdbcType=VARCHAR}, 
-      #{fname,jdbcType=VARCHAR})
-  </insert>
-  <insert id="insertSelective" parameterType="com.fk.bean.CdirectoryBean" >
-    insert into cdirectory
-    <trim prefix="(" suffix=")" suffixOverrides="," >
-      <if test="did != null" >
-        did,
-      </if>
-      <if test="fid != null" >
-        fid,
-      </if>
-      <if test="url != null" >
-        url,
-      </if>
-      <if test="fname != null" >
-        fname,
-      </if>
-    </trim>
-    <trim prefix="values (" suffix=")" suffixOverrides="," >
-      <if test="did != null" >
-        #{did,jdbcType=INTEGER},
-      </if>
-      <if test="fid != null" >
-        #{fid,jdbcType=INTEGER},
-      </if>
-      <if test="url != null" >
-        #{url,jdbcType=VARCHAR},
-      </if>
-      <if test="fname != null" >
-        #{fname,jdbcType=VARCHAR},
-      </if>
-    </trim>
-  </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="com.fk.bean.CdirectoryBean" >
-    update cdirectory
-    <set >
-      <if test="fid != null" >
-        fid = #{fid,jdbcType=INTEGER},
-      </if>
-      <if test="url != null" >
+<mapper namespace="com.fk.dao.CdirectoryDao">
+    <resultMap id="BaseResultMap" type="com.fk.bean.CdirectoryBean">
+        <id column="did" property="did" jdbcType="INTEGER"/>
+        <result column="fid" property="fid" jdbcType="INTEGER"/>
+        <result column="url" property="url" jdbcType="VARCHAR"/>
+        <result column="fname" property="fname" jdbcType="VARCHAR"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        did, fid, url, fname
+    </sql>
+    <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer">
+        select
+        <include refid="Base_Column_List"/>
+        from cdirectory
+        where did = #{did,jdbcType=INTEGER}
+    </select>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+        delete from cdirectory
+        where did = #{did,jdbcType=INTEGER}
+    </delete>
+    <insert id="insert" parameterType="com.fk.bean.CdirectoryBean">
+        insert into cdirectory (did, fid, url,
+        fname)
+        values (#{did,jdbcType=INTEGER}, #{fid,jdbcType=INTEGER}, #{url,jdbcType=VARCHAR},
+        #{fname,jdbcType=VARCHAR})
+    </insert>
+    <insert id="insertSelective" parameterType="com.fk.bean.CdirectoryBean">
+        insert into cdirectory
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="did != null">
+                did,
+            </if>
+            <if test="fid != null">
+                fid,
+            </if>
+            <if test="url != null">
+                url,
+            </if>
+            <if test="fname != null">
+                fname,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="did != null">
+                #{did,jdbcType=INTEGER},
+            </if>
+            <if test="fid != null">
+                #{fid,jdbcType=INTEGER},
+            </if>
+            <if test="url != null">
+                #{url,jdbcType=VARCHAR},
+            </if>
+            <if test="fname != null">
+                #{fname,jdbcType=VARCHAR},
+            </if>
+        </trim>
+    </insert>
+    <update id="updateByPrimaryKeySelective" parameterType="com.fk.bean.CdirectoryBean">
+        update cdirectory
+        <set>
+            <if test="fid != null">
+                fid = #{fid,jdbcType=INTEGER},
+            </if>
+            <if test="url != null">
+                url = #{url,jdbcType=VARCHAR},
+            </if>
+            <if test="fname != null">
+                fname = #{fname,jdbcType=VARCHAR},
+            </if>
+        </set>
+        where did = #{did,jdbcType=INTEGER}
+    </update>
+    <update id="updateByPrimaryKey" parameterType="com.fk.bean.CdirectoryBean">
+        update cdirectory
+        set fid = #{fid,jdbcType=INTEGER},
         url = #{url,jdbcType=VARCHAR},
-      </if>
-      <if test="fname != null" >
-        fname = #{fname,jdbcType=VARCHAR},
-      </if>
-    </set>
-    where did = #{did,jdbcType=INTEGER}
-  </update>
-  <update id="updateByPrimaryKey" parameterType="com.fk.bean.CdirectoryBean" >
-    update cdirectory
-    set fid = #{fid,jdbcType=INTEGER},
-      url = #{url,jdbcType=VARCHAR},
-      fname = #{fname,jdbcType=VARCHAR}
-    where did = #{did,jdbcType=INTEGER}
-  </update>
+        fname = #{fname,jdbcType=VARCHAR}
+        where did = #{did,jdbcType=INTEGER}
+    </update>
 </mapper>

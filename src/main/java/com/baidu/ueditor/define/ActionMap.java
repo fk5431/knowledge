@@ -34,6 +34,6 @@ public final class ActionMap {
     }
 
     public static int getType(String key) {
-        return ((Integer)mapping.get(key)).intValue();
+        return ((Integer) mapping.get(key)).intValue();
     }
 }

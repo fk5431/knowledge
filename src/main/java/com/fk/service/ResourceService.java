@@ -38,13 +38,13 @@ public class ResourceService {
 
     public void resource(String page_, Map<String, Object> map) {
 
-        try{
+        try {
             List<KtypeBean> ktypeBeans = ktypeDao.selectAll();
             map.put("type", ktypeBeans);
 
             int count = fileDao.count();
             int page = 1;
-            if(count % SIZE == 0)
+            if (count % SIZE == 0)
                 page = count / SIZE;
             else
                 page = count / SIZE + CommonConst.ONE_INT;
@@ -52,40 +52,40 @@ public class ResourceService {
             map.put("size", SIZE);
             map.put("page", page);
             int toPage;
-            if(page_ == null || "".equals(page_)){
+            if (page_ == null || "".equals(page_)) {
                 toPage = 1;
-            }else {
+            } else {
                 toPage = Integer.parseInt(page_);
             }
-            if(toPage > page){
+            if (toPage > page) {
                 toPage = page;
             }
             map.put("pageNow", toPage);
             int start = (toPage - 1) * SIZE;
             List<FileBean> list = fileDao.selectByStart(start);
             List<FileReturnBean> fileReturnBeans = Lists.newArrayList();
-            for(FileBean f : list){
+            for (FileBean f : list) {
                 FileReturnBean fileReturnBean = new FileReturnBean(f);
                 int uid = fileReturnBean.getUid();
                 UserBean userBean = useDao.selectByPrimaryKey(uid);
-                if(userBean != null) {
+                if (userBean != null) {
                     fileReturnBean.setUname(userBean.getUname());
-                }else {
+                } else {
                     fileReturnBean.setUname("未知");
                 }
-                if(uid == -1    ){
+                if (uid == -1) {
                     fileReturnBean.setUname("管理员");
                 }
                 KtypeBean ktypeBean = ktypeDao.selectByPrimaryKey(fileReturnBean.getKtypeid());
-                if(ktypeBean !=null){
+                if (ktypeBean != null) {
                     fileReturnBean.setFtypename(ktypeBean.getKtype());
-                }else{
+                } else {
                     fileReturnBean.setFtypename("未知");
                 }
                 fileReturnBeans.add(fileReturnBean);
             }
             map.put("file", fileReturnBeans);
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
             map.put(CommonConst.ERRORCODE, 1);
         }

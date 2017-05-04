@@ -12,7 +12,7 @@
             <div class="col-1-3">
                 <div class="wrap-col">
                     <div class="logo">
-                        <a href="main.jsp"><img src="${pageContext.request.contextPath}/images/logo.png" /></a>
+                        <a href="main.jsp"><img src="${pageContext.request.contextPath}/images/logo.png"/></a>
                     </div>
                 </div>
             </div>

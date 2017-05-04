@@ -30,22 +30,22 @@ public class KtypeService {
     KtypeDao ktypeDao;
 
     public void selectAllKtype(HttpServletRequest request, Map<String, Object> map) {
-        try{
+        try {
             List<KtypeBean> ktypeBeans = ktypeDao.selectAll();
             map.put("ktype", ktypeBeans);
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
-            logger.error("KtypeService.selectAllKtype  in ]",  e);
+            logger.error("KtypeService.selectAllKtype  in ]", e);
         }
     }
 
     public void updateKtype(String id, String name, MultipartFile file, Map<String, Object> map) {
-        try{
+        try {
             KtypeBean ktypeBean = ktypeDao.selectByPrimaryKey(Integer.parseInt(id));
-            if(name != null && !"".equals(name)){
+            if (name != null && !"".equals(name)) {
                 ktypeBean.setKtype(name);
             }
-            if(file != null && file.getSize() != 0){
+            if (file != null && file.getSize() != 0) {
                 String filename = file.getOriginalFilename();
                 String path = ContextLoader.getCurrentWebApplicationContext().getServletContext().getRealPath("/");
                 filename = String.valueOf(System.currentTimeMillis()) + filename;
@@ -56,13 +56,13 @@ public class KtypeService {
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
-                String url = "/knowledge/upload/ktype/"+filename;
+                String url = "/knowledge/upload/ktype/" + filename;
                 ktypeBean.setKtypeurl(url);
             }
             ktypeDao.updateByPrimaryKey(ktypeBean);
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
-            logger.error("KtypeService.selectAllKtype  in ]",  e);
+            logger.error("KtypeService.selectAllKtype  in ]", e);
         }
     }
 

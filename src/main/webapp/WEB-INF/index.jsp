@@ -30,7 +30,7 @@
                 <div style="margin:0 auto;padding:0;">
                     <form id="searchForm" method="post" action="search_text" style="width:468px;margin:0 auto;">
                         <input id="s" type="text" name="searchText"/> <input type="submit" value="Submit"
-                                                                             id="submitButton" />
+                                                                             id="submitButton"/>
                     </form>
                     <!-- <form method="post" action="search_text">
                         <input class="inp_srh" name="searchText" placeholder="请输入您要搜索的作品" />
@@ -69,12 +69,14 @@
                                     <div class="post">
                                         <img src="images/${page.ktypeid }.jpg">
                                         <h3>
-                                            <a href="showfile?id=${page.fid }" target="_blank"><span style="color:#000000;line-height: 150%;">${page.title}</a></span>
+                                            <a href="showfile?id=${page.fid }" target="_blank"><span
+                                                    style="color:#000000;line-height: 150%;">${page.title}</a></span>
                                         </h3>
                                         <div class="upload">
                                             <p>${page.uploadtime}</p>
                                             <p>
-                                                    ${page.tags}<a href="search_ktypeid?ktypeid=${page.ktypeid }"> ${page.ktypeid }</a>
+                                                    ${page.tags}<a
+                                                    href="search_ktypeid?ktypeid=${page.ktypeid }"> ${page.ktypeid }</a>
                                             </p>
                                         </div>
                                     </div>
@@ -95,12 +97,14 @@
                                     <div class="post">
                                         <img src="images/${page.ktypeid }.jpg">
                                         <h3>
-                                            <a href="showfile?id=${page.fid }" target="_blank"><span style="color:#000000;line-height: 150%;">${page.title}</a></span>
+                                            <a href="showfile?id=${page.fid }" target="_blank"><span
+                                                    style="color:#000000;line-height: 150%;">${page.title}</a></span>
                                         </h3>
                                         <div class="upload">
                                             <p>${page.uploadtime}</p>
                                             <p>
-                                                    ${page.tags}<a href="search_ktypeid?ktypeid=${page.ktypeid }"> ${page.ktypeid }</a>
+                                                    ${page.tags}<a
+                                                    href="search_ktypeid?ktypeid=${page.ktypeid }"> ${page.ktypeid }</a>
                                             </p>
                                         </div>
                                     </div>
@@ -253,7 +257,6 @@
                     </div>
                 </div>
                 <div class="col-xs-12 col-md-3 side-right hidden-xs hidden-sm">
-
 
 
                     <div class="widget-box">

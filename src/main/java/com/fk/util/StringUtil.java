@@ -5,10 +5,10 @@ package com.fk.util;
  */
 public class StringUtil {
 
-    public static String blankOrEmpty(String str){
-        if(str == null || "".equals(str)){
+    public static String blankOrEmpty(String str) {
+        if (str == null || "".equals(str)) {
             return "";
-        }else {
+        } else {
             return str;
         }
     }

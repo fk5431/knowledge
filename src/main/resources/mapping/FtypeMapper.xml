@@ -1,82 +1,82 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.fk.dao.FtypeDao" >
-  <resultMap id="BaseResultMap" type="com.fk.bean.FtypeBean" >
-    <id column="ftypeid" property="ftypeid" jdbcType="INTEGER" />
-    <result column="ftypename" property="ftypename" jdbcType="VARCHAR" />
-    <result column="ftype" property="ftype" jdbcType="VARCHAR" />
-  </resultMap>
-  <sql id="Base_Column_List" >
-    ftypeid, ftypename, ftype
-  </sql>
-  <select id="selectAll" resultMap="BaseResultMap" >
-    select
-    <include refid="Base_Column_List" />
-    from ftype
-  </select>
-  <select id="selectByName" resultMap="BaseResultMap" parameterType="java.lang.String" >
-    select
-    <include refid="Base_Column_List" />
-    from ftype
-    where ftypename = #{ftypename,jdbcType=VARCHAR}
-  </select>
-  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
-    select
-    <include refid="Base_Column_List" />
-    from ftype
-    where ftypeid = #{ftypeid,jdbcType=INTEGER}
-  </select>
-  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
-    delete from ftype
-    where ftypeid = #{ftypeid,jdbcType=INTEGER}
-  </delete>
-  <insert id="insert" parameterType="com.fk.bean.FtypeBean" >
-    insert into ftype (ftypeid, ftypename, ftype
-    )
-    values (#{ftypeid,jdbcType=INTEGER}, #{ftypename,jdbcType=VARCHAR}, #{ftype,jdbcType=VARCHAR}
-    )
-  </insert>
-  <insert id="insertSelective" parameterType="com.fk.bean.FtypeBean" >
-    insert into ftype
-    <trim prefix="(" suffix=")" suffixOverrides="," >
-      <if test="ftypeid != null" >
-        ftypeid,
-      </if>
-      <if test="ftypename != null" >
-        ftypename,
-      </if>
-      <if test="ftype != null" >
-        ftype,
-      </if>
-    </trim>
-    <trim prefix="values (" suffix=")" suffixOverrides="," >
-      <if test="ftypeid != null" >
-        #{ftypeid,jdbcType=INTEGER},
-      </if>
-      <if test="ftypename != null" >
-        #{ftypename,jdbcType=VARCHAR},
-      </if>
-      <if test="ftype != null" >
-        #{ftype,jdbcType=VARCHAR},
-      </if>
-    </trim>
-  </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="com.fk.bean.FtypeBean" >
-    update ftype
-    <set >
-      <if test="ftypename != null" >
-        ftypename = #{ftypename,jdbcType=VARCHAR},
-      </if>
-      <if test="ftype != null" >
-        ftype = #{ftype,jdbcType=VARCHAR},
-      </if>
-    </set>
-    where ftypeid = #{ftypeid,jdbcType=INTEGER}
-  </update>
-  <update id="updateByPrimaryKey" parameterType="com.fk.bean.FtypeBean" >
-    update ftype
-    set ftypename = #{ftypename,jdbcType=VARCHAR},
-      ftype = #{ftype,jdbcType=VARCHAR}
-    where ftypeid = #{ftypeid,jdbcType=INTEGER}
-  </update>
+<mapper namespace="com.fk.dao.FtypeDao">
+    <resultMap id="BaseResultMap" type="com.fk.bean.FtypeBean">
+        <id column="ftypeid" property="ftypeid" jdbcType="INTEGER"/>
+        <result column="ftypename" property="ftypename" jdbcType="VARCHAR"/>
+        <result column="ftype" property="ftype" jdbcType="VARCHAR"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        ftypeid, ftypename, ftype
+    </sql>
+    <select id="selectAll" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from ftype
+    </select>
+    <select id="selectByName" resultMap="BaseResultMap" parameterType="java.lang.String">
+        select
+        <include refid="Base_Column_List"/>
+        from ftype
+        where ftypename = #{ftypename,jdbcType=VARCHAR}
+    </select>
+    <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer">
+        select
+        <include refid="Base_Column_List"/>
+        from ftype
+        where ftypeid = #{ftypeid,jdbcType=INTEGER}
+    </select>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+        delete from ftype
+        where ftypeid = #{ftypeid,jdbcType=INTEGER}
+    </delete>
+    <insert id="insert" parameterType="com.fk.bean.FtypeBean">
+        insert into ftype (ftypeid, ftypename, ftype
+        )
+        values (#{ftypeid,jdbcType=INTEGER}, #{ftypename,jdbcType=VARCHAR}, #{ftype,jdbcType=VARCHAR}
+        )
+    </insert>
+    <insert id="insertSelective" parameterType="com.fk.bean.FtypeBean">
+        insert into ftype
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="ftypeid != null">
+                ftypeid,
+            </if>
+            <if test="ftypename != null">
+                ftypename,
+            </if>
+            <if test="ftype != null">
+                ftype,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="ftypeid != null">
+                #{ftypeid,jdbcType=INTEGER},
+            </if>
+            <if test="ftypename != null">
+                #{ftypename,jdbcType=VARCHAR},
+            </if>
+            <if test="ftype != null">
+                #{ftype,jdbcType=VARCHAR},
+            </if>
+        </trim>
+    </insert>
+    <update id="updateByPrimaryKeySelective" parameterType="com.fk.bean.FtypeBean">
+        update ftype
+        <set>
+            <if test="ftypename != null">
+                ftypename = #{ftypename,jdbcType=VARCHAR},
+            </if>
+            <if test="ftype != null">
+                ftype = #{ftype,jdbcType=VARCHAR},
+            </if>
+        </set>
+        where ftypeid = #{ftypeid,jdbcType=INTEGER}
+    </update>
+    <update id="updateByPrimaryKey" parameterType="com.fk.bean.FtypeBean">
+        update ftype
+        set ftypename = #{ftypename,jdbcType=VARCHAR},
+        ftype = #{ftype,jdbcType=VARCHAR}
+        where ftypeid = #{ftypeid,jdbcType=INTEGER}
+    </update>
 </mapper>

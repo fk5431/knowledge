@@ -26,14 +26,14 @@ public class FtypeService {
 
     public void updateftype(FtypeBean file, Map<String, Object> map) {
         FtypeBean ftypeBean = ftypeDao.selectByPrimaryKey(file.getFtypeid());
-        if(file.getFtypename() != null && !"".equals(file.getFtypename())){
+        if (file.getFtypename() != null && !"".equals(file.getFtypename())) {
             ftypeBean.setFtypename(file.getFtypename());
         }
-        if(file.getFtype() != null && !"".equals(file.getFtype())){
-            if(ftypeBean.getFtype() == null || ftypeBean.getFtype().equals("")){
+        if (file.getFtype() != null && !"".equals(file.getFtype())) {
+            if (ftypeBean.getFtype() == null || ftypeBean.getFtype().equals("")) {
                 ftypeBean.setFtype(file.getFtype());
-            }else {
-                ftypeBean.setFtype(ftypeBean.getFtype()+","+file.getFtype());
+            } else {
+                ftypeBean.setFtype(ftypeBean.getFtype() + "," + file.getFtype());
             }
         }
         ftypeDao.updateByPrimaryKey(ftypeBean);

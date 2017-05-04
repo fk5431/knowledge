@@ -20,7 +20,7 @@ public class FileType {
     }
 
     public static String getSuffix(String key) {
-        return (String)types.get(key);
+        return (String) types.get(key);
     }
 
     public static String getSuffixByFilename(String filename) {

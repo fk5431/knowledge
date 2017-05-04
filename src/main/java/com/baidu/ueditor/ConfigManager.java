@@ -26,7 +26,7 @@ public final class ConfigManager {
         rootPath = rootPath.replace("\\", "/");
         this.rootPath = rootPath;
         this.contextPath = contextPath;
-        if(contextPath.length() > 0) {
+        if (contextPath.length() > 0) {
             this.originalPath = this.rootPath + uri.substring(contextPath.length());
         } else {
             this.originalPath = this.rootPath + uri;
@@ -54,7 +54,7 @@ public final class ConfigManager {
     public Map<String, Object> getConfig(int type) {
         HashMap conf = new HashMap();
         String savePath = null;
-        switch(type) {
+        switch (type) {
             case 1:
                 conf.put("isBase64", "false");
                 conf.put("maxSize", Long.valueOf(this.jsonConfig.getLong("imageMaxSize")));
@@ -108,7 +108,7 @@ public final class ConfigManager {
 
     private void initEnv() throws FileNotFoundException, IOException {
         File file = new File(this.originalPath);
-        if(!file.isAbsolute()) {
+        if (!file.isAbsolute()) {
             file = new File(file.getAbsolutePath());
         }
 
@@ -133,7 +133,7 @@ public final class ConfigManager {
         String[] result = new String[jsonArray.length()];
         int i = 0;
 
-        for(int len = jsonArray.length(); i < len; ++i) {
+        for (int len = jsonArray.length(); i < len; ++i) {
             result[i] = jsonArray.getString(i);
         }
 
@@ -148,7 +148,7 @@ public final class ConfigManager {
             BufferedReader bfReader = new BufferedReader(reader);
             String tmpContent = null;
 
-            while((tmpContent = bfReader.readLine()) != null) {
+            while ((tmpContent = bfReader.readLine()) != null) {
                 builder.append(tmpContent);
             }
 

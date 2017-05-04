@@ -23,6 +23,6 @@ public class MIMEType {
     }
 
     public static String getSuffix(String mime) {
-        return (String)types.get(mime);
+        return (String) types.get(mime);
     }
 }

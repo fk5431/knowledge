@@ -22,7 +22,7 @@ public class Resource {
     ResourceService resourceService;
 
     @RequestMapping("/resource")
-    public String resource(HttpServletRequest request, Map<String, Object> map){
+    public String resource(HttpServletRequest request, Map<String, Object> map) {
 
         String page = request.getParameter("page");
 
@@ -30,7 +30,6 @@ public class Resource {
 
         return "resource";
     }
-
 
 
 }

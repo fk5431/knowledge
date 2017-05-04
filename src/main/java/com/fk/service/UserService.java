@@ -33,18 +33,18 @@ public class UserService {
     private Logger logger = LoggerFactory.getLogger(UserService.class);
 
     public String login(String name, String password, HttpServletRequest request, Map<String, Object> map) {
-        try{
+        try {
             UserBean exists = userDao.selectByName(name);
-            if(exists == null){
+            if (exists == null) {
                 map.put("errorcode", 2);
                 return "";
             }
-            if(!MD5.decodeMD5(exists.getPwd()).equals(password)){
+            if (!MD5.decodeMD5(exists.getPwd()).equals(password)) {
                 map.put("errorcode", 3);
                 return "";
             }
             return String.valueOf(exists.getUid());
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
             logger.debug("UserService.login  in name[{}], password[{}], id[{}]", name, password, e);
         }
@@ -55,11 +55,11 @@ public class UserService {
         try {
             UserBean exists = userDao.selectByEmail(email);
             UserBean existsname = userDao.selectByName(name);
-            if(exists != null){
+            if (exists != null) {
                 map.put("errorcode", 1);
                 return;
             }
-            if(existsname != null){
+            if (existsname != null) {
                 map.put("errorcode", 4);
                 return;
             }
@@ -73,7 +73,7 @@ public class UserService {
             map.put("login", 1);
         } catch (Exception e) {
             e.printStackTrace();
-            logger.debug("UserService.register  in name[{}], email[{}], password[{}], id[{}]", name,  email, password, e);
+            logger.debug("UserService.register  in name[{}], email[{}], password[{}], id[{}]", name, email, password, e);
         }
     }
 
@@ -83,10 +83,10 @@ public class UserService {
             String currentTime = "" + now.getTime();
             String urlString = "http://localhost:8080/knowledge/forgetPassword?key=";
             String encryptedCode = MD5.encodeMD5(currentTime + "@" + email);
-            String link = "<a href=\""+urlString + encryptedCode+"\">链接</a>";
+            String link = "<a href=\"" + urlString + encryptedCode + "\">链接</a>";
             logger.debug("LoginC.sendMail in email[{}], link[{}]", email, link);
             SendMail send = new SendMail();
-            int re = send.sendEmailToOne(email,"知识库密码找回","请点击链接完成密码修改"+link + "  " +urlString + encryptedCode);
+            int re = send.sendEmailToOne(email, "知识库密码找回", "请点击链接完成密码修改" + link + "  " + urlString + encryptedCode);
             return re;
         } catch (Exception e) {
             e.printStackTrace();
@@ -99,14 +99,14 @@ public class UserService {
             Date date = new Date();
             long before = Long.valueOf(str[0]);
             long now = date.getTime();
-            if(now - before > 180 * 1000){
+            if (now - before > 180 * 1000) {
                 map.put("errorcode", 5);
                 return -1;
             }
             String resetP = RandomUtil.Random();
             SendMail send = new SendMail();
-            int re = send.sendEmailToOne(str[1],"知识库密码","密码重置为"+resetP);
-            if(re != CommonConst.ONE_INT){
+            int re = send.sendEmailToOne(str[1], "知识库密码", "密码重置为" + resetP);
+            if (re != CommonConst.ONE_INT) {
                 return re;
             }
             UserBean user = userDao.selectByEmail(str[1]);
@@ -122,13 +122,13 @@ public class UserService {
 
     public void index(int userId, Map<String, Object> map) {
         UserBean user = null;
-        if(userId != -1){
+        if (userId != -1) {
             user = userDao.selectByPrimaryKey(userId);
         }
 
-        if(user == null ){
+        if (user == null) {
             noUser(map);
-        }else {
+        } else {
             userIndex(user, map);
         }
 
@@ -148,43 +148,43 @@ public class UserService {
     }
 
     private void noUser(Map<String, Object> map) {
-        
-        
+
+
     }
 
     public void superlogin(UserBean userBean, HttpServletResponse response, Map<String, Object> map) {
-        try{
+        try {
             UserBean exists = userDao.selectByName(userBean.getUname());
-            if(exists == null){
+            if (exists == null) {
                 map.put("errorcode", 2);
                 return;
             }
-            if(!MD5.decodeMD5(exists.getPwd()).equals(userBean.getPwd())){
+            if (!MD5.decodeMD5(exists.getPwd()).equals(userBean.getPwd())) {
                 map.put("errorcode", 3);
                 return;
             }
-            if(exists.getIsmanage() != 2 && exists.getIsmanage() != 0){
+            if (exists.getIsmanage() != 2 && exists.getIsmanage() != 0) {
                 map.put(CommonConst.ERRORCODE, 2);
                 return;
             }
-            if(exists.getIsmanage() == 2) {
+            if (exists.getIsmanage() == 2) {
                 Cookie cookie1 = new Cookie(CommonConst.SUPERUSERID, CommonConst.YES);
                 response.addCookie(cookie1);
-            }else{
+            } else {
                 Cookie cookie1 = new Cookie(CommonConst.SUPERUSERID, CommonConst.NO);
                 response.addCookie(cookie1);
             }
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
             logger.debug("UserService.login  in name[{}], password[{}], id[{}]", userBean.getUname(), userBean.getPwd(), e);
         }
     }
 
     public void selectAllUser(String page_, Map<String, Object> map) {
-        try{
+        try {
             int count = userDao.count();
             int page = 1;
-            if(count % SIZE == 0)
+            if (count % SIZE == 0)
                 page = count / SIZE;
             else
                 page = count / SIZE + CommonConst.ONE_INT;
@@ -192,47 +192,47 @@ public class UserService {
             map.put("size", SIZE);
             map.put("page", page);
             int toPage;
-            if(page_ == null || "".equals(page_)){
+            if (page_ == null || "".equals(page_)) {
                 toPage = 1;
-            }else {
+            } else {
                 toPage = Integer.parseInt(page_);
             }
-            if(toPage > page){
+            if (toPage > page) {
                 toPage = page;
             }
             map.put("pageNow", toPage);
             int start = (toPage - 1) * SIZE;
             List<UserBean> list = userDao.selectByStart(start);
             List<UserBean> userBeans = new ArrayList<>();
-            for(UserBean u : list){
+            for (UserBean u : list) {
                 u.setPwd(MD5.decodeMD5(u.getPwd()));
                 userBeans.add(u);
             }
             map.put("user", userBeans);
 
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
-            logger.debug("UserService.selectAllUser  in ]",  e);
+            logger.debug("UserService.selectAllUser  in ]", e);
         }
     }
 
     public void updateUser(UserBean userBean, Map<String, Object> map) {
-        try{
+        try {
             UserBean userUpdate = userDao.selectByPrimaryKey(userBean.getUid());
-            if(userBean.getUname() != null && !"".equals(userBean.getUname())){
+            if (userBean.getUname() != null && !"".equals(userBean.getUname())) {
                 userUpdate.setUname(userBean.getUname());
             }
-            if(userBean.getPwd() != null && !"".equals(userBean.getPwd())){
+            if (userBean.getPwd() != null && !"".equals(userBean.getPwd())) {
                 userUpdate.setPwd(MD5.encodeMD5(userBean.getPwd()));
             }
-            if(userBean.getUemail() != null && !"".equals(userBean.getUemail())){
+            if (userBean.getUemail() != null && !"".equals(userBean.getUemail())) {
                 userUpdate.setUemail(userBean.getUemail());
             }
             userDao.updateByPrimaryKey(userUpdate);
 
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
-            logger.debug("UserService.selectAllUser  in ]",  e);
+            logger.debug("UserService.selectAllUser  in ]", e);
         }
     }
 
@@ -241,15 +241,15 @@ public class UserService {
     }
 
     public void selectAllSuperUser(HttpServletRequest request, Map<String, Object> map) {
-        try{
+        try {
             List<UserBean> userBeans = userDao.selectALL_2();
-            for(UserBean u : userBeans){
+            for (UserBean u : userBeans) {
                 u.setPwd(MD5.decodeMD5(u.getPwd()));
             }
             map.put("user", userBeans);
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
-            logger.debug("UserService.selectAllUser  in ]",  e);
+            logger.debug("UserService.selectAllUser  in ]", e);
         }
     }
 }

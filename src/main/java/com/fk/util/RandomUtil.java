@@ -7,16 +7,16 @@ import java.util.Random;
  */
 public class RandomUtil {
 
-    public static String Random(){
+    public static String Random() {
         Random random = new Random();
         StringBuffer sb = new StringBuffer();
-        for(int i=0;i<8;i++){
+        for (int i = 0; i < 8; i++) {
             int num = random.nextInt(53);
-            if(num % 2 == 0){
-                if(num > 25)
+            if (num % 2 == 0) {
+                if (num > 25)
                     num += 6;
-                sb.append((char)('A' + num));
-            }else{
+                sb.append((char) ('A' + num));
+            } else {
                 sb.append(random.nextInt(10));
             }
         }

@@ -47,15 +47,15 @@ public class OperativeService {
         try {
             UserBean user = userDao.selectByEmail(userBean.getUemail());
             UserBean username = userDao.selectByName(userBean.getUname());
-            if(user != null){
+            if (user != null) {
                 map.put(CommonConst.ERRORCODE, "1");
                 return;
-            }else if(username != null){
+            } else if (username != null) {
                 map.put(CommonConst.ERRORCODE, "4");
                 return;
             }
             userDao.insertSelective(userBean);
-        }catch (Exception e){
+        } catch (Exception e) {
             logger.error("OperativeService.adduser error");
             e.printStackTrace();
         }
@@ -65,12 +65,12 @@ public class OperativeService {
     public void addFtype(FtypeBean ftypeBean, Map<Object, String> map) {
         try {
             FtypeBean ftype = ftypeDao.selectByName(ftypeBean.getFtypename());
-            if(ftype != null){
+            if (ftype != null) {
                 map.put(CommonConst.ERRORCODE, "5");
                 return;
             }
             ftypeDao.insertSelective(ftypeBean);
-        }catch (Exception e){
+        } catch (Exception e) {
             logger.error("OperativeService.addFtype error");
             e.printStackTrace();
         }
@@ -80,7 +80,7 @@ public class OperativeService {
     public void addKtype(KtypeBean ktypeBean, MultipartFile file, Map<Object, String> map) {
         try {
             KtypeBean ftype = ktypeDao.selectByName(ktypeBean.getKtype());
-            if(ftype != null){
+            if (ftype != null) {
                 map.put(CommonConst.ERRORCODE, "5");
                 return;
             }
@@ -95,11 +95,11 @@ public class OperativeService {
             } catch (IOException e) {
                 e.printStackTrace();
             }
-            String url = "/knowledge/upload/ktype/"+filename;
+            String url = "/knowledge/upload/ktype/" + filename;
             ktypeBean.setKtypeurl(url);
 
             ktypeDao.insertSelective(ktypeBean);
-        }catch (Exception e){
+        } catch (Exception e) {
             map.put(CommonConst.ERRORCODE, "7");
             logger.error("OperativeService.addFtype error");
             e.printStackTrace();
@@ -114,14 +114,14 @@ public class OperativeService {
             map.put("ftype", ftypeBeans);
             map.put("ktype", ktypeBeans);
 
-        }catch (Exception e){
+        } catch (Exception e) {
             logger.error("OperativeService.addFtype error");
             e.printStackTrace();
         }
     }
 
     public void addFile(FileBean fileBean, MultipartFile file, Map<Object, String> map) {
-        if(file != null){
+        if (file != null) {
             String filename = file.getOriginalFilename();
 
             fileBean.setFname(filename);
@@ -136,16 +136,16 @@ public class OperativeService {
                 e.printStackTrace();
             }
 
-            String url = "/knowledge/upload/"+filename;
-            if(fileBean.getCanTransforms() == 0){
+            String url = "/knowledge/upload/" + filename;
+            if (fileBean.getCanTransforms() == 0) {
                 transforms(file, fileBean);
-            }else{
+            } else {
                 fileBean.setUrlImage("");
                 fileBean.setUrlTransforms("");
             }
             fileBean.setUrl(url);
             fileBean.setUuidname(filename);
-        }else{
+        } else {
             fileBean.setUrlImage("");
             fileBean.setUrlTransforms("");
             fileBean.setUrl("");
@@ -156,11 +156,11 @@ public class OperativeService {
         String tags = fileBean.getTags();
         StringBuffer sb = new StringBuffer();
         boolean flag = false;
-        for(String tag : tags.split(",")){
-            if(flag == false) {
+        for (String tag : tags.split(",")) {
+            if (flag == false) {
                 sb.append(tag);
                 flag = true;
-            }else {
+            } else {
                 sb.append(CommonConst.SPLITOR);
                 sb.append(tag);
             }

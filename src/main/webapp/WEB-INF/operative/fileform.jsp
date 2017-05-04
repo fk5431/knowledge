@@ -70,7 +70,8 @@
                             <div class="x_content">
                                 <br/>
                                 <form id="demo-form2" action="${pageContext.request.contextPath}/addfile"
-                                      class="form-horizontal form-label-left" enctype="multipart/form-data" method="post">
+                                      class="form-horizontal form-label-left" enctype="multipart/form-data"
+                                      method="post">
 
                                     <div class="form-group">
                                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">标题

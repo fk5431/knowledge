@@ -39,7 +39,8 @@
             <div class="login-box">
 
                 <div class="login_form">
-                    <form action="${pageContext.request.contextPath }/sendmail" name="loginform" id="login_form" class="loginForm" method="post">
+                    <form action="${pageContext.request.contextPath }/sendmail" name="loginform" id="login_form"
+                          class="loginForm" method="post">
                         <%--<input type="hidden" name="did" value="0"/> --%>
                         <%--<input type="hidden" name="to" value="log"/>--%>
                         <div class="uinArea" id="uinArea">
@@ -50,7 +51,7 @@
                         </div>
 
                         <div style="padding-left:50px;margin-top:20px;">
-                            <input type="submit" value="确 认" style="width:150px;"  class="button_blue"/>
+                            <input type="submit" value="确 认" style="width:150px;" class="button_blue"/>
                         </div>
 
                     </form>
@@ -62,24 +63,25 @@
     <!--注册-->
     <div class="qlogin" id="qlogin" style="display: none; ">
         <div class="web_login">
-            <form name="form2" id="regUser" accept-charset="utf-8"  action="${pageContext.request.contextPath }/register"  method="post">
+            <form name="form2" id="regUser" accept-charset="utf-8" action="${pageContext.request.contextPath }/register"
+                  method="post">
                 <%--<input type="hidden" name="to" value="reg"/>--%>
                 <%--<input type="hidden"        name="did" value="0"/>--%>
                 <ul class="reg_form" id="reg-ul">
                     <div id="userCue" class="cue">快速注册请注意格式</div>
                     <li><label for="user" class="input-tips2">用户名：</label>
                         <div class="inputOuter2">
-                            <input type="text" id="user" name="uname" maxlength="16"  class="inputstyle2"/>
+                            <input type="text" id="user" name="uname" maxlength="16" class="inputstyle2"/>
                         </div>
                     </li>
                     <li><label for="user" class="input-tips2">邮箱：</label>
                         <div class="inputOuter2">
-                            <input type="text" id="email" name="email" value="此邮箱用于找回密码"  class="inputstyle2"/>
+                            <input type="text" id="email" name="email" value="此邮箱用于找回密码" class="inputstyle2"/>
                         </div>
                     </li>
                     <li><label for="passwd" class="input-tips2">密码：</label>
                         <div class="inputOuter2">
-                            <input type="password" id="passwd" name="pwd" maxlength="16"  class="inputstyle2"/>
+                            <input type="password" id="passwd" name="pwd" maxlength="16" class="inputstyle2"/>
                         </div>
                     </li>
                     <li><label for="passwd2" class="input-tips2">确认密码：</label>

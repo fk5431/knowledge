@@ -8,13 +8,13 @@ import org.apache.commons.codec.digest.DigestUtils;
  */
 public class MD5 {
 
-    public static String encodeMD5(String data){
+    public static String encodeMD5(String data) {
         byte[] b = Base64.encodeBase64(data.getBytes(), true);
         String str = new String(b);
         return str;
     }
 
-    public static String decodeMD5(String data){
+    public static String decodeMD5(String data) {
         byte[] b = Base64.decodeBase64(data);
         return new String(b);
     }

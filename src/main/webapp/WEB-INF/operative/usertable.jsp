@@ -119,14 +119,19 @@
                         <div class="dataTables_paginate paging_simple_numbers" id="datatable-checkbox_paginate">
                             <ul class="pagination">
 
-                                <li class="paginate_button previous <c:if test="${pageNow == 1}"> disabled</c:if>" id="datatable-checkbox_previous"><a
-                                        href="${pageContext.request.contextPath}/usertable?page=${pageNow-1}" aria-controls="datatable-checkbox" data-dt-idx="0" tabindex="0">Previous</a>
+                                <li class="paginate_button previous <c:if test="${pageNow == 1}"> disabled</c:if>"
+                                    id="datatable-checkbox_previous"><a
+                                        href="${pageContext.request.contextPath}/usertable?page=${pageNow-1}"
+                                        aria-controls="datatable-checkbox" data-dt-idx="0" tabindex="0">Previous</a>
                                 </li>
-                                <c:forEach var="i" begin="1" end="${page}" >
-                                    <li class="paginate_button active"><a href="${pageContext.request.contextPath}/usertable?page=${i}" aria-controls="datatable-checkbox"  data-dt-idx="1" tabindex="0">1</a></li>
+                                <c:forEach var="i" begin="1" end="${page}">
+                                    <li class="paginate_button active"><a
+                                            href="${pageContext.request.contextPath}/usertable?page=${i}"
+                                            aria-controls="datatable-checkbox" data-dt-idx="1" tabindex="0">1</a></li>
                                 </c:forEach>
 
-                                <li class="paginate_button next <c:if test="${pageNow == page}"> disabled</c:if> " id="datatable-checkbox_next">
+                                <li class="paginate_button next <c:if test="${pageNow == page}"> disabled</c:if> "
+                                    id="datatable-checkbox_next">
                                     <a href="${pageContext.request.contextPath}/usertable?page=${pageNow+1}"
                                        aria-controls="datatable-checkbox" data-dt-idx="7" tabindex="0">Next</a>
                                 </li>

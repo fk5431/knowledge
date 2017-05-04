@@ -7,12 +7,179 @@
     </artifacts-to-build>
   </component>
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/main/java/com/fk/util/SendMail.java" line="113" />
+    <bookmark url="file://$PROJECT_DIR$/src/main/java/com/fk/util/SendMail.java" line="115" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="11669da5-9530-45d4-b1a5-63fcb18bf569" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/baidu/ueditor/ActionEnter.java" afterPath="$PROJECT_DIR$/src/main/java/com/baidu/ueditor/ActionEnter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/baidu/ueditor/ConfigManager.java" afterPath="$PROJECT_DIR$/src/main/java/com/baidu/ueditor/ConfigManager.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/baidu/ueditor/Encoder.java" afterPath="$PROJECT_DIR$/src/main/java/com/baidu/ueditor/Encoder.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/baidu/ueditor/PathFormat.java" afterPath="$PROJECT_DIR$/src/main/java/com/baidu/ueditor/PathFormat.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/baidu/ueditor/define/ActionMap.java" afterPath="$PROJECT_DIR$/src/main/java/com/baidu/ueditor/define/ActionMap.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/baidu/ueditor/define/AppInfo.java" afterPath="$PROJECT_DIR$/src/main/java/com/baidu/ueditor/define/AppInfo.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/baidu/ueditor/define/BaseState.java" afterPath="$PROJECT_DIR$/src/main/java/com/baidu/ueditor/define/BaseState.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/baidu/ueditor/define/FileType.java" afterPath="$PROJECT_DIR$/src/main/java/com/baidu/ueditor/define/FileType.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/baidu/ueditor/define/MIMEType.java" afterPath="$PROJECT_DIR$/src/main/java/com/baidu/ueditor/define/MIMEType.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/baidu/ueditor/define/MultiState.java" afterPath="$PROJECT_DIR$/src/main/java/com/baidu/ueditor/define/MultiState.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/baidu/ueditor/hunter/FileManager.java" afterPath="$PROJECT_DIR$/src/main/java/com/baidu/ueditor/hunter/FileManager.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/baidu/ueditor/hunter/ImageHunter.java" afterPath="$PROJECT_DIR$/src/main/java/com/baidu/ueditor/hunter/ImageHunter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/baidu/ueditor/upload/Base64Uploader.java" afterPath="$PROJECT_DIR$/src/main/java/com/baidu/ueditor/upload/Base64Uploader.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/baidu/ueditor/upload/BinaryUploader.java" afterPath="$PROJECT_DIR$/src/main/java/com/baidu/ueditor/upload/BinaryUploader.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/baidu/ueditor/upload/StorageManager.java" afterPath="$PROJECT_DIR$/src/main/java/com/baidu/ueditor/upload/StorageManager.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/baidu/ueditor/upload/Uploader.java" afterPath="$PROJECT_DIR$/src/main/java/com/baidu/ueditor/upload/Uploader.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/fk/bean/FileReturnBean.java" afterPath="$PROJECT_DIR$/src/main/java/com/fk/bean/FileReturnBean.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/fk/controller/LoginC.java" afterPath="$PROJECT_DIR$/src/main/java/com/fk/controller/LoginC.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/fk/controller/OperativeC.java" afterPath="$PROJECT_DIR$/src/main/java/com/fk/controller/OperativeC.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/fk/controller/Resource.java" afterPath="$PROJECT_DIR$/src/main/java/com/fk/controller/Resource.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/fk/service/FtypeService.java" afterPath="$PROJECT_DIR$/src/main/java/com/fk/service/FtypeService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/fk/service/KtypeService.java" afterPath="$PROJECT_DIR$/src/main/java/com/fk/service/KtypeService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/fk/service/OperativeService.java" afterPath="$PROJECT_DIR$/src/main/java/com/fk/service/OperativeService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/fk/service/ResourceService.java" afterPath="$PROJECT_DIR$/src/main/java/com/fk/service/ResourceService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/fk/service/UserService.java" afterPath="$PROJECT_DIR$/src/main/java/com/fk/service/UserService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/fk/util/MD5.java" afterPath="$PROJECT_DIR$/src/main/java/com/fk/util/MD5.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/fk/util/RandomUtil.java" afterPath="$PROJECT_DIR$/src/main/java/com/fk/util/RandomUtil.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/fk/util/SendMail.java" afterPath="$PROJECT_DIR$/src/main/java/com/fk/util/SendMail.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/fk/util/StringUtil.java" afterPath="$PROJECT_DIR$/src/main/java/com/fk/util/StringUtil.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/dispatcher-servlet.xml" afterPath="$PROJECT_DIR$/src/main/resources/dispatcher-servlet.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/jdbc.properties" afterPath="$PROJECT_DIR$/src/main/resources/jdbc.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/log4j.properties" afterPath="$PROJECT_DIR$/src/main/resources/log4j.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mapping/BrowseMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapping/BrowseMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mapping/CdirectoryMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapping/CdirectoryMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mapping/CdocumentMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapping/CdocumentMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mapping/FileMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapping/FileMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mapping/FileRolesMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapping/FileRolesMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mapping/FtypeMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapping/FtypeMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mapping/KtypeMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapping/KtypeMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mapping/RoleMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapping/RoleMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mapping/RuleMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapping/RuleMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mapping/TagsMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapping/TagsMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mapping/UserMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapping/UserMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mapping/UserRolesMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapping/UserRolesMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/forgot.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/forgot.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/head.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/head.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/index.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/index.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/info/error.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/info/error.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/info/info.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/info/info.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/login.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/login.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/operative/fileform.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/operative/fileform.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/operative/filetable.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/operative/filetable.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/operative/ftypetable.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/operative/ftypetable.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/operative/head.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/operative/head.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/operative/index.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/operative/index.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/operative/ktypeform.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/operative/ktypeform.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/operative/ktypetable.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/operative/ktypetable.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/operative/login.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/operative/login.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/operative/superusertable.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/operative/superusertable.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/operative/usertable.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/operative/usertable.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resource.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resource.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/css/index_style.css" afterPath="$PROJECT_DIR$/src/main/webapp/css/index_style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/css/login.css" afterPath="$PROJECT_DIR$/src/main/webapp/css/login.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/css/resource/index.css" afterPath="$PROJECT_DIR$/src/main/webapp/css/resource/index.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/css/resource/page.css" afterPath="$PROJECT_DIR$/src/main/webapp/css/resource/page.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/js/login/login.js" afterPath="$PROJECT_DIR$/src/main/webapp/js/login/login.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/js/resource/KB_overlay.js" afterPath="$PROJECT_DIR$/src/main/webapp/js/resource/KB_overlay.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/js/resource/buildUrl.js" afterPath="$PROJECT_DIR$/src/main/webapp/js/resource/buildUrl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/js/resource/oop.js" afterPath="$PROJECT_DIR$/src/main/webapp/js/resource/oop.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/uedite/dialogs/anchor/anchor.html" afterPath="$PROJECT_DIR$/src/main/webapp/uedite/dialogs/anchor/anchor.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/uedite/dialogs/attachment/attachment.css" afterPath="$PROJECT_DIR$/src/main/webapp/uedite/dialogs/attachment/attachment.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/uedite/dialogs/attachment/attachment.html" afterPath="$PROJECT_DIR$/src/main/webapp/uedite/dialogs/attachment/attachment.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/uedite/dialogs/attachment/attachment.js" afterPath="$PROJECT_DIR$/src/main/webapp/uedite/dialogs/attachment/attachment.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/uedite/dialogs/background/background.css" afterPath="$PROJECT_DIR$/src/main/webapp/uedite/dialogs/background/background.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/uedite/dialogs/background/background.html" afterPath="$PROJECT_DIR$/src/main/webapp/uedite/dialogs/background/background.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/uedite/dialogs/background/background.js" afterPath="$PROJECT_DIR$/src/main/webapp/uedite/dialogs/background/background.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/uedite/dialogs/charts/chart.config.js" afterPath="$PROJECT_DIR$/src/main/webapp/uedite/dialogs/charts/chart.config.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/uedite/dialogs/charts/charts.css" afterPath="$PROJECT_DIR$/src/main/webapp/uedite/dialogs/charts/charts.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/uedite/dialogs/charts/charts.html" afterPath="$PROJECT_DIR$/src/main/webapp/uedite/dialogs/charts/charts.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/uedite/dialogs/charts/charts.js" afterPath="$PROJECT_DIR$/src/main/webapp/uedite/dialogs/charts/charts.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/uedite/dialogs/emotion/emotion.css" afterPath="$PROJECT_DIR$/src/main/webapp/uedite/dialogs/emotion/emotion.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/uedite/dialogs/emotion/emotion.html" afterPath="$PROJECT_DIR$/src/main/webapp/uedite/dialogs/emotion/emotion.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/uedite/dialogs/emotion/emotion.js" afterPath="$PROJECT_DIR$/src/main/webapp/uedite/dialogs/emotion/emotion.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/uedite/dialogs/gmap/gmap.html" afterPath="$PROJECT_DIR$/src/main/webapp/uedite/dialogs/gmap/gmap.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/uedite/dialogs/help/help.css" afterPath="$PROJECT_DIR$/src/main/webapp/uedite/dialogs/help/help.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/uedite/dialogs/help/help.js" afterPath="$PROJECT_DIR$/src/main/webapp/uedite/dialogs/help/help.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/uedite/dialogs/image/image.css" afterPath="$PROJECT_DIR$/src/main/webapp/uedite/dialogs/image/image.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/uedite/dialogs/image/image.html" afterPath="$PROJECT_DIR$/src/main/webapp/uedite/dialogs/image/image.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/uedite/dialogs/image/image.js" afterPath="$PROJECT_DIR$/src/main/webapp/uedite/dialogs/image/image.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/uedite/dialogs/insertframe/insertframe.html" afterPath="$PROJECT_DIR$/src/main/webapp/uedite/dialogs/insertframe/insertframe.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/uedite/dialogs/internal.js" afterPath="$PROJECT_DIR$/src/main/webapp/uedite/dialogs/internal.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/uedite/dialogs/link/link.html" afterPath="$PROJECT_DIR$/src/main/webapp/uedite/dialogs/link/link.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/uedite/dialogs/map/map.html" afterPath="$PROJECT_DIR$/src/main/webapp/uedite/dialogs/map/map.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/uedite/dialogs/map/show.html" afterPath="$PROJECT_DIR$/src/main/webapp/uedite/dialogs/map/show.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/uedite/dialogs/music/music.css" afterPath="$PROJECT_DIR$/src/main/webapp/uedite/dialogs/music/music.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/uedite/dialogs/music/music.js" afterPath="$PROJECT_DIR$/src/main/webapp/uedite/dialogs/music/music.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/uedite/dialogs/preview/preview.html" afterPath="$PROJECT_DIR$/src/main/webapp/uedite/dialogs/preview/preview.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/uedite/dialogs/scrawl/scrawl.css" afterPath="$PROJECT_DIR$/src/main/webapp/uedite/dialogs/scrawl/scrawl.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/uedite/dialogs/scrawl/scrawl.html" afterPath="$PROJECT_DIR$/src/main/webapp/uedite/dialogs/scrawl/scrawl.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/uedite/dialogs/scrawl/scrawl.js" afterPath="$PROJECT_DIR$/src/main/webapp/uedite/dialogs/scrawl/scrawl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/uedite/dialogs/searchreplace/searchreplace.html" afterPath="$PROJECT_DIR$/src/main/webapp/uedite/dialogs/searchreplace/searchreplace.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/uedite/dialogs/searchreplace/searchreplace.js" afterPath="$PROJECT_DIR$/src/main/webapp/uedite/dialogs/searchreplace/searchreplace.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/uedite/dialogs/snapscreen/snapscreen.html" afterPath="$PROJECT_DIR$/src/main/webapp/uedite/dialogs/snapscreen/snapscreen.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/uedite/dialogs/spechars/spechars.html" afterPath="$PROJECT_DIR$/src/main/webapp/uedite/dialogs/spechars/spechars.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/uedite/dialogs/spechars/spechars.js" afterPath="$PROJECT_DIR$/src/main/webapp/uedite/dialogs/spechars/spechars.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/uedite/dialogs/table/edittable.css" afterPath="$PROJECT_DIR$/src/main/webapp/uedite/dialogs/table/edittable.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/uedite/dialogs/table/edittable.html" afterPath="$PROJECT_DIR$/src/main/webapp/uedite/dialogs/table/edittable.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/uedite/dialogs/table/edittable.js" afterPath="$PROJECT_DIR$/src/main/webapp/uedite/dialogs/table/edittable.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/uedite/dialogs/table/edittd.html" afterPath="$PROJECT_DIR$/src/main/webapp/uedite/dialogs/table/edittd.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/uedite/dialogs/template/config.js" afterPath="$PROJECT_DIR$/src/main/webapp/uedite/dialogs/template/config.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/uedite/dialogs/template/template.css" afterPath="$PROJECT_DIR$/src/main/webapp/uedite/dialogs/template/template.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/uedite/dialogs/template/template.html" afterPath="$PROJECT_DIR$/src/main/webapp/uedite/dialogs/template/template.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/uedite/dialogs/template/template.js" afterPath="$PROJECT_DIR$/src/main/webapp/uedite/dialogs/template/template.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/uedite/dialogs/video/video.css" afterPath="$PROJECT_DIR$/src/main/webapp/uedite/dialogs/video/video.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/uedite/dialogs/video/video.html" afterPath="$PROJECT_DIR$/src/main/webapp/uedite/dialogs/video/video.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/uedite/dialogs/video/video.js" afterPath="$PROJECT_DIR$/src/main/webapp/uedite/dialogs/video/video.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/uedite/dialogs/webapp/webapp.html" afterPath="$PROJECT_DIR$/src/main/webapp/uedite/dialogs/webapp/webapp.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/uedite/dialogs/wordimage/tangram.js" afterPath="$PROJECT_DIR$/src/main/webapp/uedite/dialogs/wordimage/tangram.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/uedite/dialogs/wordimage/wordimage.html" afterPath="$PROJECT_DIR$/src/main/webapp/uedite/dialogs/wordimage/wordimage.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/uedite/dialogs/wordimage/wordimage.js" afterPath="$PROJECT_DIR$/src/main/webapp/uedite/dialogs/wordimage/wordimage.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/uedite/index.html" afterPath="$PROJECT_DIR$/src/main/webapp/uedite/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/uedite/index.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/uedite/index.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/uedite/jsp/config.json" afterPath="$PROJECT_DIR$/src/main/webapp/uedite/jsp/config.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/uedite/jsp/controller.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/uedite/jsp/controller.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/uedite/lang/en/en.js" afterPath="$PROJECT_DIR$/src/main/webapp/uedite/lang/en/en.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/uedite/themes/default/css/ueditor.css" afterPath="$PROJECT_DIR$/src/main/webapp/uedite/themes/default/css/ueditor.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/uedite/third-party/SyntaxHighlighter/shCore.js" afterPath="$PROJECT_DIR$/src/main/webapp/uedite/third-party/SyntaxHighlighter/shCore.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/uedite/third-party/codemirror/codemirror.css" afterPath="$PROJECT_DIR$/src/main/webapp/uedite/third-party/codemirror/codemirror.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/uedite/third-party/codemirror/codemirror.js" afterPath="$PROJECT_DIR$/src/main/webapp/uedite/third-party/codemirror/codemirror.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/uedite/third-party/highcharts/adapters/mootools-adapter.src.js" afterPath="$PROJECT_DIR$/src/main/webapp/uedite/third-party/highcharts/adapters/mootools-adapter.src.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/uedite/third-party/highcharts/adapters/prototype-adapter.src.js" afterPath="$PROJECT_DIR$/src/main/webapp/uedite/third-party/highcharts/adapters/prototype-adapter.src.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/uedite/third-party/highcharts/adapters/standalone-framework.src.js" afterPath="$PROJECT_DIR$/src/main/webapp/uedite/third-party/highcharts/adapters/standalone-framework.src.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/uedite/third-party/highcharts/highcharts-more.src.js" afterPath="$PROJECT_DIR$/src/main/webapp/uedite/third-party/highcharts/highcharts-more.src.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/uedite/third-party/highcharts/highcharts.src.js" afterPath="$PROJECT_DIR$/src/main/webapp/uedite/third-party/highcharts/highcharts.src.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/uedite/third-party/highcharts/modules/annotations.src.js" afterPath="$PROJECT_DIR$/src/main/webapp/uedite/third-party/highcharts/modules/annotations.src.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/uedite/third-party/highcharts/modules/canvas-tools.src.js" afterPath="$PROJECT_DIR$/src/main/webapp/uedite/third-party/highcharts/modules/canvas-tools.src.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/uedite/third-party/highcharts/modules/data.src.js" afterPath="$PROJECT_DIR$/src/main/webapp/uedite/third-party/highcharts/modules/data.src.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/uedite/third-party/highcharts/modules/drilldown.src.js" afterPath="$PROJECT_DIR$/src/main/webapp/uedite/third-party/highcharts/modules/drilldown.src.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/uedite/third-party/highcharts/modules/exporting.src.js" afterPath="$PROJECT_DIR$/src/main/webapp/uedite/third-party/highcharts/modules/exporting.src.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/uedite/third-party/highcharts/modules/funnel.src.js" afterPath="$PROJECT_DIR$/src/main/webapp/uedite/third-party/highcharts/modules/funnel.src.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/uedite/third-party/highcharts/modules/heatmap.src.js" afterPath="$PROJECT_DIR$/src/main/webapp/uedite/third-party/highcharts/modules/heatmap.src.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/uedite/third-party/highcharts/modules/map.src.js" afterPath="$PROJECT_DIR$/src/main/webapp/uedite/third-party/highcharts/modules/map.src.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/uedite/third-party/highcharts/modules/no-data-to-display.src.js" afterPath="$PROJECT_DIR$/src/main/webapp/uedite/third-party/highcharts/modules/no-data-to-display.src.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/uedite/third-party/highcharts/themes/dark-blue.js" afterPath="$PROJECT_DIR$/src/main/webapp/uedite/third-party/highcharts/themes/dark-blue.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/uedite/third-party/highcharts/themes/dark-green.js" afterPath="$PROJECT_DIR$/src/main/webapp/uedite/third-party/highcharts/themes/dark-green.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/uedite/third-party/highcharts/themes/gray.js" afterPath="$PROJECT_DIR$/src/main/webapp/uedite/third-party/highcharts/themes/gray.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/uedite/third-party/highcharts/themes/grid.js" afterPath="$PROJECT_DIR$/src/main/webapp/uedite/third-party/highcharts/themes/grid.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/uedite/third-party/highcharts/themes/skies.js" afterPath="$PROJECT_DIR$/src/main/webapp/uedite/third-party/highcharts/themes/skies.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/uedite/third-party/jquery-1.10.2.js" afterPath="$PROJECT_DIR$/src/main/webapp/uedite/third-party/jquery-1.10.2.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/uedite/third-party/jquery-1.10.2.min.map" afterPath="$PROJECT_DIR$/src/main/webapp/uedite/third-party/jquery-1.10.2.min.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/uedite/third-party/video-js/font/vjs.svg" afterPath="$PROJECT_DIR$/src/main/webapp/uedite/third-party/video-js/font/vjs.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/uedite/third-party/video-js/video-js.css" afterPath="$PROJECT_DIR$/src/main/webapp/uedite/third-party/video-js/video-js.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/uedite/third-party/video-js/video.dev.js" afterPath="$PROJECT_DIR$/src/main/webapp/uedite/third-party/video-js/video.dev.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/uedite/third-party/webuploader/webuploader.css" afterPath="$PROJECT_DIR$/src/main/webapp/uedite/third-party/webuploader/webuploader.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/uedite/third-party/webuploader/webuploader.custom.js" afterPath="$PROJECT_DIR$/src/main/webapp/uedite/third-party/webuploader/webuploader.custom.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/uedite/third-party/webuploader/webuploader.flashonly.js" afterPath="$PROJECT_DIR$/src/main/webapp/uedite/third-party/webuploader/webuploader.flashonly.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/uedite/third-party/webuploader/webuploader.html5only.js" afterPath="$PROJECT_DIR$/src/main/webapp/uedite/third-party/webuploader/webuploader.html5only.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/uedite/third-party/webuploader/webuploader.js" afterPath="$PROJECT_DIR$/src/main/webapp/uedite/third-party/webuploader/webuploader.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/uedite/third-party/webuploader/webuploader.withoutimage.js" afterPath="$PROJECT_DIR$/src/main/webapp/uedite/third-party/webuploader/webuploader.withoutimage.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/uedite/third-party/zeroclipboard/ZeroClipboard.js" afterPath="$PROJECT_DIR$/src/main/webapp/uedite/third-party/zeroclipboard/ZeroClipboard.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/uedite/ueditor.all.js" afterPath="$PROJECT_DIR$/src/main/webapp/uedite/ueditor.all.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/uedite/ueditor.config.js" afterPath="$PROJECT_DIR$/src/main/webapp/uedite/ueditor.config.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/uedite/ueditor.parse.js" afterPath="$PROJECT_DIR$/src/main/webapp/uedite/ueditor.parse.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/uedite/zh-cn.js" afterPath="$PROJECT_DIR$/src/main/webapp/uedite/zh-cn.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/dispatcher-servlet.xml" afterPath="$PROJECT_DIR$/target/classes/dispatcher-servlet.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/jdbc.properties" afterPath="$PROJECT_DIR$/target/classes/jdbc.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/log4j.properties" afterPath="$PROJECT_DIR$/target/classes/log4j.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/mapping/UserMapper.xml" afterPath="$PROJECT_DIR$/target/classes/mapping/UserMapper.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -40,14 +207,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="resource.jsp" pinned="false" current-in-tab="false">
+      <file leaf-file-name="resource.jsp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/resource.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="164">
-              <caret line="38" column="30" lean-forward="false" selection-start-line="38" selection-start-column="30" selection-end-line="38" selection-end-column="30" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="18">
+              <caret line="105" column="57" lean-forward="false" selection-start-line="105" selection-start-column="57" selection-end-line="105" selection-end-column="57" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -55,7 +220,7 @@
       <file leaf-file-name="ResourceService.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/fk/service/ResourceService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="239">
+            <state relative-caret-position="540">
               <caret line="45" column="16" lean-forward="false" selection-start-line="45" selection-start-column="16" selection-end-line="45" selection-end-column="16" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -64,23 +229,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.css" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/css/resource/index.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-366">
-              <caret line="725" column="0" lean-forward="false" selection-start-line="725" selection-start-column="0" selection-end-line="725" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="FileReturnBean.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/fk/bean/FileReturnBean.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="445">
-              <caret line="33" column="60" lean-forward="false" selection-start-line="33" selection-start-column="60" selection-end-line="33" selection-end-column="60" />
+            <state relative-caret-position="558">
+              <caret line="33" column="63" lean-forward="false" selection-start-line="33" selection-start-column="63" selection-end-line="33" selection-end-column="63" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#1233#1234#0" expanded="false" />
+                <element signature="e#1261#1262#0" expanded="false" />
+                <element signature="e#1303#1304#0" expanded="false" />
+                <element signature="e#1337#1338#0" expanded="false" />
+                <element signature="e#1373#1374#0" expanded="false" />
+                <element signature="e#1405#1406#0" expanded="false" />
+                <element signature="e#1455#1456#0" expanded="false" />
+                <element signature="e#1497#1498#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -89,11 +251,9 @@
       <file leaf-file-name="Resource.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/fk/controller/Resource.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
+            <state relative-caret-position="270">
               <caret line="23" column="30" lean-forward="false" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="30" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -217,8 +377,8 @@
         <option value="$PROJECT_DIR$/src/main/java/com/fk/bean/FileReturnBean.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/fk/service/ResourceService.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/index.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/resource.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/css/resource/index.css" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/resource.jsp" />
       </list>
     </option>
   </component>
@@ -313,8 +473,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -662,6 +820,8 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1390,7 +1550,8 @@
       <workItem from="1493706038793" duration="4604000" />
       <workItem from="1493710719732" duration="527000" />
       <workItem from="1493711266132" duration="7173000" />
-      <workItem from="1493773888837" duration="14381000" />
+      <workItem from="1493773888837" duration="16273000" />
+      <workItem from="1493862521332" duration="134000" />
     </task>
     <task id="LOCAL-00001" summary="ssm  success">
       <created>1486712078887</created>
@@ -1616,11 +1777,18 @@
       <option name="project" value="LOCAL" />
       <updated>1493795803698</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="资源页面">
+      <created>1493795950742</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1493795950742</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="188354000" />
+    <option name="totallyTimeSpent" value="190380000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1855" height="1056" extended-state="6" />
@@ -1640,18 +1808,17 @@
       <window_info id="JSF" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1920668" sideWeight="0.49806523" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1920668" sideWeight="0.49806523" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2348643" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2807933" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32881" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15201768" sideWeight="0.49435028" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15367606" sideWeight="0.49435028" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20121615" sideWeight="0.50564975" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
@@ -1660,6 +1827,7 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2348643" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30897704" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -1689,6 +1857,7 @@
     <MESSAGE value="user" />
     <MESSAGE value="资源页面" />
     <option name="LAST_COMMIT_MESSAGE" value="资源页面" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1713,7 +1882,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/fk/util/SendMail.java</url>
-          <line>115</line>
+          <line>117</line>
           <properties />
           <option name="timeStamp" value="48" />
         </line-breakpoint>
@@ -1799,7 +1968,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1548">
           <caret line="86" column="95" lean-forward="false" selection-start-line="86" selection-start-column="95" selection-end-line="86" selection-end-column="95" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1807,7 +1975,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1530">
           <caret line="85" column="90" lean-forward="false" selection-start-line="85" selection-start-column="90" selection-end-line="85" selection-end-column="90" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1815,7 +1982,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="643">
           <caret line="96" column="115" lean-forward="false" selection-start-line="96" selection-start-column="115" selection-end-line="96" selection-end-column="115" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1839,8 +2005,8 @@
         <state relative-caret-position="175">
           <caret line="25" column="25" lean-forward="false" selection-start-line="25" selection-start-column="25" selection-end-line="25" selection-end-column="25" />
           <folding>
-            <element signature="e#4749#5067#0" expanded="false" />
-            <element signature="e#5066#5067#0" expanded="false" />
+            <element signature="e#4879#5198#0" expanded="false" />
+            <element signature="e#5197#5198#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1863,7 +2029,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="252">
           <caret line="14" column="26" lean-forward="false" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1871,10 +2036,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="432">
           <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-          <folding>
-            <element signature="e#614#615#0" expanded="false" />
-            <element signature="e#669#670#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1882,7 +2043,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1890,7 +2050,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1404">
           <caret line="78" column="24" lean-forward="false" selection-start-line="78" selection-start-column="24" selection-end-line="78" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1898,7 +2057,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
           <caret line="23" column="74" lean-forward="false" selection-start-line="23" selection-start-column="74" selection-end-line="23" selection-end-column="74" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1921,7 +2079,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="553">
           <caret line="48" column="29" lean-forward="false" selection-start-line="48" selection-start-column="29" selection-end-line="48" selection-end-column="29" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1936,7 +2093,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="522">
           <caret line="105" column="82" lean-forward="true" selection-start-line="105" selection-start-column="82" selection-end-line="105" selection-end-column="82" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1954,7 +2110,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="309">
           <caret line="84" column="16" lean-forward="false" selection-start-line="84" selection-start-column="16" selection-end-line="84" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1970,7 +2125,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="666">
           <caret line="37" column="30" lean-forward="false" selection-start-line="37" selection-start-column="30" selection-end-line="37" selection-end-column="30" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1978,7 +2132,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="79">
           <caret line="124" column="0" lean-forward="false" selection-start-line="124" selection-start-column="0" selection-end-line="124" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1986,7 +2139,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="828">
           <caret line="46" column="85" lean-forward="false" selection-start-line="46" selection-start-column="76" selection-end-line="46" selection-end-column="85" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1994,7 +2146,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="252">
           <caret line="32" column="51" lean-forward="true" selection-start-line="32" selection-start-column="8" selection-end-line="32" selection-end-column="51" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2002,7 +2153,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2052,22 +2202,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
           <caret line="18" column="47" lean-forward="false" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="47" />
-          <folding>
-            <marker date="1493719268923" expanded="true" signature="765:826" ph="select from user" />
-            <marker date="1493719268923" expanded="true" signature="765:862" ph="select from user" />
-            <marker date="1493719268923" expanded="true" signature="765:863" ph="select from user" />
-            <marker date="1493719268923" expanded="true" signature="928:961" ph="select count... user" />
-            <marker date="1493719268923" expanded="true" signature="1033:1117" ph="select from user" />
-            <marker date="1493719268923" expanded="true" signature="1189:1273" ph="select from user" />
-            <marker date="1493719268923" expanded="true" signature="1379:1483" ph="select from user" />
-            <marker date="1493719268923" expanded="true" signature="1590:1696" ph="select from user" />
-            <marker date="1493719268923" expanded="true" signature="1809:1910" ph="select from user" />
-            <marker date="1493719268923" expanded="true" signature="1997:2053" ph="delete from " />
-            <marker date="1493719268923" expanded="true" signature="2131:2338" ph="insert into user... " />
-            <marker date="1493719268923" expanded="true" signature="3379:3810" ph="update user " />
-            <marker date="1493719268923" expanded="true" signature="3900:4120" ph="update user " />
-            <marker date="1493719268923" expanded="true" signature="4205:4431" ph="update user " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2075,19 +2209,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="38" column="50" lean-forward="false" selection-start-line="38" selection-start-column="50" selection-end-line="38" selection-end-column="50" />
-          <folding>
-            <marker date="1493791302185" expanded="true" signature="1841:1949" ph="select , fro... " />
-            <marker date="1493791302185" expanded="true" signature="1841:1989" ph="select , fro... " />
-            <marker date="1493791302185" expanded="true" signature="1841:1990" ph="select , fro... " />
-            <marker date="1493791302185" expanded="true" signature="2059:2092" ph="select , fro... " />
-            <marker date="1493791302185" expanded="true" signature="2210:2358" ph="select , fro... " />
-            <marker date="1493791302185" expanded="true" signature="2445:2501" ph="delete from " />
-            <marker date="1493791302185" expanded="true" signature="2579:3267" ph="insert into file... " />
-            <marker date="1493791302185" expanded="true" signature="5993:7502" ph="update file " />
-            <marker date="1493791302185" expanded="true" signature="7601:8319" ph="update file " />
-            <marker date="1493791302185" expanded="true" signature="8409:9096" ph="update file " />
-            <marker date="1493791302185" expanded="true" signature="9038:9096" ph="update file " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2110,26 +2231,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fk/bean/FileReturnBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="445">
-          <caret line="33" column="60" lean-forward="false" selection-start-line="33" selection-start-column="60" selection-end-line="33" selection-end-column="60" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fk/controller/Resource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="23" column="30" lean-forward="false" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="324">
@@ -2142,27 +2243,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-220">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/resource.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="38" column="30" lean-forward="false" selection-start-line="38" selection-start-column="30" selection-end-line="38" selection-end-column="30" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fk/service/ResourceService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="239">
-          <caret line="45" column="16" lean-forward="false" selection-start-line="45" selection-start-column="16" selection-end-line="45" selection-end-column="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2170,6 +2250,48 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-366">
           <caret line="725" column="0" lean-forward="false" selection-start-line="725" selection-start-column="0" selection-end-line="725" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/resource.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="105" column="57" lean-forward="false" selection-start-line="105" selection-start-column="57" selection-end-line="105" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fk/service/ResourceService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="45" column="16" lean-forward="false" selection-start-line="45" selection-start-column="16" selection-end-line="45" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fk/bean/FileReturnBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="558">
+          <caret line="33" column="63" lean-forward="false" selection-start-line="33" selection-start-column="63" selection-end-line="33" selection-end-column="63" />
+          <folding>
+            <element signature="e#1233#1234#0" expanded="false" />
+            <element signature="e#1261#1262#0" expanded="false" />
+            <element signature="e#1303#1304#0" expanded="false" />
+            <element signature="e#1337#1338#0" expanded="false" />
+            <element signature="e#1373#1374#0" expanded="false" />
+            <element signature="e#1405#1406#0" expanded="false" />
+            <element signature="e#1455#1456#0" expanded="false" />
+            <element signature="e#1497#1498#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fk/controller/Resource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="23" column="30" lean-forward="false" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="30" />
           <folding />
         </state>
       </provider>

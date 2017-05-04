@@ -5,7 +5,7 @@ import com.fk.util.CommonConst;
 
 import java.util.Date;
 
-public class FileReturnBean extends FileBean{
+public class FileReturnBean extends FileBean {
 
     private String uname;
 
@@ -28,10 +28,10 @@ public class FileReturnBean extends FileBean{
         this.setUploadtime(fileBean.getUploadtime());
         this.setKtypeid(fileBean.getKtypeid());
         StringBuffer sb = new StringBuffer();
-        for(String tag : fileBean.getTags().split(CommonConst.SPLITOR)){
+        for (String tag : fileBean.getTags().split(CommonConst.SPLITOR)) {
             sb.append(tag + ",");
         }
-        this.setTags(sb.toString().substring(0,sb.length()-1));
+        this.setTags(sb.toString().substring(0, sb.length() - 1));
     }
 
     public String getUname() {
@@ -49,7 +49,6 @@ public class FileReturnBean extends FileBean{
     public void setFtypename(String ftypename) {
         this.ftypename = ftypename;
     }
-
 
 
 }

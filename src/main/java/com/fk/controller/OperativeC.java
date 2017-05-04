@@ -58,7 +58,7 @@ public class OperativeC {
     }
 
     @RequestMapping("/addfile")
-    public String addFile(HttpServletRequest request, @RequestParam("file") MultipartFile file, Map<Object, String > map){
+    public String addFile(HttpServletRequest request, @RequestParam("file") MultipartFile file, Map<Object, String> map) {
 
         try {
             String title = request.getParameter("title");
@@ -100,7 +100,7 @@ public class OperativeC {
 
 
     @RequestMapping("/adduser")
-    public String adduser(HttpServletRequest request, HttpServletResponse response, Map<String, Object> map){
+    public String adduser(HttpServletRequest request, HttpServletResponse response, Map<String, Object> map) {
         try {
             String name = request.getParameter("name");
             String email = request.getParameter("email");
@@ -117,19 +117,19 @@ public class OperativeC {
             userBean.setIsmanage(Integer.parseInt(manage));
             Cookie[] cookies = request.getCookies();
             boolean flag = false;
-            for(Cookie c : cookies){
-                if(CommonConst.SUPERUSERID.equals(c.getName())){
-                    if(CommonConst.YES.equals(c.getValue())){
+            for (Cookie c : cookies) {
+                if (CommonConst.SUPERUSERID.equals(c.getName())) {
+                    if (CommonConst.YES.equals(c.getValue())) {
                         flag = true;
                     }
                 }
             }
-            if(flag == false && Integer.parseInt(manage) == 0){
+            if (flag == false && Integer.parseInt(manage) == 0) {
                 map.put(CommonConst.ERRORCODE, 8);
                 return "/info/error";
             }
             operativeService.adduser(userBean, map);
-            if(map.get(CommonConst.ERRORCODE) != null){
+            if (map.get(CommonConst.ERRORCODE) != null) {
                 return "/info/error";
             }
         } catch (NumberFormatException e) {
@@ -139,7 +139,7 @@ public class OperativeC {
     }
 
     @RequestMapping("/addftype")
-    public String addftype(HttpServletRequest request, Map<Object, String> map){
+    public String addftype(HttpServletRequest request, Map<Object, String> map) {
         try {
             String ftypename = request.getParameter("ftypename");
             String ftype = request.getParameter("ftype");
@@ -153,7 +153,7 @@ public class OperativeC {
             operativeService.addFtype(ftypeBean, map);
 
 
-            if(map.get(CommonConst.ERRORCODE) != null){
+            if (map.get(CommonConst.ERRORCODE) != null) {
                 return "/info/error";
             }
         } catch (NumberFormatException e) {
@@ -163,7 +163,7 @@ public class OperativeC {
     }
 
     @RequestMapping("/addktype")
-    public String addktype(HttpServletRequest request, @RequestParam("file") MultipartFile file,  Map<Object, String> map){
+    public String addktype(HttpServletRequest request, @RequestParam("file") MultipartFile file, Map<Object, String> map) {
         try {
             String ktype = request.getParameter("ktype");
             Preconditions.checkNotNull(ktype, "ktype cannot be null");
@@ -176,7 +176,7 @@ public class OperativeC {
             operativeService.addKtype(ktypeBean, file, map);
 
 
-            if(map.get(CommonConst.ERRORCODE) != null){
+            if (map.get(CommonConst.ERRORCODE) != null) {
                 return "/info/error";
             }
         } catch (NumberFormatException e) {
@@ -186,76 +186,80 @@ public class OperativeC {
     }
 
     @RequestMapping("/fileform")
-    public String fileform(HttpServletRequest request, Map<String, Object> map){
+    public String fileform(HttpServletRequest request, Map<String, Object> map) {
 
         operativeService.fileform(map);
 
         return "/operative/fileform";
     }
+
     @RequestMapping("/operativelogin")
-    public String login(HttpServletRequest request, HttpServletResponse response, Map<String, Object> map){
+    public String login(HttpServletRequest request, HttpServletResponse response, Map<String, Object> map) {
         String name = request.getParameter("name");
         String pwd = request.getParameter("pwd");
         UserBean userBean = new UserBean();
         userBean.setUname(name);
         userBean.setPwd(pwd);
         userService.superlogin(userBean, response, map);
-        if(map.get(CommonConst.ERRORCODE) != null){
+        if (map.get(CommonConst.ERRORCODE) != null) {
             return "/info/error";
         }
         return operative(request, map);
     }
 
 
-
     @RequestMapping("/filetable")
-    public String filetable(){
-
-
+    public String filetable() {
 
 
         return "/operative/filetable";
     }
 
     @RequestMapping("/userform")
-    public String userform(){
+    public String userform() {
 
         return "/operative/userform";
     }
+
     @RequestMapping("/ktypeform")
-    public String ktypeform(){
+    public String ktypeform() {
 
         return "/operative/ktypeform";
     }
+
     @RequestMapping("/ftypeform")
-    public String ftypeform(){
+    public String ftypeform() {
 
         return "/operative/ftypeform";
     }
+
     @RequestMapping("/usertable")
-    public String usertable(HttpServletRequest request, Map<String, Object> map){
+    public String usertable(HttpServletRequest request, Map<String, Object> map) {
         String page_ = request.getParameter("page");
 
         userService.selectAllUser(page_, map);
 
         return "/operative/usertable";
     }
+
     @RequestMapping("/ktypetable")
-    public String ktypetable(HttpServletRequest request, Map<String, Object> map){
+    public String ktypetable(HttpServletRequest request, Map<String, Object> map) {
 
         ktypeService.selectAllKtype(request, map);
 
         return "/operative/ktypetable";
     }
+
     @RequestMapping("/ftypetable")
-    public String ftypetable(HttpServletRequest request, Map<String, Object> map){
+    public String ftypetable(HttpServletRequest request, Map<String, Object> map) {
 
         ftypeService.selectAllFtype(request, map);
 
         return "/operative/ftypetable";
     }
+
     @RequestMapping("/updateuser")
-    public String updateuser(HttpServletRequest request, Map<String, Object> map){
+    public String updateuser(HttpServletRequest request, Map<String, Object> map) {
         String name = request.getParameter("name");
         String id = request.getParameter("id");
         String email = request.getParameter("email");
@@ -268,16 +272,18 @@ public class OperativeC {
         userService.updateUser(userBean, map);
         return usertable(request, map);
     }
+
     @RequestMapping("/updatektype")
-    public String updatektype(HttpServletRequest request, @RequestParam("image")MultipartFile file, Map<String, Object> map){
+    public String updatektype(HttpServletRequest request, @RequestParam("image") MultipartFile file, Map<String, Object> map) {
         String name = request.getParameter("name");
         String id = request.getParameter("id");
 
         ktypeService.updateKtype(id, name, file, map);
         return ktypetable(request, map);
     }
+
     @RequestMapping("/updateftype")
-    public String updateftype(HttpServletRequest request, Map<String, Object> map){
+    public String updateftype(HttpServletRequest request, Map<String, Object> map) {
         String name = request.getParameter("name");
         String id = request.getParameter("id");
         String type = request.getParameter("type");
@@ -289,50 +295,56 @@ public class OperativeC {
         ftypeService.updateftype(file, map);
         return ftypetable(request, map);
     }
+
     @RequestMapping("/deluser")
-    public String deluser(HttpServletRequest request, Map<String, Object> map){
+    public String deluser(HttpServletRequest request, Map<String, Object> map) {
         String id = request.getParameter("id");
         userService.delUser(Integer.parseInt(id), map);
         return usertable(request, map);
     }
+
     @RequestMapping("/delktype")
-    public String delktype(HttpServletRequest request, Map<String, Object> map){
+    public String delktype(HttpServletRequest request, Map<String, Object> map) {
         String id = request.getParameter("id");
         ktypeService.delKtype(Integer.parseInt(id), map);
         return ktypetable(request, map);
     }
+
     @RequestMapping("/delftype")
-    public String delftype(HttpServletRequest request, Map<String, Object> map){
+    public String delftype(HttpServletRequest request, Map<String, Object> map) {
         String id = request.getParameter("id");
         ftypeService.delFtype(Integer.parseInt(id), map);
         return ftypetable(request, map);
     }
+
     @RequestMapping("/operativelogout")
-    public String logout(HttpServletRequest request, HttpServletResponse response, Map<String, Object> map){
+    public String logout(HttpServletRequest request, HttpServletResponse response, Map<String, Object> map) {
         Cookie c = new Cookie(CommonConst.SUPERUSERID, CommonConst.NO);
         response.addCookie(c);
         return "/operative/login";
     }
+
     @RequestMapping("/spuerusertable")
-    public String spuerusertable(HttpServletRequest request, Map<String, Object> map){
+    public String spuerusertable(HttpServletRequest request, Map<String, Object> map) {
         Cookie[] cookies = request.getCookies();
         boolean flag = false;
-        for(Cookie c : cookies){
-            if(CommonConst.SUPERUSERID.equals(c.getName())){
-                if(CommonConst.YES.equals(c.getValue())){
+        for (Cookie c : cookies) {
+            if (CommonConst.SUPERUSERID.equals(c.getName())) {
+                if (CommonConst.YES.equals(c.getValue())) {
                     flag = true;
                 }
             }
         }
-        if(flag == false){
+        if (flag == false) {
             map.put(CommonConst.ERRORCODE, 12);
             return "/info/error";
         }
         userService.selectAllSuperUser(request, map);
         return "/operative/superusertable";
     }
+
     @RequestMapping("/spueruserform")
-    public String spueruserform(HttpServletRequest request, HttpServletResponse response){
+    public String spueruserform(HttpServletRequest request, HttpServletResponse response) {
 
         return "/operative/superuserform";
     }

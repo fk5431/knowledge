@@ -56,14 +56,14 @@ public class BaseState implements State {
 
     public String toString() {
         String key = null;
-        String stateVal = this.isSuccess()?AppInfo.getStateInfo(0):this.info;
+        String stateVal = this.isSuccess() ? AppInfo.getStateInfo(0) : this.info;
         StringBuilder builder = new StringBuilder();
         builder.append("{\"state\": \"" + stateVal + "\"");
         Iterator iterator = this.infoMap.keySet().iterator();
 
-        while(iterator.hasNext()) {
-            key = (String)iterator.next();
-            builder.append(",\"" + key + "\": \"" + (String)this.infoMap.get(key) + "\"");
+        while (iterator.hasNext()) {
+            key = (String) iterator.next();
+            builder.append(",\"" + key + "\": \"" + (String) this.infoMap.get(key) + "\"");
         }
 
         builder.append("}");

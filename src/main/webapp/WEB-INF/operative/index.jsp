@@ -35,9 +35,9 @@
         <!-- page content -->
         <div class="right_col" role="main">
 
-                <div style="margin: 0 auto;" >
-                         <p style="align-content: center"> 欢迎来到知识库管理系统</p>
-                </div>
+            <div style="margin: 0 auto;">
+                <p style="align-content: center"> 欢迎来到知识库管理系统</p>
+            </div>
 
         </div>
         <!-- /page content -->

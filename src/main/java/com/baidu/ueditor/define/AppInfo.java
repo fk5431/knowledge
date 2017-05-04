@@ -52,6 +52,6 @@ public final class AppInfo {
     }
 
     public static String getStateInfo(int key) {
-        return (String)info.get(Integer.valueOf(key));
+        return (String) info.get(Integer.valueOf(key));
     }
 }
