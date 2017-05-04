@@ -85,6 +85,7 @@ public class ResourceService {
                 fileReturnBeans.add(fileReturnBean);
             }
             map.put("file", fileReturnBeans);
+            map.put("index", 2);
         } catch (Exception e) {
             e.printStackTrace();
             map.put(CommonConst.ERRORCODE, 1);

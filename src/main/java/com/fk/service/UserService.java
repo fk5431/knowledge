@@ -132,6 +132,7 @@ public class UserService {
             userIndex(user, map);
         }
 
+        map.put("index", 1);
     }
 
     private void userIndex(UserBean user, Map<String, Object> map) {

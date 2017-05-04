@@ -22,10 +22,11 @@
                         <nav>
                             <ul>
                                 <!-- 导航栏名称改-->
-                                <li class="active"><a href="${pageContext.request.contextPath}">首页</a></li>
-                                <li><a href="${pageContext.request.contextPath}/resource">资源中心</a></li>
-                                <li><a href="center">个人中心</a></li>
-                                <li><a href="index.jsp"><img src="${pageContext.request.contextPath}/images/default.jpg"
+                                <li class="active" id="index_1"><a href="${pageContext.request.contextPath}">首页</a></li>
+                                <li id="index_2"><a href="${pageContext.request.contextPath}/resource">资源中心</a></li>
+                                <li id="index_3"><a href="center">个人中心</a></li>
+                                <li id="index_4"><a href="index.jsp"><img
+                                        src="${pageContext.request.contextPath}/images/default.jpg"
                                                              style="width:35px;margin-top:2px;" title="注销"></a></li>
                             </ul>
                         </nav>
@@ -35,3 +36,36 @@
         </div>
     </div>
 </div>
+<script>
+    var state = ${index};
+    if (state == 0) {
+        document.getElementById('index_1').className = '';
+        document.getElementById('index_1').className = '';
+        document.getElementById('index_1').className = '';
+        document.getElementById('index_1').className = '';
+    }
+    if (state == 1) {
+        document.getElementById('index_1').className = 'active';
+        document.getElementById('index_1').className = '';
+        document.getElementById('index_1').className = '';
+        document.getElementById('index_1').className = '';
+    }
+    if (state == 2) {
+        document.getElementById('index_1').className = '';
+        document.getElementById('index_1').className = 'active';
+        document.getElementById('index_1').className = '';
+        document.getElementById('index_1').className = '';
+    }
+    if (state == 3) {
+        document.getElementById('index_1').className = '';
+        document.getElementById('index_1').className = '';
+        document.getElementById('index_1').className = 'active';
+        document.getElementById('index_1').className = '';
+    }
+    if (state == 4) {
+        document.getElementById('index_1').className = '';
+        document.getElementById('index_1').className = '';
+        document.getElementById('index_1').className = '';
+        document.getElementById('index_1').className = 'active';
+    }
+</script>
