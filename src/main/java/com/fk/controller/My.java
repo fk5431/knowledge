@@ -186,6 +186,11 @@ public class My {
         }
         map.put("travel", travelBeans);
         map.put("count",travelBeans.size());
+
+        List<CloudBean> cloudBeans0 = cloudService.selectByUserIdAndStatus0(user.getId());
+        List<CloudBean> cloudBeans1 = cloudService.selectByUserIdAndStatus1(user.getId());
+        map.put("cloud0", cloudBeans0);
+        map.put("cloud1", cloudBeans1);
         return "mylike";
     }
 
@@ -201,6 +206,8 @@ public class My {
         List<UsertravelBean> usertravelBeans = usertravelService.selectByUserId(user.getId());
         if (usertravelBeans == null || usertravelBeans.size() == 0) {
             map.put(CommonConst.STATUS, "0");
+            map.put("travel", new ArrayList<TravelBean>());
+            map.put("count", 0);
         } else {
             map.put(CommonConst.STATUS, "1");
             ArrayList<TravelBean> travel = Lists.newArrayList();
@@ -238,6 +245,11 @@ public class My {
         map.put("order", order);
         map.put("count", order.size());
 
+
+        List<CloudBean> cloudBeans0 = cloudService.selectByUserIdAndStatus0(user.getId());
+        List<CloudBean> cloudBeans1 = cloudService.selectByUserIdAndStatus1(user.getId());
+        map.put("cloud0", cloudBeans0);
+        map.put("cloud1", cloudBeans1);
         return "mywhere";
     }
     @RequestMapping("/operative/useraddart")

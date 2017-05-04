@@ -1,7 +1,8 @@
 <%@ page import="java.util.List" %>
 <%@ page import="com.fk.bean.UsertravelBean" %>
 <%@ page import="com.fk.bean.AuditBean" %>
-<%@ page import="com.fk.bean.TravelBean" %><%--
+<%@ page import="com.fk.bean.TravelBean" %>
+<%@ page import="com.fk.bean.CloudBean" %><%--
   Created by IntelliJ IDEA.
   User: fengkai
   Date: 17/03/17
@@ -109,40 +110,78 @@
                     </div>
                 </div>
             </div>
+            <script type="text/javascript">
+                $(document).ready(function(){
+                    /*多彩tag*/
+                    var tags_a = $("#tags").find("a");
+                    tags_a.each(function(){
+                        var x = 9;
+                        var y = 0;
+                        var rand = parseInt(Math.random() * (x - y + 1) + y);
+                        $(this).addClass("size"+rand);
+                    });
+                    var tags_a1 = $("#tags1").find("a");
+                    tags_a1.each(function(){
+                        var x = 9;
+                        var y = 0;
+                        var rand = parseInt(Math.random() * (x - y + 1) + y);
+                        $(this).addClass("size"+rand);
+                    });
 
+                });
+            </script>
+
+            <style type="text/css">
+                *{margin:0;padding:0;list-style-type:none;}
+                a,img{border:0;}
+                body{font:12px/180% Arial, Helvetica, sans-serif ,"宋体";}
+
+                .demo{width:280px;margin:20px auto;}
+                .demo h2{font-size:18px;height:32px;padding:10px 0 0 20px;font-family:"微软雅黑","宋体";border-bottom:solid 1px #ff6600;}
+                .taglist{padding:20px 20px 30px 20px;}
+                .taglist a{padding:3px;display:inline-block;white-space:nowrap;}
+                a.size1{font-size:25px;padding:10px;color:#804D40;}
+                a.size1:hover{color:#E13728;}
+                a.size2{padding:7px;font-size:20px;color:#B9251A;}
+                a.size2:hover{color:#E13728;}
+                a.size3{padding:5px;font-size:35px;color:#C4876A;}
+                a.size3:hover{color:#E13728;}
+                a.size4{padding:5px;font-size:15px;color:#B46A47;}
+                a.size4:hover{color:#E13728;}
+                a.size5{padding:5px;font-size:25px;color:#E13728;}
+                a.size5:hover{color:#B46A47;}
+                a.size6{padding:0px;font-size:12px;color:#77625E}
+                a.size6:hover{color:#E13728;}
+            </style>
 
             <div class="MHonor">
                 <div class="MHonTitle">攻略标签云</div>
                 <div class="MHonDetail" id="_j_privicnt">
-                    <div class="MHonList">
-                        <ul class="clearfix" id="_j_privi_listcnt">
-                            <li>
-                                <a href="/user/lv.php" target="_blank"><i class="_j_priviitem i2"
-                                                                          data-description="Lv1.特权：好友上限"></a></i>
-                                <a href="/user/lv.php" target="_blank"><i class="_j_priviitem i1"
-                                                                          data-description="Lv1.特权：攻略下载"></a></i>
-                            </li>
-                        </ul>
+                    <div class="demo">
+                        <div class="taglist" id="tags">
+                            <%
+                                List<CloudBean> cloudBeans = (List)request.getAttribute("cloud0");
+                                for(int i=0;i<cloudBeans.size();i++){
+                            %>
+                            <a target="_blank" href="${pageContext.request.contextPath}/searchtravelplace?place=<%=cloudBeans.get(i).getPlace()%>"><%=cloudBeans.get(i).getPlace()%></a> <%--19--%>
+                            <%}%>
+                        </div>
                     </div>
-                    <span class="MHonDescription" id="_j_privi_tip" style="display: none;"></span>
-                    <div class="MHonBtn"><span class="MPrev2 _j_prev"></span><span class="MNext2 _j_next"></span></div>
                 </div>
             </div>
             <div class="MHonor">
                 <div class="MHonTitle">商城标签云</div>
                 <div class="MHonDetail">
-                    <div class="MHonList">
-                        <ul class="clearfix">
-                            <li>
-                                <a href="/user/lv.php" target="_blank"><i class="_j_priviitem i2"
-                                                                          data-description="Lv1.特权：好友上限"></a></i>
-                                <a href="/user/lv.php" target="_blank"><i class="_j_priviitem i1"
-                                                                          data-description="Lv1.特权：攻略下载"></a></i>
-                            </li>
-                        </ul>
+                    <div class="demo">
+                        <div class="taglist" id="tags1">
+                            <%
+                                List<CloudBean> cloudBeans1 = (List)request.getAttribute("cloud1");
+                                for(int i=0;i<cloudBeans1.size();i++){
+                            %>
+                            <a target="_blank" href="${pageContext.request.contextPath}/searchtravelplace?place=<%=cloudBeans1.get(i).getPlace()%>"><%=cloudBeans1.get(i).getPlace()%></a> <%--19--%>
+                            <%}%>
+                        </div>
                     </div>
-                    <span class="MHonDescription" style="display: none;"></span>
-                    <div class="MHonBtn"><span class="MPrev2 _j_prev"></span><span class="MNext2 _j_next"></span></div>
                 </div>
             </div>
 
