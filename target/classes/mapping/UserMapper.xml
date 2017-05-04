@@ -9,18 +9,18 @@
         <result column="ismanage" property="ismanage" jdbcType="INTEGER"/>
     </resultMap>
     <sql id="Base_Column_List">
-        uid, uname, uemail, pwd, ismanage
-    </sql>
+    uid, uname, uemail, pwd, ismanage
+  </sql>
     <select id="selectByStart" resultMap="BaseResultMap" parameterType="java.lang.Integer">
         select
         <include refid="Base_Column_List"/>
         from user limit #{start, jdbcType=INTEGER},10
     </select>
     <select id="count" resultMap="BaseResultMap">
-        select
-        count(*)
-        from user
-    </select>
+    select
+    count(*)
+    from user
+  </select>
     <select id="selectALL_1" resultMap="BaseResultMap">
         select
         <include refid="Base_Column_List"/>
@@ -52,15 +52,15 @@
         where uid = #{uid,jdbcType=INTEGER}
     </select>
     <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
-        delete from user
-        where uid = #{uid,jdbcType=INTEGER}
-    </delete>
+    delete from user
+    where uid = #{uid,jdbcType=INTEGER}
+  </delete>
     <insert id="insert" parameterType="com.fk.bean.UserBean">
-        insert into user (uid, uname, uemail,
-        pwd, ismanage)
-        values (#{uid,jdbcType=INTEGER}, #{uname,jdbcType=VARCHAR}, #{uemail,jdbcType=VARCHAR},
-        #{pwd,jdbcType=VARCHAR}, #{ismanage,jdbcType=INTEGER})
-    </insert>
+    insert into user (uid, uname, uemail,
+    pwd, ismanage)
+    values (#{uid,jdbcType=INTEGER}, #{uname,jdbcType=VARCHAR}, #{uemail,jdbcType=VARCHAR},
+    #{pwd,jdbcType=VARCHAR}, #{ismanage,jdbcType=INTEGER})
+  </insert>
     <insert id="insertSelective" parameterType="com.fk.bean.UserBean">
         insert into user
         <trim prefix="(" suffix=")" suffixOverrides=",">
@@ -117,19 +117,19 @@
         where uid = #{uid,jdbcType=INTEGER}
     </update>
     <update id="updateByPrimaryKey" parameterType="com.fk.bean.UserBean">
-        update user
-        set uname = #{uname,jdbcType=VARCHAR},
-        uemail = #{uemail,jdbcType=VARCHAR},
-        pwd = #{pwd,jdbcType=VARCHAR},
-        ismanage = #{ismanage,jdbcType=INTEGER}
-        where uid = #{uid,jdbcType=INTEGER}
-    </update>
+    update user
+    set uname = #{uname,jdbcType=VARCHAR},
+      uemail = #{uemail,jdbcType=VARCHAR},
+      pwd = #{pwd,jdbcType=VARCHAR},
+      ismanage = #{ismanage,jdbcType=INTEGER}
+    where uid = #{uid,jdbcType=INTEGER}
+  </update>
     <update id="updateByEmail" parameterType="com.fk.bean.UserBean">
-        update user
-        set uname = #{uname,jdbcType=VARCHAR},
-        uemail = #{uemail,jdbcType=VARCHAR},
-        pwd = #{pwd,jdbcType=VARCHAR},
-        ismanage = #{ismanage,jdbcType=INTEGER}
-        where uemail = #{uemail,jdbcType=VARCHAR}
-    </update>
+    update user
+    set uname = #{uname,jdbcType=VARCHAR},
+      uemail = #{uemail,jdbcType=VARCHAR},
+      pwd = #{pwd,jdbcType=VARCHAR},
+      ismanage = #{ismanage,jdbcType=INTEGER}
+    where uemail = #{uemail,jdbcType=VARCHAR}
+  </update>
 </mapper>

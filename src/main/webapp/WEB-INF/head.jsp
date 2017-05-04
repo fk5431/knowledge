@@ -40,32 +40,32 @@
     var state = ${index};
     if (state == 0) {
         document.getElementById('index_1').className = '';
-        document.getElementById('index_1').className = '';
-        document.getElementById('index_1').className = '';
-        document.getElementById('index_1').className = '';
+        document.getElementById('index_2').className = '';
+        document.getElementById('index_3').className = '';
+        document.getElementById('index_4').className = '';
     }
     if (state == 1) {
         document.getElementById('index_1').className = 'active';
-        document.getElementById('index_1').className = '';
-        document.getElementById('index_1').className = '';
-        document.getElementById('index_1').className = '';
+        document.getElementById('index_2').className = '';
+        document.getElementById('index_3').className = '';
+        document.getElementById('index_4').className = '';
     }
     if (state == 2) {
         document.getElementById('index_1').className = '';
-        document.getElementById('index_1').className = 'active';
-        document.getElementById('index_1').className = '';
-        document.getElementById('index_1').className = '';
+        document.getElementById('index_2').className = 'active';
+        document.getElementById('index_3').className = '';
+        document.getElementById('index_4').className = '';
     }
     if (state == 3) {
         document.getElementById('index_1').className = '';
-        document.getElementById('index_1').className = '';
-        document.getElementById('index_1').className = 'active';
-        document.getElementById('index_1').className = '';
+        document.getElementById('index_2').className = '';
+        document.getElementById('index_3').className = 'active';
+        document.getElementById('index_4').className = '';
     }
     if (state == 4) {
         document.getElementById('index_1').className = '';
-        document.getElementById('index_1').className = '';
-        document.getElementById('index_1').className = '';
-        document.getElementById('index_1').className = 'active';
+        document.getElementById('index_2').className = '';
+        document.getElementById('index_3').className = '';
+        document.getElementById('index_4').className = 'active';
     }
 </script>

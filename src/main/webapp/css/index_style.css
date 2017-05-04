@@ -16,54 +16,6 @@ input, textarea, select {margin:0; padding:0px;}
 /* ---------------------------------------------------------------------------- */
 /* ---------------------------------------------------------------------------- */
 
-html {
-    聽-webkit-text-size-adjust: none;
-}
-
-.video embed, .video object, .video iframe {
-    聽width: 100%;
-    聽聽height: auto;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-    width: auto \9; /* ie8 */
-}
-
-a {
-    color: #4C4C4C;
-    text-decoration: none;
-}
-
-a:hover {
-    color: #FE9B13;
-}
-
-h1, h2 {
-    font-size: 25px;
-    line-height: 25px;
-}
-
-h3, h4 {
-    font-size: 20px;
-    line-height: 20px;
-}
-
-h5, h6 {
-    font-size: 16px;
-    line-height: 16px;
-}
-
-p {
-    margin: 10px 0;
-    line-height: 1.7;
-    letter-spacing: 1px;
-    color: #666;
-}
-
-.post {
-}
 
 .post:after, .post:before, article:after, article:before, section:after, section:before {
     clear: both;
@@ -105,21 +57,6 @@ p {
     line-height: 0;
     font-size: 0;
     overflow: hidden;
-}
-
-/* ---------------------------------------------------------------------------- */
-/* ------------------------------------Html-Body------------------------------- */
-/* ---------------------------------------------------------------------------- */
-html, body {
-    width: 100%;
-    padding: 0;
-    margin: 0;
-}
-
-body {
-    background: #808080;
-    color: #3F3F3F;
-    font-family: "Montserrat", sans-serif;
 }
 
 body .wrap-body {
