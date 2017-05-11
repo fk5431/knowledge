@@ -88,7 +88,7 @@
     <div class="panel admin-panel">
         <div class="panel-head"><strong><span class="icon-pencil-square-o"></span> 单页信息</strong></div>
         <div class="body-content">
-            <form method="post" class="form-x" action="${pageContext.request.contextPath}/operative/addnewstolist"
+            <form method="post" class="form-x" action="${pageContext.request.contextPath}/operative/addphoto"
                   enctype="multipart/form-data">
                 <div class="form-group">
                     <div class="label">
@@ -101,24 +101,7 @@
                 </div>
                 <div class="form-group">
                     <div class="label">
-                        <label>图片：</label>
-                    </div>
-                    <div class="field">
-                        <input name="image" type="file" accept="image/gif, image/jpeg"/>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="label">
-                        <label>简介：</label>
-                    </div>
-                    <div class="field">
-                        <input type="text" class="input" name="introduce" value=""/>
-                        <div class="tips"></div>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="label">
-                        <label>内容：</label>
+                        <label>图集：</label>
                     </div>
                     <div class="field">
                         <script id="editor" type="text/plain" style="width:1024px;height:500px;"

@@ -36,4 +36,19 @@ public class PhotoServiceImpl implements IPhotoService{
     public PhotoBean selectByPrimaryKey(Integer id) {
         return photoDao.selectByPrimaryKey(id);
     }
+
+    @Override
+    public int deleteByPrimaryKey(int i) {
+        return photoDao.deleteByPrimaryKey(i);
+    }
+
+    @Override
+    public int insert(PhotoBean photoBean) {
+        return photoDao.insertSelective(photoBean);
+    }
+
+    @Override
+    public int update(PhotoBean photoBean) {
+        return photoDao.updateByPrimaryKey(photoBean);
+    }
 }

@@ -42,6 +42,10 @@
         </li>
         <li><a href="${pageContext.request.contextPath}/operative/column"><span class="icon-caret-right"></span>演出管理</a>
         </li>
+        <li><a href="${pageContext.request.contextPath}/operative/photo"><span class="icon-caret-right"></span>精彩图集添加</a>
+        </li>
+        <li><a href="${pageContext.request.contextPath}/operative/showphoto"><span class="icon-caret-right"></span>精彩图集管理</a>
+        </li>
     </ul>
     <h2><span class="icon-pencil-square-o"></span>高级修改</h2>
     <ul>
@@ -129,13 +133,13 @@
                             %>
                             <span class="current"><%=i%></span>
                             <%} else {%>
-                            <a href="${pageContext.request.contextPath}/operative?page=<%=i%>"><%=i%>
+                            <a href="${pageContext.request.contextPath}/operative/user?page=<%=i%>"><%=i%>
                             </a>
                             <%
                                     }
                                 }
                             %>
-                            <a href="${pageContext.request.contextPath}/operative?page=${pageNow+1}">下一页</a>
+                            <a href="${pageContext.request.contextPath}/operative/user?page=${pageNow+1}">下一页</a>
                         </div>
                     </td>
                 </tr>

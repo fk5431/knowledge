@@ -44,6 +44,10 @@
         </li>
         <li><a href="${pageContext.request.contextPath}/operative/column"><span class="icon-caret-right"></span>演出管理</a>
         </li>
+        <li><a href="${pageContext.request.contextPath}/operative/photo"><span class="icon-caret-right"></span>精彩图集添加</a>
+        </li>
+        <li><a href="${pageContext.request.contextPath}/operative/showphoto"><span class="icon-caret-right"></span>精彩图集管理</a>
+        </li>
     </ul>
     <h2><span class="icon-pencil-square-o"></span>高级修改</h2>
     <ul>

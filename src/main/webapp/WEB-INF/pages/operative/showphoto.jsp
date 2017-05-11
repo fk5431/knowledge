@@ -1,7 +1,6 @@
 <%@ page import="java.util.List" %>
 <%@ page import="com.fk.bean.User" %>
-<%@ page import="com.fk.bean.MovieBean" %>
-<%@ page import="com.fk.bean.RecordBean" %><%--
+<%@ page import="com.fk.bean.PhotoBean" %><%--
   Created by IntelliJ IDEA.
   User: fengkai
   Date: 23/03/17
@@ -82,77 +81,63 @@
 </ul>
 <div class="admin">
     <div class="panel admin-panel">
-        <div class="panel-head"><strong class="icon-reorder"> 内容列表</strong></div>
+        <div class="panel-head"><strong><span class="icon-pencil-square-o"></span> 网站信息</strong></div>
+        <div class="body-content">
+            <table class="table table-hover text-center">
+                <tr>
+                    <th width="120">ID</th>
+                    <th>标题</th>
+                    <th>查看</th>
+                    <th>删除</th>
+                </tr>
+                <%
+                    List<PhotoBean> photo = (List) request.getAttribute("photo");
+                    for (int i = 0; i < photo.size(); i++) {
+                %>
+                <tr>
+                        <td><%=photo.get(i).getId()%>
+                        </td>
+                        <td><%=photo.get(i).getTitle()%>
+                        </td>
 
-        <table class="table table-hover text-center">
-            <tr>
-                <th width="5%">ID</th>
-                <th>电影ID</th>
-                <th>电影名称</th>
-                <th>购买人姓名</th>
-                <th>购买人邮箱</th>
-                <th>购买人微信</th>
-                <th>购买人手机</th>
-                <th>购买人备注</th>
-                <th>用户ID</th>
-                <th width="250">操作</th>
-            </tr>
-            <%
-                List<RecordBean> recordBeans = (List) request.getAttribute("record");
-                for (int i = 0; i < recordBeans.size(); i++) {
-            %>
-            <tr>
-                <td><%=recordBeans.get(i).getId()%>
-                </td>
-                <td><%=recordBeans.get(i).getMovieid()%>
-                </td>
-                <td><%=recordBeans.get(i).getMoviename()%>
-                </td>
-                <td><%=recordBeans.get(i).getName()%>
-                </td>
-                <td><%=recordBeans.get(i).getEmail()%>
-                </td>
-                <td><%=recordBeans.get(i).getWechat()%>
-                </td>
-                <td><%=recordBeans.get(i).getMob()%>
-                </td>
-                <td><%=recordBeans.get(i).getOther()%>
-                </td>
-                <td><%=recordBeans.get(i).getUserid()%>
-                </td>
-                <td>
-                    <div class="button-group">
-                        <a class="button border-red"
-                           href="${pageContext.request.contextPath}/operative/delrecord?id=<%=recordBeans.get(i).getId()%>"><span
-                                class="icon-trash-o"></span> 删除</a>
-                    </div>
-                </td>
-            </tr>
-            <%}%>
-            <tr>
-                <td colspan="8">
-                    <div class="pagelist">
-                        <%
-                            Integer pageAll = (Integer) request.getAttribute("page");
-                            Integer pageNow = (Integer) request.getAttribute("pageNow");
+                        <td>
+                            <div class="button-group"><a class="button border-red"
+                                                         href="${pageContext.request.contextPath}/photo?id=<%=photo.get(i).getId()%>"  ><span
+                                    class="icon-trash-o"></span> 查看</a></div>
+                        </td>
+                        <td>
+                            <div class="button-group"><a class="button border-red"
+                                                         href="${pageContext.request.contextPath}/operative/delphoto?id=<%=photo.get(i).getId()%>"><span
+                                    class="icon-trash-o"></span> 删除</a></div>
+                        </td>
+                </tr>
+                <%}%>
+                <tr>
+                    <td colspan="8">
+                        <div class="pagelist">
+                            <%
+                                Integer pageAll = (Integer) request.getAttribute("page");
+                                Integer pageNow = (Integer) request.getAttribute("pageNow");
 
-                            for (int i = 1; i <= pageAll.intValue(); i++) {
-                                if (i == pageNow.intValue()) {
-                        %>
-                        <span class="current"><%=i%></span>
-                        <%} else {%>
-                        <a href="${pageContext.request.contextPath}/operative/buy?page=<%=i%>"><%=i%>
-                        </a>
-                        <%
+                                for (int i = 1; i <= pageAll.intValue(); i++) {
+                                    if (i == pageNow.intValue()) {
+                            %>
+                            <span class="current"><%=i%></span>
+                            <%} else {%>
+                            <a href="${pageContext.request.contextPath}/operative?page=<%=i%>"><%=i%>
+                            </a>
+                            <%
+                                    }
                                 }
-                            }
-                        %>
-                        <a href="${pageContext.request.contextPath}/operative/buy?page=${pageNow+1}">下一页</a>
-                    </div>
-                </td>
-            </tr>
-        </table>
+                            %>
+                            <a href="${pageContext.request.contextPath}/operative?page=${pageNow+1}">下一页</a>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
     </div>
 </div>
+
 </body>
 </html>
