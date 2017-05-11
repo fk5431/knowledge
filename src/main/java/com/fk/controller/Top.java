@@ -85,8 +85,8 @@ public class Top {
         for(MovieBean movieBean : score){
             StringBuffer sb = new StringBuffer();
             //      导演  director
-            DirectorBean director = directorService.selectByPrimaryKey(movieBean.getDirectorid());
-            sb.append(director.getName());
+//            DirectorBean director = directorService.selectByPrimaryKey(movieBean.getDirectorid());
+//            sb.append(director.getName());
             //        演员 performer
             String[] performers = movieBean.getPerformerids().split(CommonConst.SPLITOR);
             for(int i=0;i<performers.length;i++){

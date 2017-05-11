@@ -307,7 +307,7 @@ public class Operative {
             movieBean.setBoxoffice(0);
             movieBean.setEtitle(etitle);
             movieBean.setPrizeids(price);
-            movieBean.setPrizeids("");
+//            movieBean.setPrizeids("");
             SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd hh:mm");
             try {
                 movieBean.setShowtime(dateFormat.parse(time));
