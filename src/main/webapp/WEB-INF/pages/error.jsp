@@ -42,6 +42,10 @@
     }else if (errorcode == 10){
         alert("没有搜索结果，请重试！");
         window.history.back(-1);
+    }else if (errorcode == 11){
+        alert("支付成功！");
+        this.window.opener = null;
+        window.location.href = "http://localhost:8080/movie/info";
     }
 
 </script>

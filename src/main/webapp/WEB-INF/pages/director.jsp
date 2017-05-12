@@ -105,7 +105,7 @@
                 <div class="cele-index sumBox">
                     <p class="cele-index-title">累计票房</p>
                     <p class="index-num">
-                        <span class="stonefont">${director.boxoffice}</span><span class="unit">亿</span>
+                        <span class="stonefont">${director.boxoffice}</span><span class="unit"></span>
                     </p>
 
                 </div>

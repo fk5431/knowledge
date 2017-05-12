@@ -29,7 +29,7 @@ public class SendMail {
                                 String emailSubject,String emailContent,String emailContentType){
         int res=0;
         final String loginAccount = "1050577129@qq.com";
-        final String loginAuthCode = "mhvjolvnbmgtbdce";
+        final String loginAuthCode = "wnfrkpgzsjmxbdce";
         String sender = "冯凯";
         try {
             //跟smtp服务器建立一个连接
@@ -99,7 +99,7 @@ public class SendMail {
                                 String emailSubject,String emailContent,String emailContentType){
         int res=0;
         final String loginAccount = "1050577129@qq.com";
-        final String loginAuthCode = "aoetauneuclxbehf";
+        final String loginAuthCode = "wnfrkpgzsjmxbdce";
         String sender = "1050577129@qq.com";
         try {
             //跟smtp服务器建立一个连接

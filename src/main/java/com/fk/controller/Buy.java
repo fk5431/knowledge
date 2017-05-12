@@ -46,6 +46,9 @@ public class Buy {
     @Autowired
     ICloudService cloudService;
 
+    @Autowired
+    IPerformerService performerService;
+
     private static final int SIZE = 10;
     @RequestMapping("/buy")
     public String buy(HttpServletRequest request, Map<String, Object> map){
@@ -53,6 +56,7 @@ public class Buy {
         String id = request.getParameter("id");
 
         MovieBean movieBean = movieService.selectByPrimaryKey(Integer.parseInt(id));
+        movieBean.setBoxoffice(movieBean.getBoxoffice() * Integer.parseInt(movieBean.getPrizeids()));
         map.put("movie", movieBean);
 
         String[] types = movieBean.getType().split(CommonConst.SPLITOR);
@@ -110,6 +114,10 @@ public class Buy {
         String mob = request.getParameter("mob");
         String other = request.getParameter("other");
         String userId = "0";
+        if(name == null || email == null || mob == null){
+            map.put("errorcode", 8);
+            return "error";
+        }
         Cookie[] cookies = request.getCookies();
         for(Cookie c : cookies){
             if(c.getName().equals(CommonConst.USERID)){
@@ -135,9 +143,70 @@ public class Buy {
         movieBean.setBoxoffice(movieBean.getBoxoffice() + 1);
         movieService.updateByPrimaryKey(movieBean);
 
-        return info(request, map);
+        String per = movieBean.getPerformerids();
+        String[] pers = per.split(CommonConst.SPLITOR);
+        for(int i=0;i<pers.length;i++){
+            PerformerBean p = performerService.selectByPrimaryKey(Integer.parseInt(pers[i]));
+            p.setBoxoffice(p.getBoxoffice()+ Integer.parseInt(movieBean.getPrizeids()));
+            performerService.updateByPrimaryKey(p);
+        }
+
+        //TODO
+        map.put("cost", movieBean.getPrizeids());
+        pay_buy(request, map);
+        return "pay";
     }
 
+    private void pay_buy(HttpServletRequest request, Map<String, Object> map) {
+        map.put("index", 0);
+        String id = request.getParameter("id");
+
+        MovieBean movieBean = movieService.selectByPrimaryKey(Integer.parseInt(id));
+        movieBean.setBoxoffice(movieBean.getBoxoffice() * Integer.parseInt(movieBean.getPrizeids()));
+        map.put("movie", movieBean);
+
+        String[] types = movieBean.getType().split(CommonConst.SPLITOR);
+        StringBuffer sb = new StringBuffer();
+        for(String str : types){
+            sb.append(typeService.selectByPrimaryKey(Integer.parseInt(str)).getTypename() + " ，");
+        }
+        String type = sb.substring(0, sb.length()-1);
+
+        map.put("type", type);
+        if(Login.islogin(request)){
+            map.put("login", CommonConst.YES);
+        }
+
+        List<SiteBean> siteBeans = siteService.selectAll();
+        map.put("site", siteBeans);
+        List<MovieBean> other = movieService.selectByType(movieBean.getType());
+        List<MovieBean> returnother = new ArrayList<>();
+        if(other.size() <= 6){
+            map.put("other", other);
+        }else {
+            Random random=new Random();
+            int [] r=new int[6];
+            for (int i = 0; i < r.length;) {
+                int temp=random.nextInt(other.size());
+                if(temp==0)continue;
+                for (int j : r) {
+                    if(j==temp)continue;
+                }
+                r[i]=temp;
+                i++;
+            }
+            for(int j : r){
+                returnother.add(other.get(j));
+            }
+            map.put("other", returnother);
+        }
+    }
+
+    @RequestMapping("sure")
+    public String sure(HttpServletRequest request, Map<String,Object> map){
+        map.put("errorcode", 11);
+        return "error";
+    }
 
     @RequestMapping("info")
     public String info(HttpServletRequest request, Map<String, Object> map){

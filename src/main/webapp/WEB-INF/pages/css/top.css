@@ -101,7 +101,7 @@ dd, dl, h4, li, p, ul { padding: 0px; margin: 0px; }
 .board-wrapper dd { margin-bottom: 30px; font-size: 0px; position: relative; overflow: hidden; }
 .board-wrapper .image-link { display: inline-block; width: 160px; height: 220px; margin-left: 80px; position: relative; float: left; }
 .board-wrapper .image-link .poster-default { position: absolute; top: 50%; left: 50%; width: 68px; height: 62px; margin-left: -34px; margin-top: -31px; }
-.board-img { vertical-align: middle; position: absolute; left: 0px; top: 0px; }
+.board-img { vertical-align: middle; position: absolute; left: 0px; top: 0px; width: 160px; height: 220px; }
 .board-item-main { display: inline-block; width: 680px; margin-left: 30px; height: 219px; float: right; line-height: 219px; border-bottom: 1px solid rgb(229, 229, 229); }
 .board-item-content { display: inline-block; vertical-align: middle; width: 680px; font-size: 0px; line-height: 1; }
 .board-item-content .name a { font-size: 26px; color: rgb(51, 51, 51); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; width: 420px; display: block; }
