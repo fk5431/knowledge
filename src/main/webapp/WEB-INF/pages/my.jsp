@@ -25,7 +25,7 @@
 <div id="header">
     <div class="mfw-header">
         <div class="header-wrap clearfix">
-            <div class="head-logo"><a class="mfw-logo" title="蚂蜂窝自由行" href="${pageContext.request.contextPath}"></a>
+            <div class="head-logo"><a class="mfw-logo" title="大学生穷游网" href="${pageContext.request.contextPath}"></a>
             </div>
             <ul class="head-nav" data-cs-t="headnav" id="_j_head_nav">
                 <li class="head-nav-index head-nav-active" id="head_1"><a
