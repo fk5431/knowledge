@@ -111,7 +111,13 @@ public class operative {
         map.put("users", user);
         return "operative/index";
     }
-
+    @RequestMapping("operative/deluser")
+    public String deluseraccount(HttpServletRequest request, Map<String, Object> map){
+        String id = request.getParameter("id");
+        int userId = Integer.parseInt(id);
+        userService.delete(userId);
+        return operative(request, map);
+    }
 
     @RequestMapping("/operative/column")
     public String column(HttpServletRequest request, Map<String, Object> map){

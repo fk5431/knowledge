@@ -45,4 +45,9 @@ public class UserServiceImpl implements IUserService {
     public List<User> selectByStart(Integer start) {
         return userDao.selectByStart(start);
     }
+
+    @Override
+    public int delete(int userId) {
+        return userDao.deleteByPrimaryKey(userId);
+    }
 }

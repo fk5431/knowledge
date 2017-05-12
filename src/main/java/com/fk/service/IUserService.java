@@ -15,4 +15,6 @@ public interface IUserService {
     int count();
 
     List<User> selectByStart(Integer start);
+
+    int delete(int userId);
 }
