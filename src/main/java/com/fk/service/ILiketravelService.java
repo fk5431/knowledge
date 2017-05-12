@@ -11,4 +11,6 @@ public interface ILiketravelService {
     int insertSelective(LiketravelBean record);
 
     List<LiketravelBean> selectByUserId(Integer id);
+
+    LiketravelBean selectByUserIdAndTravelId(Integer travelId, int userId);
 }

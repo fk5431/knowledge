@@ -12,7 +12,7 @@
 <div class="wrapper">
   <div class="container">
     <a href="${pageContext.request.contextPath}/index" title="返回首页" class="logo">大学生穷游网</a>
-    <div class="signup-forms flip">
+    <div class="signup-forms flip" id="reg">
       <div class="signup-box" id="_j_signup_box">
         <div class="inner">
           <form action="${pageContext.request.contextPath}/regis" method="post" id="_j_signup_form">
@@ -39,6 +39,12 @@
           已经注册?<a href="#">马上登录</a>
         </div>
       </div>
+      <script>
+          var sta = ${regis};
+          if (sta == 1){
+              document.getElementById("reg").className = "signup-forms";
+          }
+      </script>
       <div class="login-box" id="_j_login_box">
         <div class="inner">
           <form action="${pageContext.request.contextPath}/loginUser" method="post" id="_j_login_form">

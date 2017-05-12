@@ -18,4 +18,6 @@ public interface LiketravelDao {
     int updateByPrimaryKey(LiketravelBean record);
 
     List<LiketravelBean> selectByUserId(Integer id);
+
+    LiketravelBean selectByUserIdAndTravelId(Integer travelId, int userId);
 }

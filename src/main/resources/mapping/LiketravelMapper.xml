@@ -9,8 +9,14 @@
   <sql id="Base_Column_List" >
     id, travelId, userId
   </sql>
-  <select id="selectByUserId" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+  <select id="selectByUserIdAndTravelId" resultMap="BaseResultMap" >
     select 
+    <include refid="Base_Column_List" />
+    from liketravel
+    where travelId = #{0} and userId = #{1}
+  </select>
+  <select id="selectByUserId" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select
     <include refid="Base_Column_List" />
     from liketravel
     where userId = #{id,jdbcType=INTEGER}

@@ -56,8 +56,8 @@
                     <a href="${pageContext.request.contextPath}/forget" title="找回密码"
                        rel="nofollow">找回密码</a>
                     <%} else {%>
-                    <a id="_j_showlogin" title="我的" href="${pageContext.request.contextPath}/my"
-                       rel="nofollow">我的</a>
+                    <a id="_j_showlogin" title="个人中心" href="${pageContext.request.contextPath}/my"
+                       rel="nofollow">个人中心</a>
                     <span class="split">|</span>
                     <a href="${pageContext.request.contextPath}/logout" title="注册帐号"
                        rel="nofollow">登出</a>
@@ -260,7 +260,7 @@
 
             <%--<div class="common_block my_notes">--%>
                 <%--<div class="common_title clearfix">--%>
-                    <%--<h2>我的回答</h2>--%>
+                    <%--<h2>个人中心回答</h2>--%>
                 <%--</div>--%>
                 <%--<div class="notes_default ask_default">--%>
                     <%--<i class="ico_notes"></i>--%>

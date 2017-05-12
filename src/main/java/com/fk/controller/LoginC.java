@@ -127,6 +127,7 @@ public class LoginC {
     }
     @RequestMapping(value = "/register")
     public String regist(HttpServletRequest request, Map<String, Object> map){
+        map.put("regis", 1);
         return "login";
     }
 
@@ -280,7 +281,10 @@ public class LoginC {
             LiketravelBean liketravelBean = new LiketravelBean();
             liketravelBean.setTravelid(travelBean.getId());
             liketravelBean.setUserid(Integer.parseInt(userId));
-            liketravelService.insertSelective(liketravelBean);
+            LiketravelBean liketravelBean1 = liketravelService.selectByUserIdAndTravelId(travelBean.getId(), Integer.parseInt(userId));
+            if(liketravelBean1 == null) {
+                liketravelService.insertSelective(liketravelBean);
+            }
         }
         return index(request, map);
     }

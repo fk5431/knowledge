@@ -54,8 +54,8 @@
                     <a href="${pageContext.request.contextPath}/forget" title="找回密码"
                        rel="nofollow">找回密码</a>
                     <%}else{%>
-                    <a id="_j_showlogin" title="我的" href="${pageContext.request.contextPath}/my"
-                       rel="nofollow">我的</a>
+                    <a id="_j_showlogin" title="个人中心" href="${pageContext.request.contextPath}/my"
+                       rel="nofollow">个人中心</a>
                     <span class="split">|</span>
                     <a href="${pageContext.request.contextPath}/logout" title="注册帐号"
                        rel="nofollow">登出</a>

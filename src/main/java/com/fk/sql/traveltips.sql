@@ -127,3 +127,4 @@ INSERT INTO traveltips(id, time, place, image, title, context, type, author, lin
 
 
 alter table traveltips modify column context LONGTEXT;
+

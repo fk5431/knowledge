@@ -170,7 +170,10 @@ public class ContentC {
             LiketravelBean liketravelBean = new LiketravelBean();
             liketravelBean.setTravelid(travelBean.getId());
             liketravelBean.setUserid(Integer.parseInt(userId));
-            liketravelService.insertSelective(liketravelBean);
+            LiketravelBean liketravelBean1 = liketravelService.selectByUserIdAndTravelId(travelBean.getId(), Integer.parseInt(userId));
+            if(liketravelBean1 == null) {
+                liketravelService.insertSelective(liketravelBean);
+            }
         }
 
         return article(request, map);

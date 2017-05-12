@@ -26,4 +26,9 @@ public class LiketravelServiceImpl implements ILiketravelService {
     public List<LiketravelBean> selectByUserId(Integer id) {
         return liketravelDao.selectByUserId(id);
     }
+
+    @Override
+    public LiketravelBean selectByUserIdAndTravelId(Integer travelId, int userId) {
+        return liketravelDao.selectByUserIdAndTravelId(travelId,userId);
+    }
 }
