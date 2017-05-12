@@ -103,7 +103,7 @@ public class MovieBean {
     }
 
     public String getShowtime() {
-        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd hh:mm");
         return simpleDateFormat.format(showtime);
     }
 
