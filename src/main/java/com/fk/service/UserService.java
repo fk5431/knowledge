@@ -203,7 +203,7 @@ public class UserService {
             }
             map.put("pageNow", toPage);
             int start = (toPage - 1) * SIZE;
-            List<UserBean> list = userDao.selectByStart(start);
+            List<UserBean> list = userDao.selectByStartAnd1(start);
             List<UserBean> userBeans = new ArrayList<>();
             for (UserBean u : list) {
                 u.setPwd(MD5.decodeMD5(u.getPwd()));

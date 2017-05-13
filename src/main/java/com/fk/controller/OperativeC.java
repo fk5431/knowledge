@@ -204,7 +204,7 @@ public class OperativeC {
         if (map.get(CommonConst.ERRORCODE) != null) {
             return "/info/error";
         }
-        return operative(request, map);
+        return "/operative/index";
     }
 
 
@@ -213,6 +213,13 @@ public class OperativeC {
 
 
         return "/operative/filetable";
+    }
+
+    @RequestMapping("/operative/index")
+    public String index() {
+
+
+        return "/operative/index";
     }
 
     @RequestMapping("/userform")

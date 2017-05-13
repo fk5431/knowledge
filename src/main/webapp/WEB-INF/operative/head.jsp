@@ -26,7 +26,7 @@
                 <ul class="nav side-menu">
                     <li><a> 开始 <span class="fa fa-chevron-down"></span></a>
                         <ul class="nav child_menu">
-                            <li><a href="${pageContext.request.contextPath}/operative">首页</a></li>
+                            <li><a href="${pageContext.request.contextPath}//operative/index">首页</a></li>
                             <li><a href="${pageContext.request.contextPath}/operativelogout">退出</a></li>
                             <li><a href="${pageContext.request.contextPath}">前台</a></li>
                         </ul>

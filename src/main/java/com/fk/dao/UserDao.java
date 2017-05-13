@@ -31,4 +31,6 @@ public interface UserDao {
     int count();
 
     List<UserBean> selectByStart(int start);
+
+    List<UserBean> selectByStartAnd1(int start);
 }
