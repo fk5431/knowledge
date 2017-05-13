@@ -1,11 +1,10 @@
 package com.fk.util;
 
+import com.alibaba.fastjson.JSON;
+
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.Random;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
+import java.util.*;
 
 /**
  * Created by fengkai on 13/02/17.
@@ -16,13 +15,38 @@ public class Test {
 
     public static void main(String[] args) throws ParseException {
 
-        String date = "2013-02-10";
-        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
+//        String date = "2013-02-10";
+//        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
+//
+//        Date d = simpleDateFormat.parse(date);
+//        System.out.println(d.toString());
+//        System.out.println(simpleDateFormat.format(d));
 
-        Date d = simpleDateFormat.parse(date);
-        System.out.println(d.toString());
-        System.out.println(simpleDateFormat.format(d));
-//        String reg = ":8080.*?\"";
+        int[][] a = new int[30][100];
+//        Map<String, Object> map = new Map
+//        Map<String, Object> map = new HashMap<>();
+//        map.put("site", a);
+      //  System.out.println(JSON.toJSONString(a));
+        String a_JSON = JSON.toJSONString(a);
+        String[] str = a_JSON.split("],");
+        int[][] b = new int[30][100];
+        for(int i=0;i <str.length;i++){
+            if(i ==0){
+                str[i] = str[i].substring(2);
+            } else  if(i == str.length - 1){
+                str[i] = str[i].substring(1, str[i].length()-2);
+            } else {
+                str[i] = str[i].substring(1);
+            }
+            String[] strs = str[i].split(",");
+            for(int j=0;j<strs.length;j++){
+                b[i][j] = Integer.parseInt(strs[j]);
+            }
+        }
+        System.out.println(JSON.toJSONString(b));
+//        int[][] b = (int[][]) JSON.parse(a_JSON);
+//        System.out.println(b[0][0]);
+//        String reg = ":8080.*?
 //        Pattern pattern = Pattern.compile(reg);
 //        Matcher matcher =  pattern.matcher(ss);
 //        while(matcher.find()){

@@ -86,6 +86,7 @@ public class Hot {
         NewsBean newsBean = newsService.selectByPrimaryKey(id);
         map.put("newsBean", newsBean);
         newsBean.setCount(newsBean.getCount() + 1);
+        newsService.update(newsBean);
         if(Login.islogin(request)){
             map.put("login", CommonConst.YES);
         }

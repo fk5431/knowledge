@@ -1,6 +1,7 @@
 package com.fk.controller;
 
 import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONObject;
 import com.fk.bean.*;
 import com.fk.service.*;
 import com.fk.util.CommonConst;
@@ -66,12 +67,18 @@ public class Buy {
             map.put("errorcode", 12);
             return "error";
         }
+
+        List<String> price = new ArrayList<>();
         int row = Integer.parseInt(ticket[0]);
-        int col = Integer.parseInt(ticket[1]);
-        int[][] site = (int[][]) JSON.parse(ticket[3]);
-        map.put("row", row);
-        map.put("col", col);
-        map.put("site", site);
+        int length = (int) Math.ceil(row/5.0);
+        int mid = length / 2;
+        for(int i=0;i<length;i++){
+            int p = (mid - i) * 50 + Integer.parseInt(movieBean.getPrizeids());
+            if( p == 0)
+                p = Integer.parseInt(movieBean.getPrizeids());
+            price.add(String.valueOf(p));
+        }
+        map.put("price", price);
         String[] types = movieBean.getType().split(CommonConst.SPLITOR);
         StringBuffer sb = new StringBuffer();
         for(String str : types){
@@ -121,13 +128,14 @@ public class Buy {
         }
         String id = request.getParameter("id");
         String radio = request.getParameter("radio");
+        String price = request.getParameter("price");
         String name = request.getParameter("name");
         String email = request.getParameter("email");
         String wechat = request.getParameter("wechat");
         String mob = request.getParameter("mob");
         String other = request.getParameter("other");
-        String row = request.getParameter("row");
-        String col = request.getParameter("col");
+//        String row = request.getParameter("row");
+//        String col = request.getParameter("col");
         String userId = "0";
         if(name == null || email == null || mob == null){
             map.put("errorcode", 8);
@@ -158,8 +166,59 @@ public class Buy {
         movieBean.setBoxoffice(movieBean.getBoxoffice() + 1);
         String[] ticket = movieBean.getDirectorid().split(CommonConst.SPLITOR);
         int rest = Integer.parseInt(ticket[2]) - 1;
-        int[][] site = (int[][]) JSON.parse(ticket[3]);
-        site[Integer.parseInt(ticket[0])][Integer.parseInt(ticket[1])] = 1;
+        //TODO
+        int pri = Integer.parseInt(price);
+        int row = Integer.parseInt(ticket[0]);
+        int length = (int) Math.ceil(row/5.0);
+        int mid = length / 2;
+        int pos = 0;
+        for(int i=0;i<length;i++){
+            int p = (mid - i) * 50 + Integer.parseInt(movieBean.getPrizeids());
+            if( p == 0)
+                p = Integer.parseInt(movieBean.getPrizeids());
+            // price.add(String.valueOf(p));
+            if(p == pri){
+                pos = i;
+                break;
+            }
+        }
+        int min_x = pos * 5;
+        int max_x = min_x + 4;
+        if(max_x > row){
+            max_x = row;
+        }
+        int max_y = Integer.parseInt(ticket[1]);
+//        JSONObject jsonObject = JSON.parseObject(ticket[3]);
+        int[][] site = new int[row][Integer.parseInt(ticket[1])];
+        String[] str = ticket[3].split("],");
+        for(int i=0;i <str.length;i++){
+            if(i ==0){
+                str[i] = str[i].substring(2);
+            } else  if(i == str.length - 1){
+                str[i] = str[i].substring(1, str[i].length()-2);
+            } else {
+                str[i] = str[i].substring(1);
+            }
+            String[] strs = str[i].split(",");
+            for(int j=0;j<strs.length;j++){
+               site[i][j] = Integer.parseInt(strs[j]);
+            }
+        }
+        boolean flag = false;
+        outterLoop : for(int i=min_x;i<=max_x;i++){
+            for (int j=0;j<max_y;j++){
+                if (site[i][j] == 0){
+                    site[i][j] = 1;
+                    flag = true;
+                    break outterLoop;
+                }
+            }
+        }
+        if(flag == false){
+            map.put("errorcode", 13);
+            return "error";
+        }
+        //
         movieBean.setDirectorid(ticket[0]+CommonConst.SPLITOR+ticket[1]+CommonConst.SPLITOR+rest + JSON.toJSONString(site));
         movieService.updateByPrimaryKey(movieBean);
 
@@ -174,6 +233,10 @@ public class Buy {
 
         map.put("cost", movieBean.getPrizeids());
         pay_buy(request, map);
+
+
+
+
         return "pay";
     }
 

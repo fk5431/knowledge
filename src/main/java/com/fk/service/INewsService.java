@@ -20,4 +20,6 @@ public interface INewsService {
 
     int deleteByPrimaryKey(Integer id);
     int insertSelective(NewsBean record);
+
+    int update(NewsBean newsBean);
 }

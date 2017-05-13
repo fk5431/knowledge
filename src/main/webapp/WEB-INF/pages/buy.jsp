@@ -168,9 +168,19 @@
                                 <input hidden name="id" value="${movie.id}">
 
                                 <div class="mod-title">
-                                    <h3>座位：</h3>
+                                    <h3>价格：（温馨提示，价格越高座位越好）</h3>
                                 </div>
-
+                                <ul class="dowebok">
+                                    <%
+                                        List<String> price = (List) request.getAttribute("price");
+                                        for(int i=0;i<price.size();i++){
+                                            if(i == 0){
+                                    %>
+                                    <li><input type="radio" name="price" checked data-labelauty="<%=price.get(i)%>" value="<%=price.get(i)%>"></li>
+                                    <%}else{%>
+                                    <li><input type="radio" name="price"  data-labelauty="<%=price.get(i)%>"  value="<%=price.get(i)%>"></li>
+                                    <%}}%>
+                                </ul>
 
                                 <div class="res-inf" id="baseInfoForm">
                                     <h2>预订人信息（<span>用于接收订单反馈</span>）</h2>

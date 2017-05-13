@@ -53,4 +53,9 @@ public class NewsServiceImpl implements INewsService {
     public int insertSelective(NewsBean record) {
         return newsDao.insertSelective(record);
     }
+
+    @Override
+    public int update(NewsBean newsBean) {
+        return newsDao.updateByPrimaryKey(newsBean);
+    }
 }
