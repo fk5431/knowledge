@@ -12,7 +12,7 @@
         <result column="lookcount" property="lookcount" jdbcType="INTEGER" />
         <result column="score" property="score" jdbcType="DOUBLE" />
         <result column="boxoffice" property="boxoffice" jdbcType="INTEGER" />
-        <result column="directorId" property="directorid" jdbcType="INTEGER" />
+        <result column="directorId" property="directorid" jdbcType="VARCHAR" />
         <result column="performerIds" property="performerids" jdbcType="VARCHAR" />
         <result column="prizeIds" property="prizeids" jdbcType="VARCHAR" />
         <result column="image" property="image" jdbcType="VARCHAR" />
@@ -94,7 +94,7 @@
     values (#{id,jdbcType=INTEGER}, #{title,jdbcType=VARCHAR}, #{etitle,jdbcType=VARCHAR},
       #{type,jdbcType=VARCHAR}, #{area,jdbcType=VARCHAR}, #{time,jdbcType=VARCHAR}, #{showtime,jdbcType=DATE},
       #{lookcount,jdbcType=INTEGER}, #{score,jdbcType=DOUBLE}, #{boxoffice,jdbcType=INTEGER},
-      #{directorid,jdbcType=INTEGER}, #{performerids,jdbcType=VARCHAR}, #{prizeids,jdbcType=VARCHAR},
+      #{directorid,jdbcType=VARCHAR}, #{performerids,jdbcType=VARCHAR}, #{prizeids,jdbcType=VARCHAR},
       #{image,jdbcType=VARCHAR}, #{introduce,jdbcType=LONGVARCHAR}, #{atlas,jdbcType=LONGVARCHAR}, #{scorenum,jdbcType=INTEGER}
       )
     </insert>
@@ -185,7 +185,7 @@
                 #{boxoffice,jdbcType=INTEGER},
             </if>
             <if test="directorid != null" >
-                #{directorid,jdbcType=INTEGER},
+                #{directorid,jdbcType=VARCHAR},
             </if>
             <if test="performerids != null" >
                 #{performerids,jdbcType=VARCHAR},
@@ -238,7 +238,7 @@
                 boxoffice = #{boxoffice,jdbcType=INTEGER},
             </if>
             <if test="directorid != null" >
-                directorId = #{directorid,jdbcType=INTEGER},
+                directorId = #{directorid,jdbcType=VARCHAR},
             </if>
             <if test="performerids != null" >
                 performerIds = #{performerids,jdbcType=VARCHAR},
@@ -272,7 +272,7 @@
       lookcount = #{lookcount,jdbcType=INTEGER},
       score = #{score,jdbcType=DOUBLE},
       boxoffice = #{boxoffice,jdbcType=INTEGER},
-      directorId = #{directorid,jdbcType=INTEGER},
+      directorId = #{directorid,jdbcType=VARCHAR},
       performerIds = #{performerids,jdbcType=VARCHAR},
       prizeIds = #{prizeids,jdbcType=VARCHAR},
       image = #{image,jdbcType=VARCHAR},

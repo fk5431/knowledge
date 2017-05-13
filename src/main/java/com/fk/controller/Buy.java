@@ -1,9 +1,11 @@
 package com.fk.controller;
 
+import com.alibaba.fastjson.JSON;
 import com.fk.bean.*;
 import com.fk.service.*;
 import com.fk.util.CommonConst;
 import com.fk.util.Login;
+import netscape.javascript.JSObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -58,7 +60,18 @@ public class Buy {
         MovieBean movieBean = movieService.selectByPrimaryKey(Integer.parseInt(id));
         movieBean.setBoxoffice(movieBean.getBoxoffice() * Integer.parseInt(movieBean.getPrizeids()));
         map.put("movie", movieBean);
-
+        String[] ticket = movieBean.getDirectorid().split(CommonConst.SPLITOR);
+        int rest = Integer.parseInt(ticket[2]);
+        if(rest <= 0){
+            map.put("errorcode", 12);
+            return "error";
+        }
+        int row = Integer.parseInt(ticket[0]);
+        int col = Integer.parseInt(ticket[1]);
+        int[][] site = (int[][]) JSON.parse(ticket[3]);
+        map.put("row", row);
+        map.put("col", col);
+        map.put("site", site);
         String[] types = movieBean.getType().split(CommonConst.SPLITOR);
         StringBuffer sb = new StringBuffer();
         for(String str : types){
@@ -113,6 +126,8 @@ public class Buy {
         String wechat = request.getParameter("wechat");
         String mob = request.getParameter("mob");
         String other = request.getParameter("other");
+        String row = request.getParameter("row");
+        String col = request.getParameter("col");
         String userId = "0";
         if(name == null || email == null || mob == null){
             map.put("errorcode", 8);
@@ -141,6 +156,11 @@ public class Buy {
         recordService.insertSelective(recordBean);
 
         movieBean.setBoxoffice(movieBean.getBoxoffice() + 1);
+        String[] ticket = movieBean.getDirectorid().split(CommonConst.SPLITOR);
+        int rest = Integer.parseInt(ticket[2]) - 1;
+        int[][] site = (int[][]) JSON.parse(ticket[3]);
+        site[Integer.parseInt(ticket[0])][Integer.parseInt(ticket[1])] = 1;
+        movieBean.setDirectorid(ticket[0]+CommonConst.SPLITOR+ticket[1]+CommonConst.SPLITOR+rest + JSON.toJSONString(site));
         movieService.updateByPrimaryKey(movieBean);
 
         String per = movieBean.getPerformerids();
@@ -151,7 +171,7 @@ public class Buy {
             performerService.updateByPrimaryKey(p);
         }
 
-        //TODO
+
         map.put("cost", movieBean.getPrizeids());
         pay_buy(request, map);
         return "pay";

@@ -167,6 +167,24 @@
                 </div>
                 <div class="form-group">
                     <div class="label">
+                        <label>座位总行数（整数）：</label>
+                    </div>
+                    <div class="field">
+                        <input type="text" class="input" name="row" value=""/>
+                        <div class="tips"></div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="label">
+                        <label>座位总列数（整数）：</label>
+                    </div>
+                    <div class="field">
+                        <input type="text" class="input" name="col" value=""/>
+                        <div class="tips"></div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="label">
                         <label>简介：</label>
                     </div>
                     <div class="field">

@@ -46,6 +46,10 @@
         alert("支付成功！");
         this.window.opener = null;
         window.location.href = "http://localhost:8080/movie/info";
+    }else if (errorcode == 12){
+        alert("已经没有票了，请选择其他节目！");
+        this.window.opener = null;
+        window.history.back();
     }
 
 </script>

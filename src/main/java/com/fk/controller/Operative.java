@@ -1,5 +1,6 @@
 package com.fk.controller;
 
+import com.alibaba.fastjson.JSON;
 import com.fk.bean.*;
 import com.fk.service.*;
 import com.fk.util.CommonConst;
@@ -307,6 +308,9 @@ public class Operative {
             String score = request.getParameter("score");
             String price = request.getParameter("price");
 
+            String row = request.getParameter("row");
+            String col = request.getParameter("col");
+
 
             String introduce = request.getParameter("introduce");
             String[] performer = request.getParameterValues("performer");
@@ -348,7 +352,9 @@ public class Operative {
             }
             movieBean.setTime(time1);
             movieBean.setType(type);
-            movieBean.setDirectorid(1);
+            int allTicket = Integer.parseInt(row) * Integer.parseInt(col);
+            int[][] ticket = new int[Integer.parseInt(row)][Integer.parseInt(col)];
+            movieBean.setDirectorid(row + CommonConst.SPLITOR + col + CommonConst.SPLITOR + allTicket+CommonConst.SPLITOR + JSON.toJSONString(ticket));
             StringBuffer sb = new StringBuffer();
             if(performer!=null) {
                 for (int i = 0; i < performer.length; i++) {

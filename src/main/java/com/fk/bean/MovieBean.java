@@ -24,7 +24,7 @@ public class MovieBean {
 
     private Integer boxoffice;//改成订票数
 
-    private Integer directorid;
+    private String directorid;
 
     private String performerids;
 
@@ -135,11 +135,11 @@ public class MovieBean {
         this.boxoffice = boxoffice;
     }
 
-    public Integer getDirectorid() {
+    public String getDirectorid() {
         return directorid;
     }
 
-    public void setDirectorid(Integer directorid) {
+    public void setDirectorid(String directorid) {
         this.directorid = directorid;
     }
 

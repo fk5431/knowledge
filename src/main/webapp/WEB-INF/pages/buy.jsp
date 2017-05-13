@@ -167,6 +167,10 @@
                                 </ul>
                                 <input hidden name="id" value="${movie.id}">
 
+                                <div class="mod-title">
+                                    <h3>座位：</h3>
+                                </div>
+
 
                                 <div class="res-inf" id="baseInfoForm">
                                     <h2>预订人信息（<span>用于接收订单反馈</span>）</h2>
