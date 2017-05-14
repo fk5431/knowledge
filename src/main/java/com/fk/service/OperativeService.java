@@ -9,6 +9,9 @@ import com.fk.dao.FtypeDao;
 import com.fk.dao.KtypeDao;
 import com.fk.dao.UserDao;
 import com.fk.util.CommonConst;
+import com.fk.util.Converter;
+import com.fk.util.DateUtil;
+import com.fk.util.PropertiesStr;
 import org.apache.commons.io.FileUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -21,6 +24,7 @@ import java.io.File;
 import java.io.IOException;
 import java.util.List;
 import java.util.Map;
+import java.util.Properties;
 
 /**
  * Created by fengkai on 25/04/17.
@@ -152,6 +156,7 @@ public class OperativeService {
             fileBean.setUuidname("");
             fileBean.setFname("");
         }
+        extract();
         //tags
         String tags = fileBean.getTags();
         StringBuffer sb = new StringBuffer();
@@ -169,11 +174,24 @@ public class OperativeService {
         fileDao.insertSelective(fileBean);
     }
 
+    private void extract() {
+
+    }
+
     private void transforms(MultipartFile file, FileBean fileBean) {
         String suffix = fileBean.getFname().substring(fileBean.getFname().lastIndexOf("."));
         logger.debug("===================================trasforms, suffix{[]}", suffix);
-        fileBean.setUrlImage("");
-        fileBean.setUrlTransforms("");
+        if(PropertiesStr.office.contains(suffix)){
+            String path = ContextLoader.getCurrentWebApplicationContext().getServletContext().getRealPath("/");
+            String outputPath = path + "trasnfroms" + DateUtil.currentDate("yyyy-MM-dd");
+            Converter converter = new Converter(fileBean.getUrl());
+            converter.setFile(outputPath);
+            converter.setSecond(fileBean.getFname().substring(0, fileBean.getFname().lastIndexOf("."))+System.currentTimeMillis()+".swf");
+            converter.conver();
+            fileBean.setUrlTransforms(outputPath);
+            fileBean.setUrlImage("");
+
+        }
     }
 
 

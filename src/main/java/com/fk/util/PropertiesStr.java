@@ -15,6 +15,7 @@ public class PropertiesStr {
     public static String authcode = "";
     public static String mailserver = "";
     public static String emailcontenttype = "";
+    public static String office = "";
 
     public void initProperties() throws IOException {
 
@@ -25,6 +26,7 @@ public class PropertiesStr {
         PropertiesStr.authcode = prop.getProperty("authcode");
         PropertiesStr.mailserver = prop.getProperty("mailserver");
         PropertiesStr.emailcontenttype = prop.getProperty("emailcontenttype");
+        PropertiesStr.office = prop.getProperty("office");
     }
 
 }
