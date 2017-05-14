@@ -94,6 +94,7 @@
                 <th>购买人微信</th>
                 <th>购买人手机</th>
                 <th>购买人备注</th>
+                <th>购买人座位</th>
                 <th>用户ID</th>
                 <th width="250">操作</th>
             </tr>
@@ -116,7 +117,9 @@
                 </td>
                 <td><%=recordBeans.get(i).getMob()%>
                 </td>
-                <td><%=recordBeans.get(i).getOther()%>
+                <td><%=recordBeans.get(i).getOther().split("!=end=!")[0]%>
+                </td>
+                <td><%=Integer.parseInt(recordBeans.get(i).getOther().split("!=end=!")[1]) + 1%>排<%=Integer.parseInt(recordBeans.get(i).getOther().split("!=end=!")[2]) + 1%>列
                 </td>
                 <td><%=recordBeans.get(i).getUserid()%>
                 </td>

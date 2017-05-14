@@ -325,7 +325,7 @@ public class OperativeAdv {
             map.put("errorcode", 9);
             return "error";
         }
-        return addsite(request, map);
+        return buy(request, map);
     }
     @RequestMapping("/operative/buy")
     public String buy(HttpServletRequest request, Map<String, Object> map){
@@ -351,6 +351,9 @@ public class OperativeAdv {
             }
             map.put("pageNow", toPage);
             int start = (toPage - 1) * SIZE;
+            if(start < 0){
+                start = 0;
+            }
             List<RecordBean> list = recordService.selectByStartAll(start);
             map.put("record", list);
 

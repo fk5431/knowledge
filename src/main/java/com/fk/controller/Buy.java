@@ -150,18 +150,6 @@ public class Buy {
 
         MovieBean movieBean = movieService.selectByPrimaryKey(Integer.parseInt(id));
         SiteBean siteBean = siteService.selectByPrimaryKey(Integer.parseInt(radio));
-        RecordBean recordBean = new RecordBean();
-        recordBean.setMob(mob==null?"":mob);
-        recordBean.setUserid(Integer.parseInt(userId));
-        recordBean.setWechat(wechat==null?"":wechat);
-        recordBean.setEmail(email==null?"":email);
-        recordBean.setMovieid(Integer.parseInt(id));
-        recordBean.setMoviename(movieBean.getTitle());
-        recordBean.setName(name==null?"":name);
-        recordBean.setOther(other==null?"":other);
-        recordBean.setSiteid(siteBean.getId());
-        recordBean.setSitename(siteBean.getSite());
-        recordService.insertSelective(recordBean);
 
         movieBean.setBoxoffice(movieBean.getBoxoffice() + 1);
         String[] ticket = movieBean.getDirectorid().split(CommonConst.SPLITOR);
@@ -205,11 +193,15 @@ public class Buy {
             }
         }
         boolean flag = false;
+        int x = 0;
+        int y = 0;
         outterLoop : for(int i=min_x;i<=max_x;i++){
             for (int j=0;j<max_y;j++){
                 if (site[i][j] == 0){
                     site[i][j] = 1;
                     flag = true;
+                    x = i;
+                    y = j;
                     break outterLoop;
                 }
             }
@@ -221,6 +213,21 @@ public class Buy {
         //
         movieBean.setDirectorid(ticket[0]+CommonConst.SPLITOR+ticket[1]+CommonConst.SPLITOR+rest + JSON.toJSONString(site));
         movieService.updateByPrimaryKey(movieBean);
+
+
+        RecordBean recordBean = new RecordBean();
+        recordBean.setMob(mob==null?"":mob);
+        recordBean.setUserid(Integer.parseInt(userId));
+        recordBean.setWechat(wechat==null?"":wechat);
+        recordBean.setEmail(email==null?"":email);
+        recordBean.setMovieid(Integer.parseInt(id));
+        recordBean.setMoviename(movieBean.getTitle());
+        recordBean.setName(name==null?"":name);
+        recordBean.setOther(other==null?""+CommonConst.SPLITOR+x+CommonConst.SPLITOR+y:other+CommonConst.SPLITOR+x+CommonConst.SPLITOR+y);
+        recordBean.setSiteid(siteBean.getId());
+        recordBean.setSitename(siteBean.getSite());
+        recordService.insertSelective(recordBean);
+
 
         String per = movieBean.getPerformerids();
         String[] pers = per.split(CommonConst.SPLITOR);
