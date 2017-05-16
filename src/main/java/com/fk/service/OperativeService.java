@@ -8,10 +8,7 @@ import com.fk.dao.FileDao;
 import com.fk.dao.FtypeDao;
 import com.fk.dao.KtypeDao;
 import com.fk.dao.UserDao;
-import com.fk.util.CommonConst;
-import com.fk.util.Converter;
-import com.fk.util.DateUtil;
-import com.fk.util.PropertiesStr;
+import com.fk.util.*;
 import org.apache.commons.io.FileUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -181,16 +178,41 @@ public class OperativeService {
     private void transforms(MultipartFile file, FileBean fileBean) {
         String suffix = fileBean.getFname().substring(fileBean.getFname().lastIndexOf("."));
         logger.debug("===================================trasforms, suffix{[]}", suffix);
+        String path = ContextLoader.getCurrentWebApplicationContext().getServletContext().getRealPath("/");
         if(PropertiesStr.office.contains(suffix)){
-            String path = ContextLoader.getCurrentWebApplicationContext().getServletContext().getRealPath("/");
-            String outputPath = path + "trasnfroms" + DateUtil.currentDate("yyyy-MM-dd");
+            String outputPath = path + "/trasnfroms/" + DateUtil.currentDate("yyyy-MM-dd");
             Converter converter = new Converter(fileBean.getUrl());
             converter.setFile(outputPath);
             converter.setSecond(fileBean.getFname().substring(0, fileBean.getFname().lastIndexOf("."))+System.currentTimeMillis()+".swf");
             converter.conver();
             fileBean.setUrlTransforms(outputPath);
             fileBean.setUrlImage("");
+        }else if(PropertiesStr.music.contains(suffix)){
+            fileBean.setUrlTransforms(fileBean.getUrl());
+            fileBean.setUrlImage("");
+        }else if(PropertiesStr.video.contains(suffix)){
+            ConvertVideo convertVideo = new ConvertVideo(fileBean.getUrl());
+            ConvertVideo.processImg(fileBean.getUrl(), fileBean.getUrl(), 10);
+            //缩略图
+            try {
+                Thread.sleep(1000);
+                File destFile = new File(path + "/transfroms/image/" + DateUtil.currentDate("yyyy-MM-dd"), fileBean.getFname()+".jpg");
+                FileUtils.copyFile(new File(path + "/transfroms/image/" + DateUtil.currentDate("yyyy-MM-dd") + fileBean.getFname()+".jpg"), destFile);
+                fileBean.setUrlImage(path + "/transfroms/image/" + DateUtil.currentDate("yyyy-MM-dd") + fileBean.getFname()+".jpg");
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }catch (IOException e) {
+                e.printStackTrace();
+            }
+            //转换
+            convertVideo.convert(fileBean.getUrl(),
+                    fileBean.getUrl().substring(0, fileBean.getUrl().lastIndexOf("."))+".flv");
+            //TODO 复制
 
+            fileBean.setUrlTransforms(fileBean.getUrl().substring(0, fileBean.getUrl().lastIndexOf("."))+".flv");
+        }else if (PropertiesStr.image.contains(suffix)){
+            fileBean.setUrlTransforms(fileBean.getUrl());
+            fileBean.setUrlImage("");
         }
     }
 

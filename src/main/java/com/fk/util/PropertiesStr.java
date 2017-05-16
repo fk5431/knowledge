@@ -16,6 +16,9 @@ public class PropertiesStr {
     public static String mailserver = "";
     public static String emailcontenttype = "";
     public static String office = "";
+    public static String music = "";
+    public static String video = "";
+    public static String image = "";
 
     public void initProperties() throws IOException {
 
@@ -27,6 +30,9 @@ public class PropertiesStr {
         PropertiesStr.mailserver = prop.getProperty("mailserver");
         PropertiesStr.emailcontenttype = prop.getProperty("emailcontenttype");
         PropertiesStr.office = prop.getProperty("office");
+        PropertiesStr.music = prop.getProperty("music");
+        PropertiesStr.video = prop.getProperty("video");
+        PropertiesStr.image = prop.getProperty("image");
     }
 
 }
