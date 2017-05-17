@@ -57,6 +57,11 @@ public class Buy {
     public String buy(HttpServletRequest request, Map<String, Object> map){
         map.put("index", 0);
         String id = request.getParameter("id");
+        if(Login.islogin(request)){
+            map.put("login", CommonConst.YES);
+        }else{
+            return "log";
+        }
 
         MovieBean movieBean = movieService.selectByPrimaryKey(Integer.parseInt(id));
         movieBean.setBoxoffice(movieBean.getBoxoffice() * Integer.parseInt(movieBean.getPrizeids()));
@@ -87,11 +92,6 @@ public class Buy {
         String type = sb.substring(0, sb.length()-1);
 
         map.put("type", type);
-        if(Login.islogin(request)){
-            map.put("login", CommonConst.YES);
-        }else{
-            return "log";
-        }
 
         List<SiteBean> siteBeans = siteService.selectAll();
         map.put("site", siteBeans);
@@ -211,7 +211,7 @@ public class Buy {
             return "error";
         }
         //
-        movieBean.setDirectorid(ticket[0]+CommonConst.SPLITOR+ticket[1]+CommonConst.SPLITOR+rest + JSON.toJSONString(site));
+        movieBean.setDirectorid(ticket[0]+CommonConst.SPLITOR+ticket[1]+CommonConst.SPLITOR+rest+CommonConst.SPLITOR + JSON.toJSONString(site));
         movieService.updateByPrimaryKey(movieBean);
 
 
