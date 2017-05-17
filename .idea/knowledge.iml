@@ -84,14 +84,16 @@
     <orderEntry type="library" name="Maven: dom4j:dom4j:1.6.1" level="project" />
     <orderEntry type="library" name="Maven: xml-apis:xml-apis:1.0.b2" level="project" />
     <orderEntry type="library" name="Maven: org.apache.poi:poi-scratchpad:3.8" level="project" />
-    <orderEntry type="library" name="Maven: com.artofsolving:jodconverter-maven-plugin:2.2.1" level="project" />
-    <orderEntry type="library" name="Maven: org.apache.maven:maven-plugin-api:2.0" level="project" />
-    <orderEntry type="library" name="Maven: org.codehaus.plexus:plexus-utils:1.1" level="project" />
-    <orderEntry type="library" name="Maven: com.artofsolving:jodconverter:2.2.1" level="project" />
-    <orderEntry type="library" name="Maven: org.openoffice:juh:2.3.0" level="project" />
-    <orderEntry type="library" name="Maven: org.openoffice:jurt:2.3.0" level="project" />
-    <orderEntry type="library" name="Maven: org.openoffice:ridl:2.3.0" level="project" />
-    <orderEntry type="library" name="Maven: org.openoffice:unoil:2.3.0" level="project" />
-    <orderEntry type="library" name="Maven: org.slf4j:slf4j-jdk14:1.4.3" level="project" />
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/src/main/resources/lib" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+        <jarDirectory url="file://$MODULE_DIR$/src/main/resources/lib" recursive="false" />
+      </library>
+    </orderEntry>
+    <orderEntry type="library" name="lib" level="project" />
   </component>
 </module>
