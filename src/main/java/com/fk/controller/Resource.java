@@ -1,7 +1,11 @@
 package com.fk.controller;
 
 import com.fk.bean.FileBean;
+import com.fk.service.CdirectoryService;
+import com.fk.service.DocumentService;
 import com.fk.service.ResourceService;
+import com.fk.util.CommonConst;
+import com.fk.util.Login;
 import org.apache.commons.io.FileUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -14,6 +18,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.context.ContextLoader;
 
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.*;
@@ -29,6 +34,12 @@ public class Resource {
 
     @Autowired
     ResourceService resourceService;
+
+    @Autowired
+    CdirectoryService cdirectoryService;
+
+    @Autowired
+    DocumentService documentService;
 
     @RequestMapping("/resource")
     public String resource(HttpServletRequest request, Map<String, Object> map) {
@@ -74,4 +85,40 @@ public class Resource {
             e.printStackTrace();
         }
     }
+
+    @RequestMapping("/sendcdirectory")
+    public String sendcdirectory(HttpServletRequest request, Map<String, Object> map){
+        String num = request.getParameter("id");
+        int id = Integer.parseInt(num);
+        String name = request.getParameter("fname");
+        if(!Login.islogin(request)){
+            map.put(CommonConst.ERRORCODE, 13);
+            return "login";
+        }
+        cdirectoryService.insertInfo(id, name, map);
+
+        return "/info/error";
+    }
+
+    @RequestMapping("/senddocument")
+    public String senddocument(HttpServletRequest request, Map<String, Object> map){
+        String num = request.getParameter("id");
+        int id = Integer.parseInt(num);
+        int uid = 0;
+        Cookie[] cookies = request.getCookies();
+        for(Cookie c : cookies){
+            if(CommonConst.USERID.equals(c.getName())){
+                uid = Integer.parseInt(c.getValue());
+            }
+        }if(uid == 0 ) {
+            map.put(CommonConst.ERRORCODE, 13);
+            return "login";
+        }
+
+        documentService.insertInfo(id, uid, map);
+
+        return "/info/error";
+    }
+
+
 }

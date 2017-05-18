@@ -88,8 +88,8 @@
                 <div  class="grid_bottom">
 
                     <ul>
-                        <li><a href="sendcdirectory?fid=${file.fid}&fname=${file.title}">发送至常用目录</a></li>
-                        <li><a href="senddocument?uid=${file.uid}&fid=${file.fid}"><span >发送至常用文档</span></a></li>
+                        <li><a href="sendcdirectory?id=${file.fid}&fname=${file.title}">发送至常用目录</a></li>
+                        <li><a href="senddocument?id=${file.fid}"><span >发送至常用文档</span></a></li>
                         <li><a href="preview?url_transforms=${file.urlTransforms }&typeid=${file.ftypeid}"><span>预览文件</span></a></li>
                         <li><a href="${pageContext.request.contextPath}/download?id=${file.fid}"><span >下载文件</span></a></li>
                     </ul>

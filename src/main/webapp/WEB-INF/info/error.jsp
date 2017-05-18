@@ -49,6 +49,15 @@
     } else if (errorcode == 12) {
         alert("你没有权限管理管理员!!");
         window.history.back(-1);
+    }else if (errorcode == 13) {
+        alert("你没有权限管理管理员!!");
+        window.history.back(-1);
+    }else if (errorcode == 14) {
+        alert("发送至常用目录成功!!");
+        window.history.back(-1);
+    }else if (errorcode == 15) {
+        alert("发送至常用文档成功!!");
+        window.history.back(-1);
     }
 </script>
 </body>
