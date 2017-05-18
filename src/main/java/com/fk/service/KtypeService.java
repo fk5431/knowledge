@@ -1,5 +1,6 @@
 package com.fk.service;
 
+import com.fk.bean.FileBean;
 import com.fk.bean.KtypeBean;
 import com.fk.bean.UserBean;
 import com.fk.dao.KtypeDao;
@@ -68,5 +69,11 @@ public class KtypeService {
 
     public void delKtype(int i, Map<String, Object> map) {
         ktypeDao.deleteByPrimaryKey(i);
+    }
+
+    public void addCount(FileBean fileBean) {
+        KtypeBean ktypeBean = ktypeDao.selectByPrimaryKey(fileBean.getKtypeid());
+        ktypeBean.setCount(ktypeBean.getCount() + 1);
+        ktypeDao.updateByPrimaryKey(ktypeBean);
     }
 }

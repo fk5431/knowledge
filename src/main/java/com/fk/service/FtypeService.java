@@ -43,4 +43,5 @@ public class FtypeService {
     public void delFtype(int i, Map<String, Object> map) {
         ftypeDao.deleteByPrimaryKey(i);
     }
+
 }

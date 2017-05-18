@@ -87,6 +87,7 @@ public class OperativeC {
             fileBean.setCount(0);
 
             operativeService.addFile(fileBean, file, map);
+            ktypeService.addCount(fileBean);
 
         } catch (Exception e) {
             e.printStackTrace();

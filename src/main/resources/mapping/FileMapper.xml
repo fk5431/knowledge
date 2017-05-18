@@ -34,7 +34,7 @@
         ,
         <include refid="Blob_Column_List"/>
         from file
-        limit #{start, jdbcType=INTEGER},10
+        limit #{start, jdbcType=INTEGER},8
     </select>
     <select id="count" resultType="java.lang.Integer">
     select

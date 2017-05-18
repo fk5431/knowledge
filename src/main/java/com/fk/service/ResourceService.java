@@ -34,7 +34,7 @@ public class ResourceService {
     @Autowired
     UserDao useDao;
 
-    private final int SIZE = 10;
+    private final int SIZE = 8;
 
     public void resource(String page_, Map<String, Object> map) {
 

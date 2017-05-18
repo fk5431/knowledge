@@ -21,6 +21,7 @@ public class FileServer {
     FileDao fileDao;
 
     private final int SIZE = 8;
+
     public void selectFileByPage(String page_, Map<String, Object> map) {
         try {
             int count = fileDao.count();
