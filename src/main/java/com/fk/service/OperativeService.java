@@ -137,15 +137,16 @@ public class OperativeService {
                 e.printStackTrace();
             }
 
-            String url = "/knowledge/upload/" + filename;
+            String url = path + "\\" + filename;
+            fileBean.setUrl(url);
+            fileBean.setUuidname(filename);
             if (fileBean.getCanTransforms() == 0) {
                 transforms(file, fileBean);
             } else {
                 fileBean.setUrlImage("");
                 fileBean.setUrlTransforms("");
             }
-            fileBean.setUrl(url);
-            fileBean.setUuidname(filename);
+
         } else {
             fileBean.setUrlImage("");
             fileBean.setUrlTransforms("");
@@ -176,16 +177,17 @@ public class OperativeService {
     }
 
     private void transforms(MultipartFile file, FileBean fileBean) {
-        String suffix = fileBean.getFname().substring(fileBean.getFname().lastIndexOf("."));
+        String suffix = fileBean.getFname().substring(fileBean.getFname().lastIndexOf(".")+1);
         logger.debug("===================================trasforms, suffix{[]}", suffix);
         String path = ContextLoader.getCurrentWebApplicationContext().getServletContext().getRealPath("/");
         if(PropertiesStr.office.contains(suffix)){
-            String outputPath = path + "/trasnfroms/" + DateUtil.currentDate("yyyy-MM-dd");
+            String outputPath = path + "trasnfroms\\" + DateUtil.currentDate("yyyy-MM-dd");
+            //Converter con = new Converter(fileBean.getUrl());
             Converter converter = new Converter(fileBean.getUrl());
-            converter.setFile(outputPath);
+            converter.setFirst(outputPath);
             converter.setSecond(fileBean.getFname().substring(0, fileBean.getFname().lastIndexOf("."))+System.currentTimeMillis()+".swf");
             converter.conver();
-            fileBean.setUrlTransforms(outputPath);
+            fileBean.setUrlTransforms(converter.getswfPath());
             fileBean.setUrlImage("");
         }else if(PropertiesStr.music.contains(suffix)){
             fileBean.setUrlTransforms(fileBean.getUrl());
@@ -197,7 +199,8 @@ public class OperativeService {
             try {
                 Thread.sleep(1000);
                 File destFile = new File(path + "/transfroms/image/" + DateUtil.currentDate("yyyy-MM-dd"), fileBean.getFname()+".jpg");
-                FileUtils.copyFile(new File(path + "/transfroms/image/" + DateUtil.currentDate("yyyy-MM-dd") + fileBean.getFname()+".jpg"), destFile);
+                String jpgPath = fileBean.getUrl() + ".jpg";
+                FileUtils.copyFile(new File(jpgPath) , destFile);
                 fileBean.setUrlImage(path + "/transfroms/image/" + DateUtil.currentDate("yyyy-MM-dd") + fileBean.getFname()+".jpg");
             } catch (InterruptedException e) {
                 e.printStackTrace();
@@ -212,7 +215,7 @@ public class OperativeService {
             fileBean.setUrlTransforms(fileBean.getUrl().substring(0, fileBean.getUrl().lastIndexOf("."))+".flv");
         }else if (PropertiesStr.image.contains(suffix)){
             fileBean.setUrlTransforms(fileBean.getUrl());
-            fileBean.setUrlImage("");
+            fileBean.setUrlImage(fileBean.getUrl());
         }
 
     }

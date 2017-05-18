@@ -214,4 +214,11 @@ public class Converter {
 //            }
         }
     }
+
+    public static void main(String[] args){
+        Converter converter = new Converter("/test.pdf");
+        converter.setFirst("/");
+        converter.setSecond("a.swf");
+        converter.conver();
+    }
 }
