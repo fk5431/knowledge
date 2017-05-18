@@ -37,11 +37,9 @@ public class ResourceService {
     private final int SIZE = 8;
 
     public void resource(String page_, Map<String, Object> map) {
-
         try {
             List<KtypeBean> ktypeBeans = ktypeDao.selectAll();
             map.put("type", ktypeBeans);
-
             int count = fileDao.count();
             int page = 1;
             if (count % SIZE == 0)
@@ -90,8 +88,10 @@ public class ResourceService {
             e.printStackTrace();
             map.put(CommonConst.ERRORCODE, 1);
         }
+    }
+
+    public void showfile(int id, Map<String, Object> map) {
 
 
     }
-
 }

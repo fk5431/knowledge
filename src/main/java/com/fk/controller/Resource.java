@@ -31,5 +31,13 @@ public class Resource {
         return "resource";
     }
 
+    @RequestMapping("/showfile")
+    public String showfile(HttpServletRequest request, Map<String, Object> map){
+        String num = request.getParameter("id");
+        int id = Integer.parseInt(num);
+        resourceService.showfile(id, map);
+
+        return "fileshow";
+    }
 
 }
