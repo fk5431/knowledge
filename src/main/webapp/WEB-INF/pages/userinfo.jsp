@@ -203,7 +203,7 @@
                                                             <div>
                                                                 <div class="RichText">
                                                                     备注： <%=his.get(i).getOther().split("!=end=!")[0]%>
-                                                                    座位：<%=Integer.parseInt(his.get(i).getOther().split("!=end=!")[1])+1%>排<%=Integer.parseInt(his.get(i).getOther().split("!=end=!")[2]+1)%>列
+                                                                    座位：<%=Integer.parseInt(his.get(i).getOther().split("!=end=!")[1])+1%>排<%=Integer.parseInt(his.get(i).getOther().split("!=end=!")[2])+1%>列
                                                                 </div>
                                                                 <div class="ContentItem-status">
                                                                     <span class="ContentItem-statusItem">购买人 <%=his.get(i).getName()%></span>
