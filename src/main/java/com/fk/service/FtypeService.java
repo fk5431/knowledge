@@ -5,6 +5,7 @@ import com.fk.bean.FtypeBean;
 import com.fk.dao.FtypeDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.stereotype.Service;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.List;
@@ -13,7 +14,7 @@ import java.util.Map;
 /**
  * Created by fengkai on 27/04/17.
  */
-@Controller("ftypeService")
+@Service("ftypeService")
 public class FtypeService {
 
     @Autowired

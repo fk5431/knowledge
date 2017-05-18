@@ -214,6 +214,7 @@ public class OperativeService {
             fileBean.setUrlTransforms(fileBean.getUrl());
             fileBean.setUrlImage("");
         }
+
     }
 
 
