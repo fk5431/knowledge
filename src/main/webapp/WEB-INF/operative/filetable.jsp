@@ -75,9 +75,7 @@
                                     <tr>
                                         <th>ID</th>
                                         <th>标题</th>
-                                        <th>上传用户</th>
-                                        <th>分类</th>
-                                        <th>类型</th>
+                                        <th>上传用户ID</th>
                                         <th>标签</th>
                                         <th>简介</th>
                                         <th>是否有附件</th>
@@ -89,22 +87,33 @@
                                     </thead>
 
                                     <tbody>
-                                    <c:forEach var="f" items="${ftype}">
-                                        <form action="${pageContext.request.contextPath}/updateftype" method="post"
-                                              id="user${f.ftypeid}">
+                                    <c:forEach var="f" items="${file}">
+                                        <form action="${pageContext.request.contextPath}/updateftype" method="post">
                                             <tr>
-                                                <td>${f.ftypeid}</td>
-                                                <td>${f.ftypename}</td>
-                                                <td><input type="text" name="name">
-                                                    <input type="text" name="id" hidden value="${f.ftypeid}"/></td>
-                                                <td>${f.ftype}</td>
-                                                <td><input type="text" name="type"></td>
+                                                <td>${f.fid}</td>
+                                                <td>${f.title}</td>
                                                 <td>
-                                                    <a onclick="document.getElementById('user${f.ftypeid}').submit();return false">修改</a>
+                                                    <c:if test="${f.uid == -1}">
+                                                        管理员
+                                                    </c:if>
+                                                    <c:if test="${f.uid != -1}">
+                                                        ${f.uid}
+                                                    </c:if>
                                                 </td>
+                                                <td>${f.tags}</td>
+                                                <td>${f.abstractS}</td>
                                                 <td>
-                                                    <a href="${pageContext.request.contextPath}/delftype?id=${f.ftypeid}">删除</a>
+                                                    <c:if test="${f.url == ''}">
+                                                        无
+                                                    </c:if>
+                                                    <c:if test="${f.url != ''}">
+                                                        有
+                                                    </c:if>
                                                 </td>
+                                                <td>${f.uploadtime}</td>
+                                                <td><a href="">修改</a></td>
+                                                <td><a href="">查看</a></td>
+                                                <td><a href="">删除</a></td>
                                             </tr>
                                         </form>
                                     </c:forEach>
@@ -112,8 +121,35 @@
                                 </table>
                             </div>
                         </div>
+
                     </div>
 
+                </div>
+            </div>
+            <div>
+                <div class="col-sm-7">
+                    <div class="dataTables_paginate paging_simple_numbers" id="datatable-checkbox_paginate">
+                        <ul class="pagination">
+
+                            <li class="paginate_button previous <c:if test="${pageNow == 1}"> disabled</c:if>"
+                                id="datatable-checkbox_previous"><a
+                                    href="${pageContext.request.contextPath}/filetable
+                                    ?page=${pageNow-1}"
+                                    aria-controls="datatable-checkbox" data-dt-idx="0" tabindex="0">Previous</a>
+                            </li>
+                            <c:forEach var="i" begin="1" end="${page}">
+                                <li class="paginate_button active"><a
+                                        href="${pageContext.request.contextPath}/filetable?page=${i}"
+                                        aria-controls="datatable-checkbox" data-dt-idx="1" tabindex="0">${i}</a></li>
+                            </c:forEach>
+
+                            <li class="paginate_button next <c:if test="${pageNow == page}"> disabled</c:if> "
+                                id="datatable-checkbox_next">
+                                <a href="${pageContext.request.contextPath}/filetable?page=${pageNow+1}"
+                                   aria-controls="datatable-checkbox" data-dt-idx="7" tabindex="0">Next</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>

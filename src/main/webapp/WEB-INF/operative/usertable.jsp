@@ -127,7 +127,7 @@
                                 <c:forEach var="i" begin="1" end="${page}">
                                     <li class="paginate_button active"><a
                                             href="${pageContext.request.contextPath}/usertable?page=${i}"
-                                            aria-controls="datatable-checkbox" data-dt-idx="1" tabindex="0">1</a></li>
+                                            aria-controls="datatable-checkbox" data-dt-idx="1" tabindex="0">${i}</a></li>
                                 </c:forEach>
 
                                 <li class="paginate_button next <c:if test="${pageNow == page}"> disabled</c:if> "

@@ -4,10 +4,7 @@ import com.fk.bean.FileBean;
 import com.fk.bean.FtypeBean;
 import com.fk.bean.KtypeBean;
 import com.fk.bean.UserBean;
-import com.fk.service.FtypeService;
-import com.fk.service.KtypeService;
-import com.fk.service.OperativeService;
-import com.fk.service.UserService;
+import com.fk.service.*;
 import com.fk.util.CommonConst;
 import com.fk.util.MD5;
 import com.fk.util.StringUtil;
@@ -49,6 +46,9 @@ public class OperativeC {
 
     @Autowired
     FtypeService ftypeService;
+
+    @Autowired
+    FileServer fileServer;
 
 
     @RequestMapping("/operative")
@@ -209,8 +209,10 @@ public class OperativeC {
 
 
     @RequestMapping("/filetable")
-    public String filetable() {
+    public String filetable(HttpServletRequest request, Map<String, Object> map) {
+        String page_ = request.getParameter("page");
 
+        fileServer.selectFileByPage(page_, map);
 
         return "/operative/filetable";
     }
