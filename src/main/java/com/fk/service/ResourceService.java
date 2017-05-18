@@ -91,7 +91,21 @@ public class ResourceService {
     }
 
     public void showfile(int id, Map<String, Object> map) {
+        FileBean fileBean = fileDao.selectByPrimaryKey(id);
+        map.put("file", fileBean);
+        int userId = fileBean.getUid();
+        if(userId!= -1){
+            UserBean userBean = useDao.selectByPrimaryKey(userId);
+            map.put("name", userBean.getUname());
+        }else{
+            map.put("name", "管理员");
+        }
 
 
+
+    }
+
+    public FileBean getFile(int id) {
+        return fileDao.selectByPrimaryKey(id);
     }
 }

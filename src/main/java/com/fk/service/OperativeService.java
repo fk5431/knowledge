@@ -198,10 +198,10 @@ public class OperativeService {
             //缩略图
             try {
                 Thread.sleep(1000);
-                File destFile = new File(path + "/transfroms/image/" + DateUtil.currentDate("yyyy-MM-dd"), fileBean.getFname()+".jpg");
+                File destFile = new File(path + "transfroms\\image\\" + DateUtil.currentDate("yyyy-MM-dd"), fileBean.getFname()+".jpg");
                 String jpgPath = fileBean.getUrl() + ".jpg";
                 FileUtils.copyFile(new File(jpgPath) , destFile);
-                fileBean.setUrlImage(path + "/transfroms/image/" + DateUtil.currentDate("yyyy-MM-dd") + fileBean.getFname()+".jpg");
+                fileBean.setUrlImage(path + "transfroms\\image\\" + DateUtil.currentDate("yyyy-MM-dd") + fileBean.getFname()+".jpg");
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }catch (IOException e) {
