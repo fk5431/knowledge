@@ -259,4 +259,8 @@ public class UserService {
             logger.debug("UserService.selectAllUser  in ]", e);
         }
     }
+
+    public UserBean selectByPrimerKey(int userId) {
+        return userDao.selectByPrimaryKey(userId);
+    }
 }

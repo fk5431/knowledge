@@ -87,10 +87,10 @@
                                 </div>
                                 <div class="List" id="Profile-following">
                                     <div>
-                                        <%
-                                            String type = (String)request.getAttribute("type");
-                                            if("1".equals(type)){
-                                        %>
+                                        <%--<%--%>
+                                            <%--String type = (String)request.getAttribute("type");--%>
+                                            <%--if("1".equals(type)){--%>
+                                        <%--%>--%>
                                         <c:forEach var="f" items="${file}">
                                         <div class="List-item">
                                             <div class="ContentItem" >
@@ -134,7 +134,6 @@
                                             </div>
                                         </div>
                                         </c:forEach>
-                                        <%}%>
                                         <style>
                                             .pagelist {padding:10px 0; text-align:center;}
                                             .pagelist span,.pagelist a{ border-radius:3px; border:1px solid #dfdfdf;display:inline-block; padding:5px 12px;}
