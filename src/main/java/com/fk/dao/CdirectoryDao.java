@@ -2,6 +2,8 @@ package com.fk.dao;
 
 import com.fk.bean.CdirectoryBean;
 
+import java.util.List;
+
 public interface CdirectoryDao {
     int deleteByPrimaryKey(Integer did);
 
@@ -14,4 +16,8 @@ public interface CdirectoryDao {
     int updateByPrimaryKeySelective(CdirectoryBean record);
 
     int updateByPrimaryKey(CdirectoryBean record);
+
+    int count();
+
+    List<CdirectoryBean> selectByLastTen(int start);
 }

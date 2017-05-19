@@ -10,6 +10,17 @@
     <sql id="Base_Column_List">
         did, fid, url, fname
     </sql>
+    <select id="count" resultType="int">
+        select
+        count(*)
+        from cdirectory
+    </select>
+    <select id="selectByLastTen" resultMap="BaseResultMap" parameterType="java.lang.Integer">
+        select
+        <include refid="Base_Column_List"/>
+        from cdirectory
+        limit #{0}, 10
+    </select>
     <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer">
         select
         <include refid="Base_Column_List"/>

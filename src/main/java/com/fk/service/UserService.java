@@ -1,5 +1,6 @@
 package com.fk.service;
 
+import com.fk.bean.CdirectoryBean;
 import com.fk.bean.UserBean;
 import com.fk.dao.UserDao;
 import com.fk.util.CommonConst;
@@ -26,6 +27,9 @@ public class UserService {
 
     @Autowired
     UserDao userDao;
+
+    @Autowired
+    CdirectoryService cdirectoryService;
 
     private final int SIZE = 10;
 
@@ -131,7 +135,9 @@ public class UserService {
         } else {
             userIndex(user, map);
         }
+        List<CdirectoryBean> cdirectoryBeans = cdirectoryService.selectByLastTen();
 
+        map.put("directory", cdirectoryBeans);
         map.put("index", 1);
     }
 

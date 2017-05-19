@@ -24,7 +24,7 @@
                                 <!-- 导航栏名称改-->
                                 <li class="active" id="index_1"><a href="${pageContext.request.contextPath}">首页</a></li>
                                 <li id="index_2"><a href="${pageContext.request.contextPath}/resource">资源中心</a></li>
-                                <li id="index_3"><a href="center">个人中心</a></li>
+                                <li id="index_3"><a href="${pageContext.request.contextPath}/center">个人中心</a></li>
                                 <li id="index_4"><a href="index.jsp"><img
                                         src="${pageContext.request.contextPath}/images/default.jpg"
                                                              style="width:35px;margin-top:2px;" title="注销"></a></li>

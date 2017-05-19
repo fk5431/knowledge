@@ -22,4 +22,14 @@ public class Login {
         return false;
     }
 
+    public static int getUserId(HttpServletRequest request) {
+        Cookie[] cookies = request.getCookies();
+        int userId = 0;
+        for(Cookie c : cookies){
+            if(CommonConst.USERID.equals(c.getName())){
+                userId = Integer.parseInt(c.getValue());
+            }
+        }
+        return userId;
+    }
 }

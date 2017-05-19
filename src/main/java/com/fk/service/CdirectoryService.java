@@ -8,6 +8,7 @@ import com.fk.util.CommonConst;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -31,5 +32,11 @@ public class CdirectoryService {
         c.setUrl(fileBean.getUrl());
         cdirectoryDao.insertSelective(c);
         map.put(CommonConst.ERRORCODE, 14);
+    }
+
+    public List<CdirectoryBean> selectByLastTen() {
+        int count = cdirectoryDao.count();
+        int start = count - 10 < 0 ? 0 : count - 10;
+        return  cdirectoryDao.selectByLastTen(start);
     }
 }

@@ -1,6 +1,8 @@
 package com.fk.controller;
 
 import com.fk.bean.FileBean;
+import com.fk.dao.BrowseDao;
+import com.fk.service.BrowseService;
 import com.fk.service.CdirectoryService;
 import com.fk.service.DocumentService;
 import com.fk.service.ResourceService;
@@ -17,6 +19,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.context.ContextLoader;
+import sun.plugin.services.BrowserService;
 
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
@@ -41,6 +44,9 @@ public class Resource {
     @Autowired
     DocumentService documentService;
 
+    @Autowired
+    BrowseService browseService;
+
     @RequestMapping("/resource")
     public String resource(HttpServletRequest request, Map<String, Object> map) {
 
@@ -56,7 +62,10 @@ public class Resource {
         String num = request.getParameter("id");
         int id = Integer.parseInt(num);
         resourceService.showfile(id, map);
-
+        if(Login.islogin(request)){
+            int userId = Login.getUserId(request);
+            browseService.insert(userId, id);
+        }
         return "showfile";
     }
 

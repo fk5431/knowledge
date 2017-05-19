@@ -9,6 +9,26 @@
     <sql id="Base_Column_List">
         id, uid, fid
     </sql>
+    <select id="selectByStartOfUserId" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from browse
+        where uid = #{0}
+        order by id desc
+        limit #{1}, 8
+    </select>
+    <select id="selectByUserIdAndFid" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from browse
+        where uid = #{0} and fid = #{1}
+    </select>
+    <select id="countByUserId" resultType="int" parameterType="java.lang.Integer">
+        select
+        count(*)
+        from browse
+        where uid = #{userId,jdbcType=INTEGER}
+    </select>
     <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer">
         select
         <include refid="Base_Column_List"/>
