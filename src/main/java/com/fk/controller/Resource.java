@@ -1,25 +1,17 @@
 package com.fk.controller;
 
 import com.fk.bean.FileBean;
-import com.fk.dao.BrowseDao;
 import com.fk.service.BrowseService;
 import com.fk.service.CdirectoryService;
 import com.fk.service.DocumentService;
 import com.fk.service.ResourceService;
 import com.fk.util.CommonConst;
 import com.fk.util.Login;
-import org.apache.commons.io.FileUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpHeaders;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.MediaType;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.context.ContextLoader;
-import sun.plugin.services.BrowserService;
 
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
@@ -62,6 +54,10 @@ public class Resource {
         String num = request.getParameter("id");
         int id = Integer.parseInt(num);
         resourceService.showfile(id, map);
+        if(Login.islogin(request)){
+            int userId = Login.getUserId(request);
+            browseService.insert(userId, id);
+        }
         if(Login.islogin(request)){
             int userId = Login.getUserId(request);
             browseService.insert(userId, id);

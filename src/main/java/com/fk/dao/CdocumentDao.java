@@ -2,6 +2,8 @@ package com.fk.dao;
 
 import com.fk.bean.CdocumentBean;
 
+import java.util.List;
+
 public interface CdocumentDao {
     int deleteByPrimaryKey(Integer id);
 
@@ -14,4 +16,8 @@ public interface CdocumentDao {
     int updateByPrimaryKeySelective(CdocumentBean record);
 
     int updateByPrimaryKey(CdocumentBean record);
+
+    int countByUserId(int userId);
+
+    List<CdocumentBean> selectByStartOfUserId(int userId, int start);
 }
