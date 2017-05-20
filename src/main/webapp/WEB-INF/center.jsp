@@ -180,7 +180,7 @@
                                             for(var i = 0; i < titles.length; i++) {
                                                 words[i] = {
                                                     'title' : titles[i],
-                                                    'url' : '${pageContext.request.contextPath}/performer?id='+ids[i]
+                                                    'url' : '${pageContext.request.contextPath}/search?id='+ids[i]
                                                 }
                                             }
                                             var colors1 = ['#F46779', '#045DA4'];

@@ -9,22 +9,17 @@ import com.fk.util.CommonConst;
 import com.fk.util.MD5;
 import com.fk.util.StringUtil;
 import com.google.common.base.Preconditions;
-import org.apache.commons.io.FileUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.context.ContextLoader;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.xml.registry.infomodel.User;
-import java.io.File;
-import java.io.IOException;
 import java.util.Date;
 import java.util.Map;
 
@@ -49,6 +44,9 @@ public class OperativeC {
 
     @Autowired
     FileServer fileServer;
+
+    @Autowired
+    TagsService tagsService;
 
 
     @RequestMapping("/operative")
@@ -88,7 +86,7 @@ public class OperativeC {
 
             operativeService.addFile(fileBean, file, map);
             ktypeService.addCount(fileBean);
-
+            tagsService.addUserTags(fileBean.getUid(), fileBean.getTags());
         } catch (Exception e) {
             e.printStackTrace();
             map.put(CommonConst.ERRORCODE, "6");

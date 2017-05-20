@@ -2,6 +2,7 @@ package com.fk.controller;
 
 import com.fk.bean.UserBean;
 import com.fk.service.CenterService;
+import com.fk.service.TagsService;
 import com.fk.service.UserService;
 import com.fk.util.Login;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,6 +24,9 @@ public class CenterC {
     @Autowired
     UserService userService;
 
+    @Autowired
+    TagsService tagsService;
+
     @RequestMapping("/center")
     public String center(HttpServletRequest request, Map<String, Object> map){
         String page = request.getParameter("page");
@@ -32,6 +36,8 @@ public class CenterC {
             return "login";
         }
         int userId = Login.getUserId(request);
+        //TODO 管理员userId 得改成-1
+        tagsService.centerOfUserTags(userId, map);
         if("1".equals(type)){
             centerService.index(page, userId, map);
         } else if("2".equals(type)){
@@ -47,6 +53,7 @@ public class CenterC {
             centerService.index(page, userId, map);
         }
         map.put("index", 3);
+
         return "center";
     }
 
