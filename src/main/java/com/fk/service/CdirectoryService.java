@@ -23,6 +23,7 @@ public class CdirectoryService {
     @Autowired
     FileDao fileDao;
 
+    private final int SIZE = 8;
 
     public void insertInfo(int id, String name, Map<String, Object> map) {
         CdirectoryBean c = new CdirectoryBean();
@@ -38,5 +39,46 @@ public class CdirectoryService {
         int count = cdirectoryDao.count();
         int start = count - 10 < 0 ? 0 : count - 10;
         return  cdirectoryDao.selectByLastTen(start);
+    }
+
+    public void selectAllOfPage(String page_, Map<String, Object> map) {
+        try {
+            int count = cdirectoryDao.count();
+            int page = 1;
+            if (count % SIZE == 0)
+                page = count / SIZE;
+            else
+                page = count / SIZE + CommonConst.ONE_INT;
+            map.put("count", count);
+            map.put("size", SIZE);
+            map.put("page", page);
+            int toPage;
+            if (page_ == null || "".equals(page_)) {
+                toPage = 1;
+            } else {
+                toPage = Integer.parseInt(page_);
+            }
+            if (toPage > page) {
+                toPage = page;
+            }
+            map.put("pageNow", toPage);
+            int start = (toPage - 1) * SIZE;
+            List<CdirectoryBean> cdirectoryBeans = cdirectoryDao.selectByStart(start);
+            map.put("directory", cdirectoryBeans);
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void delDirectory(int id, Map<String, Object> map) {
+        cdirectoryDao.deleteByPrimaryKey(id);
+    }
+
+    public void directoryPutFirstById(int id, Map<String, Object> map) {
+        CdirectoryBean cdirectoryBean = cdirectoryDao.selectByPrimaryKey(id);
+        cdirectoryDao.deleteByPrimaryKey(id);
+        cdirectoryBean.setDid(null);
+        cdirectoryDao.insertSelective(cdirectoryBean);
     }
 }

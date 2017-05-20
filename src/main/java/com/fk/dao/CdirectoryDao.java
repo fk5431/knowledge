@@ -20,4 +20,6 @@ public interface CdirectoryDao {
     int count();
 
     List<CdirectoryBean> selectByLastTen(int start);
+
+    List<CdirectoryBean> selectByStart(int start);
 }

@@ -10,6 +10,17 @@
     <sql id="Base_Column_List">
         id, uid, tag, count
     </sql>
+    <select id="count" resultType="int">
+        select
+        count(*)
+        from tags
+    </select>
+    <select id="selectByStart" resultMap="BaseResultMap" parameterType="java.lang.Integer">
+        select
+        <include refid="Base_Column_List"/>
+        from tags
+        limit #{0}, 8
+    </select>
     <select id="selectByUserId" resultMap="BaseResultMap" parameterType="java.lang.Integer">
         select
         <include refid="Base_Column_List"/>

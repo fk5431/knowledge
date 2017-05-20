@@ -49,6 +49,10 @@ public class OperativeC {
     TagsService tagsService;
 
 
+    @Autowired
+    CdirectoryService cdirectoryService;
+
+
     @RequestMapping("/operative")
     public String operative(HttpServletRequest request, Map<String, Object> map) {
 
@@ -324,6 +328,12 @@ public class OperativeC {
         ftypeService.delFtype(Integer.parseInt(id), map);
         return ftypetable(request, map);
     }
+    @RequestMapping("/deldirectory")
+    public String deldirectory(HttpServletRequest request, HttpServletResponse response, Map<String, Object> map) {
+        String id = request.getParameter("id");
+        cdirectoryService.delDirectory(Integer.parseInt(id), map);
+        return cdirectory(request,response, map);
+    }
 
     @RequestMapping("/operativelogout")
     public String logout(HttpServletRequest request, HttpServletResponse response, Map<String, Object> map) {
@@ -355,5 +365,35 @@ public class OperativeC {
     public String spueruserform(HttpServletRequest request, HttpServletResponse response) {
 
         return "/operative/superuserform";
+    }
+
+    @RequestMapping("/tagstable")
+    public String tagstable(HttpServletRequest request, HttpServletResponse response, Map<String, Object> map) {
+
+        String page = request.getParameter("page");
+
+        tagsService.selectAllOfPage(page, map);
+
+        return "/operative/tagstable";
+    }
+
+    @RequestMapping("/cdirectory")
+    public String cdirectory(HttpServletRequest request, HttpServletResponse response, Map<String, Object> map) {
+
+        String page = request.getParameter("page");
+
+        cdirectoryService.selectAllOfPage(page, map);
+
+        return "/operative/cdirectory";
+    }
+
+    @RequestMapping("/directoryPutFirstById")
+    public String directoryPutFirstById(HttpServletRequest request, HttpServletResponse response, Map<String, Object> map) {
+
+        String id = request.getParameter("id");
+
+        cdirectoryService.directoryPutFirstById(Integer.parseInt(id), map);
+
+        return cdirectory(request, response, map);
     }
 }

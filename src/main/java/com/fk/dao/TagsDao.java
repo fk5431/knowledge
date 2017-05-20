@@ -20,4 +20,8 @@ public interface TagsDao {
     TagsBean selectByTag(String str);
 
     List<TagsBean> selectByUserId(int userId);
+
+    int count();
+
+    List<TagsBean> selectByStart(int start);
 }
