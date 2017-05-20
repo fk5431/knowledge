@@ -36,12 +36,16 @@ public class CenterC {
             return "login";
         }
         int userId = Login.getUserId(request);
-        //TODO 管理员userId 得改成-1
-        tagsService.centerOfUserTags(userId, map);
+
+        UserBean userBean = userService.selectByPrimerKey(userId);
+        if(userBean.getIsmanage() == 1 || userBean.getIsmanage()== 2) {
+            tagsService.centerOfUserTags(-1, map);
+        }else{
+            tagsService.centerOfUserTags(userId, map);
+        }
         if("1".equals(type)){
             centerService.index(page, userId, map);
         } else if("2".equals(type)){
-            UserBean userBean = userService.selectByPrimerKey(userId);
             if(userBean.getIsmanage() == 1 || userBean.getIsmanage()== 2)
                 userId = -1;
             centerService.upload(page, userId, map);
