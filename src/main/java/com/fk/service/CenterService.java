@@ -189,4 +189,19 @@ public class CenterService {
     }
 
 
+    public int index_count(int userId) {
+        return browseDao.countByUserId(userId);
+    }
+
+    public int upload_count(int userId) {
+        return  fileDao.countByUserId(userId);
+    }
+
+    public int document_count(int userId) {
+        return cdocumentDao.countByUserId(userId);
+    }
+
+    public int peding_count(int userId) {
+        return 0;
+    }
 }

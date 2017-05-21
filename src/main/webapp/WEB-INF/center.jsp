@@ -14,15 +14,20 @@
     <link media="all" href="${pageContext.request.contextPath}/css/center/wordbox.css" type="text/css" rel="stylesheet">
     <link media="all" href="${pageContext.request.contextPath}/css/center/index.css" type="text/css" rel="stylesheet">
     <link media="all" href="${pageContext.request.contextPath}/css/center/info.css" type="text/css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath}/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/index_style.css">
 </head>
 <body>
+<style>
+    header {
+        height: 100px;
+    }
+</style>
 <div class="wrap-body">
     <header>
     <jsp:include page="head.jsp"></jsp:include>
     </header>
 </div>
-<div class="header-placeholder"></div>
 
 <div id="root">
     <div data-reactroot=""><!-- react-empty: 2 -->
@@ -41,12 +46,12 @@
                             <div class="ProfileHeader-wrapper">
                                 <div class="ProfileHeader-main">
                                     <div class="UserAvatar ProfileHeader-avatar" style="top: -57px;">
-                                        <img class="Avatar Avatar--large UserAvatar-inner" src="${pageContext.request.contextPath}/image/my.jpg" style="width: 160px; height: 160px;"></div>
+                                        <img class="Avatar Avatar--large UserAvatar-inner" src="${pageContext.request.contextPath}/images/my.jpg" style="width: 160px; height: 160px;"></div>
                                     <div class="ProfileHeader-content">
                                         <div class="ProfileHeader-contentHead">
                                             <h1 class="ProfileHeader-title">
-                                                <span class="ProfileHeader-name"> 1</span>
-                                                <span class="RichText ProfileHeader-headline"> </span>
+                                                <span class="ProfileHeader-name">欢迎： ${user.uname}</span>
+                                                <span class="RichText ProfileHeader-headline">注册邮箱：${user.uemail} </span>
                                             </h1>
                                         </div>
                                     </div>
@@ -66,21 +71,23 @@
                                 <div class="ProfileMain-header">
                                     <ul role="tablist" class="Tabs ProfileMain-tabs">
                                         <li role="tab" class="Tabs-item Tabs-item--noMeta">
-                                            <a class="Tabs-link is-active" href="${pageContext.request.contextPath}/center?type=1" id="act1">历史浏览</a>
+                                            <a class="Tabs-link is-active" href="${pageContext.request.contextPath}/center?type=1" id="act1">历史浏览
+                                                <span class="Tabs-meta">${count1}</span>
+                                            </a>
                                         </li>
                                         <li role="tab" class="Tabs-item Tabs-item--noMeta">
                                             <a class="Tabs-link" href="${pageContext.request.contextPath}/center?type=2" id="act2">我的上传
-                                                <span class="Tabs-meta">1</span>
+                                                <span class="Tabs-meta">${count2}</span>
                                             </a>
                                         </li>
                                         <li role="tab" class="Tabs-item Tabs-item--noMeta">
                                             <a class="Tabs-link" href="${pageContext.request.contextPath}/center?type=3" id="act3">常用文档
-                                                <span class="Tabs-meta">1</span>
+                                                <span class="Tabs-meta">${count3}</span>
                                             </a>
                                         </li>
                                         <li role="tab" class="Tabs-item Tabs-item--noMeta">
                                             <a class="Tabs-link" href="${pageContext.request.contextPath}/center?type=4"  id="act4">我的审核
-                                                <span class="Tabs-meta"> 1</span>
+                                                <span class="Tabs-meta"> ${count4}</span>
                                             </a>
                                         </li>
                                     </ul>

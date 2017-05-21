@@ -15,8 +15,10 @@ import org.springframework.stereotype.Service;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.xml.registry.infomodel.User;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+import java.util.Map;
 
 /**
  * Created by FK on 2017/2/9.
@@ -263,4 +265,6 @@ public class UserService {
     public UserBean selectByPrimerKey(int userId) {
         return userDao.selectByPrimaryKey(userId);
     }
+
+
 }

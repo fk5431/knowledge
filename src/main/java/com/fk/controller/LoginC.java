@@ -1,6 +1,5 @@
 package com.fk.controller;
 
-import com.fk.bean.UserBean;
 import com.fk.service.UserService;
 import com.fk.util.CommonConst;
 import com.fk.util.MD5;
@@ -129,6 +128,19 @@ public class LoginC {
     public String userlogin(HttpServletRequest request, Map<String, Object> map) {
 
 
+        return "login";
+    }
+
+    @RequestMapping(value = "/logout")
+    public String logout(HttpServletRequest request, HttpServletResponse response, Map<String, Object> map) {
+        String id = request.getParameter("id");
+        if (!id.equals("")) {
+            Cookie cookie = new Cookie(CommonConst.LOGIN, CommonConst.NO);
+            Cookie cookie1 = new Cookie(CommonConst.USERID, "");
+            cookie.setMaxAge(-1);
+            response.addCookie(cookie);
+            response.addCookie(cookie1);
+        }
         return "login";
     }
 

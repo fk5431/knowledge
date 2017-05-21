@@ -12,7 +12,7 @@
             <div class="col-1-3">
                 <div class="wrap-col">
                     <div class="logo">
-                        <a href="main.jsp"><img src="${pageContext.request.contextPath}/images/logo.png"/></a>
+                        <a href="${pageContext.request.contextPath}"><img src="${pageContext.request.contextPath}/images/logo.png"/></a>
                     </div>
                 </div>
             </div>
@@ -25,9 +25,9 @@
                                 <li class="active" id="index_1"><a href="${pageContext.request.contextPath}">首页</a></li>
                                 <li id="index_2"><a href="${pageContext.request.contextPath}/resource">资源中心</a></li>
                                 <li id="index_3"><a href="${pageContext.request.contextPath}/center">个人中心</a></li>
-                                <li id="index_4"><a href="index.jsp"><img
-                                        src="${pageContext.request.contextPath}/images/default.jpg"
-                                                             style="width:35px;margin-top:2px;" title="注销"></a></li>
+                                <%--<li id="index_4"><a href="index.jsp"><img--%>
+                                        <%--src="${pageContext.request.contextPath}/images/default.jpg"--%>
+                                                             <%--style="width:35px;margin-top:2px;" title="注销"></a></li>--%>
                             </ul>
                         </nav>
                     </div>

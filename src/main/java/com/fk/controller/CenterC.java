@@ -57,7 +57,11 @@ public class CenterC {
             centerService.index(page, userId, map);
         }
         map.put("index", 3);
-
+        map.put("user", userBean);
+        map.put("count1", centerService.index_count(userId));
+        map.put("count2", centerService.upload_count(userId) );
+        map.put("count3", centerService.document_count(userId));
+        map.put("count4", centerService.peding_count(userId));
         return "center";
     }
 
