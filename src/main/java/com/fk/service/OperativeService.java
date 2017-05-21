@@ -1,9 +1,6 @@
 package com.fk.service;
 
-import com.fk.bean.FileBean;
-import com.fk.bean.FtypeBean;
-import com.fk.bean.KtypeBean;
-import com.fk.bean.UserBean;
+import com.fk.bean.*;
 import com.fk.dao.FileDao;
 import com.fk.dao.FtypeDao;
 import com.fk.dao.KtypeDao;
@@ -21,7 +18,6 @@ import java.io.File;
 import java.io.IOException;
 import java.util.List;
 import java.util.Map;
-import java.util.Properties;
 
 /**
  * Created by fengkai on 25/04/17.
@@ -154,7 +150,7 @@ public class OperativeService {
             fileBean.setUuidname("");
             fileBean.setFname("");
         }
-        extract();
+
         //tags
         String tags = fileBean.getTags();
         StringBuffer sb = new StringBuffer();
@@ -170,15 +166,27 @@ public class OperativeService {
         }
         fileBean.setTags(sb.toString());
         fileDao.insertSelective(fileBean);
+
+        String other = extract(fileBean);
+        ESFileBean esFileBean = new ESFileBean(fileBean);
+        esFileBean.setOther(other);
+        CElastic.inital();
+        CElastic.elastic.insert(esFileBean);
     }
 
-    private void extract() {
+    private String extract(FileBean fileBean) {
+        String word = "";
+        String suffix = fileBean.getFname().substring(fileBean.getFname().lastIndexOf(".")+1);
+        logger.info("===================================trasforms, suffix{[]}", suffix);
+        if(PropertiesStr.office.contains(suffix)){
 
+        }
+        return word ;
     }
 
     private void transforms(MultipartFile file, FileBean fileBean) {
         String suffix = fileBean.getFname().substring(fileBean.getFname().lastIndexOf(".")+1);
-        logger.debug("===================================trasforms, suffix{[]}", suffix);
+        logger.info("===================================trasforms, suffix{[]}", suffix);
         String path = ContextLoader.getCurrentWebApplicationContext().getServletContext().getRealPath("/");
         if(PropertiesStr.office.contains(suffix)){
             String outputPath = path + "trasnfroms\\" + DateUtil.currentDate("yyyy-MM-dd");

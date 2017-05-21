@@ -19,6 +19,12 @@ public class PropertiesStr {
     public static String music = "";
     public static String video = "";
     public static String image = "";
+    //es
+    public static String clusterName = "";
+    public static String esIndex = "";
+    public static String esHosts = "";
+//    extract
+    public static String extract = "";
 
     public void initProperties() throws IOException {
 
@@ -33,6 +39,10 @@ public class PropertiesStr {
         PropertiesStr.music = prop.getProperty("music");
         PropertiesStr.video = prop.getProperty("video");
         PropertiesStr.image = prop.getProperty("image");
+        PropertiesStr.clusterName = prop.getProperty("clusterName");
+        PropertiesStr.esIndex = prop.getProperty("esIndex");
+        PropertiesStr.esHosts = prop.getProperty("esHosts");
+        PropertiesStr.extract = prop.getProperty("extract");
     }
 
 }

@@ -82,7 +82,7 @@
     #{urlTransforms,jdbcType=VARCHAR}, #{canTransforms,jdbcType=INTEGER}, #{count,jdbcType=INTEGER},
     #{introduction,jdbcType=LONGVARCHAR})
   </insert>
-    <insert id="insertSelective" parameterType="com.fk.bean.FileBean">
+    <insert id="insertSelective" parameterType="com.fk.bean.FileBean"  useGeneratedKeys="true" keyProperty="id">
         insert into file
         <trim prefix="(" suffix=")" suffixOverrides=",">
             <if test="fid != null">
