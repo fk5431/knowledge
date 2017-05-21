@@ -85,6 +85,9 @@
           <element id="library" level="project" name="Maven: org.ow2.asm:asm:4.1" />
           <element id="library" level="project" name="Maven: org.ow2.asm:asm-commons:4.1" />
           <element id="library" level="project" name="Maven: org.yaml:snakeyaml:1.12" />
+          <element id="library" level="project" name="Maven: org.apache.pdfbox:pdfbox:1.8.9" />
+          <element id="library" level="project" name="Maven: org.apache.pdfbox:fontbox:1.8.9" />
+          <element id="library" level="project" name="Maven: org.apache.pdfbox:jempbox:1.8.9" />
         </element>
       </element>
       <element id="directory" name="META-INF">

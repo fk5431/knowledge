@@ -1,5 +1,8 @@
 package com.fk.util;
 
+import org.apache.pdfbox.pdfparser.PDFParser;
+import org.apache.pdfbox.pdmodel.PDDocument;
+import org.apache.pdfbox.util.PDFTextStripper;
 import org.apache.poi.POIXMLDocument;
 import org.apache.poi.POIXMLTextExtractor;
 import org.apache.poi.hssf.usermodel.HSSFCell;
@@ -16,6 +19,7 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.apache.poi.xwpf.extractor.XWPFWordExtractor;
 import org.apache.xmlbeans.XmlException;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -148,5 +152,27 @@ public class ExtractText {
         }
 
         return content.toString();
+    }
+
+    /**
+     * pdf
+     * @param filename
+     * @return
+     */
+    public String readPDF(String filename){
+        File file = new File(filename);
+        FileInputStream in = null;
+        String result = null;
+        try {
+            in = new FileInputStream(filename);
+            PDFParser parser = new PDFParser(in);
+            parser.parse();
+            PDDocument pdDocument = parser.getPDDocument();
+            PDFTextStripper stripper = new PDFTextStripper();
+            result = stripper.getText(pdDocument);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return result;
     }
 }

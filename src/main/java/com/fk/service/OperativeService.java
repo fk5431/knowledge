@@ -179,7 +179,37 @@ public class OperativeService {
         String suffix = fileBean.getFname().substring(fileBean.getFname().lastIndexOf(".")+1);
         logger.info("===================================trasforms, suffix{[]}", suffix);
         if(PropertiesStr.office.contains(suffix)){
-
+            if (suffix.equalsIgnoreCase("doc") || suffix.equalsIgnoreCase("dot")) {
+                try {
+                    word = ExtractText.extractTextFromDOC(fileBean.getUrl());
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            } else if (suffix.equalsIgnoreCase("docx")
+                    || suffix.equalsIgnoreCase("docm")
+                    || suffix.equalsIgnoreCase("dotx")) {
+                try {
+                    word = ExtractText.extractTextFromDOC2007(fileBean.getUrl());
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            } else if (suffix.equalsIgnoreCase("xls")) {
+                try {
+                    word = ExtractText.extractTextFromXLS(fileBean.getUrl());
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            } else if (suffix.equalsIgnoreCase("xlsx")
+                    || suffix.equalsIgnoreCase("xlsm")) {
+                try {
+                    word = ExtractText.extractTextFromXLS2007(fileBean.getUrl());
+                } catch (Exception e) {
+                    // TODO Auto-generated catch block
+                    e.printStackTrace();
+                }
+            } else if (suffix.equalsIgnoreCase("pdf")) {
+                    word = new ExtractText().readPDF(fileBean.getUrl());
+            }
         }
         return word ;
     }
