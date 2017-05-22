@@ -20,12 +20,22 @@ public class SearchC {
     @RequestMapping("/searchAll")
     public String searchAll(HttpServletRequest request, Map<String, Object> map){
         String search = request.getParameter("searchAll");
+        String page  = request.getParameter("page");
+
+        service.search(page, search, map);
+
+        return "searchAll";
+    }
+
+    @RequestMapping("/groupSearch")
+    public String groupSearch(HttpServletRequest request, Map<String, Object> map){
+//        String search = request.getParameter("searchAll");
+        String page  = request.getParameter("page");
+
+//        service.search(page, search, map);
 
 
-        service.search(search, map);
-
-
-        return "";
+        return "resource";
     }
 
 }

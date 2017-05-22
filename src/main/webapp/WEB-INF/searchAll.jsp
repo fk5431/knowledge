@@ -34,7 +34,7 @@
     <jsp:include page="head.jsp"></jsp:include>
     <div class="row-wrapper">
         <div id="KB_header" class="wuid WTCjTYJa WTCjTYJa_0_search">
-            <h1>资源中心 resource center</h1>
+            <h1>检索结果</h1>
         </div>
         <div id="KB_searchbar"
              class="wuid 9CCHnuD6 9CCHnuD6_0_search searchForm">
@@ -599,18 +599,18 @@
                             </div>
                             <div class="csdn-pagination hide-set page1">
 									<span class="page-nav"> <b>共<i>${count }条第${pageNow}页</i></b>
-									<a href="${pageContext.request.contextPath }/resource?page=1" data-page="1"
+									<a href="${pageContext.request.contextPath }/searchAll?page=1&searchAll=${search}" data-page="1"
                                        class="btn btn-xs btn-default">首页</a>
-                                        <a href="${pageContext.request.contextPath }/resource?page=<c:choose><c:when test="${pageNow == 1}">1</c:when><c:otherwise>${pageNow-1}</c:otherwise></c:choose>"
+                                        <a href="${pageContext.request.contextPath }/searchAll?page=<c:choose><c:when test="${pageNow == 1}">1</c:when><c:otherwise>${pageNow-1}</c:otherwise></c:choose>&searchAll=${search}"
                                            data-page="1" class="btn btn-xs btn-default">&lt;</a>
 								<c:forEach var="t" begin="1" end="${page }">
                                     <c:if test="${page <= 5 }">
                                         <c:if test="${t == pageNow }">
-                                            <a href="${pageContext.request.contextPath }/resource?page=${t}"
+                                            <a href="${pageContext.request.contextPath }/searchAll?page=${t}&searchAll=${search}"
                                                data-page="1" class="btn btn-xs btn-default active cblue">${t }</a>
                                         </c:if>
                                         <c:if test="${t != pageNow }">
-                                            <a href="${pageContext.request.contextPath }/resource?page=${t}"
+                                            <a href="${pageContext.request.contextPath }/searchAll?page=${t}&searchAll=${search}"
                                                data-page="1" class="btn btn-xs btn-default cblue">${t }</a>
                                         </c:if>
                                     </c:if>
@@ -619,11 +619,11 @@
                                             <a class="btn btn-xs btn-default active cblue">...</a>
                                         </c:if>
                                         <c:if test="${t >= pageNow - 2}">
-                                            <a href="${pageContext.request.contextPath }/resource?page=${t}"
+                                            <a href="${pageContext.request.contextPath }/searchAll?page=${t}&searchAll=${search}"
                                                data-page="1" class="btn btn-xs btn-default active cblue">${t }</a>
                                         </c:if>
                                         <c:if test="${t = pageNow + 2}">
-                                            <a href="${pageContext.request.contextPath }/resource?page=${t}"
+                                            <a href="${pageContext.request.contextPath }/searchAll?page=${t}&searchAll=${search}"
                                                data-page="1" class="btn btn-xs btn-default active cblue">${t }</a>
                                         </c:if>
                                         <c:if test="${pageNow< page - 2}">
@@ -632,9 +632,9 @@
                                     </c:if>
                                 </c:forEach>
 
-									<a href="${pageContext.request.contextPath }/resource?page=${pageNow+1 }"
+									<a href="${pageContext.request.contextPath }/searchAll?page=${pageNow+1 }&searchAll=${search}"
                                        data-page="907" class="btn btn-xs btn-default">&gt;</a>
-									<a href="${pageContext.request.contextPath }/resource?page=${page }" data-page="907"
+									<a href="${pageContext.request.contextPath }/searchAll?page=${page }&searchAll=${search}" data-page="907"
                                        class="btn btn-xs btn-default">末页</a>
 									</span>
                             </div>

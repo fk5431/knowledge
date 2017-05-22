@@ -23,7 +23,7 @@ public class ESTest {
         List<String> list = CElastic.elastic.searchAll("sad");
         for(String s : list){
             System.out.println(s);
-            FileBean v = JSON.parseObject(s, FileBean.class);
+                FileBean v = JSON.parseObject(s, FileBean.class);
             System.out.println();
         }
     }
