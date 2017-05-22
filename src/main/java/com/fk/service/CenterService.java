@@ -1,10 +1,8 @@
 package com.fk.service;
 
 import com.fk.bean.*;
-import com.fk.dao.BrowseDao;
-import com.fk.dao.CdocumentDao;
-import com.fk.dao.FileDao;
-import com.fk.dao.UserDao;
+import com.fk.dao.*;
+import com.fk.util.CElastic;
 import com.fk.util.CommonConst;
 import com.google.common.collect.Lists;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,6 +28,9 @@ public class CenterService {
 
     @Autowired
     CdocumentDao cdocumentDao;
+
+    @Autowired
+    ReviewDao reviewDao;
 
     private final int SIZE = 8;
     public void index(String page_, int userId, Map<String, Object> map) {
@@ -203,5 +204,18 @@ public class CenterService {
 
     public int peding_count(int userId) {
         return 0;
+    }
+
+    public void agree(int id) {
+        FileBean fileBean = reviewDao.selectByPrimaryKey(id);
+        fileBean.setFid(null);
+        fileDao.insertSelective(fileBean);
+        reviewDao.deleteByPrimaryKey(id);
+        OperativeService operativeService = new OperativeService();
+        String other = operativeService.extract(fileBean);
+        ESFileBean esFileBean = new ESFileBean(fileBean);
+        esFileBean.setOther(other);
+        CElastic.inital();
+        CElastic.elastic.insert(esFileBean);
     }
 }

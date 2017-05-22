@@ -120,4 +120,11 @@ public class CenterC {
         }
         return myupload(request, map);
     }
+
+    @RequestMapping("/agree")
+    public String agree(HttpServletRequest request, Map<String, Object> map){
+        String id = request.getParameter("id");
+        centerService.agree(Integer.parseInt(id));
+        return "";
+    }
 }

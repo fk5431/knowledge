@@ -176,7 +176,7 @@ public class OperativeService {
         fileDao.insertSelective(fileBean);
     }
 
-    private String extract(FileBean fileBean) {
+    public String extract(FileBean fileBean) {
         String word = "";
         String suffix = fileBean.getFname().substring(fileBean.getFname().lastIndexOf(".")+1);
         logger.info("===================================trasforms, suffix{[]}", suffix);
