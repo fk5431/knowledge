@@ -39,7 +39,7 @@
         <div id="KB_searchbar"
              class="wuid 9CCHnuD6 9CCHnuD6_0_search searchForm">
             <form class="selected" method="get"
-                  action="search_text">
+                  action="${pageContext.request.contextPath}/searchAll">
                 <table class="searchWidget" border="0" cellpadding="0"
                        cellspacing="0">
                     <tbody>
@@ -54,7 +54,7 @@
                                      style="display: table-row;">
                                     <div style="display: table-cell; vertical-align: top;">
                                         <div class="KB_searchInput_wrapper">
-                                            <input autocomplete="off" name="searchText" value=""
+                                            <input autocomplete="off" name="searchAll" value=""
                                                    class="searchInput" placeholder="请输入查询内容" type="text"/>
                                             <span style="display: none;" class="clearsearch"></span>
                                         </div>

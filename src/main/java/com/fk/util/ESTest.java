@@ -1,5 +1,6 @@
 package com.fk.util;
 
+import com.alibaba.fastjson.JSON;
 import com.fk.bean.FileBean;
 
 import java.io.IOException;
@@ -22,6 +23,8 @@ public class ESTest {
         List<String> list = CElastic.elastic.searchAll("sad");
         for(String s : list){
             System.out.println(s);
+            FileBean v = JSON.parseObject(s, FileBean.class);
+            System.out.println();
         }
     }
 

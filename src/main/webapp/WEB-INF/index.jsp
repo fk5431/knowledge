@@ -28,8 +28,8 @@
             <h1></h1>
             <div style="margin:0 auto;">
                 <div style="margin:0 auto;padding:0;">
-                    <form id="searchForm" method="post" action="search_text" style="width:468px;margin:0 auto;">
-                        <input id="s" type="text" name="searchText"/> <input type="submit" value="Submit"
+                    <form id="searchForm" method="post" action="${pageContext.request.contextPath}/searchAll" style="width:468px;margin:0 auto;">
+                        <input id="s" type="text" name="searchAll"/> <input type="submit" value="Submit"
                                                                              id="submitButton"/>
                     </form>
                     <!-- <form method="post" action="search_text">

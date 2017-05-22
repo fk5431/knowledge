@@ -1,0 +1,31 @@
+package com.fk.controller;
+
+import com.fk.service.SearchService_fk;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import javax.servlet.http.HttpServletRequest;
+import java.util.Map;
+
+/**
+ * Created by FK on 2017/5/22.
+ */
+@Controller
+public class SearchC {
+
+    @Autowired
+    SearchService_fk service;
+
+    @RequestMapping("/searchAll")
+    public String searchAll(HttpServletRequest request, Map<String, Object> map){
+        String search = request.getParameter("searchAll");
+
+
+        service.search(search, map);
+
+
+        return "";
+    }
+
+}
