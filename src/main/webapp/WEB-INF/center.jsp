@@ -57,6 +57,9 @@
                                     </div>
                                     <div class="MemberButtonGroup ProfileButtonGroup ProfileHeader-buttons">
                                         <button class="Button FollowButton Button--primary Button--blue"type="button">
+                                            <span> <a href="${pageContext.request.contextPath}/myupload">我要上传</a></span>
+                                        </button>
+                                        <button class="Button FollowButton Button--primary Button--blue"type="button">
                                             <span> <a href="${pageContext.request.contextPath}/logout">退出</a></span>
                                         </button>
                                     </div>
@@ -232,6 +235,7 @@
         </main><!-- react-empty: 324 --><!-- react-empty: 325 --><!-- react-empty: 326 -->
     </div>
 </div>
+
 <script>
     var type = ${type};
     if (type == '1') {

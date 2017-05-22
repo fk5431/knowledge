@@ -60,7 +60,7 @@ public class OperativeC {
     }
 
     @RequestMapping("/addfile")
-    public String addFile(HttpServletRequest request, @RequestParam("file") MultipartFile file, Map<Object, String> map) {
+    public String addFile(HttpServletRequest request, @RequestParam("file") MultipartFile file, Map<String, Object> map) {
 
         try {
             String title = request.getParameter("title");
@@ -218,6 +218,14 @@ public class OperativeC {
         fileServer.selectFileByPage(page_, map);
 
         return "/operative/filetable";
+    }
+    @RequestMapping("/review")
+    public String review(HttpServletRequest request, Map<String, Object> map) {
+        String page_ = request.getParameter("page");
+
+        fileServer.selectReviewFileByPage(page_, map);
+
+        return "/operative/reviewtable";
     }
 
     @RequestMapping("/operative/index")
@@ -395,5 +403,25 @@ public class OperativeC {
         cdirectoryService.directoryPutFirstById(Integer.parseInt(id), map);
 
         return cdirectory(request, response, map);
+    }
+
+    @RequestMapping("/delfile")
+    public String delfile(HttpServletRequest request, Map<String, Object> map){
+
+        String fid = request.getParameter("id");
+        int id = Integer.parseInt(fid);
+        operativeService.delfile(id);
+
+        return filetable(request, map);
+    }
+
+    @RequestMapping("/delreview")
+    public String delreview(HttpServletRequest request, Map<String, Object> map){
+
+        String fid = request.getParameter("id");
+        int id = Integer.parseInt(fid);
+        operativeService.delreview(id);
+
+        return review(request, map);
     }
 }

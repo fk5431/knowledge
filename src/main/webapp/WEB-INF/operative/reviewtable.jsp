@@ -80,9 +80,9 @@
                                         <th>简介</th>
                                         <th>是否有附件</th>
                                         <th>时间</th>
-                                        <th>修改</th>
+                                        <th>通过</th>
                                         <th>查看</th>
-                                        <th>删除</th>
+                                        <th>不通过</th>
                                     </tr>
                                     </thead>
 
@@ -111,9 +111,9 @@
                                                     </c:if>
                                                 </td>
                                                 <td>${f.uploadtime}</td>
-                                                <td><a href="">修改</a></td>
-                                                <td><a href="${pageContext.request.contextPath}/showfile?id=${f.fid}">查看</a></td>
-                                                <td><a href="${pageContext.request.contextPath}/delfile?id=${f.fid}">删除</a></td>
+                                                <td><a href="${pageContext.request.contextPath}/agree?id=${f.fid}">通过</a></td>
+                                                <td><a href="${pageContext.request.contextPath}/showreviewfile?id=${f.fid}">查看</a></td>
+                                                <td><a href="${pageContext.request.contextPath}/delreview?id=${f.fid}">不通过</a></td>
                                             </tr>
                                         </form>
                                     </c:forEach>

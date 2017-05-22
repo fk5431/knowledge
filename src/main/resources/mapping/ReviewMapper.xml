@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.fk.dao.ReviewDao">
+    <resultMap id="BaseResultMap" type="com.fk.bean.FileBean">
+        <id column="fid" property="fid" jdbcType="INTEGER"/>
+        <result column="uid" property="uid" jdbcType="INTEGER"/>
+        <result column="fname" property="fname" jdbcType="VARCHAR"/>
+        <result column="uuidname" property="uuidname" jdbcType="VARCHAR"/>
+        <result column="title" property="title" jdbcType="VARCHAR"/>
+        <result column="tags" property="tags" jdbcType="VARCHAR"/>
+        <result column="ftypeid" property="ftypeid" jdbcType="INTEGER"/>
+        <result column="uploadtime" property="uploadtime" jdbcType="DATE"/>
+        <result column="abstract_S" property="abstractS" jdbcType="VARCHAR"/>
+        <result column="url" property="url" jdbcType="VARCHAR"/>
+        <result column="url_image" property="urlImage" jdbcType="VARCHAR"/>
+        <result column="ktypeid" property="ktypeid" jdbcType="INTEGER"/>
+        <result column="url_transforms" property="urlTransforms" jdbcType="VARCHAR"/>
+        <result column="can_transforms" property="canTransforms" jdbcType="INTEGER"/>
+        <result column="count" property="count" jdbcType="INTEGER"/>
+    </resultMap>
+    <resultMap id="ResultMapWithBLOBs" type="com.fk.bean.FileBean" extends="BaseResultMap">
+        <result column="introduction" property="introduction" jdbcType="LONGVARCHAR"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+    fid, uid, fname, uuidname, title, tags, ftypeid, uploadtime, abstract_S, url, url_image,
+    ktypeid, url_transforms, can_transforms, count
+  </sql>
+    <sql id="Blob_Column_List">
+    introduction
+  </sql>
+    <select id="selectByStartAndUserId" resultMap="ResultMapWithBLOBs">
+        select
+        <include refid="Base_Column_List"/>
+        ,
+        <include refid="Blob_Column_List"/>
+        from review
+        where uid = #{0}
+        limit #{1},8
+    </select>
+    <select id="selectByStart" resultMap="ResultMapWithBLOBs" parameterType="java.lang.Integer">
+        select
+        <include refid="Base_Column_List"/>
+        ,
+        <include refid="Blob_Column_List"/>
+        from review
+        limit #{start, jdbcType=INTEGER},8
+    </select>
+    <select id="countByUserId" resultType="java.lang.Integer">
+    select
+    count(*)
+    from review
+    where uid = #{0}
+  </select>
+    <select id="count" resultType="java.lang.Integer">
+    select
+    count(*)
+    from review
+  </select>
+    <select id="selectByPrimaryKey" resultMap="ResultMapWithBLOBs" parameterType="java.lang.Integer">
+        select
+        <include refid="Base_Column_List"/>
+        ,
+        <include refid="Blob_Column_List"/>
+        from review
+        where fid = #{fid,jdbcType=INTEGER}
+    </select>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from review
+    where fid = #{fid,jdbcType=INTEGER}
+  </delete>
+    <insert id="insert" parameterType="com.fk.bean.FileBean">
+    insert into review (fid, uid, fname,
+    uuidname, title, tags,
+    ftypeid, uploadtime, abstract_S,
+    url, url_image, ktypeid,
+    url_transforms, can_transforms, count,
+    introduction)
+    values (#{fid,jdbcType=INTEGER}, #{uid,jdbcType=INTEGER}, #{fname,jdbcType=VARCHAR},
+    #{uuidname,jdbcType=VARCHAR}, #{title,jdbcType=VARCHAR}, #{tags,jdbcType=VARCHAR},
+    #{ftypeid,jdbcType=INTEGER}, #{uploadtime,jdbcType=DATE}, #{abstractS,jdbcType=VARCHAR},
+    #{url,jdbcType=VARCHAR}, #{urlImage,jdbcType=VARCHAR}, #{ktypeid,jdbcType=INTEGER},
+    #{urlTransforms,jdbcType=VARCHAR}, #{canTransforms,jdbcType=INTEGER}, #{count,jdbcType=INTEGER},
+    #{introduction,jdbcType=LONGVARCHAR})
+  </insert>
+    <insert id="insertSelective" parameterType="com.fk.bean.FileBean"  useGeneratedKeys="true" keyProperty="id">
+        insert into review
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="fid != null">
+                fid,
+            </if>
+            <if test="uid != null">
+                uid,
+            </if>
+            <if test="fname != null">
+                fname,
+            </if>
+            <if test="uuidname != null">
+                uuidname,
+            </if>
+            <if test="title != null">
+                title,
+            </if>
+            <if test="tags != null">
+                tags,
+            </if>
+            <if test="ftypeid != null">
+                ftypeid,
+            </if>
+            <if test="uploadtime != null">
+                uploadtime,
+            </if>
+            <if test="abstractS != null">
+                abstract_S,
+            </if>
+            <if test="url != null">
+                url,
+            </if>
+            <if test="urlImage != null">
+                url_image,
+            </if>
+            <if test="ktypeid != null">
+                ktypeid,
+            </if>
+            <if test="urlTransforms != null">
+                url_transforms,
+            </if>
+            <if test="canTransforms != null">
+                can_transforms,
+            </if>
+            <if test="count != null">
+                count,
+            </if>
+            <if test="introduction != null">
+                introduction,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="fid != null">
+                #{fid,jdbcType=INTEGER},
+            </if>
+            <if test="uid != null">
+                #{uid,jdbcType=INTEGER},
+            </if>
+            <if test="fname != null">
+                #{fname,jdbcType=VARCHAR},
+            </if>
+            <if test="uuidname != null">
+                #{uuidname,jdbcType=VARCHAR},
+            </if>
+            <if test="title != null">
+                #{title,jdbcType=VARCHAR},
+            </if>
+            <if test="tags != null">
+                #{tags,jdbcType=VARCHAR},
+            </if>
+            <if test="ftypeid != null">
+                #{ftypeid,jdbcType=INTEGER},
+            </if>
+            <if test="uploadtime != null">
+                #{uploadtime,jdbcType=DATE},
+            </if>
+            <if test="abstractS != null">
+                #{abstractS,jdbcType=VARCHAR},
+            </if>
+            <if test="url != null">
+                #{url,jdbcType=VARCHAR},
+            </if>
+            <if test="urlImage != null">
+                #{urlImage,jdbcType=VARCHAR},
+            </if>
+            <if test="ktypeid != null">
+                #{ktypeid,jdbcType=INTEGER},
+            </if>
+            <if test="urlTransforms != null">
+                #{urlTransforms,jdbcType=VARCHAR},
+            </if>
+            <if test="canTransforms != null">
+                #{canTransforms,jdbcType=INTEGER},
+            </if>
+            <if test="count != null">
+                #{count,jdbcType=INTEGER},
+            </if>
+            <if test="introduction != null">
+                #{introduction,jdbcType=LONGVARCHAR},
+            </if>
+        </trim>
+    </insert>
+    <update id="updateByPrimaryKeySelective" parameterType="com.fk.bean.FileBean">
+        update review
+        <set>
+            <if test="uid != null">
+                uid = #{uid,jdbcType=INTEGER},
+            </if>
+            <if test="fname != null">
+                fname = #{fname,jdbcType=VARCHAR},
+            </if>
+            <if test="uuidname != null">
+                uuidname = #{uuidname,jdbcType=VARCHAR},
+            </if>
+            <if test="title != null">
+                title = #{title,jdbcType=VARCHAR},
+            </if>
+            <if test="tags != null">
+                tags = #{tags,jdbcType=VARCHAR},
+            </if>
+            <if test="ftypeid != null">
+                ftypeid = #{ftypeid,jdbcType=INTEGER},
+            </if>
+            <if test="uploadtime != null">
+                uploadtime = #{uploadtime,jdbcType=DATE},
+            </if>
+            <if test="abstractS != null">
+                abstract_S = #{abstractS,jdbcType=VARCHAR},
+            </if>
+            <if test="url != null">
+                url = #{url,jdbcType=VARCHAR},
+            </if>
+            <if test="urlImage != null">
+                url_image = #{urlImage,jdbcType=VARCHAR},
+            </if>
+            <if test="ktypeid != null">
+                ktypeid = #{ktypeid,jdbcType=INTEGER},
+            </if>
+            <if test="urlTransforms != null">
+                url_transforms = #{urlTransforms,jdbcType=VARCHAR},
+            </if>
+            <if test="canTransforms != null">
+                can_transforms = #{canTransforms,jdbcType=INTEGER},
+            </if>
+            <if test="count != null">
+                count = #{count,jdbcType=INTEGER},
+            </if>
+            <if test="introduction != null">
+                introduction = #{introduction,jdbcType=LONGVARCHAR},
+            </if>
+        </set>
+        where fid = #{fid,jdbcType=INTEGER}
+    </update>
+    <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.fk.bean.FileBean">
+    update review
+    set uid = #{uid,jdbcType=INTEGER},
+    fname = #{fname,jdbcType=VARCHAR},
+    uuidname = #{uuidname,jdbcType=VARCHAR},
+    title = #{title,jdbcType=VARCHAR},
+    tags = #{tags,jdbcType=VARCHAR},
+    ftypeid = #{ftypeid,jdbcType=INTEGER},
+    uploadtime = #{uploadtime,jdbcType=DATE},
+    abstract_S = #{abstractS,jdbcType=VARCHAR},
+    url = #{url,jdbcType=VARCHAR},
+    url_image = #{urlImage,jdbcType=VARCHAR},
+    ktypeid = #{ktypeid,jdbcType=INTEGER},
+    url_transforms = #{urlTransforms,jdbcType=VARCHAR},
+    can_transforms = #{canTransforms,jdbcType=INTEGER},
+    count = #{count,jdbcType=INTEGER},
+    introduction = #{introduction,jdbcType=LONGVARCHAR}
+    where fid = #{fid,jdbcType=INTEGER}
+  </update>
+    <update id="updateByPrimaryKey" parameterType="com.fk.bean.FileBean">
+    update review
+    set uid = #{uid,jdbcType=INTEGER},
+      fname = #{fname,jdbcType=VARCHAR},
+      uuidname = #{uuidname,jdbcType=VARCHAR},
+      title = #{title,jdbcType=VARCHAR},
+      tags = #{tags,jdbcType=VARCHAR},
+      ftypeid = #{ftypeid,jdbcType=INTEGER},
+      uploadtime = #{uploadtime,jdbcType=DATE},
+      abstract_S = #{abstractS,jdbcType=VARCHAR},
+      url = #{url,jdbcType=VARCHAR},
+      url_image = #{urlImage,jdbcType=VARCHAR},
+      ktypeid = #{ktypeid,jdbcType=INTEGER},
+      url_transforms = #{urlTransforms,jdbcType=VARCHAR},
+      can_transforms = #{canTransforms,jdbcType=INTEGER},
+      count = #{count,jdbcType=INTEGER}
+    where fid = #{fid,jdbcType=INTEGER}
+  </update>
+</mapper>

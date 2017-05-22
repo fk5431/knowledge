@@ -84,6 +84,18 @@ public class CElastic {
                     .setSource(JSON.toJSONString(fileBean)).execute().actionGet();
        return indexResponse.isCreated();
     }
+    public boolean delete(int id){
+        DeleteRequestBuilder builder = client.prepareDelete(es_index, "file", String.valueOf(id));
+        return  builder.get().isFound();
+    }
+    public boolean delete(String table, String id) {
+        return delete(es_index,table,id);
+    }
+
+    public boolean delete(String index,String table, String id) {
+        DeleteRequestBuilder builder = client.prepareDelete(index, table, id);
+        return builder.get().isFound();
+    }
 
     public boolean index(String table, String id, Object object) {
         IndexResponse response = client.prepareIndex(es_index, table, id).setSource(JSON.toJSONString(object)).get();
@@ -118,15 +130,6 @@ public class CElastic {
         builder.setDoc(hash);
         builder.setRetryOnConflict(5);
         return builder.get().isCreated();
-    }
-
-    public boolean delete(String table, String id) {
-        return delete(es_index,table,id);
-    }
-
-    public boolean delete(String index,String table, String id) {
-        DeleteRequestBuilder builder = client.prepareDelete(index, table, id);
-        return builder.get().isFound();
     }
 
 

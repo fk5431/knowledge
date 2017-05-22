@@ -6,6 +6,7 @@ import com.fk.bean.KtypeBean;
 import com.fk.bean.UserBean;
 import com.fk.dao.FileDao;
 import com.fk.dao.KtypeDao;
+import com.fk.dao.ReviewDao;
 import com.fk.dao.UserDao;
 import com.fk.util.CommonConst;
 import com.google.common.collect.Lists;
@@ -33,6 +34,9 @@ public class ResourceService {
 
     @Autowired
     UserDao useDao;
+
+    @Autowired
+    ReviewDao reviewDao;
 
     private final int SIZE = 8;
 
@@ -107,5 +111,17 @@ public class ResourceService {
 
     public FileBean getFile(int id) {
         return fileDao.selectByPrimaryKey(id);
+    }
+
+    public void showreviewfile(int id, Map<String, Object> map) {
+        FileBean fileBean = reviewDao.selectByPrimaryKey(id);
+        map.put("file", fileBean);
+        int userId = fileBean.getUid();
+        if(userId!= -1){
+            UserBean userBean = useDao.selectByPrimaryKey(userId);
+            map.put("name", userBean.getUname());
+        }else{
+            map.put("name", "管理员");
+        }
     }
 }

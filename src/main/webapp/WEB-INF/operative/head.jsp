@@ -49,6 +49,7 @@
                             <li><a href="${pageContext.request.contextPath}/ftypetable">类型管理</a></li>
                             <li><a href="${pageContext.request.contextPath}/tagstable">用户标签管理</a></li>
                             <li><a href="${pageContext.request.contextPath}/cdirectory">文档管理</a></li>
+                            <li><a href="${pageContext.request.contextPath}/review">用户资源审核</a></li>
                         </ul>
                     </li>
 

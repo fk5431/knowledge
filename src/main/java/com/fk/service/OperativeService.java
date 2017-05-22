@@ -1,10 +1,7 @@
 package com.fk.service;
 
 import com.fk.bean.*;
-import com.fk.dao.FileDao;
-import com.fk.dao.FtypeDao;
-import com.fk.dao.KtypeDao;
-import com.fk.dao.UserDao;
+import com.fk.dao.*;
 import com.fk.util.*;
 import org.apache.commons.io.FileUtils;
 import org.slf4j.Logger;
@@ -36,6 +33,9 @@ public class OperativeService {
 
     @Autowired
     FileDao fileDao;
+
+    @Autowired
+    ReviewDao reviewDao;
 
     private Logger logger = LoggerFactory.getLogger(UserService.class);
 
@@ -117,7 +117,7 @@ public class OperativeService {
         }
     }
 
-    public void addFile(FileBean fileBean, MultipartFile file, Map<Object, String> map) {
+    public void addFile(FileBean fileBean, MultipartFile file, Map<String, Object> map) {
         if (file != null) {
             String filename = file.getOriginalFilename();
 
@@ -165,13 +165,15 @@ public class OperativeService {
             }
         }
         fileBean.setTags(sb.toString());
-        fileDao.insertSelective(fileBean);
+
 
         String other = extract(fileBean);
         ESFileBean esFileBean = new ESFileBean(fileBean);
         esFileBean.setOther(other);
         CElastic.inital();
         CElastic.elastic.insert(esFileBean);
+
+        fileDao.insertSelective(fileBean);
     }
 
     private String extract(FileBean fileBean) {
@@ -259,4 +261,68 @@ public class OperativeService {
     }
 
 
+    public void useraddFile(FileBean fileBean, MultipartFile file, Map<String, Object> map) {
+        if (file != null) {
+            String filename = file.getOriginalFilename();
+            fileBean.setFname(filename);
+            String path = ContextLoader.getCurrentWebApplicationContext().getServletContext().getRealPath("/");
+            filename = String.valueOf(System.currentTimeMillis()) + filename;
+            path = path + "upload";
+            File upload = new File(path, filename);
+            try {
+                FileUtils.copyInputStreamToFile(file.getInputStream(), upload);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+            String url = path + "\\" + filename;
+            fileBean.setUrl(url);
+            fileBean.setUuidname(filename);
+            if (fileBean.getCanTransforms() == 0) {
+                transforms(file, fileBean);
+            } else {
+                fileBean.setUrlImage("");
+                fileBean.setUrlTransforms("");
+            }
+
+        } else {
+            fileBean.setUrlImage("");
+            fileBean.setUrlTransforms("");
+            fileBean.setUrl("");
+            fileBean.setUuidname("");
+            fileBean.setFname("");
+        }
+
+        //tags
+        String tags = fileBean.getTags();
+        StringBuffer sb = new StringBuffer();
+        boolean flag = false;
+        for (String tag : tags.split(",")) {
+            if (flag == false) {
+                sb.append(tag);
+                flag = true;
+            } else {
+                sb.append(CommonConst.SPLITOR);
+                sb.append(tag);
+            }
+        }
+        fileBean.setTags(sb.toString());
+        reviewDao.insertSelective(fileBean);
+
+//        String other = extract(fileBean);
+//        ESFileBean esFileBean = new ESFileBean(fileBean);
+//        esFileBean.setOther(other);
+//        CElastic.inital();
+//        CElastic.elastic.insert(esFileBean);
+    }
+
+    public void delfile(int id) {
+        fileDao.deleteByPrimaryKey(id);
+        CElastic.inital();
+        CElastic.elastic.delete(id);
+    }
+
+    public void delreview(int id) {
+        reviewDao.deleteByPrimaryKey(id);
+    }
 }

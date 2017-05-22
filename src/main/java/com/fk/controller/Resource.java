@@ -58,10 +58,14 @@ public class Resource {
             int userId = Login.getUserId(request);
             browseService.insert(userId, id);
         }
-        if(Login.islogin(request)){
-            int userId = Login.getUserId(request);
-            browseService.insert(userId, id);
-        }
+        return "showfile";
+    }
+
+    @RequestMapping("/showreviewfile")
+    public String showreviewfile(HttpServletRequest request, Map<String, Object> map){
+        String num = request.getParameter("id");
+        int id = Integer.parseInt(num);
+        resourceService.showreviewfile(id, map);
         return "showfile";
     }
 
