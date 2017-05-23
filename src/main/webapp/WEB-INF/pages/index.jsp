@@ -2,28 +2,25 @@
 <%@ page import="com.fk.bean.TravelBean" %>
 <%@ page import="com.fk.bean.OrdersBean" %>
     <%@ page import="com.google.common.collect.Lists" %>
+    <%@ page import="java.util.ArrayList" %>
     <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>大学生穷游网</title>
-    <script type="text/javascript" charset="utf-8"
-            src="${pageContext.request.contextPath}/js/index_1.js"></script>
-    <script type="text/javascript" async="" charset="utf-8"
-            src="${pageContext.request.contextPath}/js/index_2.js"></script>
+    <%--<script src="${pageContext.request.contextPath}/js/index_1.js"></script>--%>
+    <%--<script src="${pageContext.request.contextPath}/js/index_2.js"></script>--%>
 
     <link href="${pageContext.request.contextPath}/css/index_1.css"
           rel="stylesheet" type="text/css">
-
+<%----%>
     <link href="${pageContext.request.contextPath}/css/index_2.css"
           rel="stylesheet" type="text/css">
 
-    <script language="javascript"
-            src="${pageContext.request.contextPath}/js/index_3.js"
-            type="text/javascript"></script>
+    <script src="${pageContext.request.contextPath}/js/index_3.js" ></script>
 
-    <script src="${pageContext.request.contextPath}/js/index_4.js"></script>
-    <script src="${pageContext.request.contextPath}/js/index_5.js"></script>
+    <%--<script src="${pageContext.request.contextPath}/js/index_4.js"></script>--%>
+    <%--<script src="${pageContext.request.contextPath}/js/index_5.js"></script>--%>
 </head>
 <body style="position: relative;">
 <a name="top_top"id="top_top"></a>
@@ -271,6 +268,9 @@
             <div class="asidebox-bd">
                 <%
                     List<TravelBean> tra = (List) request.getAttribute("cloudTravel");
+                    if(tra == null){
+                        tra = new ArrayList();
+                    }
                     for(int i=0;i<tra.size();i++){
                 %>
                 <dl class="clearfix">

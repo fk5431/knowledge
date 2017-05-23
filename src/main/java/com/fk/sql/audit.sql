@@ -140,3 +140,5 @@ INSERT INTO traveltips(id, time, place, image, title, context, type, author, lin
             <h3 class="h2">和果子店铺大推荐</h3>
 
             <p>虽然《甜言蜜语》中有许多优质的选择，但是蚂小蜂还是忍不住先要推荐一些和果子店铺给你们。</p>','type','冯凯','line');
+
+update traveltips set summary = '福州山川秀丽，万千景象，赢得多少诗人骚客歌吟，自唐宋以来，著名诗人杜荀鹤、陆游、辛弃疾、张元干，唐宋八大家之一曾巩，著名学者朱熹、蔡襄、杨时、赵汝愚等纵情放歌，留下跨越千年，咏颂福州的名篇佳作。这次，就让我们跟着地图去旅行，凭吊觅迹，揽胜……' where id = 17;

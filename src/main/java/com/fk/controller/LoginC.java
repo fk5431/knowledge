@@ -1,12 +1,12 @@
 package com.fk.controller;
 
 import com.fk.bean.*;
-import com.fk.dao.IndexshowshopDao;
 import com.fk.service.*;
 import com.fk.util.CommonConst;
 import com.fk.util.Login;
 import com.fk.util.MD5;
 import com.fk.util.SendMail;
+import com.google.common.collect.Lists;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -45,6 +45,9 @@ public class LoginC {
 
     @Autowired
     ILiketravelService liketravelService;
+
+    @Autowired
+    ICloudService cloudService;
 
     @RequestMapping("/")
     public String index(HttpServletRequest request, Map<String, Object> map){
@@ -111,7 +114,25 @@ public class LoginC {
         map.put("travelList", travelList);
         if(Login.islogin(request)){
             map.put(CommonConst.LOGIN, CommonConst.YES);
+            //旅游攻略推荐
+            int userId = 0;
+            Cookie[] cookies = request.getCookies();
+            for(Cookie c : cookies){
+                if(CommonConst.USERID.equals(c.getName())){
+                     userId = Integer.parseInt(c.getValue());
+                }
+            }
+            List<CloudBean> cloudBeans = cloudService.selectByUserIdAndStatus0(userId);
+            List<TravelBean> cloudTravel = Lists.newArrayList();
+            for(CloudBean c : cloudBeans){
+                String place = c.getPlace();
+                List<TravelBean> t = travelService.selectByPlace(place);
+                cloudTravel.addAll(t);
+            }
+            cloudTravel = cloudTravel.subList(0, 8);
+            map.put("cloudTravel", cloudTravel);
         }
+
         return "index";
     }
 
