@@ -1,7 +1,8 @@
     <%@ page import="java.util.List" %>
 <%@ page import="com.fk.bean.TravelBean" %>
 <%@ page import="com.fk.bean.OrdersBean" %>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+    <%@ page import="com.google.common.collect.Lists" %>
+    <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -265,23 +266,28 @@
         <div class="asidebox box-gonglve">
             <div class="asidebox-hd">
                 <h2 class="hd-title">旅游攻略推荐</h2>
-                <a class="hd-right" href="#">更多</a>
+                <%--<a class="hd-right" href="#">更多</a>--%>
             </div>
             <div class="asidebox-bd">
+                <%
+                    List<TravelBean> tra = (List) request.getAttribute("cloudTravel");
+                    for(int i=0;i<tra.size();i++){
+                %>
                 <dl class="clearfix">
                     <dt>
                         <a href="#" target="_blank">
-                            <img src="${pageContext.request.contextPath}/images/shop_4.jpeg"
-                                 alt="大阪旅游攻略" width="110" height="155">
+                            <img src="<%=tra.get(i).getImage()%>"
+                                width="110" height="155">
                         </a>
                     </dt>
                     <dd>
-                        <h3>
-                            <a href="#" target="_blank" title="大阪">大阪</a>
-                        </h3>
-                        <p>详细的吃、住、行、景点、线路、实用信息</p>
+                        <h6>
+                            <a href="#" target="_blank" title="大阪"><%=tra.get(i).getTitle()%></a>
+                        </h6>
+                        <%--<p>详细的吃、住、行、景点、线路、实用信息</p>--%>
                     </dd>
                 </dl>
+                <%}%>
             </div>
         </div>
         <div class="asidebox box-gowild">
