@@ -12,8 +12,8 @@
 <head>
     <title>资讯  ——  ${newsBean.title}</title>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="//ms0.meituan.net/mywww/common.69f27356.css"/>
-    <link rel="stylesheet" href="//ms0.meituan.net/mywww/news-detail.babc5c81.css"/>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/news1.css"/>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/news2.css"/>
 </head>
 <body>
 <div class="header">

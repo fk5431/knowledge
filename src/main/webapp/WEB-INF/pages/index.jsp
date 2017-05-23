@@ -274,7 +274,7 @@
                                 <a href="${pageContext.request.contextPath}/film?id=<%=time.get(i).getId()%>" target="_top" >
                                     <i class="ranking-index"><%=i+1%></i>
                                     <span class="img-link"><img class="ranking-img default-img" src="<%=time.get(i).getImage()%>"></span>
-                                    <div class="name-link ranking-movie-name"><%=look.get(i).getTitle()%></div>
+                                    <div class="name-link ranking-movie-name"><%=time.get(i).getTitle()%></div>
                                     <span class="ranking-num-info"><span class="stonefont"><%=time.get(i).getLookcount()%></span>人想看</span>
                                 </a>
                             </li>
