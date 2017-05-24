@@ -1,6 +1,6 @@
 package com.fk.bean;
 
-import java.util.Date;
+import java.sql.Timestamp;
 
 public class DiscussBean {
     private Integer id;
@@ -9,7 +9,7 @@ public class DiscussBean {
 
     private Integer userid;
 
-    private Date time;
+    private Timestamp time;
 
     private String username;
 
@@ -39,11 +39,11 @@ public class DiscussBean {
         this.userid = userid;
     }
 
-    public Date getTime() {
+    public Timestamp getTime() {
         return time;
     }
 
-    public void setTime(Date time) {
+    public void setTime(Timestamp time) {
         this.time = time;
     }
 

@@ -14,8 +14,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.sql.Timestamp;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
@@ -121,7 +121,7 @@ public class Hot {
         discussBean.setUserid(user.getId());
         discussBean.setContent(key);
         discussBean.setNewsid(id);
-        discussBean.setTime(new Date());
+        discussBean.setTime(new Timestamp(System.currentTimeMillis()));
         discussDao.insertSelective(discussBean);
 
         return news(request, response, map);

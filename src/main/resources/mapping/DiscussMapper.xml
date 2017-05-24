@@ -5,7 +5,7 @@
     <id column="id" property="id" jdbcType="INTEGER" />
     <result column="newsId" property="newsid" jdbcType="INTEGER" />
     <result column="userId" property="userid" jdbcType="INTEGER" />
-    <result column="time" property="time" jdbcType="DATE" />
+    <result column="time" property="time" jdbcType="TIMESTAMP" />
     <result column="userName" property="username" jdbcType="VARCHAR" />
     <result column="content" property="content" jdbcType="VARCHAR" />
 </resultMap>
@@ -33,7 +33,7 @@
     time, userName, content
     )
     values (#{id,jdbcType=INTEGER}, #{newsid,jdbcType=INTEGER}, #{userid,jdbcType=INTEGER},
-    #{time,jdbcType=DATE}, #{username,jdbcType=VARCHAR}, #{content,jdbcType=VARCHAR}
+    #{time,jdbcType=TIMESTAMP}, #{username,jdbcType=VARCHAR}, #{content,jdbcType=VARCHAR}
     )
 </insert>
 <insert id="insertSelective" parameterType="com.fk.bean.DiscussBean" >
@@ -69,7 +69,7 @@
             #{userid,jdbcType=INTEGER},
         </if>
         <if test="time != null" >
-            #{time,jdbcType=DATE},
+            #{time,jdbcType=TIMESTAMP},
         </if>
         <if test="username != null" >
             #{username,jdbcType=VARCHAR},
@@ -89,7 +89,7 @@
             userId = #{userid,jdbcType=INTEGER},
         </if>
         <if test="time != null" >
-            time = #{time,jdbcType=DATE},
+            time = #{time,jdbcType=TIMESTAMP},
         </if>
         <if test="username != null" >
             userName = #{username,jdbcType=VARCHAR},
@@ -104,7 +104,7 @@
     update discuss
     set newsId = #{newsid,jdbcType=INTEGER},
     userId = #{userid,jdbcType=INTEGER},
-    time = #{time,jdbcType=DATE},
+    time = #{time,jdbcType=TIMESTAMP},
     userName = #{username,jdbcType=VARCHAR},
     content = #{content,jdbcType=VARCHAR}
     where id = #{id,jdbcType=INTEGER}

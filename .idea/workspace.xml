@@ -11,8 +11,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="11669da5-9530-45d4-b1a5-63fcb18bf569" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/fk/bean/User.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/fk/controller/LoginC.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/fk/dao/UserDao.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/fk/service/IUserService.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/fk/serviceImpl/UserServiceImpl.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/dispatcher-servlet.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/jdbc.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/log4j.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/mapping/UserMapper.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/spring-mybatis.xml" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/fk/movie.sql" afterPath="$PROJECT_DIR$/src/main/java/com/fk/movie.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/fk/bean/DiscussBean.java" afterPath="$PROJECT_DIR$/src/main/java/com/fk/bean/DiscussBean.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/fk/controller/Hot.java" afterPath="$PROJECT_DIR$/src/main/java/com/fk/controller/Hot.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mapping/DiscussMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapping/DiscussMapper.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -40,19 +52,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="DiscussMapper.xml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="DiscussMapper.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/mapping/DiscussMapper.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="86">
+              <caret line="106" column="36" lean-forward="false" selection-start-line="106" selection-start-column="36" selection-end-line="106" selection-end-column="36" />
               <folding>
-                <marker date="1493423873600" expanded="true" signature="842:948" ph="select from discuss" />
-                <marker date="1493423873600" expanded="true" signature="1057:1159" ph="select from discuss" />
-                <marker date="1493423873600" expanded="true" signature="1242:1299" ph="delete from " />
-                <marker date="1493423873600" expanded="true" signature="1376:1633" ph="insert into discuss... " />
-                <marker date="1493423873600" expanded="true" signature="2920:3489" ph="update discu... " />
-                <marker date="1493423873600" expanded="true" signature="3578:3837" ph="update discu... " />
+                <marker date="1495639928623" expanded="true" signature="847:953" ph="select from discuss" />
+                <marker date="1495639928623" expanded="true" signature="1062:1164" ph="select from discuss" />
+                <marker date="1495639928623" expanded="true" signature="1247:1304" ph="delete from " />
+                <marker date="1495639928623" expanded="true" signature="1381:1643" ph="insert into discuss... " />
+                <marker date="1495639928623" expanded="true" signature="2935:3509" ph="update discu... " />
+                <marker date="1495639928623" expanded="true" signature="3598:3862" ph="update discu... " />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DiscussBean.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/fk/bean/DiscussBean.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="143">
+              <caret line="41" column="20" lean-forward="false" selection-start-line="41" selection-start-column="20" selection-end-line="41" selection-end-column="20" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -61,7 +83,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/resources/mapping/MovieMapper.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="88">
-              <caret line="10" column="49" lean-forward="true" selection-start-line="10" selection-start-column="49" selection-end-line="10" selection-end-column="49" />
+              <caret line="10" column="49" lean-forward="false" selection-start-line="10" selection-start-column="49" selection-end-line="10" selection-end-column="49" />
               <folding>
                 <marker date="1494642108930" expanded="true" signature="1817:1931" ph="select from movie" />
                 <marker date="1494642108930" expanded="true" signature="1996:2038" ph="select count... movie" />
@@ -83,6 +105,28 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="Hot.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/fk/controller/Hot.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="131">
+              <caret line="124" column="0" lean-forward="false" selection-start-line="124" selection-start-column="0" selection-end-line="124" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Operative.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/fk/controller/Operative.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="338">
+              <caret line="384" column="22" lean-forward="false" selection-start-line="384" selection-start-column="22" selection-end-line="384" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -98,16 +142,11 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>添加</find>
-      <find>添加内容</find>
-      <find>退出登录</find>
-      <find>perfor</find>
       <find>bg-g</find>
       <find>bg-red</find>
       <find>网站信息</find>
       <find>亿</find>
       <find>36</find>
-      <find>insertSelective</find>
       <find>content</find>
       <find>login</find>
       <find>search</find>
@@ -128,6 +167,11 @@
       <find>selectSortByTimeOfTen</find>
       <find>time</find>
       <find>news</find>
+      <find>movie</find>
+      <find>addmovie</find>
+      <find>insertSelective</find>
+      <find>DATE</find>
+      <find>DATETIME</find>
     </findStrings>
     <replaceStrings>
       <replace>7</replace>
@@ -166,8 +210,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/resources/mapping/HistoryMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/operative/login.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/fk/util/CommonConst.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/operative/css/pintuer.css" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/operative/css/admin.css" />
@@ -203,7 +245,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/fk/bean/MovieBean.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mapping/MovieMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/fk/service/INewsService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/fk/controller/Hot.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/fk/serviceImpl/NewsServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/buy.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/error.jsp" />
@@ -217,6 +258,9 @@
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/css/news1.css" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/css/news2.css" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/news.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/fk/bean/DiscussBean.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/fk/controller/Hot.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapping/DiscussMapper.xml" />
       </list>
     </option>
   </component>
@@ -534,6 +578,40 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="fk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="movie" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="movie" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controller" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1335,14 +1413,7 @@
       <workItem from="1495544521307" duration="365000" />
       <workItem from="1495548298907" duration="206000" />
       <workItem from="1495597235842" duration="334000" />
-      <workItem from="1495638292852" duration="185000" />
-    </task>
-    <task id="LOCAL-00007" summary="设计数据库">
-      <created>1489459538711</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1489459538711</updated>
+      <workItem from="1495638292852" duration="1718000" />
     </task>
     <task id="LOCAL-00008" summary="设计数据库">
       <created>1489478317370</created>
@@ -1680,11 +1751,18 @@
       <option name="project" value="LOCAL" />
       <updated>1495537988391</updated>
     </task>
-    <option name="localTasksCounter" value="56" />
+    <task id="LOCAL-00056" summary="finish">
+      <created>1495638490487</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1495638490488</updated>
+    </task>
+    <option name="localTasksCounter" value="57" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="334046000" />
+    <option name="totallyTimeSpent" value="335579000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1713,8 +1791,9 @@
       <window_info id="JSF" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3797054" sideWeight="0.49621785" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3797054" sideWeight="0.49621785" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32985386" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3666121" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -1722,7 +1801,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32985386" sideWeight="0.49806523" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.43207857" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32923076" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32569557" sideWeight="0.49806523" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32569557" sideWeight="0.49806523" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2602118" sideWeight="0.49582464" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
@@ -1732,7 +1811,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36806723" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32925585" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32672232" sideWeight="0.49806523" order="1" side_tool="false" content_ui="tabs" />
@@ -1806,7 +1884,7 @@
           <option name="timeStamp" value="164" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="165" />
+      <option name="time" value="166" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1988,16 +2066,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fk/controller/Operative.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8118">
-          <caret line="389" column="0" lean-forward="false" selection-start-line="389" selection-start-column="0" selection-end-line="389" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
@@ -2146,11 +2214,11 @@
         <state relative-caret-position="5346">
           <caret line="0" column="28156" lean-forward="false" selection-start-line="0" selection-start-column="28156" selection-end-line="0" selection-end-column="28156" />
           <folding>
-            <element signature="e#3906#10593#1" expanded="true" />
-            <element signature="e#11562#12013#2" expanded="true" />
-            <element signature="e#15320#15767#2" expanded="true" />
-            <element signature="e#17110#25549#2" expanded="true" />
-            <element signature="e#26024#27203#2" expanded="true" />
+            <element signature="e#3906#10593#1" expanded="false" />
+            <element signature="e#11562#12013#2" expanded="false" />
+            <element signature="e#15320#15767#2" expanded="false" />
+            <element signature="e#17110#25549#2" expanded="false" />
+            <element signature="e#26024#27203#2" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -2160,25 +2228,25 @@
         <state relative-caret-position="8426">
           <caret line="0" column="49956" lean-forward="false" selection-start-line="0" selection-start-column="49956" selection-end-line="0" selection-end-column="49956" />
           <folding>
-            <element signature="e#819#1326#1" expanded="true" />
-            <element signature="e#1588#2199#2" expanded="true" />
-            <element signature="e#2260#2879#2" expanded="true" />
-            <element signature="e#2937#3336#2" expanded="true" />
-            <element signature="e#6282#8429#1" expanded="true" />
-            <element signature="e#9358#9741#1" expanded="true" />
-            <element signature="e#10545#11772#1" expanded="true" />
-            <element signature="e#12449#15036#2" expanded="true" />
-            <element signature="e#15352#18679#2" expanded="true" />
-            <element signature="e#18707#22026#2" expanded="true" />
-            <element signature="e#22054#25361#2" expanded="true" />
-            <element signature="e#25389#28696#2" expanded="true" />
-            <element signature="e#28724#32063#2" expanded="true" />
-            <element signature="e#32515#35206#2" expanded="true" />
-            <element signature="e#35255#37838#2" expanded="true" />
-            <element signature="e#37976#38423#2" expanded="true" />
-            <element signature="e#38472#40095#2" expanded="true" />
-            <element signature="e#41141#42152#2" expanded="true" />
-            <element signature="e#42300#49907#1" expanded="true" />
+            <element signature="e#819#1326#1" expanded="false" />
+            <element signature="e#1588#2199#2" expanded="false" />
+            <element signature="e#2260#2879#2" expanded="false" />
+            <element signature="e#2937#3336#2" expanded="false" />
+            <element signature="e#6282#8429#1" expanded="false" />
+            <element signature="e#9358#9741#1" expanded="false" />
+            <element signature="e#10545#11772#1" expanded="false" />
+            <element signature="e#12449#15036#2" expanded="false" />
+            <element signature="e#15352#18679#2" expanded="false" />
+            <element signature="e#18707#22026#2" expanded="false" />
+            <element signature="e#22054#25361#2" expanded="false" />
+            <element signature="e#25389#28696#2" expanded="false" />
+            <element signature="e#28724#32063#2" expanded="false" />
+            <element signature="e#32515#35206#2" expanded="false" />
+            <element signature="e#35255#37838#2" expanded="false" />
+            <element signature="e#37976#38423#2" expanded="false" />
+            <element signature="e#38472#40095#2" expanded="false" />
+            <element signature="e#41141#42152#2" expanded="false" />
+            <element signature="e#42300#49907#1" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -2232,29 +2300,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fk/controller/Hot.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="118" column="8" lean-forward="false" selection-start-line="118" selection-start-column="8" selection-end-line="118" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fk/bean/DiscussBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="11" column="12" lean-forward="true" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/fk/bean/MovieBean.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1791">
           <caret line="153" column="18" lean-forward="false" selection-start-line="153" selection-start-column="18" selection-end-line="153" selection-end-column="18" />
           <folding>
-            <element signature="e#3048#3049#0" expanded="true" />
-            <element signature="e#3079#3080#0" expanded="true" />
+            <element signature="e#3048#3049#0" expanded="false" />
+            <element signature="e#3079#3080#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -2262,7 +2314,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/resources/mapping/MovieMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="88">
-          <caret line="10" column="49" lean-forward="true" selection-start-line="10" selection-start-column="49" selection-end-line="10" selection-end-column="49" />
+          <caret line="10" column="49" lean-forward="false" selection-start-line="10" selection-start-column="49" selection-end-line="10" selection-end-column="49" />
           <folding>
             <marker date="1494642108930" expanded="true" signature="1817:1931" ph="select from movie" />
             <marker date="1494642108930" expanded="true" signature="1996:2038" ph="select count... movie" />
@@ -2283,17 +2335,43 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fk/controller/Operative.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="338">
+          <caret line="384" column="22" lean-forward="false" selection-start-line="384" selection-start-column="22" selection-end-line="384" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fk/bean/DiscussBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="143">
+          <caret line="41" column="20" lean-forward="false" selection-start-line="41" selection-start-column="20" selection-end-line="41" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/mapping/DiscussMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="86">
+          <caret line="106" column="36" lean-forward="false" selection-start-line="106" selection-start-column="36" selection-end-line="106" selection-end-column="36" />
           <folding>
-            <marker date="1493423873600" expanded="true" signature="842:948" ph="select from discuss" />
-            <marker date="1493423873600" expanded="true" signature="1057:1159" ph="select from discuss" />
-            <marker date="1493423873600" expanded="true" signature="1242:1299" ph="delete from " />
-            <marker date="1493423873600" expanded="true" signature="1376:1633" ph="insert into discuss... " />
-            <marker date="1493423873600" expanded="true" signature="2920:3489" ph="update discu... " />
-            <marker date="1493423873600" expanded="true" signature="3578:3837" ph="update discu... " />
+            <marker date="1495639928623" expanded="true" signature="847:953" ph="select from discuss" />
+            <marker date="1495639928623" expanded="true" signature="1062:1164" ph="select from discuss" />
+            <marker date="1495639928623" expanded="true" signature="1247:1304" ph="delete from " />
+            <marker date="1495639928623" expanded="true" signature="1381:1643" ph="insert into discuss... " />
+            <marker date="1495639928623" expanded="true" signature="2935:3509" ph="update discu... " />
+            <marker date="1495639928623" expanded="true" signature="3598:3862" ph="update discu... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fk/controller/Hot.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="131">
+          <caret line="124" column="0" lean-forward="false" selection-start-line="124" selection-start-column="0" selection-end-line="124" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
