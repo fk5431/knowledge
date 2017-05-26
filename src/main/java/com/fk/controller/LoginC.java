@@ -129,7 +129,11 @@ public class LoginC {
                 List<TravelBean> t = travelService.selectByPlace(place);
                 cloudTravel.addAll(t);
             }
-            cloudTravel = cloudTravel.subList(0, 8);
+            if(cloudTravel.size() > 8) {
+                cloudTravel = cloudTravel.subList(0, 8);
+            }else {
+
+            }
             map.put("cloudTravel", cloudTravel);
         }
 
