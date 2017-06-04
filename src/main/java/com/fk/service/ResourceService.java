@@ -9,6 +9,8 @@ import com.fk.dao.KtypeDao;
 import com.fk.dao.ReviewDao;
 import com.fk.dao.UserDao;
 import com.fk.util.CommonConst;
+import com.fk.util.PropertiesStr;
+import com.fk.util.StringUtil;
 import com.google.common.collect.Lists;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -123,5 +125,17 @@ public class ResourceService {
         }else{
             map.put("name", "管理员");
         }
+    }
+
+    public String preview(String url, String id, Map<String, Object> map) {
+        FileBean fileBean = fileDao.selectByPrimaryKey(Integer.parseInt(id));
+        String suffix = StringUtil.suffix(fileBean.getFname());
+
+        url = StringUtil.subString(url);
+        map.put("url", url);
+        if(PropertiesStr.office.contains(suffix)){
+            return "previewoffice";
+        }
+        return "/info/error";
     }
 }

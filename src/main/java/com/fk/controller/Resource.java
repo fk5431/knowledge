@@ -69,6 +69,15 @@ public class Resource {
         return "showfile";
     }
 
+    @RequestMapping("/preview")
+    public String preview(HttpServletRequest request, Map<String, Object> map){
+        String url_transforms = request.getParameter("url_transforms");
+        String id = request.getParameter("id");
+
+
+        return resourceService.preview(url_transforms, id, map);
+    }
+
     @RequestMapping("/download")
     public void downloadFile(HttpServletRequest request, HttpServletResponse response){
         String id = request.getParameter("id");

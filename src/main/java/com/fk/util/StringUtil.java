@@ -20,4 +20,17 @@ public class StringUtil {
             return str;
         }
     }
+    public static String suffix(String str) {
+        return str.substring(str.lastIndexOf(".")+1);
+    }
+
+    public static String subString(String url) {
+        int start = url.indexOf("webapps");
+        return url.substring(start+7);
+    }
+
+    public static void main(String[] args) {
+        System.out.println(StringUtil.subString("D:/jsp/apache-tomcat-8.0.29/webapps/asdasfdsfd"));
+
+    }
 }
