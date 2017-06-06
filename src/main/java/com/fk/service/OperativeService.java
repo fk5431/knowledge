@@ -140,12 +140,12 @@ public class OperativeService {
                 transforms(file, fileBean);
             } else {
                 fileBean.setUrlImage("");
-                fileBean.setUrlTransforms("");
+                fileBean.setUrlTransforms(fileBean.getUrl());
             }
 
         } else {
             fileBean.setUrlImage("");
-            fileBean.setUrlTransforms("");
+            fileBean.setUrlTransforms(fileBean.getUrl());
             fileBean.setUrl("");
             fileBean.setUuidname("");
             fileBean.setFname("");

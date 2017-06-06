@@ -133,8 +133,10 @@ public class ResourceService {
 
         url = StringUtil.subString(url);
         map.put("url", url);
-        if(PropertiesStr.office.contains(suffix)){
+        if(PropertiesStr.office.contains(suffix)) {
             return "previewoffice";
+        }else if(PropertiesStr.music.contains(suffix)){
+            return "previewmusic";
         }
         return "/info/error";
     }
