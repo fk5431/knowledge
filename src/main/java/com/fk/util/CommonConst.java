@@ -27,4 +27,7 @@ public class CommonConst {
     public static String USERID = "userId";
     public static String SUPERUSERID = "superUserId";
     public static String ERRORCODE = "errorcode";
+    public static String AND = "AND";
+    public static String OR = "OR";
+    public static String NOT = "NOT";
 }

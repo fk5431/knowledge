@@ -85,4 +85,13 @@ public class SearchService_fk {
         map.put("search", search);
         map.put("index", 0);
     }
+
+    public void groupSearch(String[] bools, String[] sections, String[] words, Map<String, Object> map) {
+        List<KtypeBean> ktypeBeans = ktypeDao.selectAll();
+        map.put("type", ktypeBeans);
+
+        CElastic.inital();
+        List<String> strs =  CElastic.elastic.groupSearch(bools, sections, words);
+
+    }
 }

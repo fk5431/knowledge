@@ -14,6 +14,8 @@ import org.elasticsearch.common.settings.Settings;
 import org.elasticsearch.common.transport.InetSocketTransportAddress;
 import org.elasticsearch.common.xcontent.XContentBuilder;
 import org.elasticsearch.common.xcontent.XContentFactory;
+import org.elasticsearch.index.query.BoolQueryBuilder;
+import org.elasticsearch.index.query.QueryBuilder;
 import org.elasticsearch.index.query.QueryBuilders;
 import org.elasticsearch.search.SearchHit;
 import org.elasticsearch.search.SearchHits;
@@ -124,7 +126,38 @@ public class CElastic {
         }
         return list;
     }
-
+    //组合查询
+    public List<String> groupSearch(String[] bools, String[] sections, String[] words){
+        List<String> list = Lists.newArrayList();
+        BoolQueryBuilder bqb = QueryBuilders.boolQuery()
+                .must(QueryBuilders.termQuery(sections[0], words[0]));
+//                .mustNot(QueryBuilders.termQuery("", ""))
+//                .should(QueryBuilders.termQuery("", ""));
+        for(int i=0;i<bools.length;i++){
+            if(CommonConst.AND.equals(bools[i])){
+                bqb =  bqb.must(QueryBuilders.termQuery(sections[i+1], words[i+1]));
+            }else if(CommonConst.OR.equals(bools[i])){
+                bqb =  bqb.should(QueryBuilders.termQuery(sections[i+1], words[i+1]));
+            }else if(CommonConst.NOT.equals(bools[i])){
+                bqb =  bqb.mustNot(QueryBuilders.termQuery(sections[i+1], words[i+1]));
+            }
+        }
+        QueryBuilder qb = bqb;
+        SearchResponse searchResponse = client.prepareSearch(es_index)
+                .setTypes("file")
+//                .setQuery(QueryBuilders.matchAllQuery())
+                .setQuery(qb)
+//                .setSearchType(SearchType.QUERY_THEN_FETCH)
+                    .get();
+        SearchHits hits = searchResponse.getHits();
+        long total = hits.getTotalHits();
+        System.out.println(total);
+        SearchHit[] searchHits = hits.hits();
+        for(SearchHit s : searchHits){
+            list.add(s.getSourceAsString());
+        }
+        return list;
+    }
     public boolean update(String table, String id, Map<String, Object> hash) {
         UpdateRequestBuilder builder = client.prepareUpdate(es_index, table, id);
         builder.setDoc(hash);

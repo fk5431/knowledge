@@ -24,6 +24,9 @@ public class ESFileBean extends FileBean{
         this.setUploadtime(fileBean.getUploadtime());
         this.setKtypeid(fileBean.getKtypeid());
         StringBuffer sb = new StringBuffer();
+        if(fileBean.getTags() == null){
+            fileBean.setTags("'");
+        }
         for (String tag : fileBean.getTags().split(CommonConst.SPLITOR)) {
             sb.append(tag + ",");
         }

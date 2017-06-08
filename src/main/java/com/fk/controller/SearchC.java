@@ -29,11 +29,12 @@ public class SearchC {
 
     @RequestMapping("/groupSearch")
     public String groupSearch(HttpServletRequest request, Map<String, Object> map){
-        String page  = request.getParameter("page");
-
+        String[] bools = request.getParameterValues("booleans");
+        String[] sections = request.getParameterValues("sections");
+        String[] words = request.getParameterValues("searchWords");
 
 //        service.search(page, search, map);
-
+        service.groupSearch(bools, sections, words, map);
 
         return "resource";
     }
