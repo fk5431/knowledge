@@ -42,7 +42,7 @@ public class SendMail {
      * 发送邮件工具类:通过qq邮件发送,因为具有ssl加密,采用的是smtp协议
      *
      * @param mailServer       邮件服务器的主机名:如 "smtp.qq.com"
-     *                         loginAccount 登录邮箱的账号:如 "1974544863@qq.com"
+     *                         loginAccount 登录邮箱的账号:如 "1050577129@qq.com"
      *                         loginAuthCode 登录qq邮箱时候需要的授权码:可以进入qq邮箱,账号设置那里"生成授权码"
      *                         sender 发件人
      * @param recipients       收件人:支持群发
