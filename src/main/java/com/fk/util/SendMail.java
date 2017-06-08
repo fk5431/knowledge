@@ -7,6 +7,7 @@ import org.slf4j.LoggerFactory;
 import javax.mail.*;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
+import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
 
@@ -24,6 +25,12 @@ public class SendMail {
     private Logger logger = LoggerFactory.getLogger(SendMail.class);
 
     static {
+        PropertiesStr pro = new PropertiesStr();
+        try {
+            pro.initProperties();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         account = PropertiesStr.account;
         authcode = PropertiesStr.authcode;
         mailserver = PropertiesStr.mailserver;
@@ -175,9 +182,11 @@ public class SendMail {
         return res;
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         //   int a = sendEmailToOne("smtp.qq.com","15275247807@163.com","nihao","text","text/html;charset=utf-8");
 //        System.out.println(a);
 
+        int re = new SendMail().sendEmailToOne("15275247807@163.com", "知识库密码", "密码重置为" + "zkdnfjsf");
+        System.out.println(re);
     }
 }

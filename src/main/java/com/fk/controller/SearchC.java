@@ -29,8 +29,8 @@ public class SearchC {
 
     @RequestMapping("/groupSearch")
     public String groupSearch(HttpServletRequest request, Map<String, Object> map){
-//        String search = request.getParameter("searchAll");
         String page  = request.getParameter("page");
+
 
 //        service.search(page, search, map);
 
