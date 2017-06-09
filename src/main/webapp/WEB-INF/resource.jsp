@@ -135,7 +135,7 @@
                                 <div id="searchfields">
                                     <h2 class="searchcomponentlabel">SEARCH FOR</h2>
                                     <div class="searchforline">
-                                        <label class="hidden" for="searchWords">Search 1</label>
+                                        <label class="hidden" >Search 1</label>
                                         <span style="position: relative; display: inline;" class="twitter-typeahead">
                                              <input style="position: absolute; border-color: transparent; box-shadow: none; background: rgb(255, 255, 255) none repeat scroll 0% 0%;"
                                                     class="tt-hint" autocomplete="off" spellcheck="off" disabled=""
@@ -154,9 +154,9 @@
                                         <select size="1" name="sections" id="sect1" title="Search Within Dropdown 1"
                                                 class="section">
                                             <option value="title">标题</option>
-                                            <option value="user">上传者</option>
+                                            <%--<option value="user">上传者</option>--%>
                                             <option value="tags">标签</option>
-                                            <option value="abstracString">摘要</option>
+                                            <option value="abstractS">摘要</option>
                                             <option value="fname">文件名字</option>
                                             <option value="introduction">描述</option>
                                         </select>
@@ -170,7 +170,7 @@
                                             title="boolean operator for combining textbox 1 and textbox 2"
                                             class="boolean">
                                         <option value="AND">AND</option>
-                                        <option value="OR">OR</option>
+                                        <%--<option value="OR">OR</option>--%>
                                         <option value="NOT">NOT</option>
                                     </select>
                                     </div>
@@ -194,9 +194,9 @@
                                         <select size="1" name="sections" id="sect2" title="Search Within Dropdown 2"
                                                 class="section">
                                             <option value="title">标题</option>
-                                            <option value="user">上传者</option>
+                                            <%--<option value="user">上传者</option>--%>
                                             <option value="tags">标签</option>
-                                            <option value="abstracString">摘要</option>
+                                            <option value="abstractS">摘要</option>
                                             <option value="fname">文件名字</option>
                                             <option value="introduction">描述</option>
                                         </select>
@@ -232,9 +232,9 @@
                                         <select size="1" name="sections" id="sect3" title="Search Within Dropdown 3"
                                                 class="section">
                                             <option value="title">标题</option>
-                                            <option value="user">上传者</option>
+                                            <%--<option value="user">上传者</option>--%>
                                             <option value="tags">标签</option>
-                                            <option value="abstracString">摘要</option>
+                                            <option value="abstractS">摘要</option>
                                             <option value="fname">文件名字</option>
                                             <option value="introduction">描述</option>
                                         </select>
@@ -481,7 +481,7 @@
         <div class="searchforconnector" id="addsearchforconnector">
             <select size="1" name="booleans" id="connector" class="boolean">
                 <option value="AND">AND</option>
-                <option value="OR">OR</option>
+                <%--<option value="OR">OR</option>--%>
                 <option value="NOT">NOT</option>
             </select>
         </div>
@@ -492,11 +492,11 @@
                 [
                 <option value="title">标题</option>
                 ,
-                <option value="user">上传者</option>
-                ,
+                <%--<option value="user">上传者</option>--%>
+                <%--,--%>
                 <option value="tags">标签</option>
                 ,
-                <option value="abstracString">摘要</option>
+                <option value="abstractS">摘要</option>
                 ,
                 <option value="fname">文件名字</option>
                 ,

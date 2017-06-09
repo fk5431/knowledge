@@ -185,8 +185,55 @@ public class CenterService {
 
     }
 
-    public void peding(int userId, Map<String, Object> map) {
-
+    public void peding(String page_, int userId, Map<String, Object> map) {
+        //TODO
+        try {
+            int count = reviewDao.countByUserId(userId);
+            int page = 1;
+            if (count % SIZE == 0)
+                page = count / SIZE;
+            else
+                page = count / SIZE + CommonConst.ONE_INT;
+            map.put("count", count);
+            map.put("size", SIZE);
+            map.put("page", page);
+            int toPage;
+            if (page_ == null || "".equals(page_)) {
+                toPage = 1;
+            } else {
+                toPage = Integer.parseInt(page_);
+            }
+            if (toPage > page) {
+                toPage = page;
+            }
+            map.put("pageNow", toPage);
+            int start = (toPage - 1) * SIZE;
+            start = start<0 ? 0 : start;
+            List<FileBean> list = reviewDao.selectByStartAndUserId(userId, start);
+            //TODO
+            List<FileReturnBean> reList = Lists.newArrayList();
+            for(FileBean f : list){
+                if(f != null){
+                    int uid = f.getUid();
+                    UserBean userBean = userDao.selectByPrimaryKey(uid);
+                    FileReturnBean fileReturnBean = new FileReturnBean(f);
+                    if (userBean != null) {
+                        fileReturnBean.setUname(userBean.getUname());
+                    } else {
+                        fileReturnBean.setUname("未知");
+                    }
+                    if (uid == -1) {
+                        fileReturnBean.setUname("管理员");
+                    }
+                    reList.add(fileReturnBean);
+                }
+            }
+            map.put("file", reList);
+            map.put("type", "4");
+        } catch (Exception e) {
+            e.printStackTrace();
+            map.put(CommonConst.ERRORCODE, 1);
+        }
     }
 
 

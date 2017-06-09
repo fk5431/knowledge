@@ -63,7 +63,7 @@ public class CenterC {
         } else if("3".equals(type)){
             centerService.document(page, userId, map);
         } else if("4".equals(type)){
-            centerService.peding(userId, map);
+            centerService.peding(page, userId, map);
         } else {
             centerService.index(page, userId, map);
         }
@@ -121,10 +121,5 @@ public class CenterC {
         return myupload(request, map);
     }
 
-    @RequestMapping("/agree")
-    public String agree(HttpServletRequest request, Map<String, Object> map){
-        String id = request.getParameter("id");
-        centerService.agree(Integer.parseInt(id));
-        return "";
-    }
+
 }
