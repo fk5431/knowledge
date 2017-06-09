@@ -186,7 +186,6 @@ public class CenterService {
     }
 
     public void peding(String page_, int userId, Map<String, Object> map) {
-        //TODO
         try {
             int count = reviewDao.countByUserId(userId);
             int page = 1;
@@ -210,7 +209,6 @@ public class CenterService {
             int start = (toPage - 1) * SIZE;
             start = start<0 ? 0 : start;
             List<FileBean> list = reviewDao.selectByStartAndUserId(userId, start);
-            //TODO
             List<FileReturnBean> reList = Lists.newArrayList();
             for(FileBean f : list){
                 if(f != null){
