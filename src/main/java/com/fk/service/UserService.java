@@ -1,12 +1,15 @@
 package com.fk.service;
 
 import com.fk.bean.CdirectoryBean;
+import com.fk.bean.FileBean;
 import com.fk.bean.UserBean;
+import com.fk.dao.FileDao;
 import com.fk.dao.UserDao;
 import com.fk.util.CommonConst;
 import com.fk.util.MD5;
 import com.fk.util.RandomUtil;
 import com.fk.util.SendMail;
+import com.google.common.collect.Lists;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,6 +35,9 @@ public class UserService {
 
     @Autowired
     CdirectoryService cdirectoryService;
+
+    @Autowired
+    FileDao fileDao;
 
     private final int SIZE = 10;
 
@@ -125,7 +131,7 @@ public class UserService {
         }
     }
 
-
+    //TODO
     public void index(int userId, Map<String, Object> map) {
         UserBean user = null;
         if (userId != -1) {
@@ -138,7 +144,12 @@ public class UserService {
             userIndex(user, map);
         }
         List<CdirectoryBean> cdirectoryBeans = cdirectoryService.selectByLastTen();
-
+        List<FileBean> fileBeans = fileDao.selectByCountFive();
+        List<String> top = Lists.newArrayList();
+        for(FileBean f : fileBeans){
+            top.add(f.getTitle());
+        }
+        map.put("top", top);
         map.put("directory", cdirectoryBeans);
         map.put("index", 1);
     }

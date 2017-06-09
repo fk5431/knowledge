@@ -250,7 +250,7 @@ public class OperativeService {
             //转换
             convertVideo.convert(fileBean.getUrl(),
                     fileBean.getUrl().substring(0, fileBean.getUrl().lastIndexOf("."))+".flv");
-            //TODO 复制
+
 
             fileBean.setUrlTransforms(fileBean.getUrl().substring(0, fileBean.getUrl().lastIndexOf("."))+".flv");
         }else if (PropertiesStr.image.contains(suffix)){

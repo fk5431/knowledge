@@ -47,7 +47,7 @@ public class CenterC {
             return "login";
         }
         int userId = Login.getUserId(request);
-
+        int ralUserId = userId;
         UserBean userBean = userService.selectByPrimerKey(userId);
         if(userBean.getIsmanage() == 1 || userBean.getIsmanage()== 2) {
             tagsService.centerOfUserTags(-1, map);
@@ -55,24 +55,30 @@ public class CenterC {
             tagsService.centerOfUserTags(userId, map);
         }
         if("1".equals(type)){
-            centerService.index(page, userId, map);
+            if(userBean.getIsmanage() == 1 || userBean.getIsmanage()== 2)
+                userId = -1;
+            centerService.index(page, ralUserId, map);
         } else if("2".equals(type)){
             if(userBean.getIsmanage() == 1 || userBean.getIsmanage()== 2)
                 userId = -1;
             centerService.upload(page, userId, map);
         } else if("3".equals(type)){
-            centerService.document(page, userId, map);
+            if(userBean.getIsmanage() == 1 || userBean.getIsmanage()== 2)
+                userId = -1;
+            centerService.document(page, ralUserId, map);
         } else if("4".equals(type)){
-            centerService.peding(page, userId, map);
+            if(userBean.getIsmanage() == 1 || userBean.getIsmanage()== 2)
+                userId = -1;
+            centerService.peding(page, ralUserId, map);
         } else {
-            centerService.index(page, userId, map);
+            centerService.index(page, ralUserId, map);
         }
         map.put("index", 3);
         map.put("user", userBean);
-        map.put("count1", centerService.index_count(userId));
+        map.put("count1", centerService.index_count(ralUserId));
         map.put("count2", centerService.upload_count(userId) );
-        map.put("count3", centerService.document_count(userId));
-        map.put("count4", centerService.peding_count(userId));
+        map.put("count3", centerService.document_count(ralUserId));
+        map.put("count4", centerService.peding_count(ralUserId));
         return "center";
     }
 

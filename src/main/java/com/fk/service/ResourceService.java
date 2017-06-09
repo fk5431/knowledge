@@ -99,6 +99,8 @@ public class ResourceService {
     public void showfile(int id, Map<String, Object> map) {
         FileBean fileBean = fileDao.selectByPrimaryKey(id);
         map.put("file", fileBean);
+        fileBean.setCount(fileBean.getCount() + 1);
+        fileDao.updateByPrimaryKey(fileBean);
         int userId = fileBean.getUid();
         if(userId!= -1){
             UserBean userBean = useDao.selectByPrimaryKey(userId);
@@ -106,7 +108,6 @@ public class ResourceService {
         }else{
             map.put("name", "管理员");
         }
-
 
 
     }

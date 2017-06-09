@@ -43,12 +43,10 @@
                 <!--组合查询动态产生-->
                 <nav>
                     <ul>
-                        <li class="first"><p>Top Destination :</p></li>
-                        <li><a href="#">太极拳</a></li>
-                        <li><a href="#">运动</a></li>
-                        <li><a href="#">《神偷奶爸》</a></li>
-                        <li><a href="#">小黄人</a></li>
-                        <li><a href="#">手机铃声</a></li>
+                        <li class="first"><a>Top Destination :</a></li>
+                        <c:forEach var="t" items="${top}">
+                            <li> <a href="${pageContext.request.contextPath}/searchAll?searchAll=${t}">${t}</a></li>
+                        </c:forEach>
                     </ul>
                 </nav>
             </div>

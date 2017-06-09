@@ -50,6 +50,7 @@ public class LoginC {
         if (errorcode != null) {
             return "/info/error";
         }
+
         return index(request, map);
     }
 
