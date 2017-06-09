@@ -52,6 +52,8 @@ public class OperativeC {
     @Autowired
     CdirectoryService cdirectoryService;
 
+    @Autowired
+    CenterService centerService;
 
     @RequestMapping("/operative")
     public String operative(HttpServletRequest request, Map<String, Object> map) {
@@ -226,6 +228,12 @@ public class OperativeC {
         fileServer.selectReviewFileByPage(page_, map);
 
         return "/operative/reviewtable";
+    }
+    @RequestMapping("/agree")
+    public String agree(HttpServletRequest request, Map<String, Object> map){
+        String id = request.getParameter("id");
+        centerService.agree(Integer.parseInt(id));
+        return review(request,map);
     }
 
     @RequestMapping("/operative/index")
