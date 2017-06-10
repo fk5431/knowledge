@@ -1,14 +1,13 @@
 package com.fk.service;
 
 import com.fk.bean.CdirectoryBean;
+import com.fk.bean.CdocumentBean;
 import com.fk.bean.FileBean;
 import com.fk.bean.UserBean;
+import com.fk.dao.CdocumentDao;
 import com.fk.dao.FileDao;
 import com.fk.dao.UserDao;
-import com.fk.util.CommonConst;
-import com.fk.util.MD5;
-import com.fk.util.RandomUtil;
-import com.fk.util.SendMail;
+import com.fk.util.*;
 import com.google.common.collect.Lists;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -18,6 +17,10 @@ import org.springframework.stereotype.Service;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -35,6 +38,9 @@ public class UserService {
 
     @Autowired
     CdirectoryService cdirectoryService;
+
+    @Autowired
+    CdocumentDao cdocumentDao;
 
     @Autowired
     FileDao fileDao;
@@ -131,7 +137,7 @@ public class UserService {
         }
     }
 
-    //TODO
+
     public void index(int userId, Map<String, Object> map) {
         UserBean user = null;
         if (userId != -1) {
@@ -155,21 +161,52 @@ public class UserService {
     }
 
     private void userIndex(UserBean user, Map<String, Object> map) {
+//ⅠⅡ Ⅲ
+        //TODO
+        File file = new File("D:\\upload\\intro.csv");
+        FileWriter fileWritter = null;
+        BufferedWriter bufferWritter = null;
+        try {
+            fileWritter = new FileWriter(file,false);
 
-//        File file = new File("D:\\upload\\intro.csv");
-//        FileWriter fileWritter = new FileWriter(file,false);
-//        BufferedWriter bufferWritter = new BufferedWriter(fileWritter);
-//        for(Cdocument d : document){
-////				System.out.println(d.toString());
-//            bufferWritter.write(d.toString());
-//            bufferWritter.newLine();
-//        }
-//        bufferWritter.close();
+            bufferWritter = new BufferedWriter(fileWritter);
+            List<CdocumentBean> document = cdocumentDao.selectAll();
+            for(CdocumentBean d : document){
+    //				System.out.println(d.toString());
+                bufferWritter.write(d.toString());
+                bufferWritter.newLine();
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }finally {
+            try {
+                bufferWritter.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+
+        Recommend recommend = new Recommend();
+
+        try {
+            List<Integer> list = recommend.getID(user.getUid());
+//            userfile = dao.getFile(list);
+            List<FileBean> userfile = Lists.newArrayList();
+            for(Integer i : list){
+                FileBean fileBean = fileDao.selectByPrimaryKey(i);
+                userfile.add(fileBean);
+            }
+            map.put("userfile", userfile);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
     }
 
     private void noUser(Map<String, Object> map) {
-
-
+        //userfile
+        List<FileBean> fileBeans = fileDao.selectByCountSix();
+        map.put("userfile", fileBeans);
     }
 
     public void superlogin(UserBean userBean, HttpServletResponse response, Map<String, Object> map) {

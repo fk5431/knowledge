@@ -37,7 +37,7 @@ public class ExtractText {
 //		try {
 //			word = ExtractTextFromOffice.extractTextFromXLS2007(wordFile);
 //		} catch (Exception e) {
-//			// TODO Auto-generated catch block
+//
 //			e.printStackTrace();
 //		}
 //     、、   System.out.println(word);

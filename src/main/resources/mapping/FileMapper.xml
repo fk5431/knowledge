@@ -53,6 +53,14 @@
         from file
         order by count limit 0,5
     </select>
+    <select id="selectByCountSix" resultMap="ResultMapWithBLOBs">
+        select
+        <include refid="Base_Column_List"/>
+        ,
+        <include refid="Blob_Column_List"/>
+        from file
+        order by count limit 0,6
+    </select>
     <select id="countByUserId" resultType="java.lang.Integer">
     select
     count(*)

@@ -20,4 +20,6 @@ public interface CdocumentDao {
     int countByUserId(int userId);
 
     List<CdocumentBean> selectByStartOfUserId(int userId, int start);
+
+    List<CdocumentBean> selectAll();
 }

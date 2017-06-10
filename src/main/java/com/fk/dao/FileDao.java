@@ -28,4 +28,6 @@ public interface FileDao {
     List<FileBean> selectByStartAndUserId(int userId, int start);
 
     List<FileBean> selectByCountFive();
+
+    List<FileBean> selectByCountSix();
 }

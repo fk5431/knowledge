@@ -9,6 +9,11 @@
     <sql id="Base_Column_List">
         id, uid, fid
     </sql>
+    <select id="selectAll" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from cdocument
+    </select>
     <select id="selectByStartOfUserId" resultMap="BaseResultMap">
         select
         <include refid="Base_Column_List"/>
