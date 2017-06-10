@@ -60,7 +60,7 @@
                                             <span> <a href="${pageContext.request.contextPath}/myupload">我要上传</a></span>
                                         </button>
                                         <button class="Button FollowButton Button--primary Button--blue"type="button">
-                                            <span> <a href="${pageContext.request.contextPath}/logout">退出</a></span>
+                                            <span> <a href="${pageContext.request.contextPath}/logout?id=${user.uid}">退出</a></span>
                                         </button>
                                     </div>
                                 </div>

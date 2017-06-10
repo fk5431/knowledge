@@ -11,43 +11,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="11669da5-9530-45d4-b1a5-63fcb18bf569" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/lib/mahout-examples-0.11.0-job.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/lib/mahout-examples-0.11.0.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/lib/mahout-h2o_2.10-0.11.0-dependency-reduced.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/lib/mahout-h2o_2.10-0.11.0.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/lib/mahout-hdfs-0.11.0.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/lib/mahout-integration-0.11.0.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/lib/mahout-math-0.11.0.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/lib/mahout-math-scala_2.10-0.11.0.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/lib/mahout-mr-0.11.0-job.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/lib/mahout-mr-0.11.0.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/lib/mahout-spark-shell_2.10-0.11.0.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/lib/mahout-spark_2.10-0.11.0-dependency-reduced.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/lib/mahout-spark_2.10-0.11.0.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fk/util/RecommendTest.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/fk/controller/LoginC.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/fk/dao/UserDao.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/knowledge/META-INF/MANIFEST.MF" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/knowledge.iml" afterPath="$PROJECT_DIR$/.idea/knowledge.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/fk/bean/CdocumentBean.java" afterPath="$PROJECT_DIR$/src/main/java/com/fk/bean/CdocumentBean.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/fk/controller/Resource.java" afterPath="$PROJECT_DIR$/src/main/java/com/fk/controller/Resource.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/fk/service/ResourceService.java" afterPath="$PROJECT_DIR$/src/main/java/com/fk/service/ResourceService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/fk/service/UserService.java" afterPath="$PROJECT_DIR$/src/main/java/com/fk/service/UserService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/fk/util/Recommend.java" afterPath="$PROJECT_DIR$/src/main/java/com/fk/util/Recommend.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/lib/mahout-examples-0.11.0-job.jar" afterPath="$PROJECT_DIR$/lib/mahout-examples-0.11.0-job.jar" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/lib/mahout-examples-0.11.0.jar" afterPath="$PROJECT_DIR$/lib/mahout-examples-0.11.0.jar" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/lib/mahout-h2o_2.10-0.11.0-dependency-reduced.jar" afterPath="$PROJECT_DIR$/lib/mahout-h2o_2.10-0.11.0-dependency-reduced.jar" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/lib/mahout-h2o_2.10-0.11.0.jar" afterPath="$PROJECT_DIR$/lib/mahout-h2o_2.10-0.11.0.jar" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/lib/mahout-hdfs-0.11.0.jar" afterPath="$PROJECT_DIR$/lib/mahout-hdfs-0.11.0.jar" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/lib/mahout-integration-0.11.0.jar" afterPath="$PROJECT_DIR$/lib/mahout-integration-0.11.0.jar" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/lib/mahout-math-0.11.0.jar" afterPath="$PROJECT_DIR$/lib/mahout-math-0.11.0.jar" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/lib/mahout-math-scala_2.10-0.11.0.jar" afterPath="$PROJECT_DIR$/lib/mahout-math-scala_2.10-0.11.0.jar" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/lib/mahout-mr-0.11.0-job.jar" afterPath="$PROJECT_DIR$/lib/mahout-mr-0.11.0-job.jar" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/lib/mahout-mr-0.11.0.jar" afterPath="$PROJECT_DIR$/lib/mahout-mr-0.11.0.jar" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/lib/mahout-spark-shell_2.10-0.11.0.jar" afterPath="$PROJECT_DIR$/lib/mahout-spark-shell_2.10-0.11.0.jar" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/lib/mahout-spark_2.10-0.11.0-dependency-reduced.jar" afterPath="$PROJECT_DIR$/lib/mahout-spark_2.10-0.11.0-dependency-reduced.jar" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/lib/mahout-spark_2.10-0.11.0.jar" afterPath="$PROJECT_DIR$/lib/mahout-spark_2.10-0.11.0.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/fk/controller/LoginC.java" afterPath="$PROJECT_DIR$/src/main/java/com/fk/controller/LoginC.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/center.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/center.jsp" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -91,11 +57,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Resource.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Resource.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/fk/controller/Resource.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="47" column="28" lean-forward="false" selection-start-line="47" selection-start-column="28" selection-end-line="47" selection-end-column="28" />
+            <state relative-caret-position="176">
+              <caret line="46" column="44" lean-forward="false" selection-start-line="46" selection-start-column="44" selection-end-line="46" selection-end-column="44" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OperativeC.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/fk/controller/OperativeC.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="364">
+              <caret line="92" column="34" lean-forward="false" selection-start-line="92" selection-start-column="34" selection-end-line="92" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -121,11 +97,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LoginC.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="LoginC.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/fk/controller/LoginC.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="35">
-              <caret line="122" column="0" lean-forward="false" selection-start-line="122" selection-start-column="0" selection-end-line="122" selection-end-column="0" />
+            <state relative-caret-position="32">
+              <caret line="122" column="39" lean-forward="true" selection-start-line="122" selection-start-column="39" selection-end-line="122" selection-end-column="39" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="center.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/center.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="220">
+              <caret line="62" column="115" lean-forward="false" selection-start-line="62" selection-start-column="115" selection-end-line="62" selection-end-column="115" />
               <folding />
             </state>
           </provider>
@@ -154,7 +140,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>index</find>
       <find>usertable</find>
       <find>del</find>
       <find>selectALL_1</find>
@@ -184,6 +169,7 @@
       <find>center</find>
       <find>showfile</find>
       <find>resource</find>
+      <find>logout</find>
     </findStrings>
     <replaceStrings>
       <replace>src=&quot;../</replace>
@@ -224,7 +210,6 @@
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/js/500/custom.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/500/500.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/center.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/fileform.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/fk/sql/review.sql" />
         <option value="$PROJECT_DIR$/src/main/java/com/fk/dao/ReviewDao.java" />
@@ -250,7 +235,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/fk/service/CenterService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/fk/controller/CenterC.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/fk/service/OperativeService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/fk/controller/LoginC.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/fk/util/ExtractText.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/index.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/fk/dao/FileDao.java" />
@@ -265,6 +249,8 @@
         <option value="$PROJECT_DIR$/src/main/java/com/fk/service/UserService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/fk/service/ResourceService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/fk/controller/Resource.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/center.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/fk/controller/LoginC.java" />
       </list>
     </option>
   </component>
@@ -1298,14 +1284,7 @@
       <workItem from="1497010177827" duration="4160000" />
       <workItem from="1497059076041" duration="5260000" />
       <workItem from="1497064428697" duration="1481000" />
-      <workItem from="1497066046943" duration="2319000" />
-    </task>
-    <task id="LOCAL-00004" summary="ssm  success">
-      <created>1486966060887</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1486966060887</updated>
+      <workItem from="1497066046943" duration="4422000" />
     </task>
     <task id="LOCAL-00005" summary="ssm  success">
       <created>1486979721828</created>
@@ -1643,11 +1622,18 @@
       <option name="project" value="LOCAL" />
       <updated>1497062788273</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="finish">
+      <created>1497087139652</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1497087139652</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="310393000" />
+    <option name="totallyTimeSpent" value="312496000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1660,7 +1646,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1678,7 +1664,7 @@
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40425533" sideWeight="0.494705" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28477904" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28477904" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
@@ -1747,7 +1733,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="transfrom ok&#10;" />
     <MESSAGE value="后台管理文件完善" />
     <MESSAGE value="修改页码" />
     <MESSAGE value="准备 showfile" />
@@ -1772,7 +1757,8 @@
     <MESSAGE value="论文……" />
     <MESSAGE value="other" />
     <MESSAGE value="recommend" />
-    <option name="LAST_COMMIT_MESSAGE" value="recommend" />
+    <MESSAGE value="finish" />
+    <option name="LAST_COMMIT_MESSAGE" value="finish" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1997,22 +1983,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/center.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-435">
-          <caret line="62" column="32" lean-forward="false" selection-start-line="62" selection-start-column="32" selection-end-line="62" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fk/controller/OperativeC.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1562">
-          <caret line="92" column="34" lean-forward="false" selection-start-line="92" selection-start-column="34" selection-end-line="92" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/fk/util/ExtractText.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="242">
@@ -2117,14 +2087,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fk/controller/LoginC.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="35">
-          <caret line="122" column="0" lean-forward="false" selection-start-line="122" selection-start-column="0" selection-end-line="122" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/fk/service/UserService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="145">
@@ -2167,8 +2129,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/fk/controller/Resource.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="47" column="28" lean-forward="false" selection-start-line="47" selection-start-column="28" selection-end-line="47" selection-end-column="28" />
+        <state relative-caret-position="176">
+          <caret line="46" column="44" lean-forward="false" selection-start-line="46" selection-start-column="44" selection-end-line="46" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fk/controller/OperativeC.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="92" column="34" lean-forward="false" selection-start-line="92" selection-start-column="34" selection-end-line="92" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/center.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="62" column="115" lean-forward="false" selection-start-line="62" selection-start-column="115" selection-end-line="62" selection-end-column="115" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fk/controller/LoginC.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="32">
+          <caret line="122" column="39" lean-forward="true" selection-start-line="122" selection-start-column="39" selection-end-line="122" selection-end-column="39" />
           <folding />
         </state>
       </provider>

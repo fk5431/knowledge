@@ -51,7 +51,7 @@ public class LoginC {
             return "/info/error";
         }
 
-        return index(request, map);
+        return index_login(uid , request, map);
     }
 
     @RequestMapping(value = "register", method = RequestMethod.POST)
@@ -114,13 +114,21 @@ public class LoginC {
         Cookie[] cookies = request.getCookies();
         if (cookies != null) {
             for (Cookie c : cookies) {
-                if (c.getName().equals(CommonConst.USERID)) {
+                if (!c.getName().equals("") && c.getName().equals(CommonConst.USERID) ) {
                     userId = Integer.parseInt(c.getValue());
                 }
             }
         }
 
         userService.index(userId, map);
+
+        return "index";
+    }
+    @RequestMapping(value = "/index_login")
+    public String index_login(String uid , HttpServletRequest request, Map<String, Object> map) {
+
+
+        userService.index(Integer.parseInt(uid), map);
 
         return "index";
     }
