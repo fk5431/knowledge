@@ -30,4 +30,9 @@ public class CdocumentBean {
     public void setFid(Integer fid) {
         this.fid = fid;
     }
+
+    @Override
+    public String toString() {
+        return uid+","+fid+","+"1";
+    }
 }

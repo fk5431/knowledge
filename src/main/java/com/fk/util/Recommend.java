@@ -18,6 +18,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Recommend {
+
     public List<Integer> getID(int uid) throws IOException, TasteException {
         DataModel dataModel = 	new FileDataModel(new File("D:\\upload\\intro.csv"));
         UserSimilarity userSimilarity = RecommendFactory.userSimilarity(RecommendFactory.SIMILARITY.EUCLIDEAN, dataModel);
@@ -33,5 +34,12 @@ public class Recommend {
             System.out.println("id"+r.getItemID());
         }
         return id;
+    }
+
+    public static void main(String[] args) throws IOException, TasteException {
+        List<Integer> list = new Recommend().getID(1);
+        for(Integer a : list){
+            System.out.println(a);
+        }
     }
 }

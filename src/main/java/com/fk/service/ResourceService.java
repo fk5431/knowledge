@@ -89,7 +89,7 @@ public class ResourceService {
                 fileReturnBeans.add(fileReturnBean);
             }
             map.put("file", fileReturnBeans);
-            map.put("index", 2);
+
         } catch (Exception e) {
             e.printStackTrace();
             map.put(CommonConst.ERRORCODE, 1);
@@ -109,6 +109,7 @@ public class ResourceService {
             map.put("name", "管理员");
         }
 
+        map.put("index", 3);
 
     }
 

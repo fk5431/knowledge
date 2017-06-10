@@ -45,7 +45,7 @@ public class Resource {
         String page = request.getParameter("page");
 
         resourceService.resource(page, map);
-
+        map.put("index", 2);
         return "resource";
     }
 

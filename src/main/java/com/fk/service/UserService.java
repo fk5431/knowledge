@@ -186,10 +186,10 @@ public class UserService {
             }
         }
 
-        Recommend recommend = new Recommend();
-
+        RecommendTest recommendTest = new RecommendTest();
+//        Recommend recommend = new Recommend();
         try {
-            List<Integer> list = recommend.getID(user.getUid());
+            List<Integer> list = recommendTest.getID(user.getUid());
 //            userfile = dao.getFile(list);
             List<FileBean> userfile = Lists.newArrayList();
             for(Integer i : list){
