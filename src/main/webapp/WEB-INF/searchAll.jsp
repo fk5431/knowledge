@@ -557,7 +557,7 @@
                                             <c:forEach var="t" items="${type}">
                                                 <li class="category">
                                                     <span class="count">${t.count}</span>
-                                                    <a title="${t.ktype}" href="#">${t.ktype}</a>
+                                                    <a title="${t.ktype}" href="${pageContext.request.contextPath}/searchType?type=${t.ktypeid}">${t.ktype}</a>
                                                 </li>
                                             </c:forEach>
                                         </ul>
@@ -574,7 +574,7 @@
                             <div id="KB_displayHits"
                                  class="wuid J5jOfsgj J5jOfsgj_0_search searchWidget displayHits">
                                 <ul class="hits">
-                                    <c:forEach var="f" items="${file}">
+                                    <c:forEach var="f" items="${list}">
                                         <li class="KB_hit dsnews">
                                             <h3 class="KB_hit_title">
                                                 <a href="showfile?id=${f.fid}" target="_blank"> <span

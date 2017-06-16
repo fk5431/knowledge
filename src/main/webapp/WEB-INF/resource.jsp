@@ -557,7 +557,7 @@
                                             <c:forEach var="t" items="${type}">
                                                 <li class="category">
                                                     <span class="count">${t.count}</span>
-                                                    <a title="${t.ktype}" href="#">${t.ktype}</a>
+                                                    <a title="${t.ktype}" href="${pageContext.request.contextPath}/searchType?type=${t.ktypeid}">${t.ktype}</a>
                                                 </li>
                                             </c:forEach>
                                         </ul>

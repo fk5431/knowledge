@@ -115,6 +115,7 @@ public class LoginC {
         if (cookies != null) {
             for (Cookie c : cookies) {
                 if (!c.getName().equals("") && c.getName().equals(CommonConst.USERID) ) {
+                    if(!c.getValue().equals(""))
                     userId = Integer.parseInt(c.getValue());
                 }
             }

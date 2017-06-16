@@ -30,4 +30,9 @@ public interface FileDao {
     List<FileBean> selectByCountFive();
 
     List<FileBean> selectByCountSix();
+
+
+    int selectByKtypeIdCount(int id);
+
+    List<FileBean> selectByStartAndType(int id , int start);
 }

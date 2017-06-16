@@ -139,7 +139,6 @@ public class OperativeService {
             if (fileBean.getCanTransforms() == 0) {
                 transforms(file, fileBean);
             } else {
-                fileBean.setUrlImage("");
                 fileBean.setUrlTransforms(fileBean.getUrl());
             }
 
@@ -149,6 +148,12 @@ public class OperativeService {
             fileBean.setUrl("");
             fileBean.setUuidname("");
             fileBean.setFname("");
+        }
+
+        if(fileBean.getUrlImage() == null || fileBean.getUrlImage().equals("")) {
+            int ktypeId = fileBean.getKtypeid();
+            KtypeBean k = ktypeDao.selectByPrimaryKey(ktypeId);
+            fileBean.setUrlImage(k.getKtypeurl());
         }
 
         //tags
@@ -168,12 +173,14 @@ public class OperativeService {
 
 
         String other = extract(fileBean);
+        fileDao.insertSelective(fileBean);
+
         ESFileBean esFileBean = new ESFileBean(fileBean);
         esFileBean.setOther(other);
         CElastic.inital();
         CElastic.elastic.insert(esFileBean);
 
-        fileDao.insertSelective(fileBean);
+
     }
 
     public String extract(FileBean fileBean) {
@@ -221,7 +228,7 @@ public class OperativeService {
         logger.info("===================================trasforms, suffix{[]}", suffix);
         String path = ContextLoader.getCurrentWebApplicationContext().getServletContext().getRealPath("/");
         if(PropertiesStr.office.contains(suffix)){
-            String outputPath = path + "trasnfroms\\" + DateUtil.currentDate("yyyy-MM-dd");
+            String outputPath = path + "transfroms\\" + DateUtil.currentDate("yyyy-MM-dd");
             //Converter con = new Converter(fileBean.getUrl());
             Converter converter = new Converter(fileBean.getUrl());
             converter.setFirst(outputPath);
@@ -241,7 +248,7 @@ public class OperativeService {
                 File destFile = new File(path + "transfroms\\image\\" + DateUtil.currentDate("yyyy-MM-dd"), fileBean.getFname()+".jpg");
                 String jpgPath = fileBean.getUrl() + ".jpg";
                 FileUtils.copyFile(new File(jpgPath) , destFile);
-                fileBean.setUrlImage(path + "transfroms\\image\\" + DateUtil.currentDate("yyyy-MM-dd") + fileBean.getFname()+".jpg");
+                fileBean.setUrlImage("\\knowledge\\" + "transfroms\\image\\" + DateUtil.currentDate("yyyy-MM-dd") + "\\" + fileBean.getFname()+".jpg");
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }catch (IOException e) {

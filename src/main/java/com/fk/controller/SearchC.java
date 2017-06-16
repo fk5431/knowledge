@@ -27,14 +27,24 @@ public class SearchC {
         return "searchAll";
     }
 
+    @RequestMapping("/searchType")
+    public String searchType(HttpServletRequest request, Map<String, Object> map){
+        String type = request.getParameter("type");
+        String page  = request.getParameter("page");
+
+        service.searchType(page, type, map);
+
+        return "searchType";
+    }
+
     @RequestMapping("/groupSearch")
     public String groupSearch(HttpServletRequest request, Map<String, Object> map){
         String[] bools = request.getParameterValues("booleans");
         String[] sections = request.getParameterValues("sections");
         String[] words = request.getParameterValues("searchWords");
-
+        String page  = request.getParameter("page");
 //        service.search(page, search, map);
-        service.groupSearch(bools, sections, words, map);
+        service.groupSearch(page, bools, sections, words, map);
 
         return "resource";
     }

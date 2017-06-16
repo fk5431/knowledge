@@ -37,6 +37,15 @@
         where uid = #{0}
         limit #{1},8
     </select>
+    <select id="selectByStartAndType" resultMap="ResultMapWithBLOBs" parameterType="java.lang.Integer">
+        select
+        <include refid="Base_Column_List"/>
+        ,
+        <include refid="Blob_Column_List"/>
+        from file
+        where ktypeid = #{0}
+        limit #{1},8
+    </select>
     <select id="selectByStart" resultMap="ResultMapWithBLOBs" parameterType="java.lang.Integer">
         select
         <include refid="Base_Column_List"/>
@@ -66,6 +75,12 @@
     count(*)
     from file
     where uid = #{0}
+  </select>
+    <select id="selectByKtypeIdCount" resultType="java.lang.Integer">
+    select
+    count(*)
+    from file
+    where ktypeid = #{0}
   </select>
     <select id="count" resultType="java.lang.Integer">
     select
@@ -98,7 +113,7 @@
     #{urlTransforms,jdbcType=VARCHAR}, #{canTransforms,jdbcType=INTEGER}, #{count,jdbcType=INTEGER},
     #{introduction,jdbcType=LONGVARCHAR})
   </insert>
-    <insert id="insertSelective" parameterType="com.fk.bean.FileBean"  useGeneratedKeys="true" keyProperty="id">
+    <insert id="insertSelective" parameterType="com.fk.bean.FileBean"  useGeneratedKeys="true" keyProperty="fid">
         insert into file
         <trim prefix="(" suffix=")" suffixOverrides=",">
             <if test="fid != null">

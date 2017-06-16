@@ -49,30 +49,31 @@ public class CenterC {
         int userId = Login.getUserId(request);
         int ralUserId = userId;
         UserBean userBean = userService.selectByPrimerKey(userId);
-        if(userBean.getIsmanage() == 1 || userBean.getIsmanage()== 2) {
+        if(userBean.getIsmanage() == 0 || userBean.getIsmanage()== 2) {
             tagsService.centerOfUserTags(-1, map);
         }else{
             tagsService.centerOfUserTags(userId, map);
         }
         if("1".equals(type)){
-            if(userBean.getIsmanage() == 1 || userBean.getIsmanage()== 2)
+            if(userBean.getIsmanage() == 0 || userBean.getIsmanage()== 2)
                 userId = -1;
             centerService.index(page, ralUserId, map);
         } else if("2".equals(type)){
-            if(userBean.getIsmanage() == 1 || userBean.getIsmanage()== 2)
+            if(userBean.getIsmanage() == 0 || userBean.getIsmanage()== 2)
                 userId = -1;
             centerService.upload(page, userId, map);
         } else if("3".equals(type)){
-            if(userBean.getIsmanage() == 1 || userBean.getIsmanage()== 2)
+            if(userBean.getIsmanage() == 0 || userBean.getIsmanage()== 2)
                 userId = -1;
             centerService.document(page, ralUserId, map);
         } else if("4".equals(type)){
-            if(userBean.getIsmanage() == 1 || userBean.getIsmanage()== 2)
+            if(userBean.getIsmanage() == 0 || userBean.getIsmanage()== 2)
                 userId = -1;
             centerService.peding(page, ralUserId, map);
         } else {
             centerService.index(page, ralUserId, map);
         }
+
         map.put("index", 3);
         map.put("user", userBean);
         map.put("count1", centerService.index_count(ralUserId));
@@ -111,7 +112,7 @@ public class CenterC {
             fileBean.setKtypeid(Integer.parseInt(ktype));
             fileBean.setTags(tags);
             fileBean.setTitle(title);
-            fileBean.setUid(-1);
+            fileBean.setUid(Login.getUserId(request));
             fileBean.setUploadtime(new Date());
             fileBean.setCanTransforms(Integer.parseInt(can));
             fileBean.setCount(0);

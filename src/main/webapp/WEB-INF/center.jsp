@@ -164,9 +164,9 @@
                                             %>
                                             <span class="current"><%=i%></span>
                                             <%}else{%>
-                                            <a href="${pageContext.request.contextPath}/info?page=<%=i%>&type=${type}"><%=i%></a>
+                                            <a href="${pageContext.request.contextPath}/center?page=<%=i%>&type=${type}"><%=i%></a>
                                             <%}}%>
-                                            <a href="${pageContext.request.contextPath}/info?page=${pageNow+1}&type=${type}">下一页</a>
+                                            <a href="${pageContext.request.contextPath}/center?page=${pageNow+1}&type=${type}">下一页</a>
                                         </div>
                                     </div>
                                 </div>

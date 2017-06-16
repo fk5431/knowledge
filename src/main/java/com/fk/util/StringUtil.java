@@ -29,8 +29,13 @@ public class StringUtil {
         return url.substring(start+7);
     }
 
+    public static String subString_(String url) {
+        int start = url.indexOf("knowledge");
+        return url.substring(start+10);
+    }
     public static void main(String[] args) {
         System.out.println(StringUtil.subString("D:/jsp/apache-tomcat-8.0.29/webapps/asdasfdsfd"));
 
     }
+
 }

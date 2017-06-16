@@ -50,8 +50,11 @@ public class Converter {
      */
     private void ini(String fileString) {
         this.fileString = fileString;
+//        File directory = new File("");
+//        System.out.println(directory.getAbsolutePath());
         fileName = fileString.substring(0, fileString.lastIndexOf("."));
         docFile = new File(fileString);
+        System.out.println(docFile.exists());
         pdfFile = new File(fileName + ".pdf");
         swfFile = new File(fileName + ".swf");
     }
@@ -216,7 +219,7 @@ public class Converter {
     }
 
     public static void main(String[] args){
-        Converter converter = new Converter("/test.pdf");
+        Converter converter = new Converter("E:/成神之路/knowledge/配置管理计划.docx");
         converter.setFirst("/");
         converter.setSecond("a.swf");
         converter.conver();

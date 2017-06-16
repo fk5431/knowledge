@@ -7,7 +7,11 @@ import com.fk.util.CommonConst;
  */
 public class ESFileBean extends FileBean{
     private String other;
+
+    public ESFileBean(){}
+
     public ESFileBean(FileBean fileBean) {
+        this.setFid(fileBean.getFid());
         this.setCount(fileBean.getCount());
         this.setUuidname(fileBean.getUuidname());
         this.setTitle(fileBean.getTitle());

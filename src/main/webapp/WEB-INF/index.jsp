@@ -65,7 +65,7 @@
                             <div class="col-1-3" style="float:left;">
                                 <div class="wrap-col">
                                     <div class="post">
-                                        <img src="images/${page.ktypeid }.jpg">
+                                        <img src="${page.urlImage}">
                                         <h3>
                                             <a href="showfile?id=${page.fid }" target="_blank"><span
                                                     style="color:#000000;line-height: 150%;">${page.title}</a></span>
@@ -93,7 +93,7 @@
                             <div class="col-1-3" style="float:left;">
                                 <div class="wrap-col">
                                     <div class="post">
-                                        <img src="images/${page.ktypeid }.jpg">
+                                        <img src="${page.urlImage}">
                                         <h3>
                                             <a href="showfile?id=${page.fid }" target="_blank"><span
                                                     style="color:#000000;line-height: 150%;">${page.title}</a></span>

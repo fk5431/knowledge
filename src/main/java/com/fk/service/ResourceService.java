@@ -132,13 +132,18 @@ public class ResourceService {
     public String preview(String url, String id, Map<String, Object> map) {
         FileBean fileBean = fileDao.selectByPrimaryKey(Integer.parseInt(id));
         String suffix = StringUtil.suffix(fileBean.getFname());
-
+        String ur= url;
         url = StringUtil.subString(url);
         map.put("url", url);
         if(PropertiesStr.office.contains(suffix)) {
+         //     map.put("ur", url);
             return "previewoffice";
         }else if(PropertiesStr.music.contains(suffix)){
             return "previewmusic";
+        }else if(PropertiesStr.video.contains(suffix)){
+            url = StringUtil.subString_(url);
+            map.put("url", url);
+            return "previewvideo";
         }
         return "/info/error";
     }
